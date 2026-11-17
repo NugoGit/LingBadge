@@ -1,5 +1,5 @@
-/* lingobadge core: pure logic shared by the page and the node tests.
-   Port of src/lingobadge/policy.py and diagnosis.py, plus prompt builders. */
+/* lingbadge core: pure logic shared by the page and the node tests.
+   Port of src/lingbadge/policy.py and diagnosis.py, plus prompt builders. */
 (function (root) {
   "use strict";
 
@@ -181,7 +181,7 @@
     for (const [id, e] of Object.entries(enablers)) {
       const c = checks[id];
       if (e.channel === "audio") st[id] = "audio";
-      else if (c) st[id] = c.score >= 0.9 ? "known" : c.score >= 0.7 ? "shaky" : "unknown";
+      else if (c) st[id] = c.status || (c.score >= 0.9 ? "known" : c.score >= 0.7 ? "shaky" : "unknown");
       else st[id] = errs[id] ? "suspect" : "untested";
     }
     return st;
@@ -189,6 +189,16 @@
 
   // ------------------------------------------------------------ prompts
   const LANG = { de: "Deutsch", en: "English" };
+  // Target language of the prompts; set by the app from content/<lang>/language.yaml.
+  const TL = { code: "uk", name: "Ukrainisch", variety: "Standard", pitfalls: "Lehnübersetzungen", informal: "ти", formal: "ви" };
+  function setTarget(meta) {
+    meta = meta || {};
+    const nm = meta.name || {};
+    Object.assign(TL, { code: meta.code || TL.code, name: (typeof nm === "string" ? nm : nm.de || nm.en) || TL.name,
+      variety: meta.variety || "Standard", pitfalls: ((meta.prompt || {}).pitfalls) || "Lehnübersetzungen, Interferenz aus anderen Sprachen",
+      informal: ((meta.registers || {}).informal) || "informell", formal: ((meta.registers || {}).formal) || "formell" });
+    return TL;
+  }
 
   function enablerTable(real, enablers) {
     return real.enablers.map((u) => { const e = enablers[u.id] || {}; return `- ${u.id} (${u.use}, ${e.cefr}): ${e.title}`; }).join("\n");
@@ -197,10 +207,10 @@
     return real.enablers.map((u) => enablers[u.id]).filter((e) => e && e.words).map((e) => `${e.id}: ${e.words.join(", ")}`).join("\n");
   }
 
-  const SYSTEM_GEN = (il) => `Du schreibst Testformulare für ein Sprachzertifikat. Ein Formular testet genau eine Alltagskompetenz auf Ukrainisch.
-Schreib wie eine ukrainische Muttersprachlerin authentisches Alltagsmaterial, aber auf Niveau A1: kurze Sätze, häufige Wörter, nur die angegebene Grammatik.
+  const SYSTEM_GEN = (il) => `Du schreibst Testformulare für ein Sprachzertifikat. Ein Formular testet genau eine Alltagskompetenz auf ${TL.name}.
+Schreib wie eine Muttersprachlerin (${TL.name}, ${TL.variety}) authentisches Alltagsmaterial, aber auf Niveau A1: kurze Sätze, häufige Wörter, nur die angegebene Grammatik.
 Regeln:
-1. Ukrainischer Text NUR im Material (stimuli), in Lösungen (key) und in der Eröffnungszeile der Gesprächspartnerin. Alles, was sich an die lernende Person richtet (Fragen, Aufgaben, Ziele), auf ${LANG[il] || il}.
+1. Text auf ${TL.name} NUR im Material (stimuli), in Lösungen (key) und in der Eröffnungszeile der Gesprächspartnerin. Alles, was sich an die lernende Person richtet (Fragen, Aufgaben, Ziele), auf ${LANG[il] || il}.
 2. Grammatik mit use=formulaic nur in festen Wendungen wie in den Beispielen, nie frei gebildet.
 3. Bevorzuge Wörter aus den Wortlisten. Andere Wörter sind für Realismus erlaubt (max. 15 % des Materials), aber keine Lösung und kein Pflichtpunkt darf von ihnen abhängen.
 4. Jede Aufgabe, jeder Inhaltspunkt und jeder Pflichtschritt nennt die Enabler-IDs, die er prüft (nur aus der Liste).
@@ -215,9 +225,9 @@ Genau 10 Aufgaben: 6 mcq, 4 short_answer. Material 40-150 Wörter, gestaltet wie
     L: `{"stimuli":[{"kind":"audio_script","title":"Clip 1","body":str}, ... 8-10 Clips],"items":[{"id":"c1","type":"mcq"|"short_answer","prompt":str,"options":[...nur mcq],"key":[str],"enablers":[str],"stimulus":0}],"summary":str}
 Genau 10 Aufgaben, jede bezieht sich auf genau einen Clip (stimulus = Index). Jeder Clip 1-2 kurze Sätze, natürlich gesprochen. Zahlen als Ziffern in key, Uhrzeiten als HH:MM (24h und 12h Variante).`,
     WI: `{"stimuli":[{"kind":"message"|"text","title":str,"body":str}] (eingehende Nachricht oder Formular; darf leer sein),"situation":str,"brief":[{"id":"c1","text":str,"must":bool,"enablers":[str]}],"word_range":[20,60],"summary":str}
-4-6 Inhaltspunkte, davon 3-5 must. Inhaltspunkte sagen, WAS mitgeteilt wird, nie die ukrainischen Wörter. Mindestens zwei Punkte erfordern die Schlüsselstrukturen. Bei Formularen: gib eine fiktive Identität in der Anweisungssprache vor und liste die Formularfelder im body.`,
+4-6 Inhaltspunkte, davon 3-5 must. Inhaltspunkte sagen, WAS mitgeteilt wird, nie die Wörter auf ${TL.name}. Mindestens zwei Punkte erfordern die Schlüsselstrukturen. Bei Formularen: gib eine fiktive Identität in der Anweisungssprache vor und liste die Formularfelder im body.`,
     SI: `{"roleplay":{"persona":str,"setting":str,"register":"formal"|"informal","learner_goal":str,"required_moves":[{"id":"m1","text":str,"enablers":[str]}],"complications":[str],"opening_line":str,"max_turns":12},"summary":str}
-4-7 Pflichtschritte, 1-2 Komplikationen (z. B. Artikel nicht verfügbar, Rückfrage, Missverständnis). persona, setting, learner_goal, required_moves und complications in der Anweisungssprache; opening_line auf Ukrainisch.`,
+4-7 Pflichtschritte, 1-2 Komplikationen (z. B. Artikel nicht verfügbar, Rückfrage, Missverständnis). persona, setting, learner_goal, required_moves und complications in der Anweisungssprache; opening_line in der Zielsprache.`,
   };
 
   function genPrompt(skill, real, enablers, seed, seenSummaries, il, avoid) {
@@ -243,21 +253,21 @@ ${SHAPES[skill.mode]}`;
   }
 
   function validatePrompt(form, real) {
-    return `Du bist eine strenge ukrainische Muttersprachlerin und prüfst Testmaterial auf Niveau ${real.cefr}. Du hast es nicht geschrieben. Finde Probleme, repariere nichts.
+    return `Du bist eine strenge Muttersprachlerin (${TL.name}) und prüfst Testmaterial auf Niveau ${real.cefr}. Du hast es nicht geschrieben. Finde Probleme, repariere nichts.
 Formular:
 ${JSON.stringify(form)}
 Schlüsselstrukturen: ${real.key_structures || "—"}
-Prüfe: 1) Sprachfehler im ukrainischen Text, Russizismen, Surschyk, Lehnübersetzungen. 2) Grammatik über dem Niveau, die frei (nicht in fester Wendung) verwendet wird. 3) Aufgaben mit keiner oder mehr als einer vertretbaren Lösung, falsche oder unvollständige keys. 4) Aufgaben ohne Material lösbar. 5) Bei Rollenspielen: Sind alle Pflichtschritte auf A1 machbar? 6) Ist das Material realistisch?
+Prüfe: 1) Sprachfehler im Text auf ${TL.name}, ${TL.pitfalls}. 2) Grammatik über dem Niveau, die frei (nicht in fester Wendung) verwendet wird. 3) Aufgaben mit keiner oder mehr als einer vertretbaren Lösung, falsche oder unvollständige keys. 4) Aufgaben ohne Material lösbar. 5) Bei Rollenspielen: Sind alle Pflichtschritte auf A1 machbar? 6) Ist das Material realistisch?
 Antworte NUR mit JSON: {"ok": bool, "problems": [{"where": str, "kind": str, "detail": str, "severity": "blocker"|"minor"}]}`;
   }
 
   function interlocutorPrompt(rp, transcript, real) {
-    return `Du spielst: ${rp.persona}. Situation: ${rp.setting}. Du sprichst NUR Ukrainisch (Standard), Register: ${rp.register === "informal" ? "ти" : "ви"}, mit einer lernenden Person auf Niveau A1.
+    return `Du spielst: ${rp.persona}. Situation: ${rp.setting}. Du sprichst NUR ${TL.name} (${(real && real.variety) || TL.variety}), Register: ${rp.register === "informal" ? TL.informal : TL.formal}, mit einer lernenden Person auf Niveau A1.
 So sprichst du: kurze, einfache Sätze mit häufigen Wörtern, wie eine geduldige Muttersprachlerin mit einer Ausländerin. Wenn die Person bittet zu wiederholen, langsamer zu sprechen oder zu buchstabieren, tu es einfacher. Wechsle nie die Sprache, übersetze nie, korrigiere nie, lobe nie die Sprache, gib keine Hinweise, was sie sagen soll. Bleib in der Rolle; reagiere auf das, was tatsächlich gesagt wurde: Ist etwas unklar, frag nach; ist es trotz Fehlern klar, mach weiter.
 Verdecktes Skript – Ziel der Person: ${rp.learner_goal}. Schritte, die sie machen sollte: ${rp.required_moves.map((m) => m.text).join("; ")}. Komplikationen, die du natürlich einbaust: ${rp.complications.join("; ")}. Beende das Gespräch natürlich, wenn das Ziel erreicht ist, spätestens nach ${rp.max_turns || 12} deiner Beiträge.
 Bisheriges Gespräch:
 ${transcript.map((t) => (t.speaker === "learner" ? "Lernende: " : "Du: ") + t.text).join("\n")}
-Antworte NUR mit JSON: {"text": "<deine nächste Zeile auf Ukrainisch>", "conversation_over": bool}`;
+Antworte NUR mit JSON: {"text": "<deine nächste Zeile auf ${TL.name}>", "conversation_over": bool}`;
   }
 
   function gradePrompt(skill, form, rubric, real, enablers, responseText, il) {
@@ -292,7 +302,7 @@ Antworte NUR mit JSON: {"criteria":[{"id":str,"level":0-3,"confidence":number,"e
   }
 
   function judgePrompt(items) {
-    return `Entscheide für jede Kurzantwort, ob sie dasselbe bedeutet wie eine der akzeptierten Lösungen. Bei Grammatik-Aufgaben (gap_fill, transform) streng: eine falsche Endung ist falsch. Bei Verständnis-Aufgaben (short_answer, produce bei Lesen/Hören) bei Rechtschreibung nachsichtig, wenn eindeutig das Richtige gemeint ist. Bei produce-Aufgaben (Sprechen/Schreiben): richtig nur, wenn die ukrainische Antwort grammatisch korrekt und angemessen ist; die Musterlösungen sind Beispiele, andere korrekte Formulierungen zählen auch.
+    return `Entscheide für jede Kurzantwort, ob sie dasselbe bedeutet wie eine der akzeptierten Lösungen. Bei Grammatik-Aufgaben (gap_fill, transform) streng: eine falsche Endung ist falsch. Bei Verständnis-Aufgaben (short_answer, produce bei Lesen/Hören) bei Rechtschreibung nachsichtig, wenn eindeutig das Richtige gemeint ist. Bei produce-Aufgaben (Sprechen/Schreiben): richtig nur, wenn die Antwort (${TL.name}) grammatisch korrekt und angemessen ist; die Musterlösungen sind Beispiele, andere korrekte Formulierungen zählen auch.
 Aufgaben:
 ${JSON.stringify(items)}
 Antworte NUR mit JSON: {"results":[{"id":str,"correct":bool,"reason":str,"enabler":str|null}]}`;
@@ -305,8 +315,92 @@ Erstelle einen Kurz-Check für genau einen Baustein:
 ${en.id} (${en.kind}, ${en.cefr}): ${en.title}
 ${en.words ? "Wortliste: " + en.words.join(", ") : ""}
 Seed: ${seed}
-${en.kind === "lexis" ? "12 Aufgaben: Bedeutung→Wort und Wort→Bedeutung, nur Wörter aus der Liste." : "10 Aufgaben: kurze natürliche Sätze aus A1-Situationen, die Zielform ist die einzige Lücke. Decke die Unterfälle gleichmäßig ab."}
-Antwortformat: {"items":[{"id":"g1","type":"gap_fill"|"transform"|"mcq","prompt":str (Anweisung auf ${LANG[il]}, ukrainischer Satz mit ___ und Grundform in Klammern),"options":[nur mcq],"key":[str]}],"summary":str}`;
+${en.kind === "lexis" ? `12 Aufgaben, nur Wörter aus der Liste: 6× Bedeutung → Wort (format "type": Anweisung auf ${LANG[il] || il} nennt die Bedeutung, Antwort ist das Wort), 6× Wort → Bedeutung (format "choice": 4 Bedeutungen auf ${LANG[il] || il}).`
+  : `10 Aufgaben: kurze natürliche Sätze aus A1-Situationen, die Zielform ist die einzige Lücke ___.
+Teile den Baustein in Unterregeln (facets) und ordne jede einem Band zu:
+- core: die Grundregel mit häufigen Wörtern (4 Aufgaben)
+- variant: regelmäßige Unterfälle, die Lernende stolpern lassen, z. B. Lautwechsel, weiche Stämme (3 Aufgaben)
+- exception: Formen, die man auswendig lernen muss (1-2 Aufgaben, falls es welche auf A1 gibt)
+- contrast: wann die Form gilt, gegen eine verwechselbare Nachbarform (1-2 Aufgaben)
+Format je Unterregel, für alle ihre Aufgaben gleich:
+- "choice", wenn man aus einer kleinen geschlossenen Menge von Wörtern WÄHLT (z. B. у/в, ти/ви, він/вона/воно, eine Form gegen ihre Verwechslungsform). options = die vollständige Menge, nie ausgedachte Ablenker.
+- "type", wenn man eine Form BILDET (Endungen, Konjugation, Deklination). Grundform als "cue", keine options.
+Kein Satz darf die Lösung verraten (z. B. kein Adjektiv mit Genus-Endung neben der Lücke, wenn das Genus gefragt ist).`}
+Antwortformat: {"items":[{"id":"g1","band":"core"|"variant"|"exception"|"contrast","facet":str (kurze Unterregel auf ${LANG[il] || il}),"format":"choice"|"type","instruction":str (auf ${LANG[il] || il}),"stem":str (Satz auf ${TL.name} mit ___),"cue":str|null,"options":[nur bei choice],"key":[str]}],"summary":str}`;
+  }
+
+  // ------------------------------------------------------------ question catalogues (mirrors src/lingbadge/checks.py)
+  const BANDS = ["core", "variant", "exception", "contrast"];
+  const DEFAULT_BLUEPRINT = { core: 0.4, variant: 0.3, exception: 0.15, contrast: 0.15 };
+  const tx = (t, il) => (t == null ? "" : typeof t === "string" ? t : t[il] || t.en || Object.values(t)[0] || "");
+
+  function rng(seed) { let a = (seed >>> 0) || 1; return () => { a = (a + 0x6D2B79F5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  function shuffle(arr, r) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }
+
+  function quotas(n, available, weights) {
+    weights = weights || DEFAULT_BLUEPRINT;
+    const bands = BANDS.filter((b) => available[b]);
+    if (!bands.length) return {};
+    let w = {}; bands.forEach((b) => (w[b] = Number(weights[b] || 0)));
+    const tot = bands.reduce((a, b) => a + w[b], 0);
+    bands.forEach((b) => (w[b] = tot ? w[b] / tot : 1 / bands.length));
+    const q = {}; bands.forEach((b) => (q[b] = n >= bands.length ? 1 : 0));
+    let left = n - bands.reduce((a, b) => a + q[b], 0);
+    while (left > 0) {
+      const open = bands.filter((b) => q[b] < available[b]);
+      if (!open.length) break;
+      open.sort((x, y) => (w[y] * n - q[y]) - (w[x] * n - q[x]) || BANDS.indexOf(x) - BANDS.indexOf(y));
+      q[open[0]]++; left--;
+    }
+    return q;
+  }
+
+  // Pick n items: band mix from the blueprint, spread over facets, least-seen items first.
+  function sampleCheck(cat, n, seen, seed) {
+    const r = rng(seed == null ? Date.now() : seed); seen = seen || {};
+    const facets = {}; cat.facets.forEach((f) => (facets[f.id] = f));
+    const byBand = {};
+    cat.items.forEach((it) => { const b = facets[it.facet].band; ((byBand[b] = byBand[b] || {})[it.facet] = byBand[b][it.facet] || []).push(it); });
+    const avail = {}; Object.keys(byBand).forEach((b) => (avail[b] = Object.values(byBand[b]).reduce((a, g) => a + g.length, 0)));
+    const q = quotas(n, avail, cat.blueprint);
+    const picked = [];
+    for (const [b, k0] of Object.entries(q)) {
+      let k = k0;
+      const groups = shuffle(Object.values(byBand[b]).map((g) => g.map((it) => [seen[it.id] || 0, r(), it]).sort((x, y) => x[0] - y[0] || x[1] - y[1]).map((x) => x[2])), r);
+      groups.sort((x, y) => (seen[x[0].id] || 0) - (seen[y[0].id] || 0));
+      let i = 0;
+      while (k > 0 && groups.some((g) => g.length)) { const g = groups[i % groups.length]; if (g.length) { picked.push(g.shift()); k--; } i++; }
+    }
+    return shuffle(picked, r);
+  }
+
+  // Turn catalogue items into form items the app can render and grade.
+  function catalogueForm(cat, picked, il) {
+    const facets = {}; cat.facets.forEach((f) => (facets[f.id] = f));
+    return picked.map((it) => {
+      const f = facets[it.facet];
+      return { id: it.id, type: f.format === "choice" ? "mcq" : "gap_fill", band: f.band, facet: f.id,
+        instruction: tx(f.instruction, il), context: tx(it.context, il) || null, stem: it.stem, cue: it.cue || null,
+        prompt: (it.context ? tx(it.context, il) + " " : "") + it.stem + (it.cue ? " (" + it.cue + ")" : ""),
+        options: f.format === "choice" ? (it.options || f.options).slice() : undefined, key: it.answer.slice(), rule: tx(f.rule, il),
+        enablers: [cat.enabler] };
+    });
+  }
+
+  // Per band: right/total; status = known only if the share passes AND every core item is right.
+  function checkBreakdown(items, results, threshold) {
+    const bands = {};
+    items.forEach((it) => { const b = it.band || "core"; bands[b] = bands[b] || { right: 0, total: 0, wrong: [] }; bands[b].total++; if (results[it.id]) bands[b].right++; else bands[b].wrong.push(it.id); });
+    const v = Object.values(results), score = v.length ? v.filter(Boolean).length / v.length : 0;
+    const coreOk = !bands.core || bands.core.right === bands.core.total;
+    const status = score >= threshold && coreOk ? "known" : score >= 0.7 ? "shaky" : "unknown";
+    let verdict;
+    if (status === "known") verdict = "Sitzt.";
+    else if (!coreOk) verdict = "Die Grundregel sitzt noch nicht.";
+    else if (bands.exception && bands.exception.wrong.length && (!bands.variant || !bands.variant.wrong.length) && (!bands.contrast || !bands.contrast.wrong.length)) verdict = "Die Regel sitzt; einzelne Ausnahmen fehlen noch.";
+    else if (bands.contrast && bands.contrast.wrong.length && (!bands.variant || !bands.variant.wrong.length)) verdict = "Die Formen sitzen, aber wann man sie verwendet, ist noch unsicher.";
+    else verdict = "Die Grundregel sitzt; Unterfälle sind noch unsicher.";
+    return { score, status, bands, coreOk, verdict };
   }
 
   function probePrompt(theme, skills, reals, enablers, il, seed) {
@@ -315,7 +409,7 @@ Antwortformat: {"items":[{"id":"g1","type":"gap_fill"|"transform"|"mcq","prompt"
 
 Erstelle eine kurze Einstufung (Probe) für das Thema „${theme.title}“. Für JEDE Kompetenz unten genau 3 Aufgaben, die die wichtigsten Punkte prüfen.
 - Lesen (R) / Hören (L): ein kurzes Material (R: Text 20-60 Wörter; L: 1-3 Sätze als audio_script) und 3 Aufgaben (mcq oder short_answer).
-- Schreiben/Sprechen (WI, SI, SP): kein Material; 3 Aufgaben vom Typ "produce": eine kurze Situation in der Anweisungssprache („Sie möchten …, was schreiben/sagen Sie?“), key = 1-3 korrekte ukrainische Musterlösungen.
+- Schreiben/Sprechen (WI, SI, SP): kein Material; 3 Aufgaben vom Typ "produce": eine kurze Situation in der Anweisungssprache („Sie möchten …, was schreiben/sagen Sie?“), key = 1-3 korrekte Musterlösungen auf ${TL.name}.
 Kompetenzen:
 ${list}
 Seed: ${seed}
@@ -324,6 +418,7 @@ Antwortformat: {"skills":[{"skill":str,"stimulus":{"kind":"text"|"audio_script",
 
   const api = { CREDIT, DEFAULT_CFG, cfgFrom, thresholdFor, normalize, gradeKeyed, score, attemptOutcome, needsRegrade, medianGrade,
     formSimilarity, badgeDecision, heatmapStatus, probeStatus, diagnose, skillStatus, enablerStatuses,
-    genPrompt, validatePrompt, interlocutorPrompt, gradePrompt, judgePrompt, enablerCheckPrompt, probePrompt };
+    genPrompt, validatePrompt, interlocutorPrompt, gradePrompt, judgePrompt, enablerCheckPrompt, probePrompt,
+    TL, setTarget, BANDS, quotas, sampleCheck, catalogueForm, checkBreakdown, tx };
   if (typeof module !== "undefined" && module.exports) module.exports = api; else root.LB = api;
 })(typeof window !== "undefined" ? window : globalThis);

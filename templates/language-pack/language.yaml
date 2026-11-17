@@ -1,0 +1,12 @@
+# Language metadata. Used by the web app (name, speech, keyboard, direction) and by the prompts.
+code: {{code}}
+name: {de: {{name_de}}, en: {{name_en}}}
+native: TODO native name of the language
+tts: TODO BCP-47 tag for speech synthesis, e.g. es-ES
+dir: ltr                 # rtl for Arabic script, Hebrew …
+keyboard: []             # letters that are hard to type, shown as helper keys under text fields
+variety: TODO which standard or variety the pack teaches
+registers: {informal: TODO, formal: TODO}   # e.g. tú / usted
+prompt:
+  pitfalls: TODO typical errors the reviewer prompt should watch for (in German), e.g. Anglizismen, falsche Freunde
+status: started — not reviewed

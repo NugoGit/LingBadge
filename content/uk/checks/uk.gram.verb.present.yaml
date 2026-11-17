@@ -1,0 +1,75 @@
+enabler: uk.gram.verb.present
+lang: uk
+facets:
+- id: conj1
+  band: core
+  format: type
+  rule: {de: "1. Konjugation: -ю, -єш, -є, -ємо, -єте, -ють (читати → читаю)", en: "1st conjugation: -ю, -єш, -є, -ємо, -єте, -ють (читати → читаю)"}
+  instruction: {de: "Setze das Verb in der richtigen Form ein.", en: "Put the verb in the right form."}
+- id: conj2
+  band: core
+  format: type
+  rule: {de: "2. Konjugation: -ю/-у, -иш, -ить, -имо, -ите, -ять/-ать (говорити → говорю)", en: "2nd conjugation: -ю/-у, -иш, -ить, -имо, -ите, -ять/-ать (говорити → говорю)"}
+  instruction: {de: "Setze das Verb in der richtigen Form ein.", en: "Put the verb in the right form."}
+- id: uvaty
+  band: variant
+  format: type
+  rule: {de: "-увати/-ювати → -ую/-юю (працювати → працюю)", en: "-увати/-ювати → -ую/-юю (працювати → працюю)"}
+  instruction: {de: "Setze das Verb in der richtigen Form ein.", en: "Put the verb in the right form."}
+- id: conj2-alternation
+  band: variant
+  format: type
+  rule: {de: "2. Konjugation, 1. Person Sg.: д → дж, т → ч, с → ш; б, п, в, м + л (ходжу, плачу, прошу, люблю)", en: "2nd conjugation, 1st person sg.: д → дж, т → ч, с → ш; б, п, в, м + л (ходжу, плачу, прошу, люблю)"}
+  instruction: {de: "Setze das Verb in der richtigen Form ein.", en: "Put the verb in the right form."}
+- id: stem-change
+  band: exception
+  format: type
+  rule: {de: "Stammwechsel: писати → пишу, жити → живу, брати → беру, вставати → встаю", en: "Stem change: писати → пишу, жити → живу, брати → беру, вставати → встаю"}
+  instruction: {de: "Setze das Verb in der richtigen Form ein.", en: "Put the verb in the right form."}
+- id: agreement
+  band: contrast
+  format: type
+  rule: {de: "Die Form richtet sich nach dem Subjekt: ми з братом = wir, ви (höflich) = 2. Pl., хто = 3. Sg.", en: "The form follows the subject: ми з братом = we, ви (polite) = 2nd pl., хто = 3rd sg."}
+  instruction: {de: "Setze das Verb in der richtigen Form ein. Achte auf das Subjekt.", en: "Put the verb in the right form. Watch the subject."}
+items:
+- {id: p01, facet: conj1, stem: "Я ___ книжку.", cue: читати, answer: [читаю]}
+- {id: p02, facet: conj1, stem: "Ти ___ українську?", cue: знати, answer: [знаєш]}
+- {id: p03, facet: conj1, stem: "Вона ___ каву.", cue: замовляти, answer: [замовляє]}
+- {id: p04, facet: conj1, stem: "Ми ___ вдома.", cue: обідати, answer: [обідаємо]}
+- {id: p05, facet: conj1, stem: "Ви ___ музику?", cue: слухати, answer: [слухаєте]}
+- {id: p06, facet: conj1, stem: "Вони ___ у футбол.", cue: грати, answer: [грають]}
+- {id: p07, facet: conj1, stem: "Він ___ на автобус.", cue: чекати, answer: [чекає]}
+- {id: p08, facet: conj1, stem: "Ми ___ українську мову.", cue: вивчати, answer: [вивчаємо]}
+- {id: p09, facet: conj2, stem: "Я ___ українською.", cue: говорити, answer: [говорю]}
+- {id: p10, facet: conj2, stem: "Ти ___ англійською?", cue: говорити, answer: [говориш]}
+- {id: p11, facet: conj2, stem: "Мама ___ борщ.", cue: варити, answer: [варить]}
+- {id: p12, facet: conj2, stem: "Ми ___ повільно.", cue: говорити, answer: [говоримо]}
+- {id: p13, facet: conj2, stem: "Ви дуже швидко ___.", cue: говорити, answer: [говорите]}
+- {id: p14, facet: conj2, stem: "Вони ___ кашу.", cue: варити, answer: [варять]}
+- {id: p15, facet: conj2, stem: "Діти ___ надворі.", cue: кричати, answer: [кричать]}
+- {id: p16, facet: conj2, stem: "Ти ___ мене?", cue: бачити, answer: [бачиш]}
+- {id: p17, facet: uvaty, stem: "Я ___ в банку.", cue: працювати, answer: [працюю]}
+- {id: p18, facet: uvaty, stem: "Ти добре ___.", cue: малювати, answer: [малюєш]}
+- {id: p19, facet: uvaty, stem: "Я ___ вечерю.", cue: готувати, answer: [готую]}
+- {id: p20, facet: uvaty, stem: "Вони ___ в офісі.", cue: працювати, answer: [працюють]}
+- {id: p21, facet: uvaty, stem: "Ми ___ квитки онлайн.", cue: купувати, answer: [купуємо]}
+- {id: p22, facet: conj2-alternation, stem: "Я ___ на роботу пішки.", cue: ходити, answer: [ходжу]}
+- {id: p23, facet: conj2-alternation, stem: "Я ___ каву.", cue: любити, answer: [люблю]}
+- {id: p24, facet: conj2-alternation, stem: "Я ___ карткою.", cue: платити, answer: [плачу]}
+- {id: p25, facet: conj2-alternation, stem: "Я ___ вдома.", cue: сидіти, answer: [сиджу]}
+- {id: p26, facet: conj2-alternation, stem: "Я ___ рахунок, будь ласка.", cue: просити, answer: [прошу]}
+- {id: p27, facet: conj2-alternation, stem: "Що ти ___ ввечері?", cue: робити, answer: [робиш]}
+- {id: p28, facet: conj2-alternation, stem: "Я ___ фото.", cue: робити, answer: [роблю]}
+- {id: p29, facet: stem-change, stem: "Я ___ листа.", cue: писати, answer: [пишу]}
+- {id: p30, facet: stem-change, stem: "Ти ___ повідомлення?", cue: писати, answer: [пишеш]}
+- {id: p31, facet: stem-change, stem: "Де ти ___?", cue: жити, answer: [живеш]}
+- {id: p32, facet: stem-change, stem: "Ми ___ у Відні.", cue: жити, answer: [живемо]}
+- {id: p33, facet: stem-change, stem: "Я ___ таксі.", cue: брати, answer: [беру]}
+- {id: p34, facet: stem-change, stem: "Я ___ о сьомій.", cue: вставати, answer: [встаю]}
+- {id: p35, facet: stem-change, stem: "Вони ___ рано.", cue: вставати, answer: [встають]}
+- {id: p36, facet: agreement, stem: "Ми з братом ___ у Львові.", cue: жити, answer: [живемо]}
+- {id: p37, facet: agreement, stem: "Мама і тато ___ вдома.", cue: працювати, answer: [працюють]}
+- {id: p38, facet: agreement, stem: "Пане Іване, ви ___ англійською?", cue: говорити, answer: [говорите]}
+- {id: p39, facet: agreement, stem: "Моя сестра ___ в школі.", cue: працювати, answer: [працює]}
+- {id: p40, facet: agreement, stem: "Хто тут ___ українською?", cue: говорити, answer: [говорить]}
+- {id: p41, facet: agreement, stem: "Мої друзі ___ у Києві.", cue: жити, answer: [живуть]}

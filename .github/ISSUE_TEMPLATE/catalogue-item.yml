@@ -1,0 +1,27 @@
+name: Wrong or questionable check item
+description: An item in a question catalogue is wrong, ambiguous, or rejects a correct answer
+labels: [catalogue]
+body:
+  - type: input
+    id: item
+    attributes:
+      label: Enabler and item id
+      placeholder: uk.gram.noun.loc-sg l25
+    validations:
+      required: true
+  - type: input
+    id: answer
+    attributes:
+      label: Your answer
+  - type: textarea
+    id: why
+    attributes:
+      label: What is wrong?
+      description: Why your answer is also correct, or what is wrong with the item. Sources welcome.
+    validations:
+      required: true
+  - type: dropdown
+    id: speaker
+    attributes:
+      label: Are you a native speaker or teacher of this language?
+      options: ["No", "Native speaker", "Teacher", "Both"]

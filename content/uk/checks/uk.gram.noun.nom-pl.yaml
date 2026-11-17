@@ -1,0 +1,53 @@
+enabler: uk.gram.noun.nom-pl
+lang: uk
+facets:
+- id: hard
+  band: core
+  format: type
+  rule: {de: "Harte Stämme: Mask./Fem. → -и (студенти, школи), Neutra -о → -а (міста)", en: "Hard stems: masc./fem. → -и (студенти, школи), neuters -о → -а (міста)"}
+  instruction: {de: "Setze das Wort im Plural ein.", en: "Put the word in the plural."}
+- id: soft
+  band: variant
+  format: type
+  rule: {de: "Weiche Stämme und ж, ч, ш, щ → -і (кухні, вчителі, ключі), nach Vokal → -ї (музеї), Neutra -е → -я (моря)", en: "Soft stems and ж, ч, ш, щ → -і (кухні, вчителі, ключі), after a vowel → -ї (музеї), neuters -е → -я (моря)"}
+  instruction: {de: "Setze das Wort im Plural ein.", en: "Put the word in the plural."}
+- id: stem-change
+  band: variant
+  format: type
+  rule: {de: "Stammwechsel: і → о (стіл → столи, рік → роки), flüchtiges е/о (день → дні)", en: "Stem change: і → о (стіл → столи, рік → роки), fleeting е/о (день → дні)"}
+  instruction: {de: "Setze das Wort im Plural ein.", en: "Put the word in the plural."}
+- id: irregular
+  band: exception
+  format: type
+  rule: {de: "Unregelmäßig: людина → люди, дитина → діти, друг → друзі, око → очі", en: "Irregular: людина → люди, дитина → діти, друг → друзі, око → очі"}
+  instruction: {de: "Setze das Wort im Plural ein.", en: "Put the word in the plural."}
+items:
+- {id: n01, facet: hard, stem: "Де ___?", cue: студент, answer: [студенти]}
+- {id: n02, facet: hard, stem: "Тут нові ___.", cue: магазин, answer: [магазини]}
+- {id: n03, facet: hard, stem: "У місті є хороші ___.", cue: школа, answer: [школи]}
+- {id: n04, facet: hard, stem: "Мої ___ живуть у Києві.", cue: брат, answer: [брати]}
+- {id: n05, facet: hard, stem: "Ці ___ дуже красиві.", cue: місто, answer: [міста]}
+- {id: n06, facet: hard, stem: "Відкрий ___, будь ласка.", cue: вікно, answer: [вікна]}
+- {id: n07, facet: hard, stem: "Там лежать ___.", cue: книжка, answer: [книжки]}
+- {id: n08, facet: hard, stem: "Біля річки є ___.", cue: село, answer: [села]}
+- {id: n09, facet: hard, stem: "Мої ___ працюють у банку.", cue: сестра, answer: [сестри]}
+- {id: n10, facet: hard, stem: "Тут зупиняються ___.", cue: автобус, answer: [автобуси]}
+- {id: n11, facet: soft, stem: "Де мої ___?", cue: ключ, answer: [ключі]}
+- {id: n12, facet: soft, stem: "Тут сучасні ___.", cue: кухня, answer: [кухні]}
+- {id: n13, facet: soft, stem: "Мені подобаються ці ___.", cue: пісня, answer: [пісні]}
+- {id: n14, facet: soft, stem: "Наші ___ дуже добрі.", cue: вчитель, answer: [вчителі, учителі]}
+- {id: n15, facet: soft, stem: "У Львові цікаві ___.", cue: музей, answer: [музеї]}
+- {id: n16, facet: soft, stem: "Тут ходять ___.", cue: трамвай, answer: [трамваї]}
+- {id: n17, facet: soft, stem: "Ці ___ теплі.", cue: море, answer: [моря]}
+- {id: n18, facet: soft, stem: "Де ___?", cue: лікар, answer: [лікарі]}
+- {id: n19, facet: stem-change, stem: "Де ___?", cue: стіл, answer: [столи]}
+- {id: n20, facet: stem-change, stem: "Минули ___.", cue: рік, answer: [роки]}
+- {id: n21, facet: stem-change, stem: "Ці ___ дуже теплі.", cue: день, answer: [дні]}
+- {id: n22, facet: stem-change, stem: "Де ___?", cue: кіт, answer: [коти]}
+- {id: n23, facet: stem-change, stem: "Тут нові ___.", cue: будинок, answer: [будинки]}
+- {id: n24, facet: stem-change, stem: "Де мої ___?", cue: олівець, answer: [олівці]}
+- {id: n25, facet: irregular, stem: "Тут добрі ___.", cue: людина, answer: [люди]}
+- {id: n26, facet: irregular, stem: "Де ___?", cue: дитина, answer: [діти]}
+- {id: n27, facet: irregular, stem: "Мої ___ приходять у суботу.", cue: друг, answer: [друзі]}
+- {id: n28, facet: irregular, stem: "У неї сині ___.", cue: око, answer: [очі]}
+- {id: n29, facet: irregular, stem: "Які гарні ___!", cue: "ім'я", answer: [імена]}

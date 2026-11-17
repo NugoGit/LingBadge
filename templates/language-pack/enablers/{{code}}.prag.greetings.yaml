@@ -1,0 +1,14 @@
+# One enabler = one grammar point, word list, sound or pragmatic rule, with its own short check.
+# Copy this file for each enabler. Ids: <code>.<kind>.<name>; kind: gram | lex | phon | script | orth | prag | num
+id: {{code}}.prag.greetings
+lang: {{code}}
+kind: pragmatics          # grammar | lexis | phonology | script | orthography | pragmatics
+title: Greetings and goodbyes by time of day and register
+cefr: A1
+requires: []              # enablers this one builds on
+sources: [{{code}}-std]
+check:
+  template: enabler.pragmatics.v1
+  items: 10
+  threshold: 0.9
+  channel: text           # audio = can only be tested with listening/speaking

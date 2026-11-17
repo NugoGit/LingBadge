@@ -2,8 +2,14 @@
 const assert = require("assert");
 const fs = require("fs");
 const LB = require("../app/core.js");
-const C = JSON.parse(fs.readFileSync(__dirname + "/../app/content.json", "utf8"));
-const EX = JSON.parse(fs.readFileSync(process.argv[2] || "/tmp/ex.json", "utf8"));
+// node tests/core.test.js [examples.json]   (examples.json from: python tools/examples_to_json.py)
+const vm = require("vm");
+const sandbox = { window: {} };
+vm.runInNewContext(fs.readFileSync(__dirname + "/../app/content.js", "utf8"), sandbox);
+const C = JSON.parse(JSON.stringify(sandbox.window.LB_CONTENT));  // same-realm objects for deepStrictEqual
+Object.assign(C, { enablers: C.langs.uk.enablers, realizations: C.langs.uk.realizations });
+const EX = JSON.parse(process.argv[2] ? fs.readFileSync(process.argv[2], "utf8")
+  : require("child_process").execFileSync("python3", [__dirname + "/../tools/examples_to_json.py"], { encoding: "utf8" }));
 const cfg = LB.cfgFrom(C.mastery);
 const skill = (id) => C.skills.find((s) => s.id === id);
 function build(a) {
@@ -52,4 +58,22 @@ assert.strictEqual(LB.attemptOutcome(a.rubric, a.grade, 0.9, cfg).passed, e.pass
 const s = skill("food.cafe.SI"), r = C.realizations[s.id];
 assert.ok(LB.genPrompt(s, r, C.enablers, 1, [], "de").includes("Schlüsselstrukturen"));
 assert.ok(LB.gradePrompt(s, { roleplay: EX["03_food.cafe.SI.yaml"].attempts[0].form.roleplay }, C.rubrics[s.rubric], r, C.enablers, "x", "de").length > 1000);
+
+// question catalogues: sampling and band breakdown
+assert.deepStrictEqual(LB.quotas(10, { core: 20, variant: 8, exception: 4, contrast: 6 }), { core: 4, variant: 3, exception: 2, contrast: 1 });
+assert.deepStrictEqual(LB.quotas(10, { core: 20, exception: 1 }), { core: 9, exception: 1 });
+for (const [code, L] of Object.entries(C.langs)) for (const [id, cat] of Object.entries(L.checks || {})) {
+  const n = L.enablers[id].items, picked = LB.sampleCheck(cat, n, {}, 42);
+  assert.strictEqual(new Set(picked.map((x) => x.id)).size, Math.min(n, cat.items.length), id);
+  const items = LB.catalogueForm(cat, picked, "de");
+  items.forEach((it) => { assert.ok(it.stem.includes("___"), it.id); if (it.type === "mcq") assert.ok(it.options.some((o) => LB.normalize(o) === LB.normalize(it.key[0])), it.id); });
+  const seen = {}; picked.forEach((x) => (seen[x.id] = 1));
+  const again = LB.sampleCheck(cat, n, seen, 43), overlap = again.filter((x) => seen[x.id]).length;
+  assert.ok(overlap <= Math.max(0, 2 * n - cat.items.length) + 2, id + " overlap " + overlap);
+  const all = {}; items.forEach((it) => (all[it.id] = true));
+  assert.strictEqual(LB.checkBreakdown(items, all, 0.9).status, "known");
+  const coreMiss = Object.assign({}, all); const firstCore = items.find((it) => it.band === "core"); if (firstCore) { coreMiss[firstCore.id] = false; assert.notStrictEqual(LB.checkBreakdown(items, coreMiss, 0.9).status, "known"); }
+}
+LB.setTarget(C.langs.fa.meta); assert.ok(LB.enablerCheckPrompt(C.langs.fa.enablers[Object.keys(C.langs.fa.enablers)[0]], "de", 1).includes("Persisch"));
+LB.setTarget(C.langs.uk.meta);
 console.log("core.js: all checks passed");

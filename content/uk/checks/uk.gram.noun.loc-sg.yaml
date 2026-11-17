@@ -1,0 +1,77 @@
+enabler: uk.gram.noun.loc-sg
+lang: uk
+facets:
+- id: ending-i
+  band: core
+  format: type
+  rule: {de: "Lokativ auf -і: школа → у школі, кухня → на кухні, місто → у місті, магазин → у магазині", en: "Locative in -і: школа → у школі, кухня → на кухні, місто → у місті, магазин → у магазині"}
+  instruction: {de: "Setze das Wort in der richtigen Form ein.", en: "Put the word in the right form."}
+- id: alternation-cons
+  band: variant
+  format: type
+  rule: {de: "к → ц, г → з, х → с vor -і: аптека → в аптеці, Прага → у Празі", en: "к → ц, г → з, х → с before -і: аптека → в аптеці, Прага → у Празі"}
+  instruction: {de: "Setze das Wort in der richtigen Form ein.", en: "Put the word in the right form."}
+- id: alternation-vowel
+  band: variant
+  format: type
+  rule: {de: "і → о/е im Stamm: стіл → на столі, Київ → у Києві, Львів → у Львові", en: "і → о/е in the stem: стіл → на столі, Київ → у Києві, Львів → у Львові"}
+  instruction: {de: "Setze das Wort in der richtigen Form ein.", en: "Put the word in the right form."}
+- id: masc-u
+  band: variant
+  format: type
+  rule: {de: "Viele Maskulina auf -у/-ю: у банку, в парку, на Хрещатику", en: "Many masculines take -у/-ю: у банку, в парку, на Хрещатику"}
+  instruction: {de: "Setze das Wort in der richtigen Form ein.", en: "Put the word in the right form."}
+- id: indeclinable
+  band: exception
+  format: type
+  rule: {de: "Unveränderliche Wörter: кафе, метро, кіно, таксі, радіо", en: "Indeclinable words: кафе, метро, кіно, таксі, радіо"}
+  instruction: {de: "Setze das Wort in der richtigen Form ein.", en: "Put the word in the right form."}
+- id: u-vs-na
+  band: contrast
+  format: choice
+  options: [у/в, на]
+  rule: {de: "на bei Orten wie пошта, вокзал, робота, концерт, зупинка, вулиця; sonst у/в", en: "на with places like пошта, вокзал, робота, концерт, зупинка, вулиця; otherwise у/в"}
+  instruction: {de: "у/в oder на?", en: "у/в or на?"}
+items:
+- {id: l01, facet: ending-i, stem: "Діти в ___.", cue: школа, answer: [школі]}
+- {id: l02, facet: ending-i, stem: "Мама на ___.", cue: пошта, answer: [пошті]}
+- {id: l03, facet: ending-i, stem: "Я в ___.", cue: кімната, answer: [кімнаті]}
+- {id: l04, facet: ending-i, stem: "Чашки на ___.", cue: кухня, answer: [кухні]}
+- {id: l05, facet: ending-i, stem: "Він у ___.", cue: магазин, answer: [магазині]}
+- {id: l06, facet: ending-i, stem: "Я живу в ___.", cue: місто, answer: [місті]}
+- {id: l07, facet: ending-i, stem: "Бабуся живе в ___.", cue: село, answer: [селі]}
+- {id: l08, facet: ending-i, stem: "Тато в ___.", cue: офіс, answer: [офісі]}
+- {id: l09, facet: ending-i, stem: "Ми на ___.", cue: вокзал, answer: [вокзалі]}
+- {id: l10, facet: ending-i, stem: "Брат на ___.", cue: робота, answer: [роботі]}
+- {id: l11, facet: ending-i, stem: "Ми були на ___.", cue: концерт, answer: [концерті]}
+- {id: l12, facet: ending-i, stem: "Я живу в ___.", cue: квартира, answer: [квартирі]}
+- {id: l13, facet: alternation-cons, stem: "Мама в ___.", cue: аптека, answer: [аптеці]}
+- {id: l14, facet: alternation-cons, stem: "Ключі в ___.", cue: сумка, answer: [сумці]}
+- {id: l15, facet: alternation-cons, stem: "Ми чекаємо на ___.", cue: зупинка, answer: [зупинці]}
+- {id: l16, facet: alternation-cons, stem: "Сестра живе в ___.", cue: Прага, answer: [Празі]}
+- {id: l17, facet: alternation-cons, stem: "Телефон у ___.", cue: рука, answer: [руці]}
+- {id: l18, facet: alternation-cons, stem: "Що є в ___?", cue: бібліотека, answer: [бібліотеці]}
+- {id: l19, facet: alternation-vowel, stem: "Чашка на ___.", cue: стіл, answer: [столі]}
+- {id: l20, facet: alternation-vowel, stem: "Я живу в ___.", cue: Київ, answer: [Києві]}
+- {id: l21, facet: alternation-vowel, stem: "Ми живемо у ___.", cue: Львів, answer: [Львові]}
+- {id: l22, facet: alternation-vowel, stem: "Кіт на ___.", cue: стілець, answer: [стільці]}
+- {id: l23, facet: masc-u, stem: "Тато в ___.", cue: банк, answer: [банку]}
+- {id: l24, facet: masc-u, stem: "Діти в ___.", cue: парк, answer: [парку]}
+- {id: l25, facet: masc-u, stem: "Ми в ___.", cue: сад, answer: [саду]}
+- {id: l26, facet: masc-u, stem: "Я в ___.", cue: аеропорт, answer: [аеропорту]}
+- {id: l27, facet: masc-u, stem: "Ліфт у ___ не працює.", cue: будинок, answer: [будинку]}
+- {id: l28, facet: indeclinable, stem: "Ми в ___.", cue: кафе, answer: [кафе]}
+- {id: l29, facet: indeclinable, stem: "Я в ___.", cue: метро, answer: [метро]}
+- {id: l30, facet: indeclinable, stem: "Вони в ___.", cue: кіно, answer: [кіно]}
+- {id: l31, facet: indeclinable, stem: "Я в ___.", cue: таксі, answer: [таксі]}
+- {id: l32, facet: u-vs-na, stem: "Мама ___ пошті.", answer: [на]}
+- {id: l33, facet: u-vs-na, stem: "Я ___ банку.", answer: [у/в]}
+- {id: l34, facet: u-vs-na, stem: "Ми ___ вокзалі.", answer: [на]}
+- {id: l35, facet: u-vs-na, stem: "Брат ___ роботі.", answer: [на]}
+- {id: l36, facet: u-vs-na, stem: "Діти ___ школі.", answer: [у/в]}
+- {id: l37, facet: u-vs-na, stem: "Ми ___ концерті.", answer: [на]}
+- {id: l38, facet: u-vs-na, stem: "Тато ___ аптеці.", answer: [у/в]}
+- {id: l39, facet: u-vs-na, stem: "Він ___ зупинці.", answer: [на]}
+- {id: l40, facet: u-vs-na, stem: "Вона ___ магазині.", answer: [у/в]}
+- {id: l41, facet: u-vs-na, stem: "Ключі ___ столі.", answer: [на]}
+- {id: l42, facet: u-vs-na, stem: "Ми живемо ___ вулиці Франка.", answer: [на]}

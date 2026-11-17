@@ -1,0 +1,52 @@
+enabler: uk.gram.pron.possessive
+lang: uk
+facets:
+- id: my-your
+  band: core
+  format: type
+  rule: {de: "мій, моя, моє, мої; твій, твоя, твоє, твої — richtet sich nach dem Besitz", en: "мій, моя, моє, мої; твій, твоя, твоє, твої — agree with the thing owned"}
+  instruction: {de: "Setze das Possessivpronomen in der richtigen Form ein.", en: "Put the possessive in the right form."}
+- id: our-your-pl
+  band: variant
+  format: type
+  rule: {de: "наш, наша, наше, наші; ваш, ваша, ваше, ваші", en: "наш, наша, наше, наші; ваш, ваша, ваше, ваші"}
+  instruction: {de: "Setze das Possessivpronomen in der richtigen Form ein.", en: "Put the possessive in the right form."}
+- id: their
+  band: exception
+  format: type
+  rule: {de: "їхній, їхня, їхнє, їхні (weich)", en: "їхній, їхня, їхнє, їхні (soft)"}
+  instruction: {de: "Setze das Possessivpronomen in der richtigen Form ein.", en: "Put the possessive in the right form."}
+- id: his-her
+  band: contrast
+  format: choice
+  options: [його, її]
+  rule: {de: "його/її richten sich nach dem Besitzer und ändern sich nie", en: "його/її follow the owner and never change"}
+  instruction: {de: "його oder її?", en: "його or її?"}
+items:
+- {id: o01, facet: my-your, stem: "Це ___ мама.", cue: мій, answer: [моя]}
+- {id: o02, facet: my-your, stem: "Де ___ телефон?", cue: мій, answer: [мій]}
+- {id: o03, facet: my-your, stem: "Це ___ місто.", cue: мій, answer: [моє]}
+- {id: o04, facet: my-your, stem: "Це ___ батьки.", cue: мій, answer: [мої]}
+- {id: o05, facet: my-your, stem: "Де ___ сумка?", cue: твій, answer: [твоя]}
+- {id: o06, facet: my-your, stem: "Це ___ ключі?", cue: твій, answer: [твої]}
+- {id: o07, facet: my-your, stem: "Як ___ ім'я?", cue: твій, answer: [твоє]}
+- {id: o08, facet: my-your, stem: "Це ___ брат?", cue: твій, answer: [твій]}
+- {id: o09, facet: my-your, stem: "___ кава холодна.", cue: мій, answer: [моя]}
+- {id: o10, facet: my-your, stem: "___ діти вже в школі?", cue: твій, answer: [твої]}
+- {id: o11, facet: our-your-pl, stem: "Це ___ квартира.", cue: наш, answer: [наша]}
+- {id: o12, facet: our-your-pl, stem: "___ діти в школі.", cue: наш, answer: [наші]}
+- {id: o13, facet: our-your-pl, stem: "Як ___ прізвище?", cue: ваш, answer: [ваше]}
+- {id: o14, facet: our-your-pl, stem: "Це ___ син?", cue: ваш, answer: [ваш]}
+- {id: o15, facet: our-your-pl, stem: "Де ___ кімната?", cue: ваш, answer: [ваша]}
+- {id: o16, facet: our-your-pl, stem: "Це ___ село.", cue: наш, answer: [наше]}
+- {id: o17, facet: our-your-pl, stem: "Це ___ речі?", cue: ваш, answer: [ваші]}
+- {id: o18, facet: their, stem: "Це ___ дім.", cue: їхній, answer: [їхній]}
+- {id: o19, facet: their, stem: "Це ___ машина.", cue: їхній, answer: [їхня]}
+- {id: o20, facet: their, stem: "Це ___ діти.", cue: їхній, answer: [їхні]}
+- {id: o21, facet: their, stem: "Це ___ кафе.", cue: їхній, answer: [їхнє]}
+- {id: o22, facet: his-her, stem: "Це Олена. А це ___ брат.", answer: [її]}
+- {id: o23, facet: his-her, stem: "Це Тарас. А це ___ мама.", answer: [його]}
+- {id: o24, facet: his-her, stem: "Олена живе в Києві. ___ батьки живуть у Львові.", answer: [її]}
+- {id: o25, facet: his-her, stem: "Андрій має кота. ___ кіт білий.", answer: [його]}
+- {id: o26, facet: his-her, stem: "Це моя сестра, а це ___ діти.", answer: [її]}
+- {id: o27, facet: his-her, stem: "Мій брат — лікар. ___ дружина — вчителька.", answer: [його]}

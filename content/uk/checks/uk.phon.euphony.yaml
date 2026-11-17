@@ -1,0 +1,88 @@
+# у/в, і/й, з/зі (Правопис 2019, § 23-25). Only clear-cut contexts: no consonant + vowel cases for у/в.
+enabler: uk.phon.euphony
+lang: uk
+facets:
+- id: uv-consonants
+  band: core
+  format: choice
+  options: [у, в]
+  rule: {de: "у zwischen Konsonanten und am Satzanfang vor Konsonant", en: "у between consonants and at the start of a sentence before a consonant"}
+  instruction: {de: "у oder в?", en: "у or в?"}
+- id: uv-vowels
+  band: core
+  format: choice
+  options: [у, в]
+  rule: {de: "в nach Vokal (vor Konsonant oder Vokal)", en: "в after a vowel (before a consonant or a vowel)"}
+  instruction: {de: "у oder в?", en: "у or в?"}
+- id: uv-start-vowel
+  band: variant
+  format: choice
+  options: [у, в]
+  rule: {de: "в am Satzanfang vor Vokal", en: "в at the start of a sentence before a vowel"}
+  instruction: {de: "у oder в?", en: "у or в?"}
+- id: uv-before-v-f
+  band: exception
+  format: choice
+  options: [у, в]
+  rule: {de: "immer у vor в, ф und vor льв, св, тв, хв", en: "always у before в, ф and before льв, св, тв, хв"}
+  instruction: {de: "у oder в?", en: "у or в?"}
+- id: i-y
+  band: variant
+  format: choice
+  options: [і, й]
+  rule: {de: "й nach Vokal vor Konsonant, і zwischen Konsonanten", en: "й after a vowel before a consonant, і between consonants"}
+  instruction: {de: "і oder й?", en: "і or й?"}
+- id: i-before-iotated
+  band: exception
+  format: choice
+  options: [і, й]
+  rule: {de: "immer і vor я, ю, є, ї, й", en: "always і before я, ю, є, ї, й"}
+  instruction: {de: "і oder й?", en: "і or й?"}
+- id: z-zi
+  band: variant
+  format: choice
+  options: [з, зі]
+  rule: {de: "зі vor мною und vor Gruppen wie зл, сп, шк; sonst з", en: "зі before мною and clusters like зл, сп, шк; otherwise з"}
+  instruction: {de: "з oder зі?", en: "з or зі?"}
+items:
+- {id: e01, facet: uv-consonants, stem: "Брат ___ Києві.", answer: [у]}
+- {id: e02, facet: uv-consonants, stem: "Тарас ___ банку.", answer: [у]}
+- {id: e03, facet: uv-consonants, stem: "Олег ___ кафе.", answer: [у]}
+- {id: e04, facet: uv-consonants, stem: "У нас є дім ___ селі.", answer: [у]}
+- {id: e05, facet: uv-consonants, stem: "___ Києві сьогодні тепло.", answer: [у]}
+- {id: e06, facet: uv-consonants, stem: "___ неділю я відпочиваю.", answer: [у]}
+- {id: e07, facet: uv-consonants, stem: "Іван ___ магазині.", answer: [у]}
+- {id: e08, facet: uv-consonants, stem: "Наш син ___ школі.", answer: [у]}
+- {id: e09, facet: uv-vowels, stem: "Мама ___ Києві.", answer: [в]}
+- {id: e10, facet: uv-vowels, stem: "Вона ___ аптеці.", answer: [в]}
+- {id: e11, facet: uv-vowels, stem: "Сестра працює ___ школі.", answer: [в]}
+- {id: e12, facet: uv-vowels, stem: "Я ___ офісі.", answer: [в]}
+- {id: e13, facet: uv-vowels, stem: "Діти ___ парку.", answer: [в]}
+- {id: e14, facet: uv-vowels, stem: "Ключі ___ сумці.", answer: [в]}
+- {id: e15, facet: uv-vowels, stem: "Ми живемо ___ Харкові.", answer: [в]}
+- {id: e16, facet: uv-vowels, stem: "Тато ___ банку.", answer: [в]}
+- {id: e17, facet: uv-start-vowel, stem: "___ Одесі сьогодні сонячно.", answer: [в]}
+- {id: e18, facet: uv-start-vowel, stem: "___ аптеці є ліки від застуди.", answer: [в]}
+- {id: e19, facet: uv-start-vowel, stem: "___ Америці зараз ніч.", answer: [в]}
+- {id: e20, facet: uv-start-vowel, stem: "___ офісі нікого немає.", answer: [в]}
+- {id: e21, facet: uv-before-v-f, stem: "Мама ___ Львові.", answer: [у]}
+- {id: e22, facet: uv-before-v-f, stem: "Ми живемо ___ Відні.", answer: [у]}
+- {id: e23, facet: uv-before-v-f, stem: "Зустрінемося ___ вівторок.", answer: [у]}
+- {id: e24, facet: uv-before-v-f, stem: "Вона ___ Франції.", answer: [у]}
+- {id: e25, facet: uv-before-v-f, stem: "Сестра живе ___ Вінниці.", answer: [у]}
+- {id: e26, facet: uv-before-v-f, stem: "Мама ___ ванній.", answer: [у]}
+- {id: e27, facet: i-y, stem: "мама ___ тато", answer: [й]}
+- {id: e28, facet: i-y, stem: "брат ___ сестра", answer: [і]}
+- {id: e29, facet: i-y, stem: "кава ___ чай", answer: [й]}
+- {id: e30, facet: i-y, stem: "борщ ___ хліб", answer: [і]}
+- {id: e31, facet: i-y, stem: "Оля ___ Тарас", answer: [й]}
+- {id: e32, facet: i-y, stem: "суп ___ салат", answer: [і]}
+- {id: e33, facet: i-before-iotated, stem: "Оля ___ Яна", answer: [і]}
+- {id: e34, facet: i-before-iotated, stem: "мама ___ Юрко", answer: [і]}
+- {id: e35, facet: i-before-iotated, stem: "кава ___ яблуко", answer: [і]}
+- {id: e36, facet: z-zi, stem: "Ходімо ___ мною!", answer: [зі]}
+- {id: e37, facet: z-zi, stem: "Чай ___ лимоном, будь ласка.", answer: [з]}
+- {id: e38, facet: z-zi, stem: "Я живу ___ братом.", answer: [з]}
+- {id: e39, facet: z-zi, stem: "Каву ___ молоком?", answer: [з]}
+- {id: e40, facet: z-zi, stem: "Ти підеш ___ нами?", answer: [з]}
+- {id: e41, facet: z-zi, stem: "Вона говорить ___ мною українською.", answer: [зі]}

@@ -1,0 +1,45 @@
+# The situation decides: context fields are shown to the learner in the instruction language.
+enabler: uk.prag.address
+lang: uk
+facets:
+- id: ty-vy
+  band: core
+  format: choice
+  options: [ти, ви]
+  rule: {de: "ти mit Familie, Freunden, Kindern; ви mit Fremden, im Service, mit Älteren", en: "ти with family, friends, children; ви with strangers, staff, older people"}
+  instruction: {de: "ти oder ви?", en: "ти or ви?"}
+- id: verb-form
+  band: variant
+  format: choice
+  options: [можеш, можете]
+  rule: {de: "Das Verb folgt der Anrede: ти можеш, ви можете", en: "The verb follows the form of address: ти можеш, ви можете"}
+  instruction: {de: "Welche Form passt zur Situation?", en: "Which form fits the situation?"}
+- id: pan-pani
+  band: contrast
+  format: choice
+  options: [пане, пані]
+  rule: {de: "пане + Vokativ für Männer, пані + Vokativ für Frauen", en: "пане + vocative for men, пані + vocative for women"}
+  instruction: {de: "пане oder пані?", en: "пане or пані?"}
+items:
+- {id: d01, facet: ty-vy, stem: "Вибачте, ___ знаєте, де вокзал?", context: {de: "Sie fragen eine fremde Person auf der Straße.", en: "You ask a stranger in the street."}, answer: [ви]}
+- {id: d02, facet: ty-vy, stem: "Мамо, ___ вдома?", context: {de: "Sie rufen Ihre Mutter an.", en: "You call your mother."}, answer: [ти]}
+- {id: d03, facet: ty-vy, stem: "Що ___ будете пити?", context: {de: "Der Kellner fragt Sie.", en: "The waiter asks you."}, answer: [ви]}
+- {id: d04, facet: ty-vy, stem: "Олю, ___ підеш у кіно?", context: {de: "Sie fragen eine Freundin.", en: "You ask a friend."}, answer: [ти]}
+- {id: d05, facet: ty-vy, stem: "Пані Ганно, ___ можете мені допомогти?", context: {de: "Sie sprechen mit Ihrer Vermieterin.", en: "You talk to your landlady."}, answer: [ви]}
+- {id: d06, facet: ty-vy, stem: "Як ___ себе почуваєш, синку?", context: {de: "Eine Mutter fragt ihren kleinen Sohn.", en: "A mother asks her little son."}, answer: [ти]}
+- {id: d07, facet: ty-vy, stem: "Скажіть, будь ласка, ___ працюєте в суботу?", context: {de: "Sie sprechen mit einer Nachhilfelehrerin, die Sie zum ersten Mal treffen.", en: "You talk to a tutor you meet for the first time."}, answer: [ви]}
+- {id: d08, facet: ty-vy, stem: "Тарасе, ___ де?", context: {de: "Sie schreiben Ihrem Bruder.", en: "You text your brother."}, answer: [ти]}
+- {id: d09, facet: ty-vy, stem: "Добрий день! ___ лікар Петренко?", context: {de: "Sie kommen in eine Arztpraxis.", en: "You enter a doctor's office."}, answer: [ви]}
+- {id: d10, facet: ty-vy, stem: "Бабусю, ___ хочеш чаю?", context: {de: "Sie sprechen mit Ihrer Großmutter (in Ihrer Familie duzt man sie).", en: "You talk to your grandmother (your family uses ти with her)."}, answer: [ти]}
+- {id: d11, facet: verb-form, stem: "Вибачте, ___ повторити?", context: {de: "Sie bitten die Verkäuferin, etwas zu wiederholen.", en: "You ask the shop assistant to repeat."}, answer: [можете]}
+- {id: d12, facet: verb-form, stem: "Друже, ___ мені допомогти?", context: {de: "Sie bitten einen Freund um Hilfe.", en: "You ask a friend for help."}, answer: [можеш]}
+- {id: d13, facet: verb-form, stem: "Пане Іване, ___ говорити повільніше?", context: {de: "Sie sprechen mit Ihrem Nachbarn, den Sie siezen.", en: "You talk to the neighbour you address with ви."}, answer: [можете]}
+- {id: d14, facet: verb-form, stem: "Сестричко, ___ мені подзвонити?", context: {de: "Sie schreiben Ihrer Schwester.", en: "You text your sister."}, answer: [можеш]}
+- {id: d15, facet: verb-form, stem: "Перепрошую, ___ показати на карті?", context: {de: "Sie fragen einen Polizisten.", en: "You ask a police officer."}, answer: [можете]}
+- {id: d22, facet: verb-form, stem: "Тату, ___ мене забрати після роботи?", context: {de: "Sie schreiben Ihrem Vater.", en: "You text your father."}, answer: [можеш]}
+- {id: d16, facet: pan-pani, stem: "Добрий день, ___ Олено!", answer: [пані]}
+- {id: d17, facet: pan-pani, stem: "Дякую, ___ Іване!", answer: [пане]}
+- {id: d18, facet: pan-pani, stem: "До побачення, ___ Мирославе!", answer: [пане]}
+- {id: d19, facet: pan-pani, stem: "Вибачте, ___ Ганно, можна запитати?", answer: [пані]}
+- {id: d20, facet: pan-pani, stem: "Доброго ранку, ___ Петре!", answer: [пане]}
+- {id: d21, facet: pan-pani, stem: "Добрий вечір, ___ Маріє!", answer: [пані]}

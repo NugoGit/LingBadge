@@ -1,0 +1,55 @@
+enabler: uk.gram.noun.voc
+lang: uk
+facets:
+- id: hard
+  band: core
+  format: type
+  rule: {de: "-а → -о (Олена → Олено), harter Konsonant → -е (Іван → Іване, пан → пане)", en: "-а → -о (Олена → Олено), hard consonant → -е (Іван → Іване, пан → пане)"}
+  instruction: {de: "Sprich die Person an: Setze die richtige Form ein.", en: "Address the person: put in the right form."}
+- id: soft
+  band: variant
+  format: type
+  rule: {de: "-я, -й, -ь und -р (weich) → -ю (Оля → Олю, Андрій → Андрію, Ігор → Ігорю); -о → -е (Петро → Петре)", en: "-я, -й, -ь and soft -р → -ю (Оля → Олю, Андрій → Андрію, Ігор → Ігорю); -о → -е (Петро → Петре)"}
+  instruction: {de: "Sprich die Person an: Setze die richtige Form ein.", en: "Address the person: put in the right form."}
+- id: special
+  band: exception
+  format: type
+  rule: {de: "Besondere Formen: друг → друже, тато → тату, Марія → Маріє; пані bleibt", en: "Special forms: друг → друже, тато → тату, Марія → Маріє; пані stays"}
+  instruction: {de: "Sprich die Person an: Setze die richtige Form ein.", en: "Address the person: put in the right form."}
+- id: voc-or-nom
+  band: contrast
+  format: choice
+  rule: {de: "Vokativ nur bei direkter Anrede; über jemanden sprechen → Nominativ", en: "Vocative only when addressing someone; talking about someone → nominative"}
+  instruction: {de: "Welche Form passt?", en: "Which form fits?"}
+items:
+- {id: v01, facet: hard, stem: "Привіт, ___!", cue: Олена, answer: [Олено]}
+- {id: v02, facet: hard, stem: "Добрий день, ___ Іване!", cue: пан, answer: [пане]}
+- {id: v03, facet: hard, stem: "___, де ключі?", cue: мама, answer: [мамо]}
+- {id: v04, facet: hard, stem: "Дякую, ___!", cue: Тарас, answer: [Тарасе]}
+- {id: v05, facet: hard, stem: "___, ти вдома?", cue: Іван, answer: [Іване]}
+- {id: v06, facet: hard, stem: "Добраніч, ___!", cue: Ганна, answer: [Ганно]}
+- {id: v07, facet: hard, stem: "___, сідай, будь ласка!", cue: Богдан, answer: [Богдане]}
+- {id: v08, facet: hard, stem: "Привіт, ___!", cue: Наталка, answer: [Наталко]}
+- {id: v09, facet: hard, stem: "До побачення, пане ___!", cue: Степан, answer: [Степане]}
+- {id: v10, facet: hard, stem: "___, ходімо додому!", cue: сестра, answer: [сестро]}
+- {id: v11, facet: soft, stem: "Привіт, ___!", cue: Андрій, answer: [Андрію]}
+- {id: v12, facet: soft, stem: "Дякую, ___!", cue: Сергій, answer: [Сергію]}
+- {id: v13, facet: soft, stem: "___, ходи сюди!", cue: Оля, answer: [Олю]}
+- {id: v14, facet: soft, stem: "Привіт, ___!", cue: Таня, answer: [Таню]}
+- {id: v15, facet: soft, stem: "Добрий день, пане ___!", cue: Ігор, answer: [Ігорю]}
+- {id: v16, facet: soft, stem: "Добрий вечір, пане ___!", cue: Петро, answer: [Петре]}
+- {id: v17, facet: soft, stem: "___, як справи?", cue: Юля, answer: [Юлю]}
+- {id: v18, facet: soft, stem: "Дякую, пане ___!", cue: вчитель, answer: [вчителю, учителю]}
+- {id: v19, facet: special, stem: "Привіт, ___!", cue: друг, answer: [друже]}
+- {id: v20, facet: special, stem: "___, допоможи, будь ласка!", cue: тато, answer: [тату]}
+- {id: v21, facet: special, stem: "Дякую, ___!", cue: Марія, answer: [Маріє]}
+- {id: v22, facet: special, stem: "Добрий день, ___ Олено!", cue: пані, answer: [пані]}
+- {id: v23, facet: special, stem: "___, привіт!", cue: Микола, answer: [Миколо]}
+- {id: v24, facet: voc-or-nom, stem: "Привіт, ___!", options: [Олена, Олено], answer: [Олено]}
+- {id: v25, facet: voc-or-nom, stem: "Це моя сестра ___.", options: [Олена, Олено], answer: [Олена]}
+- {id: v26, facet: voc-or-nom, stem: "___ живе у Львові.", options: [Андрій, Андрію], answer: [Андрій]}
+- {id: v27, facet: voc-or-nom, stem: "Дякую, ___!", options: [Андрій, Андрію], answer: [Андрію]}
+- {id: v28, facet: voc-or-nom, stem: "Мого брата звати ___.", options: [Тарас, Тарасе], answer: [Тарас]}
+- {id: v29, facet: voc-or-nom, stem: "Як справи, ___?", options: [Тарас, Тарасе], answer: [Тарасе]}
+- {id: v30, facet: voc-or-nom, stem: "___ сьогодні вдома.", options: [мама, мамо], answer: [мама]}
+- {id: v31, facet: voc-or-nom, stem: "___, я вже вдома!", options: [мама, мамо], answer: [мамо]}

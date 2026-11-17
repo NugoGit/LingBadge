@@ -1,44 +1,93 @@
-# lingobadge — Stage 3 (A1 content + test design)
+# LingBadge
 
-Universal skills in `content/core`, language layers in `content/<lang>`.
+Language certification by small, real-life skills instead of whole CEFR levels.
 
-```
-content/core/sources.yaml        source registry (CEFR CV paraphrased, Ukrainian standard, Threshold themes)
-content/core/themes.yaml         themes → situations; domain gaps
-content/core/skills/*.yaml       52 A1 skills (id = <theme>.<task>.<MODE>)
-content/core/rubrics/*.yaml      generic rubrics per mode family (refined in Stage 3)
-content/uk/sources.yaml          Ukrainian standard 2024, Catalogue C (grammar) by level
-content/uk/enablers/*.yaml       64 enablers (grammar, lexis with seed word lists, phonology, script, pragmatics)
-content/uk/realizations/*.yaml   one per skill: register, variety, key phrases, enablers (productive / formulaic)
-content/fa/                      5-skill Persian sketch + findings.yaml
-config/mastery.yaml              badge policy
-src/lingobadge/                  models, loader, validator
-reports/                         generated: validation.txt, trace.md, coverage.md, overview.csv, enablers_uk.csv
-```
+Each skill is something you can actually do, such as ordering at a café, reading a timetable or writing a message to arrange a meeting. You earn a badge for a skill when you pass two independent tests on different days, and the badge is all or nothing. Behind every skill sit *enablers*: the grammar, vocabulary and pragmatics it needs. When a test goes wrong, LingBadge points to the enabler that is most likely missing and offers a short check for it.
 
-Validate and regenerate reports (needs `pydantic`, `pyyaml`):
+The first language pack is **Ukrainian A1** (52 skills, 64 enablers). A 5-skill **Persian** sketch tests whether the universal core really is language-independent.
+
+> **Status: early prototype.** The Ukrainian content is a draft that no native speaker has reviewed yet. The user interface is in German. Only A1 exists. Typed role-plays show your level but award no speaking badge.
+
+## Try it
+
+**Online:** <https://nugogit.github.io/LingBadge/> (once GitHub Pages is enabled for the repo; see below).
+
+**Locally**, without installing anything: download the repository and open `app/index.html` in a browser. If your browser blocks local files, serve the folder:
 
 ```
-PYTHONPATH=src python -m lingobadge.validate content reports
+python -m http.server -d app 8000      # then open http://localhost:8000
 ```
 
-Enabler use: `productive` = the learner must build the form; `formulaic` = a memorised chunk whose grammar
-belongs to a higher level (e.g. genitive in "без цукру" at A1). Using an above-level enabler productively is a validation error.
+What works without an AI provider, and what needs one:
 
-## Stage 3 additions
+| Feature | Without AI | With an API key |
+| --- | --- | --- |
+| Skill map, placement status, badges | ✓ | ✓ |
+| Grammar checks with a question catalogue | ✓ (13 Ukrainian enablers so far) | ✓ |
+| Grammar checks without a catalogue | – | generated per check |
+| Skill tests (reading, listening, writing, typed role-play), placement | – | ✓ |
+
+To use AI features, open **Einstellungen** (settings) and choose a provider:
+
+- **Anthropic (Claude)**: paste an API key from the [Claude Console](https://console.anthropic.com). Set a spending limit there. A full test costs a few cents.
+- **OpenAI-compatible**: any endpoint with `/chat/completions`, including local models via [Ollama](https://ollama.com) or LM Studio. Ollama must allow the page's origin, e.g. `OLLAMA_ORIGINS=* ollama serve`.
+
+Your API key and your results stay in this browser (`localStorage`). Use **Herunterladen** (download) in the settings to back them up or move them to another browser.
+
+Listening tests use your browser's speech voices. Firefox only offers voices installed in the operating system, which often lack Ukrainian; Edge and Chrome have online voices.
+
+The same app also runs as a claude.ai artifact. There, Claude calls count against the user's own claude.ai plan and no API key is needed.
+
+## How it works
+
+- **Skills** are universal: *task × mode*, where the mode is how the task happens in real life (R reading, L listening, SI spoken interaction, SP spoken production, WI written interaction, WP written production). They live in `content/core/skills`.
+- **Realizations** say what a skill takes in one language: target phrases, register, variety and the enablers it needs (`content/<lang>/realizations`).
+- **Enablers** are the building blocks: grammar, vocabulary, phonology, script, orthography, pragmatics. An enabler is used either *productively* (the learner builds the form) or *formulaically* (a memorised chunk, which may come from a higher level).
+- **Tests** are generated per attempt, checked by a second model call, and graded against explicit rubrics. To pass, every must-criterion has to be met *and* the score has to reach 90 %.
+- **Badges** need two passed tests with different content, on different days, within 60 days.
+- **Enabler checks** come from a hand-written **question catalogue** when one exists: items are tagged by band (core, variant, exception, contrast), and a check mixes all bands. See [docs/question-catalogue.md](docs/question-catalogue.md).
+
+Full design: [docs/design.md](docs/design.md).
+
+## Repository layout
 
 ```
-content/core/templates.yaml      test templates per mode, enabler checks, probes
-content/core/rubrics/            level descriptors 0-3, scoring rule, chunk rule
-prompts/                         generate_form, validate_form, interlocutor, grade_open, grade_short_answers
-src/lingobadge/forms.py          TestForm, Response, Grade, Attempt
-src/lingobadge/policy.py         key grading, scoring, pass rule, re-grading, two-form badge rule, heatmap status
-src/lingobadge/diagnosis.py      error tags -> holes -> checks to take first
-examples/                        five worked examples (fixtures)
-calibration/README.md            calibration sets and targets
-tests/test_examples.py           runs the worked examples through policy and diagnosis
+app/                     the web app (static files; open index.html)
+  content.js             generated bundle of content/ (do not edit; run tools/build_app_content.py)
+  core.js                scoring, pass and badge rules, check sampling, prompts (also tested in node)
+  platform.js            standalone mode: local storage, API providers
+content/core/            universal layer: themes, 52 skills, rubrics, test templates, sources
+content/uk/              Ukrainian pack: language.yaml, enablers, realizations, checks (question catalogues)
+content/fa/              Persian sketch
+config/                  mastery policy (thresholds, badge rule), app settings
+src/lingbadge/           Python: models, loader, validator, catalogue sampler, scaffold
+prompts/                 reference prompts (generation, validation, interlocutor, grading)
+examples/                five worked test examples used as test fixtures
+calibration/             how grader calibration works
+reports/                 generated by the validator: trace, coverage, CSV overviews
+templates/language-pack/ starting point for a new language
+docs/                    design, question catalogues, language packs
 ```
 
-Run the tests (needs `pytest`): `PYTHONPATH=src python -m pytest -q tests`
+## Development
 
-The YAML under `content/` is now the source of truth; the Stage 2 authoring scripts are retired.
+```
+pip install -e ".[dev]"
+python -m lingbadge.validate content reports   # validate all content, write reports/
+pytest -q                                       # Python tests
+python tools/build_app_content.py               # rebuild app/content.js after content changes
+node tests/core.test.js                         # app logic tests
+python -m lingbadge.checks uk.gram.verb.present # preview one sampled check from a catalogue
+```
+
+CI runs all of these on every pull request. Merges to `main` deploy the app to GitHub Pages.
+
+**Enable GitHub Pages once:** Settings → Pages → Source: *GitHub Actions*.
+
+## Contributing
+
+Native-speaker review, new catalogue items, new language packs and bug reports are all welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+Not chosen yet. Until a license is added, the code and content are not licensed for reuse.

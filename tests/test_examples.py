@@ -5,10 +5,10 @@ from pathlib import Path
 import pytest
 import yaml
 
-from lingobadge.content import load
-from lingobadge.diagnosis import diagnose
-from lingobadge.forms import Attempt, Grade, Response, TestForm
-from lingobadge.policy import (MasteryConfig, attempt_outcome, badge_awardable, badge_decision, grade_keyed, heatmap_status,
+from lingbadge.content import load
+from lingbadge.diagnosis import diagnose
+from lingbadge.forms import Attempt, Grade, Response, TestForm
+from lingbadge.policy import (MasteryConfig, attempt_outcome, badge_awardable, badge_decision, grade_keyed, heatmap_status,
                                median_grade, needs_regrade, normalize)
 
 ROOT = Path(__file__).resolve().parents[1]

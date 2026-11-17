@@ -124,3 +124,41 @@ class Realization(Strict):
     note: str | None = None
     version: int = 1
     status: Literal["draft", "reviewed", "retired"] = "draft"
+
+
+# ---------------------------------------------------------------- question catalogue (enabler checks)
+Band = Literal["core", "variant", "exception", "contrast"]
+CheckFormat = Literal["choice", "type"]
+Text = str | dict[str, str]          # plain text or {instruction-language: text}
+BANDS: tuple[str, ...] = ("core", "variant", "exception", "contrast")
+DEFAULT_BLUEPRINT = {"core": 0.4, "variant": 0.3, "exception": 0.15, "contrast": 0.15}
+
+
+class CheckFacet(Strict):
+    """One sub-rule of an enabler. Format and instruction live here so every item of a facet looks the same."""
+    id: str
+    band: Band
+    format: CheckFormat
+    rule: Text                         # what the facet tests, shown after the check
+    instruction: Text                  # shown to the learner
+    options: list[str] | None = None   # choice only: the complete answer space
+
+
+class CheckItem(Strict):
+    id: str
+    facet: str
+    stem: str                          # target-language sentence with exactly one ___
+    cue: str | None = None             # base form shown in brackets (type items)
+    answer: list[str]                  # first = canonical, rest = also accepted
+    options: list[str] | None = None   # choice only: overrides the facet's options
+    context: Text | None = None        # situation in the instruction language
+    status: Literal["draft", "reviewed"] = "draft"
+
+
+class CheckCatalogue(Strict):
+    enabler: str
+    lang: str
+    blueprint: dict[Band, float] | None = None
+    reviewed_by: list[str] = []
+    facets: list[CheckFacet]
+    items: list[CheckItem]
