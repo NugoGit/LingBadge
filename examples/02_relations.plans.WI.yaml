@@ -1,0 +1,143 @@
+title: 'Make plans by text (WI): open grading, slip vs gap, borderline re-grade, diagnosis'
+attempts:
+- id: a1
+  taken_on: '2026-11-17'
+  form:
+    id: f-plans-2290
+    skill: relations.plans.WI
+    lang: uk
+    seed: 2290
+    template: written-interaction.v1
+    generator: llm-template:v1
+    rubric: rubric.written-interaction.v1
+    stimuli:
+    - kind: message
+      title: Message from Oksana
+      body: Привіт! Ти вільний у суботу ввечері? Ходімо в кіно! Фільм о 19:30.
+    brief:
+    - id: c1
+      text: Greet Oksana and thank her.
+      must: true
+    - id: c2
+      text: Say that you can't on Saturday.
+      must: true
+    - id: c3
+      text: Give a short reason.
+      must: true
+    - id: c4
+      text: Suggest another day and a time.
+      must: true
+    - id: c5
+      text: Ask where you will meet.
+      must: true
+    - id: c6
+      text: Close the message in a friendly way.
+      must: false
+    word_range:
+    - 20
+    - 60
+    rubric_specifics:
+      key_structures: у/в + accusative for the day (у неділю); о + locative of the ordinal for clock time (о шостій);
+        не можу; question word order.
+    enablers:
+    - id: uk.script.alphabet
+      use: productive
+    - id: uk.num.time
+      use: productive
+    - id: uk.gram.noun.acc-sg
+      use: productive
+    - id: uk.gram.syntax.questions
+      use: productive
+    - id: uk.gram.syntax.negation
+      use: productive
+    - id: uk.gram.verb.present-irregular
+      use: productive
+    - id: uk.gram.verb.aspect
+      use: formulaic
+  response:
+    form_id: f-plans-2290
+    text: Привіт, Оксано! Дякую за запрошення. На жаль, у суботу я не можу, бо працюю. Можемо піти в неділю о шоста?
+      Де ми зустрінемося? До зустрічі!
+  grade: &id001
+    form_id: f-plans-2290
+    grader: llm-claude:v1
+    criteria:
+    - &id002
+      id: task_completion
+      level: 3
+      confidence: 0.95
+      evidence:
+      - all six points covered, incl. reason «бо працюю»
+    - &id003
+      id: comprehension
+      level: 2
+      confidence: 0.9
+      evidence:
+      - 'understood: Saturday evening, cinema'
+    - id: key_structures
+      level: 1
+      confidence: 0.8
+      evidence:
+      - у суботу ✓, в неділю ✓, не можу ✓
+      - '«о шоста» ✗: the only clock time, never correct → gap'
+    - &id004
+      id: orthography
+      level: 3
+      confidence: 0.9
+      evidence: []
+    - &id005
+      id: appropriacy
+      level: 3
+      confidence: 0.9
+      evidence:
+      - vocative «Оксано», informal throughout, friendly close
+    errors: &id006
+    - span: о шоста
+      correction: о шостій
+      criterion: key_structures
+      enabler: uk.num.time
+      blocks_meaning: false
+  regrades:
+  - *id001
+  - form_id: f-plans-2290
+    grader: llm-claude:v1
+    criteria:
+    - *id002
+    - *id003
+    - id: key_structures
+      level: 1
+      confidence: 0.85
+      evidence: []
+    - *id004
+    - *id005
+    errors: *id006
+  - form_id: f-plans-2290
+    grader: llm-claude:v1
+    criteria:
+    - *id002
+    - *id003
+    - id: key_structures
+      level: 2
+      confidence: 0.6
+      evidence: []
+    - *id004
+    - *id005
+    errors: *id006
+enabler_status:
+  uk.num.ordinal: known
+  uk.gram.adj.nom-agreement: known
+  uk.gram.adj.acc-loc-sg: untested
+  uk.gram.noun.acc-sg: known
+  uk.gram.noun.loc-sg: known
+  uk.gram.noun.gender: known
+expected:
+  a1:
+    passed: false
+    score: 0.889
+    failed_musts:
+    - key_structures
+    needs_regrade: true
+    median_key_structures: 1
+    check_first:
+    - uk.gram.adj.acc-loc-sg
+    - uk.num.time

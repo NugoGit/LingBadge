@@ -1,0 +1,30 @@
+skill: relations.wishes.WI
+lang: uk
+cefr: A1
+register:
+- informal
+- formal
+variety: standard
+exponents:
+- З днем народження!
+- Вітаю з Новим роком!
+- Бажаю тобі щастя, здоров'я і любові!
+- Веселого Різдва!
+enablers:
+  required:
+  - id: uk.prag.wishes
+    use: productive
+  - id: uk.lex.celebrations
+    use: productive
+  - id: uk.script.apostrophe-softsign
+    use: productive
+  - id: uk.gram.pron.personal-oblique
+    use: productive
+  - id: uk.gram.noun.instr-sg
+    use: formulaic
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+rubric_specifics:
+  key_structures: Wishes as fixed chunks; correct apostrophe in здоров'я; тобі/вам by register.
+version: 1
+status: draft

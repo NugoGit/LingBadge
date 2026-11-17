@@ -1,0 +1,18 @@
+id: freetime.tour.L
+task: freetime.tour
+situation: freetime.sightseeing
+title: Follow a guided tour
+can_do: 'Can follow very simple information on a guided tour: what a building is, how old, who lived there.'
+mode: L
+domain:
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.live-audience.A1
+- ukstd.A1.theme.travel
+size: S
+rubric: rubric.listening.v1
+threshold: null
+version: 1
+status: draft

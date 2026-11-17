@@ -1,0 +1,20 @@
+id: personal.details.SI
+task: personal.details
+situation: personal.officialdom
+title: Give your personal details when asked
+can_do: >-
+  Can give name (and spell it), address, phone number, nationality and date of birth when asked slowly.
+mode: SI
+domain:
+- public
+cefr: A1
+prerequisites:
+- comm.repair.SI
+sources:
+- cv.interviewing.A1
+- cv.information-exchange.A1
+size: S
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

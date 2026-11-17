@@ -1,0 +1,28 @@
+skill: travel.postcard.WI
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Привіт з Карпат!
+- Тут дуже гарно. Погода хороша.
+- Ми живемо в маленькому готелі.
+- Цілую, Марко.
+enablers:
+  required:
+  - id: uk.gram.noun.loc-sg
+    use: productive
+  - id: uk.gram.adj.acc-loc-sg
+    use: productive
+  - id: uk.lex.weather
+    use: productive
+  - id: uk.gram.verb.present
+    use: productive
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+  supporting:
+  - id: uk.phon.euphony
+    use: productive
+version: 1
+status: draft

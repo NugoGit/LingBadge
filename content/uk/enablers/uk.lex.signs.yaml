@@ -1,0 +1,25 @@
+id: uk.lex.signs
+lang: uk
+kind: lexis
+title: Signs and notices
+cefr: A1
+words:
+- вхід
+- вихід
+- відчинено
+- зачинено
+- від себе
+- до себе
+- каса
+- туалет
+- перерва
+- не палити
+- обережно
+- вільно
+- зайнято
+- години роботи
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

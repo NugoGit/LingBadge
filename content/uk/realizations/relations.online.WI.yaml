@@ -1,0 +1,24 @@
+skill: relations.online.WI
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Класне фото!
+- Вітаю!
+- Дякую! 😊
+- Шкода…
+- Вибач, що пізно відповідаю.
+enablers:
+  required:
+  - id: uk.prag.courtesy
+    use: productive
+  - id: uk.gram.adj.nom-agreement
+    use: productive
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.prag.wishes
+    use: productive
+version: 1
+status: draft

@@ -1,0 +1,18 @@
+id: shopping.info.R
+task: shopping.info
+situation: shopping.info
+title: Read store information
+can_do: Can read store guides, price tags, offers and opening hours.
+mode: R
+domain:
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.reading-orientation.A1-2
+- cv.reading-orientation.A1-1
+size: S
+rubric: rubric.reading.v1
+threshold: null
+version: 1
+status: draft

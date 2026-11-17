@@ -1,0 +1,9 @@
+global:
+  score_threshold: 0.90     # weighted score / max score
+  must_min_level: 2         # every must-criterion at "meets" (2 of 3) or better
+  forms_required: 2         # independently generated forms, both passed
+  min_days_between: 1
+  pair_window_days: 60
+overrides:
+  comm.numbers.L: {score_threshold: 0.95}
+# Listening via TTS counts for badges for now (decision 2026-11-16); real recordings will replace it.

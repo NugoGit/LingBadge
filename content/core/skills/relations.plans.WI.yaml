@@ -1,0 +1,19 @@
+id: relations.plans.WI
+task: relations.plans
+situation: relations.plans
+title: Make plans by text message
+can_do: >-
+  Can read and write short messages proposing, accepting or declining a meeting and confirming time and place.
+mode: WI
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- cv.correspondence.A1
+- cv.reading-correspondence.A1
+size: S
+rubric: rubric.written-interaction.v1
+threshold: null
+version: 1
+status: draft

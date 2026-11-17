@@ -1,0 +1,19 @@
+id: freetime.hobbies.WI
+task: freetime.hobbies
+situation: freetime.hobbies
+title: Write about your hobbies and likes
+can_do: Can write a short post or message about their hobbies, likes and dislikes.
+mode: WI
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- cv.online-conversation.A1
+- cv.correspondence.A1
+- cv.overall-written-production.A1
+size: S
+rubric: rubric.written-interaction.v1
+threshold: null
+version: 1
+status: draft

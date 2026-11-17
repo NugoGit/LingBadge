@@ -1,0 +1,14 @@
+id: uk.gram.adj.nom-agreement
+lang: uk
+kind: grammar
+title: Adjective agreement in the nominative (новий, нова, нове, нові; синій)
+cefr: A1
+requires:
+- uk.gram.noun.gender
+sources:
+- ukstd.A1.gram.adj-nom
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,33 @@
+skill: relations.plans.WI
+lang: fa
+cefr: A1
+register:
+- informal
+variety: colloquial-tehrani
+exponents:
+- سلام! فردا شب وقت داری؟ (salām! fardā shab vaqt dāri?)
+- بریم کافه؟ (berim kāfe?)
+- ساعت هفت خوبه؟ (sāʿat-e haft khube?)
+- نه، متأسفانه نمی‌تونم. (na, mota'assefāne nemitunam.)
+- باشه، فردا می‌بینمت! (bāshe, fardā mibinamet!)
+enablers:
+  required:
+  - id: fa.script.alphabet
+    use: productive
+  - id: fa.var.colloquial
+    use: productive
+  - id: fa.gram.verb.subjunctive
+    use: productive
+  - id: fa.gram.verb.present
+    use: productive
+  - id: fa.lex.time-calendar
+    use: productive
+  - id: fa.num.0-100
+    use: productive
+  - id: fa.gram.pron.enclitic
+    use: productive
+  supporting:
+  - id: fa.script.digits
+    use: productive
+version: 1
+status: draft

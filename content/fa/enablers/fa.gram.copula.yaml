@@ -1,0 +1,10 @@
+id: fa.gram.copula
+lang: fa
+kind: grammar
+title: Copula endings (-am, -i, -e/ast, -im, -id, -and)
+cefr: A1
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,15 @@
+id: uk.gram.noun.gen-pl
+lang: uk
+kind: grammar
+title: Genitive plural (гривень, хвилин, яблук)
+cefr: A2
+requires:
+- uk.gram.noun.gen-sg
+- uk.gram.noun.nom-pl
+sources:
+- ukstd.A2.gram.genitive
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

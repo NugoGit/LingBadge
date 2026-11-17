@@ -1,0 +1,12 @@
+id: uk.phon.intonation
+lang: uk
+kind: phonology
+title: Statement, question and exclamation intonation
+cefr: A1
+sources:
+- ukstd.A1.gram.intonation
+check:
+  template: enabler.phonology.v1
+  items: 10
+  threshold: 0.9
+  channel: audio

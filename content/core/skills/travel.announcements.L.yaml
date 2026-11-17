@@ -1,0 +1,18 @@
+id: travel.announcements.L
+task: travel.announcements
+situation: travel.public-transport
+title: Understand station announcements
+can_do: Can catch train, platform, time and delay in a slow, clear announcement.
+mode: L
+domain:
+- public
+cefr: A1
+prerequisites:
+- comm.numbers.L
+sources:
+- cv.announcements.A1-2
+size: S
+rubric: rubric.listening.v1
+threshold: null
+version: 1
+status: draft

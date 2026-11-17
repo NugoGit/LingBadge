@@ -1,0 +1,19 @@
+id: health.emergency.SI
+task: health.emergency
+situation: health.emergency
+title: Ask for urgent help
+can_do: Can call for help, say what happened in a few words and say where they are.
+mode: SI
+domain:
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.overall-oral-interaction.A1
+size: S
+rubric: rubric.interaction.v1
+threshold: null
+flags:
+- new-task
+version: 1
+status: draft

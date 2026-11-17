@@ -1,0 +1,20 @@
+id: food.cafe.SI
+task: food.cafe
+situation: food.cafe
+title: Order in a cafe or restaurant
+can_do: Can order food and drink, ask what a dish is, handle 'we're out of that', ask for the bill and pay.
+mode: SI
+domain:
+- public
+cefr: A1
+prerequisites:
+- comm.numbers.L
+- comm.repair.SI
+sources:
+- cv.obtaining-goods-services.A1
+- ukstd.A1.theme.restaurant
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

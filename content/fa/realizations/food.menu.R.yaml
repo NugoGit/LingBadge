@@ -1,0 +1,27 @@
+skill: food.menu.R
+lang: fa
+cefr: A1
+register:
+- formal
+variety: standard-written
+exponents:
+- پیش‌غذا / غذای اصلی / نوشیدنی (pish-ghazā / ghazā-ye asli / nushidani)
+- چلوکباب کوبیده — ۴۸۰ (chelo-kabāb-e kubide — 480)
+- قیمت‌ها به هزار تومان (prices in thousand toman)
+- چای، دوغ، نوشابه (chāi, dugh, nushābe)
+enablers:
+  required:
+  - id: fa.script.alphabet
+    use: productive
+  - id: fa.script.digits
+    use: productive
+  - id: fa.script.unwritten-vowels
+    use: productive
+  - id: fa.money.toman-rial
+    use: productive
+  - id: fa.lex.food-drink
+    use: productive
+  - id: fa.gram.ezafe
+    use: productive
+version: 1
+status: draft

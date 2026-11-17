@@ -1,0 +1,14 @@
+id: uk.gram.pron.demonstrative
+lang: uk
+kind: grammar
+title: Demonstratives (цей, ця, це, ці; той)
+cefr: A1
+requires:
+- uk.gram.noun.gender
+sources:
+- ukstd.A1.gram.pron-demonstrative
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

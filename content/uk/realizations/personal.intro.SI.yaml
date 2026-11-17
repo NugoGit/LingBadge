@@ -1,0 +1,46 @@
+skill: personal.intro.SI
+lang: uk
+cefr: A1
+register:
+- formal
+- informal
+variety: standard
+exponents:
+- Мене звати … А вас? / А тебе?
+- Я з Австрії, живу у Відні.
+- Я працюю програмістом. / Я студент.
+- Я розмовляю німецькою й англійською.
+- Дуже приємно!
+enablers:
+  required:
+  - id: uk.gram.pron.personal-oblique
+    use: productive
+  - id: uk.gram.noun.loc-sg
+    use: productive
+  - id: uk.gram.verb.present
+    use: productive
+  - id: uk.lex.personal
+    use: productive
+  - id: uk.gram.syntax.questions
+    use: productive
+  - id: uk.prag.address
+    use: productive
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+  - id: uk.gram.noun.instr-sg
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+  - id: uk.phon.euphony
+    use: productive
+rubric_specifics:
+  key_structures: Мене звати + nominative; у/в + locative for city; з + country as a chunk; ти/ви chosen consistently.
+version: 1
+status: draft

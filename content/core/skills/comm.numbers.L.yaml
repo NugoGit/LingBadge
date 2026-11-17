@@ -1,0 +1,20 @@
+id: comm.numbers.L
+task: comm.numbers
+situation: comm.numbers
+title: Understand spoken numbers, prices and times
+can_do: >-
+  Can catch numbers, prices and clock times said aloud at normal-slow speed, face to face or over a loudspeaker.
+mode: L
+domain:
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.announcements.A1-2
+- cv.audio-recordings.A1
+- cv.obtaining-goods-services.A1
+size: M
+rubric: rubric.listening.v1
+threshold: null
+version: 1
+status: draft

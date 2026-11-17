@@ -1,0 +1,21 @@
+id: daily.routine.SI
+task: daily.routine
+situation: daily.routine
+title: Talk about your daily routine
+can_do: Can say what they do on a normal day, on a workday and at the weekend, and when.
+mode: SI
+domain:
+- personal
+cefr: A1
+prerequisites:
+- comm.time-dates.SI
+sources:
+- cv.monologue-experience.A1
+- cv.information-exchange.A1
+- ukstd.A1.theme.daily
+- ukstd.A1.theme.work-leisure
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

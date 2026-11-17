@@ -1,0 +1,24 @@
+id: uk.lex.weather
+lang: uk
+kind: lexis
+title: Weather
+cefr: A1
+words:
+- погода
+- сонце
+- сонячно
+- дощ
+- сніг
+- вітер
+- хмарно
+- тепло
+- холодно
+- спекотно
+- мороз
+- градус
+- прогноз
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

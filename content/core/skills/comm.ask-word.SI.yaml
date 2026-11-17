@@ -1,0 +1,21 @@
+id: comm.ask-word.SI
+task: comm.ask-word
+situation: comm.repair
+title: Ask what something is called or what a word means
+can_do: >-
+  Can ask what a thing is called, what a word means or how to say something, and point to what they want.
+mode: SI
+domain:
+- personal
+- public
+- educational
+cefr: A1
+prerequisites: []
+sources:
+- cv.compensating.A1
+- ukstd.A1.intent.ask-identify
+size: S
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

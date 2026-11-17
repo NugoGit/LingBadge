@@ -1,0 +1,12 @@
+id: uk.gram.verb.present
+lang: uk
+kind: grammar
+title: Present tense of regular verbs, 1st and 2nd conjugation
+cefr: A1
+sources:
+- ukstd.A1.gram.verb-present
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

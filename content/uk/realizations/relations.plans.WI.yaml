@@ -1,0 +1,29 @@
+skill: relations.plans.WI
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Привіт! Підемо завтра на каву?
+- Можу о шостій. Тобі зручно?
+- На жаль, сьогодні не можу.
+- Супер, до завтра!
+enablers:
+  required:
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.num.time
+    use: productive
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  - id: uk.gram.syntax.questions
+    use: productive
+  - id: uk.gram.syntax.negation
+    use: productive
+  - id: uk.gram.verb.present-irregular
+    use: productive
+  - id: uk.gram.verb.aspect
+    use: formulaic
+version: 1
+status: draft

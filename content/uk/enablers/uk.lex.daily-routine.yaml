@@ -1,0 +1,24 @@
+id: uk.lex.daily-routine
+lang: uk
+kind: lexis
+title: Daily routine
+cefr: A1
+words:
+- вставати
+- вмиватися
+- снідати
+- обідати
+- вечеряти
+- працювати
+- відпочивати
+- спати
+- прибирати
+- готувати
+- робочий день
+- вихідний
+- обідня перерва
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

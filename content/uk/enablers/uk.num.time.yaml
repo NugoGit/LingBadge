@@ -1,0 +1,16 @@
+id: uk.num.time
+lang: uk
+kind: grammar
+title: 'Clock time: Котра година? Третя. О третій. 18:30 as ''вісімнадцята тридцять'''
+cefr: A1
+requires:
+- uk.num.ordinal
+- uk.gram.adj.acc-loc-sg
+sources:
+- ukstd.A1.gram.num-ordinal
+- ukstd.A1.theme.daily
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

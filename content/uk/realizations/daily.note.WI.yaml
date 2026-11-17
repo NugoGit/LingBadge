@@ -1,0 +1,24 @@
+skill: daily.note.WI
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Я в магазині. Буду о п'ятій.
+- Пішла в аптеку, буду через годину.
+- Обід у холодильнику.
+enablers:
+  required:
+  - id: uk.gram.noun.loc-sg
+    use: productive
+  - id: uk.gram.verb.future-compound
+    use: productive
+  - id: uk.num.time
+    use: productive
+  - id: uk.gram.verb.past
+    use: productive
+  - id: uk.gram.verb.aspect
+    use: formulaic
+version: 1
+status: draft

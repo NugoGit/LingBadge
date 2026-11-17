@@ -1,0 +1,274 @@
+# Source registry. CEFR CV descriptors are paraphrased, not quoted; verify against the CV PDF.
+sources:
+- id: cv.overall-listening.A1
+  origin: cefr-cv
+  mode: L
+  text: >-
+    Follow very slow, carefully articulated speech; pick out places and times on familiar everyday topics.
+- id: cv.conversation-between-others.A1
+  origin: cefr-cv
+  mode: L
+  text: Recognise some words when people talk slowly about you, your family or surroundings.
+  deferred: >-
+    Overhearing is hard to test as a task at A1; partly exercised in relations.home-visit.SI. Dedicated L skill
+    planned at A2.
+- id: cv.live-audience.A1
+  origin: cefr-cv
+  mode: L
+  text: Follow very simple information in a predictable setting such as a guided tour.
+- id: cv.announcements.A1-1
+  origin: cefr-cv
+  mode: L
+  text: Understand instructions and short, simple directions given slowly and carefully.
+- id: cv.announcements.A1-2
+  origin: cefr-cv
+  mode: L
+  text: Understand figures, prices and times in slow, clear announcements (station, shop).
+- id: cv.audio-recordings.A1
+  origin: cefr-cv
+  mode: L
+  text: Recognise known words, names and numbers in short, simple recorded messages.
+- id: cv.tv-video.A1
+  origin: cefr-cv
+  mode: L
+  text: Identify the topic of headline news items and adverts, helped by the pictures.
+- id: cv.overall-reading.A1
+  origin: cefr-cv
+  mode: R
+  text: Understand very short, simple texts phrase by phrase, picking out familiar words.
+- id: cv.reading-correspondence.A1
+  origin: cefr-cv
+  mode: R
+  text: >-
+    Understand short simple messages (postcard, social media, email), e.g. what to do, when and where to meet.
+- id: cv.reading-orientation.A1-1
+  origin: cefr-cv
+  mode: R
+  text: Recognise familiar words on simple notices in common everyday situations.
+- id: cv.reading-orientation.A1-2
+  origin: cefr-cv
+  mode: R
+  text: Understand store guides, directions inside buildings and basic hotel information such as meal times.
+- id: cv.reading-orientation.A1-3
+  origin: cefr-cv
+  mode: R
+  text: Find what, cost, date, place and times in adverts, event programmes and leaflets.
+- id: cv.reading-info.A1
+  origin: cefr-cv
+  mode: R
+  text: Get the idea of simple informational texts and short descriptions with visual support.
+- id: cv.reading-instructions.A1
+  origin: cefr-cv
+  mode: R
+  text: Follow short, simple written directions, e.g. how to get from X to Y.
+- id: cv.reading-leisure.A1
+  origin: cefr-cv
+  mode: R
+  text: Understand short illustrated narratives about everyday activities in simple words.
+- id: cv.overall-oral-production.A1
+  origin: cefr-cv
+  mode: SP
+  text: Produce simple, mainly isolated phrases about people and places.
+- id: cv.monologue-experience.A1
+  origin: cefr-cv
+  mode: SP
+  text: Describe yourself, what you do and where you live; simple aspects of everyday life, prepared.
+- id: cv.monologue-info.A1
+  origin: cefr-cv
+  mode: SP
+  text: Name an object and say its shape and colour while showing it, prepared.
+- id: cv.addressing-audiences.A1
+  origin: cefr-cv
+  mode: SP
+  text: Deliver a very short rehearsed statement, e.g. introduce someone or propose a toast.
+- id: cv.overall-written-production.A1
+  origin: cefr-cv
+  mode: WP
+  text: Give written information about personal matters (likes, family, pets) in simple phrases.
+- id: cv.creative-writing.A1
+  origin: cefr-cv
+  mode: WP
+  text: >-
+    Write simple phrases about yourself and others: where they live, what they do; describe a room very simply.
+- id: cv.overall-oral-interaction.A1
+  origin: cefr-cv
+  mode: SI
+  text: >-
+    Interact simply, relying on repetition and repair; ask and answer simple questions on immediate needs.
+- id: cv.understanding-interlocutor.A1
+  origin: cefr-cv
+  mode: SI
+  text: Understand everyday expressions for simple needs and short directions said slowly and clearly.
+- id: cv.conversation.A1
+  origin: cefr-cv
+  mode: SI
+  text: Introduce yourself, greet and take leave, ask how people are; simple talk on predictable topics.
+- id: cv.informal-discussion.A1
+  origin: cefr-cv
+  mode: SI
+  text: Exchange likes and dislikes (sport, food) with a limited repertoire when spoken to slowly.
+- id: cv.goal-cooperation.A1
+  origin: cefr-cv
+  mode: SI
+  text: Act on simple instructions with times, places and numbers; ask for things and give things.
+- id: cv.obtaining-goods-services.A1
+  origin: cefr-cv
+  mode: SI
+  text: Handle numbers, quantities, cost and time; make simple purchases; order a meal.
+- id: cv.information-exchange.A1
+  origin: cefr-cv
+  mode: SI
+  text: >-
+    Ask and answer simple questions about people; say when (next week, at three); give prices; name colours.
+- id: cv.interviewing.A1
+  origin: cefr-cv
+  mode: SI
+  text: >-
+    Answer simple direct questions about personal details; tell a health professional what the problem is.
+- id: cv.overall-written-interaction.A1
+  origin: cefr-cv
+  mode: WI
+  text: Ask for or pass on personal details in writing.
+- id: cv.correspondence.A1
+  origin: cefr-cv
+  mode: WI
+  text: Write very short messages, posts and postcards; text a friend to tell or ask something.
+- id: cv.notes-forms.A1
+  origin: cefr-cv
+  mode: WI
+  text: Fill in personal details on a form; leave a note on where you are and when you'll be back.
+- id: cv.online-conversation.A1
+  origin: cefr-cv
+  mode: WI
+  text: >-
+    Post very short messages about hobbies and likes; react to posts with stock phrases, thanks, apologies.
+- id: cv.online-transactions.A1
+  origin: cefr-cv
+  mode: WI
+  text: Complete a very simple online order or application form with basic personal details.
+- id: cv.asking-clarification.A1
+  origin: cefr-cv
+  mode: SI
+  text: Show with simple words, intonation or gesture that you don't understand.
+- id: cv.compensating.A1
+  origin: cefr-cv
+  mode: SI
+  text: Point and gesture to support simple words, e.g. 'I'd like this, please'.
+- id: cv.sociolinguistic.A1
+  origin: cefr-cv
+  mode: SI
+  text: 'Use the simplest polite forms: greeting, leave-taking, introductions, please, thank you, sorry.'
+- id: cv.mediation-relaying.A1
+  origin: cefr-cv
+  mode: MED
+  text: Relay simple, predictable information about times and places from one language to another.
+  deferred: Mediation is out of scope for the first version; planned as its own mode from A2.
+- id: cv.mediation-processing.A1
+  origin: cefr-cv
+  mode: MED
+  text: Convey simple information from signs, notices and posters into another language.
+  deferred: Mediation deferred (see above).
+- id: cv.mediation-intermediary.A1
+  origin: cefr-cv
+  mode: MED
+  text: Pass on personal details and very simple information between people, with help.
+  deferred: Mediation deferred (see above).
+- id: ukstd.A1.intent.contact-introduce
+  origin: ukstd
+  text: Attract attention, make contact, introduce yourself or others.
+- id: ukstd.A1.intent.greet-thank
+  origin: ukstd
+  text: Greet, say goodbye, thank, apologise.
+- id: ukstd.A1.intent.wish-congratulate
+  origin: ukstd
+  text: Wish someone well, congratulate.
+- id: ukstd.A1.intent.ask-identify
+  origin: ukstd
+  text: Ask and answer simple questions; identify people and objects.
+- id: ukstd.A1.intent.request-confirm
+  origin: ukstd
+  text: Ask politely for information or things; confirm or deny.
+- id: ukstd.A1.intent.like-request-forbid
+  origin: ukstd
+  text: Express likes and dislikes, make simple requests, forbid (e.g. smoking).
+- id: ukstd.A1.intent.space-time
+  origin: ukstd
+  text: Express place (here, there, near, far) and time (today, yesterday, tomorrow).
+- id: ukstd.A1.theme.person
+  origin: ukstd
+  text: 'Person: name, age, nationality, language, appearance, family, professions.'
+- id: ukstd.A1.theme.home
+  origin: ukstd
+  text: 'Home: type of dwelling, rooms, basic furniture.'
+- id: ukstd.A1.theme.city
+  origin: ukstd
+  text: 'City: schools, sights, shops, cafes, hospitals, banks, transport, taxis, streets, parks.'
+- id: ukstd.A1.theme.daily
+  origin: ukstd
+  text: 'Daily life: routine, everyday objects, clock times.'
+- id: ukstd.A1.theme.work-leisure
+  origin: ukstd
+  text: 'Work and leisure: workday, day off, lunch break, hobbies, sports facilities.'
+- id: ukstd.A1.theme.travel
+  origin: ukstd
+  text: 'Travel: station, airport, border, movement, parts of the world, sights.'
+- id: ukstd.A1.theme.shopping
+  origin: ukstd
+  text: 'Shopping: food, hygiene items, stationery, weights and volumes, money.'
+- id: ukstd.A1.theme.restaurant
+  origin: ukstd
+  text: Restaurant basics.
+- id: ukstd.A1.theme.health
+  origin: ukstd
+  text: Health and pharmacy.
+- id: ukstd.A1.theme.weather
+  origin: ukstd
+  text: Weather.
+- id: ukstd.A1.theme.plants-animals
+  origin: ukstd
+  text: Simple plants and animals.
+- id: ukstd.A1.theme.holidays
+  origin: ukstd
+  text: Holidays, birthdays, gifts.
+- id: thr.personal-identification
+  origin: threshold
+  text: Personal identification
+- id: thr.house-home
+  origin: threshold
+  text: House and home, environment
+- id: thr.daily-life
+  origin: threshold
+  text: Daily life
+- id: thr.free-time
+  origin: threshold
+  text: Free time, entertainment
+- id: thr.travel
+  origin: threshold
+  text: Travel
+- id: thr.relations
+  origin: threshold
+  text: Relations with other people
+- id: thr.health
+  origin: threshold
+  text: Health and body care
+- id: thr.education
+  origin: threshold
+  text: Education
+- id: thr.shopping
+  origin: threshold
+  text: Shopping
+- id: thr.food-drink
+  origin: threshold
+  text: Food and drink
+- id: thr.services
+  origin: threshold
+  text: Services
+- id: thr.places
+  origin: threshold
+  text: Places
+- id: thr.language
+  origin: threshold
+  text: Language
+- id: thr.weather
+  origin: threshold
+  text: Weather

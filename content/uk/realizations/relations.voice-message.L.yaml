@@ -1,0 +1,33 @@
+skill: relations.voice-message.L
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Привіт, це Оксана.
+- Зустрінемося в суботу о третій біля театру.
+- Передзвони мені, будь ласка!
+enablers:
+  required:
+  - id: uk.num.time
+    use: productive
+  - id: uk.lex.time-calendar
+    use: productive
+  - id: uk.lex.city-places
+    use: productive
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Recognition of who, when, where.
+version: 1
+status: draft

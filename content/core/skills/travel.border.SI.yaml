@@ -1,0 +1,19 @@
+id: travel.border.SI
+task: travel.border
+situation: travel.border
+title: Answer questions at passport control
+can_do: Can answer simple questions about purpose and length of stay and where they will stay.
+mode: SI
+domain:
+- public
+cefr: A1
+prerequisites:
+- personal.details.SI
+sources:
+- cv.interviewing.A1
+- ukstd.A1.theme.travel
+size: S
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

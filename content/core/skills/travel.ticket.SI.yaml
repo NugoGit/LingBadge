@@ -1,0 +1,21 @@
+id: travel.ticket.SI
+task: travel.ticket
+situation: travel.public-transport
+title: Buy a train or bus ticket
+can_do: Can buy a ticket, say where and when to, and ask about departure time and platform.
+mode: SI
+domain:
+- public
+cefr: A1
+prerequisites:
+- comm.numbers.L
+- comm.time-dates.SI
+sources:
+- cv.obtaining-goods-services.A1
+- ukstd.A1.theme.travel
+- ukstd.A1.theme.city
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

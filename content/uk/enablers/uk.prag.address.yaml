@@ -1,0 +1,14 @@
+id: uk.prag.address
+lang: uk
+kind: pragmatics
+title: ти vs ви; пане / пані + name in the vocative
+cefr: A1
+requires:
+- uk.gram.noun.voc
+sources:
+- ukstd.A1.gram.noun-voc
+check:
+  template: enabler.pragmatics.v1
+  items: 10
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,42 @@
+skill: freetime.hobbies.SI
+lang: uk
+cefr: A1
+register:
+- informal
+- formal
+variety: standard
+exponents:
+- Що ти любиш робити у вільний час?
+- Я люблю читати і грати на гітарі.
+- Мені подобається футбол, а тобі?
+- Я не люблю бігати.
+- Двічі на тиждень.
+enablers:
+  required:
+  - id: uk.gram.syntax.like
+    use: productive
+  - id: uk.gram.verb.present
+    use: productive
+  - id: uk.gram.noun.loc-sg
+    use: productive
+  - id: uk.lex.free-time
+    use: productive
+  - id: uk.gram.pron.personal-oblique
+    use: productive
+  - id: uk.gram.syntax.negation
+    use: productive
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: грати на + locative (на гітарі); подобається agrees with the thing liked.
+version: 1
+status: draft

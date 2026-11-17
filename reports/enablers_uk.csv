@@ -1,0 +1,65 @@
+id,kind,cefr,title,check_channel,requires,skills_productive,skills_chunk,sources
+uk.gram.adj.acc-loc-sg,grammar,A1,Adjectives in accusative and locative singular (у червоній куртці),text,uk.gram.adj.nom-agreement; uk.gram.noun.acc-sg; uk.gram.noun.loc-sg,4,0,ukstd.A1.gram.adj-acc-loc
+uk.gram.adj.nom-agreement,grammar,A1,"Adjective agreement in the nominative (новий, нова, нове, нові; синій)",text,uk.gram.noun.gender,8,0,ukstd.A1.gram.adj-nom
+uk.gram.noun.acc-sg,grammar,A1,"Accusative singular, animate and inanimate (каву, брата)",text,uk.gram.noun.gender,14,0,ukstd.A1.gram.noun-acc
+uk.gram.noun.dat-sg,grammar,A2,"Dative singular (мамі, братові)",text,uk.gram.noun.gender,0,0,ukstd.A2.gram.dative
+uk.gram.noun.gen-pl,grammar,A2,"Genitive plural (гривень, хвилин, яблук)",text,uk.gram.noun.gen-sg; uk.gram.noun.nom-pl,0,1,ukstd.A2.gram.genitive
+uk.gram.noun.gen-sg,grammar,A2,"Genitive singular incl. masculine -а/-у; after до, з, без, біля, від, немає",text,uk.gram.noun.gender,0,17,ukstd.A2.gram.genitive
+uk.gram.noun.gender,grammar,A1,Noun gender in the nominative singular,text,,0,0,ukstd.A1.gram.noun-gender
+uk.gram.noun.instr-sg,grammar,A2,"Instrumental singular (з молоком, карткою)",text,uk.gram.noun.gender,0,7,ukstd.A2.gram.instrumental
+uk.gram.noun.loc-sg,grammar,A1,"Locative singular with у/в, на (у Києві, на вокзалі)",text,uk.gram.noun.gender,15,0,ukstd.A1.gram.noun-loc
+uk.gram.noun.nom-pl,grammar,A1,"Nominative plural (-и, -і, -ї; рік – роки)",text,uk.gram.noun.gender,1,0,ukstd.A1.gram.noun-nom-pl
+uk.gram.noun.voc,grammar,A1,Vocative (Олено! Пане Іване!),text,uk.gram.noun.gender,1,0,ukstd.A1.gram.noun-voc
+uk.gram.pron.3rd-person,grammar,A2,"Third-person oblique forms (його, її, йому, їй, у нього)",text,uk.gram.pron.personal-oblique,0,2,ukstd.A2.gram.dative
+uk.gram.pron.demonstrative,grammar,A1,"Demonstratives (цей, ця, це, ці; той)",text,uk.gram.noun.gender,4,0,ukstd.A1.gram.pron-demonstrative
+uk.gram.pron.personal-oblique,grammar,A1,"мене/мені, тебе/тобі, нас/нам, вас/вам",text,,7,0,ukstd.A1.gram.pron-personal
+uk.gram.pron.possessive,grammar,A1,"Possessives (мій, твій, наш, ваш, їхній)",text,uk.gram.noun.gender,4,0,ukstd.A1.gram.pron-possessive
+uk.gram.syntax.conjunctions,grammar,A1,"і/й, а, але; тому що, бо",text,,4,0,ukstd.A1.gram.syntax-compound
+uk.gram.syntax.like,grammar,A1,Мені подобається + nominative; люблю + accusative or infinitive,text,uk.gram.pron.personal-oblique; uk.gram.verb.reflexive,3,0,ukstd.A1.intent.like-request-forbid
+uk.gram.syntax.modal,grammar,A1,"можна, треба, потрібно; хочу / можу + infinitive",text,uk.gram.verb.present-irregular,6,0,ukstd.A1.gram.syntax-requests
+uk.gram.syntax.negation,grammar,A1,Negation with не; немає (as a chunk),text,,4,0,ukstd.A1.gram.syntax-simple
+uk.gram.syntax.possession,grammar,A1,У мене / у тебе / у вас є ...,text,uk.gram.pron.personal-oblique,4,3,ukstd.A1.gram.pron-personal
+uk.gram.syntax.questions,grammar,A1,"Questions: intonation, чи, хто, що, де, куди, звідки, коли, скільки, який",text,,9,0,ukstd.A1.gram.syntax-questions
+uk.gram.syntax.time-adverbs,grammar,A1,"сьогодні, завтра, вчора, зараз, вранці, ввечері, щодня",text,,3,0,ukstd.A1.intent.space-time
+uk.gram.verb.aspect,grammar,A2,"Aspect pairs (читати/прочитати), perfective future",text,uk.gram.verb.past; uk.gram.verb.future-compound,0,6,ukstd.A2.gram.aspect
+uk.gram.verb.future-compound,grammar,A1,Future of бути and compound future (буду читати),text,uk.gram.verb.present,4,0,ukstd.A1.gram.verb-future
+uk.gram.verb.imperative-set,grammar,A1,"Imperatives of a core set: скажи(іть), дай(те), сідай(те), читай(те), повторіть",text,,7,4,ukstd.A1.gram.verb-imperative; ukstd.A1.gram.syntax-requests
+uk.gram.verb.motion-go,grammar,A1,іти / їхати + куди: в/на + accusative,text,uk.gram.verb.present-irregular; uk.gram.noun.acc-sg,1,0,ukstd.A1.gram.motion
+uk.gram.verb.motion-indeterminate,grammar,A2,ходити / їздити,text,uk.gram.verb.motion-go,0,0,ukstd.A2.gram.motion-indeterminate
+uk.gram.verb.past,grammar,A1,"Past tense by gender and number (був, була, були)",text,uk.gram.noun.gender,3,2,ukstd.A1.gram.verb-past
+uk.gram.verb.present-irregular,grammar,A1,"Present of могти, хотіти, іти, їхати, їсти, пити, бути (є)",text,uk.gram.verb.present,6,0,ukstd.A1.gram.verb-present
+uk.gram.verb.present,grammar,A1,"Present tense of regular verbs, 1st and 2nd conjugation",text,,8,0,ukstd.A1.gram.verb-present
+uk.gram.verb.reflexive,grammar,A1,"Reflexive verbs in -ся (називатися, подобатися, вмиватися)",text,uk.gram.verb.present,2,1,ukstd.A1.gram.verb-present
+uk.lex.appearance-clothes,lexis,A1,"Appearance, clothes, colours",text,,3,0,
+uk.lex.celebrations,lexis,A1,Celebrations and gifts,text,,2,0,
+uk.lex.city-places,lexis,A1,Places in a city,text,,8,0,
+uk.lex.classroom,lexis,A1,Classroom language,text,,1,0,
+uk.lex.daily-routine,lexis,A1,Daily routine,text,,1,0,
+uk.lex.directions-place,lexis,A1,Directions and place words,text,,4,0,
+uk.lex.family,lexis,A1,Family and pets,text,,3,0,
+uk.lex.food-drink,lexis,A1,Food and drink,text,,4,0,
+uk.lex.free-time,lexis,A1,Free time and hobbies,text,,5,0,
+uk.lex.health-body,lexis,A1,Body and health,text,,3,0,
+uk.lex.home,lexis,A1,"Home, rooms, furniture",text,,2,0,
+uk.lex.personal,lexis,A1,"Personal details, countries, languages, jobs",text,,5,0,
+uk.lex.shopping-money,lexis,A1,"Shopping, quantities, money",text,,5,0,
+uk.lex.signs,lexis,A1,Signs and notices,text,,3,0,
+uk.lex.time-calendar,lexis,A1,"Time, days, months, seasons",text,,6,0,
+uk.lex.transport-travel,lexis,A1,Transport and travel,text,,5,0,
+uk.lex.weather,lexis,A1,Weather,text,,5,0,
+uk.num.cardinal-0-100,grammar,A1,Cardinal numbers 0–100,text,,6,0,
+uk.num.cardinal-100-10000,grammar,A1,Cardinal numbers 100–10 000 (prices),text,uk.num.cardinal-0-100,9,0,
+uk.num.num-noun,grammar,A2,"Number + noun: 1 гривня, 2–4 гривні, 5+ гривень",text,uk.num.cardinal-0-100; uk.gram.noun.nom-pl; uk.gram.noun.gen-pl,0,11,ukstd.A2.gram.genitive
+uk.num.ordinal,grammar,A1,"Ordinals in gender forms and first declined forms (перший, першого)",text,uk.gram.adj.nom-agreement,3,1,ukstd.A1.gram.num-ordinal
+uk.num.time,grammar,A1,Clock time: Котра година? Третя. О третій. 18:30 as 'вісімнадцята тридцять',text,uk.num.ordinal; uk.gram.adj.acc-loc-sg,12,0,ukstd.A1.gram.num-ordinal; ukstd.A1.theme.daily
+uk.phon.consonants,phonology,A1,"Hard/soft and voiced/voiceless consonants; г vs ґ; в as [w]; дж, дз",audio,,33,0,ukstd.A1.gram.consonants
+uk.phon.euphony,orthography,A1,"у/в, і/й, з/із/зі alternation (also visible in writing)",text,uk.script.alphabet,4,0,ukstd.A1.gram.euphony
+uk.phon.intonation,phonology,A1,"Statement, question and exclamation intonation",audio,,34,0,ukstd.A1.gram.intonation
+uk.phon.stress,phonology,A1,Word stress in A1 vocabulary (mobile stress),audio,,34,0,ukstd.A1.gram.stress
+uk.phon.vowels,phonology,A1,"Vowels, unstressed е/и; и vs і",audio,,33,0,ukstd.A1.gram.vowels
+uk.prag.address,pragmatics,A1,ти vs ви; пане / пані + name in the vocative,text,uk.gram.noun.voc,3,0,ukstd.A1.gram.noun-voc
+uk.prag.courtesy,pragmatics,A1,"будь ласка, дякую, вибачте / перепрошую, нічого страшного",text,,6,0,ukstd.A1.intent.greet-thank
+uk.prag.greetings,pragmatics,A1,Greetings and leave-taking by register (Добрий день / Привіт; До побачення / Бувай),text,,1,0,ukstd.A1.intent.greet-thank
+uk.prag.wishes,pragmatics,A1,Fixed wishes and toasts (З днем народження! Будьмо!),text,,3,0,ukstd.A1.intent.wish-congratulate
+uk.script.alphabet,script,A1,"Cyrillic alphabet incl. і, ї, є, ґ; letter names for spelling",text,,12,0,ukstd.A1.gram.alphabet
+uk.script.apostrophe-softsign,script,A1,"Apostrophe and soft sign (п'ять, сім'я, Львів, день)",text,uk.script.alphabet,3,0,ukstd.A1.gram.apostrophe-softsign

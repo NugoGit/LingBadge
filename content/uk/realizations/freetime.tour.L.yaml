@@ -1,0 +1,32 @@
+skill: freetime.tour.L
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Це ратуша.
+- Тут жив Іван Франко.
+- Праворуч — оперний театр.
+- Ця церква дуже стара.
+enablers:
+  required:
+  - id: uk.gram.pron.demonstrative
+    use: productive
+  - id: uk.gram.verb.past
+    use: productive
+  - id: uk.lex.directions-place
+    use: productive
+  - id: uk.lex.city-places
+    use: productive
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+version: 1
+status: draft

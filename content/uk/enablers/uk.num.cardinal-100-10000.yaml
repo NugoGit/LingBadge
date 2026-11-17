@@ -1,0 +1,13 @@
+id: uk.num.cardinal-100-10000
+lang: uk
+kind: grammar
+title: Cardinal numbers 100–10 000 (prices)
+cefr: A1
+requires:
+- uk.num.cardinal-0-100
+note: Needed for prices in hryvnias.
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

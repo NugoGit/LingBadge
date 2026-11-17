@@ -1,0 +1,23 @@
+id: uk.lex.directions-place
+lang: uk
+kind: lexis
+title: Directions and place words
+cefr: A1
+words:
+- тут
+- там
+- близько
+- далеко
+- прямо
+- ліворуч
+- праворуч
+- поруч
+- навпроти
+- за рогом
+- на розі
+- поверх
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

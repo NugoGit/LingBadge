@@ -1,0 +1,134 @@
+themes:
+- id: comm
+  title: Communication
+  note: Meta-skills used across situations (CEFR strategies).
+  situations:
+  - id: comm.repair
+    title: Keeping a conversation going
+  - id: comm.numbers
+    title: Numbers, time and dates
+  - id: comm.signs
+    title: Public signs and notices
+- id: personal
+  title: Personal identification
+  threshold: thr.personal-identification
+  situations:
+  - id: personal.meeting
+    title: Meeting new people
+  - id: personal.officialdom
+    title: Giving your details
+- id: relations
+  title: Relations with other people
+  threshold: thr.relations
+  situations:
+  - id: relations.everyday
+    title: Everyday contact
+  - id: relations.family
+    title: Family
+  - id: relations.plans
+    title: Making plans with friends
+  - id: relations.celebrations
+    title: Celebrations
+  - id: relations.home-visit
+    title: Visiting and hosting
+  - id: relations.online
+    title: Online with friends
+- id: home
+  title: House and home
+  threshold: thr.house-home
+  situations:
+  - id: home.where-live
+    title: Where you live
+- id: daily
+  title: Daily life
+  threshold: thr.daily-life
+  situations:
+  - id: daily.routine
+    title: Routine
+  - id: daily.notes
+    title: Notes
+- id: freetime
+  title: Free time
+  threshold: thr.free-time
+  situations:
+  - id: freetime.hobbies
+    title: Hobbies and likes
+  - id: freetime.events
+    title: Events
+  - id: freetime.reading
+    title: Reading for pleasure
+  - id: freetime.sightseeing
+    title: Sightseeing
+  - id: freetime.media
+    title: Media
+- id: travel
+  title: Travel
+  threshold: thr.travel
+  situations:
+  - id: travel.getting-around
+    title: Getting around a city
+  - id: travel.public-transport
+    title: Trains and buses
+  - id: travel.border
+    title: Border
+  - id: travel.accommodation
+    title: Accommodation
+  - id: travel.keeping-in-touch
+    title: Keeping in touch
+- id: shopping
+  title: Shopping
+  threshold: thr.shopping
+  situations:
+  - id: shopping.shop
+    title: In a shop or market
+  - id: shopping.info
+    title: Store information
+- id: food
+  title: Food and drink
+  threshold: thr.food-drink
+  situations:
+  - id: food.cafe
+    title: Cafe or restaurant
+- id: health
+  title: Health and body
+  threshold: thr.health
+  situations:
+  - id: health.pharmacy
+    title: Pharmacy
+  - id: health.doctor
+    title: Doctor
+  - id: health.emergency
+    title: Emergency
+- id: services
+  title: Services
+  threshold: thr.services
+  situations:
+  - id: services.money
+    title: Money
+- id: places
+  title: Places
+  threshold: thr.places
+  note: 'No own situations at A1: places are covered by travel.getting-around and home.where-live.'
+- id: education
+  title: Education
+  threshold: thr.education
+  situations:
+  - id: education.lesson
+    title: Language lesson
+- id: language
+  title: Language
+  threshold: thr.language
+  note: >-
+    No own situations at A1: languages you speak are in personal.intro; asking about words is comm.ask-word.
+- id: weather
+  title: Weather
+  threshold: thr.weather
+  situations:
+  - id: weather.smalltalk
+    title: Small talk
+  - id: weather.forecast
+    title: Forecast
+domain_gaps:
+  occupational: >-
+    Deliberately thin at A1: job and workday appear inside personal.intro and daily.routine. Work tasks (colleagues,
+    email, meetings) start at A2.

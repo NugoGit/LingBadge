@@ -1,0 +1,43 @@
+skill: relations.plans.SI
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Ти вільний / вільна в суботу?
+- Ходімо в кіно!
+- Давай о сьомій біля театру.
+- На жаль, я не можу. — Нічого, іншим разом.
+- Домовилися!
+enablers:
+  required:
+  - id: uk.gram.verb.present-irregular
+    use: productive
+  - id: uk.num.time
+    use: productive
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  - id: uk.gram.syntax.negation
+    use: productive
+  - id: uk.gram.syntax.questions
+    use: productive
+  - id: uk.gram.adj.nom-agreement
+    use: productive
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+  - id: uk.gram.verb.imperative-set
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: в/на + accusative for destination and day; о + locative ordinal for time.
+version: 1
+status: draft

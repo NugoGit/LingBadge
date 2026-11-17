@@ -1,0 +1,12 @@
+id: fa.script.unwritten-vowels
+lang: fa
+kind: script
+title: Reading words without written short vowels; unwritten ezafe
+cefr: A1
+requires:
+- fa.script.alphabet
+check:
+  template: enabler.script.v1
+  items: 10
+  threshold: 0.9
+  channel: text

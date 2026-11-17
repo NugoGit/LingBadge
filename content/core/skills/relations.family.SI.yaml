@@ -1,0 +1,22 @@
+id: relations.family.SI
+task: relations.family
+situation: relations.family
+title: Talk about your family
+can_do: >-
+  Can say who is in their family (and pets), their names, ages and jobs, and ask about the other person's.
+mode: SI
+domain:
+- personal
+cefr: A1
+prerequisites:
+- personal.intro.SI
+sources:
+- cv.information-exchange.A1
+- cv.conversation.A1
+- ukstd.A1.theme.person
+- ukstd.A1.theme.plants-animals
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

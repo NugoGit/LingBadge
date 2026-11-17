@@ -1,0 +1,23 @@
+skill: travel.hotel-info.R
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- 'Сніданок: 7:30–10:00'
+- 'Wi-Fi: пароль …'
+- 'Розрахунковий час: 12:00'
+- Палити в номері заборонено.
+enablers:
+  required:
+  - id: uk.lex.signs
+    use: productive
+  - id: uk.num.time
+    use: productive
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.gram.noun.loc-sg
+    use: productive
+version: 1
+status: draft

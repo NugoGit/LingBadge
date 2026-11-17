@@ -1,0 +1,12 @@
+id: uk.gram.syntax.conjunctions
+lang: uk
+kind: grammar
+title: і/й, а, але; тому що, бо
+cefr: A1
+sources:
+- ukstd.A1.gram.syntax-compound
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

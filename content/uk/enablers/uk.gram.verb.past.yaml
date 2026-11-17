@@ -1,0 +1,14 @@
+id: uk.gram.verb.past
+lang: uk
+kind: grammar
+title: Past tense by gender and number (був, була, були)
+cefr: A1
+requires:
+- uk.gram.noun.gender
+sources:
+- ukstd.A1.gram.verb-past
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

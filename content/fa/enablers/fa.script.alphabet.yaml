@@ -1,0 +1,10 @@
+id: fa.script.alphabet
+lang: fa
+kind: script
+title: Persian alphabet, connected letter forms, right-to-left
+cefr: A1
+check:
+  template: enabler.script.v1
+  items: 10
+  threshold: 0.9
+  channel: text

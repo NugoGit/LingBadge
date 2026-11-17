@@ -1,0 +1,38 @@
+id: uk.lex.food-drink
+lang: uk
+kind: lexis
+title: Food and drink
+cefr: A1
+words:
+- хліб
+- сир
+- масло
+- молоко
+- яйце
+- м'ясо
+- риба
+- курка
+- овочі
+- фрукти
+- яблуко
+- картопля
+- борщ
+- вареники
+- суп
+- салат
+- кава
+- чай
+- вода
+- сік
+- вино
+- пиво
+- цукор
+- сіль
+- меню
+- рахунок
+- смачно
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

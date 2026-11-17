@@ -1,0 +1,36 @@
+skill: services.money.SI
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Де можна обміняти гроші?
+- Який курс євро?
+- Я хочу обміняти сто євро.
+- Можна карткою чи тільки готівкою?
+enablers:
+  required:
+  - id: uk.gram.syntax.modal
+    use: productive
+  - id: uk.num.cardinal-100-10000
+    use: productive
+  - id: uk.lex.shopping-money
+    use: productive
+  - id: uk.gram.verb.present-irregular
+    use: productive
+  - id: uk.gram.noun.instr-sg
+    use: formulaic
+  - id: uk.gram.verb.aspect
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+version: 1
+status: draft

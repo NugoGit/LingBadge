@@ -1,0 +1,20 @@
+id: freetime.reading.R
+task: freetime.reading
+situation: freetime.reading
+title: Read a short illustrated text
+can_do: Can follow a short illustrated story or news snippet written in very simple language.
+mode: R
+domain:
+- personal
+- educational
+cefr: A1
+prerequisites: []
+sources:
+- cv.reading-leisure.A1
+- cv.reading-info.A1
+- cv.overall-reading.A1
+size: M
+rubric: rubric.reading.v1
+threshold: null
+version: 1
+status: draft

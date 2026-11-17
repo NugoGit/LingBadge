@@ -1,0 +1,14 @@
+id: uk.gram.verb.present-irregular
+lang: uk
+kind: grammar
+title: Present of могти, хотіти, іти, їхати, їсти, пити, бути (є)
+cefr: A1
+requires:
+- uk.gram.verb.present
+sources:
+- ukstd.A1.gram.verb-present
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

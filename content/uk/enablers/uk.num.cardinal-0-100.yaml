@@ -1,0 +1,11 @@
+id: uk.num.cardinal-0-100
+lang: uk
+kind: grammar
+title: Cardinal numbers 0–100
+cefr: A1
+note: Not listed separately in the standard's A1 grammar; needed by A1 tasks.
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

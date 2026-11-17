@@ -1,0 +1,21 @@
+id: relations.courtesy.SI
+task: relations.courtesy
+situation: relations.everyday
+title: Greet, thank, apologise and say goodbye
+can_do: >-
+  Can greet, ask how someone is and react, thank, apologise and take leave, choosing formal or informal address.
+mode: SI
+domain:
+- personal
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.conversation.A1
+- cv.sociolinguistic.A1
+- ukstd.A1.intent.greet-thank
+size: S
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

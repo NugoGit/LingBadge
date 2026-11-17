@@ -1,0 +1,24 @@
+skill: travel.timetable.R
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Відправлення 09:20, колія 2
+- Прибуття 14:05
+- Затримується на 30 хв
+- Скасовано
+- Щодня, крім неділі
+enablers:
+  required:
+  - id: uk.lex.transport-travel
+    use: productive
+  - id: uk.num.time
+    use: productive
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.lex.time-calendar
+    use: productive
+version: 1
+status: draft

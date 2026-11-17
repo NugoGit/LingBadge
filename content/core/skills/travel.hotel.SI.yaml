@@ -1,0 +1,20 @@
+id: travel.hotel.SI
+task: travel.hotel
+situation: travel.accommodation
+title: Check in at a hotel or guesthouse
+can_do: Can check in, give details, and ask about breakfast time, Wi-Fi and check-out.
+mode: SI
+domain:
+- public
+cefr: A1
+prerequisites:
+- personal.details.SI
+sources:
+- cv.obtaining-goods-services.A1
+- cv.understanding-interlocutor.A1
+- ukstd.A1.intent.request-confirm
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

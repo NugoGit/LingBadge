@@ -1,0 +1,11 @@
+id: fa.prag.taarof
+lang: fa
+kind: pragmatics
+title: 'Ritual politeness: offering, refusing, insisting'
+cefr: A1
+note: Heavier than in Ukrainian; matters for home visits.
+check:
+  template: enabler.pragmatics.v1
+  items: 10
+  threshold: 0.9
+  channel: text

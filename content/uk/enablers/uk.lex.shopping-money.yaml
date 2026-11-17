@@ -1,0 +1,31 @@
+id: uk.lex.shopping-money
+lang: uk
+kind: lexis
+title: Shopping, quantities, money
+cefr: A1
+words:
+- гривня
+- копійка
+- ціна
+- коштувати
+- гроші
+- готівка
+- картка
+- знижка
+- акція
+- каса
+- пакет
+- кілограм
+- грам
+- літр
+- пляшка
+- пачка
+- мило
+- зубна паста
+- ручка
+- зошит
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

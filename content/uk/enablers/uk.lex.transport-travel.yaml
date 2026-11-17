@@ -1,0 +1,28 @@
+id: uk.lex.transport-travel
+lang: uk
+kind: lexis
+title: Transport and travel
+cefr: A1
+words:
+- потяг
+- автобус
+- трамвай
+- тролейбус
+- таксі
+- літак
+- квиток
+- платформа
+- колія
+- відправлення
+- прибуття
+- затримується
+- скасовано
+- паспорт
+- кордон
+- валіза
+- подорож
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,36 @@
+skill: personal.intro.WI
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Привіт! Мене звати …
+- Я живу у Відні й вивчаю українську мову.
+- А ти звідки?
+- Буду радий / рада познайомитися!
+enablers:
+  required:
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.script.apostrophe-softsign
+    use: productive
+  - id: uk.phon.euphony
+    use: productive
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  - id: uk.gram.adj.acc-loc-sg
+    use: productive
+  - id: uk.gram.verb.present
+    use: productive
+  - id: uk.gram.syntax.questions
+    use: productive
+  - id: uk.lex.personal
+    use: productive
+  supporting:
+  - id: uk.gram.verb.future-compound
+    use: productive
+rubric_specifics:
+  key_structures: Accusative of adjective + noun (українську мову); у/в and і/й chosen by euphony.
+version: 1
+status: draft

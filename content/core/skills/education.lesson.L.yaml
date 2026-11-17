@@ -1,0 +1,19 @@
+id: education.lesson.L
+task: education.lesson
+situation: education.lesson
+title: Follow instructions in a language lesson
+can_do: 'Can follow the teacher''s simple instructions: read, repeat, open the book, listen, write.'
+mode: L
+domain:
+- educational
+cefr: A1
+prerequisites: []
+sources:
+- cv.understanding-interlocutor.A1
+- cv.announcements.A1-1
+- thr.education
+size: S
+rubric: rubric.listening.v1
+threshold: null
+version: 1
+status: draft

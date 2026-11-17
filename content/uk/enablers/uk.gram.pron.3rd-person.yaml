@@ -1,0 +1,14 @@
+id: uk.gram.pron.3rd-person
+lang: uk
+kind: grammar
+title: Third-person oblique forms (його, її, йому, їй, у нього)
+cefr: A2
+requires:
+- uk.gram.pron.personal-oblique
+sources:
+- ukstd.A2.gram.dative
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

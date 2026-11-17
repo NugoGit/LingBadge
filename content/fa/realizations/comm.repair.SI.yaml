@@ -1,0 +1,28 @@
+skill: comm.repair.SI
+lang: fa
+cefr: A1
+register:
+- formal
+variety: colloquial-tehrani
+exponents:
+- ببخشید، متوجه نشدم. (bebakhshid, motevajjeh nashodam.)
+- میشه یه بار دیگه بگید؟ (mishe ye bār-e dige begid?)
+- لطفاً یواش‌تر صحبت کنید. (lotfan yavāsh-tar sohbat konid.)
+- این چطوری نوشته میشه؟ (in chetori neveshte mishe?)
+enablers:
+  required:
+  - id: fa.var.colloquial
+    use: productive
+  - id: fa.gram.verb.subjunctive
+    use: productive
+  - id: fa.gram.questions
+    use: productive
+  - id: fa.prag.register
+    use: productive
+  - id: fa.gram.verb.past
+    use: formulaic
+  supporting:
+  - id: fa.phon.vowels-consonants
+    use: productive
+version: 1
+status: draft

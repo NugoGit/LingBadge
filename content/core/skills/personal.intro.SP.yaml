@@ -1,0 +1,21 @@
+id: personal.intro.SP
+task: personal.intro
+situation: personal.meeting
+title: Give a short self-introduction to a group
+can_do: 'Can give a short prepared introduction of themselves to a group: name, origin, home, work, likes.'
+mode: SP
+domain:
+- personal
+- educational
+cefr: A1
+prerequisites: []
+recommended_before:
+- personal.intro.SI
+sources:
+- cv.monologue-experience.A1
+- cv.overall-oral-production.A1
+size: S
+rubric: rubric.spoken-production.v1
+threshold: null
+version: 1
+status: draft

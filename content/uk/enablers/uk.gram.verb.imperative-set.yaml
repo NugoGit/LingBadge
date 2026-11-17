@@ -1,0 +1,13 @@
+id: uk.gram.verb.imperative-set
+lang: uk
+kind: grammar
+title: 'Imperatives of a core set: скажи(іть), дай(те), сідай(те), читай(те), повторіть'
+cefr: A1
+sources:
+- ukstd.A1.gram.verb-imperative
+- ukstd.A1.gram.syntax-requests
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

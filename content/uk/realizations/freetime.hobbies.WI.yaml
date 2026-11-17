@@ -1,0 +1,27 @@
+skill: freetime.hobbies.WI
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Я люблю музику й кіно.
+- У вільний час я гуляю в парку.
+- Мені не подобається бігати.
+- А що любиш ти?
+enablers:
+  required:
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.gram.syntax.like
+    use: productive
+  - id: uk.gram.syntax.conjunctions
+    use: productive
+  - id: uk.lex.free-time
+    use: productive
+  - id: uk.gram.noun.loc-sg
+    use: productive
+  - id: uk.phon.euphony
+    use: productive
+version: 1
+status: draft

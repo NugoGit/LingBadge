@@ -1,0 +1,10 @@
+id: fa.gram.pron.personal
+lang: fa
+kind: grammar
+title: man, to, u, mā, shomā, ānhā
+cefr: A1
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

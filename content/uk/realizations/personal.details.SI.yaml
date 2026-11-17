@@ -1,0 +1,38 @@
+skill: personal.details.SI
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- 'Моє прізвище — … Пишеться так: …'
+- 'Моя адреса: вулиця …, будинок …, квартира …'
+- Мій номер телефону — …
+- Я народився / народилася двадцятого березня.
+enablers:
+  required:
+  - id: uk.gram.pron.possessive
+    use: productive
+  - id: uk.num.cardinal-0-100
+    use: productive
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.lex.personal
+    use: productive
+  - id: uk.num.ordinal
+    use: formulaic
+  - id: uk.gram.verb.past
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Spelling with Ukrainian letter names; possessive agreement (моє прізвище, моя адреса).
+version: 1
+status: draft

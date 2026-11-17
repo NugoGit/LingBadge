@@ -1,0 +1,39 @@
+skill: travel.hotel.SI
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- У мене бронювання на прізвище …
+- Ось мій паспорт.
+- О котрій сніданок?
+- Який пароль від вайфаю?
+- Можна залишити валізу?
+enablers:
+  required:
+  - id: uk.gram.syntax.possession
+    use: productive
+  - id: uk.gram.pron.possessive
+    use: productive
+  - id: uk.num.time
+    use: productive
+  - id: uk.gram.syntax.modal
+    use: productive
+  - id: uk.gram.syntax.questions
+    use: productive
+  - id: uk.lex.transport-travel
+    use: productive
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+version: 1
+status: draft

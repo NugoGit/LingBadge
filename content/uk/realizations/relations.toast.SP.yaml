@@ -1,0 +1,30 @@
+skill: relations.toast.SP
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Будьмо!
+- За нашу зустріч!
+- За тебе! / За вас!
+- За здоров'я господарів!
+enablers:
+  required:
+  - id: uk.prag.wishes
+    use: productive
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  - id: uk.gram.pron.personal-oblique
+    use: productive
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+  supporting:
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: за + accusative (за нашу зустріч).
+version: 1
+status: draft

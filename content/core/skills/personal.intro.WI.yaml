@@ -1,0 +1,19 @@
+id: personal.intro.WI
+task: personal.intro
+situation: personal.meeting
+title: Introduce yourself in a message
+can_do: Can write a short message introducing themselves to someone new and ask one or two questions back.
+mode: WI
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- cv.correspondence.A1
+- cv.creative-writing.A1
+- cv.overall-written-production.A1
+size: S
+rubric: rubric.written-interaction.v1
+threshold: null
+version: 1
+status: draft

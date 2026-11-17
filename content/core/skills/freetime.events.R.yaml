@@ -1,0 +1,17 @@
+id: freetime.events.R
+task: freetime.events
+situation: freetime.events
+title: Read an event poster or programme
+can_do: Can find what is on, when, where and how much on a poster, programme or leaflet.
+mode: R
+domain:
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.reading-orientation.A1-3
+size: S
+rubric: rubric.reading.v1
+threshold: null
+version: 1
+status: draft

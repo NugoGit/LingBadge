@@ -1,0 +1,10 @@
+id: fa.phon.vowels-consonants
+lang: fa
+kind: phonology
+title: Six vowels; ق/غ, خ, ژ
+cefr: A1
+check:
+  template: enabler.phonology.v1
+  items: 10
+  threshold: 0.9
+  channel: audio

@@ -1,0 +1,14 @@
+id: uk.gram.noun.loc-sg
+lang: uk
+kind: grammar
+title: Locative singular with у/в, на (у Києві, на вокзалі)
+cefr: A1
+requires:
+- uk.gram.noun.gender
+sources:
+- ukstd.A1.gram.noun-loc
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

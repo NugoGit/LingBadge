@@ -1,0 +1,37 @@
+skill: relations.courtesy.SI
+lang: uk
+cefr: A1
+register:
+- formal
+- informal
+variety: standard
+exponents:
+- Добрий день! / Привіт!
+- Як справи? — Добре, дякую. А у вас? / А в тебе?
+- Вибачте! — Нічого страшного.
+- До побачення! / Бувай! / На все добре!
+enablers:
+  required:
+  - id: uk.prag.greetings
+    use: productive
+  - id: uk.prag.courtesy
+    use: productive
+  - id: uk.prag.address
+    use: productive
+  - id: uk.gram.noun.voc
+    use: productive
+  - id: uk.gram.syntax.possession
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Register kept consistent within a conversation; vocative for names (Олено, пане Андрію).
+version: 1
+status: draft

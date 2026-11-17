@@ -1,0 +1,10 @@
+id: fa.lex.time-calendar
+lang: fa
+kind: lexis
+title: emruz, fardā, shab, sāʿat, days of the week (shanbe … jomʿe)
+cefr: A1
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

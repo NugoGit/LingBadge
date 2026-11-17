@@ -1,0 +1,27 @@
+skill: personal.form.WI
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Прізвище, ім'я, по батькові
+- 'Дата народження: 20.03.1990'
+- 'Громадянство: Австрія'
+- Адреса, телефон, електронна пошта
+enablers:
+  required:
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.script.apostrophe-softsign
+    use: productive
+  - id: uk.lex.personal
+    use: productive
+  - id: uk.num.cardinal-0-100
+    use: productive
+rubric_specifics:
+  key_structures: >-
+    Date format ДД.ММ.РРРР; foreign name written in Cyrillic; patronymic field may be left empty or marked '—'.
+note: Patronymic (по батькові) is a Ukrainian-specific form field.
+version: 1
+status: draft

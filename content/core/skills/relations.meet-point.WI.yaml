@@ -1,0 +1,23 @@
+id: relations.meet-point.WI
+task: relations.meet-point
+situation: relations.plans
+title: Find each other at a meeting point by message
+can_do: >-
+  Can text where they are, what they are wearing, or that they are running late, and understand the same.
+mode: WI
+domain:
+- personal
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.correspondence.A1
+- ukstd.A1.theme.person
+- ukstd.A1.intent.space-time
+size: S
+rubric: rubric.written-interaction.v1
+threshold: null
+flags:
+- new-task
+version: 1
+status: draft

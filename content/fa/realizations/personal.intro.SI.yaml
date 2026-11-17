@@ -1,0 +1,34 @@
+skill: personal.intro.SI
+lang: fa
+cefr: A1
+register:
+- formal
+- informal
+variety: colloquial-tehrani
+exponents:
+- اسمم … ـه. (esmam …-e.)
+- من اهل اتریشم، تو وین زندگی می‌کنم. (man ahl-e otrish-am, tu vin zendegi mikonam.)
+- شما اهل کجایید؟ (shomā ahl-e kojāyid?)
+- فارسی یه کم بلدم. (fārsi ye kam baladam.)
+- خوشبختم! (khoshbakhtam!)
+enablers:
+  required:
+  - id: fa.gram.copula
+    use: productive
+  - id: fa.gram.pron.enclitic
+    use: productive
+  - id: fa.gram.ezafe
+    use: productive
+  - id: fa.gram.verb.present
+    use: productive
+  - id: fa.gram.questions
+    use: productive
+  - id: fa.lex.personal
+    use: productive
+  - id: fa.var.colloquial
+    use: productive
+  supporting:
+  - id: fa.phon.vowels-consonants
+    use: productive
+version: 1
+status: draft

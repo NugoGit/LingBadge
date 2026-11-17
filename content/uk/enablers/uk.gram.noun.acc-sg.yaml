@@ -1,0 +1,14 @@
+id: uk.gram.noun.acc-sg
+lang: uk
+kind: grammar
+title: Accusative singular, animate and inanimate (каву, брата)
+cefr: A1
+requires:
+- uk.gram.noun.gender
+sources:
+- ukstd.A1.gram.noun-acc
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

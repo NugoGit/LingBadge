@@ -1,0 +1,24 @@
+id: uk.lex.classroom
+lang: uk
+kind: lexis
+title: Classroom language
+cefr: A1
+words:
+- урок
+- текст
+- слово
+- речення
+- книжка
+- сторінка
+- вправа
+- писати
+- слухати
+- повторювати
+- відповідати
+- питання
+- домашнє завдання
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

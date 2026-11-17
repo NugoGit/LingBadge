@@ -1,0 +1,15 @@
+id: uk.gram.syntax.like
+lang: uk
+kind: grammar
+title: Мені подобається + nominative; люблю + accusative or infinitive
+cefr: A1
+requires:
+- uk.gram.pron.personal-oblique
+- uk.gram.verb.reflexive
+sources:
+- ukstd.A1.intent.like-request-forbid
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

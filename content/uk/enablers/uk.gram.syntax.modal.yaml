@@ -1,0 +1,14 @@
+id: uk.gram.syntax.modal
+lang: uk
+kind: grammar
+title: можна, треба, потрібно; хочу / можу + infinitive
+cefr: A1
+requires:
+- uk.gram.verb.present-irregular
+sources:
+- ukstd.A1.gram.syntax-requests
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

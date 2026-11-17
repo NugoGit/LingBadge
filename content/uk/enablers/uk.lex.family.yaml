@@ -1,0 +1,29 @@
+id: uk.lex.family
+lang: uk
+kind: lexis
+title: Family and pets
+cefr: A1
+words:
+- сім'я
+- мама
+- тато
+- батьки
+- брат
+- сестра
+- син
+- донька
+- дружина
+- чоловік
+- дідусь
+- бабуся
+- дитина
+- діти
+- друг
+- подруга
+- кіт
+- собака
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

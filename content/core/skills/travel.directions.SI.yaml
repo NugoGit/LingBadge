@@ -1,0 +1,22 @@
+id: travel.directions.SI
+task: travel.directions
+situation: travel.getting-around
+title: Ask for and understand directions
+can_do: Can ask where something is and follow short, simple directions to a nearby place.
+mode: SI
+domain:
+- public
+cefr: A1
+prerequisites:
+- comm.repair.SI
+sources:
+- cv.understanding-interlocutor.A1
+- cv.goal-cooperation.A1
+- cv.announcements.A1-1
+- ukstd.A1.theme.city
+- ukstd.A1.intent.space-time
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

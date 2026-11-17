@@ -1,0 +1,329 @@
+/* lingobadge core: pure logic shared by the page and the node tests.
+   Port of src/lingobadge/policy.py and diagnosis.py, plus prompt builders. */
+(function (root) {
+  "use strict";
+
+  const CREDIT = { 0: 0, 1: 0.5, 2: 1, 3: 1 };
+  const DEFAULT_CFG = {
+    score_threshold: 0.9, must_min_level: 2, forms_required: 2, min_days_between: 1, pair_window_days: 60,
+    max_form_similarity: 0.3, borderline_margin: 0.05, low_confidence: 0.7, overrides: {},
+  };
+
+  function cfgFrom(mastery) {
+    return Object.assign({}, DEFAULT_CFG, (mastery && mastery.global) || {}, { overrides: (mastery && mastery.overrides) || {} });
+  }
+
+  function thresholdFor(skill, cfg) {
+    const o = cfg.overrides[skill && skill.id];
+    if (o && o.score_threshold != null) return o.score_threshold;
+    return skill && skill.threshold != null ? skill.threshold : cfg.score_threshold;
+  }
+
+  // ------------------------------------------------------------ key grading
+  function normalize(s) {
+    s = String(s == null ? "" : s).trim().toLowerCase();
+    s = s.normalize("NFD").replace(/[\u0300\u0301]/g, "").normalize("NFC"); // drop stress marks, keep й ї
+    s = s.replace(/[ʼ’`´]/g, "'");
+    s = s.replace(/\s*(грн|uah|hrn)\.?$/, "");
+    if (/^[\d\s\-():.]+$/.test(s)) s = s.replace(/[\s\-()]+/g, "");
+    s = s.replace(/^0(\d:\d\d)$/, "$1");
+    s = s.replace(/\s+/g, " ").replace(/^[\s.!?]+|[\s.!?]+$/g, "");
+    return s;
+  }
+
+  function gradeKeyed(form, answers) {
+    const results = {}, unsure = [];
+    for (const item of form.items || []) {
+      const given = normalize((answers || {})[item.id]);
+      const ok = given !== "" && (item.key || []).some((k) => normalize(k) === given);
+      results[item.id] = ok;
+      if (!ok && given && item.type !== "mcq") unsure.push(item.id);
+    }
+    return { results, unsure };
+  }
+
+  // ------------------------------------------------------------ scoring
+  function score(rubric, grade) {
+    if (rubric.scale === "share") {
+      const v = Object.values(grade.item_results || {});
+      return v.length ? v.filter(Boolean).length / v.length : 0;
+    }
+    const lv = {}; (grade.criteria || []).forEach((c) => (lv[c.id] = c.level));
+    const total = rubric.criteria.reduce((a, c) => a + c.weight, 0);
+    return rubric.criteria.reduce((a, c) => a + c.weight * CREDIT[lv[c.id] || 0], 0) / total;
+  }
+
+  function attemptOutcome(rubric, grade, threshold, cfg) {
+    cfg = cfg || DEFAULT_CFG;
+    const s = score(rubric, grade);
+    if (rubric.scale === "share") {
+      const v = Object.values(grade.item_results || {});
+      const n = v.filter(Boolean).length;
+      return { passed: s >= threshold - 1e-9, score: s, threshold, failed_musts: [], reason: `${n}/${v.length} richtig` };
+    }
+    const lv = {}; (grade.criteria || []).forEach((c) => (lv[c.id] = c.level));
+    const failed = rubric.criteria.filter((c) => c.must && (lv[c.id] || 0) < cfg.must_min_level).map((c) => c.id);
+    const passed = failed.length === 0 && s >= threshold - 1e-9;
+    const reason = failed.length ? "Pflichtkriterien unter „erfüllt“: " + failed.join(", ")
+      : passed ? "alle Pflichtkriterien erfüllt" : `Punktzahl unter ${Math.round(threshold * 100)} %`;
+    return { passed, score: s, threshold, failed_musts: failed, reason };
+  }
+
+  function needsRegrade(rubric, grade, threshold, cfg) {
+    cfg = cfg || DEFAULT_CFG;
+    if (rubric.scale === "share") return false;
+    if (Math.abs(score(rubric, grade) - threshold) <= cfg.borderline_margin) return true;
+    const musts = new Set(rubric.criteria.filter((c) => c.must).map((c) => c.id));
+    return (grade.criteria || []).some((c) => musts.has(c.id) && (c.level === 1 || c.level === 2) && (c.confidence ?? 1) < cfg.low_confidence);
+  }
+
+  function medianLow(arr) { const a = [...arr].sort((x, y) => x - y); return a[Math.floor((a.length - 1) / 2)]; }
+  function median(arr) { const a = [...arr].sort((x, y) => x - y); const m = a.length >> 1; return a.length % 2 ? a[m] : (a[m - 1] + a[m]) / 2; }
+
+  function medianGrade(grades) {
+    const ids = grades[0].criteria.map((c) => c.id);
+    const crit = ids.map((id) => {
+      const cs = grades.map((g) => g.criteria.find((c) => c.id === id) || { level: 0, confidence: 0 });
+      return { id, level: medianLow(cs.map((c) => c.level)), confidence: median(cs.map((c) => c.confidence ?? 1)), evidence: cs[0].evidence || [] };
+    });
+    const target = JSON.stringify(crit.map((c) => c.level));
+    const match = grades.find((g) => JSON.stringify(ids.map((id) => (g.criteria.find((c) => c.id === id) || {}).level)) === target);
+    return Object.assign({}, grades[0], { grader: grades[0].grader + "×" + grades.length, criteria: crit,
+      errors: match ? match.errors : grades.flatMap((g) => g.errors || []) });
+  }
+
+  // ------------------------------------------------------------ badge rule
+  function textOf(form) {
+    const parts = (form.stimuli || []).map((s) => s.body).concat((form.items || []).flatMap((i) => i.key || []));
+    if (form.roleplay) parts.push(form.roleplay.opening_line || "", form.roleplay.persona || "");
+    return parts.join(" ").toLowerCase().replace(/\s+/g, " ");
+  }
+
+  function formSimilarity(a, b, n = 5) {
+    const grams = (t) => { const s = new Set(); for (let i = 0; i <= Math.max(t.length - n, 0); i++) s.add(t.slice(i, i + n)); return s; };
+    const ga = grams(textOf(a)), gb = grams(textOf(b));
+    let inter = 0; ga.forEach((g) => gb.has(g) && inter++);
+    const uni = ga.size + gb.size - inter;
+    return uni ? inter / uni : 1;
+  }
+
+  function days(a, b) { return Math.round((Date.parse(b) - Date.parse(a)) / 864e5); }
+
+  function badgeDecision(attempts, rubric, threshold, cfg) {
+    cfg = cfg || DEFAULT_CFG;
+    const passes = attempts.filter((a) => a.kind === "full" && !a.voided && a.channel !== "typed-speech"
+      && attemptOutcome(rubric, a.grade, threshold, cfg).passed).sort((x, y) => (x.takenOn < y.takenOn ? -1 : 1));
+    if (!passes.length) return { awarded: false, pair: null, passes: 0, reason: "noch kein bestandener Test" };
+    for (let i = 0; i < passes.length; i++) for (let j = i + 1; j < passes.length; j++) {
+      const a = passes[i], b = passes[j], d = days(a.takenOn, b.takenOn);
+      if (a.seed === b.seed || formSimilarity(a.form, b.form) > cfg.max_form_similarity) continue;
+      if (d >= cfg.min_days_between && d <= cfg.pair_window_days) return { awarded: true, pair: [a.id, b.id], passes: passes.length, reason: `zwei unabhängige Tests, ${d} Tag(e) auseinander` };
+    }
+    return { awarded: false, pair: null, passes: passes.length,
+      reason: passes.length === 1 ? "1 von 2 bestanden – nächsten Test an einem anderen Tag" : "bestandene Tests, aber nicht an verschiedenen Tagen im Zeitfenster" };
+  }
+
+  function heatmapStatus(outcome) {
+    if (outcome.passed) return "likely";
+    if (outcome.failed_musts.length <= 1 && outcome.score >= 0.75) return "shaky";
+    return "unknown";
+  }
+
+  function probeStatus(correct, total) { total = total || 3; return correct === total ? "likely" : correct === total - 1 ? "shaky" : "unknown"; }
+
+  // ------------------------------------------------------------ diagnosis
+  const WEAK = new Set(["unknown", "shaky", "untested", "suspect"]);
+
+  function weakAncestors(id, enablers, status) {
+    const out = [], seen = new Set();
+    (function walk(e) {
+      for (const r of (enablers[e] && enablers[e].requires) || []) {
+        if (seen.has(r)) continue; seen.add(r); walk(r);
+        if (WEAK.has(status[r] || "untested")) out.push(r);
+      }
+    })(id);
+    return out;
+  }
+
+  function diagnose(form, grade, enablers, status) {
+    status = status || {};
+    const count = {}, ex = {};
+    const add = (en, e) => { count[en] = (count[en] || 0) + 1; (ex[en] = ex[en] || []).push(e); };
+    for (const e of grade.errors || []) if (e.enabler && !String(e.enabler).startsWith("unlisted")) add(e.enabler, `${e.span} → ${e.correction}`);
+    const itemEn = {}; (form.items || []).forEach((i) => (itemEn[i.id] = i.enablers || []));
+    for (const [id, ok] of Object.entries(grade.item_results || {})) if (!ok) (itemEn[id] || []).forEach((en) => add(en, "Aufgabe " + id));
+    const holes = Object.keys(count).sort((a, b) => count[b] - count[a]).map((en) => ({
+      enabler: en, title: (enablers[en] || {}).title || en, cefr: (enablers[en] || {}).cefr || "?", errors: count[en],
+      examples: ex[en].slice(0, 3), check_first: weakAncestors(en, enablers, status).concat([en]),
+    }));
+    const chunks = [...new Set((grade.errors || []).filter((e) => e.chunk).map((e) => e.chunk))].sort();
+    const unlisted = (grade.errors || []).filter((e) => e.enabler && String(e.enabler).startsWith("unlisted")).map((e) => `${e.span}: ${e.enabler}`);
+    return { holes, chunks, unlisted };
+  }
+
+  // ------------------------------------------------------------ statuses
+  function skillStatus(skill, attempts, probe, rubric, cfg) {
+    const mine = attempts.filter((a) => a.skill === skill.id && !a.voided && a.kind === "full");
+    const thr = thresholdFor(skill, cfg);
+    const badge = badgeDecision(mine, rubric, thr, cfg);
+    if (badge.awarded) return { status: "badge", badge, last: mine[mine.length - 1] };
+    const last = mine.sort((x, y) => (x.at < y.at ? -1 : 1))[mine.length - 1];
+    if (probe && (!last || probe.at > last.at)) return { status: probe.status, badge, source: "probe" };
+    if (!last) return { status: "untested", badge };
+    const out = attemptOutcome(rubric, last.grade, thr, cfg);
+    return { status: out.passed ? "likely" : heatmapStatus(out), badge, last, source: "test" };
+  }
+
+  function enablerStatuses(enablers, checks, attempts) {
+    const st = {};
+    const errs = {};
+    for (const a of attempts) if (!a.voided) for (const e of (a.grade && a.grade.errors) || []) if (e.enabler) errs[e.enabler] = (errs[e.enabler] || 0) + 1;
+    for (const [id, e] of Object.entries(enablers)) {
+      const c = checks[id];
+      if (e.channel === "audio") st[id] = "audio";
+      else if (c) st[id] = c.score >= 0.9 ? "known" : c.score >= 0.7 ? "shaky" : "unknown";
+      else st[id] = errs[id] ? "suspect" : "untested";
+    }
+    return st;
+  }
+
+  // ------------------------------------------------------------ prompts
+  const LANG = { de: "Deutsch", en: "English" };
+
+  function enablerTable(real, enablers) {
+    return real.enablers.map((u) => { const e = enablers[u.id] || {}; return `- ${u.id} (${u.use}, ${e.cefr}): ${e.title}`; }).join("\n");
+  }
+  function wordLists(real, enablers) {
+    return real.enablers.map((u) => enablers[u.id]).filter((e) => e && e.words).map((e) => `${e.id}: ${e.words.join(", ")}`).join("\n");
+  }
+
+  const SYSTEM_GEN = (il) => `Du schreibst Testformulare für ein Sprachzertifikat. Ein Formular testet genau eine Alltagskompetenz auf Ukrainisch.
+Schreib wie eine ukrainische Muttersprachlerin authentisches Alltagsmaterial, aber auf Niveau A1: kurze Sätze, häufige Wörter, nur die angegebene Grammatik.
+Regeln:
+1. Ukrainischer Text NUR im Material (stimuli), in Lösungen (key) und in der Eröffnungszeile der Gesprächspartnerin. Alles, was sich an die lernende Person richtet (Fragen, Aufgaben, Ziele), auf ${LANG[il] || il}.
+2. Grammatik mit use=formulaic nur in festen Wendungen wie in den Beispielen, nie frei gebildet.
+3. Bevorzuge Wörter aus den Wortlisten. Andere Wörter sind für Realismus erlaubt (max. 15 % des Materials), aber keine Lösung und kein Pflichtpunkt darf von ihnen abhängen.
+4. Jede Aufgabe, jeder Inhaltspunkt und jeder Pflichtschritt nennt die Enabler-IDs, die er prüft (nur aus der Liste).
+5. Jede Aufgabe hat genau eine vertretbare Lösung; bei Kurzantworten alle akzeptablen Varianten in key.
+6. Keine Russizismen, kein Surschyk, keine Lehnübersetzungen. Im Zweifel einfacher formulieren.
+7. Wiederhole kein Material, keine Namen, Preise oder Uhrzeiten aus den bereits gesehenen Tests.
+Antworte NUR mit JSON.`;
+
+  const SHAPES = {
+    R: `{"stimuli":[{"kind":"text","title":str,"body":str}],"items":[{"id":"i1","type":"mcq"|"short_answer","prompt":str,"options":[4 strings, nur bei mcq],"key":[str],"enablers":[str]}],"summary":str}
+Genau 10 Aufgaben: 6 mcq, 4 short_answer. Material 40-150 Wörter, gestaltet wie das echte Dokument (Zeilenumbrüche mit \\n). Bei mcq ist key genau der Text der richtigen Option. Höchstens 2 Aufgaben mit Rechnen. Keine Aufgabe ohne das Material lösbar.`,
+    L: `{"stimuli":[{"kind":"audio_script","title":"Clip 1","body":str}, ... 8-10 Clips],"items":[{"id":"c1","type":"mcq"|"short_answer","prompt":str,"options":[...nur mcq],"key":[str],"enablers":[str],"stimulus":0}],"summary":str}
+Genau 10 Aufgaben, jede bezieht sich auf genau einen Clip (stimulus = Index). Jeder Clip 1-2 kurze Sätze, natürlich gesprochen. Zahlen als Ziffern in key, Uhrzeiten als HH:MM (24h und 12h Variante).`,
+    WI: `{"stimuli":[{"kind":"message"|"text","title":str,"body":str}] (eingehende Nachricht oder Formular; darf leer sein),"situation":str,"brief":[{"id":"c1","text":str,"must":bool,"enablers":[str]}],"word_range":[20,60],"summary":str}
+4-6 Inhaltspunkte, davon 3-5 must. Inhaltspunkte sagen, WAS mitgeteilt wird, nie die ukrainischen Wörter. Mindestens zwei Punkte erfordern die Schlüsselstrukturen. Bei Formularen: gib eine fiktive Identität in der Anweisungssprache vor und liste die Formularfelder im body.`,
+    SI: `{"roleplay":{"persona":str,"setting":str,"register":"formal"|"informal","learner_goal":str,"required_moves":[{"id":"m1","text":str,"enablers":[str]}],"complications":[str],"opening_line":str,"max_turns":12},"summary":str}
+4-7 Pflichtschritte, 1-2 Komplikationen (z. B. Artikel nicht verfügbar, Rückfrage, Missverständnis). persona, setting, learner_goal, required_moves und complications in der Anweisungssprache; opening_line auf Ukrainisch.`,
+  };
+
+  function genPrompt(skill, real, enablers, seed, seenSummaries, il, avoid) {
+    return SYSTEM_GEN(il) + `
+
+Kompetenz: ${skill.id} — ${skill.title}
+Can-do: ${skill.can_do}
+Modus: ${skill.mode} · Niveau: ${real.cefr}
+Register: ${real.registers.join(", ")} · Varietät: ${real.variety}
+Beispielwendungen: ${real.exponents.join(" | ")}
+Schlüsselstrukturen: ${real.key_structures || "—"}
+Enabler (id, Gebrauch, Niveau: Titel):
+${enablerTable(real, enablers)}
+Wortlisten:
+${wordLists(real, enablers) || "—"}
+
+Seed: ${seed} (nutze ihn, um Teilsituation, Namen, Zahlen und ggf. Komplikationen zu wählen)
+Bereits gesehene Tests: ${seenSummaries.length ? seenSummaries.join(" || ") : "keine"}
+${avoid ? "Vermeide diese Probleme der letzten Version: " + avoid : ""}
+
+Antwortformat (JSON):
+${SHAPES[skill.mode]}`;
+  }
+
+  function validatePrompt(form, real) {
+    return `Du bist eine strenge ukrainische Muttersprachlerin und prüfst Testmaterial auf Niveau ${real.cefr}. Du hast es nicht geschrieben. Finde Probleme, repariere nichts.
+Formular:
+${JSON.stringify(form)}
+Schlüsselstrukturen: ${real.key_structures || "—"}
+Prüfe: 1) Sprachfehler im ukrainischen Text, Russizismen, Surschyk, Lehnübersetzungen. 2) Grammatik über dem Niveau, die frei (nicht in fester Wendung) verwendet wird. 3) Aufgaben mit keiner oder mehr als einer vertretbaren Lösung, falsche oder unvollständige keys. 4) Aufgaben ohne Material lösbar. 5) Bei Rollenspielen: Sind alle Pflichtschritte auf A1 machbar? 6) Ist das Material realistisch?
+Antworte NUR mit JSON: {"ok": bool, "problems": [{"where": str, "kind": str, "detail": str, "severity": "blocker"|"minor"}]}`;
+  }
+
+  function interlocutorPrompt(rp, transcript, real) {
+    return `Du spielst: ${rp.persona}. Situation: ${rp.setting}. Du sprichst NUR Ukrainisch (Standard), Register: ${rp.register === "informal" ? "ти" : "ви"}, mit einer lernenden Person auf Niveau A1.
+So sprichst du: kurze, einfache Sätze mit häufigen Wörtern, wie eine geduldige Muttersprachlerin mit einer Ausländerin. Wenn die Person bittet zu wiederholen, langsamer zu sprechen oder zu buchstabieren, tu es einfacher. Wechsle nie die Sprache, übersetze nie, korrigiere nie, lobe nie die Sprache, gib keine Hinweise, was sie sagen soll. Bleib in der Rolle; reagiere auf das, was tatsächlich gesagt wurde: Ist etwas unklar, frag nach; ist es trotz Fehlern klar, mach weiter.
+Verdecktes Skript – Ziel der Person: ${rp.learner_goal}. Schritte, die sie machen sollte: ${rp.required_moves.map((m) => m.text).join("; ")}. Komplikationen, die du natürlich einbaust: ${rp.complications.join("; ")}. Beende das Gespräch natürlich, wenn das Ziel erreicht ist, spätestens nach ${rp.max_turns || 12} deiner Beiträge.
+Bisheriges Gespräch:
+${transcript.map((t) => (t.speaker === "learner" ? "Lernende: " : "Du: ") + t.text).join("\n")}
+Antworte NUR mit JSON: {"text": "<deine nächste Zeile auf Ukrainisch>", "conversation_over": bool}`;
+  }
+
+  function gradePrompt(skill, form, rubric, real, enablers, responseText, il) {
+    const levels = rubric.criteria.map((c) => `- ${c.id} (${c.must ? "Pflicht" : "optional"}, Gewicht ${c.weight}): ` +
+      Object.entries(c.levels || {}).map(([k, v]) => `${k}=${v}`).join(" | ")).join("\n");
+    const task = form.roleplay ? `Rollenspiel: ${JSON.stringify(form.roleplay)}`
+      : `Material: ${JSON.stringify(form.stimuli || [])}\nSituation: ${form.situation || ""}\nInhaltspunkte: ${JSON.stringify(form.brief || [])}`;
+    return `Du bist eine strenge, faire Prüferin für ein kriterienbasiertes Zertifikat. Es bestätigt, dass die Person eine Alltagskompetenz auf ${real.cefr} ohne nennenswerte Lücken beherrscht. Bestehen heißt „sehr gut“: alles Geforderte vorhanden und korrekt, höchstens kleine Ausrutscher. Bewerte nur nach der Rubrik, nie nach Aufwand.
+So bewertest du:
+- Jedes Kriterium einzeln, genau nach den Stufenbeschreibungen. Zitiere die Worte der Person als Beleg.
+- key_structures – Ausrutscher oder Lücke: Ist eine Zielstruktur an einer Stelle falsch, aber an anderer Stelle in DIESER Antwort richtig, ist es ein Ausrutscher (Stufe 2 möglich). Ist sie falsch und nirgends in dieser Antwort richtig, ist es eine Lücke (höchstens Stufe 1). Zwei oder mehr Ausrutscher ergeben Stufe 1.
+- Feste Wendungen: Enabler mit use=formulaic sind auswendig gelernte Wendungen. Bewerte sie als Ganzes. Ist eine kaputt, trage den Fehler mit "chunk" (die Wendung) ein und lass "enabler" leer.
+- Fehler außerhalb der Zielstrukturen, die die Bedeutung nicht blockieren, senken key_structures nicht; trage sie trotzdem ein.
+- Jeder Fehler: genaue Stelle (span), Korrektur, betroffenes Kriterium, und der produktive Enabler aus der Liste unten, oder "unlisted: <kurze Beschreibung>".
+- Akzeptiere jede korrekte Variante, die Muttersprachler akzeptieren würden. Belohne keine Länge.
+- confidence je Kriterium (0-1).
+- feedback: 2-3 Sätze auf ${LANG[il] || il} an die Person: was gut war, was fehlt.
+
+Kompetenz: ${skill.title} — ${skill.can_do}
+${task}
+Rubrik:
+${levels}
+Schlüsselstrukturen: ${real.key_structures || "—"}
+Enabler (id, Gebrauch, Niveau: Titel):
+${enablerTable(real, enablers)}
+
+Antwort der Person:
+"""
+${responseText}
+"""
+Antworte NUR mit JSON: {"criteria":[{"id":str,"level":0-3,"confidence":number,"evidence":[str]}],"errors":[{"span":str,"correction":str,"criterion":str,"enabler":str|null,"chunk":str|null,"blocks_meaning":bool}],"feedback":str}`;
+  }
+
+  function judgePrompt(items) {
+    return `Entscheide für jede Kurzantwort, ob sie dasselbe bedeutet wie eine der akzeptierten Lösungen. Bei Grammatik-Aufgaben (gap_fill, transform) streng: eine falsche Endung ist falsch. Bei Verständnis-Aufgaben (short_answer, produce bei Lesen/Hören) bei Rechtschreibung nachsichtig, wenn eindeutig das Richtige gemeint ist. Bei produce-Aufgaben (Sprechen/Schreiben): richtig nur, wenn die ukrainische Antwort grammatisch korrekt und angemessen ist; die Musterlösungen sind Beispiele, andere korrekte Formulierungen zählen auch.
+Aufgaben:
+${JSON.stringify(items)}
+Antworte NUR mit JSON: {"results":[{"id":str,"correct":bool,"reason":str,"enabler":str|null}]}`;
+  }
+
+  function enablerCheckPrompt(en, il, seed) {
+    return SYSTEM_GEN(il) + `
+
+Erstelle einen Kurz-Check für genau einen Baustein:
+${en.id} (${en.kind}, ${en.cefr}): ${en.title}
+${en.words ? "Wortliste: " + en.words.join(", ") : ""}
+Seed: ${seed}
+${en.kind === "lexis" ? "12 Aufgaben: Bedeutung→Wort und Wort→Bedeutung, nur Wörter aus der Liste." : "10 Aufgaben: kurze natürliche Sätze aus A1-Situationen, die Zielform ist die einzige Lücke. Decke die Unterfälle gleichmäßig ab."}
+Antwortformat: {"items":[{"id":"g1","type":"gap_fill"|"transform"|"mcq","prompt":str (Anweisung auf ${LANG[il]}, ukrainischer Satz mit ___ und Grundform in Klammern),"options":[nur mcq],"key":[str]}],"summary":str}`;
+  }
+
+  function probePrompt(theme, skills, reals, enablers, il, seed) {
+    const list = skills.map((s) => { const r = reals[s.id]; return `- ${s.id} (${s.mode}): ${s.can_do} | Beispiele: ${r.exponents.slice(0, 3).join(" | ")} | Schlüsselstrukturen: ${r.key_structures || "—"}`; }).join("\n");
+    return SYSTEM_GEN(il) + `
+
+Erstelle eine kurze Einstufung (Probe) für das Thema „${theme.title}“. Für JEDE Kompetenz unten genau 3 Aufgaben, die die wichtigsten Punkte prüfen.
+- Lesen (R) / Hören (L): ein kurzes Material (R: Text 20-60 Wörter; L: 1-3 Sätze als audio_script) und 3 Aufgaben (mcq oder short_answer).
+- Schreiben/Sprechen (WI, SI, SP): kein Material; 3 Aufgaben vom Typ "produce": eine kurze Situation in der Anweisungssprache („Sie möchten …, was schreiben/sagen Sie?“), key = 1-3 korrekte ukrainische Musterlösungen.
+Kompetenzen:
+${list}
+Seed: ${seed}
+Antwortformat: {"skills":[{"skill":str,"stimulus":{"kind":"text"|"audio_script","body":str}|null,"items":[{"id":str (eindeutig, z. B. s1i1),"type":"mcq"|"short_answer"|"produce","prompt":str,"options":[nur mcq],"key":[str],"enablers":[str]}]}]}`;
+  }
+
+  const api = { CREDIT, DEFAULT_CFG, cfgFrom, thresholdFor, normalize, gradeKeyed, score, attemptOutcome, needsRegrade, medianGrade,
+    formSimilarity, badgeDecision, heatmapStatus, probeStatus, diagnose, skillStatus, enablerStatuses,
+    genPrompt, validatePrompt, interlocutorPrompt, gradePrompt, judgePrompt, enablerCheckPrompt, probePrompt };
+  if (typeof module !== "undefined" && module.exports) module.exports = api; else root.LB = api;
+})(typeof window !== "undefined" ? window : globalThis);

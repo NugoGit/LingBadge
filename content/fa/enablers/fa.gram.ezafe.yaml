@@ -1,0 +1,10 @@
+id: fa.gram.ezafe
+lang: fa
+kind: grammar
+title: Ezafe constructions (esm-e man, ahl-e otrish)
+cefr: A1
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

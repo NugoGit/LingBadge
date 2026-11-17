@@ -1,0 +1,18 @@
+id: relations.toast.SP
+task: relations.toast
+situation: relations.celebrations
+title: Propose a short toast
+can_do: Can propose a very short, rehearsed toast at a meal or celebration.
+mode: SP
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- cv.addressing-audiences.A1
+- ukstd.A1.intent.wish-congratulate
+size: S
+rubric: rubric.spoken-production.v1
+threshold: null
+version: 1
+status: draft

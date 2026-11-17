@@ -1,0 +1,14 @@
+id: uk.gram.noun.nom-pl
+lang: uk
+kind: grammar
+title: Nominative plural (-и, -і, -ї; рік – роки)
+cefr: A1
+requires:
+- uk.gram.noun.gender
+sources:
+- ukstd.A1.gram.noun-nom-pl
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

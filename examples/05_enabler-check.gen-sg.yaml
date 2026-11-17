@@ -1,0 +1,104 @@
+title: 'Enabler check: genitive singular (A2), the -а/-у choice'
+attempts:
+- id: a1
+  taken_on: '2026-11-17'
+  form:
+    id: f-gen-3301
+    kind: enabler_check
+    skill: uk.gram.noun.gen-sg
+    lang: uk
+    seed: 3301
+    template: enabler-check.v1
+    generator: llm-template:v1
+    rubric: rubric.enabler-check.v1
+    items:
+    - id: g1
+      type: gap_fill
+      prompt: Як пройти до ___? (вокзал)
+      key:
+      - вокзалу
+      enablers:
+      - uk.gram.noun.gen-sg
+    - id: g2
+      type: gap_fill
+      prompt: Каву без ___, будь ласка. (цукор)
+      key:
+      - цукру
+      enablers:
+      - uk.gram.noun.gen-sg
+    - id: g3
+      type: gap_fill
+      prompt: Аптека біля ___. (школа)
+      key:
+      - школи
+      enablers:
+      - uk.gram.noun.gen-sg
+    - id: g4
+      type: gap_fill
+      prompt: Я йду з ___. (робота)
+      key:
+      - роботи
+      enablers:
+      - uk.gram.noun.gen-sg
+    - id: g5
+      type: gap_fill
+      prompt: У мене немає ___. (час)
+      key:
+      - часу
+      enablers:
+      - uk.gram.noun.gen-sg
+    - id: g6
+      type: gap_fill
+      prompt: Цей автобус іде до ___. (центр)
+      key:
+      - центру
+      enablers:
+      - uk.gram.noun.gen-sg
+    - id: g7
+      type: gap_fill
+      prompt: Банкомат біля ___. (банк)
+      key:
+      - банку
+      enablers:
+      - uk.gram.noun.gen-sg
+    - id: g8
+      type: gap_fill
+      prompt: Чай без ___. (молоко)
+      key:
+      - молока
+      enablers:
+      - uk.gram.noun.gen-sg
+    - id: g9
+      type: gap_fill
+      prompt: Я з ___. (Київ)
+      key:
+      - Києва
+      enablers:
+      - uk.gram.noun.gen-sg
+    - id: g10
+      type: gap_fill
+      prompt: Це подарунок від ___. (мама)
+      key:
+      - мами
+      enablers:
+      - uk.gram.noun.gen-sg
+  response:
+    form_id: f-gen-3301
+    answers:
+      g1: вокзала
+      g2: цукру
+      g3: школи
+      g4: роботи
+      g5: часу
+      g6: центру
+      g7: банка
+      g8: молока
+      g9: Києва
+      g10: мами
+expected:
+  a1:
+    item_correct: 8
+    passed: false
+    wrong:
+    - g1
+    - g7

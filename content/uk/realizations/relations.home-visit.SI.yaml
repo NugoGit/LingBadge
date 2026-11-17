@@ -1,0 +1,48 @@
+skill: relations.home-visit.SI
+lang: uk
+cefr: A1
+register:
+- informal
+- formal
+variety: standard
+exponents:
+- Заходь! Сідай! / Заходьте! Сідайте!
+- Хочеш чаю чи кави?
+- Це тобі. / Це вам.
+- Дуже смачно! У тебе гарна квартира.
+- Дякую, мені вже час іти.
+enablers:
+  required:
+  - id: uk.gram.verb.imperative-set
+    use: productive
+  - id: uk.prag.courtesy
+    use: productive
+  - id: uk.prag.address
+    use: productive
+  - id: uk.lex.home
+    use: productive
+  - id: uk.lex.food-drink
+    use: productive
+  - id: uk.gram.verb.present-irregular
+    use: productive
+  - id: uk.gram.syntax.possession
+    use: productive
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+  - id: uk.lex.celebrations
+    use: productive
+rubric_specifics:
+  key_structures: Imperative by register (сідай / сідайте); partitive genitive in offers as a chunk (чаю, кави).
+flags:
+- size?
+version: 1
+status: draft

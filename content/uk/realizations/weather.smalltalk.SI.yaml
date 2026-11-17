@@ -1,0 +1,34 @@
+skill: weather.smalltalk.SI
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Яка сьогодні погода?
+- Сьогодні холодно, але сонячно.
+- Іде дощ.
+- Завтра буде спекотно.
+enablers:
+  required:
+  - id: uk.lex.weather
+    use: productive
+  - id: uk.gram.syntax.time-adverbs
+    use: productive
+  - id: uk.gram.verb.future-compound
+    use: productive
+  - id: uk.gram.verb.present-irregular
+    use: productive
+  - id: uk.gram.syntax.conjunctions
+    use: productive
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+version: 1
+status: draft

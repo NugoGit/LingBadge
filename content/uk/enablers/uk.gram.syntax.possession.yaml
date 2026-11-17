@@ -1,0 +1,14 @@
+id: uk.gram.syntax.possession
+lang: uk
+kind: grammar
+title: У мене / у тебе / у вас є ...
+cefr: A1
+requires:
+- uk.gram.pron.personal-oblique
+sources:
+- ukstd.A1.gram.pron-personal
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,28 @@
+id: uk.lex.home
+lang: uk
+kind: lexis
+title: Home, rooms, furniture
+cefr: A1
+words:
+- квартира
+- будинок
+- кімната
+- кухня
+- ванна
+- туалет
+- спальня
+- вітальня
+- балкон
+- поверх
+- стіл
+- стілець
+- ліжко
+- шафа
+- диван
+- вікно
+- двері
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

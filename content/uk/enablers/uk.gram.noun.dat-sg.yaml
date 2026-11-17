@@ -1,0 +1,14 @@
+id: uk.gram.noun.dat-sg
+lang: uk
+kind: grammar
+title: Dative singular (мамі, братові)
+cefr: A2
+requires:
+- uk.gram.noun.gender
+sources:
+- ukstd.A2.gram.dative
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

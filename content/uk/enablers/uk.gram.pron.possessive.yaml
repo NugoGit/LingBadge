@@ -1,0 +1,14 @@
+id: uk.gram.pron.possessive
+lang: uk
+kind: grammar
+title: Possessives (мій, твій, наш, ваш, їхній)
+cefr: A1
+requires:
+- uk.gram.noun.gender
+sources:
+- ukstd.A1.gram.pron-possessive
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

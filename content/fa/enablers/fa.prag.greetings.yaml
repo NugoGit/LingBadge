@@ -1,0 +1,10 @@
+id: fa.prag.greetings
+lang: fa
+kind: pragmatics
+title: salām, khodāhāfez, mersi / mamnun / motshakkeram
+cefr: A1
+check:
+  template: enabler.pragmatics.v1
+  items: 10
+  threshold: 0.9
+  channel: text

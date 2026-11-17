@@ -1,0 +1,14 @@
+id: uk.gram.noun.voc
+lang: uk
+kind: grammar
+title: Vocative (Олено! Пане Іване!)
+cefr: A1
+requires:
+- uk.gram.noun.gender
+sources:
+- ukstd.A1.gram.noun-voc
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

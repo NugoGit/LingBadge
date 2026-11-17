@@ -1,0 +1,22 @@
+id: shopping.clothes.SI
+task: shopping.clothes
+situation: shopping.shop
+title: Buy clothes
+can_do: Can ask for a size and colour, ask to try something on, and say it is too big or small.
+mode: SI
+domain:
+- public
+cefr: A1
+prerequisites:
+- shopping.buy.SI
+sources:
+- cv.information-exchange.A1
+- cv.obtaining-goods-services.A1
+- cv.monologue-info.A1
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+flags:
+- level?
+version: 1
+status: draft

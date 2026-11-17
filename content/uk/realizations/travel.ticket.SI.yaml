@@ -1,0 +1,40 @@
+skill: travel.ticket.SI
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Один квиток до Львова, будь ласка.
+- На сьогодні, на вечір.
+- О котрій відправлення? З якої платформи?
+- Скільки коштує?
+enablers:
+  required:
+  - id: uk.num.cardinal-100-10000
+    use: productive
+  - id: uk.num.time
+    use: productive
+  - id: uk.lex.transport-travel
+    use: productive
+  - id: uk.gram.syntax.questions
+    use: productive
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+  - id: uk.num.num-noun
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: на + accusative for date/time of travel; до + city as a chunk.
+version: 1
+status: draft

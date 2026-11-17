@@ -1,0 +1,12 @@
+id: uk.gram.syntax.negation
+lang: uk
+kind: grammar
+title: Negation with не; немає (as a chunk)
+cefr: A1
+sources:
+- ukstd.A1.gram.syntax-simple
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,22 @@
+skill: food.menu.R
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- 'Перші страви: борщ український — 120 грн'
+- Салати
+- 'Напої: чай, кава, узвар'
+enablers:
+  required:
+  - id: uk.lex.food-drink
+    use: productive
+  - id: uk.num.cardinal-100-10000
+    use: productive
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.gram.adj.nom-agreement
+    use: productive
+version: 1
+status: draft

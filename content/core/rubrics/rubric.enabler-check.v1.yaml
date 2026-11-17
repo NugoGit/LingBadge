@@ -1,0 +1,8 @@
+id: rubric.enabler-check.v1
+scale: share
+criteria:
+- id: item_accuracy
+  must: true
+  weight: 1
+  meets: Share of items with the target form exactly right
+scoring: 'Score = share correct; pass if score >= 0.9 (9 of 10).'

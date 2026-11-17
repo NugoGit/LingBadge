@@ -1,0 +1,20 @@
+id: home.where-live.SI
+task: home.where-live
+situation: home.where-live
+title: Talk about where you live
+can_do: Can say and ask about the city and area they live in and describe their home and rooms simply.
+mode: SI
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- cv.monologue-experience.A1
+- cv.information-exchange.A1
+- ukstd.A1.theme.home
+- ukstd.A1.theme.city
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

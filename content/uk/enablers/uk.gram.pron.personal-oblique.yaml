@@ -1,0 +1,12 @@
+id: uk.gram.pron.personal-oblique
+lang: uk
+kind: grammar
+title: мене/мені, тебе/тобі, нас/нам, вас/вам
+cefr: A1
+sources:
+- ukstd.A1.gram.pron-personal
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

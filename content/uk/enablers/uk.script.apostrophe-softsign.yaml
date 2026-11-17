@@ -1,0 +1,14 @@
+id: uk.script.apostrophe-softsign
+lang: uk
+kind: script
+title: Apostrophe and soft sign (п'ять, сім'я, Львів, день)
+cefr: A1
+requires:
+- uk.script.alphabet
+sources:
+- ukstd.A1.gram.apostrophe-softsign
+check:
+  template: enabler.script.v1
+  items: 10
+  threshold: 0.9
+  channel: text

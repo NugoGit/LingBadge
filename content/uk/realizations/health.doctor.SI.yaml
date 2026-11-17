@@ -1,0 +1,35 @@
+skill: health.doctor.SI
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- У мене болить горло.
+- У мене температура.
+- Уже два дні.
+- Я погано сплю.
+enablers:
+  required:
+  - id: uk.lex.health-body
+    use: productive
+  - id: uk.gram.verb.present
+    use: productive
+  - id: uk.gram.syntax.possession
+    use: formulaic
+  - id: uk.num.num-noun
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+flags:
+- level?
+note: Doctor's questions quickly exceed A1; test with a slow, sympathetic interlocutor.
+version: 1
+status: draft

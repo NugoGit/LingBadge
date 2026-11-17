@@ -1,0 +1,12 @@
+id: fa.num.thousands
+lang: fa
+kind: grammar
+title: Hundreds and thousands for prices
+cefr: A1
+requires:
+- fa.num.0-100
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

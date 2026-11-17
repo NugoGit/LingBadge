@@ -1,0 +1,19 @@
+id: travel.taxi.SI
+task: travel.taxi
+situation: travel.getting-around
+title: Take a taxi
+can_do: Can give an address, ask the price, ask to stop, and pay.
+mode: SI
+domain:
+- public
+cefr: A1
+prerequisites:
+- comm.numbers.L
+sources:
+- cv.obtaining-goods-services.A1
+- ukstd.A1.theme.city
+size: S
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

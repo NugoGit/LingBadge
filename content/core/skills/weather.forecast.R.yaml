@@ -1,0 +1,18 @@
+id: weather.forecast.R
+task: weather.forecast
+situation: weather.forecast
+title: Read a weather forecast
+can_do: Can read a simple forecast with temperatures and symbols.
+mode: R
+domain:
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.reading-info.A1
+- ukstd.A1.theme.weather
+size: S
+rubric: rubric.reading.v1
+threshold: null
+version: 1
+status: draft

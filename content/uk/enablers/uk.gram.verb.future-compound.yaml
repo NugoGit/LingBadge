@@ -1,0 +1,14 @@
+id: uk.gram.verb.future-compound
+lang: uk
+kind: grammar
+title: Future of бути and compound future (буду читати)
+cefr: A1
+requires:
+- uk.gram.verb.present
+sources:
+- ukstd.A1.gram.verb-future
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

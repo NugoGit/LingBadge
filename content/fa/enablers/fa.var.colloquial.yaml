@@ -1,0 +1,11 @@
+id: fa.var.colloquial
+lang: fa
+kind: variety
+title: Colloquial Tehrani forms (mikham, mitunam, -e for ast, tu for dar)
+cefr: A1
+note: Needed for speaking and chat; written standard for forms, menus and signs.
+check:
+  template: enabler.variety.v1
+  items: 10
+  threshold: 0.9
+  channel: text

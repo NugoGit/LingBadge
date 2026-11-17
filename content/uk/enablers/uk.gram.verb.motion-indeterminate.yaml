@@ -1,0 +1,14 @@
+id: uk.gram.verb.motion-indeterminate
+lang: uk
+kind: grammar
+title: ходити / їздити
+cefr: A2
+requires:
+- uk.gram.verb.motion-go
+sources:
+- ukstd.A2.gram.motion-indeterminate
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

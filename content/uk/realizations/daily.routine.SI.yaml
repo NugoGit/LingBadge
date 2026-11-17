@@ -1,0 +1,42 @@
+skill: daily.routine.SI
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Я встаю о сьомій.
+- Вранці я п'ю каву і їду на роботу.
+- Обідаю о першій.
+- У суботу я не працюю, відпочиваю.
+enablers:
+  required:
+  - id: uk.gram.verb.present
+    use: productive
+  - id: uk.gram.verb.present-irregular
+    use: productive
+  - id: uk.gram.verb.reflexive
+    use: productive
+  - id: uk.num.time
+    use: productive
+  - id: uk.gram.verb.motion-go
+    use: productive
+  - id: uk.lex.daily-routine
+    use: productive
+  - id: uk.gram.syntax.time-adverbs
+    use: productive
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Present tense incl. вставати → встаю; на + accusative for 'to work'.
+version: 1
+status: draft

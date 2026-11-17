@@ -1,0 +1,33 @@
+skill: health.pharmacy.SI
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- У мене болить голова.
+- Дайте, будь ласка, щось від кашлю.
+- Як це приймати? — Тричі на день.
+enablers:
+  required:
+  - id: uk.lex.health-body
+    use: productive
+  - id: uk.gram.verb.imperative-set
+    use: productive
+  - id: uk.num.cardinal-0-100
+    use: productive
+  - id: uk.gram.syntax.possession
+    use: formulaic
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+version: 1
+status: draft

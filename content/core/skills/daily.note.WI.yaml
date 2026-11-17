@@ -1,0 +1,17 @@
+id: daily.note.WI
+task: daily.note
+situation: daily.notes
+title: Leave a short note
+can_do: Can leave a note saying where they have gone and when they will be back.
+mode: WI
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- cv.notes-forms.A1
+size: S
+rubric: rubric.written-interaction.v1
+threshold: null
+version: 1
+status: draft

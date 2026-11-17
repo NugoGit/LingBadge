@@ -1,0 +1,12 @@
+id: uk.phon.vowels
+lang: uk
+kind: phonology
+title: Vowels, unstressed е/и; и vs і
+cefr: A1
+sources:
+- ukstd.A1.gram.vowels
+check:
+  template: enabler.phonology.v1
+  items: 10
+  threshold: 0.9
+  channel: audio

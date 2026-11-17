@@ -1,0 +1,14 @@
+id: uk.gram.noun.instr-sg
+lang: uk
+kind: grammar
+title: Instrumental singular (з молоком, карткою)
+cefr: A2
+requires:
+- uk.gram.noun.gender
+sources:
+- ukstd.A2.gram.instrumental
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

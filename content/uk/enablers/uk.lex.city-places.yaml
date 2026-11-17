@@ -1,0 +1,35 @@
+id: uk.lex.city-places
+lang: uk
+kind: lexis
+title: Places in a city
+cefr: A1
+words:
+- місто
+- центр
+- вулиця
+- площа
+- парк
+- вокзал
+- аеропорт
+- зупинка
+- метро
+- станція
+- банк
+- аптека
+- лікарня
+- магазин
+- ринок
+- кафе
+- ресторан
+- готель
+- музей
+- театр
+- церква
+- школа
+- університет
+- пошта
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

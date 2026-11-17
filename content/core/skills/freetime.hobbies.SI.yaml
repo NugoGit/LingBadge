@@ -1,0 +1,19 @@
+id: freetime.hobbies.SI
+task: freetime.hobbies
+situation: freetime.hobbies
+title: Talk about free time and likes
+can_do: Can say what they like and dislike doing, how often, and ask the other person.
+mode: SI
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- cv.informal-discussion.A1
+- ukstd.A1.intent.like-request-forbid
+- ukstd.A1.theme.work-leisure
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

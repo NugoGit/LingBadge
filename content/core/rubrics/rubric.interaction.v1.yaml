@@ -1,0 +1,56 @@
+id: rubric.interaction.v1
+scale:
+- 0
+- 1
+- 2
+- 3
+criteria:
+- id: task_completion
+  must: true
+  weight: 3
+  meets: Every required move done, including the scripted complication
+  levels:
+    0: Two or more required moves or points missing, or off task
+    1: One required move or point missing or only half done
+    2: Every required move or point done
+    3: Every move done and handled with ease, including the complication
+- id: comprehension
+  must: true
+  weight: 2
+  meets: Responds appropriately to every interlocutor turn
+  levels:
+    0: Repeated misunderstandings
+    1: One misunderstanding that is not repaired
+    2: Every turn or message understood; misunderstandings repaired by asking
+    3: Every turn understood at once, complication handled without help
+- id: key_structures
+  must: true
+  weight: 2
+  meets: Target structures correct; no error blocks meaning
+  levels:
+    0: Target structures mostly wrong or avoided
+    1: A target structure is wrong and never correct in this response (a gap), or two or more slips
+    2: All target structures correct, or one slip whose structure is correct elsewhere in this response
+    3: All target structures correct
+- id: lexis
+  must: false
+  weight: 1
+  meets: Words fit the task; no L1 fallbacks
+  levels:
+    0: Cannot express the task
+    1: Several wrong words or L1/English fallbacks
+    2: Words fit; at most one fallback or wrong word that does not block meaning
+    3: Precise and varied for A1
+- id: appropriacy
+  must: false
+  weight: 1
+  meets: Register and politeness fit the situation and stay consistent
+  levels:
+    0: Inappropriate register or no politeness
+    1: Register switches or politeness missing once
+    2: Register right and consistent; polite formulas where expected
+    3: Natural, idiomatic politeness
+scoring: 'Credit per level: 0->0, 1->0.5, 2->1, 3->1. Score = weighted mean credit. Pass if every must-criterion
+  >= 2 AND score >= threshold.'
+chunks: Memorised chunks (formulaic enablers) are judged as whole phrases; an error inside one is tagged to the
+  chunk, not to the higher-level grammar behind it.

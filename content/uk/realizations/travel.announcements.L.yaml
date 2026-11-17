@@ -1,0 +1,30 @@
+skill: travel.announcements.L
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Потяг Київ — Львів відправляється з другої колії о дев'ятій двадцять.
+- Потяг затримується на тридцять хвилин.
+enablers:
+  required:
+  - id: uk.num.time
+    use: productive
+  - id: uk.num.ordinal
+    use: productive
+  - id: uk.lex.transport-travel
+    use: productive
+  - id: uk.num.num-noun
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+version: 1
+status: draft

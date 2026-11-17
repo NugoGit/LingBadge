@@ -1,0 +1,14 @@
+id: uk.phon.euphony
+lang: uk
+kind: orthography
+title: у/в, і/й, з/із/зі alternation (also visible in writing)
+cefr: A1
+requires:
+- uk.script.alphabet
+sources:
+- ukstd.A1.gram.euphony
+check:
+  template: enabler.orthography.v1
+  items: 10
+  threshold: 0.9
+  channel: text

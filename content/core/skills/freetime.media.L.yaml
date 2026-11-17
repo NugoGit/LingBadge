@@ -1,0 +1,20 @@
+id: freetime.media.L
+task: freetime.media
+situation: freetime.media
+title: Get the topic of a news item or advert
+can_do: Can tell what a short news item or advert is about, helped by pictures.
+mode: L
+domain:
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.tv-video.A1
+size: S
+rubric: rubric.listening.v1
+threshold: null
+flags:
+- low-priority
+- needs-video
+version: 1
+status: draft

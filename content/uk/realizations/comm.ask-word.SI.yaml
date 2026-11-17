@@ -1,0 +1,39 @@
+skill: comm.ask-word.SI
+lang: uk
+cefr: A1
+register:
+- formal
+- informal
+variety: standard
+exponents:
+- Як це називається українською?
+- Що означає слово «…»?
+- Як сказати «…» українською?
+- Дайте, будь ласка, оце.
+enablers:
+  required:
+  - id: uk.gram.pron.demonstrative
+    use: productive
+  - id: uk.gram.syntax.questions
+    use: productive
+  - id: uk.gram.verb.imperative-set
+    use: productive
+  - id: uk.prag.courtesy
+    use: productive
+  - id: uk.gram.verb.reflexive
+    use: formulaic
+  - id: uk.gram.noun.instr-sg
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Question word order; 'українською' as a fixed chunk.
+version: 1
+status: draft

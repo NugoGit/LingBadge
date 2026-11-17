@@ -1,0 +1,10 @@
+id: fa.lex.food-drink
+lang: fa
+kind: lexis
+title: Food and drink (chāi, qahve, āb, nun, kabāb, polo, khoresh, dugh)
+cefr: A1
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

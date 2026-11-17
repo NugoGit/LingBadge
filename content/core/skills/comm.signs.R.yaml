@@ -1,0 +1,19 @@
+id: comm.signs.R
+task: comm.signs
+situation: comm.signs
+title: Read public signs and notices
+can_do: >-
+  Can understand common signs and short notices: entrance, exit, open, closed, push, pull, no smoking, break times.
+mode: R
+domain:
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.reading-orientation.A1-1
+- ukstd.A1.intent.like-request-forbid
+size: S
+rubric: rubric.reading.v1
+threshold: null
+version: 1
+status: draft

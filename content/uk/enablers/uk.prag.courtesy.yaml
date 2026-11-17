@@ -1,0 +1,12 @@
+id: uk.prag.courtesy
+lang: uk
+kind: pragmatics
+title: будь ласка, дякую, вибачте / перепрошую, нічого страшного
+cefr: A1
+sources:
+- ukstd.A1.intent.greet-thank
+check:
+  template: enabler.pragmatics.v1
+  items: 10
+  threshold: 0.9
+  channel: text

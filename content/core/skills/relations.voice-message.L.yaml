@@ -1,0 +1,18 @@
+id: relations.voice-message.L
+task: relations.voice-message
+situation: relations.plans
+title: Understand a friend's voice message
+can_do: Can get who, what, when and where from a short, clear voice message.
+mode: L
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- cv.audio-recordings.A1
+- cv.overall-listening.A1
+size: S
+rubric: rubric.listening.v1
+threshold: null
+version: 1
+status: draft

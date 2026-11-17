@@ -1,0 +1,12 @@
+id: fa.gram.verb.subjunctive
+lang: fa
+kind: grammar
+title: Subjunctive be- + stem (mikham beram, berim)
+cefr: A1
+requires:
+- fa.gram.verb.present
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,34 @@
+id: uk.lex.personal
+lang: uk
+kind: lexis
+title: Personal details, countries, languages, jobs
+cefr: A1
+words:
+- ім'я
+- прізвище
+- вік
+- країна
+- місто
+- мова
+- професія
+- Україна
+- Австрія
+- Німеччина
+- українець
+- українка
+- австрієць
+- австрійка
+- студент
+- студентка
+- лікар
+- вчитель
+- вчителька
+- інженер
+- програміст
+- адреса
+- телефон
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

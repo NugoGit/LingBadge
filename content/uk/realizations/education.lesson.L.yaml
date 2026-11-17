@@ -1,0 +1,32 @@
+skill: education.lesson.L
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Прочитайте текст.
+- Повторіть, будь ласка.
+- Відкрийте книжку на сторінці десять.
+- Слухайте й повторюйте.
+enablers:
+  required:
+  - id: uk.gram.verb.imperative-set
+    use: productive
+  - id: uk.lex.classroom
+    use: productive
+  - id: uk.num.cardinal-0-100
+    use: productive
+  - id: uk.gram.noun.loc-sg
+    use: productive
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+version: 1
+status: draft

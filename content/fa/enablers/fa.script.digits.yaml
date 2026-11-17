@@ -1,0 +1,12 @@
+id: fa.script.digits
+lang: fa
+kind: script
+title: Persian digits ۰–۹ and number layout inside RTL text
+cefr: A1
+requires:
+- fa.script.alphabet
+check:
+  template: enabler.script.v1
+  items: 10
+  threshold: 0.9
+  channel: text

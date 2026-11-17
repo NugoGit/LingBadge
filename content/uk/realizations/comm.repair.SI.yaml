@@ -1,0 +1,37 @@
+skill: comm.repair.SI
+lang: uk
+cefr: A1
+register:
+- formal
+- informal
+variety: standard
+exponents:
+- Вибачте, я не зрозумів / не зрозуміла.
+- Повторіть, будь ласка.
+- Говоріть повільніше, будь ласка.
+- Як це пишеться?
+enablers:
+  required:
+  - id: uk.gram.verb.imperative-set
+    use: productive
+  - id: uk.prag.courtesy
+    use: productive
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.gram.verb.past
+    use: formulaic
+  - id: uk.gram.verb.aspect
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Imperatives in ви-form; past tense agrees with speaker's gender (зрозумів / зрозуміла).
+version: 1
+status: draft

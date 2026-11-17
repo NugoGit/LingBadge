@@ -1,0 +1,19 @@
+id: relations.wishes.WI
+task: relations.wishes
+situation: relations.celebrations
+title: Write birthday and holiday wishes
+can_do: Can write short congratulations and wishes for a birthday or a holiday.
+mode: WI
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- ukstd.A1.intent.wish-congratulate
+- ukstd.A1.theme.holidays
+- cv.correspondence.A1
+size: S
+rubric: rubric.written-interaction.v1
+threshold: null
+version: 1
+status: draft

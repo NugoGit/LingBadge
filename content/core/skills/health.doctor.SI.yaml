@@ -1,0 +1,21 @@
+id: health.doctor.SI
+task: health.doctor
+situation: health.doctor
+title: Tell a doctor what the problem is
+can_do: Can say what hurts, since when, and answer simple questions from a doctor.
+mode: SI
+domain:
+- public
+cefr: A1
+prerequisites:
+- comm.repair.SI
+sources:
+- cv.interviewing.A1
+- ukstd.A1.theme.health
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+flags:
+- level?
+version: 1
+status: draft

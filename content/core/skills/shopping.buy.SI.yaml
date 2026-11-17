@@ -1,0 +1,22 @@
+id: shopping.buy.SI
+task: shopping.buy
+situation: shopping.shop
+title: Buy food and everyday items
+can_do: Can say what and how much they want, ask the price, and pay, in a shop or at a market.
+mode: SI
+domain:
+- public
+cefr: A1
+prerequisites:
+- comm.numbers.L
+sources:
+- cv.obtaining-goods-services.A1
+- cv.goal-cooperation.A1
+- cv.compensating.A1
+- ukstd.A1.theme.shopping
+- ukstd.A1.intent.request-confirm
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

@@ -1,0 +1,17 @@
+id: travel.timetable.R
+task: travel.timetable
+situation: travel.public-transport
+title: Read timetables and departure boards
+can_do: Can read departure and arrival times, platforms, delays and cancellations.
+mode: R
+domain:
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.reading-orientation.A1-3
+size: S
+rubric: rubric.reading.v1
+threshold: null
+version: 1
+status: draft

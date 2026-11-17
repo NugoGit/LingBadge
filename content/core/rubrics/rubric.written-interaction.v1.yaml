@@ -1,0 +1,56 @@
+id: rubric.written-interaction.v1
+scale:
+- 0
+- 1
+- 2
+- 3
+criteria:
+- id: task_completion
+  must: true
+  weight: 3
+  meets: Every point of the brief answered or covered
+  levels:
+    0: Two or more required moves or points missing, or off task
+    1: One required move or point missing or only half done
+    2: Every required move or point done
+    3: Every move done and handled with ease, including the complication
+- id: comprehension
+  must: true
+  weight: 2
+  meets: Correct uptake of the message being answered, where there is one
+  levels:
+    0: Repeated misunderstandings
+    1: One misunderstanding that is not repaired
+    2: Every turn or message understood; misunderstandings repaired by asking
+    3: Every turn understood at once, complication handled without help
+- id: key_structures
+  must: true
+  weight: 2
+  meets: Target structures correct; no error blocks meaning
+  levels:
+    0: Target structures mostly wrong or avoided
+    1: A target structure is wrong and never correct in this response (a gap), or two or more slips
+    2: All target structures correct, or one slip whose structure is correct elsewhere in this response
+    3: All target structures correct
+- id: orthography
+  must: true
+  weight: 1
+  meets: Spelling, apostrophe and euphony correct in A1 words
+  levels:
+    0: Hard to read
+    1: Three or more slips, or a systematic error (і/и, є/е, apostrophe)
+    2: At most two minor slips in A1 words; apostrophe and euphony right in key words
+    3: No errors
+- id: appropriacy
+  must: false
+  weight: 1
+  meets: Register, greeting and closing fit the recipient
+  levels:
+    0: Inappropriate register or no politeness
+    1: Register switches or politeness missing once
+    2: Register right and consistent; polite formulas where expected
+    3: Natural, idiomatic politeness
+scoring: 'Credit per level: 0->0, 1->0.5, 2->1, 3->1. Score = weighted mean credit. Pass if every must-criterion
+  >= 2 AND score >= threshold.'
+chunks: Memorised chunks (formulaic enablers) are judged as whole phrases; an error inside one is tagged to the
+  chunk, not to the higher-level grammar behind it.

@@ -1,0 +1,14 @@
+id: uk.num.ordinal
+lang: uk
+kind: grammar
+title: Ordinals in gender forms and first declined forms (перший, першого)
+cefr: A1
+requires:
+- uk.gram.adj.nom-agreement
+sources:
+- ukstd.A1.gram.num-ordinal
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

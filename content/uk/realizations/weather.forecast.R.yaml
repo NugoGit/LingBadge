@@ -1,0 +1,22 @@
+skill: weather.forecast.R
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- 'Київ: вдень +18°, хмарно, невеликий дощ.'
+- Вночі +9°.
+- Вітер слабкий.
+enablers:
+  required:
+  - id: uk.lex.weather
+    use: productive
+  - id: uk.num.cardinal-0-100
+    use: productive
+  - id: uk.lex.time-calendar
+    use: productive
+  - id: uk.gram.adj.nom-agreement
+    use: productive
+version: 1
+status: draft

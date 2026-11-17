@@ -1,0 +1,17 @@
+id: travel.hotel-info.R
+task: travel.hotel-info
+situation: travel.accommodation
+title: Read accommodation information
+can_do: 'Can read basic accommodation information: meal times, Wi-Fi, check-out, house rules.'
+mode: R
+domain:
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.reading-orientation.A1-2
+size: S
+rubric: rubric.reading.v1
+threshold: null
+version: 1
+status: draft

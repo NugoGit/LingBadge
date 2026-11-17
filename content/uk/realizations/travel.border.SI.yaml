@@ -1,0 +1,33 @@
+skill: travel.border.SI
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Мета вашого візиту? — Туризм. / В гості до друзів.
+- Скільки днів ви будете в Україні? — Тиждень.
+- Де ви будете жити? — У готелі.
+enablers:
+  required:
+  - id: uk.gram.verb.future-compound
+    use: productive
+  - id: uk.gram.noun.loc-sg
+    use: productive
+  - id: uk.lex.transport-travel
+    use: productive
+  - id: uk.num.num-noun
+    use: formulaic
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+version: 1
+status: draft

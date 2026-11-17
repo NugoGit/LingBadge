@@ -1,0 +1,18 @@
+id: weather.smalltalk.SI
+task: weather.smalltalk
+situation: weather.smalltalk
+title: Talk about the weather
+can_do: Can say and ask what the weather is like today and tomorrow.
+mode: SI
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- cv.conversation.A1
+- ukstd.A1.theme.weather
+size: S
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

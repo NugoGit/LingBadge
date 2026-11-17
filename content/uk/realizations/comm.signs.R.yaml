@@ -1,0 +1,25 @@
+skill: comm.signs.R
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Вхід / Вихід
+- Відчинено / Зачинено
+- Від себе / До себе
+- Не палити!
+- Перерва з 13:00 до 14:00
+enablers:
+  required:
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.lex.signs
+    use: productive
+  - id: uk.gram.syntax.negation
+    use: productive
+  supporting:
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+version: 1
+status: draft

@@ -1,0 +1,15 @@
+id: uk.gram.verb.reflexive
+lang: uk
+kind: grammar
+title: Reflexive verbs in -ся (називатися, подобатися, вмиватися)
+cefr: A1
+requires:
+- uk.gram.verb.present
+sources:
+- ukstd.A1.gram.verb-present
+note: The standard has no dedicated A1 section; limited to listed forms.
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

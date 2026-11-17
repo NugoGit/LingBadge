@@ -1,0 +1,10 @@
+id: rubric.reading.v1
+scale: share
+criteria:
+- id: item_accuracy
+  must: true
+  weight: 1
+  meets: 'Keyed items: share correct; open short answers graded against the key'
+scoring: 'Keyed items: score = share correct; pass if score >= threshold.'
+chunks: Memorised chunks (formulaic enablers) are judged as whole phrases; an error inside one is tagged to the
+  chunk, not to the higher-level grammar behind it.

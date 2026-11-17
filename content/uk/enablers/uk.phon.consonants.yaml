@@ -1,0 +1,12 @@
+id: uk.phon.consonants
+lang: uk
+kind: phonology
+title: Hard/soft and voiced/voiceless consonants; г vs ґ; в as [w]; дж, дз
+cefr: A1
+sources:
+- ukstd.A1.gram.consonants
+check:
+  template: enabler.phonology.v1
+  items: 10
+  threshold: 0.9
+  channel: audio

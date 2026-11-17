@@ -1,0 +1,7 @@
+skills: 52
+fa: 22 enablers, 5 realizations
+uk: 64 enablers, 52 realizations
+
+ERRORS (0)
+
+WARNINGS (0)

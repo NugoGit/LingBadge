@@ -1,0 +1,17 @@
+id: relations.online.WI
+task: relations.online
+situation: relations.online
+title: React to friends' posts
+can_do: Can react to posts with short comments and reply to comments with thanks or an apology.
+mode: WI
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- cv.online-conversation.A1
+size: S
+rubric: rubric.written-interaction.v1
+threshold: null
+version: 1
+status: draft

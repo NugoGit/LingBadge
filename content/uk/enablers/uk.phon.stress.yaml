@@ -1,0 +1,13 @@
+id: uk.phon.stress
+lang: uk
+kind: phonology
+title: Word stress in A1 vocabulary (mobile stress)
+cefr: A1
+sources:
+- ukstd.A1.gram.stress
+note: Invisible in unaccented written text; stays untested until audio.
+check:
+  template: enabler.phonology.v1
+  items: 10
+  threshold: 0.9
+  channel: audio

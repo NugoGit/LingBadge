@@ -1,0 +1,36 @@
+skill: comm.numbers.L
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Сто двадцять гривень.
+- Потяг о дев'ятій сорок.
+- 'Номер телефону: нуль дев''яносто сім…'
+- Двісті п'ятдесят грамів сиру.
+enablers:
+  required:
+  - id: uk.num.cardinal-0-100
+    use: productive
+  - id: uk.num.cardinal-100-10000
+    use: productive
+  - id: uk.num.time
+    use: productive
+  - id: uk.num.num-noun
+    use: formulaic
+  - id: uk.lex.shopping-money
+    use: productive
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: 'Recognition only: numbers with гривня/хвилина in all three number forms.'
+version: 1
+status: draft

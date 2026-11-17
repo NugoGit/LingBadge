@@ -1,0 +1,21 @@
+id: relations.family.SP
+task: relations.family
+situation: relations.family
+title: Describe a family photo
+can_do: Can show a photo and say who is who, where they stand and what they look like.
+mode: SP
+domain:
+- personal
+cefr: A1
+prerequisites: []
+recommended_before:
+- relations.family.SI
+sources:
+- cv.monologue-experience.A1
+- cv.overall-oral-production.A1
+- ukstd.A1.theme.person
+size: S
+rubric: rubric.spoken-production.v1
+threshold: null
+version: 1
+status: draft

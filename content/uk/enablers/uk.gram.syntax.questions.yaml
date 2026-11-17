@@ -1,0 +1,12 @@
+id: uk.gram.syntax.questions
+lang: uk
+kind: grammar
+title: 'Questions: intonation, чи, хто, що, де, куди, звідки, коли, скільки, який'
+cefr: A1
+sources:
+- ukstd.A1.gram.syntax-questions
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

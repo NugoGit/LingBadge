@@ -1,0 +1,34 @@
+skill: freetime.reading.R
+lang: uk
+cefr: A1
+size: M
+register:
+- informal
+variety: standard
+exponents:
+- Сьогодні неділя. Марко й Оля йдуть у парк.
+- Там вони бачать маленького собаку.
+- Вчора була гарна погода.
+enablers:
+  required:
+  - id: uk.gram.verb.present
+    use: productive
+  - id: uk.gram.verb.past
+    use: productive
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  - id: uk.gram.noun.loc-sg
+    use: productive
+  - id: uk.gram.syntax.conjunctions
+    use: productive
+  - id: uk.gram.adj.nom-agreement
+    use: productive
+  supporting:
+  - id: uk.lex.free-time
+    use: productive
+  - id: uk.lex.family
+    use: productive
+  - id: uk.lex.weather
+    use: productive
+version: 1
+status: draft

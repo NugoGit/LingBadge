@@ -1,0 +1,29 @@
+skill: freetime.media.L
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- '(topic recognition only: sport, weather, politics, advert for a product)'
+enablers:
+  required:
+  - id: uk.lex.weather
+    use: productive
+  - id: uk.lex.free-time
+    use: productive
+  - id: uk.lex.shopping-money
+    use: productive
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+flags:
+- low-priority
+version: 1
+status: draft

@@ -1,0 +1,38 @@
+skill: travel.taxi.SI
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- На вулицю Хрещатик, десять, будь ласка.
+- Скільки це коштує?
+- Зупиніть тут, будь ласка.
+- Можна карткою?
+enablers:
+  required:
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  - id: uk.num.cardinal-100-10000
+    use: productive
+  - id: uk.lex.city-places
+    use: productive
+  - id: uk.gram.syntax.modal
+    use: productive
+  - id: uk.gram.verb.imperative-set
+    use: formulaic
+  - id: uk.gram.noun.instr-sg
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: на + accusative for destination.
+version: 1
+status: draft

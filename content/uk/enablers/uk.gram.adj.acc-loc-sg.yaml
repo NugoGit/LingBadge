@@ -1,0 +1,16 @@
+id: uk.gram.adj.acc-loc-sg
+lang: uk
+kind: grammar
+title: Adjectives in accusative and locative singular (у червоній куртці)
+cefr: A1
+requires:
+- uk.gram.adj.nom-agreement
+- uk.gram.noun.acc-sg
+- uk.gram.noun.loc-sg
+sources:
+- ukstd.A1.gram.adj-acc-loc
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

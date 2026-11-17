@@ -1,0 +1,18 @@
+id: food.menu.R
+task: food.menu
+situation: food.cafe
+title: Read a menu
+can_do: Can read a simple menu with its sections, dishes and prices.
+mode: R
+domain:
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.reading-orientation.A1-3
+- ukstd.A1.theme.restaurant
+size: S
+rubric: rubric.reading.v1
+threshold: null
+version: 1
+status: draft

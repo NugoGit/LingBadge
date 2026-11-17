@@ -1,0 +1,31 @@
+# What the 5-skill Persian sketch revealed about the universal core.
+findings:
+- topic: Core held
+  finding: All 5 universal skill definitions were used unchanged. Nothing in the core had to be edited.
+- topic: 'Schema gap: variety'
+  finding: >-
+    Persian is diglossic. Speaking and chat use colloquial Tehrani; menus, forms and signs use the written standard.
+    Realizations now carry a `variety` field, and Ukrainian sets it to 'standard'.
+- topic: Variety follows the mode
+  finding: >-
+    The same learner needs both varieties: relations.plans.WI is written but colloquial. Variety cannot be set per
+    language; it is set per realization.
+- topic: Script and digits
+  finding: >-
+    Right-to-left text, connected letters and Persian digits became enablers. The app must render RTL and accept
+    Persian keyboard input (Stage 4).
+- topic: Conventions live in realizations
+  finding: >-
+    Prices in thousand toman, like Ukrainian emergency numbers, belong to the language layer. The split held.
+- topic: Transliteration policy
+  finding: >-
+    A1 learners may type Finglish (Latin letters). Proposed rule: accepted in probes, not for badges in modes that
+    include writing.
+- topic: No Persian reference standard
+  finding: >-
+    There is no CEFR reference level description for Persian, so fa enablers have no source and their levels are
+    my judgment. Treat as provisional.
+- topic: Pragmatics weight
+  finding: >-
+    Taarof makes politeness heavier than in Ukrainian. Handled through rubric specifics and an enabler; no core
+    change needed.

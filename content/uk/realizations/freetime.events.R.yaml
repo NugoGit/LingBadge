@@ -1,0 +1,27 @@
+skill: freetime.events.R
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Концерт. Субота, 14 червня, 19:00.
+- Філармонія, вул. Шевченка, 3.
+- 'Квитки: 300–500 грн.'
+- Вхід вільний.
+enablers:
+  required:
+  - id: uk.script.alphabet
+    use: productive
+  - id: uk.lex.time-calendar
+    use: productive
+  - id: uk.num.cardinal-100-10000
+    use: productive
+  - id: uk.lex.free-time
+    use: productive
+  - id: uk.lex.city-places
+    use: productive
+rubric_specifics:
+  key_structures: Recognition of abbreviations (вул., грн, пн–пт).
+version: 1
+status: draft

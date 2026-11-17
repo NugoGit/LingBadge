@@ -1,0 +1,10 @@
+id: fa.prag.register
+lang: fa
+kind: pragmatics
+title: shomā vs to; plural verb for politeness
+cefr: A1
+check:
+  template: enabler.pragmatics.v1
+  items: 10
+  threshold: 0.9
+  channel: text

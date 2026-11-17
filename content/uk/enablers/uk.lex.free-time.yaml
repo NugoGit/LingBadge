@@ -1,0 +1,27 @@
+id: uk.lex.free-time
+lang: uk
+kind: lexis
+title: Free time and hobbies
+cefr: A1
+words:
+- вільний час
+- читати
+- грати
+- футбол
+- музика
+- кіно
+- концерт
+- спорт
+- басейн
+- спортзал
+- гуляти
+- подорожувати
+- малювати
+- співати
+- танцювати
+- гітара
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

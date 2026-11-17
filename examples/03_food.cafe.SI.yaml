@@ -1,0 +1,139 @@
+title: 'Order in a cafe (typed SI): role-play, A1 gap vs broken chunk, heatmap only'
+attempts:
+- id: a1
+  taken_on: '2026-11-17'
+  form:
+    id: f-cafe-5031
+    skill: food.cafe.SI
+    lang: uk
+    seed: 5031
+    template: roleplay.v1
+    generator: llm-template:v1
+    rubric: rubric.interaction.v1
+    roleplay:
+      persona: Waitress in a cafe in Lviv, friendly, speaks slowly
+      setting: Lunchtime; the learner has just sat down.
+      register: formal
+      learner_goal: Order a main dish and a drink, find out what «деруни» are, deal with any problem, then pay by
+        card.
+      required_moves:
+      - id: m1
+        text: Greet
+      - id: m2
+        text: Ask what a dish is
+      - id: m3
+        text: Order a main dish
+      - id: m4
+        text: Order a drink
+      - id: m5
+        text: React to the unavailable dish
+      - id: m6
+        text: Ask for the bill
+      - id: m7
+        text: Ask to pay by card
+      complications:
+      - The borscht is sold out.
+      - 'She asks: with milk or without?'
+      opening_line: Добрий день! Ось меню. Що будете замовляти?
+      max_turns: 12
+    rubric_specifics:
+      key_structures: Ordered items in the accusative (каву, воду); без + genitive and з + instrumental as chunks.
+    enablers:
+    - id: uk.gram.noun.acc-sg
+      use: productive
+    - id: uk.lex.food-drink
+      use: productive
+    - id: uk.gram.syntax.modal
+      use: productive
+    - id: uk.gram.noun.gen-sg
+      use: formulaic
+    - id: uk.gram.noun.instr-sg
+      use: formulaic
+  response:
+    form_id: f-cafe-5031
+    transcript:
+    - speaker: interlocutor
+      text: Добрий день! Ось меню. Що будете замовляти?
+    - speaker: learner
+      text: Добрий день. Що таке деруни?
+    - speaker: interlocutor
+      text: Деруни — це млинці з картоплі. Дуже смачні, зі сметаною.
+    - speaker: learner
+      text: Дякую. Я хочу борщ і кава, будь ласка.
+    - speaker: interlocutor
+      text: На жаль, борщу сьогодні немає. Може, вареники або деруни?
+    - speaker: learner
+      text: Добре, тоді деруни. І кава без цукор.
+    - speaker: interlocutor
+      text: Каву з молоком чи без?
+    - speaker: learner
+      text: Без молока, будь ласка.
+    - speaker: interlocutor
+      text: Добре. Щось іще?
+    - speaker: learner
+      text: Ні, дякую.
+    - speaker: interlocutor
+      text: Смачного!
+    - speaker: learner
+      text: Рахунок, будь ласка. Можна карткою?
+    - speaker: interlocutor
+      text: Так, звичайно. Двісті гривень.
+    - speaker: learner
+      text: Дякую, до побачення!
+  grade:
+    form_id: f-cafe-5031
+    grader: llm-claude:v1
+    criteria:
+    - id: task_completion
+      level: 3
+      confidence: 0.95
+      evidence:
+      - all 7 moves, both complications handled
+    - id: comprehension
+      level: 3
+      confidence: 0.9
+      evidence:
+      - reacted correctly to 'борщу немає' and 'з молоком чи без?'
+    - id: key_structures
+      level: 1
+      confidence: 0.9
+      evidence:
+      - '«борщ і кава» ✗, «І кава» ✗: feminine accusative never correct → gap'
+      - «деруни» ✓
+    - id: lexis
+      level: 2
+      confidence: 0.85
+      evidence: []
+    - id: appropriacy
+      level: 2
+      confidence: 0.9
+      evidence:
+      - formal, будь ласка / дякую throughout
+    errors:
+    - span: борщ і кава
+      correction: борщ і каву
+      criterion: key_structures
+      enabler: uk.gram.noun.acc-sg
+    - span: І кава
+      correction: І каву
+      criterion: key_structures
+      enabler: uk.gram.noun.acc-sg
+    - span: без цукор
+      correction: без цукру
+      criterion: key_structures
+      chunk: без цукру
+enabler_status:
+  uk.gram.noun.gender: known
+expected:
+  a1:
+    passed: false
+    score: 0.889
+    failed_musts:
+    - key_structures
+    badge_awardable: false
+    heatmap: shaky
+    top_hole: uk.gram.noun.acc-sg
+    chunks:
+    - без цукру
+    check_first:
+    - uk.gram.noun.acc-sg

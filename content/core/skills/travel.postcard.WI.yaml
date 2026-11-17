@@ -1,0 +1,17 @@
+id: travel.postcard.WI
+task: travel.postcard
+situation: travel.keeping-in-touch
+title: Send a postcard or message from a trip
+can_do: Can write a short postcard or message saying where they are, what it is like and what they do.
+mode: WI
+domain:
+- personal
+cefr: A1
+prerequisites: []
+sources:
+- cv.correspondence.A1
+size: S
+rubric: rubric.written-interaction.v1
+threshold: null
+version: 1
+status: draft

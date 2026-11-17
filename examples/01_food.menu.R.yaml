@@ -1,0 +1,347 @@
+title: 'Read a menu (R): keyed items, two forms, badge'
+attempts:
+- id: a1
+  taken_on: '2026-11-17'
+  form:
+    id: f-menu-4127
+    skill: food.menu.R
+    lang: uk
+    seed: 4127
+    template: reading.v1
+    generator: llm-template:v1
+    stimuli:
+    - kind: text
+      title: Menu
+      body: 'КАВ''ЯРНЯ «ЛИПА»
+
+
+        СНІДАНКИ (до 12:00)
+
+        Сирники зі сметаною — 145
+
+        Омлет із сиром — 130
+
+        Вівсянка з фруктами — 120
+
+
+        ПЕРШІ СТРАВИ
+
+        Борщ український — 165
+
+        Суп курячий — 125
+
+
+        ДРУГІ СТРАВИ
+
+        Вареники з картоплею — 150
+
+        Деруни зі сметаною — 140
+
+
+        НАПОЇ
+
+        Кава американо — 60
+
+        Капучино — 75
+
+        Чай чорний / зелений — 50
+
+        Узвар — 55
+
+        Вода негазована, 0,5 л — 40
+
+
+        Ціни в гривнях.'
+    rubric: rubric.reading.v1
+    items:
+    - id: i1
+      type: mcq
+      prompt: Until what time is breakfast served?
+      options:
+      - '10:00'
+      - '11:00'
+      - '12:00'
+      - '14:00'
+      key:
+      - '12:00'
+      enablers:
+      - uk.num.time
+      - uk.lex.time-calendar
+    - id: i2
+      type: short_answer
+      prompt: How much does the borscht cost? (number)
+      key:
+      - '165'
+      enablers:
+      - uk.lex.food-drink
+      - uk.num.cardinal-100-10000
+    - id: i3
+      type: mcq
+      prompt: Which dish is made with potatoes?
+      options:
+      - Сирники зі сметаною
+      - Вареники з картоплею
+      - Омлет із сиром
+      - Суп курячий
+      key:
+      - Вареники з картоплею
+      enablers:
+      - uk.lex.food-drink
+    - id: i4
+      type: mcq
+      prompt: Which drink is the cheapest?
+      options:
+      - Чай
+      - Узвар
+      - Вода негазована
+      - Кава американо
+      key:
+      - Вода негазована
+      enablers:
+      - uk.lex.food-drink
+      - uk.num.cardinal-0-100
+    - id: i5
+      type: short_answer
+      prompt: Copy the name of one breakfast dish made with cheese.
+      key:
+      - Сирники зі сметаною
+      - Сирники
+      - Омлет із сиром
+      - Омлет
+      enablers:
+      - uk.lex.food-drink
+    - id: i6
+      type: mcq
+      prompt: In which section is the chicken soup?
+      options:
+      - Сніданки
+      - Перші страви
+      - Другі страви
+      - Напої
+      key:
+      - Перші страви
+      enablers:
+      - uk.lex.food-drink
+      - uk.num.ordinal
+    - id: i7
+      type: short_answer
+      prompt: You order a black tea and a cappuccino. How much do you pay? (number)
+      key:
+      - '125'
+      enablers:
+      - uk.num.cardinal-100-10000
+    - id: i8
+      type: mcq
+      prompt: How much water is in one bottle?
+      options:
+      - 0,3 l
+      - 0,5 l
+      - 1 l
+      - 1,5 l
+      key:
+      - 0,5 l
+      enablers:
+      - uk.lex.shopping-money
+    - id: i9
+      type: short_answer
+      prompt: How many dishes are in the section «Другі страви»? (number)
+      key:
+      - '2'
+      - два
+      - дві
+      enablers:
+      - uk.num.ordinal
+      - uk.num.cardinal-0-100
+    - id: i10
+      type: mcq
+      prompt: How much is a cappuccino?
+      options:
+      - '50'
+      - '60'
+      - '75'
+      - '85'
+      key:
+      - '75'
+      enablers:
+      - uk.num.cardinal-0-100
+  response:
+    form_id: f-menu-4127
+    answers:
+      i1: '12:00'
+      i2: 165 грн
+      i3: Вареники з картоплею
+      i4: Вода негазована
+      i5: омлет із сиром
+      i6: Перші страви
+      i7: '135'
+      i8: 0,5 l
+      i9: '2'
+      i10: '75'
+- id: a2
+  taken_on: '2026-11-20'
+  form:
+    id: f-menu-8812
+    skill: food.menu.R
+    lang: uk
+    seed: 8812
+    template: reading.v1
+    generator: llm-template:v1
+    stimuli:
+    - kind: text
+      title: Menu
+      body: 'ПІЦЕРІЯ «ВЕЗУВІЙ»
+
+        Працюємо щодня з 11:00 до 23:00
+
+
+        ПІЦА (30 см)
+
+        Маргарита — 210
+
+        Чотири сири — 260
+
+        З куркою і грибами — 245
+
+
+        САЛАТИ
+
+        Грецький — 150
+
+        Цезар з куркою — 185
+
+
+        НАПОЇ
+
+        Сік апельсиновий, 0,3 л — 70
+
+        Лимонад — 65
+
+        Пиво світле, 0,5 л — 80
+
+
+        Ціни в гривнях.'
+    rubric: rubric.reading.v1
+    items:
+    - id: j1
+      type: mcq
+      prompt: When does the pizzeria close?
+      options:
+      - '21:00'
+      - '22:00'
+      - '23:00'
+      - '24:00'
+      key:
+      - '23:00'
+      enablers:
+      - uk.num.time
+    - id: j2
+      type: short_answer
+      prompt: How much is the Margherita? (number)
+      key:
+      - '210'
+      enablers:
+      - uk.num.cardinal-100-10000
+    - id: j3
+      type: mcq
+      prompt: Which pizza has chicken?
+      options:
+      - Маргарита
+      - Чотири сири
+      - З куркою і грибами
+      - Грецький
+      key:
+      - З куркою і грибами
+      enablers:
+      - uk.lex.food-drink
+    - id: j4
+      type: mcq
+      prompt: Which salad has chicken?
+      options:
+      - Грецький
+      - Цезар з куркою
+      - Маргарита
+      - Лимонад
+      key:
+      - Цезар з куркою
+      enablers:
+      - uk.lex.food-drink
+    - id: j5
+      type: short_answer
+      prompt: How much is the orange juice? (number)
+      key:
+      - '70'
+      enablers:
+      - uk.num.cardinal-0-100
+    - id: j6
+      type: mcq
+      prompt: How big is a pizza?
+      options:
+      - 20 cm
+      - 25 cm
+      - 30 cm
+      - 40 cm
+      key:
+      - 30 cm
+      enablers:
+      - uk.num.cardinal-0-100
+    - id: j7
+      type: short_answer
+      prompt: You order a Greek salad and a lemonade. How much do you pay? (number)
+      key:
+      - '215'
+      enablers:
+      - uk.num.cardinal-100-10000
+    - id: j8
+      type: mcq
+      prompt: On which days is the pizzeria open?
+      options:
+      - every day
+      - Monday to Friday
+      - only at weekends
+      - not on Sundays
+      key:
+      - every day
+      enablers:
+      - uk.lex.time-calendar
+    - id: j9
+      type: mcq
+      prompt: Which drink contains alcohol?
+      options:
+      - Сік
+      - Лимонад
+      - Пиво
+      - Вода
+      key:
+      - Пиво
+      enablers:
+      - uk.lex.food-drink
+    - id: j10
+      type: short_answer
+      prompt: Copy the name of the most expensive pizza.
+      key:
+      - Чотири сири
+      enablers:
+      - uk.lex.food-drink
+      - uk.num.cardinal-100-10000
+  response:
+    form_id: f-menu-8812
+    answers:
+      j1: '23:00'
+      j2: '210'
+      j3: З куркою і грибами
+      j4: Цезар з куркою
+      j5: '70'
+      j6: 30 cm
+      j7: '215'
+      j8: every day
+      j9: Пиво
+      j10: чотири сири
+expected:
+  a1:
+    item_correct: 9
+    passed: true
+  a2:
+    item_correct: 10
+    passed: true
+  badge:
+    awarded: true

@@ -1,0 +1,12 @@
+id: fa.money.toman-rial
+lang: fa
+kind: culture
+title: Prices in toman, often in thousands; rial on official labels
+cefr: A1
+requires:
+- fa.num.thousands
+check:
+  template: enabler.culture.v1
+  items: 10
+  threshold: 0.9
+  channel: text

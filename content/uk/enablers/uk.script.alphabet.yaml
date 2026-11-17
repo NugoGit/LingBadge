@@ -1,0 +1,12 @@
+id: uk.script.alphabet
+lang: uk
+kind: script
+title: Cyrillic alphabet incl. і, ї, є, ґ; letter names for spelling
+cefr: A1
+sources:
+- ukstd.A1.gram.alphabet
+check:
+  template: enabler.script.v1
+  items: 10
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,24 @@
+skill: travel.directions.R
+lang: uk
+cefr: A1
+register:
+- informal
+variety: standard
+exponents:
+- Виходь на станції «Золоті ворота».
+- Іди прямо до кафе, потім ліворуч.
+- Мій будинок — третій праворуч, квартира 12.
+enablers:
+  required:
+  - id: uk.lex.directions-place
+    use: productive
+  - id: uk.num.ordinal
+    use: productive
+  - id: uk.gram.verb.imperative-set
+    use: productive
+  - id: uk.gram.noun.loc-sg
+    use: productive
+  - id: uk.lex.city-places
+    use: productive
+version: 1
+status: draft

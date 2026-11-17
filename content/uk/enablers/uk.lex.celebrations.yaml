@@ -1,0 +1,24 @@
+id: uk.lex.celebrations
+lang: uk
+kind: lexis
+title: Celebrations and gifts
+cefr: A1
+words:
+- свято
+- день народження
+- Новий рік
+- Різдво
+- Великдень
+- подарунок
+- вітати
+- бажати
+- щастя
+- здоров'я
+- любов
+- гості
+- торт
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

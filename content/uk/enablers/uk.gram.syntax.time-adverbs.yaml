@@ -1,0 +1,12 @@
+id: uk.gram.syntax.time-adverbs
+lang: uk
+kind: grammar
+title: сьогодні, завтра, вчора, зараз, вранці, ввечері, щодня
+cefr: A1
+sources:
+- ukstd.A1.intent.space-time
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

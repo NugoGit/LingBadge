@@ -1,0 +1,10 @@
+id: fa.num.0-100
+lang: fa
+kind: grammar
+title: Cardinal numbers 0–100
+cefr: A1
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

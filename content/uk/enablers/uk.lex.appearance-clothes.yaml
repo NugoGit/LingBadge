@@ -1,0 +1,36 @@
+id: uk.lex.appearance-clothes
+lang: uk
+kind: lexis
+title: Appearance, clothes, colours
+cefr: A1
+words:
+- високий
+- низький
+- молодий
+- волосся
+- очі
+- окуляри
+- куртка
+- пальто
+- светр
+- сорочка
+- футболка
+- сукня
+- штани
+- джинси
+- взуття
+- шапка
+- розмір
+- колір
+- червоний
+- синій
+- зелений
+- жовтий
+- чорний
+- білий
+- сірий
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

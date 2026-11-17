@@ -1,0 +1,44 @@
+skill: shopping.buy.SI
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Дайте, будь ласка, хліб і кілограм яблук.
+- Скільки коштує сир?
+- Це все. Можна карткою?
+- Пакет потрібен? — Ні, дякую.
+enablers:
+  required:
+  - id: uk.gram.verb.imperative-set
+    use: productive
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  - id: uk.lex.shopping-money
+    use: productive
+  - id: uk.lex.food-drink
+    use: productive
+  - id: uk.num.cardinal-100-10000
+    use: productive
+  - id: uk.gram.syntax.modal
+    use: productive
+  - id: uk.num.num-noun
+    use: formulaic
+  - id: uk.gram.noun.gen-pl
+    use: formulaic
+  - id: uk.gram.noun.instr-sg
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Дайте + accusative; quantity + genitive plural as a chunk (кілограм яблук).
+version: 1
+status: draft

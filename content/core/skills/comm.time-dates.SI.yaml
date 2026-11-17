@@ -1,0 +1,22 @@
+id: comm.time-dates.SI
+task: comm.time-dates
+situation: comm.numbers
+title: Ask and tell the time, day and date
+can_do: >-
+  Can ask and say what time it is, on which day or date something happens, and use today, tomorrow, yesterday.
+mode: SI
+domain:
+- personal
+- public
+cefr: A1
+prerequisites:
+- comm.numbers.L
+sources:
+- cv.information-exchange.A1
+- ukstd.A1.intent.space-time
+- ukstd.A1.theme.daily
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

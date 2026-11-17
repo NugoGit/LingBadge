@@ -1,0 +1,21 @@
+id: relations.plans.SI
+task: relations.plans
+situation: relations.plans
+title: Make plans with a friend
+can_do: Can invite someone, accept or decline, and agree on day, time and place to meet.
+mode: SI
+domain:
+- personal
+cefr: A1
+prerequisites:
+- comm.time-dates.SI
+- relations.courtesy.SI
+sources:
+- cv.conversation.A1
+- cv.goal-cooperation.A1
+- cv.information-exchange.A1
+size: M
+rubric: rubric.interaction.v1
+threshold: null
+version: 1
+status: draft

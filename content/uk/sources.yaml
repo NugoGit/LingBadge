@@ -1,0 +1,98 @@
+# Ukrainian state standard 'Ukrainian as a Foreign Language, A1-C2' (2024), Catalogue C, summarised.
+sources:
+- id: ukstd.A1.gram.alphabet
+  origin: ukstd
+  text: Alphabet, printed and handwritten letters, capitals
+- id: ukstd.A1.gram.apostrophe-softsign
+  origin: ukstd
+  text: Apostrophe and soft sign in familiar words
+- id: ukstd.A1.gram.vowels
+  origin: ukstd
+  text: Stressed and unstressed vowels, unstressed е/и
+- id: ukstd.A1.gram.consonants
+  origin: ukstd
+  text: Hard/soft, voiced/voiceless consonants; дж, дз
+- id: ukstd.A1.gram.euphony
+  origin: ukstd
+  text: Alternation у/в, і/й, з/із/зі
+- id: ukstd.A1.gram.intonation
+  origin: ukstd
+  text: Declarative, interrogative, exclamatory intonation
+- id: ukstd.A1.gram.stress
+  origin: ukstd
+  text: Word stress in the A1 vocabulary
+- id: ukstd.A1.gram.noun-gender
+  origin: ukstd
+  text: Noun gender in the singular
+- id: ukstd.A1.gram.noun-nom-pl
+  origin: ukstd
+  text: Nominative plural -и, -і (-ї); рік – роки
+- id: ukstd.A1.gram.noun-acc
+  origin: ukstd
+  text: Accusative singular, all genders, hard and soft stems
+- id: ukstd.A1.gram.noun-loc
+  origin: ukstd
+  text: Locative singular, all genders, hard and soft stems
+- id: ukstd.A1.gram.noun-voc
+  origin: ukstd
+  text: Vocative (Остапе, Олено)
+- id: ukstd.A1.gram.adj-nom
+  origin: ukstd
+  text: 'Adjectives: nominative singular, agreement in gender and number'
+- id: ukstd.A1.gram.adj-acc-loc
+  origin: ukstd
+  text: 'Adjectives: accusative and locative singular'
+- id: ukstd.A1.gram.num-ordinal
+  origin: ukstd
+  text: Ordinal numerals in gender forms and declined forms (першого)
+- id: ukstd.A1.gram.pron-personal
+  origin: ukstd
+  text: я, ти, ми, ви and oblique forms (мене, мені, тебе, тобі, нас, нам, вас, вам)
+- id: ukstd.A1.gram.pron-possessive
+  origin: ukstd
+  text: мій, твій, наш, ваш, їхній and plurals
+- id: ukstd.A1.gram.pron-demonstrative
+  origin: ukstd
+  text: цей, той and forms
+- id: ukstd.A1.gram.verb-present
+  origin: ukstd
+  text: Present tense (читати, працювати, могти, іти, їхати, сидіти, дивитися)
+- id: ukstd.A1.gram.verb-past
+  origin: ukstd
+  text: Past tense forms by gender and number
+- id: ukstd.A1.gram.verb-future
+  origin: ukstd
+  text: Future of бути, compound future, a few perfective futures
+- id: ukstd.A1.gram.verb-imperative
+  origin: ukstd
+  text: Imperative of a set of verbs (читай(те), скажи(іть), дай(те), сідай(те))
+- id: ukstd.A1.gram.motion
+  origin: ukstd
+  text: іти and їхати in the present
+- id: ukstd.A1.gram.syntax-simple
+  origin: ukstd
+  text: Simple affirmative and negative sentences
+- id: ukstd.A1.gram.syntax-questions
+  origin: ukstd
+  text: Yes/no questions with intonation and чи; де, звідки, куди, що, хто
+- id: ukstd.A1.gram.syntax-requests
+  origin: ukstd
+  text: Requests with imperative (Дайте, будь ласка...)
+- id: ukstd.A1.gram.syntax-compound
+  origin: ukstd
+  text: Compound sentences with і/й, але; cause with тому що, бо
+- id: ukstd.A2.gram.genitive
+  origin: ukstd
+  text: Genitive case (A2)
+- id: ukstd.A2.gram.dative
+  origin: ukstd
+  text: Dative case (A2)
+- id: ukstd.A2.gram.instrumental
+  origin: ukstd
+  text: Instrumental case (A2)
+- id: ukstd.A2.gram.aspect
+  origin: ukstd
+  text: Aspectual pairs (A2)
+- id: ukstd.A2.gram.motion-indeterminate
+  origin: ukstd
+  text: ходити, їздити (A2)

@@ -1,0 +1,30 @@
+skill: relations.courtesy.SI
+lang: fa
+cefr: A1
+register:
+- formal
+- informal
+variety: colloquial-tehrani
+exponents:
+- سلام! حال شما چطوره؟ / خوبی؟ (salām! hāl-e shomā chetore? / khubi?)
+- خوبم، مرسی. شما چطورید؟ (khubam, mersi. shomā chetorid?)
+- ممنون! — خواهش می‌کنم. (mamnun! — khāhesh mikonam.)
+- ببخشید! — اشکالی نداره. (bebakhshid! — eshkāli nadāre.)
+- خداحافظ! (khodāhāfez!)
+enablers:
+  required:
+  - id: fa.prag.greetings
+    use: productive
+  - id: fa.prag.register
+    use: productive
+  - id: fa.gram.copula
+    use: productive
+  - id: fa.var.colloquial
+    use: productive
+  - id: fa.prag.taarof
+    use: formulaic
+  supporting:
+  - id: fa.phon.vowels-consonants
+    use: productive
+version: 1
+status: draft

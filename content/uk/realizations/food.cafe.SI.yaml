@@ -1,0 +1,43 @@
+skill: food.cafe.SI
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Можна меню, будь ласка?
+- Мені борщ і чай без цукру.
+- Що це? / Що ви порадите?
+- Рахунок, будь ласка.
+- Можна карткою?
+enablers:
+  required:
+  - id: uk.gram.noun.acc-sg
+    use: productive
+  - id: uk.gram.pron.personal-oblique
+    use: productive
+  - id: uk.lex.food-drink
+    use: productive
+  - id: uk.num.cardinal-100-10000
+    use: productive
+  - id: uk.gram.syntax.modal
+    use: productive
+  - id: uk.gram.noun.gen-sg
+    use: formulaic
+  - id: uk.gram.noun.instr-sg
+    use: formulaic
+  - id: uk.gram.verb.aspect
+    use: formulaic
+  supporting:
+  - id: uk.phon.vowels
+    use: productive
+  - id: uk.phon.consonants
+    use: productive
+  - id: uk.phon.intonation
+    use: productive
+  - id: uk.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Ordered items in the accusative (каву, воду); без + genitive and з + instrumental as chunks.
+version: 1
+status: draft

@@ -1,0 +1,15 @@
+id: uk.gram.verb.motion-go
+lang: uk
+kind: grammar
+title: 'іти / їхати + куди: в/на + accusative'
+cefr: A1
+requires:
+- uk.gram.verb.present-irregular
+- uk.gram.noun.acc-sg
+sources:
+- ukstd.A1.gram.motion
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

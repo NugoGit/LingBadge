@@ -1,0 +1,20 @@
+id: travel.directions.R
+task: travel.directions
+situation: travel.getting-around
+title: Follow written directions
+can_do: >-
+  Can follow short written directions, e.g. a friend's message on how to get to their flat, or signs inside a building.
+mode: R
+domain:
+- personal
+- public
+cefr: A1
+prerequisites: []
+sources:
+- cv.reading-instructions.A1
+- cv.reading-orientation.A1-2
+size: S
+rubric: rubric.reading.v1
+threshold: null
+version: 1
+status: draft

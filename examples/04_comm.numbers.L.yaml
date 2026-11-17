@@ -1,0 +1,187 @@
+title: 'Understand spoken numbers (L via TTS): keyed items, per-skill threshold override'
+attempts:
+- id: a1
+  taken_on: '2026-11-17'
+  form:
+    id: f-numbers-7714
+    skill: comm.numbers.L
+    lang: uk
+    seed: 7714
+    template: listening.v1
+    generator: llm-template:v1
+    rubric: rubric.listening.v1
+    stimuli:
+    - kind: audio_script
+      title: Clip 1
+      body: З вас сто сорок п'ять гривень.
+      plays: 2
+      tts:
+        voice: uk-UA, female
+        rate: 0.85
+    - kind: audio_script
+      title: Clip 2
+      body: Потяг відправляється о дев'ятнадцятій двадцять.
+      plays: 2
+      tts:
+        voice: uk-UA, female
+        rate: 0.85
+    - kind: audio_script
+      title: Clip 3
+      body: 'Мій номер: нуль дев''яносто п''ять, сімсот двадцять три, сорок, шістнадцять.'
+      plays: 2
+      tts:
+        voice: uk-UA, female
+        rate: 0.85
+    - kind: audio_script
+      title: Clip 4
+      body: Квиток коштує триста вісімдесят гривень.
+      plays: 2
+      tts:
+        voice: uk-UA, female
+        rate: 0.85
+    - kind: audio_script
+      title: Clip 5
+      body: Аптека працює до двадцять другої години.
+      plays: 2
+      tts:
+        voice: uk-UA, female
+        rate: 0.85
+    - kind: audio_script
+      title: Clip 6
+      body: Кілограм яблук — сорок дві гривні.
+      plays: 2
+      tts:
+        voice: uk-UA, female
+        rate: 0.85
+    - kind: audio_script
+      title: Clip 7
+      body: Зустрінемося о сьомій тридцять.
+      plays: 2
+      tts:
+        voice: uk-UA, female
+        rate: 0.85
+    - kind: audio_script
+      title: Clip 8
+      body: Ваша кімната — двісті шістнадцять.
+      plays: 2
+      tts:
+        voice: uk-UA, female
+        rate: 0.85
+    - kind: audio_script
+      title: Clip 9
+      body: Разом тисяча двісті п'ятдесят гривень.
+      plays: 2
+      tts:
+        voice: uk-UA, female
+        rate: 0.85
+    - kind: audio_script
+      title: Clip 10
+      body: Автобус номер шістдесят чотири.
+      plays: 2
+      tts:
+        voice: uk-UA, female
+        rate: 0.85
+    items:
+    - id: c1
+      type: short_answer
+      prompt: 'Clip 1: What is the price? (number)'
+      key:
+      - '145'
+      enablers:
+      - uk.num.cardinal-100-10000
+      stimulus: 0
+    - id: c2
+      type: short_answer
+      prompt: 'Clip 2: When does the train leave?'
+      key:
+      - '19:20'
+      - '7:20'
+      enablers:
+      - uk.num.time
+      stimulus: 1
+    - id: c3
+      type: short_answer
+      prompt: 'Clip 3: Write the phone number.'
+      key:
+      - 0957234016
+      enablers:
+      - uk.num.cardinal-0-100
+      stimulus: 2
+    - id: c4
+      type: short_answer
+      prompt: 'Clip 4: How much is the ticket?'
+      key:
+      - '380'
+      enablers:
+      - uk.num.cardinal-100-10000
+      stimulus: 3
+    - id: c5
+      type: short_answer
+      prompt: 'Clip 5: Until when is the pharmacy open?'
+      key:
+      - '22:00'
+      - '10:00'
+      enablers:
+      - uk.num.time
+      - uk.num.ordinal
+      stimulus: 4
+    - id: c6
+      type: short_answer
+      prompt: 'Clip 6: How much is a kilo of apples?'
+      key:
+      - '42'
+      enablers:
+      - uk.num.cardinal-0-100
+      stimulus: 5
+    - id: c7
+      type: short_answer
+      prompt: 'Clip 7: At what time do you meet?'
+      key:
+      - '7:30'
+      - '19:30'
+      enablers:
+      - uk.num.time
+      stimulus: 6
+    - id: c8
+      type: short_answer
+      prompt: 'Clip 8: What is your room number?'
+      key:
+      - '216'
+      enablers:
+      - uk.num.cardinal-100-10000
+      stimulus: 7
+    - id: c9
+      type: short_answer
+      prompt: 'Clip 9: What is the total?'
+      key:
+      - '1250'
+      enablers:
+      - uk.num.cardinal-100-10000
+      stimulus: 8
+    - id: c10
+      type: short_answer
+      prompt: 'Clip 10: Which bus?'
+      key:
+      - '64'
+      enablers:
+      - uk.num.cardinal-0-100
+      stimulus: 9
+  response:
+    form_id: f-numbers-7714
+    answers:
+      c1: '145'
+      c2: '19:20'
+      c3: 095 723 14 16
+      c4: '380'
+      c5: '22:00'
+      c6: '42'
+      c7: '19:30'
+      c8: '216'
+      c9: 1 250
+      c10: '64'
+expected:
+  a1:
+    item_correct: 9
+    passed: false
+    threshold: 0.95
+    top_hole: uk.num.cardinal-0-100

@@ -1,0 +1,12 @@
+id: fa.gram.verb.present
+lang: fa
+kind: grammar
+title: Present tense mi- + stem + ending
+cefr: A1
+requires:
+- fa.gram.pron.personal
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

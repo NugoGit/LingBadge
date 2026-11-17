@@ -1,0 +1,12 @@
+id: uk.gram.noun.gender
+lang: uk
+kind: grammar
+title: Noun gender in the nominative singular
+cefr: A1
+sources:
+- ukstd.A1.gram.noun-gender
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

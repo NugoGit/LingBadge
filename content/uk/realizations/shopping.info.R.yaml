@@ -1,0 +1,23 @@
+skill: shopping.info.R
+lang: uk
+cefr: A1
+register:
+- formal
+variety: standard
+exponents:
+- Одяг — 2 поверх
+- 'Години роботи: пн–пт 9:00–20:00'
+- Знижка 30 %
+- 'Ціна: 89,90 грн'
+enablers:
+  required:
+  - id: uk.lex.signs
+    use: productive
+  - id: uk.lex.shopping-money
+    use: productive
+  - id: uk.lex.time-calendar
+    use: productive
+  - id: uk.num.cardinal-100-10000
+    use: productive
+version: 1
+status: draft

@@ -1,0 +1,30 @@
+id: uk.lex.health-body
+lang: uk
+kind: lexis
+title: Body and health
+cefr: A1
+words:
+- голова
+- горло
+- живіт
+- зуб
+- спина
+- нога
+- рука
+- око
+- вухо
+- болить
+- температура
+- кашель
+- нежить
+- ліки
+- таблетка
+- лікар
+- швидка
+- допомога
+- хворий
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text
