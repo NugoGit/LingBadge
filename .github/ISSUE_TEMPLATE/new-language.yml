@@ -1,0 +1,21 @@
+name: New language pack
+description: Announce that you are starting a language pack, so work isn't duplicated
+labels: [language-pack]
+body:
+  - type: input
+    id: lang
+    attributes:
+      label: Language and code
+      placeholder: Spanish (es)
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources you plan to use
+      description: National standard, curriculum, frequency lists
+  - type: textarea
+    id: review
+    attributes:
+      label: Who can review it?
+      description: Native speakers or teachers who could check the content

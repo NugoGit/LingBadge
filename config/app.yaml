@@ -1,0 +1,3 @@
+# Settings for the web app build.
+repo_url: https://github.com/NugoGit/LingBadge   # used for "report a wrong item" links
+default_lang: uk

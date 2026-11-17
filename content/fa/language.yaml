@@ -1,0 +1,11 @@
+code: fa
+name: {de: Persisch, en: Persian}
+native: فارسی
+tts: fa-IR
+dir: rtl
+keyboard: [پ, چ, ژ, گ, ی, ک, "‌"]
+variety: Standard Iranian Persian (Tehran)
+status: sketch — 5 skills, 22 enablers; for testing the universal core
+registers: {informal: تو, formal: شما}
+prompt:
+  pitfalls: Lehnübersetzungen, Mischung von Schrift- und Umgangssprache, wo die Realisation eine Varietät festlegt

@@ -1,0 +1,54 @@
+enabler: uk.gram.verb.past
+lang: uk
+facets:
+- id: regular
+  band: core
+  format: type
+  rule: {de: "Infinitivstamm + -в (er), -ла (sie), -ло (es), -ли (Plural): читав, читала, читало, читали", en: "Infinitive stem + -в (he), -ла (she), -ло (it), -ли (plural): читав, читала, читало, читали"}
+  instruction: {de: "Setze das Verb im Präteritum ein.", en: "Put the verb in the past tense."}
+- id: speaker
+  band: variant
+  format: type
+  rule: {de: "Bei я/ти entscheidet das Geschlecht der Person: я була (Frau), я був (Mann)", en: "With я/ти the person's gender decides: я була (woman), я був (man)"}
+  instruction: {de: "Setze das Verb im Präteritum ein. Wer spricht, steht vorne.", en: "Put the verb in the past tense. The speaker is named first."}
+- id: irregular
+  band: exception
+  format: type
+  rule: {de: "Unregelmäßig: могти → міг, могла; їсти → їв, їла; піти → пішов, пішла", en: "Irregular: могти → міг, могла; їсти → їв, їла; піти → пішов, пішла"}
+  instruction: {de: "Setze das Verb im Präteritum ein.", en: "Put the verb in the past tense."}
+- id: agreement
+  band: contrast
+  format: type
+  rule: {de: "Form nach dem Subjekt: ви (auch höflich) → -ли, кафе/місто → -ло, ohne Subjekt (холодно) → -ло", en: "Form follows the subject: ви (also polite) → -ли, кафе/місто → -ло, no subject (холодно) → -ло"}
+  instruction: {de: "Setze das Verb im Präteritum ein. Achte auf das Subjekt.", en: "Put the verb in the past tense. Watch the subject."}
+items:
+- {id: t01, facet: regular, stem: "Учора Олена ___ книжку.", cue: читати, answer: [читала]}
+- {id: t02, facet: regular, stem: "Тарас ___ в банку.", cue: працювати, answer: [працював]}
+- {id: t03, facet: regular, stem: "Ми довго ___ по телефону.", cue: говорити, answer: [говорили]}
+- {id: t04, facet: regular, stem: "Мама ___ борщ.", cue: варити, answer: [варила]}
+- {id: t05, facet: regular, stem: "Брат ___ в Одесі.", cue: жити, answer: [жив]}
+- {id: t06, facet: regular, stem: "Діти ___ у футбол.", cue: грати, answer: [грали]}
+- {id: t07, facet: regular, stem: "Батьки ___ вдома.", cue: бути, answer: [були]}
+- {id: t08, facet: regular, stem: "Вона ___ мені вчора.", cue: писати, answer: [писала]}
+- {id: t09, facet: regular, stem: "Він ___ каву.", cue: замовляти, answer: [замовляв]}
+- {id: t10, facet: regular, stem: "Сестра ___ квитки.", cue: купити, answer: [купила]}
+- {id: t11, facet: regular, stem: "Дідусь ___ телевізор.", cue: дивитися, answer: [дивився]}
+- {id: t12, facet: speaker, stem: "Ганна: «Учора я ___ у Львові.»", cue: бути, answer: [була]}
+- {id: t13, facet: speaker, stem: "Тарас: «Я ___ листа.»", cue: писати, answer: [писав]}
+- {id: t14, facet: speaker, stem: "Олена: «Я ___ вдома.»", cue: працювати, answer: [працювала]}
+- {id: t15, facet: speaker, stem: "Андрій до Олі: «Ти вчора ___ в кіно?»", cue: бути, answer: [була]}
+- {id: t16, facet: speaker, stem: "Оля до Андрія: «Ти ___ мені?»", cue: дзвонити, answer: [дзвонив]}
+- {id: t17, facet: speaker, stem: "Марко: «Я не ___ відповідь.»", cue: знати, answer: [знав]}
+- {id: t18, facet: irregular, stem: "Він не ___ прийти.", cue: могти, answer: [міг]}
+- {id: t19, facet: irregular, stem: "Вона не ___ прийти.", cue: могти, answer: [могла]}
+- {id: t20, facet: irregular, stem: "Учора він ___ борщ.", cue: їсти, answer: [їв]}
+- {id: t21, facet: irregular, stem: "Вона ___ додому.", cue: піти, answer: [пішла]}
+- {id: t22, facet: irregular, stem: "Тато ___ на роботу.", cue: піти, answer: [пішов]}
+- {id: t23, facet: irregular, stem: "Ми ___ піцу.", cue: їсти, answer: [їли]}
+- {id: t24, facet: irregular, stem: "Він ___ у кафе.", cue: прийти, answer: [прийшов]}
+- {id: t25, facet: agreement, stem: "Пане Іване, ви ___ в Києві?", cue: бути, answer: [були]}
+- {id: t26, facet: agreement, stem: "Учора ___ холодно.", cue: бути, answer: [було]}
+- {id: t27, facet: agreement, stem: "Олена і Тарас ___ в кіно.", cue: бути, answer: [були]}
+- {id: t28, facet: agreement, stem: "Кафе ___ зачинене.", cue: бути, answer: [було]}
+- {id: t29, facet: agreement, stem: "Моя сестра ___ в Італії.", cue: бути, answer: [була]}
+- {id: t30, facet: agreement, stem: "Мій тато ___ лікарем.", cue: бути, answer: [був]}

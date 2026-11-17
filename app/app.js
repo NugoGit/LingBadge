@@ -1,4 +1,4 @@
-/* lingobadge app: skill map, tests, grading, badges. Depends on core.js (window.LB). */
+/* lingbadge app: skill map, tests, grading, badges. Depends on core.js (window.LB). */
 (function () {
   "use strict";
   const LB = window.LB;
@@ -31,6 +31,30 @@
 
   function setNote(t) { App.note = t; render(); }
 
+  // ------------------------------------------------------------------ languages
+  const LANG_UI = () => (App.C && App.C.langs ? App.C.langs[App.lang] : null);
+  const META = () => (LANG_UI() && LANG_UI().meta) || {};
+  const LN = () => LB.tx(META().name, "de") || App.lang || "";     // the UI is German
+  const LA = () => `lang="${esc(App.lang)}" dir="${META().dir === "rtl" ? "rtl" : "ltr"}"`;
+  const pk = (id) => (App.lang === "uk" ? id : App.lang + ":" + id);  // profile keys; uk keeps bare ids (older data)
+  const attLang = (a) => a.lang || (a.form && a.form.lang) || "uk";
+  const myAttempts = () => App.attempts.filter((a) => attLang(a) === App.lang);
+  function useLanguage(code) {
+    const langs = App.C.langs;
+    if (!langs[code]) code = langs[App.C.default_lang] ? App.C.default_lang : Object.keys(langs)[0];
+    App.lang = code;
+    const L = langs[code];
+    App.C.enablers = L.enablers; App.C.realizations = L.realizations; App.C.checks = L.checks || {};
+    App.C.skills = App.C.allSkills.filter((s) => L.realizations[s.id]);
+    LB.setTarget(L.meta);
+    findVoice();
+  }
+  function langPicker() {
+    const codes = Object.keys(App.C.langs);
+    if (codes.length < 2) return "";
+    return `<label class="langpick small">Sprache <select id="lang-pick">${codes.map((c) => `<option value="${esc(c)}" ${c === App.lang ? "selected" : ""}>${esc(LB.tx(App.C.langs[c].meta.name, "de") || c)}</option>`).join("")}</select></label>`;
+  }
+
   // ------------------------------------------------------------------ storage
   const base = () => "data/users/" + App.uid;
   const attemptsCol = () => App.db.doc(base() + "/profile").collection("attempts");
@@ -62,11 +86,11 @@
 
   // ------------------------------------------------------------------ Claude calls
   async function ask(prompt, tier) {
-    if (!App.sample) throw new Error("Claude ist in dieser Ansicht nicht verfügbar. Öffne die Seite auf claude.ai.");
+    if (!App.sample) throw new Error(App.platform === "standalone" ? "Kein KI-Anbieter eingerichtet. Trage in den Einstellungen einen API-Schlüssel ein." : "Claude ist in dieser Ansicht nicht verfügbar. Öffne die Seite auf claude.ai.");
     try {
       return await App.sample.json(prompt, { modelTier: tier || "default" });
     } catch (e) {
-      if (e && e.code === "not_granted") throw new Error("Claude-Zugriff wurde nicht erlaubt. Erlaube ihn beim nächsten Klick, sonst funktionieren Tests nicht.");
+      if (e && e.code === "not_granted") throw new Error(App.platform === "standalone" ? "Der API-Schlüssel wurde abgelehnt (" + (e.message || "") + "). Prüfe ihn in den Einstellungen." : "Claude-Zugriff wurde nicht erlaubt. Erlaube ihn beim nächsten Klick, sonst funktionieren Tests nicht.");
       if (e && e.code === "rate_limited") throw new Error("Zu viele Anfragen gerade. Bitte in einer Minute erneut versuchen.");
       throw new Error("Claude-Anfrage fehlgeschlagen: " + ((e && (e.message || e.code)) || e));
     }
@@ -75,7 +99,7 @@
   // ------------------------------------------------------------------ speech
   let ukVoice = null;
   function findVoice() {
-    try { const vs = window.speechSynthesis ? speechSynthesis.getVoices() : []; ukVoice = vs.find((v) => /^uk/i.test(v.lang)) || null; } catch (e) { ukVoice = null; }
+    try { const vs = window.speechSynthesis ? speechSynthesis.getVoices() : []; const tag = String((App.C && App.lang && (META().tts || App.lang)) || "uk").toLowerCase(), base = tag.split("-")[0]; ukVoice = vs.find((v) => v.lang.toLowerCase().replace("_", "-") === tag) || vs.find((v) => v.lang.toLowerCase().startsWith(base)) || null; } catch (e) { ukVoice = null; }
   }
   if (window.speechSynthesis) { findVoice(); speechSynthesis.onvoiceschanged = findVoice; }
 
@@ -83,25 +107,25 @@
     return new Promise((res, rej) => {
       if (!window.speechSynthesis) return rej(new Error("Keine Sprachausgabe im Browser."));
       const u = new SpeechSynthesisUtterance(text);
-      u.lang = "uk-UA"; u.rate = 0.85; if (ukVoice) u.voice = ukVoice;
+      u.lang = META().tts || App.lang; u.rate = 0.85; if (ukVoice) u.voice = ukVoice;
       u.onend = res; u.onerror = () => rej(new Error("Sprachausgabe fehlgeschlagen."));
       speechSynthesis.cancel(); speechSynthesis.speak(u);
     });
   }
   async function speak(text) {
     if (settings().tts === "claude" && App.tts) {
-      try { return await App.tts.speak(text, { language: "uk", rate: 0.85 }); } catch (e) { /* fall back */ }
+      try { return await App.tts.speak(text, { language: App.lang, rate: 0.85 }); } catch (e) { /* fall back */ }
     }
-    if (!ukVoice && settings().tts === "browser") setNote("Dein Browser hat keine ukrainische Stimme. Wähle in den Einstellungen „Claude-Stimme“ oder installiere eine ukrainische Systemstimme.");
+    if (!ukVoice && settings().tts === "browser") setNote(`Dein Browser hat keine Stimme für ${LN()}. ${App.tts ? "Wähle in den Einstellungen „Claude-Stimme“ oder öffne" : "Öffne"} die Seite in Edge oder Chrome (dort gibt es Online-Stimmen), oder installiere eine Systemstimme.`);
     return browserSpeak(text);
   }
 
   // ------------------------------------------------------------------ statuses
   function rubricOf(skill) { return App.C.rubrics[skill.rubric]; }
   function statusOf(skill) {
-    const atts = App.attempts.filter((a) => a.skill === skill.id && !a.voided && a.kind === "full")
+    const atts = myAttempts().filter((a) => a.skill === skill.id && !a.voided && a.kind === "full")
       .map((a) => BADGEABLE.has(skill.mode) ? a : Object.assign({}, a, { channel: "typed-speech" }));
-    return LB.skillStatus(skill, atts, App.profile.probes[skill.id], rubricOf(skill), App.cfg);
+    return LB.skillStatus(skill, atts, App.profile.probes[pk(skill.id)], rubricOf(skill), App.cfg);
   }
   function enablerStatus() { return LB.enablerStatuses(App.C.enablers, App.profile.checks, App.attempts); }
 
@@ -114,15 +138,18 @@
     const nav = VIEWS.map((v) => `<a href="#${v}" ${App.view === v && !App.screen ? 'aria-current="page"' : ""}>${{ karte: "Karte", einstufung: "Einstufung", grammatik: "Grammatik & Wortschatz", einstellungen: "Einstellungen" }[v]}</a>`).join("");
     let notes = "";
     if (App.connecting) notes += `<p class="note info"><span class="spinner"></span>Verbinde mit claude.ai …</p>`;
-    else if (!App.sample) notes += `<p class="note">Claude ist hier nicht verfügbar: Tests lassen sich nur auf claude.ai erstellen und bewerten.</p>`;
+    else if (!App.sample) notes += App.platform === "standalone"
+      ? `<p class="note info">Ohne KI-Anbieter: Grammatik-Checks aus dem Fragenkatalog funktionieren. Für Tests, Einstufung und Checks ohne Katalog trage in den <a href="#einstellungen">Einstellungen</a> einen API-Schlüssel ein.</p>`
+      : `<p class="note">Claude ist hier nicht verfügbar: Tests lassen sich nur auf claude.ai erstellen und bewerten.</p>`;
     if (!App.connecting && !App.db) notes += `<p class="note">Speichern ist hier nicht verfügbar (nicht angemeldet oder außerhalb von claude.ai). Ergebnisse gehen beim Schließen verloren.</p>`;
+    if (App.platform === "standalone" && window.LBStandalone.volatile) notes += `<p class="note">Dieser Browser erlaubt keinen lokalen Speicher. Ergebnisse gehen beim Schließen verloren.</p>`;
     if (App.note) notes += `<p class="note">${esc(App.note)} <button class="btn quiet small" data-act="dismiss">OK</button></p>`;
     let main;
     if (App.screen && App.screen.kind === "skill") main = renderSkill(skillById(App.screen.id));
     else if (App.screen && App.screen.kind === "run") main = renderRun(App.screen.run);
     else if (App.screen && App.screen.kind === "attempt") main = renderResult(App.attempts.find((a) => a.id === App.screen.id), true);
     else main = ({ karte: renderMap, einstufung: renderPlacement, grammatik: renderEnablers, einstellungen: renderSettings })[App.view]();
-    $("#app").innerHTML = `<header class="top"><h1>Kompetenzkarte Ukrainisch</h1><span class="sub">A1 · ${App.C.skills.length} Alltagskompetenzen</span><nav class="tabs">${nav}</nav></header>${notes}${main}`;
+    $("#app").innerHTML = `<header class="top"><h1>Kompetenzkarte ${esc(LN())}</h1><span class="sub">A1 · ${App.C.skills.length} Alltagskompetenzen</span>${langPicker()}<nav class="tabs">${nav}</nav></header>${notes}${main}`;
     afterRender();
   }
 
@@ -158,7 +185,7 @@
 
   function renderSkill(s) {
     const x = statusOf(s), real = App.C.realizations[s.id], est = enablerStatus();
-    const atts = App.attempts.filter((a) => a.skill === s.id && a.kind === "full").slice().reverse();
+    const atts = myAttempts().filter((a) => a.skill === s.id && a.kind === "full").slice().reverse();
     const thr = LB.thresholdFor(s, App.cfg);
     const badgeLine = !BADGEABLE.has(s.mode)
       ? `<p class="small muted">${s.mode === "SP" ? "Vortrag braucht Spracheingabe – noch nicht testbar." : "Getippte Rollenspiele zeigen deinen Stand, vergeben aber kein Sprech-Abzeichen."}</p>`
@@ -171,7 +198,7 @@
     const list = atts.length ? `<table class="plain"><thead><tr><th>Datum</th><th>Ergebnis</th><th>Punkte</th><th></th></tr></thead><tbody>${atts.map((a) =>
       `<tr><td class="num">${esc(a.takenOn)}</td><td>${a.voided ? '<span class="muted">ungültig</span>' : a.outcome.passed ? '<span class="ok">bestanden</span>' : '<span class="bad">nicht bestanden</span>'}</td><td class="num">${pct(a.outcome.score)}</td><td><button class="btn quiet small" data-act="view-attempt" data-id="${esc(a.id)}">ansehen</button></td></tr>`).join("")}</tbody></table>`
       : `<p class="muted small">Noch keine Tests.</p>`;
-    const probe = App.profile.probes[s.id];
+    const probe = App.profile.probes[pk(s.id)];
     return `<p><button class="btn quiet" data-act="back">← Karte</button></p>
       <div class="card stack"><div class="row"><h2>${esc(s.title)}</h2>${chip(x.status)}<span class="chip st-untested">${MODE_DE[s.mode]} · ${esc(s.cefr)} · Umfang ${esc(s.size)}</span></div>
       <p>${esc(s.can_do)}</p>${badgeLine}
@@ -187,10 +214,10 @@
     Object.values(App.C.enablers).forEach((e) => (groups[e.kind] = groups[e.kind] || []).push(e));
     const KIND_DE = { grammar: "Grammatik", lexis: "Wortschatz", pragmatics: "Pragmatik", script: "Schrift", orthography: "Rechtschreibung", phonology: "Aussprache" };
     const order = ["grammar", "lexis", "pragmatics", "script", "orthography", "phonology"];
-    return `<p class="muted">Bausteine hinter den Kompetenzen. „Verdacht“ heißt: In Tests gab es Fehler, die hierauf zeigen. Ein Check (10 Aufgaben, ~5 Minuten) klärt es. A2-Bausteine kommen in A1-Aufgaben nur als feste Wendungen vor.</p>` +
+    return `<p class="muted">Bausteine hinter den Kompetenzen. „Verdacht“ heißt: In Tests gab es Fehler, die hierauf zeigen. Ein Check (10 Aufgaben, ~5 Minuten) klärt es. Checks mit Fragenkatalog laufen ohne KI und mischen Grundregel, Varianten, Ausnahmen und Abgrenzung. A2-Bausteine kommen in A1-Aufgaben nur als feste Wendungen vor.</p>` +
       order.filter((k) => groups[k]).map((k) => `<div class="card stack"><h2>${KIND_DE[k]}</h2><div class="ens">${groups[k].sort((a, b) => (a.cefr + a.title).localeCompare(b.cefr + b.title)).map((e) => {
         const c = App.profile.checks[e.id];
-        return `<div class="en"><div>${esc(e.title)}<small>${esc(e.cefr)}${c ? " · Check " + pct(c.score) + " am " + esc(c.at.slice(0, 10)) : ""}</small></div><div class="row">${chip(est[e.id])}${e.channel === "text" ? `<button class="btn quiet small" data-act="start-check" data-id="${esc(e.id)}">Check</button>` : ""}</div></div>`;
+        return `<div class="en"><div>${esc(e.title)}<small>${esc(e.cefr)}${c ? " · Check " + pct(c.score) + " am " + esc(c.at.slice(0, 10)) : ""}</small></div><div class="row">${chip(est[e.id])}${e.channel === "text" ? `<button class="btn quiet small" data-act="start-check" data-id="${esc(e.id)}" title="${App.C.checks[e.id] ? "Aus dem Fragenkatalog, ohne KI" : "Wird von der KI erstellt"}">Check${App.C.checks[e.id] ? "" : " (KI)"}</button>` : ""}</div></div>`;
       }).join("")}</div></div>`).join("");
   }
 
@@ -198,8 +225,8 @@
     const rows = App.C.themes.map((t) => {
       const skills = App.C.skills.filter((s) => s.theme === t.id && s.mode !== "SP");
       if (!skills.length) return "";
-      const done = skills.filter((s) => App.profile.probes[s.id]).length;
-      const chips = skills.map((s) => { const p = App.profile.probes[s.id]; return chip(p ? p.status : "untested", MODE_DE[s.mode] + (p ? " " + p.correct + "/3" : "")); }).join(" ");
+      const done = skills.filter((s) => App.profile.probes[pk(s.id)]).length;
+      const chips = skills.map((s) => { const p = App.profile.probes[pk(s.id)]; return chip(p ? p.status : "untested", MODE_DE[s.mode] + (p ? " " + p.correct + "/3" : "")); }).join(" ");
       return `<tr><td><b>${esc(t.title)}</b><br><span class="small muted">${skills.length} Kompetenzen · ${done} eingestuft</span></td><td>${chips}</td><td><button class="btn ${done ? "quiet" : ""}" data-act="start-probe" data-id="${esc(t.id)}">${done ? "Wiederholen" : "Starten"}</button></td></tr>`;
     }).join("");
     return `<div class="card stack"><h2>Einstufung</h2><p>Pro Thema je 3 kurze Aufgaben pro Kompetenz. Ergebnis: 3/3 wahrscheinlich, 2/3 unsicher, sonst Lücke. Einstufungen vergeben keine Abzeichen; sie zeigen dir, wo du testen solltest. Du kannst jederzeit unterbrechen; jedes Thema wird einzeln gespeichert.</p>
@@ -210,13 +237,28 @@
   function renderSettings() {
     const s = settings();
     const opt = (name, val, label) => `<label><input type="radio" name="${name}" value="${val}" ${s[name] === val ? "checked" : ""} data-setting="${name}"> ${label}</label>`;
+    let ai = "";
+    if (App.platform === "standalone") {
+      const c = window.LBStandalone.getConfig(), pv = c.provider;
+      const po = (v, l) => `<label><input type="radio" name="ai-provider" value="${v}" ${pv === v ? "checked" : ""} data-ai="provider"> ${l}</label>`;
+      const fld = (path, label, val, type) => `<label class="stack small">${label}<input type="${type || "text"}" data-ai="${path}" value="${esc(val || "")}" autocomplete="off" spellcheck="false"></label>`;
+      ai = `<fieldset class="stack"><legend><b>KI-Anbieter</b></legend>
+        <p class="small muted">Tests, Rollenspiele, Einstufung und Checks ohne Katalog brauchen ein Sprachmodell. Der Schlüssel bleibt in diesem Browser und geht nur an den gewählten Anbieter. Setze beim Anbieter ein Ausgabenlimit.</p>
+        <div class="opts">${po("none", "Keiner (nur Katalog-Checks)")}${po("anthropic", "Anthropic (Claude)")}${po("openai", "OpenAI-kompatibel (auch lokal, z. B. Ollama, LM Studio)")}</div>
+        ${pv === "anthropic" ? fld("anthropic.key", "API-Schlüssel", c.anthropic.key, "password") + `<div class="row">${fld("anthropic.models.quick", "Modell schnell", c.anthropic.models.quick)}${fld("anthropic.models.default", "Modell Standard", c.anthropic.models.default)}${fld("anthropic.models.complex", "Modell gründlich", c.anthropic.models.complex)}</div>` : ""}
+        ${pv === "openai" ? fld("openai.base", "Basis-URL", c.openai.base) + fld("openai.key", "API-Schlüssel (leer für lokale Server)", c.openai.key, "password") + `<div class="row">${fld("openai.models.quick", "Modell schnell", c.openai.models.quick)}${fld("openai.models.default", "Modell Standard", c.openai.models.default)}${fld("openai.models.complex", "Modell gründlich", c.openai.models.complex)}</div>` : ""}
+        <div class="row"><button class="btn quiet small" data-act="ai-test">Verbindung testen</button><span class="small muted" id="ai-msg">${App.sample ? "Eingerichtet." : "Nicht eingerichtet."}</span></div></fieldset>`;
+    }
+    const where = App.platform === "standalone" ? "in diesem Browser (lokaler Speicher). Sichere sie ab und zu mit „Herunterladen“." : "privat in deinem Bereich dieses Artefakts.";
     return `<div class="card stack"><h2>Einstellungen</h2>
       <fieldset class="stack"><legend><b>Sprache der Aufgaben</b></legend><div class="opts">${opt("il", "de", "Deutsch")}${opt("il", "en", "Englisch")}</div></fieldset>
-      <fieldset class="stack"><legend><b>Sprachausgabe für Hörtests</b></legend><div class="opts">${opt("tts", "browser", "Browser-Stimme (Ukrainisch, " + (ukVoice ? "gefunden: " + esc(ukVoice.name) : "keine ukrainische Stimme gefunden") + ")")}${opt("tts", "claude", "Claude-Stimme" + (App.tts ? "" : " (hier nicht verfügbar)"))}</div></fieldset>
+      ${ai}
+      <fieldset class="stack"><legend><b>Sprachausgabe für Hörtests</b></legend><div class="opts">${opt("tts", "browser", "Browser-Stimme (" + esc(LN()) + ", " + (ukVoice ? "gefunden: " + esc(ukVoice.name) : "keine passende Stimme gefunden – Edge oder Chrome haben Online-Stimmen") + ")")}${App.platform === "standalone" ? "" : opt("tts", "claude", "Claude-Stimme" + (App.tts ? "" : " (hier nicht verfügbar)"))}</div></fieldset>
       <fieldset class="stack"><legend><b>Bewertung</b></legend><div class="opts">${opt("gradeTier", "default", "Standard (spart Nutzung)")}${opt("gradeTier", "complex", "Gründlich (stärkeres Modell, verbraucht mehr)")}</div></fieldset>
       <label><input type="checkbox" data-setting="validate" ${s.validate ? "checked" : ""}> Jeden Test vor dem Anzeigen zusätzlich prüfen lassen (empfohlen)</label>
-      <div class="row"><button class="btn quiet" data-act="export">Alle Daten als JSON kopieren</button><span class="small muted" id="export-msg"></span></div>
-      <p class="small muted">${App.attempts.length} Tests gespeichert. Daten liegen privat in deinem Bereich dieses Artefakts.</p></div>`;
+      <fieldset class="stack"><legend><b>Daten</b></legend>
+      <div class="row"><button class="btn quiet" data-act="download">Herunterladen (JSON)</button><button class="btn quiet" data-act="export">In die Zwischenablage</button><label class="btn quiet">Importieren<input type="file" accept="application/json,.json" id="import-file" hidden></label><span class="small muted" id="export-msg"></span></div>
+      <p class="small muted">${App.attempts.length} Tests gespeichert, ${where} Import ergänzt Tests und ersetzt Einstellungen und Einstufungen.</p></fieldset></div>`;
   }
 
   // ------------------------------------------------------------------ test runs
@@ -230,39 +272,55 @@
     if (run.type === "probe") return head + warn + renderProbeForm(run) + `</div>`;
     const f = run.form, m = run.mode;
     let body = "";
-    if (m === "R") body = `<p class="muted small">Lies das Dokument und beantworte die Fragen. Zeit: etwa 10 Minuten.</p>${(f.stimuli || []).map((s) => `<div class="doc" lang="uk">${esc(s.body)}</div>`).join("")}${renderItems(f.items, run)}`;
+    if (m === "R") body = `<p class="muted small">Lies das Dokument und beantworte die Fragen. Zeit: etwa 10 Minuten.</p>${(f.stimuli || []).map((s) => `<div class="doc" ${LA()}>${esc(s.body)}</div>`).join("")}${renderItems(f.items, run)}`;
     if (m === "L") body = `<p class="muted small">Jeder Clip kann zweimal abgespielt werden. Der Text wird erst nach der Abgabe gezeigt.</p>${renderItems(f.items, run, true)}`;
-    if (run.type === "check") body = `<p class="muted small">Setze die richtige Form ein. Nur die Form zählt, nicht die Großschreibung.</p>${renderItems(f.items, run)}`;
-    if (m === "WI") body = `${(f.stimuli || []).map((s) => `<div class="stack"><span class="small muted">${esc(s.title || "")}</span><div class="${s.kind === "message" ? "msg" : "doc"}" lang="uk">${esc(s.body)}</div></div>`).join("")}
+    if (run.type === "check") body = `<p class="muted small">${f.items.length} Aufgaben aus verschiedenen Unterregeln. Groß- und Kleinschreibung zählt nicht.</p>${f.items.some((it) => it.type !== "mcq") ? kbd() : ""}${renderItems(f.items, run)}`;
+    if (m === "WI") body = `${(f.stimuli || []).map((s) => `<div class="stack"><span class="small muted">${esc(s.title || "")}</span><div class="${s.kind === "message" ? "msg" : "doc"}" ${LA()}>${esc(s.body)}</div></div>`).join("")}
       ${f.situation ? `<p>${esc(f.situation)}</p>` : ""}<div><b>Das soll in deinem Text vorkommen:</b><ul>${(f.brief || []).map((c) => `<li>${esc(c.text)}${c.must ? "" : ' <span class="muted small">(optional)</span>'}</li>`).join("")}</ul></div>
-      ${kbd()}<textarea id="wi-text" lang="uk" data-ans="__text" placeholder="Auf Ukrainisch schreiben …">${esc(run.answers.__text || "")}</textarea>
+      ${kbd()}<textarea id="wi-text" ${LA()} data-ans="__text" placeholder="Auf ${esc(LN())} schreiben …">${esc(run.answers.__text || "")}</textarea>
       <p class="small muted" id="wc">${wordCount(run.answers.__text)} Wörter · Ziel ${(f.word_range || [20, 60]).join("–")}</p>`;
     if (m === "SI") return head + warn + renderChat(run) + `</div>`;
     return head + warn + body + `<div class="row"><button class="btn" data-act="submit">Abgeben</button></div></div>`;
   }
 
-  function kbd() { return `<div class="keys" aria-label="Sonderzeichen">${["і", "ї", "є", "ґ", "ʼ", "и", "щ"].map((k) => `<button type="button" data-act="key" data-k="${k}">${k}</button>`).join("")}<span class="small muted">Tipp: ukrainische Tastatur im System aktivieren.</span></div>`; }
+  function kbd() { return `<div class="keys" aria-label="Sonderzeichen">${(META().keyboard || []).map((k) => `<button type="button" data-act="key" data-k="${esc(k)}">${k === "\u200c" ? "ZWNJ" : esc(k)}</button>`).join("")}<span class="small muted">Tipp: Tastatur für ${esc(LN())} im System aktivieren.</span></div>`; }
   function wordCount(t) { return (String(t || "").trim().match(/\S+/g) || []).length; }
 
   function renderItems(items, run, audio) {
+    let prevInstr = null;
     return `<div>${(items || []).map((it, n) => {
+      if (it.instruction) { const same = it.instruction === prevInstr; prevInstr = it.instruction; if (same) it = Object.assign({}, it, { instruction: "" }); }
       const v = run.answers[it.id] || "";
       const clip = audio && it.stimulus != null ? `<button class="btn secondary small" data-act="play" data-i="${it.stimulus}" ${(run.plays[it.stimulus] || 0) >= 2 ? "disabled" : ""}>▶ Clip ${it.stimulus + 1} (${2 - (run.plays[it.stimulus] || 0)}× übrig)</button>` : "";
       const input = it.type === "mcq"
-        ? `<div class="opts">${(it.options || []).map((o) => `<label><input type="radio" name="q-${esc(it.id)}" value="${esc(o)}" data-ans="${esc(it.id)}" ${v === o ? "checked" : ""}> <span lang="uk">${esc(o)}</span></label>`).join("")}</div>`
-        : `<input type="text" lang="uk" data-ans="${esc(it.id)}" value="${esc(v)}" autocomplete="off">`;
-      return `<div class="item"><div class="row">${clip}<span class="q">${n + 1}. ${esc(it.prompt)}</span></div>${input}</div>`;
+        ? `<div class="opts">${(it.options || []).map((o) => `<label><input type="radio" name="q-${esc(it.id)}" value="${esc(o)}" data-ans="${esc(it.id)}" ${v === o ? "checked" : ""}> <span ${LA()}>${esc(o)}</span></label>`).join("")}</div>`
+        : `<input type="text" ${LA()} data-ans="${esc(it.id)}" value="${esc(v)}" autocomplete="off">`;
+      return `<div class="item"><div class="row">${clip}<span class="q">${n + 1}. ${itemLabel(it)}</span></div>${input}</div>`;
     }).join("")}</div>`;
+  }
+
+  function itemLabel(it) {
+    if (!it.stem) return esc(it.prompt);
+    const stem = esc(it.stem).split("___").join('<span class="gap">___</span>');
+    return `${it.instruction ? `<span class="instr">${esc(it.instruction)}</span>` : ""}${it.context ? `<span class="ctx">${esc(it.context)}</span>` : ""}<span class="stem" ${LA()}>${stem}</span>${it.cue ? ` <span class="cue" ${LA()}>(${esc(it.cue)})</span>` : ""}`;
   }
 
   function renderChat(run) {
     const rp = run.form.roleplay;
-    const bubbles = run.transcript.map((t) => `<div class="bubble ${t.speaker === "learner" ? "me" : "them"}" lang="uk">${esc(t.text)}</div>`).join("");
+    const bubbles = run.transcript.map((t) => `<div class="bubble ${t.speaker === "learner" ? "me" : "them"}" ${LA()}>${esc(t.text)}</div>`).join("");
     const over = run.chatOver;
     return `<p><b>Dein Ziel:</b> ${esc(rp.learner_goal)}</p><p class="small muted">${esc(rp.setting)} Du schreibst, als ob du sprichst. Getippte Rollenspiele zeigen deinen Stand, vergeben aber kein Sprech-Abzeichen.</p>
       <div class="chat" id="chat">${bubbles}${run.thinking ? `<div class="bubble them"><span class="spinner"></span></div>` : ""}</div>
-      ${over ? `<p class="muted">Das Gespräch ist beendet.</p>` : `${kbd()}<div class="row"><input type="text" id="chat-in" lang="uk" placeholder="Deine Antwort auf Ukrainisch …" ${run.thinking ? "disabled" : ""}><button class="btn" data-act="send" ${run.thinking ? "disabled" : ""}>Senden</button></div>`}
+      ${over ? `<p class="muted">Das Gespräch ist beendet.</p>` : `${kbd()}<div class="row"><input type="text" id="chat-in" ${LA()} placeholder="Deine Antwort auf ${esc(LN())} …" ${run.thinking ? "disabled" : ""}><button class="btn" data-act="send" ${run.thinking ? "disabled" : ""}>Senden</button></div>`}
       <div class="row"><button class="btn ${over ? "" : "quiet"}" data-act="submit" ${run.transcript.filter((t) => t.speaker === "learner").length ? "" : "disabled"}>Gespräch beenden und bewerten</button></div>`;
+  }
+
+  const BAND_DE = { core: "Grundregel", variant: "Varianten", exception: "Ausnahmen", contrast: "Abgrenzung" };
+  const BAND_HINT = { core: "die Regel mit häufigen Wörtern", variant: "regelmäßige Unterfälle, z. B. Lautwechsel", exception: "Formen zum Auswendiglernen", contrast: "wann die Form gilt, gegen eine Verwechslungsform" };
+  function issueUrl(a, it, given) {
+    const title = `[${App.lang}] ${a.skill} ${it.id}: Antwort „${given}“`;
+    const body = `**Baustein:** ${a.skill}\n**Aufgabe:** ${it.id} (${it.band || "?"}/${it.facet || "?"})\n**Satz:** ${it.stem || it.prompt}${it.cue ? " (" + it.cue + ")" : ""}\n**Meine Antwort:** ${given}\n**Akzeptiert:** ${(it.key || []).join(" / ")}\n\n**Warum ist meine Antwort auch richtig, oder was ist an der Aufgabe falsch?**\n\n`;
+    return `${App.C.repo_url}/issues/new?labels=catalogue&title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
   }
 
   function renderResult(a, standalone) {
@@ -271,37 +329,47 @@
     const title = isCheck ? (App.C.enablers[a.skill] || {}).title : s.title;
     const typed = s && !BADGEABLE.has(s.mode);
     const st = s && statusOf(s);
-    const verdict = a.voided ? `<div class="verdict info"><b>Als fehlerhaft markiert</b><span>Dieser Test zählt nicht.</span></div>`
+    const verdict = isCheck && !a.voided && a.outcome.breakdown ? "" : a.voided ? `<div class="verdict info"><b>Als fehlerhaft markiert</b><span>Dieser Test zählt nicht.</span></div>`
       : typed ? `<div class="verdict info"><b>Einschätzung: ${ST_DE[LB.heatmapStatus(a.outcome)]}</b><span>${esc(a.outcome.reason)} · ${pct(a.outcome.score)}. Kein Sprech-Abzeichen aus getippten Gesprächen.</span></div>`
       : `<div class="verdict ${a.outcome.passed ? "pass" : "fail"}"><b>${a.outcome.passed ? "Bestanden" : "Nicht bestanden"}</b><span>${esc(a.outcome.reason)} · ${pct(a.outcome.score)} (nötig: ${pct(a.outcome.threshold)})</span>
         ${!isCheck && st ? `<span>${st.status === "badge" ? "🏅 Abzeichen erhalten." : `Abzeichen: ${st.badge.passes || 0} von 2 bestanden. ${esc(st.badge.reason)}.`}</span>` : ""}</div>`;
     let detail = "";
     const f = a.form;
-    if (f.items && f.items.length) {
+    if (isCheck && !a.voided && a.outcome.breakdown) {
+      const bd = a.outcome.breakdown;
+      const head = `<div class="verdict ${bd.status === "known" ? "pass" : bd.status === "shaky" ? "info" : "fail"}"><b>${ST_DE[bd.status]}</b><span>${esc(bd.verdict)} · ${pct(bd.score)} richtig (sicher ab ${pct(a.outcome.threshold)} und ohne Fehler bei der Grundregel)</span></div>`;
+      const rows = LB.BANDS.filter((b) => bd.bands[b]).map((b) => { const x = bd.bands[b]; return `<tr><td>${BAND_DE[b]}</td><td class="num ${x.right === x.total ? "ok" : "bad"}">${x.right}/${x.total}</td><td class="small muted">${BAND_HINT[b]}</td></tr>`; }).join("");
+      detail += head + `<div class="card stack"><h3>Nach Art der Aufgabe</h3><table class="plain"><tbody>${rows}</tbody></table></div>`;
+      detail += `<div class="card stack"><h3>Deine Antworten</h3><table class="plain"><thead><tr><th>#</th><th>Aufgabe</th><th>Deine Antwort</th><th>Lösung</th></tr></thead><tbody>${f.items.map((it, n) => {
+        const ok = a.grade.item_results[it.id], given = (a.response.answers || {})[it.id] || "";
+        const dispute = !ok && f.source === "catalogue" && App.C.repo_url ? ` <a class="small" target="_blank" rel="noopener" href="${esc(issueUrl(a, it, given))}">Einspruch</a>` : "";
+        return `<tr><td class="num">${n + 1}</td><td>${itemLabel(it)}${!ok && it.rule ? `<div class="small muted">Regel: ${esc(it.rule)}</div>` : ""}</td><td ${LA()} class="${ok ? "ok" : "bad"}">${esc(given || "—")}</td><td><span ${LA()}>${esc((it.key || [])[0])}</span>${dispute}</td></tr>`;
+      }).join("")}</tbody></table>${f.source === "catalogue" ? `<p class="small muted">Aufgaben aus dem Fragenkatalog, bewertet nur nach Lösungsschlüssel. Ist deine Antwort auch richtig oder die Aufgabe fehlerhaft? „Einspruch“ öffnet eine Meldung auf GitHub.</p>` : ""}</div>`;
+    } else if (f.items && f.items.length) {
       detail += `<div class="card stack"><h3>Deine Antworten</h3><table class="plain"><thead><tr><th>#</th><th>Frage</th><th>Deine Antwort</th><th>Lösung</th></tr></thead><tbody>${f.items.map((it, n) => {
         const ok = a.grade.item_results[it.id];
-        return `<tr><td class="num">${n + 1}</td><td>${esc(it.prompt)}</td><td lang="uk" class="${ok ? "ok" : "bad"}">${esc((a.response.answers || {})[it.id] || "—")}</td><td lang="uk">${esc((it.key || [])[0])}</td></tr>`;
+        return `<tr><td class="num">${n + 1}</td><td>${esc(it.prompt)}</td><td ${LA()} class="${ok ? "ok" : "bad"}">${esc((a.response.answers || {})[it.id] || "—")}</td><td ${LA()}>${esc((it.key || [])[0])}</td></tr>`;
       }).join("")}</tbody></table>
-      ${(f.stimuli || []).some((x) => x.kind === "audio_script") ? `<details><summary>Hörtexte anzeigen</summary>${f.stimuli.map((x, i) => `<p lang="uk"><b>Clip ${i + 1}:</b> ${esc(x.body)}</p>`).join("")}</details>` : ""}</div>`;
+      ${(f.stimuli || []).some((x) => x.kind === "audio_script") ? `<details><summary>Hörtexte anzeigen</summary>${f.stimuli.map((x, i) => `<p ${LA()}><b>Clip ${i + 1}:</b> ${esc(x.body)}</p>`).join("")}</details>` : ""}</div>`;
     }
     if (a.grade.criteria && a.grade.criteria.length) {
       const rub = App.C.rubrics[f.rubric];
       detail += `<div class="card stack"><h3>Bewertung</h3>${a.feedback ? `<p>${esc(a.feedback)}</p>` : ""}<table class="plain"><thead><tr><th>Kriterium</th><th>Stufe</th><th>Belege</th></tr></thead><tbody>${a.grade.criteria.map((c) => {
         const rc = rub.criteria.find((x) => x.id === c.id) || {};
-        return `<tr><td>${esc(CRIT_DE[c.id] || c.id)}${rc.must ? "" : ' <span class="muted small">(optional)</span>'}</td><td class="${c.level >= 2 ? "ok" : "bad"}">${c.level} – ${LEVEL_DE[c.level] || ""}</td><td lang="uk">${esc((c.evidence || []).join(" · "))}</td></tr>`;
+        return `<tr><td>${esc(CRIT_DE[c.id] || c.id)}${rc.must ? "" : ' <span class="muted small">(optional)</span>'}</td><td class="${c.level >= 2 ? "ok" : "bad"}">${c.level} – ${LEVEL_DE[c.level] || ""}</td><td ${LA()}>${esc((c.evidence || []).join(" · "))}</td></tr>`;
       }).join("")}</tbody></table>${a.regraded ? `<p class="small muted">Knapp am Grenzwert: dreimal unabhängig bewertet, der Median zählt.</p>` : ""}</div>`;
     }
-    if (a.response.text) detail += `<div class="card stack"><h3>Dein Text</h3><div class="doc" lang="uk">${esc(a.response.text)}</div></div>`;
-    if (a.response.transcript) detail += `<div class="card stack"><h3>Gespräch</h3><div class="chat">${a.response.transcript.map((t) => `<div class="bubble ${t.speaker === "learner" ? "me" : "them"}" lang="uk">${esc(t.text)}</div>`).join("")}</div></div>`;
+    if (a.response.text) detail += `<div class="card stack"><h3>Dein Text</h3><div class="doc" ${LA()}>${esc(a.response.text)}</div></div>`;
+    if (a.response.transcript) detail += `<div class="card stack"><h3>Gespräch</h3><div class="chat">${a.response.transcript.map((t) => `<div class="bubble ${t.speaker === "learner" ? "me" : "them"}" ${LA()}>${esc(t.text)}</div>`).join("")}</div></div>`;
     const errs = (a.grade.errors || []);
     if (errs.length) detail += `<div class="card stack"><h3>Fehler</h3><table class="plain"><thead><tr><th>Stelle</th><th>Richtig</th><th>Baustein</th></tr></thead><tbody>${errs.map((e) =>
-      `<tr><td lang="uk" class="bad">${esc(e.span)}</td><td lang="uk">${esc(e.correction)}</td><td>${e.chunk ? "feste Wendung: <span lang=\"uk\">" + esc(e.chunk) + "</span>" : esc((App.C.enablers[e.enabler] || {}).title || e.enabler || "—")}</td></tr>`).join("")}</tbody></table></div>`;
+      `<tr><td ${LA()} class="bad">${esc(e.span)}</td><td ${LA()}>${esc(e.correction)}</td><td>${e.chunk ? "feste Wendung: <span lang=\"" + esc(App.lang) + "\">" + esc(e.chunk) + "</span>" : esc((App.C.enablers[e.enabler] || {}).title || e.enabler || "—")}</td></tr>`).join("")}</tbody></table></div>`;
     if (!isCheck) {
       const dx = LB.diagnose(f, a.grade, App.C.enablers, enablerStatus());
       if (dx.holes.length || dx.chunks.length) {
         detail += `<div class="card stack"><h3>Wahrscheinliche Lücken</h3>${dx.holes.slice(0, 4).map((h) => `<div class="stack"><div><b>${esc(h.title)}</b> <span class="muted small">${esc(h.cefr)} · ${h.errors} Hinweis(e)</span></div>
           <div class="row small">Zuerst prüfen: ${h.check_first.filter((id) => (App.C.enablers[id] || {}).channel === "text").map((id) => `<button class="btn quiet small" data-act="start-check" data-id="${esc(id)}">${esc(App.C.enablers[id].title)}</button>`).join(" ") || "—"}</div></div>`).join("")}
-          ${dx.chunks.length ? `<p class="small">Feste Wendungen zum Üben (keine Grammatiklücke): <span lang="uk">${dx.chunks.map(esc).join(", ")}</span></p>` : ""}</div>`;
+          ${dx.chunks.length ? `<p class="small">Feste Wendungen zum Üben (keine Grammatiklücke): <span ${LA()}>${dx.chunks.map(esc).join(", ")}</span></p>` : ""}</div>`;
       }
     }
     const actions = `<div class="row">${s && TESTABLE.has(s.mode) ? `<button class="btn" data-act="start-test" data-id="${esc(s.id)}">Neuer Test</button>` : ""}${isCheck ? `<button class="btn" data-act="start-check" data-id="${esc(a.skill)}">Neuer Check</button>` : ""}
@@ -344,13 +412,13 @@
     App.screen = { kind: "run", run }; run.start = () => startTest(id);
     setRun(run, { phase: "busy", msg: "Test wird erstellt …" });
     try {
-      const seen = App.attempts.filter((a) => a.skill === id && a.form).map((a) => a.form.summary).filter(Boolean).slice(-8);
-      const prev = App.attempts.filter((a) => a.skill === id && a.form);
+      const seen = myAttempts().filter((a) => a.skill === id && a.form).map((a) => a.form.summary).filter(Boolean).slice(-8);
+      const prev = myAttempts().filter((a) => a.skill === id && a.form);
       let form = null, warnings = [], avoid = "", seed = Math.floor(Math.random() * 1e6);
       for (let t = 0; t < 2; t++, seed++) {
         setRun(run, { msg: t ? "Neuer Versuch: Test wird erstellt …" : "Test wird erstellt …" });
         const raw = await ask(LB.genPrompt(s, real, App.C.enablers, seed, seen, settings().il, avoid), "default");
-        form = normalizeForm(raw, { id: "f-" + rid(), kind: "full", skill: id, lang: "uk", seed, mode: s.mode, rubric: s.rubric, template: s.mode, generator: "sample:default" });
+        form = normalizeForm(raw, { id: "f-" + rid(), kind: "full", skill: id, lang: App.lang, seed, mode: s.mode, rubric: s.rubric, template: s.mode, generator: "sample:default" });
         const probs = structural(form, s.mode);
         if (prev.some((a) => LB.formSimilarity(a.form, form) > App.cfg.max_form_similarity)) probs.push("zu ähnlich wie ein früherer Test");
         if (!probs.length && settings().validate) {
@@ -371,15 +439,28 @@
   }
 
   async function startCheck(id) {
-    const en = App.C.enablers[id];
+    const en = App.C.enablers[id], cat = App.C.checks[id];
     const run = newRun("check", "Check: " + en.title, null);
     App.screen = { kind: "run", run }; run.start = () => startCheck(id);
-    setRun(run, { phase: "busy", msg: "Check wird erstellt …" });
+    const n = en.items || 10, seed = Math.floor(Math.random() * 1e6);
+    if (cat) {   // fixed catalogue: no Claude call, items spread over bands and facets, least-seen first
+      const seen = {};
+      myAttempts().filter((a) => a.skill === id && a.form && !a.voided).forEach((a) => (a.form.items || []).forEach((it) => (seen[it.id] = (seen[it.id] || 0) + 1)));
+      const items = LB.catalogueForm(cat, LB.sampleCheck(cat, n, seen, seed), settings().il);
+      run.form = { id: "f-" + rid(), kind: "enabler_check", skill: id, lang: App.lang, seed, source: "catalogue", rubric: "rubric.enabler-check.v1", template: "enabler-check.v1", items, stimuli: [], brief: [] };
+      setRun(run, { phase: "ready" });
+      return;
+    }
+    setRun(run, { phase: "busy", msg: "Für diesen Baustein gibt es noch keinen Fragenkatalog. Check wird erstellt …" });
     try {
-      const seed = Math.floor(Math.random() * 1e6);
       const raw = await ask(LB.enablerCheckPrompt(en, settings().il, seed), "default");
-      run.form = normalizeForm(raw, { id: "f-" + rid(), kind: "enabler_check", skill: id, lang: "uk", seed, rubric: "rubric.enabler-check.v1", template: "enabler-check.v1" });
-      run.form.items.forEach((it) => { if (!it.enablers.length) it.enablers = [id]; });
+      run.form = normalizeForm(raw, { id: "f-" + rid(), kind: "enabler_check", skill: id, lang: App.lang, seed, source: "generated", rubric: "rubric.enabler-check.v1", template: "enabler-check.v1" });
+      run.form.items.forEach((it) => {
+        if (!it.enablers.length) it.enablers = [id];
+        if (it.format) it.type = it.format === "choice" ? "mcq" : "gap_fill";
+        if (it.stem && !it.prompt) it.prompt = it.stem + (it.cue ? " (" + it.cue + ")" : "");
+        it.rule = it.rule || it.facet || "";
+      });
       const probs = structural(run.form, "check");
       run.warnings = probs.map((p) => ({ detail: p }));
       setRun(run, { phase: "ready" });
@@ -419,7 +500,7 @@
     setRun(run, { phase: "busy", msg: "Wird bewertet …" });
     try {
       let grade, feedback = null, regraded = false, response;
-      if (run.type === "check") { response = { answers: run.answers }; grade = await gradeItems(f, run.answers, true); }
+      if (run.type === "check") { response = { answers: run.answers }; grade = f.source === "catalogue" ? { item_results: LB.gradeKeyed(f, run.answers).results, errors: [], grader: "key:catalogue" } : await gradeItems(f, run.answers, true); }
       else if (run.mode === "R" || run.mode === "L") { response = { answers: run.answers }; grade = await gradeItems(f, run.answers, false); }
       else {
         const s = skillById(f.skill);
@@ -428,15 +509,16 @@
         const r = await gradeOpen(s, f, text); grade = r.grade; regraded = r.regraded; feedback = grade.feedback; delete grade.feedback;
       }
       const rub = App.C.rubrics[f.rubric];
-      const thr = run.type === "check" ? 0.9 : LB.thresholdFor(skillById(f.skill), App.cfg);
+      const thr = run.type === "check" ? ((App.C.enablers[f.skill] || {}).threshold || 0.9) : LB.thresholdFor(skillById(f.skill), App.cfg);
       const outcome = LB.attemptOutcome(rub, grade, thr, App.cfg);
-      const a = { id: "a-" + Date.now().toString(36) + rid().slice(0, 4), skill: f.skill, kind: f.kind, mode: run.mode || "check",
+      if (run.type === "check") { const bd = LB.checkBreakdown(f.items, grade.item_results, thr); Object.assign(outcome, { passed: bd.status === "known", reason: bd.verdict, breakdown: bd }); }
+      const a = { id: "a-" + Date.now().toString(36) + rid().slice(0, 4), lang: App.lang, skill: f.skill, kind: f.kind, mode: run.mode || "check",
         channel: run.mode === "L" ? "tts" : "text", seed: f.seed, takenOn: today(), at: nowIso(), form: f, response, grade, outcome, feedback, regraded, voided: false };
       App.attempts.push(a); saveAttempt(a);
-      if (run.type === "check") { App.profile.checks[f.skill] = { score: outcome.score, at: a.at, attempt: a.id }; saveProfile(); }
+      if (run.type === "check") { App.profile.checks[f.skill] = { score: outcome.score, status: outcome.breakdown.status, at: a.at, attempt: a.id, source: f.source || "generated" }; saveProfile(); }
       else {
         const s = skillById(f.skill), st = statusOf(s);
-        if (st.status === "badge" && !App.profile.badges[s.id]) { App.profile.badges[s.id] = { awardedAt: a.at, pair: st.badge.pair }; saveProfile(); }
+        if (st.status === "badge" && !App.profile.badges[pk(s.id)]) { App.profile.badges[pk(s.id)] = { awardedAt: a.at, pair: st.badge.pair }; saveProfile(); }
       }
       setRun(run, { phase: "result", attempt: a });
     } catch (e) { run.start = () => submit(run); setRun(run, { phase: "error", msg: e.message }); }
@@ -478,11 +560,11 @@
       const s = skillById(p.skill);
       const stim = !p.stimulus ? "" : p.stimulus.kind === "audio_script"
         ? `<button class="btn secondary small" data-act="play-probe" data-i="${pi}" ${(run.plays["p" + pi] || 0) >= 2 ? "disabled" : ""}>▶ Anhören (${2 - (run.plays["p" + pi] || 0)}× übrig)</button>`
-        : `<div class="doc" lang="uk">${esc(p.stimulus.body)}</div>`;
+        : `<div class="doc" ${LA()}>${esc(p.stimulus.body)}</div>`;
       const items = p.items.map((it) => {
         const v = run.answers[it.id] || "";
-        const input = it.type === "mcq" ? `<div class="opts">${(it.options || []).map((o) => `<label><input type="radio" name="q-${esc(it.id)}" value="${esc(o)}" data-ans="${esc(it.id)}" ${v === o ? "checked" : ""}> <span lang="uk">${esc(o)}</span></label>`).join("")}</div>`
-          : `<input type="text" lang="uk" data-ans="${esc(it.id)}" value="${esc(v)}" autocomplete="off">`;
+        const input = it.type === "mcq" ? `<div class="opts">${(it.options || []).map((o) => `<label><input type="radio" name="q-${esc(it.id)}" value="${esc(o)}" data-ans="${esc(it.id)}" ${v === o ? "checked" : ""}> <span ${LA()}>${esc(o)}</span></label>`).join("")}</div>`
+          : `<input type="text" ${LA()} data-ans="${esc(it.id)}" value="${esc(v)}" autocomplete="off">`;
         return `<div class="item"><span class="q">${esc(it.prompt)}</span>${input}</div>`;
       }).join("");
       return `<div class="card stack"><div class="row"><h3>${esc(s.title)}</h3><span class="chip st-untested">${MODE_DE[s.mode]}</span></div>${stim}${items}</div>`;
@@ -505,7 +587,7 @@
       run.probeResults = run.probe.map((p) => {
         const correct = p.items.filter((it) => keyed.results[it.id]).length;
         const status = LB.probeStatus(correct, p.items.length || 3);
-        App.profile.probes[p.skill] = { status, correct, total: p.items.length, at };
+        App.profile.probes[pk(p.skill)] = { status, correct, total: p.items.length, at };
         return { skill: p.skill, correct, total: p.items.length, status };
       });
       run.itemResults = keyed.results;
@@ -516,7 +598,7 @@
 
   function renderProbeResult(run) {
     const rows = run.probeResults.map((r) => { const s = skillById(r.skill); return `<tr><td>${esc(s.title)}</td><td>${MODE_DE[s.mode]}</td><td class="num">${r.correct}/${r.total}</td><td>${chip(r.status)}</td><td>${TESTABLE.has(s.mode) ? `<button class="btn quiet small" data-act="open-skill" data-id="${esc(s.id)}">öffnen</button>` : ""}</td></tr>`; }).join("");
-    const review = run.probe.map((p) => p.items.map((it) => `<tr><td>${esc(it.prompt)}</td><td lang="uk" class="${run.itemResults[it.id] ? "ok" : "bad"}">${esc(run.answers[it.id] || "—")}</td><td lang="uk">${esc(it.key.join(" / "))}</td></tr>`).join("")).join("");
+    const review = run.probe.map((p) => p.items.map((it) => `<tr><td>${esc(it.prompt)}</td><td ${LA()} class="${run.itemResults[it.id] ? "ok" : "bad"}">${esc(run.answers[it.id] || "—")}</td><td ${LA()}>${esc(it.key.join(" / "))}</td></tr>`).join("")).join("");
     return `<h2>${esc(run.title)}</h2><div class="card"><table class="plain"><thead><tr><th>Kompetenz</th><th>Modus</th><th>Richtig</th><th>Stand</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
       <details class="card"><summary>Alle Aufgaben ansehen</summary><table class="plain"><thead><tr><th>Aufgabe</th><th>Deine Antwort</th><th>Lösung</th></tr></thead><tbody>${review}</tbody></table></details>
       <div class="row"><a class="btn" href="#karte" data-act="home">Zur Karte</a><a class="btn quiet" href="#einstufung" data-act="home">Nächstes Thema</a></div>`;
@@ -540,6 +622,15 @@
   document.addEventListener("change", (e) => {
     const t = e.target;
     if (t.dataset && t.dataset.ans && App.screen && App.screen.run) App.screen.run.answers[t.dataset.ans] = t.value;
+    if (t.id === "lang-pick") { settings().lang = t.value; useLanguage(t.value); App.screen = null; saveProfile(); render(); return; }
+    if (t.id === "import-file" && t.files && t.files[0]) { importData(t.files[0]); return; }
+    if (t.dataset && t.dataset.ai) {
+      const c = window.LBStandalone.getConfig(), path = t.dataset.ai.split(".");
+      if (path[0] === "provider") c.provider = t.value; else { let o = c; path.slice(0, -1).forEach((k) => (o = o[k])); o[path[path.length - 1]] = t.value.trim(); }
+      window.LBStandalone.setConfig(c); App.sample = window.LBStandalone.makeSample(c);
+      if (path[0] === "provider") render(); else { const m = $("#ai-msg"); if (m) m.textContent = App.sample ? "Gespeichert." : "Noch unvollständig."; }
+      return;
+    }
     if (t.dataset && t.dataset.setting) {
       settings()[t.dataset.setting] = t.type === "checkbox" ? t.checked : t.value;
       saveProfile(); render();
@@ -547,6 +638,8 @@
   });
 
   document.addEventListener("click", async (e) => {
+    const tab = e.target.closest("nav.tabs a");
+    if (tab && tab.getAttribute("href") === (location.hash || "#karte")) { App.screen = null; render(); return; }  // same tab: leave the current run
     const b = e.target.closest("[data-act]"); if (!b) return;
     const act = b.dataset.act, id = b.dataset.id, run = App.screen && App.screen.run;
     switch (act) {
@@ -580,6 +673,21 @@
         if (a.kind === "enabler_check" && App.profile.checks[a.skill] && App.profile.checks[a.skill].attempt === a.id) { delete App.profile.checks[a.skill]; saveProfile(); }
         render(); break;
       }
+      case "ai-test": {
+        const m = $("#ai-msg");
+        if (!App.sample) { m.textContent = "Erst Anbieter, Schlüssel und Modell eintragen."; break; }
+        m.textContent = "Teste …";
+        try { const r = await App.sample.json('Antworte mit {"ok": true}.', { modelTier: "quick" }); m.textContent = r && r.ok ? "Verbindung funktioniert." : "Antwort erhalten, aber unerwartet: " + JSON.stringify(r).slice(0, 80); }
+        catch (err) { m.textContent = "Fehler: " + (err.message || err); }
+        break;
+      }
+      case "download": {
+        const data = JSON.stringify({ app: "lingbadge", version: 1, exportedAt: nowIso(), profile: App.profile, attempts: App.attempts }, null, 1);
+        const url = URL.createObjectURL(new Blob([data], { type: "application/json" }));
+        const link = document.createElement("a"); link.href = url; link.download = "lingbadge-" + today() + ".json"; document.body.appendChild(link); link.click(); link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        break;
+      }
       case "export": {
         const data = JSON.stringify({ profile: App.profile, attempts: App.attempts }, null, 1);
         try { await navigator.clipboard.writeText(data); $("#export-msg").textContent = "Kopiert (" + Math.round(data.length / 1024) + " KB)."; }
@@ -589,20 +697,47 @@
     }
   });
 
+  async function importData(file) {
+    const msg = (t) => { const m = $("#export-msg"); if (m) m.textContent = t; };
+    try {
+      const d = JSON.parse(await file.text());
+      if (!d || !d.profile || !Array.isArray(d.attempts)) throw new Error("keine LingBadge-Datei");
+      const have = new Set(App.attempts.map((a) => a.id));
+      const added = d.attempts.filter((a) => a && a.id && !have.has(a.id));
+      App.attempts = App.attempts.concat(added).sort((a, b) => (a.at < b.at ? -1 : 1));
+      App.profile = { settings: Object.assign({}, App.profile.settings, d.profile.settings || {}), probes: Object.assign({}, App.profile.probes, d.profile.probes),
+        checks: Object.assign({}, App.profile.checks, d.profile.checks), badges: Object.assign({}, App.profile.badges, d.profile.badges) };
+      added.forEach(saveAttempt); await saveProfile();
+      useLanguage(settings().lang || App.lang); render();
+      msg(added.length + " Tests importiert.");
+    } catch (e) { msg("Import fehlgeschlagen: " + e.message); }
+  }
+
   // ------------------------------------------------------------------ boot
   async function boot() {
-    try { App.C = await fetch("content.json").then((r) => r.json()); }
+    try { App.C = window.LB_CONTENT ? JSON.parse(JSON.stringify(window.LB_CONTENT)) : await fetch("content.json").then((r) => r.json()); }
     catch (e) { $("#app").innerHTML = `<p class="note">Inhalte konnten nicht geladen werden. Bitte die Seite neu öffnen.</p>`; return; }
+    App.C.allSkills = App.C.skills;
     App.cfg = LB.cfgFrom(App.C.mastery);
+    useLanguage(App.C.default_lang);
     route(); render();
     window.addEventListener("hashchange", () => { route(); render(); });
-    if (!window.claude || typeof window.claude.use !== "function") { App.connecting = false; render(); return; }
+    if (!window.claude || typeof window.claude.use !== "function") {
+      // Outside claude.ai: local storage and the learner's own API key (app/platform.js).
+      const P = window.LBStandalone;
+      App.platform = "standalone";
+      if (P) { App.db = P.db; App.uid = await P.user.id(); App.sample = P.makeSample(); await loadData(); }
+      useLanguage(settings().lang || App.lang);
+      App.connecting = false; render(); return;
+    }
+    App.platform = "claude.ai";
     const get = (n) => window.claude.use(n).catch(() => null);
     const [db, user, sample, tts] = await Promise.all([get("db"), get("user"), get("sample"), get("tts")]);
     App.sample = sample; App.tts = tts;
     if (db && user) {
       try { const uid = await user.id(); if (uid) { App.db = db; App.uid = uid; await loadData(); } } catch (e) { /* stays unsaved */ }
     }
+    useLanguage(settings().lang || App.lang);
     App.connecting = false; render();
   }
   window.__lb = { App, render, renderResult, renderRun, statusOf };  // debugging hook

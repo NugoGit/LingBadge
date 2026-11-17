@@ -1,0 +1,5 @@
+# Sources for this language: national standards, frequency lists, textbooks. Enablers and realizations cite them by id.
+sources:
+- id: {{code}}-std
+  origin: TODO e.g. Plan curricular del Instituto Cervantes
+  text: TODO what it covers and how we use it

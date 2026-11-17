@@ -1,0 +1,13 @@
+# Question catalogue for one enabler. See docs/question-catalogue.md.
+# band:   core | variant | exception | contrast        format: choice (pick from a closed set) | type (build the form)
+enabler: {{code}}.prag.greetings
+lang: {{code}}
+facets:
+- id: time-of-day
+  band: core
+  format: choice
+  options: [TODO morning greeting, TODO day greeting, TODO evening greeting]   # the complete answer space
+  rule: {de: "TODO Regel auf Deutsch", en: "TODO rule in English"}
+  instruction: {de: "Welcher Gruß passt?", en: "Which greeting fits?"}
+items:
+- {id: g01, facet: time-of-day, stem: "___! (TODO sentence with exactly one gap)", context: {de: "Es ist 8 Uhr morgens.", en: "It is 8 a.m."}, answer: [TODO morning greeting]}

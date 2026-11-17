@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Validate content (errors fail the build; warnings are listed)
+        run: python -m lingbadge.validate content reports
+      - name: Python tests
+        run: pytest -q
+      - name: App bundle is up to date
+        run: python tools/build_app_content.py --check
+      - name: App logic tests
+        run: node tests/core.test.js

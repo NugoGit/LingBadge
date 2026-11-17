@@ -6,7 +6,7 @@ from pathlib import Path
 
 import yaml
 
-from .models import Enabler, Realization, Rubric, Skill, Source, Theme
+from .models import CheckCatalogue, Enabler, Realization, Rubric, Skill, Source, Theme
 
 
 @dataclass
@@ -15,6 +15,8 @@ class Language:
     sources: dict[str, Source] = field(default_factory=dict)
     enablers: dict[str, Enabler] = field(default_factory=dict)
     realizations: dict[str, Realization] = field(default_factory=dict)
+    checks: dict[str, CheckCatalogue] = field(default_factory=dict)
+    meta: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -76,5 +78,9 @@ def load(root: Path) -> Content:
             lang.enablers = _load_dir(d / "enablers", Enabler, "id", errors)
         if (d / "realizations").exists():
             lang.realizations = _load_dir(d / "realizations", Realization, "skill", errors)
+        if (d / "checks").exists():
+            lang.checks = _load_dir(d / "checks", CheckCatalogue, "enabler", errors)
+        if (d / "language.yaml").exists():
+            lang.meta = _read(d / "language.yaml") or {}
         languages[d.name] = lang
     return Content(sources, themes, tdoc.get("domain_gaps", {}), skills, rubrics, languages, errors)

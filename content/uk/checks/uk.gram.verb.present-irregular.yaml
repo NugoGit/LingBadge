@@ -1,0 +1,60 @@
+enabler: uk.gram.verb.present-irregular
+lang: uk
+facets:
+- id: mohty-khotity
+  band: core
+  format: type
+  rule: {de: "могти → можу, можеш …; хотіти → хочу, хочеш …", en: "могти → можу, можеш …; хотіти → хочу, хочеш …"}
+  instruction: {de: "Setze das Verb in der richtigen Form ein.", en: "Put the verb in the right form."}
+- id: pyty
+  band: core
+  format: type
+  rule: {de: "пити → п'ю, п'єш, п'є, п'ємо, п'єте, п'ють", en: "пити → п'ю, п'єш, п'є, п'ємо, п'єте, п'ють"}
+  instruction: {de: "Setze das Verb in der richtigen Form ein.", en: "Put the verb in the right form."}
+- id: ity-yikhaty
+  band: variant
+  format: type
+  rule: {de: "іти → іду/йду, ідеш/йдеш …; їхати → їду, їдеш …", en: "іти → іду/йду, ідеш/йдеш …; їхати → їду, їдеш …"}
+  instruction: {de: "Setze das Verb in der richtigen Form ein.", en: "Put the verb in the right form."}
+- id: yisty
+  band: exception
+  format: type
+  rule: {de: "їсти → їм, їси, їсть, їмо, їсте, їдять", en: "їсти → їм, їси, їсть, їмо, їсте, їдять"}
+  instruction: {de: "Setze das Verb in der richtigen Form ein.", en: "Put the verb in the right form."}
+- id: ye
+  band: exception
+  format: type
+  rule: {de: "бути im Präsens: є (für alle Personen)", en: "бути in the present: є (all persons)"}
+  instruction: {de: "Setze das Verb in der richtigen Form ein.", en: "Put the verb in the right form."}
+items:
+- {id: q01, facet: mohty-khotity, stem: "Я ___ допомогти.", cue: могти, answer: [можу]}
+- {id: q02, facet: mohty-khotity, stem: "Ти ___ прийти завтра?", cue: могти, answer: [можеш]}
+- {id: q03, facet: mohty-khotity, stem: "Вона не ___ говорити зараз.", cue: могти, answer: [може]}
+- {id: q04, facet: mohty-khotity, stem: "Ми ___ зустрітися о п'ятій.", cue: могти, answer: [можемо]}
+- {id: q05, facet: mohty-khotity, stem: "Вони ___ почекати.", cue: могти, answer: [можуть]}
+- {id: q06, facet: mohty-khotity, stem: "Я ___ каву.", cue: хотіти, answer: [хочу]}
+- {id: q07, facet: mohty-khotity, stem: "Що ти ___?", cue: хотіти, answer: [хочеш]}
+- {id: q08, facet: mohty-khotity, stem: "Ви ___ чаю?", cue: хотіти, answer: [хочете]}
+- {id: q09, facet: mohty-khotity, stem: "Діти ___ морозиво.", cue: хотіти, answer: [хочуть]}
+- {id: q10, facet: mohty-khotity, stem: "Він ___ спати.", cue: хотіти, answer: [хоче]}
+- {id: q11, facet: pyty, stem: "Я ___ воду.", cue: пити, answer: [п'ю]}
+- {id: q12, facet: pyty, stem: "Ти ___ каву з молоком?", cue: пити, answer: [п'єш]}
+- {id: q13, facet: pyty, stem: "Вони ___ чай.", cue: пити, answer: [п'ють]}
+- {id: q14, facet: pyty, stem: "Ми ___ сік.", cue: пити, answer: [п'ємо]}
+- {id: q15, facet: pyty, stem: "Він не ___ каву.", cue: пити, answer: [п'є]}
+- {id: q16, facet: ity-yikhaty, stem: "Я ___ додому.", cue: іти, answer: [іду, йду]}
+- {id: q17, facet: ity-yikhaty, stem: "Куди ти ___?", cue: іти, answer: [ідеш, йдеш]}
+- {id: q18, facet: ity-yikhaty, stem: "Ми ___ в кіно.", cue: іти, answer: [ідемо, йдемо]}
+- {id: q19, facet: ity-yikhaty, stem: "Я ___ до Львова.", cue: їхати, answer: [їду]}
+- {id: q20, facet: ity-yikhaty, stem: "Ти ___ автобусом?", cue: їхати, answer: [їдеш]}
+- {id: q21, facet: ity-yikhaty, stem: "Вони ___ у вівторок.", cue: їхати, answer: [їдуть]}
+- {id: q22, facet: ity-yikhaty, stem: "Куди ви ___?", cue: їхати, answer: [їдете]}
+- {id: q23, facet: yisty, stem: "Я ___ борщ.", cue: їсти, answer: [їм]}
+- {id: q24, facet: yisty, stem: "Що ти ___ на сніданок?", cue: їсти, answer: [їси]}
+- {id: q25, facet: yisty, stem: "Він ___ піцу.", cue: їсти, answer: [їсть]}
+- {id: q26, facet: yisty, stem: "Ми ___ о першій.", cue: їсти, answer: [їмо]}
+- {id: q27, facet: yisty, stem: "Вони ___ вдома.", cue: їсти, answer: [їдять]}
+- {id: q28, facet: yisty, stem: "Ви ___ м'ясо?", cue: їсти, answer: [їсте]}
+- {id: q29, facet: ye, stem: "У мене ___ сестра.", cue: бути, answer: [є]}
+- {id: q30, facet: ye, stem: "У вас ___ вільний столик?", cue: бути, answer: [є]}
+- {id: q31, facet: ye, stem: "Тут ___ аптека?", cue: бути, answer: [є]}

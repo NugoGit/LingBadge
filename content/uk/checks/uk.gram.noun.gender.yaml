@@ -1,0 +1,50 @@
+# Gender is tested the Ukrainian way: which pronoun replaces the noun.
+enabler: uk.gram.noun.gender
+lang: uk
+facets:
+- id: by-ending
+  band: core
+  format: choice
+  options: [він, вона, воно]
+  rule: {de: "Konsonant → він, -а → вона, -о/-е → воно", en: "consonant → він, -а → вона, -о/-е → воно"}
+  instruction: {de: "Welches Pronomen ersetzt das Nomen?", en: "Which pronoun replaces the noun?"}
+- id: soft
+  band: variant
+  format: choice
+  options: [він, вона, воно]
+  rule: {de: "-я meist вона, aber -ння/-ття → воно; -ь kann він (день) oder вона (ніч) sein", en: "-я is usually вона, but -ння/-ття → воно; -ь can be він (день) or вона (ніч)"}
+  instruction: {de: "Welches Pronomen ersetzt das Nomen?", en: "Which pronoun replaces the noun?"}
+- id: against-ending
+  band: exception
+  format: choice
+  options: [він, вона, воно]
+  rule: {de: "Gegen die Endung: тато, дядько, Микола → він; кафе, ім'я → воно; мати → вона", en: "Against the ending: тато, дядько, Микола → він; кафе, ім'я → воно; мати → вона"}
+  instruction: {de: "Welches Pronomen ersetzt das Nomen?", en: "Which pronoun replaces the noun?"}
+items:
+- {id: g01, facet: by-ending, stem: "Де стіл? — ___ тут.", answer: [він]}
+- {id: g02, facet: by-ending, stem: "Де брат? — ___ на роботі.", answer: [він]}
+- {id: g03, facet: by-ending, stem: "Де автобус? — ___ вже їде.", answer: [він]}
+- {id: g04, facet: by-ending, stem: "Де кава? — ___ на столі.", answer: [вона]}
+- {id: g05, facet: by-ending, stem: "Де школа? — ___ там.", answer: [вона]}
+- {id: g06, facet: by-ending, stem: "Де мама? — ___ вдома.", answer: [вона]}
+- {id: g07, facet: by-ending, stem: "Де молоко? — ___ в холодильнику.", answer: [воно]}
+- {id: g08, facet: by-ending, stem: "Де село? — ___ за річкою.", answer: [воно]}
+- {id: g09, facet: by-ending, stem: "Де вікно? — ___ там.", answer: [воно]}
+- {id: g10, facet: by-ending, stem: "Де море? — ___ там, за готелем.", answer: [воно]}
+- {id: g11, facet: by-ending, stem: "Де телефон? — ___ на столі.", answer: [він]}
+- {id: g12, facet: by-ending, stem: "Де сумка? — ___ тут.", answer: [вона]}
+- {id: g13, facet: soft, stem: "Де кухня? — ___ там.", answer: [вона]}
+- {id: g14, facet: soft, stem: "Де пісня? — ___ у плейлисті.", answer: [вона]}
+- {id: g15, facet: soft, stem: "Де завдання? — ___ в зошиті.", answer: [воно]}
+- {id: g16, facet: soft, stem: "Де посвідчення? — ___ в сумці.", answer: [воно]}
+- {id: g17, facet: soft, stem: "Де олівець? — ___ тут.", answer: [він]}
+- {id: g18, facet: soft, stem: "Де вчитель? — ___ у класі.", answer: [він]}
+- {id: g19, facet: soft, stem: "Де кінь? — ___ у полі.", answer: [він]}
+- {id: g20, facet: soft, stem: "Де сіль? — ___ на столі.", answer: [вона]}
+- {id: g21, facet: soft, stem: "Де словник? — ___ на полиці.", answer: [він]}
+- {id: g22, facet: against-ending, stem: "Де тато? — ___ на роботі.", answer: [він]}
+- {id: g23, facet: against-ending, stem: "Де дядько? — ___ у Львові.", answer: [він]}
+- {id: g24, facet: against-ending, stem: "Де Микола? — ___ вдома.", answer: [він]}
+- {id: g25, facet: against-ending, stem: "Де кафе? — ___ біля вокзалу.", answer: [воно]}
+- {id: g26, facet: against-ending, stem: "Де ім'я на квитку? — ___ ось тут.", answer: [воно]}
+- {id: g27, facet: against-ending, stem: "Де мати? — ___ вдома.", answer: [вона]}

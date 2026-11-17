@@ -1,0 +1,54 @@
+enabler: uk.gram.pron.personal-oblique
+lang: uk
+facets:
+- id: sg
+  band: core
+  format: type
+  rule: {de: "мене/тебе (wen? — Akk.), мені/тобі (wem? — Dat.)", en: "мене/тебе (whom? — acc.), мені/тобі (to whom? — dat.)"}
+  instruction: {de: "Setze das Pronomen in der richtigen Form ein.", en: "Put the pronoun in the right form."}
+- id: pl
+  band: variant
+  format: type
+  rule: {de: "нас/вас (Akk.), нам/вам (Dat.)", en: "нас/вас (acc.), нам/вам (dat.)"}
+  instruction: {de: "Setze das Pronomen in der richtigen Form ein.", en: "Put the pronoun in the right form."}
+- id: u-mene
+  band: exception
+  format: type
+  rule: {de: "Besitz mit у + Genitiv: у мене, у тебе, у нас, у вас (є …)", en: "Possession with у + genitive: у мене, у тебе, у нас, у вас (є …)"}
+  instruction: {de: "Setze das Pronomen in der richtigen Form ein.", en: "Put the pronoun in the right form."}
+- id: acc-or-dat
+  band: contrast
+  format: choice
+  rule: {de: "звати, бачити, чекати на, любити → мене/вас; подобатися, треба, дзвонити, дякувати, скільки років → мені/вам", en: "звати, бачити, чекати на, любити → мене/вас; подобатися, треба, дзвонити, дякувати, скільки років → мені/вам"}
+  instruction: {de: "Welche Form passt?", en: "Which form fits?"}
+items:
+- {id: r01, facet: sg, stem: "___ звати Олена.", cue: я, answer: [мене]}
+- {id: r02, facet: sg, stem: "Як ___ звати?", cue: ти, answer: [тебе]}
+- {id: r03, facet: sg, stem: "___ подобається Київ.", cue: я, answer: [мені]}
+- {id: r04, facet: sg, stem: "Чи ___ подобається кава?", cue: ти, answer: [тобі]}
+- {id: r05, facet: sg, stem: "Подзвони ___ завтра!", cue: я, answer: [мені]}
+- {id: r06, facet: sg, stem: "Ти ___ розумієш?", cue: я, answer: [мене]}
+- {id: r07, facet: sg, stem: "Скільки ___ років?", cue: ти, answer: [тобі]}
+- {id: r08, facet: sg, stem: "Я ___ люблю.", cue: ти, answer: [тебе]}
+- {id: r09, facet: sg, stem: "Я ___ чекаю.", cue: ти, answer: [тебе]}
+- {id: r10, facet: sg, stem: "___ треба йти.", cue: я, answer: [мені]}
+- {id: r11, facet: pl, stem: "Дякую ___!", cue: ви, answer: [вам]}
+- {id: r12, facet: pl, stem: "Я ___ чекаю.", cue: ви, answer: [вас]}
+- {id: r13, facet: pl, stem: "___ треба йти.", cue: ми, answer: [нам]}
+- {id: r14, facet: pl, stem: "Він ___ знає.", cue: ми, answer: [нас]}
+- {id: r15, facet: pl, stem: "Як ___ звати?", cue: ви, answer: [вас]}
+- {id: r16, facet: pl, stem: "Чи ___ подобається Відень?", cue: ви, answer: [вам]}
+- {id: r17, facet: pl, stem: "Подзвоніть ___, будь ласка.", cue: ми, answer: [нам]}
+- {id: r18, facet: pl, stem: "Я ___ не розумію.", cue: ви, answer: [вас]}
+- {id: r19, facet: u-mene, stem: "У ___ є брат.", cue: я, answer: [мене]}
+- {id: r20, facet: u-mene, stem: "У ___ є час?", cue: ти, answer: [тебе]}
+- {id: r21, facet: u-mene, stem: "У ___ є вільний столик?", cue: ви, answer: [вас]}
+- {id: r22, facet: u-mene, stem: "У ___ немає машини.", cue: ми, answer: [нас]}
+- {id: r23, facet: acc-or-dat, stem: "Як ___ звати?", options: [вас, вам], answer: [вас]}
+- {id: r24, facet: acc-or-dat, stem: "Скільки ___ років?", options: [вас, вам], answer: [вам]}
+- {id: r25, facet: acc-or-dat, stem: "___ холодно.", options: [мене, мені], answer: [мені]}
+- {id: r26, facet: acc-or-dat, stem: "Ти ___ бачиш?", options: [мене, мені], answer: [мене]}
+- {id: r27, facet: acc-or-dat, stem: "Дякую ___!", options: [тебе, тобі], answer: [тобі]}
+- {id: r28, facet: acc-or-dat, stem: "Я чекаю на ___.", options: [тебе, тобі], answer: [тебе]}
+- {id: r29, facet: acc-or-dat, stem: "___ подобається ця пісня.", options: [нас, нам], answer: [нам]}
+- {id: r30, facet: acc-or-dat, stem: "Вони ___ запрошують.", options: [нас, нам], answer: [нас]}

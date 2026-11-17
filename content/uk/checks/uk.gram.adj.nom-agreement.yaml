@@ -1,0 +1,45 @@
+enabler: uk.gram.adj.nom-agreement
+lang: uk
+facets:
+- id: hard
+  band: core
+  format: type
+  rule: {de: "Harte Adjektive: -ий, -а, -е, -і (новий, нова, нове, нові)", en: "Hard adjectives: -ий, -а, -е, -і (новий, нова, нове, нові)"}
+  instruction: {de: "Setze das Adjektiv in der richtigen Form ein.", en: "Put the adjective in the right form."}
+- id: soft
+  band: variant
+  format: type
+  rule: {de: "Weiche Adjektive: -ій, -я, -є, -і (синій, синя, синє, сині)", en: "Soft adjectives: -ій, -я, -є, -і (синій, синя, синє, сині)"}
+  instruction: {de: "Setze das Adjektiv in der richtigen Form ein.", en: "Put the adjective in the right form."}
+- id: misleading-noun
+  band: exception
+  format: type
+  rule: {de: "Das Genus des Nomens zählt, nicht die Endung: тато, Микола → -ий; кафе, ім'я → -е; ніч, сіль → -а", en: "The noun's gender counts, not its ending: тато, Микола → -ий; кафе, ім'я → -е; ніч, сіль → -а"}
+  instruction: {de: "Setze das Adjektiv in der richtigen Form ein.", en: "Put the adjective in the right form."}
+items:
+- {id: j01, facet: hard, stem: "Це ___ квартира.", cue: новий, answer: [нова]}
+- {id: j02, facet: hard, stem: "Київ — ___ місто.", cue: великий, answer: [велике]}
+- {id: j03, facet: hard, stem: "Мої друзі дуже ___.", cue: добрий, answer: [добрі]}
+- {id: j04, facet: hard, stem: "У мене ___ телефон.", cue: новий, answer: [новий]}
+- {id: j05, facet: hard, stem: "Кава ___.", cue: гарячий, answer: [гаряча]}
+- {id: j06, facet: hard, stem: "Це ___ вікно.", cue: відкритий, answer: [відкрите]}
+- {id: j07, facet: hard, stem: "Ці квіти ___.", cue: червоний, answer: [червоні]}
+- {id: j08, facet: hard, stem: "Мій брат ___.", cue: високий, answer: [високий]}
+- {id: j09, facet: hard, stem: "Сьогодні ___ погода.", cue: гарний, answer: [гарна]}
+- {id: j10, facet: hard, stem: "Молоко ___.", cue: холодний, answer: [холодне]}
+- {id: j11, facet: hard, stem: "Борщ дуже ___.", cue: смачний, answer: [смачний]}
+- {id: j12, facet: soft, stem: "У мене ___ куртка.", cue: синій, answer: [синя]}
+- {id: j13, facet: soft, stem: "Тут ___ море.", cue: синій, answer: [синє]}
+- {id: j14, facet: soft, stem: "Це ___ сукня.", cue: літній, answer: [літня]}
+- {id: j15, facet: soft, stem: "Це ___ автобус.", cue: останній, answer: [останній]}
+- {id: j16, facet: soft, stem: "Це ___ поїзд?", cue: вечірній, answer: [вечірній]}
+- {id: j17, facet: soft, stem: "Це ___ кімната.", cue: середній, answer: [середня]}
+- {id: j18, facet: soft, stem: "Ці штани ___.", cue: синій, answer: [сині]}
+- {id: j19, facet: soft, stem: "Це ___ речення.", cue: останній, answer: [останнє]}
+- {id: j20, facet: misleading-noun, stem: "Мій тато дуже ___.", cue: добрий, answer: [добрий]}
+- {id: j21, facet: misleading-noun, stem: "Микола ___.", cue: високий, answer: [високий]}
+- {id: j22, facet: misleading-noun, stem: "Це ___ кафе.", cue: новий, answer: [нове]}
+- {id: j23, facet: misleading-noun, stem: "Це ___ ім'я.", cue: гарний, answer: [гарне]}
+- {id: j24, facet: misleading-noun, stem: "Надворі ___ ніч.", cue: теплий, answer: [тепла]}
+- {id: j25, facet: misleading-noun, stem: "Це ___ сіль.", cue: морський, answer: [морська]}
+- {id: j26, facet: misleading-noun, stem: "Мій дядько ___.", cue: веселий, answer: [веселий]}

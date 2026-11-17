@@ -1,0 +1,18 @@
+# One realization per universal skill (content/core/skills). File name = skill id.
+skill: personal.intro.SI
+lang: {{code}}
+cefr: A1
+register: [informal, formal]
+variety: standard
+exponents:                # typical target phrases; the test generator and grader use them
+- TODO first typical phrase
+- TODO second typical phrase
+enablers:
+  required:               # productive = the learner builds the form; formulaic = memorised chunk (may be above A1)
+  - id: {{code}}.prag.greetings
+    use: productive
+  supporting: []
+rubric_specifics:
+  key_structures: TODO which structures must be right to pass
+version: 1
+status: draft

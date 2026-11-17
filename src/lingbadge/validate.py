@@ -1,6 +1,6 @@
 """Validate the content tree and write trace, coverage and overview reports.
 
-Usage: python -m lingobadge.validate [content_dir] [reports_dir]
+Usage: python -m lingbadge.validate [content_dir] [reports_dir]
 Exit code 1 if there are errors.
 """
 from __future__ import annotations
@@ -10,6 +10,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from .checks import validate_catalogue
 from .content import Content, load
 from .models import CEFR_ORDER, MVP_BADGE_MODES
 
@@ -112,6 +113,15 @@ def check(c: Content) -> tuple[list[str], list[str]]:
         for e in lang.enablers.values():
             if e.id not in used and lvl(e.cefr) <= lvl("A1"):
                 warn.append(f"{e.id}: A1 enabler not used by any {code} realization")
+        for cat in lang.checks.values():
+            e2, w2 = validate_catalogue(cat, lang.enablers)
+            err += e2
+            warn += w2
+        no_cat = sorted(e.id for e in lang.enablers.values()
+                        if e.check.channel == "text" and e.kind != "lexis" and e.id not in lang.checks and lvl(e.cefr) <= lvl("A1"))
+        if no_cat and lang.checks:
+            warn.append(f"{code}: {len(no_cat)} A1 enablers without a question catalogue (checks fall back to generated items): "
+                        + ", ".join(no_cat))
         missing = sorted(set(c.skills) - set(lang.realizations))
         if missing and len(missing) < len(c.skills) / 2:
             warn.append(f"{code}: {len(missing)} skills without realization: {', '.join(missing)}")
@@ -280,7 +290,8 @@ def main(argv=None):
     (out / "trace.md").write_text(trace_report(c), encoding="utf-8")
     (out / "coverage.md").write_text(coverage_report(c), encoding="utf-8")
     write_csvs(c, out)
-    summary = [f"skills: {len(c.skills)}"] + [f"{k}: {len(v.enablers)} enablers, {len(v.realizations)} realizations"
+    summary = [f"skills: {len(c.skills)}"] + [f"{k}: {len(v.enablers)} enablers, {len(v.realizations)} realizations, "
+                                               f"{len(v.checks)} catalogues ({sum(len(x.items) for x in v.checks.values())} items)"
                                                for k, v in c.languages.items()]
     text = "\n".join(summary + [f"\nERRORS ({len(err)})"] + err + [f"\nWARNINGS ({len(warn)})"] + warn) + "\n"
     (out / "validation.txt").write_text(text, encoding="utf-8")

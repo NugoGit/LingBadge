@@ -1,0 +1,61 @@
+enabler: uk.gram.noun.acc-sg
+lang: uk
+facets:
+- id: fem-a
+  band: core
+  format: type
+  rule: {de: "Feminina -а → -у, -я → -ю: кава → каву, пісня → пісню", en: "Feminines -а → -у, -я → -ю: кава → каву, пісня → пісню"}
+  instruction: {de: "Setze das Wort in der richtigen Form ein.", en: "Put the word in the right form."}
+- id: inanimate
+  band: core
+  format: type
+  rule: {de: "Unbelebte Maskulina und Neutra bleiben wie im Nominativ: суп → суп, молоко → молоко", en: "Inanimate masculines and neuters stay as in the nominative: суп → суп, молоко → молоко"}
+  instruction: {de: "Setze das Wort in der richtigen Form ein.", en: "Put the word in the right form."}
+- id: animate-masc
+  band: variant
+  format: type
+  rule: {de: "Belebte Maskulina auf -а/-я (wie Genitiv): брат → брата, вчитель → вчителя", en: "Animate masculines take -а/-я (like the genitive): брат → брата, вчитель → вчителя"}
+  instruction: {de: "Setze das Wort in der richtigen Form ein.", en: "Put the word in the right form."}
+- id: special
+  band: exception
+  format: type
+  rule: {de: "Besondere Fälle: тато → тата, кіт → кота, Микола → Миколу, таксі bleibt", en: "Special cases: тато → тата, кіт → кота, Микола → Миколу, таксі stays"}
+  instruction: {de: "Setze das Wort in der richtigen Form ein.", en: "Put the word in the right form."}
+- id: animate-or-not
+  band: contrast
+  format: choice
+  rule: {de: "Belebt (Person, Tier) → -а/-я; unbelebt → wie Nominativ", en: "Animate (person, animal) → -а/-я; inanimate → as nominative"}
+  instruction: {de: "Welche Form passt?", en: "Which form fits?"}
+items:
+- {id: a01, facet: fem-a, stem: "Я п'ю ___.", cue: кава, answer: [каву]}
+- {id: a02, facet: fem-a, stem: "Ви хочете ___?", cue: вода, answer: [воду]}
+- {id: a03, facet: fem-a, stem: "Я читаю ___.", cue: книжка, answer: [книжку]}
+- {id: a04, facet: fem-a, stem: "Вона слухає ___.", cue: пісня, answer: [пісню]}
+- {id: a05, facet: fem-a, stem: "Ми шукаємо ___.", cue: квартира, answer: [квартиру]}
+- {id: a06, facet: fem-a, stem: "Я чекаю на ___.", cue: сестра, answer: [сестру]}
+- {id: a07, facet: fem-a, stem: "Ти бачиш ___?", cue: мама, answer: [маму]}
+- {id: a08, facet: fem-a, stem: "Я купую ___.", cue: сукня, answer: [сукню]}
+- {id: a09, facet: inanimate, stem: "Ми їмо ___.", cue: суп, answer: [суп]}
+- {id: a10, facet: inanimate, stem: "Я п'ю ___.", cue: молоко, answer: [молоко]}
+- {id: a11, facet: inanimate, stem: "Я купую ___.", cue: хліб, answer: [хліб]}
+- {id: a12, facet: inanimate, stem: "Він замовляє ___.", cue: борщ, answer: [борщ]}
+- {id: a13, facet: inanimate, stem: "Ми чекаємо на ___.", cue: автобус, answer: [автобус]}
+- {id: a14, facet: inanimate, stem: "Відкрий ___, будь ласка.", cue: вікно, answer: [вікно]}
+- {id: a15, facet: animate-masc, stem: "Я чекаю на ___.", cue: брат, answer: [брата]}
+- {id: a16, facet: animate-masc, stem: "Ти знаєш ___?", cue: Тарас, answer: [Тараса]}
+- {id: a17, facet: animate-masc, stem: "Я люблю ___.", cue: син, answer: [сина]}
+- {id: a18, facet: animate-masc, stem: "Я бачу ___.", cue: друг, answer: [друга]}
+- {id: a19, facet: animate-masc, stem: "Ми запрошуємо ___.", cue: вчитель, answer: [вчителя, учителя]}
+- {id: a20, facet: animate-masc, stem: "Я чекаю на ___.", cue: Андрій, answer: [Андрія]}
+- {id: a21, facet: special, stem: "Я люблю ___.", cue: тато, answer: [тата]}
+- {id: a22, facet: special, stem: "Ми бачимо ___.", cue: кіт, answer: [кота]}
+- {id: a23, facet: special, stem: "Я замовляю ___.", cue: таксі, answer: [таксі]}
+- {id: a24, facet: special, stem: "Ти знаєш ___?", cue: Микола, answer: [Миколу]}
+- {id: a25, facet: special, stem: "Я чекаю на ___.", cue: дядько, answer: [дядька]}
+- {id: a26, facet: animate-or-not, stem: "Я знаю ___.", options: [Андрій, Андрія], answer: [Андрія]}
+- {id: a27, facet: animate-or-not, stem: "Я купую ___.", options: [торт, торта], answer: [торт]}
+- {id: a28, facet: animate-or-not, stem: "Ми чекаємо на ___.", options: [автобус, автобуса], answer: [автобус]}
+- {id: a29, facet: animate-or-not, stem: "Ми чекаємо на ___.", options: [лікар, лікаря], answer: [лікаря]}
+- {id: a30, facet: animate-or-not, stem: "Я замовляю ___.", options: [квиток, квитка], answer: [квиток]}
+- {id: a31, facet: animate-or-not, stem: "Я бачу ___.", options: [пес, пса], answer: [пса]}
+- {id: a32, facet: animate-or-not, stem: "Ми маємо ___.", options: [телевізор, телевізора], answer: [телевізор]}

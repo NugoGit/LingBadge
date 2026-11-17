@@ -1,0 +1,12 @@
+# Language metadata used by the web app and the prompts.
+code: uk
+name: {de: Ukrainisch, en: Ukrainian}
+native: українська
+tts: uk-UA            # BCP-47 tag for speech synthesis
+dir: ltr
+keyboard: [і, ї, є, ґ, ʼ, и, щ]   # helper keys under text fields
+variety: Standard Ukrainian (Правопис 2019)
+status: A1 complete (52 skills), drafts not yet reviewed by a native speaker
+registers: {informal: ти, formal: ви}
+prompt:
+  pitfalls: Russizismen, Surschyk, Lehnübersetzungen
