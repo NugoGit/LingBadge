@@ -1,0 +1,94 @@
+skill: travel.taxi.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: address
+  label: Adresse und Ziel
+- id: price
+  label: Preis
+- id: stop
+  label: Halten und Bezahlen
+items:
+- id: address-1
+  facet: address
+  format: type
+  prompt: Zur Chreschtschatyk-Straße 10, bitte.
+  stem: На ___ Хрещатик, десять, будь ласка.
+  cue: вулиця
+  answer:
+  - вулицю
+- id: address-2
+  facet: address
+  format: type
+  prompt: Zum Marktplatz, bitte.
+  stem: На ___ Ринок, будь ласка.
+  cue: площа
+  answer:
+  - площу
+- id: address-3
+  facet: address
+  format: type
+  prompt: Zum Flughafen, bitte.
+  stem: До ___, будь ласка.
+  cue: аеропорт
+  answer:
+  - аеропорту
+- id: price-1
+  facet: price
+  format: type
+  prompt: 'Fragen Sie: Wie viel kostet das?'
+  stem: Скільки це ___?
+  cue: коштувати
+  answer:
+  - коштує
+- id: price-2
+  facet: price
+  format: choice
+  prompt: Wie viel kostet die Fahrt?
+  context: Двісті п'ятдесят гривень.
+  answer:
+  - 250 Hrywnja
+  options:
+  - 250 Hrywnja
+  - 215 Hrywnja
+  - 25 Hrywnja
+  - 2050 Hrywnja
+- id: price-3
+  facet: price
+  format: choice
+  prompt: Fragen Sie vorher, was die Fahrt zum Flughafen kostet.
+  answer:
+  - Скільки коштує до аеропорту?
+  options:
+  - Скільки коштує до аеропорту?
+  - Скільки коштує аеропорт?
+  - Скільки годин аеропорт?
+  - Де аеропорт?
+- id: stop-1
+  facet: stop
+  format: type
+  prompt: Halten Sie bitte hier.
+  stem: ___ тут, будь ласка.
+  cue: зупинити
+  answer:
+  - Зупиніть
+  - Зупиніться
+- id: stop-2
+  facet: stop
+  format: type
+  prompt: Fragen Sie, ob Sie mit Karte zahlen können.
+  stem: Можна ___?
+  cue: картка
+  answer:
+  - карткою
+- id: stop-3
+  facet: stop
+  format: choice
+  prompt: Der Fahrer soll beim Eingang halten.
+  answer:
+  - Зупиніть біля входу, будь ласка.
+  options:
+  - Зупиніть біля входу, будь ласка.
+  - Зупиніть до входу, будь ласка.
+  - Зупиніть вхід, будь ласка.
+  - Зупиніть на вхід, будь ласка.

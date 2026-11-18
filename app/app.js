@@ -44,7 +44,7 @@
     if (!langs[code]) code = langs[App.C.default_lang] ? App.C.default_lang : Object.keys(langs)[0];
     App.lang = code;
     const L = langs[code];
-    App.C.enablers = L.enablers; App.C.realizations = L.realizations; App.C.checks = L.checks || {};
+    App.C.enablers = L.enablers; App.C.realizations = L.realizations; App.C.checks = L.checks || {}; App.C.placement = L.placement || {};
     App.C.skills = App.C.allSkills.filter((s) => L.realizations[s.id]);
     LB.setTarget(L.meta);
     findVoice();
@@ -139,7 +139,7 @@
     let notes = "";
     if (App.connecting) notes += `<p class="note info"><span class="spinner"></span>Verbinde mit claude.ai …</p>`;
     else if (!App.sample) notes += App.platform === "standalone"
-      ? `<p class="note info">Ohne KI-Anbieter: Grammatik-Checks aus dem Fragenkatalog funktionieren. Für Tests, Einstufung und Checks ohne Katalog trage in den <a href="#einstellungen">Einstellungen</a> einen API-Schlüssel ein.</p>`
+      ? `<p class="note info">Ohne KI-Anbieter funktionieren ${hasPlacement() ? "die Einstufung und " : ""}die Grammatik-Checks aus dem Fragenkatalog. Für Tests${hasPlacement() ? "" : ", Einstufung"} und Checks ohne Katalog trage in den <a href="#einstellungen">Einstellungen</a> einen API-Schlüssel ein.</p>`
       : `<p class="note">Claude ist hier nicht verfügbar: Tests lassen sich nur auf claude.ai erstellen und bewerten.</p>`;
     if (!App.connecting && !App.db) notes += `<p class="note">Speichern ist hier nicht verfügbar (nicht angemeldet oder außerhalb von claude.ai). Ergebnisse gehen beim Schließen verloren.</p>`;
     if (App.platform === "standalone" && window.LBStandalone.volatile) notes += `<p class="note">Dieser Browser erlaubt keinen lokalen Speicher. Ergebnisse gehen beim Schließen verloren.</p>`;
@@ -221,16 +221,23 @@
       }).join("")}</div></div>`).join("");
   }
 
+  function hasPlacement() { return Object.keys(App.C.placement || {}).length > 0; }
+  function probeSkills(themeId) {
+    // SP can only be probed with a catalogue; generated probes skip it as before.
+    return App.C.skills.filter((s) => s.theme === themeId && (App.C.placement[s.id] || s.mode !== "SP"));
+  }
   function renderPlacement() {
     const rows = App.C.themes.map((t) => {
-      const skills = App.C.skills.filter((s) => s.theme === t.id && s.mode !== "SP");
+      const skills = probeSkills(t.id);
       if (!skills.length) return "";
       const done = skills.filter((s) => App.profile.probes[pk(s.id)]).length;
-      const chips = skills.map((s) => { const p = App.profile.probes[pk(s.id)]; return chip(p ? p.status : "untested", MODE_DE[s.mode] + (p ? " " + p.correct + "/3" : "")); }).join(" ");
+      const chips = skills.map((s) => { const p = App.profile.probes[pk(s.id)]; return chip(p ? p.status : "untested", MODE_DE[s.mode] + (p ? " " + p.correct + "/" + (p.total || 3) : "")); }).join(" ");
       return `<tr><td><b>${esc(t.title)}</b><br><span class="small muted">${skills.length} Kompetenzen · ${done} eingestuft</span></td><td>${chips}</td><td><button class="btn ${done ? "quiet" : ""}" data-act="start-probe" data-id="${esc(t.id)}">${done ? "Wiederholen" : "Starten"}</button></td></tr>`;
     }).join("");
-    return `<div class="card stack"><h2>Einstufung</h2><p>Pro Thema je 3 kurze Aufgaben pro Kompetenz. Ergebnis: 3/3 wahrscheinlich, 2/3 unsicher, sonst Lücke. Einstufungen vergeben keine Abzeichen; sie zeigen dir, wo du testen solltest. Du kannst jederzeit unterbrechen; jedes Thema wird einzeln gespeichert.</p>
-      <p class="small muted">Gespräch und Schreiben werden hier mit kurzen „Was sagst/schreibst du?“-Aufgaben eingeschätzt. Vortrag (Sprechen) ist ausgenommen.</p></div>
+    const cat = hasPlacement();
+    return `<div class="card stack"><h2>Einstufung</h2><p>Pro Thema 3 kurze Aufgaben je Kompetenz${cat ? ", eine für jeden Teil der Kompetenz (z. B. bestellen, nachfragen, bezahlen)" : ""}. Ergebnis: 3/3 wahrscheinlich, 2/3 unsicher, sonst Lücke. Einstufungen vergeben keine Abzeichen; sie zeigen dir, wo du testen solltest. Du kannst jederzeit unterbrechen; jedes Thema wird einzeln gespeichert.</p>
+      ${cat ? `<p class="small muted">Die Aufgaben kommen aus einem festen Katalog und werden ohne KI ausgewertet. Bei einer Wiederholung bekommst du vorrangig Aufgaben, die du noch nicht hattest. Gespräch, Vortrag und Schreiben werden mit Lücken und „Was sagst du?“-Fragen eingeschätzt; das ist eine Annäherung, kein Sprech- oder Schreibtest.</p>`
+        : `<p class="small muted">Gespräch und Schreiben werden hier mit kurzen „Was sagst/schreibst du?“-Aufgaben eingeschätzt. Vortrag (Sprechen) ist ausgenommen.</p>`}</div>
       <div class="card"><table class="plain"><thead><tr><th>Thema</th><th>Stand</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
@@ -243,8 +250,8 @@
       const po = (v, l) => `<label><input type="radio" name="ai-provider" value="${v}" ${pv === v ? "checked" : ""} data-ai="provider"> ${l}</label>`;
       const fld = (path, label, val, type) => `<label class="stack small">${label}<input type="${type || "text"}" data-ai="${path}" value="${esc(val || "")}" autocomplete="off" spellcheck="false"></label>`;
       ai = `<fieldset class="stack"><legend><b>KI-Anbieter</b></legend>
-        <p class="small muted">Tests, Rollenspiele, Einstufung und Checks ohne Katalog brauchen ein Sprachmodell. Der Schlüssel bleibt in diesem Browser und geht nur an den gewählten Anbieter. Setze beim Anbieter ein Ausgabenlimit.</p>
-        <div class="opts">${po("none", "Keiner (nur Katalog-Checks)")}${po("anthropic", "Anthropic (Claude)")}${po("openai", "OpenAI-kompatibel (auch lokal, z. B. Ollama, LM Studio)")}</div>
+        <p class="small muted">Tests, Rollenspiele und Checks ohne Katalog brauchen ein Sprachmodell${hasPlacement() ? " (die Einstufung nicht)" : ", ebenso die Einstufung"}. Der Schlüssel bleibt in diesem Browser und geht nur an den gewählten Anbieter. Setze beim Anbieter ein Ausgabenlimit.</p>
+        <div class="opts">${po("none", "Keiner (nur Katalog: Einstufung und Checks)")}${po("anthropic", "Anthropic (Claude)")}${po("openai", "OpenAI-kompatibel (auch lokal, z. B. Ollama, LM Studio)")}</div>
         ${pv === "anthropic" ? fld("anthropic.key", "API-Schlüssel", c.anthropic.key, "password") + `<div class="row">${fld("anthropic.models.quick", "Modell schnell", c.anthropic.models.quick)}${fld("anthropic.models.default", "Modell Standard", c.anthropic.models.default)}${fld("anthropic.models.complex", "Modell gründlich", c.anthropic.models.complex)}</div>` : ""}
         ${pv === "openai" ? fld("openai.base", "Basis-URL", c.openai.base) + fld("openai.key", "API-Schlüssel (leer für lokale Server)", c.openai.key, "password") + `<div class="row">${fld("openai.models.quick", "Modell schnell", c.openai.models.quick)}${fld("openai.models.default", "Modell Standard", c.openai.models.default)}${fld("openai.models.complex", "Modell gründlich", c.openai.models.complex)}</div>` : ""}
         <div class="row"><button class="btn quiet small" data-act="ai-test">Verbindung testen</button><span class="small muted" id="ai-msg">${App.sample ? "Eingerichtet." : "Nicht eingerichtet."}</span></div></fieldset>`;
@@ -538,70 +545,121 @@
   }
 
   // ------------------------------------------------------------------ placement
+  // Skills with a placement catalogue are probed from it (no model call); the rest fall back to generated items.
+  function canSpeak() { return !!ukVoice || (settings().tts === "claude" && !!App.tts); }
   async function startProbe(themeId) {
     const t = App.C.themes.find((x) => x.id === themeId);
-    const skills = App.C.skills.filter((s) => s.theme === themeId && s.mode !== "SP");
+    const skills = probeSkills(themeId);
     const run = newRun("probe", "Einstufung: " + t.title, null);
+    run.theme = themeId; run.revealed = {};
     App.screen = { kind: "run", run }; run.start = () => startProbe(themeId);
     setRun(run, { phase: "busy", msg: "Einstufung wird erstellt …" });
     try {
-      const raw = await ask(LB.probePrompt(t, skills, App.C.realizations, App.C.enablers, settings().il, Math.floor(Math.random() * 1e6)), "default");
-      run.probe = ((raw && raw.skills) || []).filter((x) => skillById(x.skill)).map((x) => ({
-        skill: x.skill, stimulus: x.stimulus || null,
-        items: normalizeForm({ items: (x.items || []).slice(0, 3) }, {}).items.map((it, i) => Object.assign(it, { id: x.skill + "#" + i })),
-      }));
-      if (!run.probe.length) throw new Error("Die Einstufung kam leer zurück. Bitte erneut versuchen.");
+      const seed = Math.floor(Math.random() * 1e9);
+      const fromCat = skills.filter((s) => App.C.placement[s.id]);
+      const rest = skills.filter((s) => !App.C.placement[s.id] && s.mode !== "SP");
+      run.probe = fromCat.map((s) => {
+        const cat = App.C.placement[s.id], prev = App.profile.probes[pk(s.id)];
+        return { skill: s.id, source: "catalogue", items: LB.placementForm(cat, LB.samplePlacement(cat, (prev && prev.seen) || {}, seed), settings().il, seed) };
+      });
+      if (rest.length && App.sample) {
+        const raw = await ask(LB.probePrompt(t, rest, App.C.realizations, App.C.enablers, settings().il, seed), "default");
+        ((raw && raw.skills) || []).filter((x) => skillById(x.skill)).forEach((x) => run.probe.push({
+          skill: x.skill, source: "generated",
+          items: normalizeForm({ items: (x.items || []).slice(0, 3) }, {}).items.map((it, i) => Object.assign(it, { id: x.skill + "#" + i, audio: x.stimulus && x.stimulus.kind === "audio_script" ? x.stimulus.body : null, text: x.stimulus && x.stimulus.kind !== "audio_script" ? x.stimulus.body : null, shared: true })),
+        }));
+      } else if (rest.length) run.skipped = rest.map((s) => s.id);
+      const order = skills.map((s) => s.id);
+      run.probe.sort((a, b) => order.indexOf(a.skill) - order.indexOf(b.skill));
+      if (!run.probe.length) throw new Error(rest.length ? "Für dieses Thema gibt es keinen Katalog; die Einstufung braucht einen KI-Anbieter (Einstellungen)." : "Die Einstufung kam leer zurück. Bitte erneut versuchen.");
       setRun(run, { phase: "ready" });
     } catch (e) { setRun(run, { phase: "error", msg: e.message }); }
   }
 
+  function probeItem(run, it, n) {
+    const v = run.answers[it.id] || "";
+    const plays = run.plays[it.id] || 0;
+    let audio = "";
+    if (it.audio && !(it.shared && n > 0)) {
+      audio = run.revealed[it.id] ? `<div class="doc" ${LA()}>${esc(it.audio)}</div><p class="small muted">Text angezeigt: diese Kompetenz wird nicht gewertet.</p>`
+        : `<div class="row"><button class="btn secondary small" data-act="play-probe" data-id="${esc(it.id)}" ${plays >= 2 ? "disabled" : ""}>▶ Anhören (${2 - plays}× übrig)</button>${canSpeak() ? "" : ` <button class="btn quiet small" data-act="reveal" data-id="${esc(it.id)}">Keine Stimme? Text zeigen</button>`}</div>`;
+    }
+    const text = it.text && !(it.shared && n > 0) ? `<div class="doc" ${LA()}>${esc(it.text)}</div>` : "";
+    const ctx = it.context ? `<div class="bubble them" ${LA()}>${esc(it.context)}</div>` : "";
+    const stem = it.stem ? `<div><span class="stem" ${LA()}>${esc(it.stem).split("___").join('<span class="gap">___</span>')}</span>${it.cue ? ` <span class="cue" ${LA()}>(${esc(it.cue)})</span>` : ""}</div>` : "";
+    const input = it.type === "mcq"
+      ? `<div class="opts">${(it.options || []).map((o) => `<label><input type="radio" name="q-${esc(it.id)}" value="${esc(o)}" data-ans="${esc(it.id)}" ${v === o ? "checked" : ""}> <span ${LA()}>${esc(o)}</span></label>`).join("")}</div>`
+      : `<input type="text" ${LA()} data-ans="${esc(it.id)}" value="${esc(v)}" autocomplete="off" placeholder="${it.stem ? "Lücke" : "Antwort"}">`;
+    return `<div class="item stack"><span class="q">${esc(it.prompt)}</span>${audio}${text}${ctx}${stem}${input}</div>`;
+  }
+
   function renderProbeForm(run) {
-    return run.probe.map((p, pi) => {
+    const voiceNote = !canSpeak() && run.probe.some((p) => p.items.some((it) => it.audio))
+      ? `<p class="note">Für ${esc(LN())} ist keine Stimme verfügbar, Hör-Aufgaben lassen sich nicht abspielen. Edge oder Chrome haben Online-Stimmen${App.tts ? ", oder wähle in den Einstellungen die Claude-Stimme" : ""}. Mit „Text zeigen“ kannst du trotzdem weitermachen; Hören wird dann nicht gewertet.</p>` : "";
+    const skipped = run.skipped && run.skipped.length ? `<p class="note info">Ohne Katalog und ohne KI-Anbieter übersprungen: ${run.skipped.map((id) => esc(skillById(id).title)).join(", ")}.</p>` : "";
+    return voiceNote + skipped + run.probe.map((p) => {
       const s = skillById(p.skill);
-      const stim = !p.stimulus ? "" : p.stimulus.kind === "audio_script"
-        ? `<button class="btn secondary small" data-act="play-probe" data-i="${pi}" ${(run.plays["p" + pi] || 0) >= 2 ? "disabled" : ""}>▶ Anhören (${2 - (run.plays["p" + pi] || 0)}× übrig)</button>`
-        : `<div class="doc" ${LA()}>${esc(p.stimulus.body)}</div>`;
-      const items = p.items.map((it) => {
-        const v = run.answers[it.id] || "";
-        const input = it.type === "mcq" ? `<div class="opts">${(it.options || []).map((o) => `<label><input type="radio" name="q-${esc(it.id)}" value="${esc(o)}" data-ans="${esc(it.id)}" ${v === o ? "checked" : ""}> <span ${LA()}>${esc(o)}</span></label>`).join("")}</div>`
-          : `<input type="text" ${LA()} data-ans="${esc(it.id)}" value="${esc(v)}" autocomplete="off">`;
-        return `<div class="item"><span class="q">${esc(it.prompt)}</span>${input}</div>`;
-      }).join("");
-      return `<div class="card stack"><div class="row"><h3>${esc(s.title)}</h3><span class="chip st-untested">${MODE_DE[s.mode]}</span></div>${stim}${items}</div>`;
+      return `<div class="card stack"><div class="row"><h3>${esc(s.title)}</h3><span class="chip st-untested">${MODE_DE[s.mode]}</span></div>${p.items.map((it, n) => probeItem(run, it, n)).join("")}</div>`;
     }).join("") + kbd() + `<div class="row"><button class="btn" data-act="submit-probe">Abgeben</button></div>`;
   }
 
   async function submitProbe(run) {
     setRun(run, { phase: "busy", msg: "Wird ausgewertet …" });
     try {
-      const all = run.probe.flatMap((p) => p.items);
-      const form = { items: all };
-      const keyed = LB.gradeKeyed(form, run.answers);
-      const toJudge = all.filter((it) => !keyed.results[it.id] && (run.answers[it.id] || "").trim() && (it.type !== "mcq"))
-        .map((it) => ({ id: it.id, type: it.type, prompt: it.prompt, key: it.key, answer: run.answers[it.id] }));
-      if (toJudge.length) {
-        const j = await ask(LB.judgePrompt(toJudge), "default");
-        ((j && j.results) || []).forEach((r) => { if (r && r.id in keyed.results && r.correct === true) keyed.results[r.id] = true; });
+      const results = {};
+      run.probe.filter((p) => p.source === "catalogue").forEach((p) => p.items.forEach((it) => (results[it.id] = LB.placementCorrect(it, run.answers[it.id]))));
+      const gen = run.probe.filter((p) => p.source !== "catalogue").flatMap((p) => p.items);
+      if (gen.length) {
+        const keyed = LB.gradeKeyed({ items: gen }, run.answers);
+        const toJudge = gen.filter((it) => !keyed.results[it.id] && (run.answers[it.id] || "").trim() && it.type !== "mcq")
+          .map((it) => ({ id: it.id, type: it.type, prompt: it.prompt, key: it.key, answer: run.answers[it.id] }));
+        if (toJudge.length && App.sample) {
+          const j = await ask(LB.judgePrompt(toJudge), "default");
+          ((j && j.results) || []).forEach((r) => { if (r && r.id in keyed.results && r.correct === true) keyed.results[r.id] = true; });
+        }
+        Object.assign(results, keyed.results);
       }
       const at = nowIso();
       run.probeResults = run.probe.map((p) => {
-        const correct = p.items.filter((it) => keyed.results[it.id]).length;
-        const status = LB.probeStatus(correct, p.items.length || 3);
-        App.profile.probes[pk(p.skill)] = { status, correct, total: p.items.length, at };
-        return { skill: p.skill, correct, total: p.items.length, status };
+        const correct = p.items.filter((it) => results[it.id]).length, total = p.items.length || 3;
+        if (p.items.some((it) => run.revealed[it.id])) return { skill: p.skill, correct, total, status: null };
+        const status = LB.probeStatus(correct, total);
+        const prev = App.profile.probes[pk(p.skill)] || {};
+        const seen = Object.assign({}, prev.seen || {});
+        if (p.source === "catalogue") p.items.forEach((it) => (seen[it.itemId] = (seen[it.itemId] || 0) + 1));
+        App.profile.probes[pk(p.skill)] = { status, correct, total, at, source: p.source, seen };
+        return { skill: p.skill, correct, total, status };
       });
-      run.itemResults = keyed.results;
+      run.itemResults = results;
       saveProfile();
       setRun(run, { phase: "result" });
     } catch (e) { run.start = () => submitProbe(run); setRun(run, { phase: "error", msg: e.message }); }
   }
 
+  function probeIssueUrl(it, given) {
+    const title = `[${App.lang}] Einstufung ${it.skill} ${it.itemId}: Antwort „${given}“`;
+    const body = `**Kompetenz:** ${it.skill}\n**Aufgabe:** ${it.itemId} (${it.facet})\n**Aufgabe:** ${it.prompt}\n${it.context ? "**Kontext:** " + it.context + "\n" : ""}${it.stem ? "**Satz:** " + it.stem + (it.cue ? " (" + it.cue + ")" : "") + "\n" : ""}**Meine Antwort:** ${given}\n**Akzeptiert:** ${it.key.join(" / ")}\n\n**Warum ist meine Antwort auch richtig, oder was ist an der Aufgabe falsch?**\n\n`;
+    return `${App.C.repo_url}/issues/new?labels=catalogue,placement&title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+  }
+
+  function nextTheme(run) {
+    const ids = App.C.themes.map((t) => t.id).filter((id) => probeSkills(id).length);
+    const after = ids.slice(ids.indexOf(run.theme) + 1).concat(ids.slice(0, ids.indexOf(run.theme)));
+    return after.find((id) => !probeSkills(id).some((s) => App.profile.probes[pk(s.id)])) || null;
+  }
+
   function renderProbeResult(run) {
-    const rows = run.probeResults.map((r) => { const s = skillById(r.skill); return `<tr><td>${esc(s.title)}</td><td>${MODE_DE[s.mode]}</td><td class="num">${r.correct}/${r.total}</td><td>${chip(r.status)}</td><td>${TESTABLE.has(s.mode) ? `<button class="btn quiet small" data-act="open-skill" data-id="${esc(s.id)}">öffnen</button>` : ""}</td></tr>`; }).join("");
-    const review = run.probe.map((p) => p.items.map((it) => `<tr><td>${esc(it.prompt)}</td><td ${LA()} class="${run.itemResults[it.id] ? "ok" : "bad"}">${esc(run.answers[it.id] || "—")}</td><td ${LA()}>${esc(it.key.join(" / "))}</td></tr>`).join("")).join("");
+    const rows = run.probeResults.map((r) => { const s = skillById(r.skill); return `<tr><td>${esc(s.title)}</td><td>${MODE_DE[s.mode]}</td><td class="num">${r.correct}/${r.total}</td><td>${r.status ? chip(r.status) : `<span class="small muted">nicht gewertet</span>`}</td><td>${TESTABLE.has(s.mode) ? `<button class="btn quiet small" data-act="open-skill" data-id="${esc(s.id)}">öffnen</button>` : ""}</td></tr>`; }).join("");
+    const review = run.probe.map((p) => p.items.map((it) => {
+      const ok = run.itemResults[it.id], given = run.answers[it.id] || "";
+      const q = [it.facetLabel ? `<span class="small muted">${esc(it.facetLabel)}</span>` : "", esc(it.prompt), it.context ? `<span class="ctx" ${LA()}>${esc(it.context)}</span>` : "", it.stem ? `<span ${LA()}>${esc(it.stem)}${it.cue ? " (" + esc(it.cue) + ")" : ""}</span>` : ""].filter(Boolean).join("<br>");
+      const dispute = !ok && given && it.source === "catalogue" && App.C.repo_url ? ` <a class="small" target="_blank" rel="noopener" href="${esc(probeIssueUrl(it, given))}">Einspruch</a>` : "";
+      return `<tr><td>${q}</td><td ${LA()} class="${ok ? "ok" : "bad"}">${esc(given || "—")}</td><td ${LA()}>${esc(it.type === "mcq" ? it.key[0] : it.key.join(" / "))}${dispute}</td></tr>`;
+    }).join("")).join("");
+    const nxt = nextTheme(run);
     return `<h2>${esc(run.title)}</h2><div class="card"><table class="plain"><thead><tr><th>Kompetenz</th><th>Modus</th><th>Richtig</th><th>Stand</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
       <details class="card"><summary>Alle Aufgaben ansehen</summary><table class="plain"><thead><tr><th>Aufgabe</th><th>Deine Antwort</th><th>Lösung</th></tr></thead><tbody>${review}</tbody></table></details>
-      <div class="row"><a class="btn" href="#karte" data-act="home">Zur Karte</a><a class="btn quiet" href="#einstufung" data-act="home">Nächstes Thema</a></div>`;
+      <div class="row"><a class="btn" href="#karte" data-act="home">Zur Karte</a>${nxt ? `<button class="btn quiet" data-act="start-probe" data-id="${esc(nxt)}">Nächstes Thema: ${esc(App.C.themes.find((t) => t.id === nxt).title)}</button>` : `<a class="btn quiet" href="#einstufung" data-act="home">Zur Übersicht</a>`}</div>`;
   }
 
   // ------------------------------------------------------------------ events
@@ -655,13 +713,14 @@
       case "retry": if (run && run.start) run.start(); break;
       case "submit": if (run) submit(run); break;
       case "submit-probe": if (run) submitProbe(run); break;
+      case "reveal": if (run && run.revealed) { run.revealed[id] = true; render(); } break;
       case "send": if (run) sendChat(run); break;
       case "key": if (lastFocus) { const el = lastFocus, k = b.dataset.k, p = el.selectionStart ?? el.value.length; el.value = el.value.slice(0, p) + k + el.value.slice(el.selectionEnd ?? p); el.focus(); el.selectionStart = el.selectionEnd = p + k.length; el.dispatchEvent(new Event("input", { bubbles: true })); } break;
       case "play": case "play-probe": {
         if (!run) break;
-        const key = act === "play" ? +b.dataset.i : "p" + b.dataset.i;
+        const key = act === "play" ? +b.dataset.i : b.dataset.id;
         if ((run.plays[key] || 0) >= 2) break;
-        const text = act === "play" ? run.form.stimuli[+b.dataset.i].body : run.probe[+b.dataset.i].stimulus.body;
+        const text = act === "play" ? run.form.stimuli[+b.dataset.i].body : run.probe.flatMap((p) => p.items).find((it) => it.id === key).audio;
         run.plays[key] = (run.plays[key] || 0) + 1;
         b.disabled = true;
         try { await speak(text); } catch (err) { setNote(err.message); run.plays[key]--; }

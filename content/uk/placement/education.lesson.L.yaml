@@ -1,0 +1,109 @@
+skill: education.lesson.L
+lang: uk
+reviewed_by: []
+facets:
+- id: rw
+  label: Lesen und Schreiben
+- id: listen
+  label: Hören und Nachsprechen
+- id: book
+  label: Buch, Heft, Seite
+items:
+- id: rw-1
+  facet: rw
+  format: choice
+  prompt: Was sollen Sie tun?
+  audio: Прочитайте текст.
+  answer:
+  - Den Text lesen
+  options:
+  - Den Text lesen
+  - Den Text schreiben
+  - Zuhören
+  - Das Buch schließen
+- id: rw-2
+  facet: rw
+  format: choice
+  prompt: Was sollen Sie tun?
+  audio: Напишіть своє ім'я.
+  answer:
+  - Den eigenen Namen schreiben
+  options:
+  - Den eigenen Namen schreiben
+  - Den Namen sagen
+  - Den Namen lesen
+  - Den Namen buchstabieren
+- id: rw-3
+  facet: rw
+  format: choice
+  prompt: Was sollen Sie tun?
+  audio: Запишіть ці слова в зошит.
+  answer:
+  - Die Wörter ins Heft schreiben
+  options:
+  - Die Wörter ins Heft schreiben
+  - Die Wörter vorlesen
+  - Das Heft öffnen
+  - Die Wörter übersetzen
+- id: listen-1
+  facet: listen
+  format: choice
+  prompt: Was sollen Sie tun?
+  audio: Слухайте й повторюйте.
+  answer:
+  - Zuhören und nachsprechen
+  options:
+  - Zuhören und nachsprechen
+  - Lesen und schreiben
+  - Nur zuhören
+  - Fragen stellen
+- id: listen-2
+  facet: listen
+  format: choice
+  prompt: Was sollen Sie tun?
+  audio: Повторіть, будь ласка, ще раз.
+  answer:
+  - Noch einmal wiederholen
+  options:
+  - Noch einmal wiederholen
+  - Lauter sprechen
+  - Langsamer lesen
+  - Weitermachen
+- id: listen-3
+  facet: listen
+  format: choice
+  prompt: Was sollen Sie tun?
+  audio: Послухайте діалог.
+  answer:
+  - Den Dialog anhören
+  options:
+  - Den Dialog anhören
+  - Den Dialog lesen
+  - Den Dialog schreiben
+  - Den Dialog spielen
+- id: book-1
+  facet: book
+  format: type
+  prompt: Welche Seite? (Zahl)
+  audio: Відкрийте книжку на сторінці десять.
+  answer:
+  - '10'
+- id: book-2
+  facet: book
+  format: type
+  prompt: Welche Seite? (Zahl)
+  audio: Сторінка двадцять п'ять, вправа три.
+  answer:
+  - '25'
+- id: book-3
+  facet: book
+  format: choice
+  prompt: Was sollen Sie tun?
+  audio: Закрийте книжки.
+  answer:
+  - Die Bücher schließen
+  options:
+  - Die Bücher schließen
+  - Die Bücher öffnen
+  - Die Bücher holen
+  - Die Bücher lesen

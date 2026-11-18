@@ -1,0 +1,101 @@
+skill: relations.plans.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: invite
+  label: Einladen
+- id: answer
+  label: Zusagen oder absagen
+- id: when
+  label: Zeit und Ort vereinbaren
+items:
+- id: invite-1
+  facet: invite
+  format: type
+  prompt: 'Fragen Sie eine Freundin: Hast du am Samstag frei?'
+  stem: Ти ___ в суботу?
+  cue: вільний
+  answer:
+  - вільна
+- id: invite-2
+  facet: invite
+  format: type
+  prompt: 'Laden Sie ein: Lass uns ins Kino gehen!'
+  stem: ___ в кіно!
+  cue: lass uns gehen
+  answer:
+  - Ходімо
+  - Ходім
+  - Підемо
+  - Давай підемо
+- id: invite-3
+  facet: invite
+  format: choice
+  prompt: Laden Sie eine Freundin für Freitag ins Café ein.
+  answer:
+  - Підемо в п'ятницю в кафе?
+  options:
+  - Підемо в п'ятницю в кафе?
+  - Підемо в п'ятниця в кафе?
+  - Підемо на п'ятницю в кафі?
+  - Ходив у п'ятницю в кафе?
+- id: answer-1
+  facet: answer
+  format: choice
+  prompt: Sie können nicht. Was sagen Sie?
+  context: Ходімо завтра в театр!
+  answer:
+  - На жаль, я не можу.
+  options:
+  - На жаль, я не можу.
+  - Домовилися!
+  - Так, із задоволенням!
+  - Давай о сьомій.
+- id: answer-2
+  facet: answer
+  format: type
+  prompt: 'Reagieren Sie: Macht nichts, ein andermal.'
+  context: На жаль, я не можу.
+  stem: Нічого, іншим ___.
+  answer:
+  - разом
+- id: answer-3
+  facet: answer
+  format: choice
+  prompt: Sagen Sie zu.
+  context: Може, в неділю?
+  answer:
+  - Так, із задоволенням!
+  options:
+  - Так, із задоволенням!
+  - На жаль, ні.
+  - Я не знаю, де.
+  - Бувай!
+- id: when-1
+  facet: when
+  format: type
+  prompt: 'Schlagen Sie vor: um sieben beim Theater.'
+  stem: Давай о ___ біля театру.
+  cue: сьома
+  answer:
+  - сьомій
+- id: when-2
+  facet: when
+  format: type
+  prompt: 'Schlagen Sie vor: Treffen wir uns beim Bahnhof.'
+  stem: Зустрінемося біля ___.
+  cue: вокзал
+  answer:
+  - вокзалу
+- id: when-3
+  facet: when
+  format: choice
+  prompt: Bestätigen Sie.
+  context: Давай о шостій біля кінотеатру.
+  answer:
+  - Домовилися!
+  options:
+  - Домовилися!
+  - Шкода!
+  - Будь ласка!
+  - Нічого страшного!

@@ -1,0 +1,51 @@
+# Placement catalogue for one skill (file name = skill id). See docs/placement-catalogue.md.
+# Exactly 3 facets (parts of the can-do statement), at least 2 items each; a placement run takes one per facet.
+# choice: pick from options (the first answer must be one of them). type: the learner types; list every accepted variant.
+skill: personal.intro.SI
+lang: {{code}}
+reviewed_by: []
+facets:
+- {id: name, label: "Name sagen und erfragen"}
+- {id: from, label: "Herkunft und Wohnort"}
+- {id: job, label: "Beruf und Sprachen"}
+items:
+- id: name-1
+  facet: name
+  format: type
+  prompt: "Antworten Sie: Ich heiße Andrij."
+  context: TODO what the other person says ("What's your name?")
+  stem: TODO the learner's reply with one ___ gap
+  answer: [TODO]
+- id: name-2
+  facet: name
+  format: choice
+  prompt: "Fragen Sie ein Kind nach seinem Namen."
+  options: [TODO right informal question, TODO formal question, TODO ungrammatical variant]
+  answer: [TODO right informal question]
+- id: from-1
+  facet: from
+  format: type
+  prompt: "Sagen Sie: Ich bin aus Österreich."
+  stem: TODO sentence with ___
+  cue: TODO base form
+  answer: [TODO]
+- id: from-2
+  facet: from
+  format: choice
+  prompt: "Fragen Sie (Sie-Form): Woher kommen Sie?"
+  options: ["TODO right question", "TODO where to?", "TODO where?", "TODO informal question"]
+  answer: [TODO right question]
+- id: job-1
+  facet: job
+  format: type
+  prompt: "Sagen Sie: Ich arbeite als Programmierer."
+  stem: TODO sentence with ___
+  cue: TODO base form
+  answer: [TODO]
+- id: job-2
+  facet: job
+  format: type
+  prompt: "Sagen Sie: Ich spreche Deutsch und Englisch."
+  stem: TODO sentence with ___
+  cue: TODO base form
+  answer: [TODO]

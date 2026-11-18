@@ -1,0 +1,90 @@
+skill: travel.announcements.L
+lang: uk
+reviewed_by: []
+facets:
+- id: train
+  label: Welcher Zug, wohin
+- id: platform
+  label: Gleis, Bahnsteig
+- id: time
+  label: Zeit und Verspätung
+items:
+- id: train-1
+  facet: train
+  format: choice
+  prompt: Wohin fährt der Zug?
+  audio: Потяг Київ — Львів відправляється з другої колії о дев'ятій двадцять.
+  answer:
+  - Lwiw
+  options:
+  - Lwiw
+  - Kyjiw
+  - Odesa
+  - Charkiw
+- id: train-2
+  facet: train
+  format: choice
+  prompt: Was passiert mit dem Zug 43?
+  audio: Увага! Потяг номер сорок три Одеса — Харків прибуває на п'яту колію.
+  answer:
+  - Er kommt an
+  options:
+  - Er kommt an
+  - Er fährt ab
+  - Er hat Verspätung
+  - Er fällt aus
+- id: train-3
+  facet: train
+  format: choice
+  prompt: Welcher Zug hat Verspätung?
+  audio: Потяг до Ужгорода затримується на тридцять хвилин.
+  answer:
+  - Der Zug nach Uschhorod
+  options:
+  - Der Zug nach Uschhorod
+  - Der Zug nach Lwiw
+  - Der Zug aus Uschhorod
+  - Der Zug nach Odesa
+- id: platform-1
+  facet: platform
+  format: type
+  prompt: Von welchem Gleis? (Zahl)
+  audio: Потяг Київ — Львів відправляється з другої колії о дев'ятій двадцять.
+  answer:
+  - '2'
+- id: platform-2
+  facet: platform
+  format: type
+  prompt: Auf welchem Gleis? (Zahl)
+  audio: Увага! Потяг номер сорок три Одеса — Харків прибуває на п'яту колію.
+  answer:
+  - '5'
+- id: platform-3
+  facet: platform
+  format: type
+  prompt: Von welchem Bahnsteig fährt der Bus? (Zahl)
+  audio: Шановні пасажири! Автобус до Чернівців відправляється о чотирнадцятій годині з третьої платформи.
+  answer:
+  - '3'
+- id: time-1
+  facet: time
+  format: type
+  prompt: Um wie viel Uhr fährt der Zug? (z. B. 9:20)
+  audio: Потяг Київ — Львів відправляється з другої колії о дев'ятій двадцять.
+  answer:
+  - '9:20'
+- id: time-2
+  facet: time
+  format: type
+  prompt: Wie viele Minuten Verspätung? (Zahl)
+  audio: Потяг до Ужгорода затримується на тридцять хвилин.
+  answer:
+  - '30'
+- id: time-3
+  facet: time
+  format: type
+  prompt: Um wie viel Uhr fährt der Bus? (z. B. 9:20)
+  audio: Шановні пасажири! Автобус до Чернівців відправляється о чотирнадцятій годині з третьої платформи.
+  answer:
+  - '14:00'
+  - '14'

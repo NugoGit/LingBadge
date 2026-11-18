@@ -1,0 +1,94 @@
+skill: health.doctor.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: hurt
+  label: Was weh tut
+- id: symptom
+  label: Beschwerden
+- id: since
+  label: Seit wann; Fragen beantworten
+items:
+- id: hurt-1
+  facet: hurt
+  format: type
+  prompt: 'Sagen Sie: Ich habe Halsschmerzen.'
+  stem: У мене болить ___.
+  answer:
+  - горло
+- id: hurt-2
+  facet: hurt
+  format: type
+  prompt: 'Sagen Sie: Ich habe Kopfschmerzen.'
+  stem: У мене ___ голова.
+  answer:
+  - болить
+- id: hurt-3
+  facet: hurt
+  format: choice
+  prompt: 'Sagen Sie: Mir tun die Beine weh.'
+  answer:
+  - У мене болять ноги.
+  options:
+  - У мене болять ноги.
+  - У мене болить ноги.
+  - Я болю ноги.
+  - У мене ноги болить.
+- id: symptom-1
+  facet: symptom
+  format: type
+  prompt: 'Sagen Sie: Ich habe Fieber.'
+  stem: У мене ___.
+  answer:
+  - температура
+  - висока температура
+- id: symptom-2
+  facet: symptom
+  format: type
+  prompt: 'Sagen Sie: Ich schlafe schlecht.'
+  stem: Я погано ___.
+  cue: спати
+  answer:
+  - сплю
+- id: symptom-3
+  facet: symptom
+  format: choice
+  prompt: 'Sagen Sie: Ich habe Husten.'
+  answer:
+  - У мене кашель.
+  options:
+  - У мене кашель.
+  - У мене кашлю.
+  - Я кашель.
+  - Мене кашель.
+- id: since-1
+  facet: since
+  format: type
+  prompt: 'Antworten Sie: schon zwei Tage.'
+  context: Як довго це у вас?
+  stem: Уже два ___.
+  cue: день
+  answer:
+  - дні
+- id: since-2
+  facet: since
+  format: type
+  prompt: 'Antworten Sie: gestern.'
+  context: Коли це почалося?
+  stem: ___.
+  cue: gestern
+  answer:
+  - Вчора
+  - Учора
+- id: since-3
+  facet: since
+  format: choice
+  prompt: Sie haben keine Allergie. Was antworten Sie?
+  context: У вас є алергія?
+  answer:
+  - Ні, немає.
+  options:
+  - Ні, немає.
+  - Ні, не болить.
+  - Так, два дні.
+  - Ні, дякую, не треба.

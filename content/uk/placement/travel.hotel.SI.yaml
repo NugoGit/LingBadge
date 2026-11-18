@@ -1,0 +1,97 @@
+skill: travel.hotel.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: checkin
+  label: Einchecken
+- id: ask
+  label: Frühstück, WLAN
+- id: request
+  label: Weitere Bitten
+items:
+- id: checkin-1
+  facet: checkin
+  format: type
+  prompt: 'Sagen Sie: Ich habe eine Reservierung auf den Namen Huber.'
+  stem: У мене ___ на прізвище Губер.
+  cue: Reservierung
+  answer:
+  - бронювання
+  - бронь
+- id: checkin-2
+  facet: checkin
+  format: type
+  prompt: 'Sagen Sie: Hier ist mein Pass.'
+  stem: Ось мій ___.
+  cue: Pass
+  answer:
+  - паспорт
+- id: checkin-3
+  facet: checkin
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Добрий вечір! Чим можу допомогти?
+  answer:
+  - У мене бронювання на прізвище Шмідт.
+  options:
+  - У мене бронювання на прізвище Шмідт.
+  - Мене бронювання Шмідт.
+  - Я бронювання, Шмідт.
+  - Бронювання моє прізвище Шмідт.
+- id: ask-1
+  facet: ask
+  format: type
+  prompt: 'Fragen Sie: Um wie viel Uhr ist Frühstück?'
+  stem: О ___ сніданок?
+  answer:
+  - котрій
+- id: ask-2
+  facet: ask
+  format: type
+  prompt: Fragen Sie nach dem WLAN-Passwort.
+  stem: Який пароль від ___?
+  cue: вайфай
+  answer:
+  - вайфаю
+  - вай-фаю
+  - wi-fi
+  - wifi
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt: Wann gibt es Frühstück?
+  context: Сніданок з сьомої до десятої.
+  answer:
+  - 7–10 Uhr
+  options:
+  - 7–10 Uhr
+  - 7–12 Uhr
+  - 10–12 Uhr
+  - Ab 10 Uhr
+- id: request-1
+  facet: request
+  format: type
+  prompt: Fragen Sie, ob Sie den Koffer hier lassen können.
+  stem: Можна ___ валізу?
+  answer:
+  - залишити
+  - лишити
+- id: request-2
+  facet: request
+  format: choice
+  prompt: Fragen Sie, bis wann Sie auschecken müssen.
+  answer:
+  - До котрої треба звільнити номер?
+  options:
+  - До котрої треба звільнити номер?
+  - О котрій сніданок?
+  - Де мій номер?
+  - Скільки коштує номер?
+- id: request-3
+  facet: request
+  format: type
+  prompt: 'Sagen Sie: Im Zimmer ist kein Handtuch.'
+  stem: У номері немає ___.
+  cue: рушник
+  answer:
+  - рушника

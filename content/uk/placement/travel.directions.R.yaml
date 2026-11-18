@@ -1,0 +1,107 @@
+skill: travel.directions.R
+lang: uk
+reviewed_by: []
+facets:
+- id: transport
+  label: Verkehrsmittel, Haltestelle
+- id: way
+  label: Richtung
+- id: target
+  label: Haus, Stock, Wohnung
+items:
+- id: transport-1
+  facet: transport
+  format: choice
+  prompt: Wo steigen Sie aus?
+  text: Виходь на станції «Золоті ворота». Іди прямо до кафе, потім ліворуч. Мій будинок — третій праворуч, квартира 12.
+  answer:
+  - An der Station „Goldene Tore“
+  options:
+  - An der Station „Goldene Tore“
+  - An der Endstation
+  - Beim Café
+  - An der dritten Station
+- id: transport-2
+  facet: transport
+  format: type
+  prompt: Welchen Bus nehmen Sie? (Zahl)
+  text: Сідай на автобус номер 24. Виходь на зупинці «Ринок». Перейди дорогу, наш офіс — на другому поверсі.
+  answer:
+  - '24'
+- id: transport-3
+  facet: transport
+  format: choice
+  prompt: Wo steigen Sie aus?
+  text: Сідай на тролейбус номер 9 і їдь три зупинки. Виходь біля університету.
+  answer:
+  - Nach drei Haltestellen, bei der Universität
+  options:
+  - Nach drei Haltestellen, bei der Universität
+  - Nach neun Haltestellen
+  - An der Endstation
+  - Bei der Universität, nach einer Haltestelle
+- id: way-1
+  facet: way
+  format: choice
+  prompt: Was tun Sie nach dem Café?
+  text: Виходь на станції «Золоті ворота». Іди прямо до кафе, потім ліворуч. Мій будинок — третій праворуч, квартира 12.
+  answer:
+  - Links abbiegen
+  options:
+  - Links abbiegen
+  - Rechts abbiegen
+  - Geradeaus gehen
+  - Zurückgehen
+- id: way-2
+  facet: way
+  format: choice
+  prompt: Was tun Sie nach dem Aussteigen?
+  text: Сідай на автобус номер 24. Виходь на зупинці «Ринок». Перейди дорогу, наш офіс — на другому поверсі.
+  answer:
+  - Die Straße überqueren
+  options:
+  - Die Straße überqueren
+  - Rechts abbiegen
+  - Den Bus wechseln
+  - Zurückgehen
+- id: way-3
+  facet: way
+  format: choice
+  prompt: Wo ist die Kasse?
+  text: |-
+    Реєстратура — 1 поверх, ліворуч
+    Кабінети 201–220 — 2 поверх
+    Каса — праворуч від входу
+  answer:
+  - Rechts vom Eingang
+  options:
+  - Rechts vom Eingang
+  - Links vom Eingang
+  - Im 2. Stock
+  - Im 1. Stock links
+- id: target-1
+  facet: target
+  format: type
+  prompt: Welche Wohnung? (Zahl)
+  text: Виходь на станції «Золоті ворота». Іди прямо до кафе, потім ліворуч. Мій будинок — третій праворуч, квартира 12.
+  answer:
+  - '12'
+- id: target-2
+  facet: target
+  format: type
+  prompt: In welchem Stock ist das Büro? (Zahl)
+  text: Сідай на автобус номер 24. Виходь на зупинці «Ринок». Перейди дорогу, наш офіс — на другому поверсі.
+  answer:
+  - '2'
+- id: target-3
+  facet: target
+  format: choice
+  prompt: Welches Haus ist es?
+  text: Іди прямо до кафе, потім ліворуч. Мій будинок — третій праворуч, квартира 12.
+  answer:
+  - Das dritte rechts
+  options:
+  - Das dritte rechts
+  - Das dritte links
+  - Nummer 12
+  - Das zweite rechts

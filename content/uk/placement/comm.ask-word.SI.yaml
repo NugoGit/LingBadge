@@ -1,0 +1,94 @@
+skill: comm.ask-word.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: name
+  label: Fragen, wie etwas heißt
+- id: meaning
+  label: Fragen, was ein Wort bedeutet
+- id: say
+  label: Fragen, wie man etwas sagt; auf etwas zeigen
+items:
+- id: name-1
+  facet: name
+  format: choice
+  prompt: Sie zeigen auf einen Gegenstand und wollen wissen, wie er auf Ukrainisch heißt. Was fragen Sie?
+  answer:
+  - Як це називається українською?
+  options:
+  - Як це називається українською?
+  - Як вас звати?
+  - Скільки це коштує?
+  - Де це?
+- id: name-2
+  facet: name
+  format: type
+  prompt: 'Ergänzen Sie: Wie heißt das auf Ukrainisch?'
+  stem: Як це ___ українською?
+  answer:
+  - називається
+- id: name-3
+  facet: name
+  format: type
+  prompt: 'Ergänzen Sie: Wie heißt das auf Ukrainisch?'
+  stem: Як це називається ___?
+  cue: українська мова
+  answer:
+  - українською
+  - по-українськи
+- id: meaning-1
+  facet: meaning
+  format: choice
+  prompt: Sie hören das Wort „сніданок“ und verstehen es nicht. Was fragen Sie?
+  answer:
+  - Що означає слово «сніданок»?
+  options:
+  - Що означає слово «сніданок»?
+  - Як пишеться «сніданок»?
+  - Де сніданок?
+  - Коли сніданок?
+- id: meaning-2
+  facet: meaning
+  format: type
+  prompt: 'Ergänzen Sie: Was bedeutet das Wort „вокзал“?'
+  stem: Що ___ слово «вокзал»?
+  answer:
+  - означає
+- id: meaning-3
+  facet: meaning
+  format: choice
+  prompt: Sie kennen das Wort nicht. Welche Reaktion passt?
+  context: Це квитанція.
+  answer:
+  - Вибачте, а що це означає?
+  options:
+  - Вибачте, а що це означає?
+  - Дякую, не треба.
+  - Добре, до побачення.
+  - Так, я теж.
+- id: say-1
+  facet: say
+  format: type
+  prompt: 'Ergänzen Sie: Wie sagt man „Danke“ auf Ukrainisch?'
+  stem: Як ___ «Danke» українською?
+  answer:
+  - сказати
+- id: say-2
+  facet: say
+  format: choice
+  prompt: Sie zeigen im Laden auf ein Brot und möchten es haben. Was sagen Sie?
+  answer:
+  - Дайте, будь ласка, оце.
+  options:
+  - Дайте, будь ласка, оце.
+  - Як це пишеться?
+  - Повторіть, будь ласка.
+  - Я не знаю.
+- id: say-3
+  facet: say
+  format: type
+  prompt: 'Sie zeigen auf etwas: „Geben Sie mir bitte das da.“ Ergänzen Sie.'
+  stem: ___, будь ласка, оце.
+  cue: дати (Sie-Form)
+  answer:
+  - Дайте

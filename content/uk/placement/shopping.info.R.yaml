@@ -1,0 +1,129 @@
+skill: shopping.info.R
+lang: uk
+reviewed_by: []
+facets:
+- id: guide
+  label: Wegweiser im Geschäft
+- id: hours
+  label: Öffnungszeiten
+- id: price
+  label: Preise und Angebote
+items:
+- id: guide-1
+  facet: guide
+  format: type
+  prompt: In welchem Stock gibt es Schuhe? (Zahl)
+  text: |-
+    1 поверх — Продукти
+    2 поверх — Одяг
+    3 поверх — Взуття
+    4 поверх — Кафе
+  answer:
+  - '3'
+- id: guide-2
+  facet: guide
+  format: choice
+  prompt: Was gibt es im 2. Stock?
+  text: |-
+    1 поверх — Продукти
+    2 поверх — Одяг
+    3 поверх — Взуття
+    4 поверх — Кафе
+  answer:
+  - Kleidung
+  options:
+  - Kleidung
+  - Lebensmittel
+  - Schuhe
+  - Café
+- id: guide-3
+  facet: guide
+  format: choice
+  prompt: Wo ist die Toilette?
+  text: |-
+    Каса — праворуч
+    Вбиральня — 2 поверх
+    Ліфт — ліворуч
+  answer:
+  - Im 2. Stock
+  options:
+  - Im 2. Stock
+  - Links
+  - Rechts
+  - Neben der Kasse
+- id: hours-1
+  facet: hours
+  format: type
+  prompt: Bis wann ist am Samstag geöffnet? (Uhrzeit)
+  text: |-
+    Години роботи:
+    пн–пт 9:00–20:00
+    сб 10:00–18:00
+    нд — вихідний
+  answer:
+  - '18:00'
+  - '18'
+- id: hours-2
+  facet: hours
+  format: choice
+  prompt: Ist am Sonntag geöffnet?
+  text: |-
+    Години роботи:
+    пн–пт 9:00–20:00
+    сб 10:00–18:00
+    нд — вихідний
+  answer:
+  - Nein
+  options:
+  - Nein
+  - Ja, 9–20 Uhr
+  - Ja, 10–18 Uhr
+- id: hours-3
+  facet: hours
+  format: choice
+  prompt: Was bedeutet das?
+  text: Працюємо цілодобово
+  answer:
+  - Rund um die Uhr geöffnet
+  options:
+  - Rund um die Uhr geöffnet
+  - Nur tagsüber geöffnet
+  - Heute geschlossen
+  - Nur am Wochenende
+- id: price-1
+  facet: price
+  format: choice
+  prompt: Was ist im Angebot?
+  text: Знижка 30 % на всі куртки
+  answer:
+  - Alle Jacken 30 % billiger
+  options:
+  - Alle Jacken 30 % billiger
+  - Jacken ab 30 Hrywnja
+  - 30 Jacken gratis
+  - Jacken 30 % teurer
+- id: price-2
+  facet: price
+  format: type
+  prompt: Wie viel kosten 100 g Käse? (Zahl)
+  text: |-
+    Сир «Звенигора»
+    Ціна: 89,90 грн / 100 г
+  answer:
+  - 89,90
+  - '89.90'
+  - 89 90
+- id: price-3
+  facet: price
+  format: choice
+  prompt: Was bedeutet das Angebot?
+  text: |-
+    1+1=3
+    Купуйте дві пачки кави — третя в подарунок!
+  answer:
+  - Kaufe 2, bekomme 3
+  options:
+  - Kaufe 2, bekomme 3
+  - 3 zum Preis von 1
+  - Die dritte kostet die Hälfte
+  - Höchstens 3 pro Person

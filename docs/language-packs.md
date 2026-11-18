@@ -20,6 +20,7 @@ This creates `content/es/` from `templates/language-pack/`, with one example of 
 | `enablers/<id>.yaml` | one grammar point, word list, sound or pragmatic rule, with its CEFR level, prerequisites (`requires`) and check settings |
 | `realizations/<skill-id>.yaml` | per skill: register, variety, 3–6 typical target phrases (`exponents`), required and supporting enablers (`productive` or `formulaic`), key structures for grading |
 | `checks/<enabler-id>.yaml` | optional question catalogue for an enabler; see [question-catalogue.md](question-catalogue.md) |
+| `placement/<skill-id>.yaml` | placement items for a skill: three facets, one item each per run; see [placement-catalogue.md](placement-catalogue.md). Without one, placement needs an AI provider. |
 
 Ukrainian (`content/uk`) is the complete reference. Persian (`content/fa`) shows a right-to-left, diglossic language with `variety` set per realization.
 
@@ -43,7 +44,7 @@ python tools/build_app_content.py
 python -m http.server -d app 8000
 ```
 
-Pick the language in the top-right selector. Without an API key you can take catalogue checks. With a key, tests are generated from your realizations, so good `exponents` and `key_structures` matter.
+Pick the language in the top-right selector. Without an API key you can take catalogue checks and the placement for skills that have a placement catalogue. With a key, tests are generated from your realizations, so good `exponents` and `key_structures` matter.
 
 ## 5. Review before "reviewed"
 

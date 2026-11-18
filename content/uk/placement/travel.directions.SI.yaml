@@ -1,0 +1,98 @@
+skill: travel.directions.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: ask
+  label: Fragen, wo etwas ist
+- id: how
+  label: Nach dem Weg fragen
+- id: follow
+  label: Wegbeschreibung verstehen
+items:
+- id: ask-1
+  facet: ask
+  format: type
+  prompt: 'Fragen Sie: Entschuldigung, wo ist hier eine Apotheke?'
+  stem: Вибачте, де тут ___?
+  cue: Apotheke
+  answer:
+  - аптека
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt: Fragen Sie nach der Metro.
+  answer:
+  - Де тут метро?
+  options:
+  - Де тут метро?
+  - Куди тут метро?
+  - Звідки метро?
+  - Скільки метро?
+- id: ask-3
+  facet: ask
+  format: type
+  prompt: 'Fragen Sie: Gibt es hier in der Nähe einen Geldautomaten?'
+  stem: Тут поруч є ___?
+  cue: Geldautomat
+  answer:
+  - банкомат
+- id: how-1
+  facet: how
+  format: type
+  prompt: 'Fragen Sie: Wie komme ich zum Bahnhof?'
+  stem: Як пройти до ___?
+  cue: вокзал
+  answer:
+  - вокзалу
+- id: how-2
+  facet: how
+  format: type
+  prompt: 'Fragen Sie: Wie komme ich zum Platz?'
+  stem: Як пройти до ___?
+  cue: площа
+  answer:
+  - площі
+- id: how-3
+  facet: how
+  format: type
+  prompt: 'Fragen Sie: Wie komme ich (mit dem Verkehrsmittel) ins Zentrum?'
+  stem: Як доїхати до ___?
+  cue: центр
+  answer:
+  - центру
+- id: follow-1
+  facet: follow
+  format: choice
+  prompt: Was sollen Sie tun?
+  context: Ідіть прямо, потім праворуч.
+  answer:
+  - Geradeaus, dann rechts
+  options:
+  - Geradeaus, dann rechts
+  - Geradeaus, dann links
+  - Rechts, dann geradeaus
+  - Zurück, dann rechts
+- id: follow-2
+  facet: follow
+  format: choice
+  prompt: Wie weit ist es?
+  context: Це близько, п'ять хвилин пішки.
+  answer:
+  - Fünf Minuten zu Fuß
+  options:
+  - Fünf Minuten zu Fuß
+  - Fünf Minuten mit dem Bus
+  - Fünf Kilometer
+  - Es ist weit
+- id: follow-3
+  facet: follow
+  format: choice
+  prompt: Was wird gesagt?
+  context: Це далеко. Краще їдьте на метро.
+  answer:
+  - Es ist weit, nehmen Sie die Metro
+  options:
+  - Es ist weit, nehmen Sie die Metro
+  - Es ist nah, gehen Sie zu Fuß
+  - Die Metro ist weit weg
+  - Es gibt keine Metro

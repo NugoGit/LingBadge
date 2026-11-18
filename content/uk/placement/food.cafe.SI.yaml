@@ -1,0 +1,119 @@
+skill: food.cafe.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: order
+  label: Essen und Getränke bestellen
+- id: ask
+  label: Nachfragen; „gibt es nicht“
+- id: pay
+  label: Rechnung und Bezahlen
+items:
+- id: order-1
+  facet: order
+  format: type
+  prompt: Bestellen Sie einen Kaffee.
+  context: Що будете замовляти?
+  stem: Мені ___, будь ласка.
+  cue: кава
+  answer:
+  - каву
+- id: order-2
+  facet: order
+  format: type
+  prompt: Bestellen Sie stilles Wasser.
+  context: Що будете пити?
+  stem: Мені ___ без газу.
+  cue: вода
+  answer:
+  - воду
+- id: order-3
+  facet: order
+  format: type
+  prompt: Bestellen Sie Tee ohne Zucker.
+  stem: Мені чай без ___.
+  cue: цукор
+  answer:
+  - цукру
+- id: order-4
+  facet: order
+  format: choice
+  prompt: Sie möchten die Speisekarte. Was sagen Sie?
+  answer:
+  - Можна меню, будь ласка?
+  options:
+  - Можна меню, будь ласка?
+  - Можна рахунок, будь ласка?
+  - Можна карткою?
+  - Можна вийти?
+- id: ask-1
+  facet: ask
+  format: choice
+  prompt: Auf der Karte steht „деруни“. Sie kennen das nicht. Was fragen Sie?
+  answer:
+  - Що таке деруни?
+  options:
+  - Що таке деруни?
+  - Коли деруни?
+  - Де деруни?
+  - Деруни, до побачення.
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt: Sie möchten eine Empfehlung. Was fragen Sie?
+  answer:
+  - Що ви порадите?
+  options:
+  - Що ви порадите?
+  - Що ви робите?
+  - Скільки це коштує?
+  - Ви вільні?
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt: Welche Reaktion passt?
+  context: На жаль, борщу сьогодні немає.
+  answer:
+  - Шкода. Тоді вареники, будь ласка.
+  options:
+  - Шкода. Тоді вареники, будь ласка.
+  - Дякую, смачно!
+  - Так, борщ, будь ласка.
+  - Добрий вечір!
+- id: ask-4
+  facet: ask
+  format: type
+  prompt: Es gibt keinen Kaffee. Bestellen Sie eine Cola.
+  context: На жаль, кави немає.
+  stem: Тоді ___, будь ласка.
+  cue: кола
+  answer:
+  - колу
+- id: pay-1
+  facet: pay
+  format: type
+  prompt: Bitten Sie um die Rechnung.
+  stem: ___, будь ласка.
+  cue: die Rechnung
+  answer:
+  - Рахунок
+- id: pay-2
+  facet: pay
+  format: type
+  prompt: Fragen Sie, ob Sie mit Karte zahlen können.
+  stem: Можна ___?
+  cue: картка
+  answer:
+  - карткою
+- id: pay-3
+  facet: pay
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Готівкою чи карткою?
+  answer:
+  - Карткою, будь ласка.
+  options:
+  - Карткою, будь ласка.
+  - Рахунок, будь ласка.
+  - Меню, будь ласка.
+  - Без цукру, будь ласка.

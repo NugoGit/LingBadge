@@ -1,0 +1,105 @@
+skill: travel.border.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: purpose
+  label: Reisezweck
+- id: length
+  label: Aufenthaltsdauer
+- id: stay
+  label: Unterkunft
+items:
+- id: purpose-1
+  facet: purpose
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Мета вашого візиту?
+  answer:
+  - Туризм.
+  options:
+  - Туризм.
+  - Тиждень.
+  - У готелі.
+  - З Австрії.
+- id: purpose-2
+  facet: purpose
+  format: type
+  prompt: 'Antworten Sie: Ich besuche Freunde.'
+  context: Мета вашого візиту?
+  stem: В гості до ___.
+  cue: друзі
+  answer:
+  - друзів
+- id: purpose-3
+  facet: purpose
+  format: choice
+  prompt: 'Antworten Sie: geschäftlich.'
+  context: Мета поїздки?
+  answer:
+  - Робоча поїздка.
+  options:
+  - Робоча поїздка.
+  - Туристична робота.
+  - Робити поїздку.
+  - Роботою.
+- id: length-1
+  facet: length
+  format: type
+  prompt: 'Antworten Sie: eine Woche.'
+  context: Скільки днів ви будете в Україні?
+  stem: ___.
+  cue: eine Woche
+  answer:
+  - Тиждень
+  - Один тиждень
+- id: length-2
+  facet: length
+  format: type
+  prompt: 'Antworten Sie: fünf Tage.'
+  context: Скільки днів?
+  stem: П'ять ___.
+  cue: день
+  answer:
+  - днів
+- id: length-3
+  facet: length
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Коли ви їдете назад?
+  answer:
+  - У неділю.
+  options:
+  - У неділю.
+  - У готелі.
+  - Туризм.
+  - З Австрії.
+- id: stay-1
+  facet: stay
+  format: type
+  prompt: 'Antworten Sie: im Hotel.'
+  context: Де ви будете жити?
+  stem: У ___.
+  cue: готель
+  answer:
+  - готелі
+- id: stay-2
+  facet: stay
+  format: type
+  prompt: 'Antworten Sie: bei einem Freund.'
+  context: Де ви зупинитеся?
+  stem: У ___.
+  cue: друг
+  answer:
+  - друга
+- id: stay-3
+  facet: stay
+  format: choice
+  prompt: 'Antworten Sie: Bei Freunden in Kyjiw.'
+  context: Де ви будете жити?
+  answer:
+  - У друзів у Києві.
+  options:
+  - У друзів у Києві.
+  - До друзів у Київ.
+  - Друзі в Києві.
+  - З друзями Київ.

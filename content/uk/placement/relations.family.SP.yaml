@@ -1,0 +1,89 @@
+skill: relations.family.SP
+lang: uk
+reviewed_by: []
+facets:
+- id: who
+  label: Wer ist wer
+- id: place
+  label: Wo jemand steht
+- id: look
+  label: Aussehen
+items:
+- id: who-1
+  facet: who
+  format: type
+  prompt: 'Sagen Sie: Das ist meine Mutter.'
+  stem: Це ___ мама.
+  cue: мій
+  answer:
+  - моя
+- id: who-2
+  facet: who
+  format: type
+  prompt: 'Sagen Sie: Und das sind meine Eltern.'
+  stem: А це ___ батьки.
+  cue: мій
+  answer:
+  - мої
+- id: who-3
+  facet: who
+  format: type
+  prompt: 'Sagen Sie: Das ist unsere Oma.'
+  stem: Це ___ бабуся.
+  cue: наш
+  answer:
+  - наша
+- id: place-1
+  facet: place
+  format: type
+  prompt: 'Sagen Sie: Links ist mein Bruder.'
+  stem: ___ — мій брат.
+  answer:
+  - Ліворуч
+  - Зліва
+- id: place-2
+  facet: place
+  format: type
+  prompt: 'Sagen Sie: Rechts ist meine Schwester.'
+  stem: ___ — моя сестра.
+  answer:
+  - Праворуч
+  - Справа
+- id: place-3
+  facet: place
+  format: choice
+  prompt: 'Sagen Sie: In der Mitte bin ich.'
+  answer:
+  - Посередині — я.
+  options:
+  - Посередині — я.
+  - Ліворуч — я.
+  - Праворуч — я.
+  - Позаду — я.
+- id: look-1
+  facet: look
+  format: type
+  prompt: 'Sagen Sie: Sie ist groß, sie hat helle Haare.'
+  stem: Вона ___, у неї світле волосся.
+  cue: високий
+  answer:
+  - висока
+- id: look-2
+  facet: look
+  format: type
+  prompt: 'Sagen Sie: Mein Bruder trägt eine Brille.'
+  stem: Мій брат носить ___.
+  cue: Brille
+  answer:
+  - окуляри
+- id: look-3
+  facet: look
+  format: choice
+  prompt: 'Sagen Sie: Er hat dunkle Haare.'
+  answer:
+  - У нього темне волосся.
+  options:
+  - У нього темне волосся.
+  - У нього темні волосся.
+  - Він має темний волосся.
+  - У його темне волосся.

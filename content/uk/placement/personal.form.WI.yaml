@@ -1,0 +1,99 @@
+skill: personal.form.WI
+lang: uk
+reviewed_by: []
+facets:
+- id: name
+  label: Namensfelder
+- id: date
+  label: Daten und Zahlen
+- id: place
+  label: Adresse, Staatsangehörigkeit, Kontakt
+items:
+- id: name-1
+  facet: name
+  format: choice
+  prompt: In welches Feld schreiben Sie Ihren Nachnamen?
+  answer:
+  - Прізвище
+  options:
+  - Прізвище
+  - Ім'я
+  - По батькові
+  - Громадянство
+- id: name-2
+  facet: name
+  format: choice
+  prompt: Anna Huber füllt das Formular aus. Was gehört ins Feld „Ім'я“?
+  answer:
+  - Анна
+  options:
+  - Анна
+  - Губер
+  - Анна Губер
+  - —
+- id: name-3
+  facet: name
+  format: choice
+  prompt: Sie haben keinen Vatersnamen. Was tun Sie mit dem Feld „По батькові“?
+  answer:
+  - Leer lassen oder „—“ eintragen
+  options:
+  - Leer lassen oder „—“ eintragen
+  - Den Vornamen des Vaters eintragen
+  - Den Nachnamen wiederholen
+  - Den Geburtsort eintragen
+- id: date-1
+  facet: date
+  format: type
+  prompt: 'Geburtsdatum: 20. März 1990 im Format ДД.ММ.РРРР.'
+  stem: 'Дата народження: ___'
+  answer:
+  - 20.03.1990
+- id: date-2
+  facet: date
+  format: choice
+  prompt: Welches ist der 3. Dezember 2024 im Formular?
+  answer:
+  - 03.12.2024
+  options:
+  - 03.12.2024
+  - 12.03.2024
+  - 2024.12.03
+  - 3/12/24
+- id: date-3
+  facet: date
+  format: type
+  prompt: 'Hotelformular: Sie reisen zu zweit. (Zahl)'
+  stem: 'Кількість осіб: ___'
+  answer:
+  - '2'
+- id: place-1
+  facet: place
+  format: type
+  prompt: Sie sind Österreicher(in). Was schreiben Sie bei „Громадянство“? (ukrainisch)
+  stem: 'Громадянство: ___'
+  answer:
+  - Австрія
+  - австрійське
+- id: place-2
+  facet: place
+  format: choice
+  prompt: Wie schreiben Sie „Wien“ ins Feld „Місто“?
+  answer:
+  - Відень
+  options:
+  - Відень
+  - Віден
+  - Відні
+  - Вена
+- id: place-3
+  facet: place
+  format: choice
+  prompt: Was gehört ins Feld „Електронна пошта“?
+  answer:
+  - anna.huber@gmail.com
+  options:
+  - anna.huber@gmail.com
+  - +43 660 1234567
+  - вул. Франка, 5
+  - 20.03.1990

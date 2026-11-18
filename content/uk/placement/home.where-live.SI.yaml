@@ -1,0 +1,90 @@
+skill: home.where-live.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: city
+  label: Stadt und Gegend
+- id: home
+  label: Wohnung und Zimmer
+- id: ask
+  label: Zurückfragen
+items:
+- id: city-1
+  facet: city
+  format: type
+  prompt: 'Sagen Sie: Ich wohne in Wien.'
+  stem: Я живу у ___.
+  cue: Відень
+  answer:
+  - Відні
+- id: city-2
+  facet: city
+  format: type
+  prompt: 'Sagen Sie: … nicht weit vom Zentrum.'
+  stem: Я живу недалеко від ___.
+  cue: центр
+  answer:
+  - центру
+- id: city-3
+  facet: city
+  format: type
+  prompt: 'Sagen Sie: Meine Stadt ist groß und schön.'
+  stem: Моє місто ___ й гарне.
+  cue: великий
+  answer:
+  - велике
+- id: home-1
+  facet: home
+  format: type
+  prompt: 'Sagen Sie: Ich habe eine kleine Wohnung, zwei Zimmer.'
+  stem: 'У мене невелика квартира: дві ___.'
+  cue: кімната
+  answer:
+  - кімнати
+- id: home-2
+  facet: home
+  format: type
+  prompt: 'Sagen Sie: Wir haben eine große Küche.'
+  stem: У нас ___ кухня.
+  cue: великий
+  answer:
+  - велика
+- id: home-3
+  facet: home
+  format: choice
+  prompt: 'Sagen Sie: Ich wohne in einem Haus mit Garten.'
+  answer:
+  - Я живу в будинку із садом.
+  options:
+  - Я живу в будинку із садом.
+  - Я живу в будинок із садом.
+  - Я живу будинку з сад.
+  - Я живу на будинку із садом.
+- id: ask-1
+  facet: ask
+  format: type
+  prompt: 'Fragen Sie zurück: Und wo wohnst du?'
+  context: Я живу в Києві.
+  stem: А ти де ___?
+  cue: жити
+  answer:
+  - живеш
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt: Fragen Sie (Sie-Form), wo die Person wohnt.
+  answer:
+  - А ви де живете?
+  options:
+  - А ви де живете?
+  - А ти де живеш?
+  - А де ви працюєте?
+  - А звідки ви?
+- id: ask-3
+  facet: ask
+  format: type
+  prompt: 'Fragen Sie: Wie viele Zimmer hat deine Wohnung?'
+  stem: Скільки ___ у твоїй квартирі?
+  cue: кімната
+  answer:
+  - кімнат

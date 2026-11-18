@@ -1,6 +1,6 @@
 skills: 52
-fa: 22 enablers, 5 realizations, 0 catalogues (0 items)
-uk: 64 enablers, 52 realizations, 13 catalogues (409 items)
+fa: 22 enablers, 5 realizations, 0 catalogues (0 items), 0 placement catalogues (0 items)
+uk: 64 enablers, 52 realizations, 13 catalogues (409 items), 52 placement catalogues (478 items)
 
 ERRORS (0)
 

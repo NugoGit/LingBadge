@@ -1,0 +1,90 @@
+skill: personal.intro.WI
+lang: uk
+reviewed_by: []
+facets:
+- id: open
+  label: Anrede und Begrüßung
+- id: me
+  label: Über sich schreiben
+- id: ask
+  label: Zurückfragen
+items:
+- id: open-1
+  facet: open
+  format: type
+  prompt: 'Beginnen Sie die Nachricht locker: Hallo!'
+  stem: ___! Мене звати Лукас.
+  answer:
+  - Привіт
+- id: open-2
+  facet: open
+  format: choice
+  prompt: Sie schreiben einer Lehrerin, die Sie nicht kennen. Wie beginnen Sie?
+  answer:
+  - Добрий день, пані Олено!
+  options:
+  - Добрий день, пані Олено!
+  - Привіт, Олено!
+  - Бувайте, пані Олено!
+  - Добрий день, пані Олена!
+- id: open-3
+  facet: open
+  format: choice
+  prompt: 'Ein Mann schließt: Freue mich, dich kennenzulernen!'
+  answer:
+  - Буду радий познайомитися!
+  options:
+  - Буду радий познайомитися!
+  - Буду рада познайомитися!
+  - Буду радий познайомлюся!
+- id: me-1
+  facet: me
+  format: type
+  prompt: 'Schreiben Sie: Ich lerne Ukrainisch.'
+  stem: Я вивчаю ___ мову.
+  cue: український
+  answer:
+  - українську
+- id: me-2
+  facet: me
+  format: type
+  prompt: 'Schreiben Sie: Ich arbeite in einem Krankenhaus.'
+  stem: Я працюю в ___.
+  cue: лікарня
+  answer:
+  - лікарні
+- id: me-3
+  facet: me
+  format: type
+  prompt: 'Schreiben Sie: Ich bin 30 Jahre alt.'
+  stem: Мені тридцять ___.
+  cue: рік
+  answer:
+  - років
+- id: ask-1
+  facet: ask
+  format: type
+  prompt: 'Fragen Sie: Und woher bist du?'
+  stem: А ти ___?
+  cue: woher
+  answer:
+  - звідки
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt: Fragen Sie, was die Person beruflich macht.
+  answer:
+  - А ким ти працюєш?
+  options:
+  - А ким ти працюєш?
+  - А де ти працюєш завтра?
+  - А ти працюєш?
+  - А чим ти працює?
+- id: ask-3
+  facet: ask
+  format: type
+  prompt: 'Fragen Sie: Sprichst du Deutsch?'
+  stem: А ти ___ німецькою?
+  cue: розмовляти
+  answer:
+  - розмовляєш

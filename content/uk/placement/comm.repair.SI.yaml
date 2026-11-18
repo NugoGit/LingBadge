@@ -1,0 +1,98 @@
+skill: comm.repair.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: not
+  label: Sagen, dass man nicht verstanden hat
+- id: repeat
+  label: Um Wiederholung oder langsameres Sprechen bitten
+- id: spell
+  label: Nach der Schreibweise fragen
+items:
+- id: not-1
+  facet: not
+  format: type
+  prompt: 'Sagen Sie: Entschuldigung, ich habe nicht verstanden.'
+  stem: Вибачте, я не ___.
+  cue: зрозуміти (Vergangenheit)
+  answer:
+  - зрозумів
+  - зрозуміла
+- id: not-2
+  facet: not
+  format: choice
+  prompt: Sie haben nichts verstanden. Was sagen Sie?
+  context: Вам потрібна довідка з місця проживання.
+  answer:
+  - Вибачте, я не розумію.
+  options:
+  - Вибачте, я не розумію.
+  - Так, звичайно.
+  - Дякую, все добре.
+  - До побачення.
+- id: not-3
+  facet: not
+  format: choice
+  prompt: 'Ein Mann sagt: „Ich habe nicht verstanden.“ Welche Form ist richtig?'
+  answer:
+  - Я не зрозумів.
+  options:
+  - Я не зрозумів.
+  - Я не зрозуміла.
+  - Я не зрозуміло.
+- id: repeat-1
+  facet: repeat
+  format: type
+  prompt: Bitten Sie höflich (Sie-Form), es zu wiederholen.
+  stem: ___, будь ласка.
+  cue: повторити
+  answer:
+  - Повторіть
+- id: repeat-2
+  facet: repeat
+  format: type
+  prompt: Bitten Sie, langsamer zu sprechen.
+  stem: Говоріть ___, будь ласка.
+  cue: повільно
+  answer:
+  - повільніше
+- id: repeat-3
+  facet: repeat
+  format: choice
+  prompt: Ihre Freundin spricht zu schnell. Was sagen Sie?
+  answer:
+  - Говори повільніше, будь ласка.
+  options:
+  - Говори повільніше, будь ласка.
+  - Говори швидше, будь ласка.
+  - Я говорю повільно.
+  - Ти говориш українською?
+- id: spell-1
+  facet: spell
+  format: type
+  prompt: Fragen Sie, wie man das schreibt.
+  stem: Як це ___?
+  answer:
+  - пишеться
+- id: spell-2
+  facet: spell
+  format: choice
+  prompt: Sie wollen den Namen aufschreiben. Was fragen Sie?
+  context: Моє прізвище — Шевчук.
+  answer:
+  - Як це пишеться?
+  options:
+  - Як це пишеться?
+  - Як це називається?
+  - Що це означає?
+  - Де ви живете?
+- id: spell-3
+  facet: spell
+  format: choice
+  prompt: Sie buchstabieren den Namen „Ліна“. Welche Folge ist richtig?
+  answer:
+  - ел, і, ен, а
+  options:
+  - ел, і, ен, а
+  - ел, и, ен, а
+  - ел, ї, ен, а

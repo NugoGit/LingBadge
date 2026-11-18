@@ -1,0 +1,125 @@
+skill: freetime.media.L
+lang: uk
+reviewed_by: []
+facets:
+- id: news
+  label: Thema einer Nachricht
+- id: weather
+  label: Wetterbericht
+- id: ad
+  label: Werbung und Veranstaltungen
+items:
+- id: news-1
+  facet: news
+  format: choice
+  prompt: Worum geht es?
+  audio: Сьогодні збірна України з футболу виграла у Франції з рахунком два — один.
+  answer:
+  - Sport
+  options:
+  - Sport
+  - Politik
+  - Wetter
+  - Werbung
+  - Kultur
+- id: news-2
+  facet: news
+  format: choice
+  prompt: Worum geht es?
+  audio: Президент сьогодні зустрівся з прем'єр-міністром Польщі.
+  answer:
+  - Politik
+  options:
+  - Politik
+  - Sport
+  - Wetter
+  - Werbung
+  - Kultur
+- id: news-3
+  facet: news
+  format: choice
+  prompt: Worum geht es?
+  audio: Наша тенісистка перемогла у фіналі турніру.
+  answer:
+  - Sport
+  options:
+  - Sport
+  - Politik
+  - Wetter
+  - Werbung
+  - Kultur
+- id: weather-1
+  facet: weather
+  format: choice
+  prompt: Wie wird das Wetter?
+  audio: Завтра в Києві сонячно, до двадцяти п'яти градусів тепла.
+  answer:
+  - sonnig und warm
+  options:
+  - sonnig und warm
+  - Regen
+  - Schnee
+  - Gewitter
+- id: weather-2
+  facet: weather
+  format: choice
+  prompt: Wie wird das Wetter?
+  audio: Вночі в Карпатах буде сніг, на дорогах слизько.
+  answer:
+  - Schnee
+  options:
+  - Schnee
+  - Sonne
+  - Regen
+  - Nebel
+- id: weather-3
+  facet: weather
+  format: choice
+  prompt: Wie wird das Wetter?
+  audio: Завтра дощ і сильний вітер. Візьміть парасольку!
+  answer:
+  - Regen und Wind
+  options:
+  - Regen und Wind
+  - Sonne
+  - Schnee
+  - windstill und trocken
+- id: ad-1
+  facet: ad
+  format: choice
+  prompt: Worum geht es?
+  audio: Нова кава «Ранок» — тепер у кожному магазині! Тільки сорок гривень!
+  answer:
+  - Werbung
+  options:
+  - Werbung
+  - Sport
+  - Politik
+  - Wetter
+  - Kultur
+- id: ad-2
+  facet: ad
+  format: choice
+  prompt: Worum geht es?
+  audio: Увага! Знижки на всі телефони до неділі!
+  answer:
+  - Werbung
+  options:
+  - Werbung
+  - Sport
+  - Politik
+  - Wetter
+  - Kultur
+- id: ad-3
+  facet: ad
+  format: choice
+  prompt: Worum geht es?
+  audio: У Львові відкрили новий музей. Вхід у неділю безкоштовний.
+  answer:
+  - Kultur
+  options:
+  - Kultur
+  - Sport
+  - Politik
+  - Wetter
+  - Werbung

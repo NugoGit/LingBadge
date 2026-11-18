@@ -1,0 +1,119 @@
+skill: freetime.tour.L
+lang: uk
+reviewed_by: []
+facets:
+- id: what
+  label: Was für ein Gebäude, wo
+- id: age
+  label: Wie alt
+- id: who
+  label: Wer hier lebte oder arbeitete
+items:
+- id: what-1
+  facet: what
+  format: choice
+  prompt: Was ist das für ein Gebäude?
+  audio: Перед нами ратуша. Тут працює міська рада.
+  answer:
+  - Rathaus
+  options:
+  - Rathaus
+  - Kirche
+  - Theater
+  - Bahnhof
+- id: what-2
+  facet: what
+  format: choice
+  prompt: Was ist rechts?
+  audio: Праворуч — оперний театр.
+  answer:
+  - Opernhaus
+  options:
+  - Opernhaus
+  - Rathaus
+  - Museum
+  - Kirche
+- id: what-3
+  facet: what
+  format: choice
+  prompt: Was ist links?
+  audio: Ліворуч ви бачите старий собор.
+  answer:
+  - Eine alte Kathedrale
+  options:
+  - Eine alte Kathedrale
+  - Ein altes Theater
+  - Ein neues Museum
+  - Das Rathaus
+- id: age-1
+  facet: age
+  format: choice
+  prompt: Wie alt ist die Kirche?
+  audio: Цій церкві понад чотириста років.
+  answer:
+  - über 400 Jahre
+  options:
+  - über 400 Jahre
+  - 40 Jahre
+  - 14 Jahre
+  - über 4000 Jahre
+- id: age-2
+  facet: age
+  format: choice
+  prompt: Wie alt ist die Brücke?
+  audio: Цьому мосту сто років.
+  answer:
+  - 100 Jahre
+  options:
+  - 100 Jahre
+  - 10 Jahre
+  - 1000 Jahre
+  - 200 Jahre
+- id: age-3
+  facet: age
+  format: choice
+  prompt: Wann wurde das Haus gebaut?
+  audio: Цей будинок побудували дуже давно, у шістнадцятому столітті.
+  answer:
+  - Im 16. Jahrhundert
+  options:
+  - Im 16. Jahrhundert
+  - Im 6. Jahrhundert
+  - Vor 16 Jahren
+  - Im 19. Jahrhundert
+- id: who-1
+  facet: who
+  format: choice
+  prompt: Wer hat hier gelebt?
+  audio: Тут жив поет Іван Франко.
+  answer:
+  - Ein Dichter
+  options:
+  - Ein Dichter
+  - Ein König
+  - Ein Maler
+  - Ein Komponist
+- id: who-2
+  facet: who
+  format: choice
+  prompt: Was wird über das Haus gesagt?
+  audio: У цьому будинку жила Леся Українка.
+  answer:
+  - Lesja Ukrajinka hat hier gelebt.
+  options:
+  - Lesja Ukrajinka hat hier gelebt.
+  - Lesja Ukrajinka hat das Haus gebaut.
+  - Hier ist ein Geschäft.
+  - Lesja Ukrajinka arbeitet hier.
+- id: who-3
+  facet: who
+  format: choice
+  prompt: Was wird über das Haus gesagt?
+  audio: Тут працював відомий художник.
+  answer:
+  - Ein bekannter Maler hat hier gearbeitet.
+  options:
+  - Ein bekannter Maler hat hier gearbeitet.
+  - Ein bekannter Maler hat hier gelebt.
+  - Hier ist ein Kunstmuseum.
+  - Ein Dichter hat hier gearbeitet.

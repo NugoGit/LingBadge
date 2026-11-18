@@ -1,0 +1,91 @@
+skill: weather.smalltalk.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: ask
+  label: Nach dem Wetter fragen
+- id: today
+  label: Das Wetter heute beschreiben
+- id: other
+  label: Morgen und gestern
+items:
+- id: ask-1
+  facet: ask
+  format: type
+  prompt: 'Fragen Sie: Wie ist das Wetter heute?'
+  stem: Яка сьогодні ___?
+  answer:
+  - погода
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt: Fragen Sie, wie das Wetter morgen wird.
+  answer:
+  - Яка завтра буде погода?
+  options:
+  - Яка завтра буде погода?
+  - Яка вчора була погода?
+  - Яка погода сьогодні?
+  - Де завтра погода?
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Яка сьогодні погода?
+  answer:
+  - Холодно, але сонячно.
+  options:
+  - Холодно, але сонячно.
+  - Завтра.
+  - Дякую, добре.
+  - О сьомій.
+- id: today-1
+  facet: today
+  format: type
+  prompt: 'Sagen Sie: Es regnet.'
+  stem: Іде ___.
+  answer:
+  - дощ
+- id: today-2
+  facet: today
+  format: type
+  prompt: 'Sagen Sie: Heute ist es kalt.'
+  stem: Сьогодні ___.
+  cue: kalt
+  answer:
+  - холодно
+- id: today-3
+  facet: today
+  format: type
+  prompt: 'Sagen Sie: Heute ist es windig.'
+  stem: Сьогодні ___.
+  cue: windig
+  answer:
+  - вітряно
+- id: other-1
+  facet: other
+  format: type
+  prompt: 'Sagen Sie: Morgen wird es heiß.'
+  stem: Завтра ___ спекотно.
+  cue: бути
+  answer:
+  - буде
+- id: other-2
+  facet: other
+  format: type
+  prompt: 'Sagen Sie: Gestern war es warm.'
+  stem: Вчора ___ тепло.
+  cue: бути
+  answer:
+  - було
+- id: other-3
+  facet: other
+  format: choice
+  prompt: 'Sagen Sie: Morgen schneit es.'
+  answer:
+  - Завтра буде сніг.
+  options:
+  - Завтра буде сніг.
+  - Завтра був сніг.
+  - Завтра є сніг.
+  - Вчора буде сніг.

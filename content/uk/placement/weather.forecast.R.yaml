@@ -1,0 +1,114 @@
+skill: weather.forecast.R
+lang: uk
+reviewed_by: []
+facets:
+- id: temp
+  label: Temperaturen
+- id: sky
+  label: Himmel und Niederschlag
+- id: wind
+  label: Wind und Tageszeit
+items:
+- id: temp-1
+  facet: temp
+  format: type
+  prompt: Wie warm ist es in der Nacht? (Zahl, Grad)
+  text: 'Київ: вдень +18°, хмарно, невеликий дощ. Вночі +9°. Вітер слабкий.'
+  answer:
+  - '9'
+  - '+9'
+  - +9°
+  - 9°
+- id: temp-2
+  facet: temp
+  format: choice
+  prompt: Wie kalt ist es am Tag?
+  text: 'Харків: сніг, вдень −3°, вночі −10°. Сильний вітер.'
+  answer:
+  - −3°
+  options:
+  - −3°
+  - +3°
+  - −10°
+  - −13°
+- id: temp-3
+  facet: temp
+  format: choice
+  prompt: Wann ist es wärmer?
+  text: 'Львів, субота: сонячно, +25°. Неділя: гроза, +19°.'
+  answer:
+  - Samstag
+  options:
+  - Samstag
+  - Sonntag
+  - Gleich warm
+- id: sky-1
+  facet: sky
+  format: choice
+  prompt: Wie ist das Wetter tagsüber in Kyjiw?
+  text: 'Київ: вдень +18°, хмарно, невеликий дощ. Вночі +9°. Вітер слабкий.'
+  answer:
+  - Bewölkt, etwas Regen
+  options:
+  - Bewölkt, etwas Regen
+  - Sonnig
+  - Schnee
+  - Gewitter
+- id: sky-2
+  facet: sky
+  format: choice
+  prompt: Was erwartet man am Sonntag?
+  text: 'Львів, субота: сонячно, +25°. Неділя: гроза, +19°.'
+  answer:
+  - Gewitter
+  options:
+  - Gewitter
+  - Sonne
+  - Schnee
+  - Nebel
+- id: sky-3
+  facet: sky
+  format: choice
+  prompt: Was fällt in Charkiw?
+  text: 'Харків: сніг, вдень −3°, вночі −10°. Сильний вітер.'
+  answer:
+  - Schnee
+  options:
+  - Schnee
+  - Regen
+  - Hagel
+  - Nichts
+- id: wind-1
+  facet: wind
+  format: choice
+  prompt: Wie ist der Wind in Kyjiw?
+  text: 'Київ: вдень +18°, хмарно, невеликий дощ. Вночі +9°. Вітер слабкий.'
+  answer:
+  - schwach
+  options:
+  - schwach
+  - stark
+  - kein Wind
+- id: wind-2
+  facet: wind
+  format: choice
+  prompt: Wie ist der Wind in Charkiw?
+  text: 'Харків: сніг, вдень −3°, вночі −10°. Сильний вітер.'
+  answer:
+  - stark
+  options:
+  - stark
+  - schwach
+  - kein Wind
+- id: wind-3
+  facet: wind
+  format: choice
+  prompt: Wann ist es neblig?
+  text: 'Одеса: вітер помірний, вранці туман, вдень ясно.'
+  answer:
+  - Am Morgen
+  options:
+  - Am Morgen
+  - Am Nachmittag
+  - Am Abend
+  - Den ganzen Tag

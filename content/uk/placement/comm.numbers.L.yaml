@@ -1,0 +1,96 @@
+skill: comm.numbers.L
+lang: uk
+reviewed_by: []
+facets:
+- id: price
+  label: Preise
+- id: time
+  label: Uhrzeiten
+- id: number
+  label: Mengen, Zimmer- und Telefonnummern
+items:
+- id: price-1
+  facet: price
+  format: type
+  prompt: Wie viel kostet es? (Zahl)
+  audio: Це коштує сто двадцять гривень.
+  answer:
+  - '120'
+- id: price-2
+  facet: price
+  format: type
+  prompt: Wie viel ist es insgesamt? (Zahl)
+  audio: Разом — двісті сорок п'ять гривень.
+  answer:
+  - '245'
+- id: price-3
+  facet: price
+  format: type
+  prompt: Wie viel kostet die Fahrkarte? (Zahl)
+  audio: Квиток коштує вісімдесят дев'ять гривень.
+  answer:
+  - '89'
+- id: price-4
+  facet: price
+  format: type
+  prompt: Wie viel kostet der Kaffee? (Zahl)
+  audio: Кава? Сорок п'ять гривень, будь ласка.
+  answer:
+  - '45'
+- id: time-1
+  facet: time
+  format: type
+  prompt: Um wie viel Uhr fährt der Zug? (z. B. 9:20)
+  audio: Потяг відправляється о дев'ятій сорок.
+  answer:
+  - '9:40'
+- id: time-2
+  facet: time
+  format: type
+  prompt: Um wie viel Uhr öffnet das Geschäft? (z. B. 9:20)
+  audio: Магазин відчиняється о восьмій ранку.
+  answer:
+  - '8:00'
+  - '8'
+- id: time-3
+  facet: time
+  format: type
+  prompt: Um wie viel Uhr kommt der Bus? (z. B. 9:20)
+  audio: Автобус буде о чотирнадцятій п'ятнадцять.
+  answer:
+  - '14:15'
+- id: time-4
+  facet: time
+  format: type
+  prompt: Um wie viel Uhr beginnt die Vorlesung? (z. B. 9:20)
+  audio: Лекція починається о десятій тридцять.
+  answer:
+  - '10:30'
+- id: number-1
+  facet: number
+  format: type
+  prompt: Notieren Sie die Telefonnummer (nur Ziffern).
+  audio: 'Мій номер телефону: нуль дев''яносто сім, сто двадцять три, сорок п''ять, шістдесят сім.'
+  answer:
+  - 0971234567
+- id: number-2
+  facet: number
+  format: type
+  prompt: Wie viel Gramm Käse? (Zahl)
+  audio: Двісті п'ятдесят грамів сиру, будь ласка.
+  answer:
+  - '250'
+- id: number-3
+  facet: number
+  format: type
+  prompt: Welche Zimmernummer? (Zahl)
+  audio: Ваша кімната — номер триста дванадцять.
+  answer:
+  - '312'
+- id: number-4
+  facet: number
+  format: type
+  prompt: Wie viele Kilo Kartoffeln? (Zahl)
+  audio: Мені три кілограми картоплі, будь ласка.
+  answer:
+  - '3'

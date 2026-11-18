@@ -1,0 +1,97 @@
+skill: personal.intro.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: name
+  label: Name sagen und erfragen
+- id: from
+  label: Herkunft und Wohnort
+- id: job
+  label: Beruf und Sprachen
+items:
+- id: name-1
+  facet: name
+  format: type
+  prompt: 'Antworten Sie: Ich heiße Andrij.'
+  context: Як вас звати?
+  stem: ___ звати Андрій.
+  answer:
+  - Мене
+- id: name-2
+  facet: name
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Мене звати Олена. А вас?
+  answer:
+  - Мене звати Томас. Дуже приємно!
+  options:
+  - Мене звати Томас. Дуже приємно!
+  - Мене звати Томас. До побачення!
+  - Я звати Томас.
+  - Мені звати Томас.
+- id: name-3
+  facet: name
+  format: choice
+  prompt: Fragen Sie ein Kind nach seinem Namen.
+  answer:
+  - Як тебе звати?
+  options:
+  - Як тебе звати?
+  - Як вас звати?
+  - Як тобі звати?
+  - Як ти звати?
+- id: from-1
+  facet: from
+  format: type
+  prompt: 'Sagen Sie: Ich bin aus Österreich.'
+  stem: Я з ___.
+  cue: Австрія
+  answer:
+  - Австрії
+- id: from-2
+  facet: from
+  format: type
+  prompt: 'Sagen Sie: Ich wohne in Salzburg.'
+  stem: Я живу в ___.
+  cue: Зальцбург
+  answer:
+  - Зальцбурзі
+- id: from-3
+  facet: from
+  format: choice
+  prompt: 'Fragen Sie (Sie-Form): Woher kommen Sie?'
+  answer:
+  - Звідки ви?
+  options:
+  - Звідки ви?
+  - Куди ви?
+  - Де ви?
+  - Звідки ти?
+- id: job-1
+  facet: job
+  format: type
+  prompt: 'Sagen Sie: Ich arbeite als Programmierer.'
+  stem: Я працюю ___.
+  cue: програміст
+  answer:
+  - програмістом
+- id: job-2
+  facet: job
+  format: type
+  prompt: 'Sagen Sie: Ich spreche Deutsch und Englisch.'
+  stem: Я розмовляю ___ й англійською.
+  cue: німецька
+  answer:
+  - німецькою
+- id: job-3
+  facet: job
+  format: choice
+  prompt: Sie sind nicht Student, sondern Lehrer. Was antworten Sie?
+  context: Ви студент?
+  answer:
+  - Ні, я вчитель.
+  options:
+  - Ні, я вчитель.
+  - Ні, я вчителем.
+  - Так, я вчитель.
+  - Ні, я вчителя.

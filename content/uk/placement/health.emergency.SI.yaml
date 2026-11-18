@@ -1,0 +1,96 @@
+skill: health.emergency.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: help
+  label: Um Hilfe rufen
+- id: what
+  label: Sagen, was passiert ist
+- id: where
+  label: Sagen, wo man ist
+items:
+- id: help-1
+  facet: help
+  format: type
+  prompt: 'Rufen Sie: Hilfe!'
+  stem: ___!
+  answer:
+  - Допоможіть
+  - Рятуйте
+  - Допоможіть мені
+- id: help-2
+  facet: help
+  format: type
+  prompt: 'Rufen Sie: Rufen Sie einen Krankenwagen!'
+  stem: Викличте ___!
+  answer:
+  - швидку
+  - швидку допомогу
+- id: help-3
+  facet: help
+  format: choice
+  prompt: Welche Nummer ist in der Ukraine die allgemeine Notrufnummer?
+  answer:
+  - '112'
+  options:
+  - '112'
+  - '103'
+  - '101'
+  - '102'
+- id: what-1
+  facet: what
+  format: choice
+  prompt: 'Sagen Sie: Ein Mann ist gestürzt.'
+  answer:
+  - Чоловік упав.
+  options:
+  - Чоловік упав.
+  - Чоловік падає завтра.
+  - Чоловіка впав.
+  - Чоловік упала.
+- id: what-2
+  facet: what
+  format: type
+  prompt: 'Sagen Sie: Hier ist ein Unfall.'
+  stem: Тут ___.
+  answer:
+  - аварія
+  - ДТП
+  - нещасний випадок
+- id: what-3
+  facet: what
+  format: type
+  prompt: 'Sagen Sie: Er atmet nicht.'
+  stem: Він не ___.
+  cue: дихати
+  answer:
+  - дихає
+- id: where-1
+  facet: where
+  format: type
+  prompt: 'Sagen Sie: … neben der Apotheke.'
+  context: Де ви?
+  stem: Ми на вулиці Франка, біля ___.
+  cue: аптека
+  answer:
+  - аптеки
+- id: where-2
+  facet: where
+  format: type
+  prompt: 'Ergänzen Sie die Adresse: Haus Nummer zehn.'
+  context: Яка адреса?
+  stem: Вулиця Шевченка, ___ десять.
+  cue: Haus
+  answer:
+  - будинок
+- id: where-3
+  facet: where
+  format: choice
+  prompt: 'Sagen Sie: Wir sind beim Bahnhof.'
+  answer:
+  - Ми біля вокзалу.
+  options:
+  - Ми біля вокзалу.
+  - Ми біля вокзал.
+  - Ми до вокзалу.
+  - Ми біля вокзалі.

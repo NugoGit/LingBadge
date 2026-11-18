@@ -77,3 +77,30 @@ for (const [code, L] of Object.entries(C.langs)) for (const [id, cat] of Object.
 LB.setTarget(C.langs.fa.meta); assert.ok(LB.enablerCheckPrompt(C.langs.fa.enablers[Object.keys(C.langs.fa.enablers)[0]], "de", 1).includes("Persisch"));
 LB.setTarget(C.langs.uk.meta);
 console.log("core.js: all checks passed");
+
+// ---------------------------------------------------------------- placement
+{
+  const pl = C.langs.uk.placement;
+  assert.ok(Object.keys(pl).length >= 52, "uk placement catalogues");
+  const cat = pl["food.cafe.SI"];
+  const first = LB.samplePlacement(cat, {}, 1);
+  assert.strictEqual(first.length, 3);
+  assert.strictEqual(new Set(first.map((i) => i.facet)).size, 3);
+  const seen = {}; first.forEach((i) => (seen[i.id] = 1));
+  const second = LB.samplePlacement(cat, seen, 2);
+  assert.ok(second.every((i) => !seen[i.id]), "rotation prefers unseen items");
+  const form = LB.placementForm(cat, first, "de", 1);
+  form.forEach((it) => {
+    assert.ok(it.id.startsWith("food.cafe.SI#"));
+    if (it.type === "mcq") { assert.ok(it.options.includes(it.key[0])); assert.ok(LB.placementCorrect(it, it.key[0])); }
+    else assert.ok(LB.placementCorrect(it, " " + it.key[0].toUpperCase() + "!"));
+    assert.ok(!LB.placementCorrect(it, ""));
+  });
+  assert.strictEqual(LB.loose("9.20 Uhr"), "9:20");
+  assert.strictEqual(LB.loose("Повторіть, будь ласка!"), LB.loose("повторіть будь ласка"));
+  // option order is shuffled but deterministic per seed
+  const mc = cat.items.find((i) => i.format === "choice");
+  const a = LB.placementForm(cat, [mc], "de", 5)[0].options, b = LB.placementForm(cat, [mc], "de", 5)[0].options;
+  assert.deepStrictEqual(a, b);
+  console.log("placement: all checks passed");
+}

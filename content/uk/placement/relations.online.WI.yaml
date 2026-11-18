@@ -1,0 +1,102 @@
+skill: relations.online.WI
+lang: uk
+reviewed_by: []
+facets:
+- id: pos
+  label: Gratulieren, loben
+- id: sym
+  label: Mitgefühl, schade
+- id: reply
+  label: Danken, sich entschuldigen
+items:
+- id: pos-1
+  facet: pos
+  format: choice
+  prompt: Welcher Kommentar passt?
+  context: Мій новий велосипед! 🚲
+  answer:
+  - Класне фото! Вітаю!
+  options:
+  - Класне фото! Вітаю!
+  - Шкода…
+  - Вибач, що пізно.
+  - Будь здоров!
+- id: pos-2
+  facet: pos
+  format: type
+  prompt: 'Kommentieren Sie: Glückwunsch!'
+  stem: ___!
+  answer:
+  - Вітаю
+- id: pos-3
+  facet: pos
+  format: choice
+  prompt: Welcher Kommentar passt?
+  context: Я склала іспит! 🎉
+  answer:
+  - Вітаю! Молодець!
+  options:
+  - Вітаю! Молодець!
+  - Шкода!
+  - Дякую!
+  - Нічого страшного.
+- id: sym-1
+  facet: sym
+  format: choice
+  prompt: Welcher Kommentar passt?
+  context: Мій кіт захворів 😢
+  answer:
+  - Шкода… Одужуй, котику!
+  options:
+  - Шкода… Одужуй, котику!
+  - Класно!
+  - Вітаю!
+  - Смачного!
+- id: sym-2
+  facet: sym
+  format: type
+  prompt: 'Kommentieren Sie: Schade!'
+  stem: ___!
+  answer:
+  - Шкода
+- id: sym-3
+  facet: sym
+  format: choice
+  prompt: Welcher Kommentar passt?
+  context: Не можу прийти на вечірку.
+  answer:
+  - Шкода! Іншим разом.
+  options:
+  - Шкода! Іншим разом.
+  - Вітаю з вечіркою!
+  - Дякую за фото!
+  - Класне фото!
+- id: reply-1
+  facet: reply
+  format: type
+  prompt: Jemand schreibt unter Ihr Foto. Bedanken Sie sich.
+  context: Гарне фото!
+  stem: ___! 😊
+  answer:
+  - Дякую
+- id: reply-2
+  facet: reply
+  format: type
+  prompt: Entschuldigen Sie sich, dass Sie spät antworten.
+  stem: ___, що пізно відповідаю.
+  answer:
+  - Вибач
+  - Пробач
+  - Вибачте
+- id: reply-3
+  facet: reply
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Дякую за фото!
+  answer:
+  - Будь ласка! 😊
+  options:
+  - Будь ласка! 😊
+  - Шкода!
+  - Вітаю!
+  - Вибач!

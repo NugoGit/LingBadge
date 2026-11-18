@@ -1,0 +1,87 @@
+skill: travel.postcard.WI
+lang: uk
+reviewed_by: []
+facets:
+- id: greet
+  label: Gruß und Abschluss
+- id: like
+  label: Wie es ist
+- id: do
+  label: Was man macht
+items:
+- id: greet-1
+  facet: greet
+  format: type
+  prompt: 'Schreiben Sie: Grüße aus den Karpaten!'
+  stem: Привіт з ___!
+  cue: Карпати
+  answer:
+  - Карпат
+- id: greet-2
+  facet: greet
+  format: type
+  prompt: 'Schreiben Sie: Grüße aus Lwiw!'
+  stem: Привіт зі ___!
+  cue: Львів
+  answer:
+  - Львова
+- id: greet-3
+  facet: greet
+  format: choice
+  prompt: Welcher Abschluss passt für eine Karte an die Familie?
+  answer:
+  - Цілую, Марко.
+  options:
+  - Цілую, Марко.
+  - З повагою, пане Марко.
+  - До побачення, шановні.
+  - Добрий день, Марко.
+- id: like-1
+  facet: like
+  format: type
+  prompt: 'Schreiben Sie: Hier ist es sehr schön.'
+  stem: Тут дуже ___.
+  cue: schön
+  answer:
+  - гарно
+  - красиво
+- id: like-2
+  facet: like
+  format: type
+  prompt: 'Schreiben Sie: Das Wetter ist gut.'
+  stem: Погода ___.
+  cue: хороший
+  answer:
+  - хороша
+- id: like-3
+  facet: like
+  format: type
+  prompt: 'Schreiben Sie: Heute ist es bewölkt, aber warm.'
+  stem: Сьогодні ___, але тепло.
+  cue: bewölkt
+  answer:
+  - хмарно
+- id: do-1
+  facet: do
+  format: type
+  prompt: 'Schreiben Sie: Wir wohnen in einem kleinen Hotel.'
+  stem: Ми живемо в маленькому ___.
+  cue: готель
+  answer:
+  - готелі
+- id: do-2
+  facet: do
+  format: type
+  prompt: 'Schreiben Sie: Jeden Tag wandern wir in den Bergen.'
+  stem: Щодня ми ___ в горах.
+  cue: гуляти
+  answer:
+  - гуляємо
+- id: do-3
+  facet: do
+  format: type
+  prompt: 'Schreiben Sie: Gestern waren wir im Museum.'
+  stem: Вчора ми ___ в музеї.
+  cue: бути
+  answer:
+  - були

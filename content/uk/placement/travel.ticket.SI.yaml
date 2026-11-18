@@ -1,0 +1,86 @@
+skill: travel.ticket.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: where
+  label: Fahrkarte, wohin, wie viele
+- id: when
+  label: Für wann
+- id: info
+  label: Abfahrt, Bahnsteig
+items:
+- id: where-1
+  facet: where
+  format: type
+  prompt: Eine Fahrkarte nach Lwiw, bitte.
+  stem: Один квиток до ___, будь ласка.
+  cue: Львів
+  answer:
+  - Львова
+- id: where-2
+  facet: where
+  format: type
+  prompt: Zwei Fahrkarten nach Odesa.
+  stem: Два квитки до ___.
+  cue: Одеса
+  answer:
+  - Одеси
+- id: where-3
+  facet: where
+  format: type
+  prompt: Zwei Fahrkarten nach Kyjiw.
+  stem: Два ___ до Києва.
+  cue: квиток
+  answer:
+  - квитки
+- id: when-1
+  facet: when
+  format: type
+  prompt: Für heute, für den Abend.
+  stem: На ___, на вечір.
+  cue: heute
+  answer:
+  - сьогодні
+- id: when-2
+  facet: when
+  format: type
+  prompt: Für morgen früh.
+  stem: На ___ вранці.
+  cue: morgen
+  answer:
+  - завтра
+- id: when-3
+  facet: when
+  format: type
+  prompt: Für nächsten Freitag.
+  stem: На ___ п'ятницю.
+  cue: наступний
+  answer:
+  - наступну
+- id: info-1
+  facet: info
+  format: type
+  prompt: 'Fragen Sie: Um wie viel Uhr ist die Abfahrt?'
+  stem: О ___ відправлення?
+  answer:
+  - котрій
+- id: info-2
+  facet: info
+  format: type
+  prompt: 'Fragen Sie: Von welchem Bahnsteig?'
+  stem: З якої ___?
+  cue: Bahnsteig
+  answer:
+  - платформи
+- id: info-3
+  facet: info
+  format: choice
+  prompt: Von wo fährt der Zug?
+  context: Відправлення о 18:40, третя платформа.
+  answer:
+  - Bahnsteig 3
+  options:
+  - Bahnsteig 3
+  - Bahnsteig 18
+  - Bahnsteig 4
+  - Gleis 40

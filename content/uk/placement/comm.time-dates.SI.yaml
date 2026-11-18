@@ -1,0 +1,117 @@
+skill: comm.time-dates.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: clock
+  label: Uhrzeit fragen und sagen
+- id: day
+  label: 'Tage: heute, morgen, gestern, Wochentage'
+- id: date
+  label: Datum und Monat
+items:
+- id: clock-1
+  facet: clock
+  format: type
+  prompt: Fragen Sie nach der Uhrzeit.
+  stem: ___ година?
+  answer:
+  - Котра
+- id: clock-2
+  facet: clock
+  format: type
+  prompt: 'Antworten Sie: um sieben.'
+  context: О котрій починається фільм?
+  stem: О ___.
+  cue: сьома
+  answer:
+  - сьомій
+- id: clock-3
+  facet: clock
+  format: type
+  prompt: 'Antworten Sie: Es ist zehn.'
+  context: Котра година?
+  stem: Зараз ___.
+  cue: 10 Uhr
+  answer:
+  - десята
+  - десята година
+- id: clock-4
+  facet: clock
+  format: choice
+  prompt: Sie wollen wissen, um wie viel Uhr der Zug fährt. Was fragen Sie?
+  answer:
+  - О котрій потяг?
+  options:
+  - О котрій потяг?
+  - Котра година?
+  - Скільки коштує потяг?
+  - Де потяг?
+- id: day-1
+  facet: day
+  format: type
+  prompt: 'Antworten Sie: am Samstag.'
+  context: Коли концерт?
+  stem: У ___.
+  cue: субота
+  answer:
+  - суботу
+- id: day-2
+  facet: day
+  format: choice
+  prompt: Heute ist Mittwoch. Welcher Tag ist morgen?
+  answer:
+  - четвер
+  options:
+  - четвер
+  - вівторок
+  - п'ятниця
+  - середа
+- id: day-3
+  facet: day
+  format: choice
+  prompt: Was bedeutet „вчора“?
+  answer:
+  - gestern
+  options:
+  - gestern
+  - heute
+  - morgen
+  - übermorgen
+- id: day-4
+  facet: day
+  format: type
+  prompt: 'Antworten Sie: heute Abend.'
+  context: Коли ти вільна?
+  stem: ___ ввечері.
+  cue: heute
+  answer:
+  - Сьогодні
+- id: date-1
+  facet: date
+  format: type
+  prompt: 'Antworten Sie: am 1. Mai.'
+  context: Коли в тебе день народження?
+  stem: Першого ___.
+  cue: травень
+  answer:
+  - травня
+- id: date-2
+  facet: date
+  format: type
+  prompt: 'Antworten Sie: im Juli.'
+  context: Коли ви їдете до Києва?
+  stem: У ___.
+  cue: липень
+  answer:
+  - липні
+- id: date-3
+  facet: date
+  format: choice
+  prompt: Wie sagt man „am 8. März“?
+  answer:
+  - восьмого березня
+  options:
+  - восьмого березня
+  - вісім березня
+  - восьмий березень
+  - у березні вісім
