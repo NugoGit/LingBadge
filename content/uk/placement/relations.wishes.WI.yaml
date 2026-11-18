@@ -3,23 +3,33 @@ lang: uk
 reviewed_by: []
 facets:
 - id: birthday
-  label: Geburtstag
+  label:
+    de: Geburtstag
+    en: Birthday
 - id: holiday
-  label: Feiertage
+  label:
+    de: Feiertage
+    en: Holidays
 - id: wish
-  label: Wünsche
+  label:
+    de: Wünsche
+    en: Wishes
 items:
 - id: birthday-1
   facet: birthday
   format: type
-  prompt: Alles Gute zum Geburtstag!
+  prompt:
+    de: Alles Gute zum Geburtstag!
+    en: Happy birthday!
   stem: З днем ___!
   answer:
   - народження
 - id: birthday-2
   facet: birthday
   format: choice
-  prompt: Gratulieren Sie zum Geburtstag.
+  prompt:
+    de: Gratulieren Sie zum Geburtstag.
+    en: Wish someone a happy birthday.
   answer:
   - З днем народження!
   options:
@@ -30,7 +40,9 @@ items:
 - id: birthday-3
   facet: birthday
   format: type
-  prompt: Ich gratuliere dir zum Geburtstag!
+  prompt:
+    de: Ich gratuliere dir zum Geburtstag!
+    en: Happy birthday to you! (I congratulate you)
   stem: Вітаю ___ з днем народження!
   cue: ти
   answer:
@@ -38,14 +50,18 @@ items:
 - id: holiday-1
   facet: holiday
   format: type
-  prompt: Frohes neues Jahr!
+  prompt:
+    de: Frohes neues Jahr!
+    en: Happy New Year!
   stem: З Новим ___!
   answer:
   - роком
 - id: holiday-2
   facet: holiday
   format: choice
-  prompt: Frohe Weihnachten!
+  prompt:
+    de: Frohe Weihnachten!
+    en: Merry Christmas!
   answer:
   - Веселого Різдва!
   options:
@@ -56,7 +72,9 @@ items:
 - id: holiday-3
   facet: holiday
   format: choice
-  prompt: Frohe Ostern!
+  prompt:
+    de: Frohe Ostern!
+    en: Happy Easter!
   answer:
   - З Великоднем!
   options:
@@ -67,15 +85,21 @@ items:
 - id: wish-1
   facet: wish
   format: type
-  prompt: Ich wünsche dir Glück, Gesundheit und Liebe!
+  prompt:
+    de: Ich wünsche dir Glück, Gesundheit und Liebe!
+    en: I wish you happiness, health and love!
   stem: Бажаю тобі щастя, ___ і любові!
-  cue: Gesundheit
+  cue:
+    de: Gesundheit
+    en: health
   answer:
   - здоров'я
 - id: wish-2
   facet: wish
   format: type
-  prompt: Ich wünsche dir viel Erfolg!
+  prompt:
+    de: Ich wünsche dir viel Erfolg!
+    en: I wish you lots of success!
   stem: ___ тобі успіхів!
   cue: бажати
   answer:
@@ -83,7 +107,9 @@ items:
 - id: wish-3
   facet: wish
   format: type
-  prompt: 'An Ihre Chefin: Ich wünsche Ihnen Glück!'
+  prompt:
+    de: 'An Ihre Chefin: Ich wünsche Ihnen Glück!'
+    en: 'To your boss (formal): I wish you happiness!'
   stem: Бажаю ___ щастя!
   answer:
   - вам

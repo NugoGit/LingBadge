@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: name
-  label: Namensfelder
+  label:
+    de: Namensfelder
+    en: Name fields
 - id: date
-  label: Daten und Zahlen
+  label:
+    de: Daten und Zahlen
+    en: Dates and numbers
 - id: place
-  label: Adresse, Staatsangehörigkeit, Kontakt
+  label:
+    de: Adresse, Staatsangehörigkeit, Kontakt
+    en: Address, citizenship, contact
 items:
 - id: name-1
   facet: name
   format: choice
-  prompt: In welches Feld schreiben Sie Ihren Nachnamen?
+  prompt:
+    de: In welches Feld schreiben Sie Ihren Nachnamen?
+    en: In which field do you write your surname?
   answer:
   - Прізвище
   options:
@@ -23,7 +31,9 @@ items:
 - id: name-2
   facet: name
   format: choice
-  prompt: Anna Huber füllt das Formular aus. Was gehört ins Feld „Ім'я“?
+  prompt:
+    de: Anna Huber füllt das Formular aus. Was gehört ins Feld „Ім'я“?
+    en: Anna Huber fills in the form. What goes in the field “Ім'я”?
   answer:
   - Анна
   options:
@@ -34,25 +44,40 @@ items:
 - id: name-3
   facet: name
   format: choice
-  prompt: Sie haben keinen Vatersnamen. Was tun Sie mit dem Feld „По батькові“?
+  prompt:
+    de: Sie haben keinen Vatersnamen. Was tun Sie mit dem Feld „По батькові“?
+    en: You have no patronymic. What do you do with the field “По батькові”?
   answer:
-  - Leer lassen oder „—“ eintragen
+    de:
+    - Leer lassen oder „—“ eintragen
+    en:
+    - Leave it empty or enter “—”
   options:
-  - Leer lassen oder „—“ eintragen
-  - Den Vornamen des Vaters eintragen
-  - Den Nachnamen wiederholen
-  - Den Geburtsort eintragen
+    de:
+    - Leer lassen oder „—“ eintragen
+    - Den Vornamen des Vaters eintragen
+    - Den Nachnamen wiederholen
+    - Den Geburtsort eintragen
+    en:
+    - Leave it empty or enter “—”
+    - Enter your father's first name
+    - Repeat your surname
+    - Enter your place of birth
 - id: date-1
   facet: date
   format: type
-  prompt: 'Geburtsdatum: 20. März 1990 im Format ДД.ММ.РРРР.'
+  prompt:
+    de: 'Geburtsdatum: 20. März 1990 im Format ДД.ММ.РРРР.'
+    en: 'Date of birth: 20 March 1990 in the format ДД.ММ.РРРР.'
   stem: 'Дата народження: ___'
   answer:
   - 20.03.1990
 - id: date-2
   facet: date
   format: choice
-  prompt: Welches ist der 3. Dezember 2024 im Formular?
+  prompt:
+    de: Welches ist der 3. Dezember 2024 im Formular?
+    en: Which is 3 December 2024 on the form?
   answer:
   - 03.12.2024
   options:
@@ -63,14 +88,18 @@ items:
 - id: date-3
   facet: date
   format: type
-  prompt: 'Hotelformular: Sie reisen zu zweit. (Zahl)'
+  prompt:
+    de: 'Hotelformular: Sie reisen zu zweit. (Zahl)'
+    en: 'Hotel form: you are travelling as two. (number)'
   stem: 'Кількість осіб: ___'
   answer:
   - '2'
 - id: place-1
   facet: place
   format: type
-  prompt: Sie sind Österreicher(in). Was schreiben Sie bei „Громадянство“? (ukrainisch)
+  prompt:
+    de: Sie sind Österreicher(in). Was schreiben Sie bei „Громадянство“? (ukrainisch)
+    en: You are Austrian. What do you write under “Громадянство”? (in Ukrainian)
   stem: 'Громадянство: ___'
   answer:
   - Австрія
@@ -78,7 +107,9 @@ items:
 - id: place-2
   facet: place
   format: choice
-  prompt: Wie schreiben Sie „Wien“ ins Feld „Місто“?
+  prompt:
+    de: Wie schreiben Sie „Wien“ ins Feld „Місто“?
+    en: How do you write “Wien” (Vienna) in the field “Місто”?
   answer:
   - Відень
   options:
@@ -89,7 +120,9 @@ items:
 - id: place-3
   facet: place
   format: choice
-  prompt: Was gehört ins Feld „Електронна пошта“?
+  prompt:
+    de: Was gehört ins Feld „Електронна пошта“?
+    en: What goes in the field “Електронна пошта”?
   answer:
   - anna.huber@gmail.com
   options:

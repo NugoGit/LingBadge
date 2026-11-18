@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: name
-  label: Fragen, wie etwas heißt
+  label:
+    de: Fragen, wie etwas heißt
+    en: Ask what something is called
 - id: meaning
-  label: Fragen, was ein Wort bedeutet
+  label:
+    de: Fragen, was ein Wort bedeutet
+    en: Ask what a word means
 - id: say
-  label: Fragen, wie man etwas sagt; auf etwas zeigen
+  label:
+    de: Fragen, wie man etwas sagt; auf etwas zeigen
+    en: Ask how to say something; point at something
 items:
 - id: name-1
   facet: name
   format: choice
-  prompt: Sie zeigen auf einen Gegenstand und wollen wissen, wie er auf Ukrainisch heißt. Was fragen Sie?
+  prompt:
+    de: Sie zeigen auf einen Gegenstand und wollen wissen, wie er auf Ukrainisch heißt. Was fragen Sie?
+    en: You point at an object and want to know its Ukrainian name. What do you ask?
   answer:
   - Як це називається українською?
   options:
@@ -23,14 +31,18 @@ items:
 - id: name-2
   facet: name
   format: type
-  prompt: 'Ergänzen Sie: Wie heißt das auf Ukrainisch?'
+  prompt:
+    de: 'Ergänzen Sie: Wie heißt das auf Ukrainisch?'
+    en: 'Complete: What is this called in Ukrainian?'
   stem: Як це ___ українською?
   answer:
   - називається
 - id: name-3
   facet: name
   format: type
-  prompt: 'Ergänzen Sie: Wie heißt das auf Ukrainisch?'
+  prompt:
+    de: 'Ergänzen Sie: Wie heißt das auf Ukrainisch?'
+    en: 'Complete: What is this called in Ukrainian?'
   stem: Як це називається ___?
   cue: українська мова
   answer:
@@ -39,7 +51,9 @@ items:
 - id: meaning-1
   facet: meaning
   format: choice
-  prompt: Sie hören das Wort „сніданок“ und verstehen es nicht. Was fragen Sie?
+  prompt:
+    de: Sie hören das Wort „сніданок“ und verstehen es nicht. Was fragen Sie?
+    en: You hear the word “сніданок” and don't understand it. What do you ask?
   answer:
   - Що означає слово «сніданок»?
   options:
@@ -50,14 +64,18 @@ items:
 - id: meaning-2
   facet: meaning
   format: type
-  prompt: 'Ergänzen Sie: Was bedeutet das Wort „вокзал“?'
+  prompt:
+    de: 'Ergänzen Sie: Was bedeutet das Wort „вокзал“?'
+    en: 'Complete: What does the word “вокзал” mean?'
   stem: Що ___ слово «вокзал»?
   answer:
   - означає
 - id: meaning-3
   facet: meaning
   format: choice
-  prompt: Sie kennen das Wort nicht. Welche Reaktion passt?
+  prompt:
+    de: Sie kennen das Wort nicht. Welche Reaktion passt?
+    en: You don't know the word. Which reaction fits?
   context: Це квитанція.
   answer:
   - Вибачте, а що це означає?
@@ -69,14 +87,18 @@ items:
 - id: say-1
   facet: say
   format: type
-  prompt: 'Ergänzen Sie: Wie sagt man „Danke“ auf Ukrainisch?'
+  prompt:
+    de: 'Ergänzen Sie: Wie sagt man „Danke“ auf Ukrainisch?'
+    en: 'Complete: How do you say “Danke” in Ukrainian?'
   stem: Як ___ «Danke» українською?
   answer:
   - сказати
 - id: say-2
   facet: say
   format: choice
-  prompt: Sie zeigen im Laden auf ein Brot und möchten es haben. Was sagen Sie?
+  prompt:
+    de: Sie zeigen im Laden auf ein Brot und möchten es haben. Was sagen Sie?
+    en: In a shop you point at a loaf of bread and want it. What do you say?
   answer:
   - Дайте, будь ласка, оце.
   options:
@@ -87,7 +109,9 @@ items:
 - id: say-3
   facet: say
   format: type
-  prompt: 'Sie zeigen auf etwas: „Geben Sie mir bitte das da.“ Ergänzen Sie.'
+  prompt:
+    de: 'Sie zeigen auf etwas: „Geben Sie mir bitte das da.“ Ergänzen Sie.'
+    en: 'You point at something: “Please give me that one.” Complete.'
   stem: ___, будь ласка, оце.
   cue: дати (Sie-Form)
   answer:

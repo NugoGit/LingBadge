@@ -3,112 +3,208 @@ lang: uk
 reviewed_by: []
 facets:
 - id: door
-  label: Eingang, Ausgang, offen, geschlossen
+  label:
+    de: Eingang, Ausgang, offen, geschlossen
+    en: Entrance, exit, open, closed
 - id: rule
-  label: Drücken, ziehen, Verbote
+  label:
+    de: Drücken, ziehen, Verbote
+    en: Push, pull, prohibitions
 - id: time
-  label: Pausen und Öffnungszeiten
+  label:
+    de: Pausen und Öffnungszeiten
+    en: Breaks and opening hours
 items:
 - id: door-1
   facet: door
   format: choice
-  prompt: Was bedeutet das Schild?
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
   text: ВИХІД
   answer:
-  - Ausgang
+    de:
+    - Ausgang
+    en:
+    - Exit
   options:
-  - Ausgang
-  - Eingang
-  - Kasse
-  - Toilette
+    de:
+    - Ausgang
+    - Eingang
+    - Kasse
+    - Toilette
+    en:
+    - Exit
+    - Entrance
+    - Cash desk
+    - Toilet
 - id: door-2
   facet: door
   format: choice
-  prompt: Was bedeutet das Schild?
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
   text: ВХІД
   answer:
-  - Eingang
+    de:
+    - Eingang
+    en:
+    - Entrance
   options:
-  - Eingang
-  - Ausgang
-  - Information
-  - Warteraum
+    de:
+    - Eingang
+    - Ausgang
+    - Information
+    - Warteraum
+    en:
+    - Entrance
+    - Exit
+    - Information
+    - Waiting room
 - id: door-3
   facet: door
   format: choice
-  prompt: Was bedeutet das Schild?
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
   text: ЗАЧИНЕНО
   answer:
-  - Geschlossen
+    de:
+    - Geschlossen
+    en:
+    - Closed
   options:
-  - Geschlossen
-  - Geöffnet
-  - Besetzt
-  - Frei
+    de:
+    - Geschlossen
+    - Geöffnet
+    - Besetzt
+    - Frei
+    en:
+    - Closed
+    - Open
+    - Occupied
+    - Free
 - id: door-4
   facet: door
   format: choice
-  prompt: Was bedeutet das Schild?
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
   text: ВІДЧИНЕНО
   answer:
-  - Geöffnet
+    de:
+    - Geöffnet
+    en:
+    - Open
   options:
-  - Geöffnet
-  - Geschlossen
-  - Pause
-  - Ausverkauft
+    de:
+    - Geöffnet
+    - Geschlossen
+    - Pause
+    - Ausverkauft
+    en:
+    - Open
+    - Closed
+    - Break
+    - Sold out
 - id: rule-1
   facet: rule
   format: choice
-  prompt: Das steht an einer Tür. Was tun Sie?
+  prompt:
+    de: Das steht an einer Tür. Was tun Sie?
+    en: This is on a door. What do you do?
   text: ВІД СЕБЕ
   answer:
-  - Drücken
+    de:
+    - Drücken
+    en:
+    - Push
   options:
-  - Drücken
-  - Ziehen
-  - Klingeln
-  - Warten
+    de:
+    - Drücken
+    - Ziehen
+    - Klingeln
+    - Warten
+    en:
+    - Push
+    - Pull
+    - Ring
+    - Wait
 - id: rule-2
   facet: rule
   format: choice
-  prompt: Das steht an einer Tür. Was tun Sie?
+  prompt:
+    de: Das steht an einer Tür. Was tun Sie?
+    en: This is on a door. What do you do?
   text: ДО СЕБЕ
   answer:
-  - Ziehen
+    de:
+    - Ziehen
+    en:
+    - Pull
   options:
-  - Ziehen
-  - Drücken
-  - Klingeln
-  - Warten
+    de:
+    - Ziehen
+    - Drücken
+    - Klingeln
+    - Warten
+    en:
+    - Pull
+    - Push
+    - Ring
+    - Wait
 - id: rule-3
   facet: rule
   format: choice
-  prompt: Was bedeutet das Schild?
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
   text: НЕ ПАЛИТИ!
   answer:
-  - Nicht rauchen
+    de:
+    - Nicht rauchen
+    en:
+    - No smoking
   options:
-  - Nicht rauchen
-  - Nicht parken
-  - Nicht berühren
-  - Nicht fotografieren
+    de:
+    - Nicht rauchen
+    - Nicht parken
+    - Nicht berühren
+    - Nicht fotografieren
+    en:
+    - No smoking
+    - No parking
+    - Do not touch
+    - No photos
 - id: rule-4
   facet: rule
   format: choice
-  prompt: Was bedeutet das Schild?
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
   text: ПО ГАЗОНАХ НЕ ХОДИТИ
   answer:
-  - Rasen nicht betreten
+    de:
+    - Rasen nicht betreten
+    en:
+    - Keep off the grass
   options:
-  - Rasen nicht betreten
-  - Nicht laufen
-  - Keine Hunde
-  - Fahrräder verboten
+    de:
+    - Rasen nicht betreten
+    - Nicht laufen
+    - Keine Hunde
+    - Fahrräder verboten
+    en:
+    - Keep off the grass
+    - No running
+    - No dogs
+    - No bicycles
 - id: time-1
   facet: time
   format: type
-  prompt: Ab wann ist wieder geöffnet? (Uhrzeit)
+  prompt:
+    de: Ab wann ist wieder geöffnet? (Uhrzeit)
+    en: When does it open again? (time)
   text: Перерва з 13:00 до 14:00
   answer:
   - '14:00'
@@ -116,27 +212,48 @@ items:
 - id: time-2
   facet: time
   format: choice
-  prompt: Ist die Kasse am Sonntag geöffnet?
+  prompt:
+    de: Ist die Kasse am Sonntag geöffnet?
+    en: Is the cash desk open on Sunday?
   text: |-
     Каса працює:
     пн–пт 9:00–18:00
     сб 10:00–15:00
     нд — вихідний
   answer:
-  - Nein
+    de:
+    - Nein
+    en:
+    - 'No'
   options:
-  - Nein
-  - Ja, 9–18 Uhr
-  - Ja, 10–15 Uhr
+    de:
+    - Nein
+    - Ja, 9–18 Uhr
+    - Ja, 10–15 Uhr
+    en:
+    - 'No'
+    - Yes, 9–18
+    - Yes, 10–15
 - id: time-3
   facet: time
   format: choice
-  prompt: Was bedeutet das Schild an der Kasse?
+  prompt:
+    de: Was bedeutet das Schild an der Kasse?
+    en: What does the sign at the cash desk mean?
   text: Технічна перерва 15 хв
   answer:
-  - Kurze Pause, 15 Minuten
+    de:
+    - Kurze Pause, 15 Minuten
+    en:
+    - Short break, 15 minutes
   options:
-  - Kurze Pause, 15 Minuten
-  - Geschlossen bis 15 Uhr
-  - Nur 15 Kunden
-  - Seit 15 Minuten geöffnet
+    de:
+    - Kurze Pause, 15 Minuten
+    - Geschlossen bis 15 Uhr
+    - Nur 15 Kunden
+    - Seit 15 Minuten geöffnet
+    en:
+    - Short break, 15 minutes
+    - Closed until 15:00
+    - Only 15 customers
+    - Open for 15 minutes

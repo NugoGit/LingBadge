@@ -3,123 +3,234 @@ lang: uk
 reviewed_by: []
 facets:
 - id: news
-  label: Thema einer Nachricht
+  label:
+    de: Thema einer Nachricht
+    en: Topic of a news item
 - id: weather
-  label: Wetterbericht
+  label:
+    de: Wetterbericht
+    en: Weather report
 - id: ad
-  label: Werbung und Veranstaltungen
+  label:
+    de: Werbung und Veranstaltungen
+    en: Adverts and events
 items:
 - id: news-1
   facet: news
   format: choice
-  prompt: Worum geht es?
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
   audio: Сьогодні збірна України з футболу виграла у Франції з рахунком два — один.
   answer:
-  - Sport
+    de:
+    - Sport
+    en:
+    - Sport
   options:
-  - Sport
-  - Politik
-  - Wetter
-  - Werbung
-  - Kultur
+    de:
+    - Sport
+    - Politik
+    - Wetter
+    - Werbung
+    - Kultur
+    en:
+    - Sport
+    - Politics
+    - Weather
+    - Advert
+    - Culture
 - id: news-2
   facet: news
   format: choice
-  prompt: Worum geht es?
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
   audio: Президент сьогодні зустрівся з прем'єр-міністром Польщі.
   answer:
-  - Politik
+    de:
+    - Politik
+    en:
+    - Politics
   options:
-  - Politik
-  - Sport
-  - Wetter
-  - Werbung
-  - Kultur
+    de:
+    - Politik
+    - Sport
+    - Wetter
+    - Werbung
+    - Kultur
+    en:
+    - Politics
+    - Sport
+    - Weather
+    - Advert
+    - Culture
 - id: news-3
   facet: news
   format: choice
-  prompt: Worum geht es?
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
   audio: Наша тенісистка перемогла у фіналі турніру.
   answer:
-  - Sport
+    de:
+    - Sport
+    en:
+    - Sport
   options:
-  - Sport
-  - Politik
-  - Wetter
-  - Werbung
-  - Kultur
+    de:
+    - Sport
+    - Politik
+    - Wetter
+    - Werbung
+    - Kultur
+    en:
+    - Sport
+    - Politics
+    - Weather
+    - Advert
+    - Culture
 - id: weather-1
   facet: weather
   format: choice
-  prompt: Wie wird das Wetter?
+  prompt:
+    de: Wie wird das Wetter?
+    en: What will the weather be like?
   audio: Завтра в Києві сонячно, до двадцяти п'яти градусів тепла.
   answer:
-  - sonnig und warm
+    de:
+    - sonnig und warm
+    en:
+    - sunny and warm
   options:
-  - sonnig und warm
-  - Regen
-  - Schnee
-  - Gewitter
+    de:
+    - sonnig und warm
+    - Regen
+    - Schnee
+    - Gewitter
+    en:
+    - sunny and warm
+    - rain
+    - snow
+    - thunderstorm
 - id: weather-2
   facet: weather
   format: choice
-  prompt: Wie wird das Wetter?
+  prompt:
+    de: Wie wird das Wetter?
+    en: What will the weather be like?
   audio: Вночі в Карпатах буде сніг, на дорогах слизько.
   answer:
-  - Schnee
+    de:
+    - Schnee
+    en:
+    - snow
   options:
-  - Schnee
-  - Sonne
-  - Regen
-  - Nebel
+    de:
+    - Schnee
+    - Sonne
+    - Regen
+    - Nebel
+    en:
+    - snow
+    - sun
+    - rain
+    - fog
 - id: weather-3
   facet: weather
   format: choice
-  prompt: Wie wird das Wetter?
+  prompt:
+    de: Wie wird das Wetter?
+    en: What will the weather be like?
   audio: Завтра дощ і сильний вітер. Візьміть парасольку!
   answer:
-  - Regen und Wind
+    de:
+    - Regen und Wind
+    en:
+    - rain and wind
   options:
-  - Regen und Wind
-  - Sonne
-  - Schnee
-  - windstill und trocken
+    de:
+    - Regen und Wind
+    - Sonne
+    - Schnee
+    - windstill und trocken
+    en:
+    - rain and wind
+    - sun
+    - snow
+    - calm and dry
 - id: ad-1
   facet: ad
   format: choice
-  prompt: Worum geht es?
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
   audio: Нова кава «Ранок» — тепер у кожному магазині! Тільки сорок гривень!
   answer:
-  - Werbung
+    de:
+    - Werbung
+    en:
+    - Advert
   options:
-  - Werbung
-  - Sport
-  - Politik
-  - Wetter
-  - Kultur
+    de:
+    - Werbung
+    - Sport
+    - Politik
+    - Wetter
+    - Kultur
+    en:
+    - Advert
+    - Sport
+    - Politics
+    - Weather
+    - Culture
 - id: ad-2
   facet: ad
   format: choice
-  prompt: Worum geht es?
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
   audio: Увага! Знижки на всі телефони до неділі!
   answer:
-  - Werbung
+    de:
+    - Werbung
+    en:
+    - Advert
   options:
-  - Werbung
-  - Sport
-  - Politik
-  - Wetter
-  - Kultur
+    de:
+    - Werbung
+    - Sport
+    - Politik
+    - Wetter
+    - Kultur
+    en:
+    - Advert
+    - Sport
+    - Politics
+    - Weather
+    - Culture
 - id: ad-3
   facet: ad
   format: choice
-  prompt: Worum geht es?
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
   audio: У Львові відкрили новий музей. Вхід у неділю безкоштовний.
   answer:
-  - Kultur
+    de:
+    - Kultur
+    en:
+    - Culture
   options:
-  - Kultur
-  - Sport
-  - Politik
-  - Wetter
-  - Werbung
+    de:
+    - Kultur
+    - Sport
+    - Politik
+    - Wetter
+    - Werbung
+    en:
+    - Culture
+    - Sport
+    - Politics
+    - Weather
+    - Advert

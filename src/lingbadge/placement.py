@@ -37,9 +37,27 @@ def loose(s: str) -> str:
     return re.sub(r"\s+", " ", normalize(s)).strip()
 
 
-def correct(item, given: str) -> bool:
+def localized(v, il: str = "de"):
+    """A plain list, or the list for the instruction language from {de: [...], en: [...]}."""
+    if v is None or isinstance(v, list):
+        return v
+    return v.get(il) or v.get("en") or next(iter(v.values()))
+
+
+def correct(item, given: str, il: str = "de") -> bool:
     g = loose(given)
-    return bool(g) and any(loose(a) == g for a in item.answer)
+    return bool(g) and any(loose(a) == g for a in localized(item.answer, il))
+
+
+def _variants(item) -> list[tuple[str, list[str], list[str] | None]]:
+    """(language, answer, options) for every language an item is written in."""
+    langs = set()
+    for v in (item.answer, item.options):
+        if isinstance(v, dict):
+            langs |= set(v)
+    if not langs:
+        return [("*", item.answer, item.options)]
+    return [(l, localized(item.answer, l), localized(item.options, l)) for l in sorted(langs)]
 
 
 def validate_placement(cat: PlacementCatalogue, skills: dict[str, Skill]) -> tuple[list[str], list[str]]:
@@ -75,7 +93,15 @@ def validate_placement(cat: PlacementCatalogue, skills: dict[str, Skill]) -> tup
             err.append(f"{q}: listening items must not show the text")
         if it.stem is not None and it.stem.count(GAP) != 1:
             err.append(f"{q}: stem needs exactly one {GAP}")
-        if not it.answer or not all(str(a).strip() for a in it.answer):
+        if isinstance(it.answer, dict) != isinstance(it.options, dict) and it.format == "choice":
+            err.append(f"{q}: localized options need a localized answer (and vice versa)")
+            continue
+        if isinstance(it.options, dict) and set(it.options) != set(it.answer):
+            err.append(f"{q}: options and answer cover different languages")
+        if isinstance(it.prompt, dict) and isinstance(it.options, dict) and set(it.options) - set(it.prompt):
+            err.append(f"{q}: options in a language the prompt lacks")
+        variants = _variants(it)
+        if any(not ans or not all(str(a).strip() for a in ans) for _, ans, _ in variants):
             err.append(f"{q}: empty answer")
             continue
         key = (loose(it.text or it.audio or ""), loose(it.context or ""), loose(it.stem or ""), str(it.prompt))
@@ -83,15 +109,19 @@ def validate_placement(cat: PlacementCatalogue, skills: dict[str, Skill]) -> tup
             err.append(f"{q}: duplicate item")
         seen.add(key)
         if it.format == "choice":
-            opts = it.options or []
-            if not 2 <= len(opts) <= MAX_OPTIONS:
-                err.append(f"{q}: choice items need 2-{MAX_OPTIONS} options")
-            elif len({loose(o) for o in opts}) != len(opts):
-                err.append(f"{q}: duplicate options")
-            elif loose(it.answer[0]) not in {loose(o) for o in opts}:
-                err.append(f"{q}: answer '{it.answer[0]}' is not among the options")
-            if len(it.answer) != 1:
-                err.append(f"{q}: choice items have exactly one answer")
+            if isinstance(it.options, dict) and len({len(o) for o in it.options.values()}) > 1:
+                err.append(f"{q}: localized option lists differ in length")
+            for lang, ans, opts in variants:
+                opts = opts or []
+                tag = "" if lang == "*" else f" [{lang}]"
+                if not 2 <= len(opts) <= MAX_OPTIONS:
+                    err.append(f"{q}{tag}: choice items need 2-{MAX_OPTIONS} options")
+                elif len({loose(o) for o in opts}) != len(opts):
+                    err.append(f"{q}{tag}: duplicate options")
+                elif loose(ans[0]) not in {loose(o) for o in opts}:
+                    err.append(f"{q}{tag}: answer '{ans[0]}' is not among the options")
+                if len(ans) != 1:
+                    err.append(f"{q}{tag}: choice items have exactly one answer")
         else:
             if it.options:
                 err.append(f"{q}: type items take no options")
@@ -136,10 +166,10 @@ def main(argv: list[str] | None = None) -> int:
         for k in ("text", "audio", "context", "stem", "cue"):
             v = getattr(it, k)
             if v:
-                print(f"   {k}: {v}")
+                print(f"   {k}: {v if isinstance(v, str) else v.get('de')}")
         if it.options:
-            print("   options:", " | ".join(it.options))
-        print("   answer:", " / ".join(it.answer))
+            print("   options:", " | ".join(localized(it.options, "de")))
+        print("   answer:", " / ".join(localized(it.answer, "de")))
     return 0
 
 

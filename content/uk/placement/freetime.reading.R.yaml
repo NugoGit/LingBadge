@@ -3,117 +3,222 @@ lang: uk
 reviewed_by: []
 facets:
 - id: who
-  label: Wer
+  label:
+    de: Wer
+    en: Who
 - id: what
-  label: Was und wo
+  label:
+    de: Was und wo
+    en: What and where
 - id: when
-  label: Wann
+  label:
+    de: Wann
+    en: When
 items:
 - id: who-1
   facet: who
   format: choice
-  prompt: Wer geht in den Park?
+  prompt:
+    de: Wer geht in den Park?
+    en: Who goes to the park?
   text: Сьогодні неділя. Марко й Оля йдуть у парк. Там вони бачать маленького собаку. Собака дуже веселий.
   answer:
-  - Marko und Olja
+    de:
+    - Marko und Olja
+    en:
+    - Marko and Olia
   options:
-  - Marko und Olja
-  - Marko und ein Hund
-  - Olja und ihre Mutter
-  - Nur Marko
+    de:
+    - Marko und Olja
+    - Marko und ein Hund
+    - Olja und ihre Mutter
+    - Nur Marko
+    en:
+    - Marko and Olia
+    - Marko and a dog
+    - Olia and her mother
+    - Only Marko
 - id: who-2
   facet: who
   format: choice
-  prompt: Wer hat der Großmutter geholfen?
+  prompt:
+    de: Wer hat der Großmutter geholfen?
+    en: Who helped the grandmother?
   text: Вчора була гарна погода. Бабуся Ганна працювала в саду, а онук Петро допомагав їй. Увечері вони пили чай з медом.
   answer:
-  - Ihr Enkel Petro
+    de:
+    - Ihr Enkel Petro
+    en:
+    - Her grandson Petro
   options:
-  - Ihr Enkel Petro
-  - Ihre Tochter
-  - Ein Nachbar
-  - Niemand
+    de:
+    - Ihr Enkel Petro
+    - Ihre Tochter
+    - Ein Nachbar
+    - Niemand
+    en:
+    - Her grandson Petro
+    - Her daughter
+    - A neighbour
+    - Nobody
 - id: who-3
   facet: who
   format: choice
-  prompt: Für wen ist die neue Bibliothek?
+  prompt:
+    de: Für wen ist die neue Bibliothek?
+    en: Who is the new library for?
   text: У понеділок у Львові відкрили нову бібліотеку для дітей. Там є книжки, ігри й комп'ютери. Бібліотека працює щодня, крім неділі.
   answer:
-  - Für Kinder
+    de:
+    - Für Kinder
+    en:
+    - For children
   options:
-  - Für Kinder
-  - Für Studierende
-  - Für Touristen
-  - Für Senioren
+    de:
+    - Für Kinder
+    - Für Studierende
+    - Für Touristen
+    - Für Senioren
+    en:
+    - For children
+    - For students
+    - For tourists
+    - For older people
 - id: what-1
   facet: what
   format: choice
-  prompt: Was sehen sie im Park?
+  prompt:
+    de: Was sehen sie im Park?
+    en: What do they see in the park?
   text: Сьогодні неділя. Марко й Оля йдуть у парк. Там вони бачать маленького собаку. Собака дуже веселий.
   answer:
-  - Einen kleinen Hund
+    de:
+    - Einen kleinen Hund
+    en:
+    - A small dog
   options:
-  - Einen kleinen Hund
-  - Eine Katze
-  - Einen großen Hund
-  - Kinder
+    de:
+    - Einen kleinen Hund
+    - Eine Katze
+    - Einen großen Hund
+    - Kinder
+    en:
+    - A small dog
+    - A cat
+    - A big dog
+    - Children
 - id: what-2
   facet: what
   format: choice
-  prompt: Wo hat die Großmutter gearbeitet?
+  prompt:
+    de: Wo hat die Großmutter gearbeitet?
+    en: Where did the grandmother work?
   text: Вчора була гарна погода. Бабуся Ганна працювала в саду, а онук Петро допомагав їй. Увечері вони пили чай з медом.
   answer:
-  - Im Garten
+    de:
+    - Im Garten
+    en:
+    - In the garden
   options:
-  - Im Garten
-  - In der Küche
-  - Im Büro
-  - Im Laden
+    de:
+    - Im Garten
+    - In der Küche
+    - Im Büro
+    - Im Laden
+    en:
+    - In the garden
+    - In the kitchen
+    - In the office
+    - In the shop
 - id: what-3
   facet: what
   format: choice
-  prompt: In welcher Stadt ist die Bibliothek?
+  prompt:
+    de: In welcher Stadt ist die Bibliothek?
+    en: In which city is the library?
   text: У понеділок у Львові відкрили нову бібліотеку для дітей. Там є книжки, ігри й комп'ютери.
   answer:
-  - Lwiw
+    de:
+    - Lwiw
+    en:
+    - Lviv
   options:
-  - Lwiw
-  - Kyjiw
-  - Odesa
-  - Charkiw
+    de:
+    - Lwiw
+    - Kyjiw
+    - Odesa
+    - Charkiw
+    en:
+    - Lviv
+    - Kyiv
+    - Odesa
+    - Kharkiv
 - id: when-1
   facet: when
   format: choice
-  prompt: Welcher Tag ist heute?
+  prompt:
+    de: Welcher Tag ist heute?
+    en: What day is it today?
   text: Сьогодні неділя. Марко й Оля йдуть у парк. Там вони бачать маленького собаку.
   answer:
-  - Sonntag
+    de:
+    - Sonntag
+    en:
+    - Sunday
   options:
-  - Sonntag
-  - Samstag
-  - Montag
-  - Freitag
+    de:
+    - Sonntag
+    - Samstag
+    - Montag
+    - Freitag
+    en:
+    - Sunday
+    - Saturday
+    - Monday
+    - Friday
 - id: when-2
   facet: when
   format: choice
-  prompt: Wann haben sie Tee getrunken?
+  prompt:
+    de: Wann haben sie Tee getrunken?
+    en: When did they drink tea?
   text: Вчора була гарна погода. Бабуся Ганна працювала в саду, а онук Петро допомагав їй. Увечері вони пили чай з медом.
   answer:
-  - Am Abend
+    de:
+    - Am Abend
+    en:
+    - In the evening
   options:
-  - Am Abend
-  - Am Morgen
-  - Mittags
-  - In der Nacht
+    de:
+    - Am Abend
+    - Am Morgen
+    - Mittags
+    - In der Nacht
+    en:
+    - In the evening
+    - In the morning
+    - At midday
+    - At night
 - id: when-3
   facet: when
   format: choice
-  prompt: Wann ist die Bibliothek geschlossen?
+  prompt:
+    de: Wann ist die Bibliothek geschlossen?
+    en: When is the library closed?
   text: У понеділок у Львові відкрили нову бібліотеку для дітей. Бібліотека працює щодня, крім неділі.
   answer:
-  - Am Sonntag
+    de:
+    - Am Sonntag
+    en:
+    - On Sunday
   options:
-  - Am Sonntag
-  - Am Montag
-  - Am Samstag
-  - Nie
+    de:
+    - Am Sonntag
+    - Am Montag
+    - Am Samstag
+    - Nie
+    en:
+    - On Sunday
+    - On Monday
+    - On Saturday
+    - Never

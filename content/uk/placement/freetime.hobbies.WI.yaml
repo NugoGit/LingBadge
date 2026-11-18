@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: hobby
-  label: Hobbys
+  label:
+    de: Hobbys
+    en: Hobbies
 - id: like
-  label: Was gefällt, was nicht
+  label:
+    de: Was gefällt, was nicht
+    en: What you like and don't like
 - id: ask
-  label: Zurückfragen
+  label:
+    de: Zurückfragen
+    en: Asking back
 items:
 - id: hobby-1
   facet: hobby
   format: type
-  prompt: 'Schreiben Sie: In der Freizeit gehe ich im Park spazieren.'
+  prompt:
+    de: 'Schreiben Sie: In der Freizeit gehe ich im Park spazieren.'
+    en: 'Write: In my free time I go for walks in the park.'
   stem: У вільний час я гуляю в ___.
   cue: парк
   answer:
@@ -20,7 +28,9 @@ items:
 - id: hobby-2
   facet: hobby
   format: type
-  prompt: 'Schreiben Sie: Ich mag klassische Musik.'
+  prompt:
+    de: 'Schreiben Sie: Ich mag klassische Musik.'
+    en: 'Write: I like classical music.'
   stem: Я люблю ___ музику.
   cue: класичний
   answer:
@@ -28,7 +38,9 @@ items:
 - id: hobby-3
   facet: hobby
   format: choice
-  prompt: 'Schreiben Sie: In der Freizeit lese ich viel.'
+  prompt:
+    de: 'Schreiben Sie: In der Freizeit lese ich viel.'
+    en: 'Write: In my free time I read a lot.'
   answer:
   - У вільний час я багато читаю.
   options:
@@ -39,7 +51,9 @@ items:
 - id: like-1
   facet: like
   format: type
-  prompt: 'Schreiben Sie: Laufen gefällt mir nicht.'
+  prompt:
+    de: 'Schreiben Sie: Laufen gefällt mir nicht.'
+    en: 'Write: I don''t like running.'
   stem: Мені не ___ бігати.
   cue: подобатися
   answer:
@@ -47,7 +61,9 @@ items:
 - id: like-2
   facet: like
   format: type
-  prompt: 'Schreiben Sie: Mir gefällt die ukrainische Küche.'
+  prompt:
+    de: 'Schreiben Sie: Mir gefällt die ukrainische Küche.'
+    en: 'Write: I like Ukrainian cuisine.'
   stem: Мені подобається ___ кухня.
   cue: український
   answer:
@@ -55,7 +71,9 @@ items:
 - id: like-3
   facet: like
   format: choice
-  prompt: Welcher Satz heißt „Ich mag Katzen“?
+  prompt:
+    de: Welcher Satz heißt „Ich mag Katzen“?
+    en: Which sentence means “I like cats”?
   answer:
   - Я люблю котів.
   options:
@@ -66,7 +84,9 @@ items:
 - id: ask-1
   facet: ask
   format: choice
-  prompt: Fragen Sie am Ende Ihres Posts nach den Hobbys der Leser.
+  prompt:
+    de: Fragen Sie am Ende Ihres Posts nach den Hobbys der Leser.
+    en: At the end of your post, ask readers about their hobbies.
   answer:
   - А які у вас хобі?
   options:
@@ -77,15 +97,21 @@ items:
 - id: ask-2
   facet: ask
   format: type
-  prompt: 'Schreiben Sie: Und was magst du?'
+  prompt:
+    de: 'Schreiben Sie: Und was magst du?'
+    en: 'Write: And what do you like?'
   stem: А ___ любиш ти?
-  cue: was
+  cue:
+    de: was
+    en: what
   answer:
   - що
 - id: ask-3
   facet: ask
   format: choice
-  prompt: 'Antworten Sie: Ich auch! Besonders Pizza.'
+  prompt:
+    de: 'Antworten Sie: Ich auch! Besonders Pizza.'
+    en: 'Answer: Me too! Especially pizza.'
   context: Я люблю готувати! А ти?
   answer:
   - Я теж! Особливо піцу.

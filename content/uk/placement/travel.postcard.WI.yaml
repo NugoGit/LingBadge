@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: greet
-  label: Gruß und Abschluss
+  label:
+    de: Gruß und Abschluss
+    en: Greeting and sign-off
 - id: like
-  label: Wie es ist
+  label:
+    de: Wie es ist
+    en: What it's like
 - id: do
-  label: Was man macht
+  label:
+    de: Was man macht
+    en: What you're doing
 items:
 - id: greet-1
   facet: greet
   format: type
-  prompt: 'Schreiben Sie: Grüße aus den Karpaten!'
+  prompt:
+    de: 'Schreiben Sie: Grüße aus den Karpaten!'
+    en: 'Write: Greetings from the Carpathians!'
   stem: Привіт з ___!
   cue: Карпати
   answer:
@@ -20,7 +28,9 @@ items:
 - id: greet-2
   facet: greet
   format: type
-  prompt: 'Schreiben Sie: Grüße aus Lwiw!'
+  prompt:
+    de: 'Schreiben Sie: Grüße aus Lwiw!'
+    en: 'Write: Greetings from Lviv!'
   stem: Привіт зі ___!
   cue: Львів
   answer:
@@ -28,7 +38,9 @@ items:
 - id: greet-3
   facet: greet
   format: choice
-  prompt: Welcher Abschluss passt für eine Karte an die Familie?
+  prompt:
+    de: Welcher Abschluss passt für eine Karte an die Familie?
+    en: Which sign-off fits a card to the family?
   answer:
   - Цілую, Марко.
   options:
@@ -39,16 +51,22 @@ items:
 - id: like-1
   facet: like
   format: type
-  prompt: 'Schreiben Sie: Hier ist es sehr schön.'
+  prompt:
+    de: 'Schreiben Sie: Hier ist es sehr schön.'
+    en: 'Write: It''s very beautiful here.'
   stem: Тут дуже ___.
-  cue: schön
+  cue:
+    de: schön
+    en: beautiful
   answer:
   - гарно
   - красиво
 - id: like-2
   facet: like
   format: type
-  prompt: 'Schreiben Sie: Das Wetter ist gut.'
+  prompt:
+    de: 'Schreiben Sie: Das Wetter ist gut.'
+    en: 'Write: The weather is good.'
   stem: Погода ___.
   cue: хороший
   answer:
@@ -56,15 +74,21 @@ items:
 - id: like-3
   facet: like
   format: type
-  prompt: 'Schreiben Sie: Heute ist es bewölkt, aber warm.'
+  prompt:
+    de: 'Schreiben Sie: Heute ist es bewölkt, aber warm.'
+    en: 'Write: Today it''s cloudy but warm.'
   stem: Сьогодні ___, але тепло.
-  cue: bewölkt
+  cue:
+    de: bewölkt
+    en: cloudy
   answer:
   - хмарно
 - id: do-1
   facet: do
   format: type
-  prompt: 'Schreiben Sie: Wir wohnen in einem kleinen Hotel.'
+  prompt:
+    de: 'Schreiben Sie: Wir wohnen in einem kleinen Hotel.'
+    en: 'Write: We''re staying in a small hotel.'
   stem: Ми живемо в маленькому ___.
   cue: готель
   answer:
@@ -72,7 +96,9 @@ items:
 - id: do-2
   facet: do
   format: type
-  prompt: 'Schreiben Sie: Jeden Tag wandern wir in den Bergen.'
+  prompt:
+    de: 'Schreiben Sie: Jeden Tag wandern wir in den Bergen.'
+    en: 'Write: Every day we go walking in the mountains.'
   stem: Щодня ми ___ в горах.
   cue: гуляти
   answer:
@@ -80,7 +106,9 @@ items:
 - id: do-3
   facet: do
   format: type
-  prompt: 'Schreiben Sie: Gestern waren wir im Museum.'
+  prompt:
+    de: 'Schreiben Sie: Gestern waren wir im Museum.'
+    en: 'Write: Yesterday we were at the museum.'
   stem: Вчора ми ___ в музеї.
   cue: бути
   answer:

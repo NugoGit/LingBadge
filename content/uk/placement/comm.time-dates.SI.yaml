@@ -3,23 +3,33 @@ lang: uk
 reviewed_by: []
 facets:
 - id: clock
-  label: Uhrzeit fragen und sagen
+  label:
+    de: Uhrzeit fragen und sagen
+    en: Ask and tell the time
 - id: day
-  label: 'Tage: heute, morgen, gestern, Wochentage'
+  label:
+    de: 'Tage: heute, morgen, gestern, Wochentage'
+    en: 'Days: today, tomorrow, yesterday, weekdays'
 - id: date
-  label: Datum und Monat
+  label:
+    de: Datum und Monat
+    en: Date and month
 items:
 - id: clock-1
   facet: clock
   format: type
-  prompt: Fragen Sie nach der Uhrzeit.
+  prompt:
+    de: Fragen Sie nach der Uhrzeit.
+    en: Ask what time it is.
   stem: ___ година?
   answer:
   - Котра
 - id: clock-2
   facet: clock
   format: type
-  prompt: 'Antworten Sie: um sieben.'
+  prompt:
+    de: 'Antworten Sie: um sieben.'
+    en: 'Answer: at seven.'
   context: О котрій починається фільм?
   stem: О ___.
   cue: сьома
@@ -28,17 +38,23 @@ items:
 - id: clock-3
   facet: clock
   format: type
-  prompt: 'Antworten Sie: Es ist zehn.'
+  prompt:
+    de: 'Antworten Sie: Es ist zehn.'
+    en: 'Answer: It''s ten.'
   context: Котра година?
   stem: Зараз ___.
-  cue: 10 Uhr
+  cue:
+    de: 10 Uhr
+    en: 10 o'clock
   answer:
   - десята
   - десята година
 - id: clock-4
   facet: clock
   format: choice
-  prompt: Sie wollen wissen, um wie viel Uhr der Zug fährt. Was fragen Sie?
+  prompt:
+    de: Sie wollen wissen, um wie viel Uhr der Zug fährt. Was fragen Sie?
+    en: You want to know what time the train leaves. What do you ask?
   answer:
   - О котрій потяг?
   options:
@@ -49,7 +65,9 @@ items:
 - id: day-1
   facet: day
   format: type
-  prompt: 'Antworten Sie: am Samstag.'
+  prompt:
+    de: 'Antworten Sie: am Samstag.'
+    en: 'Answer: on Saturday.'
   context: Коли концерт?
   stem: У ___.
   cue: субота
@@ -58,7 +76,9 @@ items:
 - id: day-2
   facet: day
   format: choice
-  prompt: Heute ist Mittwoch. Welcher Tag ist morgen?
+  prompt:
+    de: Heute ist Mittwoch. Welcher Tag ist morgen?
+    en: Today is Wednesday. What day is tomorrow?
   answer:
   - четвер
   options:
@@ -69,27 +89,44 @@ items:
 - id: day-3
   facet: day
   format: choice
-  prompt: Was bedeutet „вчора“?
+  prompt:
+    de: Was bedeutet „вчора“?
+    en: What does “вчора” mean?
   answer:
-  - gestern
+    de:
+    - gestern
+    en:
+    - yesterday
   options:
-  - gestern
-  - heute
-  - morgen
-  - übermorgen
+    de:
+    - gestern
+    - heute
+    - morgen
+    - übermorgen
+    en:
+    - yesterday
+    - today
+    - tomorrow
+    - the day after tomorrow
 - id: day-4
   facet: day
   format: type
-  prompt: 'Antworten Sie: heute Abend.'
+  prompt:
+    de: 'Antworten Sie: heute Abend.'
+    en: 'Answer: tonight.'
   context: Коли ти вільна?
   stem: ___ ввечері.
-  cue: heute
+  cue:
+    de: heute
+    en: today
   answer:
   - Сьогодні
 - id: date-1
   facet: date
   format: type
-  prompt: 'Antworten Sie: am 1. Mai.'
+  prompt:
+    de: 'Antworten Sie: am 1. Mai.'
+    en: 'Answer: on 1 May.'
   context: Коли в тебе день народження?
   stem: Першого ___.
   cue: травень
@@ -98,7 +135,9 @@ items:
 - id: date-2
   facet: date
   format: type
-  prompt: 'Antworten Sie: im Juli.'
+  prompt:
+    de: 'Antworten Sie: im Juli.'
+    en: 'Answer: in July.'
   context: Коли ви їдете до Києва?
   stem: У ___.
   cue: липень
@@ -107,7 +146,9 @@ items:
 - id: date-3
   facet: date
   format: choice
-  prompt: Wie sagt man „am 8. März“?
+  prompt:
+    de: Wie sagt man „am 8. März“?
+    en: How do you say “on 8 March”?
   answer:
   - восьмого березня
   options:

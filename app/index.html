@@ -106,7 +106,10 @@ table.grid td.task small { color: var(--muted); display: block; font-size: .78re
 td .instr { display: none; }
 td .ctx { display: block; font-size: .8rem; color: var(--muted); }
 td .gap { color: var(--muted); }
-.langpick { margin-left: auto; }
+.pickers { margin-left: auto; display: flex; gap: 12px; align-items: center; }
+.uipick { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.uipick button { border: 0; background: transparent; color: var(--muted); padding: 2px 8px; cursor: pointer; font-weight: 600; }
+.uipick button.on { background: var(--accent); color: var(--on-accent); }
 .langpick select { font: inherit; padding: 2px 6px; }
 [dir=rtl] { text-align: right; }
 .opts { display: grid; gap: 4px; }
@@ -147,6 +150,7 @@ code { font-family: var(--font-mono); font-size: .82rem; }
 </div>
 <script src="content.js"></script>
 <script src="platform.js"></script>
+<script src="i18n.js"></script>
 <script src="core.js"></script>
 <script src="app.js"></script>
 </body>

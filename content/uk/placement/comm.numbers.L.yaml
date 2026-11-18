@@ -3,51 +3,69 @@ lang: uk
 reviewed_by: []
 facets:
 - id: price
-  label: Preise
+  label:
+    de: Preise
+    en: Prices
 - id: time
-  label: Uhrzeiten
+  label:
+    de: Uhrzeiten
+    en: Clock times
 - id: number
-  label: Mengen, Zimmer- und Telefonnummern
+  label:
+    de: Mengen, Zimmer- und Telefonnummern
+    en: Quantities, room and phone numbers
 items:
 - id: price-1
   facet: price
   format: type
-  prompt: Wie viel kostet es? (Zahl)
+  prompt:
+    de: Wie viel kostet es? (Zahl)
+    en: How much does it cost? (number)
   audio: Це коштує сто двадцять гривень.
   answer:
   - '120'
 - id: price-2
   facet: price
   format: type
-  prompt: Wie viel ist es insgesamt? (Zahl)
+  prompt:
+    de: Wie viel ist es insgesamt? (Zahl)
+    en: How much is it in total? (number)
   audio: Разом — двісті сорок п'ять гривень.
   answer:
   - '245'
 - id: price-3
   facet: price
   format: type
-  prompt: Wie viel kostet die Fahrkarte? (Zahl)
+  prompt:
+    de: Wie viel kostet die Fahrkarte? (Zahl)
+    en: How much is the ticket? (number)
   audio: Квиток коштує вісімдесят дев'ять гривень.
   answer:
   - '89'
 - id: price-4
   facet: price
   format: type
-  prompt: Wie viel kostet der Kaffee? (Zahl)
+  prompt:
+    de: Wie viel kostet der Kaffee? (Zahl)
+    en: How much is the coffee? (number)
   audio: Кава? Сорок п'ять гривень, будь ласка.
   answer:
   - '45'
 - id: time-1
   facet: time
   format: type
-  prompt: Um wie viel Uhr fährt der Zug? (z. B. 9:20)
+  prompt:
+    de: Um wie viel Uhr fährt der Zug? (z. B. 9:20)
+    en: What time does the train leave? (e.g. 9:20)
   audio: Потяг відправляється о дев'ятій сорок.
   answer:
   - '9:40'
 - id: time-2
   facet: time
   format: type
-  prompt: Um wie viel Uhr öffnet das Geschäft? (z. B. 9:20)
+  prompt:
+    de: Um wie viel Uhr öffnet das Geschäft? (z. B. 9:20)
+    en: What time does the shop open? (e.g. 9:20)
   audio: Магазин відчиняється о восьмій ранку.
   answer:
   - '8:00'
@@ -55,42 +73,54 @@ items:
 - id: time-3
   facet: time
   format: type
-  prompt: Um wie viel Uhr kommt der Bus? (z. B. 9:20)
+  prompt:
+    de: Um wie viel Uhr kommt der Bus? (z. B. 9:20)
+    en: What time does the bus come? (e.g. 9:20)
   audio: Автобус буде о чотирнадцятій п'ятнадцять.
   answer:
   - '14:15'
 - id: time-4
   facet: time
   format: type
-  prompt: Um wie viel Uhr beginnt die Vorlesung? (z. B. 9:20)
+  prompt:
+    de: Um wie viel Uhr beginnt die Vorlesung? (z. B. 9:20)
+    en: What time does the lecture start? (e.g. 9:20)
   audio: Лекція починається о десятій тридцять.
   answer:
   - '10:30'
 - id: number-1
   facet: number
   format: type
-  prompt: Notieren Sie die Telefonnummer (nur Ziffern).
+  prompt:
+    de: Notieren Sie die Telefonnummer (nur Ziffern).
+    en: Write down the phone number (digits only).
   audio: 'Мій номер телефону: нуль дев''яносто сім, сто двадцять три, сорок п''ять, шістдесят сім.'
   answer:
   - 0971234567
 - id: number-2
   facet: number
   format: type
-  prompt: Wie viel Gramm Käse? (Zahl)
+  prompt:
+    de: Wie viel Gramm Käse? (Zahl)
+    en: How many grams of cheese? (number)
   audio: Двісті п'ятдесят грамів сиру, будь ласка.
   answer:
   - '250'
 - id: number-3
   facet: number
   format: type
-  prompt: Welche Zimmernummer? (Zahl)
+  prompt:
+    de: Welche Zimmernummer? (Zahl)
+    en: Which room number? (number)
   audio: Ваша кімната — номер триста дванадцять.
   answer:
   - '312'
 - id: number-4
   facet: number
   format: type
-  prompt: Wie viele Kilo Kartoffeln? (Zahl)
+  prompt:
+    de: Wie viele Kilo Kartoffeln? (Zahl)
+    en: How many kilos of potatoes? (number)
   audio: Мені три кілограми картоплі, будь ласка.
   answer:
   - '3'

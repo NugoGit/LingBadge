@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: morning
-  label: Morgens
+  label:
+    de: Morgens
+    en: Mornings
 - id: day
-  label: Arbeitstag und Uhrzeiten
+  label:
+    de: Arbeitstag und Uhrzeiten
+    en: Workday and times
 - id: weekend
-  label: Wochenende
+  label:
+    de: Wochenende
+    en: Weekend
 items:
 - id: morning-1
   facet: morning
   format: type
-  prompt: 'Sagen Sie: Ich stehe um sieben auf.'
+  prompt:
+    de: 'Sagen Sie: Ich stehe um sieben auf.'
+    en: 'Say: I get up at seven.'
   stem: Я ___ о сьомій.
   cue: вставати
   answer:
@@ -21,7 +29,9 @@ items:
 - id: morning-2
   facet: morning
   format: type
-  prompt: 'Sagen Sie: Morgens trinke ich Kaffee.'
+  prompt:
+    de: 'Sagen Sie: Morgens trinke ich Kaffee.'
+    en: 'Say: In the morning I drink coffee.'
   stem: Вранці я ___ каву.
   cue: пити
   answer:
@@ -29,7 +39,9 @@ items:
 - id: morning-3
   facet: morning
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Що ти робиш вранці?
   answer:
   - Снідаю і йду на роботу.
@@ -41,7 +53,9 @@ items:
 - id: day-1
   facet: day
   format: type
-  prompt: 'Sagen Sie: Dann fahre ich zur Arbeit.'
+  prompt:
+    de: 'Sagen Sie: Dann fahre ich zur Arbeit.'
+    en: 'Say: Then I go to work.'
   stem: Потім я їду на ___.
   cue: робота
   answer:
@@ -49,7 +63,9 @@ items:
 - id: day-2
   facet: day
   format: type
-  prompt: 'Sagen Sie: Ich esse um eins zu Mittag.'
+  prompt:
+    de: 'Sagen Sie: Ich esse um eins zu Mittag.'
+    en: 'Say: I have lunch at one.'
   stem: Я ___ о першій.
   cue: обідати
   answer:
@@ -57,16 +73,22 @@ items:
 - id: day-3
   facet: day
   format: type
-  prompt: 'Antworten Sie: um fünf.'
+  prompt:
+    de: 'Antworten Sie: um fünf.'
+    en: 'Answer: at five.'
   context: Коли ти закінчуєш роботу?
   stem: О ___.
-  cue: 5 Uhr
+  cue:
+    de: 5 Uhr
+    en: 5 o'clock
   answer:
   - п'ятій
 - id: weekend-1
   facet: weekend
   format: type
-  prompt: 'Sagen Sie: Am Samstag arbeite ich nicht.'
+  prompt:
+    de: 'Sagen Sie: Am Samstag arbeite ich nicht.'
+    en: 'Say: I don''t work on Saturday.'
   stem: У суботу я не ___.
   cue: працювати
   answer:
@@ -74,7 +96,9 @@ items:
 - id: weekend-2
   facet: weekend
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Що ти робиш у неділю?
   answer:
   - Відпочиваю вдома.
@@ -86,7 +110,9 @@ items:
 - id: weekend-3
   facet: weekend
   format: type
-  prompt: 'Sagen Sie: Am Sonntag gehen wir im Park spazieren.'
+  prompt:
+    de: 'Sagen Sie: Am Sonntag gehen wir im Park spazieren.'
+    en: 'Say: On Sunday we go for a walk in the park.'
   stem: У неділю ми ___ в парку.
   cue: гуляти
   answer:

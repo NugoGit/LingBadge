@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: where
-  label: Wo man Geld wechselt
+  label:
+    de: Wo man Geld wechselt
+    en: Where to change money
 - id: rate
-  label: Kurs und Betrag
+  label:
+    de: Kurs und Betrag
+    en: Rate and amount
 - id: pay
-  label: Karte oder bar
+  label:
+    de: Karte oder bar
+    en: Card or cash
 items:
 - id: where-1
   facet: where
   format: type
-  prompt: Fragen Sie, wo man Geld wechseln kann.
+  prompt:
+    de: Fragen Sie, wo man Geld wechseln kann.
+    en: Ask where you can change money.
   stem: Де можна ___ гроші?
   answer:
   - обміняти
@@ -20,7 +28,9 @@ items:
 - id: where-2
   facet: where
   format: choice
-  prompt: Fragen Sie nach einem Geldautomaten.
+  prompt:
+    de: Fragen Sie nach einem Geldautomaten.
+    en: Ask for a cash machine.
   answer:
   - Де тут банкомат?
   options:
@@ -31,33 +41,52 @@ items:
 - id: where-3
   facet: where
   format: choice
-  prompt: Was ist „Обмін валют“?
+  prompt:
+    de: Was ist „Обмін валют“?
+    en: What is “Обмін валют”?
   answer:
-  - Wechselstube
+    de:
+    - Wechselstube
+    en:
+    - Bureau de change
   options:
-  - Wechselstube
-  - Geldautomat
-  - Kasse
-  - Kreditschalter
+    de:
+    - Wechselstube
+    - Geldautomat
+    - Kasse
+    - Kreditschalter
+    en:
+    - Bureau de change
+    - Cash machine
+    - Cash desk
+    - Loans counter
 - id: rate-1
   facet: rate
   format: type
-  prompt: Fragen Sie nach dem Euro-Kurs.
+  prompt:
+    de: Fragen Sie nach dem Euro-Kurs.
+    en: Ask about the euro rate.
   stem: Який ___ євро?
   answer:
   - курс
 - id: rate-2
   facet: rate
   format: type
-  prompt: 'Sagen Sie: Ich möchte hundert Euro wechseln.'
+  prompt:
+    de: 'Sagen Sie: Ich möchte hundert Euro wechseln.'
+    en: 'Say: I''d like to change a hundred euros.'
   stem: Я хочу обміняти сто ___.
-  cue: Euro
+  cue:
+    de: Euro
+    en: euro
   answer:
   - євро
 - id: rate-3
   facet: rate
   format: type
-  prompt: 'Antworten Sie: zweihundert Dollar.'
+  prompt:
+    de: 'Antworten Sie: zweihundert Dollar.'
+    en: 'Answer: two hundred dollars.'
   context: Скільки ви хочете обміняти?
   stem: Двісті ___.
   cue: долар
@@ -66,7 +95,9 @@ items:
 - id: pay-1
   facet: pay
   format: type
-  prompt: 'Fragen Sie: Mit Karte oder nur bar?'
+  prompt:
+    de: 'Fragen Sie: Mit Karte oder nur bar?'
+    en: 'Ask: Card, or only cash?'
   stem: Можна ___ чи тільки готівкою?
   cue: картка
   answer:
@@ -74,19 +105,32 @@ items:
 - id: pay-2
   facet: pay
   format: choice
-  prompt: Was bedeutet das?
+  prompt:
+    de: Was bedeutet das?
+    en: What does it mean?
   context: У нас тільки готівка.
   answer:
-  - Nur Barzahlung
+    de:
+    - Nur Barzahlung
+    en:
+    - Cash only
   options:
-  - Nur Barzahlung
-  - Nur Karte
-  - Karte oder bar
-  - Kostenlos
+    de:
+    - Nur Barzahlung
+    - Nur Karte
+    - Karte oder bar
+    - Kostenlos
+    en:
+    - Cash only
+    - Card only
+    - Card or cash
+    - Free of charge
 - id: pay-3
   facet: pay
   format: choice
-  prompt: Fragen Sie, ob man mit Karte zahlen kann.
+  prompt:
+    de: Fragen Sie, ob man mit Karte zahlen kann.
+    en: Ask whether you can pay by card.
   answer:
   - Можна оплатити карткою?
   options:

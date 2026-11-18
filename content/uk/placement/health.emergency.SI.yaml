@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: help
-  label: Um Hilfe rufen
+  label:
+    de: Um Hilfe rufen
+    en: Call for help
 - id: what
-  label: Sagen, was passiert ist
+  label:
+    de: Sagen, was passiert ist
+    en: Say what happened
 - id: where
-  label: Sagen, wo man ist
+  label:
+    de: Sagen, wo man ist
+    en: Say where you are
 items:
 - id: help-1
   facet: help
   format: type
-  prompt: 'Rufen Sie: Hilfe!'
+  prompt:
+    de: 'Rufen Sie: Hilfe!'
+    en: 'Shout: Help!'
   stem: ___!
   answer:
   - Допоможіть
@@ -21,7 +29,9 @@ items:
 - id: help-2
   facet: help
   format: type
-  prompt: 'Rufen Sie: Rufen Sie einen Krankenwagen!'
+  prompt:
+    de: 'Rufen Sie: Rufen Sie einen Krankenwagen!'
+    en: 'Shout: Call an ambulance!'
   stem: Викличте ___!
   answer:
   - швидку
@@ -29,7 +39,9 @@ items:
 - id: help-3
   facet: help
   format: choice
-  prompt: Welche Nummer ist in der Ukraine die allgemeine Notrufnummer?
+  prompt:
+    de: Welche Nummer ist in der Ukraine die allgemeine Notrufnummer?
+    en: What is the general emergency number in Ukraine?
   answer:
   - '112'
   options:
@@ -40,7 +52,9 @@ items:
 - id: what-1
   facet: what
   format: choice
-  prompt: 'Sagen Sie: Ein Mann ist gestürzt.'
+  prompt:
+    de: 'Sagen Sie: Ein Mann ist gestürzt.'
+    en: 'Say: A man has fallen.'
   answer:
   - Чоловік упав.
   options:
@@ -51,7 +65,9 @@ items:
 - id: what-2
   facet: what
   format: type
-  prompt: 'Sagen Sie: Hier ist ein Unfall.'
+  prompt:
+    de: 'Sagen Sie: Hier ist ein Unfall.'
+    en: 'Say: There''s been an accident here.'
   stem: Тут ___.
   answer:
   - аварія
@@ -60,7 +76,9 @@ items:
 - id: what-3
   facet: what
   format: type
-  prompt: 'Sagen Sie: Er atmet nicht.'
+  prompt:
+    de: 'Sagen Sie: Er atmet nicht.'
+    en: 'Say: He isn''t breathing.'
   stem: Він не ___.
   cue: дихати
   answer:
@@ -68,7 +86,9 @@ items:
 - id: where-1
   facet: where
   format: type
-  prompt: 'Sagen Sie: … neben der Apotheke.'
+  prompt:
+    de: 'Sagen Sie: … neben der Apotheke.'
+    en: 'Say: … next to the pharmacy.'
   context: Де ви?
   stem: Ми на вулиці Франка, біля ___.
   cue: аптека
@@ -77,16 +97,22 @@ items:
 - id: where-2
   facet: where
   format: type
-  prompt: 'Ergänzen Sie die Adresse: Haus Nummer zehn.'
+  prompt:
+    de: 'Ergänzen Sie die Adresse: Haus Nummer zehn.'
+    en: 'Complete the address: house number ten.'
   context: Яка адреса?
   stem: Вулиця Шевченка, ___ десять.
-  cue: Haus
+  cue:
+    de: Haus
+    en: house
   answer:
   - будинок
 - id: where-3
   facet: where
   format: choice
-  prompt: 'Sagen Sie: Wir sind beim Bahnhof.'
+  prompt:
+    de: 'Sagen Sie: Wir sind beim Bahnhof.'
+    en: 'Say: We''re near the station.'
   answer:
   - Ми біля вокзалу.
   options:

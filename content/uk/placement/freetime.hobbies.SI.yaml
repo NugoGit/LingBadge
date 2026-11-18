@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: like
-  label: Sagen, was man gern macht
+  label:
+    de: Sagen, was man gern macht
+    en: Say what you like doing
 - id: ask
-  label: Zurückfragen und reagieren
+  label:
+    de: Zurückfragen und reagieren
+    en: Ask back and react
 - id: often
-  label: Wie oft
+  label:
+    de: Wie oft
+    en: How often
 items:
 - id: like-1
   facet: like
   format: type
-  prompt: 'Sagen Sie: Mir gefällt Fußball.'
+  prompt:
+    de: 'Sagen Sie: Mir gefällt Fußball.'
+    en: 'Say: I like football.'
   stem: Мені ___ футбол.
   cue: подобатися
   answer:
@@ -20,7 +28,9 @@ items:
 - id: like-2
   facet: like
   format: type
-  prompt: 'Sagen Sie: Mir gefallen ukrainische Lieder.'
+  prompt:
+    de: 'Sagen Sie: Mir gefallen ukrainische Lieder.'
+    en: 'Say: I like Ukrainian songs.'
   stem: Мені ___ українські пісні.
   cue: подобатися
   answer:
@@ -28,7 +38,9 @@ items:
 - id: like-3
   facet: like
   format: type
-  prompt: 'Sagen Sie: Ich spiele Gitarre.'
+  prompt:
+    de: 'Sagen Sie: Ich spiele Gitarre.'
+    en: 'Say: I play the guitar.'
   stem: Я граю на ___.
   cue: гітара
   answer:
@@ -36,7 +48,9 @@ items:
 - id: like-4
   facet: like
   format: choice
-  prompt: 'Sagen Sie: Ich laufe nicht gern.'
+  prompt:
+    de: 'Sagen Sie: Ich laufe nicht gern.'
+    en: 'Say: I don''t like running.'
   answer:
   - Я не люблю бігати.
   options:
@@ -47,7 +61,9 @@ items:
 - id: ask-1
   facet: ask
   format: choice
-  prompt: Fragen Sie einen Freund, was er in der Freizeit gern macht.
+  prompt:
+    de: Fragen Sie einen Freund, was er in der Freizeit gern macht.
+    en: Ask a friend what he likes doing in his free time.
   answer:
   - Що ти любиш робити у вільний час?
   options:
@@ -58,7 +74,9 @@ items:
 - id: ask-2
   facet: ask
   format: type
-  prompt: 'Fragen Sie zurück: und dir?'
+  prompt:
+    de: 'Fragen Sie zurück: und dir?'
+    en: 'Ask back: and you?'
   stem: Мені подобається футбол, а ___?
   cue: ти
   answer:
@@ -66,7 +84,9 @@ items:
 - id: ask-3
   facet: ask
   format: choice
-  prompt: Sie schwimmen auch gern. Was sagen Sie?
+  prompt:
+    de: Sie schwimmen auch gern. Was sagen Sie?
+    en: You like swimming too. What do you say?
   context: Я дуже люблю плавати.
   answer:
   - Я теж!
@@ -78,7 +98,9 @@ items:
 - id: often-1
   facet: often
   format: choice
-  prompt: Wie sagt man „zweimal pro Woche“?
+  prompt:
+    de: Wie sagt man „zweimal pro Woche“?
+    en: How do you say “twice a week”?
   answer:
   - двічі на тиждень
   options:
@@ -89,7 +111,9 @@ items:
 - id: often-2
   facet: often
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Як часто ти граєш у теніс?
   answer:
   - Щосуботи.
@@ -101,7 +125,9 @@ items:
 - id: often-3
   facet: often
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Ти часто ходиш у кіно?
   answer:
   - Ні, рідко.

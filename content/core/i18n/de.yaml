@@ -1,0 +1,100 @@
+# German titles for the universal layer. English stays in the source files; the app picks by UI language.
+themes:
+  comm: Verständigung
+  personal: Angaben zur Person
+  relations: Beziehungen zu anderen
+  home: Wohnen
+  daily: Alltag
+  freetime: Freizeit
+  travel: Reisen
+  shopping: Einkaufen
+  food: Essen und Trinken
+  health: Gesundheit
+  services: Dienstleistungen
+  places: Orte
+  language: Sprache
+situations:
+  comm.repair: Ein Gespräch am Laufen halten
+  comm.numbers: Zahlen, Uhrzeit und Datum
+  comm.signs: Schilder und Aushänge
+  personal.meeting: Neue Leute kennenlernen
+  personal.officialdom: Angaben machen
+  relations.everyday: Alltäglicher Kontakt
+  relations.family: Familie
+  relations.plans: Mit Freunden etwas ausmachen
+  relations.celebrations: Feste
+  relations.home-visit: Zu Besuch sein und Gäste haben
+  relations.online: Online mit Freunden
+  home.where-live: Wo man wohnt
+  daily.routine: Tagesablauf
+  daily.notes: Notizen
+  freetime.hobbies: Hobbys und Vorlieben
+  freetime.events: Veranstaltungen
+  freetime.reading: Lesen zum Vergnügen
+  freetime.sightseeing: Besichtigungen
+  freetime.media: Medien
+  travel.getting-around: Sich in einer Stadt zurechtfinden
+  travel.public-transport: Bahn und Bus
+  travel.border: Grenze
+  travel.accommodation: Unterkunft
+  travel.keeping-in-touch: In Kontakt bleiben
+  shopping.shop: Im Geschäft oder auf dem Markt
+  shopping.info: Informationen im Geschäft
+  food.cafe: Café oder Restaurant
+  health.pharmacy: Apotheke
+  health.doctor: Arzt
+  health.emergency: Notfall
+  services.money: Geld
+skills:
+  comm.ask-word.SI: {title: Fragen, wie etwas heißt oder was ein Wort bedeutet, can_do: "Kann fragen, wie etwas heißt, was ein Wort bedeutet oder wie man etwas sagt, und auf das zeigen, was er/sie möchte."}
+  comm.numbers.L: {title: "Gesprochene Zahlen, Preise und Uhrzeiten verstehen", can_do: "Kann Zahlen, Preise und Uhrzeiten verstehen, die langsam bis normal gesprochen werden, im Gespräch oder per Lautsprecher."}
+  comm.repair.SI: {title: Weiterreden, wenn man etwas nicht versteht, can_do: "Kann zeigen, dass er/sie etwas nicht verstanden hat, und bitten zu wiederholen, langsamer zu sprechen oder ein Wort zu buchstabieren."}
+  comm.signs.R: {title: Schilder und Aushänge lesen, can_do: "Kann häufige Schilder und kurze Aushänge verstehen: Eingang, Ausgang, geöffnet, geschlossen, drücken, ziehen, Rauchverbot, Pausenzeiten."}
+  comm.time-dates.SI: {title: "Uhrzeit, Tag und Datum erfragen und sagen", can_do: "Kann fragen und sagen, wie spät es ist, an welchem Tag oder Datum etwas stattfindet, und heute, morgen, gestern verwenden."}
+  daily.note.WI: {title: Eine kurze Notiz hinterlassen, can_do: "Kann eine Notiz hinterlassen, wohin er/sie gegangen ist und wann er/sie zurück ist."}
+  daily.routine.SI: {title: Über den Tagesablauf sprechen, can_do: "Kann sagen, was er/sie an einem normalen Tag, an einem Arbeitstag und am Wochenende macht und wann."}
+  education.lesson.L: {title: Anweisungen im Sprachunterricht folgen, can_do: "Kann einfachen Anweisungen der Lehrkraft folgen: lesen, wiederholen, das Buch öffnen, zuhören, schreiben."}
+  food.cafe.SI: {title: Im Café oder Restaurant bestellen, can_do: "Kann Essen und Getränke bestellen, fragen, was ein Gericht ist, auf „das haben wir nicht“ reagieren, um die Rechnung bitten und bezahlen."}
+  food.menu.R: {title: Eine Speisekarte lesen, can_do: "Kann eine einfache Speisekarte mit Rubriken, Gerichten und Preisen lesen."}
+  freetime.events.R: {title: Ein Veranstaltungsplakat oder Programm lesen, can_do: "Kann auf einem Plakat, Programm oder Flyer finden, was stattfindet, wann, wo und wie viel es kostet."}
+  freetime.hobbies.SI: {title: Über Freizeit und Vorlieben sprechen, can_do: "Kann sagen, was er/sie gern und nicht gern macht und wie oft, und das Gegenüber danach fragen."}
+  freetime.hobbies.WI: {title: Über Hobbys und Vorlieben schreiben, can_do: "Kann einen kurzen Post oder eine Nachricht über Hobbys, Vorlieben und Abneigungen schreiben."}
+  freetime.media.L: {title: Das Thema einer Nachricht oder Werbung erkennen, can_do: "Kann erkennen, worum es in einer kurzen Nachrichtenmeldung oder Werbung geht, mit Hilfe von Bildern."}
+  freetime.reading.R: {title: Einen kurzen bebilderten Text lesen, can_do: "Kann einer kurzen bebilderten Geschichte oder Meldung in sehr einfacher Sprache folgen."}
+  freetime.tour.L: {title: Einer Führung folgen, can_do: "Kann sehr einfachen Informationen bei einer Führung folgen: was ein Gebäude ist, wie alt, wer dort lebte."}
+  health.doctor.SI: {title: Dem Arzt sagen, was los ist, can_do: "Kann sagen, was weh tut und seit wann, und einfache Fragen des Arztes beantworten."}
+  health.emergency.SI: {title: Um dringende Hilfe bitten, can_do: "Kann um Hilfe rufen, in wenigen Worten sagen, was passiert ist, und sagen, wo er/sie ist."}
+  health.pharmacy.SI: {title: In der Apotheke etwas bekommen, can_do: "Kann ein einfaches Problem beschreiben, nach etwas dagegen fragen und verstehen, wie oft man es nimmt."}
+  home.where-live.SI: {title: "Darüber sprechen, wo man wohnt", can_do: "Kann über Stadt und Gegend sprechen und fragen, wo man wohnt, und die Wohnung und Zimmer einfach beschreiben."}
+  personal.details.SI: {title: Auf Nachfrage Angaben zur Person machen, can_do: "Kann Namen (und buchstabieren), Adresse, Telefonnummer, Staatsangehörigkeit und Geburtsdatum nennen, wenn langsam gefragt wird."}
+  personal.form.WI: {title: Ein einfaches Formular ausfüllen, can_do: "Kann ein einfaches Papier- oder Online-Formular (Anmeldung, Bestellung) mit Angaben zur Person, Daten und Zahlen ausfüllen."}
+  personal.intro.SI: {title: Sich vorstellen und jemanden kennenlernen, can_do: "Kann sagen und fragen, wie man heißt, woher man kommt, wo man wohnt, was man macht und welche Sprachen man spricht."}
+  personal.intro.SP: {title: Sich kurz vor einer Gruppe vorstellen, can_do: "Kann sich kurz und vorbereitet vor einer Gruppe vorstellen: Name, Herkunft, Wohnort, Arbeit, Vorlieben."}
+  personal.intro.WI: {title: Sich in einer Nachricht vorstellen, can_do: "Kann eine kurze Nachricht schreiben, in der er/sie sich jemandem Neuen vorstellt und ein, zwei Fragen zurückstellt."}
+  relations.courtesy.SI: {title: "Grüßen, danken, sich entschuldigen und verabschieden", can_do: "Kann grüßen, nach dem Befinden fragen und reagieren, danken, sich entschuldigen und verabschieden, formell oder informell."}
+  relations.family.SI: {title: Über die Familie sprechen, can_do: "Kann sagen, wer zur Familie gehört (auch Haustiere), mit Namen, Alter und Beruf, und nach der Familie des Gegenübers fragen."}
+  relations.family.SP: {title: Ein Familienfoto beschreiben, can_do: "Kann ein Foto zeigen und sagen, wer wer ist, wo jemand steht und wie jemand aussieht."}
+  relations.home-visit.SI: {title: Freunde besuchen oder zu Gast haben, can_do: "Als Gast oder Gastgeber: begrüßen, Essen und Getränke anbieten und annehmen, ein Geschenk überreichen, ein Kompliment machen, danken und gehen."}
+  relations.meet-point.WI: {title: Sich am Treffpunkt per Nachricht finden, can_do: "Kann schreiben, wo er/sie ist, was er/sie trägt oder dass er/sie sich verspätet, und dasselbe verstehen."}
+  relations.online.WI: {title: Auf Posts von Freunden reagieren, can_do: "Kann mit kurzen Kommentaren auf Posts reagieren und auf Kommentare mit Dank oder Entschuldigung antworten."}
+  relations.plans.SI: {title: Mit einem Freund etwas ausmachen, can_do: "Kann jemanden einladen, zu- oder absagen und Tag, Uhrzeit und Treffpunkt vereinbaren."}
+  relations.plans.WI: {title: Per Nachricht etwas ausmachen, can_do: "Kann kurze Nachrichten lesen und schreiben, die ein Treffen vorschlagen, zusagen oder absagen und Zeit und Ort bestätigen."}
+  relations.toast.SP: {title: Einen kurzen Trinkspruch ausbringen, can_do: "Kann bei einem Essen oder Fest einen sehr kurzen, eingeübten Trinkspruch ausbringen."}
+  relations.voice-message.L: {title: Die Sprachnachricht eines Freundes verstehen, can_do: "Kann einer kurzen, deutlichen Sprachnachricht entnehmen, wer, was, wann und wo."}
+  relations.wishes.WI: {title: Geburtstags- und Feiertagswünsche schreiben, can_do: "Kann kurze Glückwünsche zum Geburtstag oder zu einem Feiertag schreiben."}
+  services.money.SI: {title: Geld wechseln und nach Zahlungsarten fragen, can_do: "Kann fragen, wo man Geld wechselt, nach dem Kurs fragen, den Betrag nennen und fragen, ob Karte oder bar."}
+  shopping.buy.SI: {title: Lebensmittel und Alltägliches kaufen, can_do: "Kann im Geschäft oder auf dem Markt sagen, was und wie viel er/sie möchte, nach dem Preis fragen und bezahlen."}
+  shopping.clothes.SI: {title: Kleidung kaufen, can_do: "Kann nach Größe und Farbe fragen, fragen, ob er/sie etwas anprobieren kann, und sagen, dass es zu groß oder zu klein ist."}
+  shopping.info.R: {title: Informationen im Geschäft lesen, can_do: "Kann Wegweiser im Geschäft, Preisschilder, Angebote und Öffnungszeiten lesen."}
+  travel.announcements.L: {title: Durchsagen am Bahnhof verstehen, can_do: "Kann in einer langsamen, deutlichen Durchsage Zug, Gleis, Uhrzeit und Verspätung verstehen."}
+  travel.border.SI: {title: Fragen bei der Passkontrolle beantworten, can_do: "Kann einfache Fragen zu Zweck und Dauer des Aufenthalts und zur Unterkunft beantworten."}
+  travel.directions.R: {title: Schriftlichen Wegbeschreibungen folgen, can_do: "Kann kurzen schriftlichen Wegbeschreibungen folgen, z. B. der Nachricht eines Freundes zu seiner Wohnung oder Schildern in einem Gebäude."}
+  travel.directions.SI: {title: Nach dem Weg fragen und ihn verstehen, can_do: "Kann fragen, wo etwas ist, und kurzen, einfachen Wegbeschreibungen zu einem nahen Ort folgen."}
+  travel.hotel-info.R: {title: Informationen zur Unterkunft lesen, can_do: "Kann grundlegende Informationen zur Unterkunft lesen: Essenszeiten, WLAN, Check-out, Hausordnung."}
+  travel.hotel.SI: {title: Im Hotel oder in der Pension einchecken, can_do: "Kann einchecken, Angaben machen und nach Frühstückszeit, WLAN und Check-out fragen."}
+  travel.postcard.WI: {title: Eine Postkarte oder Nachricht von der Reise schicken, can_do: "Kann eine kurze Postkarte oder Nachricht schreiben, wo er/sie ist, wie es ist und was er/sie macht."}
+  travel.taxi.SI: {title: Taxi fahren, can_do: "Kann eine Adresse nennen, nach dem Preis fragen, bitten anzuhalten und bezahlen."}
+  travel.ticket.SI: {title: Eine Zug- oder Busfahrkarte kaufen, can_do: "Kann eine Fahrkarte kaufen, sagen wohin und wann, und nach Abfahrtszeit und Bahnsteig fragen."}
+  travel.timetable.R: {title: Fahrpläne und Abfahrtstafeln lesen, can_do: "Kann Abfahrts- und Ankunftszeiten, Gleise, Verspätungen und Ausfälle lesen."}
+  weather.forecast.R: {title: Einen Wetterbericht lesen, can_do: "Kann eine einfache Vorhersage mit Temperaturen und Symbolen lesen."}
+  weather.smalltalk.SI: {title: Über das Wetter sprechen, can_do: "Kann sagen und fragen, wie das Wetter heute und morgen ist."}

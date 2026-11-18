@@ -3,117 +3,222 @@ lang: uk
 reviewed_by: []
 facets:
 - id: what
-  label: Was für ein Gebäude, wo
+  label:
+    de: Was für ein Gebäude, wo
+    en: What building, where
 - id: age
-  label: Wie alt
+  label:
+    de: Wie alt
+    en: How old
 - id: who
-  label: Wer hier lebte oder arbeitete
+  label:
+    de: Wer hier lebte oder arbeitete
+    en: Who lived or worked here
 items:
 - id: what-1
   facet: what
   format: choice
-  prompt: Was ist das für ein Gebäude?
+  prompt:
+    de: Was ist das für ein Gebäude?
+    en: What building is this?
   audio: Перед нами ратуша. Тут працює міська рада.
   answer:
-  - Rathaus
+    de:
+    - Rathaus
+    en:
+    - Town hall
   options:
-  - Rathaus
-  - Kirche
-  - Theater
-  - Bahnhof
+    de:
+    - Rathaus
+    - Kirche
+    - Theater
+    - Bahnhof
+    en:
+    - Town hall
+    - Church
+    - Theatre
+    - Station
 - id: what-2
   facet: what
   format: choice
-  prompt: Was ist rechts?
+  prompt:
+    de: Was ist rechts?
+    en: What is on the right?
   audio: Праворуч — оперний театр.
   answer:
-  - Opernhaus
+    de:
+    - Opernhaus
+    en:
+    - Opera house
   options:
-  - Opernhaus
-  - Rathaus
-  - Museum
-  - Kirche
+    de:
+    - Opernhaus
+    - Rathaus
+    - Museum
+    - Kirche
+    en:
+    - Opera house
+    - Town hall
+    - Museum
+    - Church
 - id: what-3
   facet: what
   format: choice
-  prompt: Was ist links?
+  prompt:
+    de: Was ist links?
+    en: What is on the left?
   audio: Ліворуч ви бачите старий собор.
   answer:
-  - Eine alte Kathedrale
+    de:
+    - Eine alte Kathedrale
+    en:
+    - An old cathedral
   options:
-  - Eine alte Kathedrale
-  - Ein altes Theater
-  - Ein neues Museum
-  - Das Rathaus
+    de:
+    - Eine alte Kathedrale
+    - Ein altes Theater
+    - Ein neues Museum
+    - Das Rathaus
+    en:
+    - An old cathedral
+    - An old theatre
+    - A new museum
+    - The town hall
 - id: age-1
   facet: age
   format: choice
-  prompt: Wie alt ist die Kirche?
+  prompt:
+    de: Wie alt ist die Kirche?
+    en: How old is the church?
   audio: Цій церкві понад чотириста років.
   answer:
-  - über 400 Jahre
+    de:
+    - über 400 Jahre
+    en:
+    - over 400 years
   options:
-  - über 400 Jahre
-  - 40 Jahre
-  - 14 Jahre
-  - über 4000 Jahre
+    de:
+    - über 400 Jahre
+    - 40 Jahre
+    - 14 Jahre
+    - über 4000 Jahre
+    en:
+    - over 400 years
+    - 40 years
+    - 14 years
+    - over 4,000 years
 - id: age-2
   facet: age
   format: choice
-  prompt: Wie alt ist die Brücke?
+  prompt:
+    de: Wie alt ist die Brücke?
+    en: How old is the bridge?
   audio: Цьому мосту сто років.
   answer:
-  - 100 Jahre
+    de:
+    - 100 Jahre
+    en:
+    - 100 years
   options:
-  - 100 Jahre
-  - 10 Jahre
-  - 1000 Jahre
-  - 200 Jahre
+    de:
+    - 100 Jahre
+    - 10 Jahre
+    - 1000 Jahre
+    - 200 Jahre
+    en:
+    - 100 years
+    - 10 years
+    - 1,000 years
+    - 200 years
 - id: age-3
   facet: age
   format: choice
-  prompt: Wann wurde das Haus gebaut?
+  prompt:
+    de: Wann wurde das Haus gebaut?
+    en: When was the house built?
   audio: Цей будинок побудували дуже давно, у шістнадцятому столітті.
   answer:
-  - Im 16. Jahrhundert
+    de:
+    - Im 16. Jahrhundert
+    en:
+    - In the 16th century
   options:
-  - Im 16. Jahrhundert
-  - Im 6. Jahrhundert
-  - Vor 16 Jahren
-  - Im 19. Jahrhundert
+    de:
+    - Im 16. Jahrhundert
+    - Im 6. Jahrhundert
+    - Vor 16 Jahren
+    - Im 19. Jahrhundert
+    en:
+    - In the 16th century
+    - In the 6th century
+    - 16 years ago
+    - In the 19th century
 - id: who-1
   facet: who
   format: choice
-  prompt: Wer hat hier gelebt?
+  prompt:
+    de: Wer hat hier gelebt?
+    en: Who lived here?
   audio: Тут жив поет Іван Франко.
   answer:
-  - Ein Dichter
+    de:
+    - Ein Dichter
+    en:
+    - A poet
   options:
-  - Ein Dichter
-  - Ein König
-  - Ein Maler
-  - Ein Komponist
+    de:
+    - Ein Dichter
+    - Ein König
+    - Ein Maler
+    - Ein Komponist
+    en:
+    - A poet
+    - A king
+    - A painter
+    - A composer
 - id: who-2
   facet: who
   format: choice
-  prompt: Was wird über das Haus gesagt?
+  prompt:
+    de: Was wird über das Haus gesagt?
+    en: What is said about the house?
   audio: У цьому будинку жила Леся Українка.
   answer:
-  - Lesja Ukrajinka hat hier gelebt.
+    de:
+    - Lesja Ukrajinka hat hier gelebt.
+    en:
+    - Lesia Ukrainka lived here.
   options:
-  - Lesja Ukrajinka hat hier gelebt.
-  - Lesja Ukrajinka hat das Haus gebaut.
-  - Hier ist ein Geschäft.
-  - Lesja Ukrajinka arbeitet hier.
+    de:
+    - Lesja Ukrajinka hat hier gelebt.
+    - Lesja Ukrajinka hat das Haus gebaut.
+    - Hier ist ein Geschäft.
+    - Lesja Ukrajinka arbeitet hier.
+    en:
+    - Lesia Ukrainka lived here.
+    - Lesia Ukrainka built the house.
+    - There is a shop here.
+    - Lesia Ukrainka works here.
 - id: who-3
   facet: who
   format: choice
-  prompt: Was wird über das Haus gesagt?
+  prompt:
+    de: Was wird über das Haus gesagt?
+    en: What is said about the house?
   audio: Тут працював відомий художник.
   answer:
-  - Ein bekannter Maler hat hier gearbeitet.
+    de:
+    - Ein bekannter Maler hat hier gearbeitet.
+    en:
+    - A famous painter worked here.
   options:
-  - Ein bekannter Maler hat hier gearbeitet.
-  - Ein bekannter Maler hat hier gelebt.
-  - Hier ist ein Kunstmuseum.
-  - Ein Dichter hat hier gearbeitet.
+    de:
+    - Ein bekannter Maler hat hier gearbeitet.
+    - Ein bekannter Maler hat hier gelebt.
+    - Hier ist ein Kunstmuseum.
+    - Ein Dichter hat hier gearbeitet.
+    en:
+    - A famous painter worked here.
+    - A famous painter lived here.
+    - There is an art museum here.
+    - A poet worked here.

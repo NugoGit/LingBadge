@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: greet
-  label: Begrüßen, nach dem Befinden fragen
+  label:
+    de: Begrüßen, nach dem Befinden fragen
+    en: Greeting, asking how someone is
 - id: sorry
-  label: Danken und entschuldigen
+  label:
+    de: Danken und entschuldigen
+    en: Thanking and apologising
 - id: bye
-  label: Verabschieden, Anrede
+  label:
+    de: Verabschieden, Anrede
+    en: Saying goodbye, forms of address
 items:
 - id: greet-1
   facet: greet
   format: choice
-  prompt: Sie treffen morgens Ihren älteren Nachbarn (Sie-Form).
+  prompt:
+    de: Sie treffen morgens Ihren älteren Nachbarn (Sie-Form).
+    en: In the morning you meet your older neighbour (formal).
   answer:
   - Доброго ранку!
   options:
@@ -23,7 +31,9 @@ items:
 - id: greet-2
   facet: greet
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Як справи?
   answer:
   - Добре, дякую. А у вас?
@@ -35,7 +45,9 @@ items:
 - id: greet-3
   facet: greet
   format: type
-  prompt: 'Fragen Sie eine Freundin zurück: Und bei dir?'
+  prompt:
+    de: 'Fragen Sie eine Freundin zurück: Und bei dir?'
+    en: 'Ask a friend back: And how about you?'
   context: Як справи?
   stem: Добре, дякую. А в ___?
   cue: ти
@@ -44,7 +56,9 @@ items:
 - id: sorry-1
   facet: sorry
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Вибачте, я запізнився.
   answer:
   - Нічого страшного.
@@ -56,7 +70,9 @@ items:
 - id: sorry-2
   facet: sorry
   format: type
-  prompt: Sie haben jemanden angerempelt (Sie-Form). Entschuldigen Sie sich.
+  prompt:
+    de: Sie haben jemanden angerempelt (Sie-Form). Entschuldigen Sie sich.
+    en: You bumped into someone (formal). Apologise.
   stem: ___!
   answer:
   - Вибачте
@@ -65,7 +81,9 @@ items:
 - id: sorry-3
   facet: sorry
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Дякую за допомогу!
   answer:
   - Будь ласка!
@@ -77,7 +95,9 @@ items:
 - id: bye-1
   facet: bye
   format: choice
-  prompt: Sie verabschieden sich von einer Freundin.
+  prompt:
+    de: Sie verabschieden sich von einer Freundin.
+    en: You say goodbye to a friend.
   answer:
   - Бувай!
   options:
@@ -88,14 +108,18 @@ items:
 - id: bye-2
   facet: bye
   format: type
-  prompt: 'Verabschieden Sie sich formell: Auf Wiedersehen!'
+  prompt:
+    de: 'Verabschieden Sie sich formell: Auf Wiedersehen!'
+    en: 'Say goodbye formally: Goodbye!'
   stem: До ___!
   answer:
   - побачення
 - id: bye-3
   facet: bye
   format: type
-  prompt: Sprechen Sie Herrn Andrij an.
+  prompt:
+    de: Sprechen Sie Herrn Andrij an.
+    en: Address Mr Andrii.
   stem: До побачення, пане ___!
   cue: Андрій
   answer:

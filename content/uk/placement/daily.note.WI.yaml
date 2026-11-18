@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: where
-  label: Wohin man gegangen ist
+  label:
+    de: Wohin man gegangen ist
+    en: Where you have gone
 - id: back
-  label: Wann man zurück ist
+  label:
+    de: Wann man zurück ist
+    en: When you will be back
 - id: info
-  label: Kurze Hinweise
+  label:
+    de: Kurze Hinweise
+    en: Short notes
 items:
 - id: where-1
   facet: where
   format: type
-  prompt: 'Notiz: Ich bin im Geschäft.'
+  prompt:
+    de: 'Notiz: Ich bin im Geschäft.'
+    en: 'Note: I''m at the shop.'
   stem: Я в ___. Буду о п'ятій.
   cue: магазин
   answer:
@@ -20,7 +28,9 @@ items:
 - id: where-2
   facet: where
   format: type
-  prompt: 'Notiz (Frau): Bin in die Apotheke gegangen.'
+  prompt:
+    de: 'Notiz (Frau): Bin in die Apotheke gegangen.'
+    en: 'Note (woman): Gone to the pharmacy.'
   stem: Пішла в ___, буду через годину.
   cue: аптека
   answer:
@@ -28,7 +38,9 @@ items:
 - id: where-3
   facet: where
   format: choice
-  prompt: 'Ein Mann schreibt: „Bin zur Arbeit gegangen.“'
+  prompt:
+    de: 'Ein Mann schreibt: „Bin zur Arbeit gegangen.“'
+    en: 'A man writes: “Gone to work.”'
   answer:
   - Пішов на роботу.
   options:
@@ -39,23 +51,33 @@ items:
 - id: back-1
   facet: back
   format: type
-  prompt: 'Notiz: Bin in einer Stunde zurück.'
+  prompt:
+    de: 'Notiz: Bin in einer Stunde zurück.'
+    en: 'Note: Back in an hour.'
   stem: Буду через ___.
-  cue: eine Stunde
+  cue:
+    de: eine Stunde
+    en: an hour
   answer:
   - годину
 - id: back-2
   facet: back
   format: type
-  prompt: 'Notiz: Bin um sechs zurück.'
+  prompt:
+    de: 'Notiz: Bin um sechs zurück.'
+    en: 'Note: Back at six.'
   stem: Буду о ___.
-  cue: 6 Uhr
+  cue:
+    de: 6 Uhr
+    en: 6 o'clock
   answer:
   - шостій
 - id: back-3
   facet: back
   format: choice
-  prompt: Welche Notiz heißt „Bin um acht zurück“?
+  prompt:
+    de: Welche Notiz heißt „Bin um acht zurück“?
+    en: Which note means “Back at eight”?
   answer:
   - Буду о восьмій.
   options:
@@ -66,7 +88,9 @@ items:
 - id: info-1
   facet: info
   format: type
-  prompt: 'Notiz: Das Mittagessen ist im Kühlschrank.'
+  prompt:
+    de: 'Notiz: Das Mittagessen ist im Kühlschrank.'
+    en: 'Note: Lunch is in the fridge.'
   stem: Обід у ___.
   cue: холодильник
   answer:
@@ -74,19 +98,32 @@ items:
 - id: info-2
   facet: info
   format: choice
-  prompt: Was bedeutet die Notiz?
+  prompt:
+    de: Was bedeutet die Notiz?
+    en: What does the note mean?
   context: Ключ під килимком.
   answer:
-  - Der Schlüssel liegt unter der Fußmatte.
+    de:
+    - Der Schlüssel liegt unter der Fußmatte.
+    en:
+    - The key is under the doormat.
   options:
-  - Der Schlüssel liegt unter der Fußmatte.
-  - Der Schlüssel ist beim Nachbarn.
-  - Die Tür ist offen.
-  - Ich habe den Schlüssel.
+    de:
+    - Der Schlüssel liegt unter der Fußmatte.
+    - Der Schlüssel ist beim Nachbarn.
+    - Die Tür ist offen.
+    - Ich habe den Schlüssel.
+    en:
+    - The key is under the doormat.
+    - The key is at the neighbour's.
+    - The door is open.
+    - I have the key.
 - id: info-3
   facet: info
   format: type
-  prompt: 'Notiz: Ruf mich an!'
+  prompt:
+    de: 'Notiz: Ruf mich an!'
+    en: 'Note: Call me!'
   stem: Подзвони ___!
   cue: я
   answer:

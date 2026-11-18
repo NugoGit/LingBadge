@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: where
-  label: Wo man ist
+  label:
+    de: Wo man ist
+    en: Where you are
 - id: wear
-  label: Was man trägt
+  label:
+    de: Was man trägt
+    en: What you're wearing
 - id: late
-  label: Verspätung, wo bist du?
+  label:
+    de: Verspätung, wo bist du?
+    en: Running late, where are you?
 items:
 - id: where-1
   facet: where
   format: type
-  prompt: 'Schreiben Sie: Ich bin schon am Bahnhof, bei der Kasse.'
+  prompt:
+    de: 'Schreiben Sie: Ich bin schon am Bahnhof, bei der Kasse.'
+    en: 'Write: I''m already at the station, by the ticket office.'
   stem: Я вже на ___, біля каси.
   cue: вокзал
   answer:
@@ -20,7 +28,9 @@ items:
 - id: where-2
   facet: where
   format: type
-  prompt: 'Schreiben Sie: Ich bin beim Eingang.'
+  prompt:
+    de: 'Schreiben Sie: Ich bin beim Eingang.'
+    en: 'Write: I''m by the entrance.'
   stem: Я біля ___.
   cue: вхід
   answer:
@@ -28,7 +38,9 @@ items:
 - id: where-3
   facet: where
   format: choice
-  prompt: 'Antworten Sie: Ich bin schon im Café.'
+  prompt:
+    de: 'Antworten Sie: Ich bin schon im Café.'
+    en: 'Answer: I''m already in the café.'
   context: Де ти?
   answer:
   - Я вже в кафе.
@@ -40,7 +52,9 @@ items:
 - id: wear-1
   facet: wear
   format: type
-  prompt: 'Schreiben Sie: Ich trage eine rote Jacke.'
+  prompt:
+    de: 'Schreiben Sie: Ich trage eine rote Jacke.'
+    en: 'Write: I''m wearing a red jacket.'
   stem: Я в ___ куртці.
   cue: червоний
   answer:
@@ -48,7 +62,9 @@ items:
 - id: wear-2
   facet: wear
   format: type
-  prompt: 'Schreiben Sie: Ich trage eine blaue Mütze.'
+  prompt:
+    de: 'Schreiben Sie: Ich trage eine blaue Mütze.'
+    en: 'Write: I''m wearing a blue hat.'
   stem: Я в синій ___.
   cue: шапка
   answer:
@@ -56,7 +72,9 @@ items:
 - id: wear-3
   facet: wear
   format: choice
-  prompt: 'Schreiben Sie: Ich trage einen grauen Pullover.'
+  prompt:
+    de: 'Schreiben Sie: Ich trage einen grauen Pullover.'
+    en: 'Write: I''m wearing a grey jumper.'
   answer:
   - Я в сірому светрі.
   options:
@@ -67,7 +85,9 @@ items:
 - id: late-1
   facet: late
   format: type
-  prompt: 'Schreiben Sie: Ich komme zehn Minuten zu spät, sorry!'
+  prompt:
+    de: 'Schreiben Sie: Ich komme zehn Minuten zu spät, sorry!'
+    en: 'Write: I''ll be ten minutes late, sorry!'
   stem: ___ на десять хвилин, вибач!
   cue: запізнюватися
   answer:
@@ -76,19 +96,32 @@ items:
 - id: late-2
   facet: late
   format: choice
-  prompt: Ihr Freund schreibt. Was heißt das?
+  prompt:
+    de: Ihr Freund schreibt. Was heißt das?
+    en: Your friend writes. What does it mean?
   context: Запізнююся на 15 хвилин.
   answer:
-  - Er kommt 15 Minuten zu spät.
+    de:
+    - Er kommt 15 Minuten zu spät.
+    en:
+    - He'll be 15 minutes late.
   options:
-  - Er kommt 15 Minuten zu spät.
-  - Er ist seit 15 Minuten da.
-  - Er kommt in 15 Minuten nicht.
-  - Er wartet 15 Minuten.
+    de:
+    - Er kommt 15 Minuten zu spät.
+    - Er ist seit 15 Minuten da.
+    - Er kommt in 15 Minuten nicht.
+    - Er wartet 15 Minuten.
+    en:
+    - He'll be 15 minutes late.
+    - He's been there for 15 minutes.
+    - He won't come in 15 minutes.
+    - He's waiting 15 minutes.
 - id: late-3
   facet: late
   format: type
-  prompt: 'Fragen Sie: Wo bist du?'
+  prompt:
+    de: 'Fragen Sie: Wo bist du?'
+    en: 'Ask: Where are you?'
   stem: ___ ти?
   answer:
   - Де

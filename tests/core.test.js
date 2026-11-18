@@ -104,3 +104,17 @@ console.log("core.js: all checks passed");
   assert.deepStrictEqual(a, b);
   console.log("placement: all checks passed");
 }
+
+// ---------------------------------------------------------------- UI translations
+{
+  const box = { window: {} }; vm.runInNewContext(fs.readFileSync(__dirname + "/../app/i18n.js", "utf8"), box);
+  const en = box.window.LB_I18N.en;
+  const keys = JSON.parse(require("child_process").execFileSync("python3", [__dirname + "/../tools/i18n_keys.py", "--json"], { encoding: "utf8" }));
+  const missing = keys.filter((k) => !(k in en));
+  assert.deepStrictEqual(missing, [], "UI strings without English: " + missing.join(" | "));
+  for (const [de, e] of Object.entries(en)) {
+    const ph = (s) => (s.match(/\{\w+\}/g) || []).sort().join();
+    assert.strictEqual(ph(de), ph(e), "placeholders differ: " + de);
+  }
+  console.log("i18n: all checks passed");
+}

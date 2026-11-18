@@ -3,24 +3,36 @@ lang: uk
 reviewed_by: []
 facets:
 - id: who
-  label: Wer zur Familie gehört
+  label:
+    de: Wer zur Familie gehört
+    en: Who is in the family
 - id: name
-  label: Namen und Alter
+  label:
+    de: Namen und Alter
+    en: Names and ages
 - id: ask
-  label: Nach der Familie fragen
+  label:
+    de: Nach der Familie fragen
+    en: Asking about family
 items:
 - id: who-1
   facet: who
   format: type
-  prompt: 'Sagen Sie: Ich habe einen Bruder und eine Schwester.'
+  prompt:
+    de: 'Sagen Sie: Ich habe einen Bruder und eine Schwester.'
+    en: 'Say: I have a brother and a sister.'
   stem: У мене є брат і ___.
-  cue: Schwester
+  cue:
+    de: Schwester
+    en: sister
   answer:
   - сестра
 - id: who-2
   facet: who
   format: type
-  prompt: 'Sagen Sie: Wir haben eine Katze.'
+  prompt:
+    de: 'Sagen Sie: Wir haben eine Katze.'
+    en: 'Say: We have a cat.'
   stem: У ___ є кіт.
   cue: ми
   answer:
@@ -28,7 +40,9 @@ items:
 - id: who-3
   facet: who
   format: choice
-  prompt: 'Sagen Sie: Ich habe zwei Söhne.'
+  prompt:
+    de: 'Sagen Sie: Ich habe zwei Söhne.'
+    en: 'Say: I have two sons.'
   answer:
   - У мене два сини.
   options:
@@ -39,7 +53,9 @@ items:
 - id: name-1
   facet: name
   format: type
-  prompt: 'Sagen Sie: Meine Schwester heißt Olja.'
+  prompt:
+    de: 'Sagen Sie: Meine Schwester heißt Olja.'
+    en: 'Say: My sister''s name is Olia.'
   stem: Мою ___ звати Оля.
   cue: сестра
   answer:
@@ -47,7 +63,9 @@ items:
 - id: name-2
   facet: name
   format: type
-  prompt: 'Sagen Sie: Mein Bruder heißt Taras.'
+  prompt:
+    de: 'Sagen Sie: Mein Bruder heißt Taras.'
+    en: 'Say: My brother''s name is Taras.'
   stem: Мого ___ звати Тарас.
   cue: брат
   answer:
@@ -55,7 +73,9 @@ items:
 - id: name-3
   facet: name
   format: type
-  prompt: 'Antworten Sie: Er ist zwei Jahre alt.'
+  prompt:
+    de: 'Antworten Sie: Er ist zwei Jahre alt.'
+    en: 'Answer: He is two years old.'
   context: Скільки років синові?
   stem: ___ два роки.
   cue: він
@@ -64,7 +84,9 @@ items:
 - id: ask-1
   facet: ask
   format: type
-  prompt: 'Fragen Sie: Hast du Kinder?'
+  prompt:
+    de: 'Fragen Sie: Hast du Kinder?'
+    en: 'Ask: Do you have children?'
   stem: У ___ є діти?
   cue: ти
   answer:
@@ -72,7 +94,9 @@ items:
 - id: ask-2
   facet: ask
   format: choice
-  prompt: Fragen Sie (Sie-Form) nach Geschwistern.
+  prompt:
+    de: Fragen Sie (Sie-Form) nach Geschwistern.
+    en: Ask (formal) about brothers and sisters.
   answer:
   - У вас є брати чи сестри?
   options:
@@ -83,7 +107,9 @@ items:
 - id: ask-3
   facet: ask
   format: type
-  prompt: 'Fragen Sie: Wie heißt deine Mutter?'
+  prompt:
+    de: 'Fragen Sie: Wie heißt deine Mutter?'
+    en: 'Ask: What''s your mother''s name?'
   stem: Як звати ___ маму?
   cue: твій
   answer:

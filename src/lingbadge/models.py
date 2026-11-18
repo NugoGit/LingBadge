@@ -190,9 +190,11 @@ class PlacementItem(Strict):
     audio: str | None = None           # L: the script read aloud (TTS)
     context: str | None = None         # SI/SP/WI: what the other person says or writes
     stem: str | None = None            # target-language line with one ___
-    cue: str | None = None
-    answer: list[str]
-    options: list[str] | None = None
+    cue: Text | None = None            # target-language base form, or a meaning in the instruction language
+    # Target-language options are a plain list. Options in the instruction language (comprehension
+    # questions) are given per language: {de: [...], en: [...]}, with answer in the same shape.
+    answer: list[str] | dict[str, list[str]]
+    options: list[str] | dict[str, list[str]] | None = None
     status: Literal["draft", "reviewed"] = "draft"
 
 

@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: temp
-  label: Temperaturen
+  label:
+    de: Temperaturen
+    en: Temperatures
 - id: sky
-  label: Himmel und Niederschlag
+  label:
+    de: Himmel und Niederschlag
+    en: Sky and precipitation
 - id: wind
-  label: Wind und Tageszeit
+  label:
+    de: Wind und Tageszeit
+    en: Wind and time of day
 items:
 - id: temp-1
   facet: temp
   format: type
-  prompt: Wie warm ist es in der Nacht? (Zahl, Grad)
+  prompt:
+    de: Wie warm ist es in der Nacht? (Zahl, Grad)
+    en: How warm is it at night? (number, degrees)
   text: 'Київ: вдень +18°, хмарно, невеликий дощ. Вночі +9°. Вітер слабкий.'
   answer:
   - '9'
@@ -22,7 +30,9 @@ items:
 - id: temp-2
   facet: temp
   format: choice
-  prompt: Wie kalt ist es am Tag?
+  prompt:
+    de: Wie kalt ist es am Tag?
+    en: How cold is it during the day?
   text: 'Харків: сніг, вдень −3°, вночі −10°. Сильний вітер.'
   answer:
   - −3°
@@ -34,81 +44,155 @@ items:
 - id: temp-3
   facet: temp
   format: choice
-  prompt: Wann ist es wärmer?
+  prompt:
+    de: Wann ist es wärmer?
+    en: When is it warmer?
   text: 'Львів, субота: сонячно, +25°. Неділя: гроза, +19°.'
   answer:
-  - Samstag
+    de:
+    - Samstag
+    en:
+    - Saturday
   options:
-  - Samstag
-  - Sonntag
-  - Gleich warm
+    de:
+    - Samstag
+    - Sonntag
+    - Gleich warm
+    en:
+    - Saturday
+    - Sunday
+    - Equally warm
 - id: sky-1
   facet: sky
   format: choice
-  prompt: Wie ist das Wetter tagsüber in Kyjiw?
+  prompt:
+    de: Wie ist das Wetter tagsüber in Kyjiw?
+    en: What is the weather like in Kyiv during the day?
   text: 'Київ: вдень +18°, хмарно, невеликий дощ. Вночі +9°. Вітер слабкий.'
   answer:
-  - Bewölkt, etwas Regen
+    de:
+    - Bewölkt, etwas Regen
+    en:
+    - Cloudy, a little rain
   options:
-  - Bewölkt, etwas Regen
-  - Sonnig
-  - Schnee
-  - Gewitter
+    de:
+    - Bewölkt, etwas Regen
+    - Sonnig
+    - Schnee
+    - Gewitter
+    en:
+    - Cloudy, a little rain
+    - Sunny
+    - snow
+    - thunderstorm
 - id: sky-2
   facet: sky
   format: choice
-  prompt: Was erwartet man am Sonntag?
+  prompt:
+    de: Was erwartet man am Sonntag?
+    en: What is expected on Sunday?
   text: 'Львів, субота: сонячно, +25°. Неділя: гроза, +19°.'
   answer:
-  - Gewitter
+    de:
+    - Gewitter
+    en:
+    - thunderstorm
   options:
-  - Gewitter
-  - Sonne
-  - Schnee
-  - Nebel
+    de:
+    - Gewitter
+    - Sonne
+    - Schnee
+    - Nebel
+    en:
+    - thunderstorm
+    - sun
+    - snow
+    - fog
 - id: sky-3
   facet: sky
   format: choice
-  prompt: Was fällt in Charkiw?
+  prompt:
+    de: Was fällt in Charkiw?
+    en: What is falling in Kharkiv?
   text: 'Харків: сніг, вдень −3°, вночі −10°. Сильний вітер.'
   answer:
-  - Schnee
+    de:
+    - Schnee
+    en:
+    - snow
   options:
-  - Schnee
-  - Regen
-  - Hagel
-  - Nichts
+    de:
+    - Schnee
+    - Regen
+    - Hagel
+    - Nichts
+    en:
+    - snow
+    - rain
+    - Hail
+    - Nothing
 - id: wind-1
   facet: wind
   format: choice
-  prompt: Wie ist der Wind in Kyjiw?
+  prompt:
+    de: Wie ist der Wind in Kyjiw?
+    en: What is the wind like in Kyiv?
   text: 'Київ: вдень +18°, хмарно, невеликий дощ. Вночі +9°. Вітер слабкий.'
   answer:
-  - schwach
+    de:
+    - schwach
+    en:
+    - weak
   options:
-  - schwach
-  - stark
-  - kein Wind
+    de:
+    - schwach
+    - stark
+    - kein Wind
+    en:
+    - weak
+    - strong
+    - no wind
 - id: wind-2
   facet: wind
   format: choice
-  prompt: Wie ist der Wind in Charkiw?
+  prompt:
+    de: Wie ist der Wind in Charkiw?
+    en: What is the wind like in Kharkiv?
   text: 'Харків: сніг, вдень −3°, вночі −10°. Сильний вітер.'
   answer:
-  - stark
+    de:
+    - stark
+    en:
+    - strong
   options:
-  - stark
-  - schwach
-  - kein Wind
+    de:
+    - stark
+    - schwach
+    - kein Wind
+    en:
+    - strong
+    - weak
+    - no wind
 - id: wind-3
   facet: wind
   format: choice
-  prompt: Wann ist es neblig?
+  prompt:
+    de: Wann ist es neblig?
+    en: When is it foggy?
   text: 'Одеса: вітер помірний, вранці туман, вдень ясно.'
   answer:
-  - Am Morgen
+    de:
+    - Am Morgen
+    en:
+    - In the morning
   options:
-  - Am Morgen
-  - Am Nachmittag
-  - Am Abend
-  - Den ganzen Tag
+    de:
+    - Am Morgen
+    - Am Nachmittag
+    - Am Abend
+    - Den ganzen Tag
+    en:
+    - In the morning
+    - In the afternoon
+    - In the evening
+    - All day

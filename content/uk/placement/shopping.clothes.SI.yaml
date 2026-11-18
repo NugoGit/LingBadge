@@ -3,23 +3,33 @@ lang: uk
 reviewed_by: []
 facets:
 - id: try
-  label: Anprobieren
+  label:
+    de: Anprobieren
+    en: Trying on
 - id: size
-  label: Größe und Farbe
+  label:
+    de: Größe und Farbe
+    en: Size and colour
 - id: decide
-  label: Zu groß, zu klein, kaufen
+  label:
+    de: Zu groß, zu klein, kaufen
+    en: Too big, too small, buying
 items:
 - id: try-1
   facet: try
   format: type
-  prompt: Fragen Sie, ob Sie anprobieren dürfen.
+  prompt:
+    de: Fragen Sie, ob Sie anprobieren dürfen.
+    en: Ask whether you may try it on.
   stem: Можна ___?
   answer:
   - приміряти
 - id: try-2
   facet: try
   format: choice
-  prompt: Fragen Sie nach der Umkleidekabine.
+  prompt:
+    de: Fragen Sie nach der Umkleidekabine.
+    en: Ask for the fitting room.
   answer:
   - Де примірочна?
   options:
@@ -30,7 +40,9 @@ items:
 - id: try-3
   facet: try
   format: choice
-  prompt: Es passt gut. Was sagen Sie?
+  prompt:
+    de: Es passt gut. Was sagen Sie?
+    en: It fits well. What do you say?
   context: Як вам?
   answer:
   - Добре сидить.
@@ -42,7 +54,9 @@ items:
 - id: size-1
   facet: size
   format: type
-  prompt: Fragen Sie nach dem Pullover in Blau.
+  prompt:
+    de: Fragen Sie nach dem Pullover in Blau.
+    en: Ask for the jumper in blue.
   stem: У вас є цей светр у ___ кольорі?
   cue: синій
   answer:
@@ -50,15 +64,21 @@ items:
 - id: size-2
   facet: size
   format: type
-  prompt: 'Sagen Sie: Ich brauche Größe M.'
+  prompt:
+    de: 'Sagen Sie: Ich brauche Größe M.'
+    en: 'Say: I need size M.'
   stem: Мені потрібен ___ M.
-  cue: Größe
+  cue:
+    de: Größe
+    en: size
   answer:
   - розмір
 - id: size-3
   facet: size
   format: type
-  prompt: Fragen Sie nach dem Kleid in Rot.
+  prompt:
+    de: Fragen Sie nach dem Kleid in Rot.
+    en: Ask for the dress in red.
   stem: У вас є ця сукня в ___ кольорі?
   cue: червоний
   answer:
@@ -66,7 +86,9 @@ items:
 - id: decide-1
   facet: decide
   format: choice
-  prompt: Die Hose ist zu klein. Was sagen Sie?
+  prompt:
+    de: Die Hose ist zu klein. Was sagen Sie?
+    en: The trousers are too small. What do you say?
   answer:
   - Вони замалі. Є більші?
   options:
@@ -77,7 +99,9 @@ items:
 - id: decide-2
   facet: decide
   format: type
-  prompt: 'Sagen Sie: Ich nehme das.'
+  prompt:
+    de: 'Sagen Sie: Ich nehme das.'
+    en: 'Say: I''ll take it.'
   stem: Я ___ це.
   cue: взяти
   answer:
@@ -85,9 +109,13 @@ items:
 - id: decide-3
   facet: decide
   format: type
-  prompt: 'Sagen Sie: Der Pullover ist zu groß. Gibt es einen kleineren?'
+  prompt:
+    de: 'Sagen Sie: Der Pullover ist zu groß. Gibt es einen kleineren?'
+    en: 'Say: The jumper is too big. Is there a smaller one?'
   stem: Светр ___. Є менший?
-  cue: zu groß
+  cue:
+    de: zu groß
+    en: too big
   answer:
   - завеликий
   - занадто великий

@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: section
-  label: Speisekarten-Rubriken
+  label:
+    de: Speisekarten-Rubriken
+    en: Menu sections
 - id: dish
-  label: Gerichte erkennen
+  label:
+    de: Gerichte erkennen
+    en: Recognise dishes
 - id: price
-  label: Preise
+  label:
+    de: Preise
+    en: Prices
 items:
 - id: section-1
   facet: section
   format: choice
-  prompt: In welcher Rubrik stehen die Getränke?
+  prompt:
+    de: In welcher Rubrik stehen die Getränke?
+    en: Under which heading are the drinks?
   text: |-
     МЕНЮ
     Перші страви
@@ -30,31 +38,55 @@ items:
 - id: section-2
   facet: section
   format: choice
-  prompt: Was steht unter „Перші страви“?
+  prompt:
+    de: Was steht unter „Перші страви“?
+    en: What is under “Перші страви”?
   text: 'Перші страви: борщ, юшка з грибів, курячий суп'
   answer:
-  - Suppen (erster Gang)
+    de:
+    - Suppen (erster Gang)
+    en:
+    - Soups (first course)
   options:
-  - Suppen (erster Gang)
-  - Hauptgerichte
-  - Getränke
-  - Nachspeisen
+    de:
+    - Suppen (erster Gang)
+    - Hauptgerichte
+    - Getränke
+    - Nachspeisen
+    en:
+    - Soups (first course)
+    - Main courses
+    - Drinks
+    - Desserts
 - id: section-3
   facet: section
   format: choice
-  prompt: Was finden Sie unter „Десерти“?
+  prompt:
+    de: Was finden Sie unter „Десерти“?
+    en: What do you find under “Десерти”?
   text: 'Десерти: сирники, морозиво, торт «Київський»'
   answer:
-  - Nachspeisen
+    de:
+    - Nachspeisen
+    en:
+    - Desserts
   options:
-  - Nachspeisen
-  - Getränke
-  - Salate
-  - Suppen
+    de:
+    - Nachspeisen
+    - Getränke
+    - Salate
+    - Suppen
+    en:
+    - Desserts
+    - Drinks
+    - Salads
+    - Soups
 - id: dish-1
   facet: dish
   format: choice
-  prompt: Sie möchten etwas mit Kartoffeln. Was bestellen Sie?
+  prompt:
+    de: Sie möchten etwas mit Kartoffeln. Was bestellen Sie?
+    en: You'd like something with potatoes. What do you order?
   text: |-
     Вареники з картоплею — 140 грн
     Юшка з грибів — 110 грн
@@ -70,7 +102,9 @@ items:
 - id: dish-2
   facet: dish
   format: choice
-  prompt: Welcher Salat ist mit Huhn?
+  prompt:
+    de: Welcher Salat ist mit Huhn?
+    en: Which salad has chicken?
   text: |-
     Салати
     Салат з куркою — 120 грн
@@ -85,7 +119,9 @@ items:
 - id: dish-3
   facet: dish
   format: choice
-  prompt: Welches Getränk ist ein Saft?
+  prompt:
+    de: Welches Getränk ist ein Saft?
+    en: Which drink is a juice?
   text: 'Напої: чай зелений, кава з молоком, сік апельсиновий, вода без газу'
   answer:
   - сік апельсиновий
@@ -97,7 +133,9 @@ items:
 - id: price-1
   facet: price
   format: type
-  prompt: Wie viel kostet der Borschtsch? (Zahl)
+  prompt:
+    de: Wie viel kostet der Borschtsch? (Zahl)
+    en: How much is the borscht? (number)
   text: |-
     Борщ український — 120 грн
     Вареники з вишнею — 130 грн
@@ -107,7 +145,9 @@ items:
 - id: price-2
   facet: price
   format: type
-  prompt: Wie viel kostet ein Kaffee? (Zahl)
+  prompt:
+    de: Wie viel kostet ein Kaffee? (Zahl)
+    en: How much is a coffee? (number)
   text: |-
     Напої
     Чай — 40 грн
@@ -118,7 +158,9 @@ items:
 - id: price-3
   facet: price
   format: type
-  prompt: Wie viel kostet das Mittagsmenü? (Zahl)
+  prompt:
+    de: Wie viel kostet das Mittagsmenü? (Zahl)
+    en: How much is the set lunch? (number)
   text: Комплексний обід (суп + друга страва + напій) — 180 грн
   answer:
   - '180'
