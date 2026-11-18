@@ -1,0 +1,26 @@
+skill: personal.form.WI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Nombre, apellidos
+- 'Fecha de nacimiento: 20/03/1990'
+- 'Nacionalidad: austriaca'
+- Dirección, teléfono, correo electrónico
+enablers:
+  required:
+  - id: es.lex.personal
+    use: productive
+  - id: es.num.dates
+    use: productive
+  - id: es.num.cardinal-0-100
+    use: productive
+  supporting:
+  - id: es.orth.accents-punctuation
+    use: productive
+rubric_specifics:
+  key_structures: Date format DD/MM/AAAA; two surnames fields (primer / segundo apellido) may be filled with one.
+version: 1
+status: draft

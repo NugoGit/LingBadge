@@ -1,0 +1,165 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.gram.verb.present-regular
+lang: es
+facets:
+- id: ar
+  band: core
+  format: type
+  rule: {de: '-ar: hablo, hablas, habla, hablamos, habláis, hablan', en: '-ar: hablo, hablas, habla, hablamos, habláis, hablan'}
+  instruction: {de: Setze das Verb im Präsens ein., en: Put the verb in the present tense.}
+- id: er-ir
+  band: variant
+  format: type
+  rule: {de: '-er: como, comes, come, comemos, coméis, comen; -ir: vivo, vives, vive, vivimos, vivís, viven', en: '-er: como, comes, come, comemos, coméis, comen; -ir: vivo, vives, vive, vivimos, vivís, viven'}
+  instruction: {de: Setze das Verb im Präsens ein., en: Put the verb in the present tense.}
+- id: vosotros
+  band: exception
+  format: type
+  rule: {de: 'vosotros (Spanien) mit Akzent: habláis, coméis, vivís', en: 'vosotros (Spain) with an accent: habláis, coméis, vivís'}
+  instruction: {de: Setze das Verb im Präsens ein (vosotros)., en: Put the verb in the present tense (vosotros).}
+- id: usted
+  band: contrast
+  format: type
+  rule: {de: 'usted / ustedes stehen mit der 3. Person: usted habla, ustedes viven', en: 'usted / ustedes take the 3rd person: usted habla, ustedes viven'}
+  instruction: {de: Setze das Verb im Präsens ein., en: Put the verb in the present tense.}
+items:
+- id: r01
+  facet: ar
+  stem: Yo ___ español.
+  cue: hablar
+  answer: [hablo]
+- id: r02
+  facet: ar
+  stem: ¿Dónde ___ tú?
+  cue: trabajar
+  answer: [trabajas]
+- id: r03
+  facet: ar
+  stem: Ana ___ en un banco.
+  cue: trabajar
+  answer: [trabaja]
+- id: r04
+  facet: ar
+  stem: Nosotros ___ a las dos.
+  cue: cenar
+  answer: [cenamos]
+- id: r05
+  facet: ar
+  stem: Mis padres ___ mucho.
+  cue: viajar
+  answer: [viajan]
+- id: r06
+  facet: ar
+  stem: ¿Qué ___ (tú) los domingos?
+  cue: estudiar
+  answer: [estudias]
+- id: r07
+  facet: ar
+  stem: Yo ___ café por la mañana.
+  cue: tomar
+  answer: [tomo]
+- id: r08
+  facet: ar
+  stem: Mi hermano ___ la guitarra.
+  cue: tocar
+  answer: [toca]
+- id: r09
+  facet: ar
+  stem: Nosotros ___ por el parque.
+  cue: pasear
+  answer: [paseamos]
+- id: r10
+  facet: ar
+  stem: Ellos ___ en un restaurante.
+  cue: desayunar
+  answer: [desayunan]
+- id: r11
+  facet: er-ir
+  stem: Yo ___ en Viena.
+  cue: vivir
+  answer: [vivo]
+- id: r12
+  facet: er-ir
+  stem: ¿Tú ___ carne?
+  cue: comer
+  answer: [comes]
+- id: r13
+  facet: er-ir
+  stem: Mi madre ___ el periódico.
+  cue: leer
+  answer: [lee]
+- id: r14
+  facet: er-ir
+  stem: Nosotros ___ en el centro.
+  cue: vivir
+  answer: [vivimos]
+- id: r15
+  facet: er-ir
+  stem: Nosotros ___ a las tres.
+  cue: comer
+  answer: [comemos]
+- id: r16
+  facet: er-ir
+  stem: Ellos ___ muchos correos.
+  cue: escribir
+  answer: [escriben]
+- id: r17
+  facet: er-ir
+  stem: ¿Qué ___ tú?
+  cue: beber
+  answer: [bebes]
+- id: r18
+  facet: er-ir
+  stem: El tren ___ a las nueve.
+  cue: abrir
+  answer: [abre]
+- id: r19
+  facet: vosotros
+  stem: ¿Vosotros ___ inglés?
+  cue: hablar
+  answer: [habláis]
+- id: r20
+  facet: vosotros
+  stem: ¿Dónde ___ vosotros?
+  cue: vivir
+  answer: [vivís]
+- id: r21
+  facet: vosotros
+  stem: ¿Qué ___ vosotros hoy?
+  cue: comer
+  answer: [coméis]
+- id: r22
+  facet: vosotros
+  stem: ¿Vosotros ___ aquí?
+  cue: trabajar
+  answer: [trabajáis]
+- id: r23
+  facet: vosotros
+  stem: ¿___ (vosotros) español?
+  cue: aprender
+  answer: [Aprendéis]
+- id: r24
+  facet: usted
+  stem: ¿Usted ___ aquí?
+  cue: trabajar
+  answer: [trabaja]
+- id: r25
+  facet: usted
+  stem: ¿Dónde ___ usted?
+  cue: vivir
+  answer: [vive]
+- id: r26
+  facet: usted
+  stem: ¿Ustedes ___ algo?
+  cue: tomar
+  answer: [toman]
+- id: r27
+  facet: usted
+  stem: Señora, ¿usted ___ español?
+  cue: hablar
+  answer: [habla]
+- id: r28
+  facet: usted
+  stem: ¿Ustedes ___ en Madrid?
+  cue: vivir
+  answer: [viven]

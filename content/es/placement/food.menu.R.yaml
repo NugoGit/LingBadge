@@ -1,0 +1,172 @@
+skill: food.menu.R
+lang: es
+reviewed_by: []
+facets:
+- id: section
+  label:
+    de: Speisekarten-Rubriken
+    en: Menu sections
+- id: dish
+  label:
+    de: Gerichte erkennen
+    en: Recognise dishes
+- id: price
+  label:
+    de: Preise
+    en: Prices
+items:
+- id: section-1
+  facet: section
+  format: choice
+  prompt:
+    de: In welcher Rubrik stehen die Getränke?
+    en: Under which heading are the drinks?
+  text: |-
+    CARTA
+    Primeros platos
+    Segundos platos
+    Ensaladas
+    Postres
+    Bebidas
+  answer:
+  - Bebidas
+  options:
+  - Bebidas
+  - Primeros platos
+  - Segundos platos
+  - Postres
+- id: section-2
+  facet: section
+  format: choice
+  prompt:
+    de: Was steht unter „Primeros platos“?
+    en: What is under “Primeros platos”?
+  text: 'Primeros platos: gazpacho, sopa de pescado, crema de verduras'
+  answer:
+    de:
+    - Suppen (erster Gang)
+    en:
+    - Soups (first course)
+  options:
+    de:
+    - Suppen (erster Gang)
+    - Hauptgerichte
+    - Getränke
+    - Nachspeisen
+    en:
+    - Soups (first course)
+    - Main courses
+    - Drinks
+    - Desserts
+- id: section-3
+  facet: section
+  format: choice
+  prompt:
+    de: Was finden Sie unter „Postres“?
+    en: What do you find under “Postres”?
+  text: 'Postres: flan, helado, tarta de chocolate'
+  answer:
+    de:
+    - Nachspeisen
+    en:
+    - Desserts
+  options:
+    de:
+    - Nachspeisen
+    - Getränke
+    - Salate
+    - Suppen
+    en:
+    - Desserts
+    - Drinks
+    - Salads
+    - Soups
+- id: dish-1
+  facet: dish
+  format: choice
+  prompt:
+    de: Sie möchten etwas mit Kartoffeln. Was bestellen Sie?
+    en: You'd like something with potatoes. What do you order?
+  text: |-
+    Tortilla de patatas — 7,50 €
+    Sopa de pescado — 9,00 €
+    Zumo de naranja — 3,50 €
+    Filete de ternera — 14,00 €
+  answer:
+  - Tortilla de patatas
+  options:
+  - Tortilla de patatas
+  - Sopa de pescado
+  - Zumo de naranja
+  - Filete de ternera
+- id: dish-2
+  facet: dish
+  format: choice
+  prompt:
+    de: Welcher Salat ist mit Huhn?
+    en: Which salad has chicken?
+  text: |-
+    Ensaladas
+    Ensalada de pollo — 9,50 €
+    Ensalada de tomate — 6,00 €
+    Ensalada de queso de cabra — 8,50 €
+  answer:
+  - Ensalada de pollo
+  options:
+  - Ensalada de pollo
+  - Ensalada de tomate
+  - Ensalada de queso de cabra
+- id: dish-3
+  facet: dish
+  format: choice
+  prompt:
+    de: Welches Getränk ist ein Saft?
+    en: Which drink is a juice?
+  text: 'Bebidas: té verde, café con leche, zumo de naranja, agua sin gas'
+  answer:
+  - zumo de naranja
+  options:
+  - zumo de naranja
+  - agua sin gas
+  - café con leche
+  - té verde
+- id: price-1
+  facet: price
+  format: type
+  prompt:
+    de: Wie viel kostet der Gazpacho? (Zahl)
+    en: How much is the gazpacho? (number)
+  text: |-
+    Gazpacho — 6,50 €
+    Paella — 14,00 €
+    Té — 2,00 €
+  answer:
+  - 6,50
+  - '6.50'
+  - 6,5
+  - '6.5'
+- id: price-2
+  facet: price
+  format: type
+  prompt:
+    de: Wie viel kostet ein Kaffee? (Zahl)
+    en: How much is a coffee? (number)
+  text: |-
+    Bebidas
+    Té — 2,00 €
+    Café — 1,80 €
+    Agua — 1,50 €
+  answer:
+  - 1,80
+  - '1.80'
+  - 1,8
+  - '1.8'
+- id: price-3
+  facet: price
+  format: type
+  prompt:
+    de: Wie viel kostet das Mittagsmenü? (Zahl)
+    en: How much is the set lunch? (number)
+  text: Menú del día (primero + segundo + bebida + postre) — 13 €
+  answer:
+  - '13'

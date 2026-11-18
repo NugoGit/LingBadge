@@ -1,0 +1,113 @@
+# Plan curricular del Instituto Cervantes (PCIC), Niveles de referencia A1, summarised.
+sources:
+- id: pcic.A1.gram.gender
+  origin: pcic
+  text: 'Género de los sustantivos: -o/-a, excepciones frecuentes (el día, la mano, el problema)'
+- id: pcic.A1.gram.plural
+  origin: pcic
+  text: 'Número: plural en -s, -es; -z > -ces'
+- id: pcic.A1.gram.articles
+  origin: pcic
+  text: Artículo determinado e indeterminado; contracciones al, del
+- id: pcic.A1.gram.adjectives
+  origin: pcic
+  text: Concordancia del adjetivo en género y número; posición posnominal
+- id: pcic.A1.gram.pron-subject
+  origin: pcic
+  text: Pronombres personales sujeto; tú / usted
+- id: pcic.A1.gram.possessives
+  origin: pcic
+  text: 'Posesivos átonos: mi, tu, su, nuestro, vuestro'
+- id: pcic.A1.gram.demonstratives
+  origin: pcic
+  text: Demostrativos este, ese; neutro esto, eso
+- id: pcic.A1.gram.pron-object
+  origin: pcic
+  text: Pronombres átonos en expresiones fijas (me llamo, me gusta, lo quiero)
+- id: pcic.A1.gram.present
+  origin: pcic
+  text: Presente de indicativo regular (-ar, -er, -ir)
+- id: pcic.A1.gram.present-irregular
+  origin: pcic
+  text: 'Presente irregular: ser, estar, tener, ir, hacer, querer, poder, venir; e>ie, o>ue; 1.ª persona irregular'
+- id: pcic.A1.gram.reflexive
+  origin: pcic
+  text: Verbos pronominales frecuentes (llamarse, levantarse, ducharse)
+- id: pcic.A1.gram.ser-estar
+  origin: pcic
+  text: 'Ser y estar: identidad, origen, profesión / localización, estado'
+- id: pcic.A1.gram.hay-estar
+  origin: pcic
+  text: 'Hay / está(n): existencia y localización'
+- id: pcic.A1.gram.gustar
+  origin: pcic
+  text: Gustar, encantar con pronombre de objeto indirecto
+- id: pcic.A1.gram.ir-a
+  origin: pcic
+  text: Perífrasis ir a + infinitivo
+- id: pcic.A1.gram.modal
+  origin: pcic
+  text: Querer, poder, tener que + infinitivo
+- id: pcic.A1.gram.imperative
+  origin: pcic
+  text: Imperativo en fórmulas fijas (perdone, oiga, repita)
+- id: pcic.A1.gram.questions
+  origin: pcic
+  text: Oraciones interrogativas; interrogativos qué, quién, dónde, cuándo, cómo, cuánto, cuál
+- id: pcic.A1.gram.negation
+  origin: pcic
+  text: Negación con no; nada, nunca, tampoco
+- id: pcic.A1.gram.conjunctions
+  origin: pcic
+  text: Conjunciones y (e), o (u), pero, porque
+- id: pcic.A1.gram.prepositions
+  origin: pcic
+  text: Preposiciones a, en, de, con, para, desde, hasta
+- id: pcic.A1.gram.time-adverbs
+  origin: pcic
+  text: Adverbios y locuciones de tiempo y frecuencia
+- id: pcic.A1.num.cardinal
+  origin: pcic
+  text: Numerales cardinales
+- id: pcic.A1.num.ordinal
+  origin: pcic
+  text: Numerales ordinales primero a décimo; apócope primer, tercer
+- id: pcic.A1.num.time
+  origin: pcic
+  text: 'La hora: es la una, son las dos y media, a las tres menos cuarto'
+- id: pcic.A1.num.dates
+  origin: pcic
+  text: 'Fechas: el cinco de mayo'
+- id: pcic.A1.phon.vowels
+  origin: pcic
+  text: Vocales; diptongos frecuentes
+- id: pcic.A1.phon.consonants
+  origin: pcic
+  text: 'Consonantes: r/rr, j/g, ll/y, c/z/s, b/v, h muda, ñ'
+- id: pcic.A1.phon.stress
+  origin: pcic
+  text: Acento de palabra; palabras agudas, llanas, esdrújulas
+- id: pcic.A1.phon.intonation
+  origin: pcic
+  text: Entonación enunciativa, interrogativa y exclamativa
+- id: pcic.A1.orth.alphabet
+  origin: pcic
+  text: Abecedario; nombres de las letras; deletreo
+- id: pcic.A1.orth.accents
+  origin: pcic
+  text: Tilde en interrogativos y palabras frecuentes; signos ¿ ? ¡ !
+- id: pcic.A1.prag.address
+  origin: pcic
+  text: 'Tratamiento: tú / usted; señor, señora + apellido'
+- id: pcic.A1.prag.greetings
+  origin: pcic
+  text: Saludos y despedidas formales e informales
+- id: pcic.A1.prag.courtesy
+  origin: pcic
+  text: 'Fórmulas de cortesía: por favor, gracias, perdón, de nada'
+- id: pcic.A1.prag.wishes
+  origin: pcic
+  text: 'Felicitaciones y buenos deseos: ¡Feliz cumpleaños!, ¡Salud!'
+- id: pcic.A1.lex.nociones
+  origin: pcic
+  text: Nociones específicas A1 (inventario léxico por temas)

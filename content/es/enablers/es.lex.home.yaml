@@ -1,0 +1,28 @@
+id: es.lex.home
+lang: es
+kind: lexis
+title: Home, rooms, furniture
+cefr: A1
+words:
+- la casa
+- el piso
+- la habitación
+- el dormitorio
+- la cocina
+- el baño
+- el salón
+- la terraza
+- el jardín
+- la mesa
+- la silla
+- la cama
+- el sofá
+- la ventana
+- la puerta
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

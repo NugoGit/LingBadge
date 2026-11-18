@@ -1,0 +1,12 @@
+id: es.prag.wishes
+lang: es
+kind: pragmatics
+title: Fixed wishes and toasts (¡Feliz cumpleaños! ¡Salud! ¡Que aproveche!)
+cefr: A1
+sources:
+- pcic.A1.prag.wishes
+check:
+  template: enabler.pragmatics.v1
+  items: 10
+  threshold: 0.9
+  channel: text

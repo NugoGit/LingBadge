@@ -1,0 +1,36 @@
+skill: travel.taxi.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- A la calle Mayor, número diez, por favor.
+- ¿Cuánto cuesta?
+- Pare aquí, por favor.
+- ¿Puedo pagar con tarjeta?
+enablers:
+  required:
+  - id: es.gram.prep.basic
+    use: productive
+  - id: es.lex.city-places
+    use: productive
+  - id: es.num.cardinal-0-100
+    use: productive
+  - id: es.gram.verb.imperative-set
+    use: formulaic
+  - id: es.gram.verb.modal
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: a + el = al (al aeropuerto).
+version: 1
+status: draft

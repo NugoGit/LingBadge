@@ -1,0 +1,14 @@
+id: es.gram.prep.basic
+lang: es
+kind: grammar
+title: Prepositions a, en, de, con, para; al / del (voy al cine, soy de Viena)
+cefr: A1
+requires:
+- es.gram.art.def-indef
+sources:
+- pcic.A1.gram.prepositions
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,129 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.gram.verb.gustar
+lang: es
+facets:
+- id: gusta-gustan
+  band: core
+  format: choice
+  options: [gusta, gustan]
+  rule: {de: 'gustar richtet sich nach dem, was gefällt: me gusta el cine, me gustan los libros', en: 'gustar agrees with the thing liked: me gusta el cine, me gustan los libros'}
+  instruction: {de: 'gusta oder gustan?', en: 'gusta or gustan?'}
+- id: pronoun
+  band: variant
+  format: choice
+  options: [me, te, le, nos]
+  rule: {de: 'Die Person steht im Dativ: (a mí) me, (a ti) te, (a él / ella / usted) le, (a nosotros) nos', en: 'The person is the indirect object: (a mí) me, (a ti) te, (a él / ella / usted) le, (a nosotros) nos'}
+  instruction: {de: 'Welches Pronomen passt?', en: 'Which pronoun fits?'}
+- id: infinitive
+  band: exception
+  format: choice
+  options: [gusta, gustan, encanta, encantan]
+  rule: {de: 'Mit Infinitiv immer Singular, auch bei mehreren: me gusta leer y nadar; encantar funktioniert gleich', en: 'With an infinitive always singular, even several: me gusta leer y nadar; encantar works the same way'}
+  instruction: {de: 'Welche Form passt?', en: 'Which form fits?'}
+- id: tambien
+  band: contrast
+  format: choice
+  options: [también, tampoco]
+  rule: {de: 'Zustimmung zu positiv: a mí también; zu negativ: a mí tampoco', en: 'Agreeing with a positive: a mí también; with a negative: a mí tampoco'}
+  instruction: {de: 'también oder tampoco?', en: 'también or tampoco?'}
+items:
+- id: u01
+  facet: gusta-gustan
+  stem: Me ___ el café.
+  answer: [gusta]
+- id: u02
+  facet: gusta-gustan
+  stem: Me ___ los perros.
+  answer: [gustan]
+- id: u03
+  facet: gusta-gustan
+  stem: ¿Te ___ la música clásica?
+  answer: [gusta]
+- id: u04
+  facet: gusta-gustan
+  stem: No me ___ las películas de terror.
+  answer: [gustan]
+- id: u05
+  facet: gusta-gustan
+  stem: A Ana le ___ el fútbol.
+  answer: [gusta]
+- id: u06
+  facet: gusta-gustan
+  stem: Nos ___ mucho los museos.
+  answer: [gustan]
+- id: u07
+  facet: gusta-gustan
+  stem: ¿Te ___ estos zapatos?
+  answer: [gustan]
+- id: u08
+  facet: gusta-gustan
+  stem: Me ___ esta ciudad.
+  answer: [gusta]
+- id: u09
+  facet: gusta-gustan
+  stem: A mis padres les ___ la playa.
+  answer: [gusta]
+- id: u10
+  facet: pronoun
+  stem: A mí ___ gusta el chocolate.
+  answer: [me]
+- id: u11
+  facet: pronoun
+  stem: ¿A ti ___ gusta bailar?
+  answer: [te]
+- id: u12
+  facet: pronoun
+  stem: A Pedro ___ gustan los coches.
+  answer: [le]
+- id: u13
+  facet: pronoun
+  stem: A nosotros ___ gusta viajar.
+  answer: [nos]
+- id: u14
+  facet: pronoun
+  stem: Señora, ¿___ gusta la habitación?
+  answer: [le]
+- id: u15
+  facet: pronoun
+  stem: A mi hermana ___ encanta cocinar.
+  answer: [le]
+- id: u16
+  facet: infinitive
+  stem: Me ___ leer y nadar.
+  answer: [gusta]
+- id: u17
+  facet: infinitive
+  stem: Me ___ las tapas.
+  answer: [encantan]
+- id: u18
+  facet: infinitive
+  stem: A Luis le ___ jugar al tenis.
+  answer: [gusta]
+- id: u19
+  facet: infinitive
+  stem: Nos ___ ir al cine y cenar fuera.
+  answer: [encanta]
+- id: u20
+  facet: infinitive
+  stem: ¿Te ___ cocinar?
+  answer: [gusta]
+- id: u21
+  facet: tambien
+  stem: — Me gusta mucho Madrid. — A mí ___.
+  answer: [también]
+- id: u22
+  facet: tambien
+  stem: — No me gusta correr. — A mí ___.
+  answer: [tampoco]
+- id: u23
+  facet: tambien
+  stem: — Me encantan los gatos. — A mí ___.
+  answer: [también]
+- id: u24
+  facet: tambien
+  stem: — No me gustan las fiestas. — A mí ___.
+  answer: [tampoco]
+- id: u25
+  facet: tambien
+  stem: — No me gusta el pescado. — A nosotros ___.
+  answer: [tampoco]

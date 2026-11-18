@@ -1,0 +1,38 @@
+id: es.lex.food-drink
+lang: es
+kind: lexis
+title: Food and drink
+cefr: A1
+words:
+- el pan
+- el queso
+- la leche
+- el huevo
+- la carne
+- el pescado
+- el pollo
+- la verdura
+- la fruta
+- la manzana
+- las patatas
+- el arroz
+- la sopa
+- la ensalada
+- el café
+- el té
+- el agua
+- el zumo
+- el vino
+- la cerveza
+- el azúcar
+- la sal
+- la carta
+- la cuenta
+- rico
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

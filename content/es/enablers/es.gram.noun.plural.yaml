@@ -1,0 +1,14 @@
+id: es.gram.noun.plural
+lang: es
+kind: grammar
+title: 'Plural of nouns: -s, -es, -z → -ces'
+cefr: A1
+requires:
+- es.gram.noun.gender
+sources:
+- pcic.A1.gram.plural
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

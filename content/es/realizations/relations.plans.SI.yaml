@@ -1,0 +1,39 @@
+skill: relations.plans.SI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- ¿Estás libre el sábado?
+- ¡Vamos al cine!
+- Quedamos a las siete delante del teatro.
+- Lo siento, no puedo. — No pasa nada, otro día.
+- ¡Vale, de acuerdo!
+enablers:
+  required:
+  - id: es.gram.verb.ser-estar
+    use: productive
+  - id: es.gram.verb.modal
+    use: productive
+  - id: es.gram.prep.basic
+    use: productive
+  - id: es.num.time
+    use: productive
+  - id: es.gram.verb.ir-a
+    use: productive
+  - id: es.lex.time-calendar
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: ir a + el = al cine; quedar a las …; estar libre.
+version: 1
+status: draft

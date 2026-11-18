@@ -1,0 +1,122 @@
+skill: comm.ask-word.SI
+lang: es
+reviewed_by: []
+facets:
+- id: name
+  label:
+    de: Fragen, wie etwas heißt
+    en: Ask what something is called
+- id: meaning
+  label:
+    de: Fragen, was ein Wort bedeutet
+    en: Ask what a word means
+- id: say
+  label:
+    de: Fragen, wie man etwas sagt; auf etwas zeigen
+    en: Ask how to say something; point at something
+items:
+- id: name-1
+  facet: name
+  format: choice
+  prompt:
+    de: Sie zeigen auf einen Gegenstand und wollen wissen, wie er auf Spanisch heißt. Was fragen Sie?
+    en: You point at an object and want to know its Spanish name. What do you ask?
+  answer:
+  - ¿Cómo se llama esto en español?
+  options:
+  - ¿Cómo se llama esto en español?
+  - ¿Cómo te llamas?
+  - ¿Cuánto cuesta esto?
+  - ¿Dónde está esto?
+- id: name-2
+  facet: name
+  format: type
+  prompt:
+    de: 'Ergänzen Sie: Wie heißt das auf Spanisch?'
+    en: 'Complete: What is this called in Spanish?'
+  stem: ¿Cómo se ___ esto en español?
+  answer:
+  - llama
+  - dice
+- id: name-3
+  facet: name
+  format: type
+  prompt:
+    de: 'Ergänzen Sie: Wie sagt man „Fenster“ auf Spanisch?'
+    en: 'Complete: How do you say “Fenster” in Spanish?'
+  stem: ¿Cómo se dice «Fenster» en ___?
+  answer:
+  - español
+  - castellano
+- id: meaning-1
+  facet: meaning
+  format: choice
+  prompt:
+    de: Sie hören das Wort „desayuno“ und verstehen es nicht. Was fragen Sie?
+    en: You hear the word “desayuno” and don't understand it. What do you ask?
+  answer:
+  - ¿Qué significa «desayuno»?
+  options:
+  - ¿Qué significa «desayuno»?
+  - ¿Cómo se escribe «desayuno»?
+  - ¿Dónde está el desayuno?
+  - ¿Cuándo es el desayuno?
+- id: meaning-2
+  facet: meaning
+  format: type
+  prompt:
+    de: 'Ergänzen Sie: Was bedeutet das Wort „andén“?'
+    en: 'Complete: What does the word “andén” mean?'
+  stem: ¿Qué ___ «andén»?
+  answer:
+  - significa
+  - quiere decir
+- id: meaning-3
+  facet: meaning
+  format: choice
+  prompt:
+    de: Sie kennen das Wort nicht. Welche Reaktion passt?
+    en: You don't know the word. Which reaction fits?
+  context: Necesita el justificante.
+  answer:
+  - Perdone, ¿qué significa eso?
+  options:
+  - Perdone, ¿qué significa eso?
+  - Gracias, no hace falta.
+  - Vale, adiós.
+  - Sí, yo también.
+- id: say-1
+  facet: say
+  format: type
+  prompt:
+    de: 'Ergänzen Sie: Wie sagt man „Danke“ auf Spanisch?'
+    en: 'Complete: How do you say “Danke” in Spanish?'
+  stem: ¿Cómo se ___ «Danke» en español?
+  answer:
+  - dice
+- id: say-2
+  facet: say
+  format: choice
+  prompt:
+    de: Sie zeigen im Laden auf ein Brot und möchten es haben. Was sagen Sie?
+    en: In a shop you point at a loaf of bread and want it. What do you say?
+  answer:
+  - Esto, por favor.
+  options:
+  - Esto, por favor.
+  - ¿Cómo se escribe?
+  - Repita, por favor.
+  - No sé.
+- id: say-3
+  facet: say
+  format: type
+  prompt:
+    de: 'Sie zeigen auf etwas: „Das da, bitte.“ Ergänzen Sie.'
+    en: 'You point at something: “That one, please.” Complete.'
+  stem: ___, por favor.
+  cue:
+    de: das da (neutral)
+    en: that one (neutral)
+  answer:
+  - Eso
+  - Esto

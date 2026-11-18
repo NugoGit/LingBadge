@@ -1,0 +1,23 @@
+skill: relations.online.WI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- ¡Qué foto tan bonita!
+- ¡Enhorabuena!
+- ¡Gracias! 😊
+- ¡Qué pena!
+- Perdona por contestar tarde.
+enablers:
+  required:
+  - id: es.prag.wishes
+    use: productive
+  - id: es.prag.courtesy
+    use: productive
+  supporting:
+  - id: es.orth.accents-punctuation
+    use: productive
+version: 1
+status: draft

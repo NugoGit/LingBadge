@@ -1,0 +1,139 @@
+skill: freetime.hobbies.SI
+lang: es
+reviewed_by: []
+facets:
+- id: like
+  label:
+    de: Sagen, was man gern macht
+    en: Say what you like doing
+- id: ask
+  label:
+    de: Zurückfragen und reagieren
+    en: Ask back and react
+- id: often
+  label:
+    de: Wie oft
+    en: How often
+items:
+- id: like-1
+  facet: like
+  format: type
+  prompt:
+    de: 'Sagen Sie: Mir gefällt Fußball.'
+    en: 'Say: I like football.'
+  stem: Me ___ el fútbol.
+  cue: gustar
+  answer:
+  - gusta
+- id: like-2
+  facet: like
+  format: type
+  prompt:
+    de: 'Sagen Sie: Mir gefallen spanische Lieder.'
+    en: 'Say: I like Spanish songs.'
+  stem: Me ___ las canciones españolas.
+  cue: gustar
+  answer:
+  - gustan
+- id: like-3
+  facet: like
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich spiele Gitarre.'
+    en: 'Say: I play the guitar.'
+  stem: ___ la guitarra.
+  cue: tocar
+  answer:
+  - Toco
+- id: like-4
+  facet: like
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Ich laufe nicht gern.'
+    en: 'Say: I don''t like running.'
+  answer:
+  - No me gusta correr.
+  options:
+  - No me gusta correr.
+  - No me gustan correr.
+  - Yo no gusto correr.
+  - No gusto de correr.
+- id: ask-1
+  facet: ask
+  format: choice
+  prompt:
+    de: Fragen Sie einen Freund, was er in der Freizeit gern macht.
+    en: Ask a friend what he likes doing in his free time.
+  answer:
+  - ¿Qué te gusta hacer en tu tiempo libre?
+  options:
+  - ¿Qué te gusta hacer en tu tiempo libre?
+  - ¿Qué haces en el trabajo?
+  - ¿Cuándo tienes tiempo libre?
+  - ¿Dónde vives?
+- id: ask-2
+  facet: ask
+  format: type
+  prompt:
+    de: 'Fragen Sie zurück: und dir?'
+    en: 'Ask back: and you?'
+  context: Me gusta el fútbol.
+  stem: ¿Y a ___?
+  cue: tú
+  answer:
+  - ti
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt:
+    de: Sie schwimmen auch gern. Was sagen Sie?
+    en: You like swimming too. What do you say?
+  context: Me encanta nadar.
+  answer:
+  - ¡A mí también!
+  options:
+  - ¡A mí también!
+  - ¡A mí tampoco!
+  - ¡Yo también no!
+  - ¡De nada!
+- id: often-1
+  facet: often
+  format: choice
+  prompt:
+    de: Wie sagt man „zweimal pro Woche“?
+    en: How do you say “twice a week”?
+  answer:
+  - dos veces por semana
+  options:
+  - dos veces por semana
+  - dos semanas
+  - la segunda semana
+  - dos veces al día
+- id: often-2
+  facet: often
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¿Cada cuánto juegas al tenis?
+  answer:
+  - Todos los sábados.
+  options:
+  - Todos los sábados.
+  - En el tenis.
+  - Con un amigo.
+  - Sí, juego.
+- id: often-3
+  facet: often
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¿Vas mucho al cine?
+  answer:
+  - No, poco.
+  options:
+  - No, poco.
+  - No, al cine.
+  - Sí, cine.
+  - No, mañana.

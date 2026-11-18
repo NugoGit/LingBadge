@@ -1,0 +1,26 @@
+id: es.lex.signs
+lang: es
+kind: lexis
+title: Signs and notices
+cefr: A1
+words:
+- entrada
+- salida
+- abierto
+- cerrado
+- empujar
+- tirar
+- prohibido fumar
+- aseos
+- servicios
+- horario
+- ocupado
+- libre
+- peligro
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

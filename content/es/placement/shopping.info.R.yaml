@@ -1,0 +1,205 @@
+skill: shopping.info.R
+lang: es
+reviewed_by: []
+facets:
+- id: guide
+  label:
+    de: Wegweiser im Geschäft
+    en: Store guide
+- id: hours
+  label:
+    de: Öffnungszeiten
+    en: Opening hours
+- id: price
+  label:
+    de: Preise und Angebote
+    en: Prices and offers
+items:
+- id: guide-1
+  facet: guide
+  format: type
+  prompt:
+    de: In welchem Stock gibt es Schuhe? (Zahl)
+    en: On which floor are the shoes? (number)
+  text: |-
+    Planta baja — Alimentación
+    1.ª planta — Ropa
+    2.ª planta — Zapatos
+    3.ª planta — Cafetería
+  answer:
+  - '2'
+- id: guide-2
+  facet: guide
+  format: choice
+  prompt:
+    de: Was gibt es im 1. Stock?
+    en: What is on the 1st floor?
+  text: |-
+    Planta baja — Alimentación
+    1.ª planta — Ropa
+    2.ª planta — Zapatos
+    3.ª planta — Cafetería
+  answer:
+    de:
+    - Kleidung
+    en:
+    - Clothes
+  options:
+    de:
+    - Kleidung
+    - Lebensmittel
+    - Schuhe
+    - Café
+    en:
+    - Clothes
+    - Food
+    - Shoes
+    - Café
+- id: guide-3
+  facet: guide
+  format: choice
+  prompt:
+    de: Wo ist die Toilette?
+    en: Where is the toilet?
+  text: |-
+    Caja — a la derecha
+    Aseos — 2.ª planta
+    Ascensor — a la izquierda
+  answer:
+    de:
+    - Im 2. Stock
+    en:
+    - On the 2nd floor
+  options:
+    de:
+    - Im 2. Stock
+    - Links
+    - Rechts
+    - Neben der Kasse
+    en:
+    - On the 2nd floor
+    - On the left
+    - On the right
+    - Next to the cash desk
+- id: hours-1
+  facet: hours
+  format: type
+  prompt:
+    de: Bis wann ist am Samstag geöffnet? (Uhrzeit)
+    en: Until when is it open on Saturday? (time)
+  text: |-
+    Horario:
+    L–V 9:00–21:00
+    S 10:00–14:00
+    D cerrado
+  answer:
+  - '14:00'
+  - '14'
+- id: hours-2
+  facet: hours
+  format: choice
+  prompt:
+    de: Ist am Sonntag geöffnet?
+    en: Is it open on Sunday?
+  text: |-
+    Horario:
+    L–V 9:00–21:00
+    S 10:00–14:00
+    D cerrado
+  answer:
+    de:
+    - Nein
+    en:
+    - 'No'
+  options:
+    de:
+    - Nein
+    - Ja, 9–21 Uhr
+    - Ja, 10–14 Uhr
+    en:
+    - 'No'
+    - Yes, 9–21
+    - Yes, 10–14
+- id: hours-3
+  facet: hours
+  format: choice
+  prompt:
+    de: Was bedeutet das?
+    en: What does it mean?
+  text: Abierto 24 horas
+  answer:
+    de:
+    - Rund um die Uhr geöffnet
+    en:
+    - Open 24 hours
+  options:
+    de:
+    - Rund um die Uhr geöffnet
+    - Nur tagsüber geöffnet
+    - Heute geschlossen
+    - Nur am Wochenende
+    en:
+    - Open 24 hours
+    - Open in the daytime only
+    - Closed today
+    - Weekends only
+- id: price-1
+  facet: price
+  format: choice
+  prompt:
+    de: Was ist im Angebot?
+    en: What is on offer?
+  text: 'Rebajas: 30 % en todas las chaquetas'
+  answer:
+    de:
+    - Alle Jacken 30 % billiger
+    en:
+    - All jackets 30 % cheaper
+  options:
+    de:
+    - Alle Jacken 30 % billiger
+    - Jacken ab 30 Euro
+    - 30 Jacken gratis
+    - Jacken 30 % teurer
+    en:
+    - All jackets 30 % cheaper
+    - Jackets from 30 euros
+    - 30 free jackets
+    - Jackets 30 % dearer
+- id: price-2
+  facet: price
+  format: type
+  prompt:
+    de: Wie viel kosten 100 g Käse? (Zahl)
+    en: How much are 100 g of cheese? (number)
+  text: |-
+    Queso manchego
+    Precio: 3,95 € / 100 g
+  answer:
+  - 3,95
+  - '3.95'
+- id: price-3
+  facet: price
+  format: choice
+  prompt:
+    de: Was bedeutet das Angebot?
+    en: What does the offer mean?
+  text: |-
+    3x2
+    Lleve tres paquetes de café y pague solo dos.
+  answer:
+    de:
+    - Kaufe 3, zahle 2
+    en:
+    - Take 3, pay for 2
+  options:
+    de:
+    - Kaufe 3, zahle 2
+    - 3 zum Preis von 1
+    - Die dritte kostet die Hälfte
+    - Höchstens 3 pro Person
+    en:
+    - Take 3, pay for 2
+    - 3 for the price of 1
+    - The third is half price
+    - At most 3 per person

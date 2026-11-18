@@ -1,0 +1,22 @@
+skill: freetime.reading.R
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- Hoy es domingo. Marta y Pablo van al parque.
+- Allí ven un perro pequeño.
+- Ayer hizo buen tiempo.
+enablers:
+  required:
+  - id: es.gram.verb.present-regular
+    use: productive
+  - id: es.gram.verb.present-irregular
+    use: productive
+  - id: es.gram.verb.past
+    use: formulaic
+  - id: es.lex.family
+    use: productive
+version: 1
+status: draft

@@ -1,0 +1,158 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.gram.noun.gender
+lang: es
+facets:
+- id: o-a
+  band: core
+  format: choice
+  options: [el, la]
+  rule: {de: 'Auf -o meist maskulin (el libro), auf -a meist feminin (la casa)', en: 'Nouns in -o are mostly masculine (el libro), in -a mostly feminine (la casa)'}
+  instruction: {de: 'el oder la?', en: 'el or la?'}
+- id: endings
+  band: variant
+  format: choice
+  options: [el, la]
+  rule: {de: '-ción, -dad, -tad sind feminin (la estación, la ciudad); -or meist maskulin (el ordenador); bei -e und Konsonant: lernen (el coche, la noche, el hotel, la flor)', en: '-ción, -dad, -tad are feminine (la estación, la ciudad); -or mostly masculine
+      (el ordenador); with -e and consonants: learn them (el coche, la noche, el hotel, la flor)'}
+  instruction: {de: 'el oder la?', en: 'el or la?'}
+- id: exceptions
+  band: exception
+  format: choice
+  options: [el, la]
+  rule: {de: 'Ausnahmen: el día, el mapa, el problema, el idioma, el sofá, el tema; la mano, la foto, la moto, la radio', en: 'Exceptions: el día, el mapa, el problema, el idioma, el sofá, el tema; la mano, la foto, la moto, la radio'}
+  instruction: {de: 'el oder la?', en: 'el or la?'}
+- id: people
+  band: contrast
+  format: choice
+  options: [el, la]
+  rule: {de: 'Bei Personen auf -e, -ista, -nte entscheidet die Person: el/la estudiante, el/la turista', en: 'For people in -e, -ista, -nte the person decides: el/la estudiante, el/la turista'}
+  instruction: {de: 'el oder la? Achte auf die Person.', en: 'el or la? Look at the person.'}
+items:
+- id: g01
+  facet: o-a
+  stem: ___ libro es interesante.
+  answer: [el]
+- id: g02
+  facet: o-a
+  stem: ___ casa es grande.
+  answer: [la]
+- id: g03
+  facet: o-a
+  stem: ¿Dónde está ___ mesa?
+  answer: [la]
+- id: g04
+  facet: o-a
+  stem: ___ vaso está en la cocina.
+  answer: [el]
+- id: g05
+  facet: o-a
+  stem: Me gusta ___ playa.
+  answer: [la]
+- id: g06
+  facet: o-a
+  stem: ___ museo abre a las diez.
+  answer: [el]
+- id: g07
+  facet: o-a
+  stem: ___ ventana está abierta.
+  answer: [la]
+- id: g08
+  facet: o-a
+  stem: Necesito ___ número de teléfono.
+  answer: [el]
+- id: g09
+  facet: o-a
+  stem: ___ cocina es pequeña.
+  answer: [la]
+- id: g10
+  facet: o-a
+  stem: ¿Tienes ___ dinero?
+  answer: [el]
+- id: g11
+  facet: endings
+  stem: ___ estación está cerca.
+  answer: [la]
+- id: g12
+  facet: endings
+  stem: Madrid es ___ ciudad grande.
+  options: [un, una]
+  answer: [una]
+- id: g13
+  facet: endings
+  stem: ___ ordenador no funciona.
+  answer: [el]
+- id: g14
+  facet: endings
+  stem: ___ coche es rojo.
+  answer: [el]
+- id: g15
+  facet: endings
+  stem: Trabajo por ___ noche.
+  answer: [la]
+- id: g16
+  facet: endings
+  stem: ___ hotel está en el centro.
+  answer: [el]
+- id: g17
+  facet: endings
+  stem: ¿A qué hora sale ___ tren?
+  answer: [el]
+- id: g18
+  facet: endings
+  stem: ___ calle es muy bonita.
+  answer: [la]
+- id: g19
+  facet: endings
+  stem: ___ lección de hoy es fácil.
+  answer: [la]
+- id: g20
+  facet: exceptions
+  stem: ___ día es largo.
+  answer: [el]
+- id: g21
+  facet: exceptions
+  stem: Me duele ___ mano.
+  answer: [la]
+- id: g22
+  facet: exceptions
+  stem: No hay ___ problema.
+  options: [ningún, ninguna]
+  answer: [ningún]
+- id: g23
+  facet: exceptions
+  stem: ¿Me das ___ mapa?
+  answer: [el]
+- id: g24
+  facet: exceptions
+  stem: ___ foto es muy bonita.
+  answer: [la]
+- id: g25
+  facet: exceptions
+  stem: El español es ___ idioma bonito.
+  options: [un, una]
+  answer: [un]
+- id: g26
+  facet: exceptions
+  stem: ___ sofá es nuevo.
+  answer: [el]
+- id: g27
+  facet: people
+  stem: Ana es ___ estudiante de mi clase.
+  answer: [la]
+- id: g28
+  facet: people
+  stem: Pedro es ___ cantante del grupo.
+  answer: [el]
+- id: g29
+  facet: people
+  stem: Mi hermana es ___ dentista.
+  options: [un, una]
+  answer: [una]
+- id: g30
+  facet: people
+  stem: ___ turista (Mark) pregunta por el museo.
+  answer: [el]
+- id: g31
+  facet: people
+  stem: ___ presidenta habla hoy.
+  answer: [la]

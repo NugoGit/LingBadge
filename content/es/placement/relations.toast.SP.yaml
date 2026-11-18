@@ -1,0 +1,123 @@
+skill: relations.toast.SP
+lang: es
+reviewed_by: []
+facets:
+- id: classic
+  label:
+    de: Üblicher Trinkspruch
+    en: A common toast
+- id: por
+  label:
+    de: Por + Anlass oder Person
+    en: Por + occasion or person
+- id: whom
+  label:
+    de: Auf wen
+    en: To whom
+items:
+- id: classic-1
+  facet: classic
+  format: choice
+  prompt:
+    de: 'Ein kurzer, üblicher Trinkspruch:'
+    en: 'A short, common toast:'
+  answer:
+  - ¡Salud!
+  options:
+  - ¡Salud!
+  - ¡Adiós!
+  - ¡Que aproveche!
+  - ¡Por favor!
+- id: classic-2
+  facet: classic
+  format: choice
+  prompt:
+    de: Was antwortet man üblicherweise auf „¡Salud!“?
+    en: What do people usually reply to “¡Salud!”?
+  answer:
+  - ¡Salud!
+  options:
+  - ¡Salud!
+  - ¡De nada!
+  - ¡Hasta luego!
+  - ¡Perdón!
+- id: classic-3
+  facet: classic
+  format: choice
+  prompt:
+    de: Sie stehen auf und wollen einen Toast ausbringen. Wie beginnen Sie?
+    en: You stand up to propose a toast. How do you begin?
+  answer:
+  - Quiero proponer un brindis.
+  options:
+  - Quiero proponer un brindis.
+  - Quiero proponer un brindar.
+  - Quiero brindis proponer.
+  - Quiero a un brindis.
+- id: por-1
+  facet: por
+  format: type
+  prompt:
+    de: Auf unser Treffen!
+    en: To our meeting!
+  stem: ¡Por ___ encuentro!
+  cue: nosotros
+  answer:
+  - nuestro
+- id: por-2
+  facet: por
+  format: type
+  prompt:
+    de: Auf den Sieg!
+    en: To victory!
+  stem: ¡Por la ___!
+  cue:
+    de: Sieg
+    en: victory
+  answer:
+  - victoria
+- id: por-3
+  facet: por
+  format: type
+  prompt:
+    de: Auf Ihre Familie!
+    en: To your family!
+  stem: ¡Por ___ familia!
+  cue: usted
+  answer:
+  - su
+- id: whom-1
+  facet: whom
+  format: type
+  prompt:
+    de: Auf dich!
+    en: To you! (informal)
+  stem: ¡Por ___!
+  cue: tú
+  answer:
+  - ti
+- id: whom-2
+  facet: whom
+  format: type
+  prompt:
+    de: Auf Sie! / Auf euch!
+    en: To you! (formal / plural)
+  stem: ¡Por ___!
+  cue: ustedes / vosotros
+  answer:
+  - ustedes
+  - vosotros
+  - vosotras
+- id: whom-3
+  facet: whom
+  format: choice
+  prompt:
+    de: Auf die Gastgeber!
+    en: To the hosts!
+  answer:
+  - ¡Por los anfitriones!
+  options:
+  - ¡Por los anfitriones!
+  - ¡Para los anfitriones!
+  - ¡A la salud de anfitriones!
+  - ¡Por anfitriones los!

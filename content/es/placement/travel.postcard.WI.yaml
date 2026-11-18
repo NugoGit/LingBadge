@@ -1,0 +1,120 @@
+skill: travel.postcard.WI
+lang: es
+reviewed_by: []
+facets:
+- id: greet
+  label:
+    de: Gruß und Abschluss
+    en: Greeting and sign-off
+- id: like
+  label:
+    de: Wie es ist
+    en: What it's like
+- id: do
+  label:
+    de: Was man macht
+    en: What you're doing
+items:
+- id: greet-1
+  facet: greet
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Grüße aus Granada!'
+    en: 'Write: Greetings from Granada!'
+  stem: ¡Saludos ___ Granada!
+  answer:
+  - desde
+  - de
+- id: greet-2
+  facet: greet
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Viele Grüße aus den Bergen!'
+    en: 'Write: Greetings from the mountains!'
+  stem: ¡Un saludo desde la ___!
+  cue:
+    de: Berge
+    en: mountains
+  answer:
+  - montaña
+  - sierra
+- id: greet-3
+  facet: greet
+  format: choice
+  prompt:
+    de: Welcher Abschluss passt für eine Karte an die Familie?
+    en: Which sign-off fits a card to the family?
+  answer:
+  - Un beso, Marta.
+  options:
+  - Un beso, Marta.
+  - Atentamente, señora Marta.
+  - Adiós, estimados.
+  - Buenos días, Marta.
+- id: like-1
+  facet: like
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Hier ist es sehr schön.'
+    en: 'Write: It''s very beautiful here.'
+  stem: Esto es muy ___.
+  cue:
+    de: schön
+    en: beautiful
+  answer:
+  - bonito
+  - precioso
+  - lindo
+- id: like-2
+  facet: like
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Das Wetter ist gut.'
+    en: 'Write: The weather is good.'
+  stem: ___ buen tiempo.
+  cue: hacer
+  answer:
+  - Hace
+- id: like-3
+  facet: like
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Heute ist es bewölkt, aber warm.'
+    en: 'Write: Today it''s cloudy but warm.'
+  stem: Hoy está ___, pero hace calor.
+  cue:
+    de: bewölkt
+    en: cloudy
+  answer:
+  - nublado
+- id: do-1
+  facet: do
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Wir wohnen in einer kleinen Pension.'
+    en: 'Write: We''re staying in a small guesthouse.'
+  stem: Estamos en una pensión ___.
+  cue: pequeño
+  answer:
+  - pequeña
+- id: do-2
+  facet: do
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Jeden Tag wandern wir in den Bergen.'
+    en: 'Write: Every day we go walking in the mountains.'
+  stem: Todos los días ___ por la montaña.
+  cue: caminar
+  answer:
+  - caminamos
+- id: do-3
+  facet: do
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Gestern waren wir im Museum.'
+    en: 'Write: Yesterday we were at the museum.'
+  stem: Ayer ___ en el museo.
+  cue: estar
+  answer:
+  - estuvimos
+  - hemos estado

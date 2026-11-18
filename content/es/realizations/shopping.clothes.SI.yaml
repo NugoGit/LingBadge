@@ -1,0 +1,35 @@
+skill: shopping.clothes.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- ¿Puedo probármelo?
+- ¿Tiene este jersey en azul?
+- Necesito la talla M.
+- Es pequeño. ¿Tiene uno más grande?
+- Me lo llevo.
+enablers:
+  required:
+  - id: es.lex.appearance-clothes
+    use: productive
+  - id: es.gram.adj.agreement
+    use: productive
+  - id: es.gram.pron.demonstrative
+    use: productive
+  - id: es.gram.verb.modal
+    use: productive
+  - id: es.gram.pron.object
+    use: formulaic
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+version: 1
+status: draft

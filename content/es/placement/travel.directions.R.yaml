@@ -1,0 +1,185 @@
+skill: travel.directions.R
+lang: es
+reviewed_by: []
+facets:
+- id: transport
+  label:
+    de: Verkehrsmittel, Haltestelle
+    en: Transport, stop
+- id: way
+  label:
+    de: Richtung
+    en: Direction
+- id: target
+  label:
+    de: Haus, Stock, Wohnung
+    en: House, floor, flat
+items:
+- id: transport-1
+  facet: transport
+  format: choice
+  prompt:
+    de: Wo steigen Sie aus?
+    en: Where do you get off?
+  text: Bájate en la estación de Sol. Sigue recto hasta el café y luego gira a la izquierda. Mi portal es el tercero a la derecha, el número 12. Vivo en el segundo piso.
+  answer:
+    de:
+    - An der Station „Sol“
+    en:
+    - At the station “Sol”
+  options:
+    de:
+    - An der Station „Sol“
+    - An der Endstation
+    - Beim Café
+    - An der dritten Station
+    en:
+    - At the station “Sol”
+    - At the last stop
+    - At the café
+    - At the third station
+- id: transport-2
+  facet: transport
+  format: type
+  prompt:
+    de: Welchen Bus nehmen Sie? (Zahl)
+    en: Which bus do you take? (number)
+  text: Coge el autobús 24. Bájate en la parada «Mercado». Cruza la calle; la oficina está en la segunda planta.
+  answer:
+  - '24'
+- id: transport-3
+  facet: transport
+  format: choice
+  prompt:
+    de: Wo steigen Sie aus?
+    en: Where do you get off?
+  text: Coge el tranvía 9 y bájate en la tercera parada, delante de la universidad.
+  answer:
+    de:
+    - Nach drei Haltestellen, bei der Universität
+    en:
+    - After three stops, at the university
+  options:
+    de:
+    - Nach drei Haltestellen, bei der Universität
+    - Nach neun Haltestellen
+    - An der Endstation
+    - Bei der Universität, nach einer Haltestelle
+    en:
+    - After three stops, at the university
+    - After nine stops
+    - At the last stop
+    - At the university, after one stop
+- id: way-1
+  facet: way
+  format: choice
+  prompt:
+    de: Was tun Sie nach dem Café?
+    en: What do you do after the café?
+  text: Bájate en la estación de Sol. Sigue recto hasta el café y luego gira a la izquierda.
+  answer:
+    de:
+    - Links abbiegen
+    en:
+    - Turn left
+  options:
+    de:
+    - Links abbiegen
+    - Rechts abbiegen
+    - Geradeaus gehen
+    - Zurückgehen
+    en:
+    - Turn left
+    - Turn right
+    - Go straight on
+    - Go back
+- id: way-2
+  facet: way
+  format: choice
+  prompt:
+    de: Was tun Sie nach dem Aussteigen?
+    en: What do you do after getting off?
+  text: Coge el autobús 24. Bájate en la parada «Mercado». Cruza la calle; la oficina está en la segunda planta.
+  answer:
+    de:
+    - Die Straße überqueren
+    en:
+    - Cross the road
+  options:
+    de:
+    - Die Straße überqueren
+    - Rechts abbiegen
+    - Den Bus wechseln
+    - Zurückgehen
+    en:
+    - Cross the road
+    - Turn right
+    - Change buses
+    - Go back
+- id: way-3
+  facet: way
+  format: choice
+  prompt:
+    de: Wo ist die Kasse?
+    en: Where is the cash desk?
+  text: |-
+    Recepción — planta baja, a la izquierda
+    Consultas 201–220 — 2.ª planta
+    Caja — a la derecha de la entrada
+  answer:
+    de:
+    - Rechts vom Eingang
+    en:
+    - To the right of the entrance
+  options:
+    de:
+    - Rechts vom Eingang
+    - Links vom Eingang
+    - Im 2. Stock
+    - Im 1. Stock links
+    en:
+    - To the right of the entrance
+    - To the left of the entrance
+    - On the 2nd floor
+    - 1st floor, on the left
+- id: target-1
+  facet: target
+  format: type
+  prompt:
+    de: Welche Hausnummer? (Zahl)
+    en: Which house number? (number)
+  text: Mi portal es el tercero a la derecha, el número 12. Vivo en el segundo piso.
+  answer:
+  - '12'
+- id: target-2
+  facet: target
+  format: type
+  prompt:
+    de: In welchem Stock ist das Büro? (Zahl)
+    en: On which floor is the office? (number)
+  text: Coge el autobús 24. Bájate en la parada «Mercado». Cruza la calle; la oficina está en la segunda planta.
+  answer:
+  - '2'
+- id: target-3
+  facet: target
+  format: choice
+  prompt:
+    de: Welches Haus ist es?
+    en: Which house is it?
+  text: Sigue recto hasta el café y luego gira a la izquierda. Mi portal es el tercero a la derecha.
+  answer:
+    de:
+    - Das dritte rechts
+    en:
+    - The third on the right
+  options:
+    de:
+    - Das dritte rechts
+    - Das dritte links
+    - Das erste rechts
+    - Das zweite rechts
+    en:
+    - The third on the right
+    - The third on the left
+    - The first on the right
+    - The second on the right

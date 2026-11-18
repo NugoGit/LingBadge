@@ -127,6 +127,12 @@ def validate_placement(cat: PlacementCatalogue, skills: dict[str, Skill]) -> tup
                 err.append(f"{q}: type items take no options")
             if sk.mode in ("SI", "SP", "WI") and it.stem is None:
                 warn.append(f"{q}: productive type item without a stem; free answers are hard to key")
+    for f in cat.facets:
+        if not isinstance(f.label, dict) or not {"de", "en"} <= set(f.label):
+            warn.append(f"{p}/{f.id}: label should be given in de and en")
+    untranslated = [it.id for it in cat.items if not isinstance(it.prompt, dict) or not {"de", "en"} <= set(it.prompt)]
+    if untranslated:
+        warn.append(f"{p}: {len(untranslated)} prompts without both de and en (the app falls back to one language)")
     for f, n in facets.items():
         if n < MIN_PER_FACET:
             err.append(f"{p}/{f}: {n} items; needs at least {MIN_PER_FACET} so repeated placements rotate")

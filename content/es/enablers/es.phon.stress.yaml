@@ -1,0 +1,12 @@
+id: es.phon.stress
+lang: es
+kind: phonology
+title: Word stress and its written accent (médico, está, café)
+cefr: A1
+sources:
+- pcic.A1.phon.stress
+check:
+  template: enabler.phonology.v1
+  items: 10
+  threshold: 0.9
+  channel: audio

@@ -1,0 +1,126 @@
+skill: relations.plans.SI
+lang: es
+reviewed_by: []
+facets:
+- id: invite
+  label:
+    de: Einladen
+    en: Inviting
+- id: answer
+  label:
+    de: Zusagen oder absagen
+    en: Accepting or declining
+- id: when
+  label:
+    de: Zeit und Ort vereinbaren
+    en: Agreeing on time and place
+items:
+- id: invite-1
+  facet: invite
+  format: type
+  prompt:
+    de: 'Fragen Sie eine Freundin: Hast du am Samstag frei?'
+    en: 'Ask a friend (female): Are you free on Saturday?'
+  stem: ¿Estás ___ el sábado?
+  cue:
+    de: frei
+    en: free
+  answer:
+  - libre
+- id: invite-2
+  facet: invite
+  format: type
+  prompt:
+    de: 'Laden Sie ein: Lass uns ins Kino gehen!'
+    en: 'Invite: Let''s go to the cinema!'
+  stem: ¡Vamos ___ cine!
+  cue: a + el
+  answer:
+  - al
+- id: invite-3
+  facet: invite
+  format: choice
+  prompt:
+    de: Laden Sie eine Freundin für Freitag ins Café ein.
+    en: Invite a friend to a café on Friday.
+  answer:
+  - ¿Vamos a tomar un café el viernes?
+  options:
+  - ¿Vamos a tomar un café el viernes?
+  - ¿Vamos a tomar un café en viernes?
+  - ¿Vamos al café la viernes?
+  - ¿Fuiste a tomar un café el viernes?
+- id: answer-1
+  facet: answer
+  format: choice
+  prompt:
+    de: Sie können nicht. Was sagen Sie?
+    en: You can't. What do you say?
+  context: ¡Vamos mañana al teatro!
+  answer:
+  - Lo siento, no puedo.
+  options:
+  - Lo siento, no puedo.
+  - ¡Vale, de acuerdo!
+  - ¡Sí, con mucho gusto!
+  - Quedamos a las siete.
+- id: answer-2
+  facet: answer
+  format: type
+  prompt:
+    de: 'Reagieren Sie: Macht nichts, ein andermal.'
+    en: 'React: Never mind, another time.'
+  context: Lo siento, no puedo.
+  stem: No pasa nada, otro ___.
+  answer:
+  - día
+- id: answer-3
+  facet: answer
+  format: choice
+  prompt:
+    de: Sagen Sie zu.
+    en: Accept.
+  context: ¿Y el domingo?
+  answer:
+  - ¡Sí, me encantaría!
+  options:
+  - ¡Sí, me encantaría!
+  - No, lo siento.
+  - No sé dónde.
+  - ¡Adiós!
+- id: when-1
+  facet: when
+  format: type
+  prompt:
+    de: 'Schlagen Sie vor: um sieben beim Theater.'
+    en: 'Suggest: at seven at the theatre.'
+  stem: Quedamos a las ___ delante del teatro.
+  cue: '7'
+  answer:
+  - siete
+- id: when-2
+  facet: when
+  format: type
+  prompt:
+    de: 'Schlagen Sie vor: Treffen wir uns beim Bahnhof.'
+    en: 'Suggest: Let''s meet at the station.'
+  stem: Quedamos en la ___.
+  cue:
+    de: Bahnhof
+    en: station
+  answer:
+  - estación
+- id: when-3
+  facet: when
+  format: choice
+  prompt:
+    de: Bestätigen Sie.
+    en: Confirm.
+  context: Quedamos a las seis delante del cine.
+  answer:
+  - ¡Vale, de acuerdo!
+  options:
+  - ¡Vale, de acuerdo!
+  - ¡Qué pena!
+  - ¡De nada!
+  - ¡No pasa nada!

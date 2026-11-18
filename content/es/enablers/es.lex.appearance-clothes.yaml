@@ -1,0 +1,35 @@
+id: es.lex.appearance-clothes
+lang: es
+kind: lexis
+title: Appearance, clothes, colours
+cefr: A1
+words:
+- alto
+- bajo
+- rubio
+- moreno
+- el pelo
+- las gafas
+- la camisa
+- la camiseta
+- el jersey
+- la chaqueta
+- los pantalones
+- la falda
+- el vestido
+- los zapatos
+- la talla
+- rojo
+- azul
+- verde
+- negro
+- blanco
+- gris
+- amarillo
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

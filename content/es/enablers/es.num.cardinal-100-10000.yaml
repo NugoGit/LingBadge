@@ -1,0 +1,14 @@
+id: es.num.cardinal-100-10000
+lang: es
+kind: grammar
+title: Cardinal numbers 100–10 000 (doscientos, quinientas, mil)
+cefr: A1
+requires:
+- es.num.cardinal-0-100
+sources:
+- pcic.A1.num.cardinal
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

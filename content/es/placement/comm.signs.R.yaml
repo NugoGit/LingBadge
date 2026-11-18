@@ -1,0 +1,259 @@
+skill: comm.signs.R
+lang: es
+reviewed_by: []
+facets:
+- id: door
+  label:
+    de: Eingang, Ausgang, offen, geschlossen
+    en: Entrance, exit, open, closed
+- id: rule
+  label:
+    de: Drücken, ziehen, Verbote
+    en: Push, pull, prohibitions
+- id: time
+  label:
+    de: Pausen und Öffnungszeiten
+    en: Breaks and opening hours
+items:
+- id: door-1
+  facet: door
+  format: choice
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
+  text: SALIDA
+  answer:
+    de:
+    - Ausgang
+    en:
+    - Exit
+  options:
+    de:
+    - Ausgang
+    - Eingang
+    - Kasse
+    - Toilette
+    en:
+    - Exit
+    - Entrance
+    - Cash desk
+    - Toilet
+- id: door-2
+  facet: door
+  format: choice
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
+  text: ENTRADA
+  answer:
+    de:
+    - Eingang
+    en:
+    - Entrance
+  options:
+    de:
+    - Eingang
+    - Ausgang
+    - Information
+    - Warteraum
+    en:
+    - Entrance
+    - Exit
+    - Information
+    - Waiting room
+- id: door-3
+  facet: door
+  format: choice
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
+  text: CERRADO
+  answer:
+    de:
+    - Geschlossen
+    en:
+    - Closed
+  options:
+    de:
+    - Geschlossen
+    - Geöffnet
+    - Besetzt
+    - Frei
+    en:
+    - Closed
+    - Open
+    - Occupied
+    - Free
+- id: door-4
+  facet: door
+  format: choice
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
+  text: ABIERTO
+  answer:
+    de:
+    - Geöffnet
+    en:
+    - Open
+  options:
+    de:
+    - Geöffnet
+    - Geschlossen
+    - Pause
+    - Ausverkauft
+    en:
+    - Open
+    - Closed
+    - Break
+    - Sold out
+- id: rule-1
+  facet: rule
+  format: choice
+  prompt:
+    de: Das steht an einer Tür. Was tun Sie?
+    en: This is on a door. What do you do?
+  text: EMPUJAR
+  answer:
+    de:
+    - Drücken
+    en:
+    - Push
+  options:
+    de:
+    - Drücken
+    - Ziehen
+    - Klingeln
+    - Warten
+    en:
+    - Push
+    - Pull
+    - Ring
+    - Wait
+- id: rule-2
+  facet: rule
+  format: choice
+  prompt:
+    de: Das steht an einer Tür. Was tun Sie?
+    en: This is on a door. What do you do?
+  text: TIRAR
+  answer:
+    de:
+    - Ziehen
+    en:
+    - Pull
+  options:
+    de:
+    - Ziehen
+    - Drücken
+    - Klingeln
+    - Warten
+    en:
+    - Pull
+    - Push
+    - Ring
+    - Wait
+- id: rule-3
+  facet: rule
+  format: choice
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
+  text: PROHIBIDO FUMAR
+  answer:
+    de:
+    - Nicht rauchen
+    en:
+    - No smoking
+  options:
+    de:
+    - Nicht rauchen
+    - Nicht parken
+    - Nicht berühren
+    - Nicht fotografieren
+    en:
+    - No smoking
+    - No parking
+    - Do not touch
+    - No photos
+- id: rule-4
+  facet: rule
+  format: choice
+  prompt:
+    de: Was bedeutet das Schild?
+    en: What does the sign mean?
+  text: PROHIBIDO PISAR EL CÉSPED
+  answer:
+    de:
+    - Rasen nicht betreten
+    en:
+    - Keep off the grass
+  options:
+    de:
+    - Rasen nicht betreten
+    - Nicht laufen
+    - Keine Hunde
+    - Fahrräder verboten
+    en:
+    - Keep off the grass
+    - No running
+    - No dogs
+    - No bicycles
+- id: time-1
+  facet: time
+  format: type
+  prompt:
+    de: Ab wann ist wieder geöffnet? (Uhrzeit)
+    en: When does it open again? (time)
+  text: Cerrado de 14:00 a 16:00
+  answer:
+  - '16:00'
+  - '16'
+- id: time-2
+  facet: time
+  format: choice
+  prompt:
+    de: Ist die Kasse am Sonntag geöffnet?
+    en: Is the cash desk open on Sunday?
+  text: |-
+    Taquilla:
+    L–V 9:00–18:00
+    S 10:00–15:00
+    D cerrado
+  answer:
+    de:
+    - Nein
+    en:
+    - 'No'
+  options:
+    de:
+    - Nein
+    - Ja, 9–18 Uhr
+    - Ja, 10–15 Uhr
+    en:
+    - 'No'
+    - Yes, 9–18
+    - Yes, 10–15
+- id: time-3
+  facet: time
+  format: choice
+  prompt:
+    de: Was bedeutet das Schild an der Kasse?
+    en: What does the sign at the cash desk mean?
+  text: Vuelvo en 15 minutos
+  answer:
+    de:
+    - Kurze Pause, 15 Minuten
+    en:
+    - Short break, 15 minutes
+  options:
+    de:
+    - Kurze Pause, 15 Minuten
+    - Geschlossen bis 15 Uhr
+    - Nur 15 Kunden
+    - Seit 15 Minuten geöffnet
+    en:
+    - Short break, 15 minutes
+    - Closed until 15:00
+    - Only 15 customers
+    - Open for 15 minutes

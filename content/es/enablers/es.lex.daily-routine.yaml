@@ -1,0 +1,26 @@
+id: es.lex.daily-routine
+lang: es
+kind: lexis
+title: Daily routine
+cefr: A1
+words:
+- levantarse
+- ducharse
+- desayunar
+- comer
+- cenar
+- trabajar
+- estudiar
+- volver a casa
+- acostarse
+- por la mañana
+- por la tarde
+- por la noche
+- el fin de semana
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

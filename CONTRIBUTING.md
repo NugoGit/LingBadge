@@ -29,7 +29,8 @@ Thanks for helping. Most contributions are YAML edits; you don't need to write c
 
 - **Universal vs. language.** `content/core` is shared by every language. Changing a skill there affects all packs, so open an issue first.
 - **Levels.** Use the language's official standard for CEFR tags. Grammar above the level appears only as `formulaic` chunks.
-- **Catalogues.** Follow [docs/question-catalogue.md](docs/question-catalogue.md): one gap, one defensible answer (or list all correct ones), `choice` only for closed sets with all options shown, `type` when the learner builds a form, no give-aways. Placement catalogues follow [docs/placement-catalogue.md](docs/placement-catalogue.md): three facets per skill, at least two items each.
+- **Catalogues.** Follow [docs/question-catalogue.md](docs/question-catalogue.md): one gap, one defensible answer (or list all correct ones), `choice` only for closed sets with all options shown, `type` when the learner builds a form, no give-aways. Placement catalogues follow [docs/placement-catalogue.md](docs/placement-catalogue.md): three facets per skill, at least two items each, prompts in German and English.
+- **Interface text.** UI strings are German in `app/app.js` (`t("…")`) with English in `app/i18n.js`. After changing a string, run `python tools/i18n_keys.py`; the tests fail if a key has no English entry.
 - **Sources.** Cite where a list or level comes from in `sources.yaml`. Paraphrase descriptors; don't copy copyrighted text.
 - **Review status.** New items are `draft`. Only native speakers mark items `reviewed`.
 

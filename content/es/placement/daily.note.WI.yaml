@@ -1,0 +1,135 @@
+skill: daily.note.WI
+lang: es
+reviewed_by: []
+facets:
+- id: where
+  label:
+    de: Wohin man gegangen ist
+    en: Where you have gone
+- id: back
+  label:
+    de: Wann man zurück ist
+    en: When you will be back
+- id: info
+  label:
+    de: Kurze Hinweise
+    en: Short notes
+items:
+- id: where-1
+  facet: where
+  format: type
+  prompt:
+    de: 'Notiz: Ich bin im Supermarkt.'
+    en: 'Note: I''m at the supermarket.'
+  stem: Estoy en el ___. Vuelvo a las cinco.
+  cue:
+    de: Supermarkt
+    en: supermarket
+  answer:
+  - supermercado
+  - súper
+- id: where-2
+  facet: where
+  format: type
+  prompt:
+    de: 'Notiz: Bin in die Apotheke gegangen.'
+    en: 'Note: Gone to the pharmacy.'
+  stem: He ido a la ___, vuelvo en una hora.
+  cue:
+    de: Apotheke
+    en: pharmacy
+  answer:
+  - farmacia
+- id: where-3
+  facet: where
+  format: choice
+  prompt:
+    de: 'Notiz: Bin zur Arbeit gegangen.'
+    en: 'Note: Gone to work.'
+  answer:
+  - Me he ido al trabajo.
+  options:
+  - Me he ido al trabajo.
+  - Me he ido a el trabajo.
+  - Me he ido en el trabajo.
+  - Voy en trabajo.
+- id: back-1
+  facet: back
+  format: type
+  prompt:
+    de: 'Notiz: Bin in einer Stunde zurück.'
+    en: 'Note: Back in an hour.'
+  stem: Vuelvo en una ___.
+  answer:
+  - hora
+- id: back-2
+  facet: back
+  format: type
+  prompt:
+    de: 'Notiz: Bin um sechs zurück.'
+    en: 'Note: Back at six.'
+  stem: Vuelvo a las ___.
+  cue: '6'
+  answer:
+  - seis
+- id: back-3
+  facet: back
+  format: choice
+  prompt:
+    de: Welche Notiz heißt „Bin um acht zurück“?
+    en: Which note means “Back at eight”?
+  answer:
+  - Vuelvo a las ocho.
+  options:
+  - Vuelvo a las ocho.
+  - Vuelvo a la ocho.
+  - Vuelvo en las ocho.
+  - Volví a las ocho.
+- id: info-1
+  facet: info
+  format: type
+  prompt:
+    de: 'Notiz: Das Mittagessen ist im Kühlschrank.'
+    en: 'Note: Lunch is in the fridge.'
+  stem: La comida está en la ___.
+  cue:
+    de: Kühlschrank
+    en: fridge
+  answer:
+  - nevera
+  - heladera
+  - frigorífico
+  - refrigeradora
+- id: info-2
+  facet: info
+  format: choice
+  prompt:
+    de: Was bedeutet die Notiz?
+    en: What does the note mean?
+  context: La llave está debajo del felpudo.
+  answer:
+    de:
+    - Der Schlüssel liegt unter der Fußmatte.
+    en:
+    - The key is under the doormat.
+  options:
+    de:
+    - Der Schlüssel liegt unter der Fußmatte.
+    - Der Schlüssel ist beim Nachbarn.
+    - Die Tür ist offen.
+    - Ich habe den Schlüssel.
+    en:
+    - The key is under the doormat.
+    - The key is at the neighbour's.
+    - The door is open.
+    - I have the key.
+- id: info-3
+  facet: info
+  format: type
+  prompt:
+    de: 'Notiz: Ruf mich an!'
+    en: 'Note: Call me!'
+  stem: ¡___!
+  cue: llamar (tú) + me
+  answer:
+  - Llámame

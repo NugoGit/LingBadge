@@ -1,0 +1,135 @@
+skill: travel.hotel.SI
+lang: es
+reviewed_by: []
+facets:
+- id: checkin
+  label:
+    de: Einchecken
+    en: Checking in
+- id: ask
+  label:
+    de: Frühstück, WLAN
+    en: Breakfast, Wi-Fi
+- id: request
+  label:
+    de: Weitere Bitten
+    en: Other requests
+items:
+- id: checkin-1
+  facet: checkin
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich habe eine Reservierung auf den Namen Huber.'
+    en: 'Say: I have a booking in the name of Huber.'
+  stem: Tengo una ___ a nombre de Huber.
+  cue:
+    de: Reservierung
+    en: booking
+  answer:
+  - reserva
+  - reservación
+- id: checkin-2
+  facet: checkin
+  format: type
+  prompt:
+    de: 'Sagen Sie: Hier ist mein Pass.'
+    en: 'Say: Here is my passport.'
+  stem: Aquí tiene mi ___.
+  cue:
+    de: Pass
+    en: passport
+  answer:
+  - pasaporte
+- id: checkin-3
+  facet: checkin
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: Buenas tardes, ¿en qué puedo ayudarle?
+  answer:
+  - Tengo una reserva a nombre de Schmidt.
+  options:
+  - Tengo una reserva a nombre de Schmidt.
+  - Me reserva Schmidt.
+  - Soy reserva, Schmidt.
+  - Reserva mi nombre Schmidt.
+- id: ask-1
+  facet: ask
+  format: type
+  prompt:
+    de: 'Fragen Sie: Um wie viel Uhr ist Frühstück?'
+    en: 'Ask: What time is breakfast?'
+  stem: ¿A qué ___ es el desayuno?
+  answer:
+  - hora
+- id: ask-2
+  facet: ask
+  format: type
+  prompt:
+    de: Fragen Sie nach dem WLAN-Passwort.
+    en: Ask for the Wi-Fi password.
+  stem: ¿Cuál es la ___ del wifi?
+  cue:
+    de: Passwort
+    en: password
+  answer:
+  - contraseña
+  - clave
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt:
+    de: Wann gibt es Frühstück?
+    en: When is breakfast?
+  context: El desayuno es de siete a diez.
+  answer:
+    de:
+    - 7–10 Uhr
+    en:
+    - 7:00–10:00
+  options:
+    de:
+    - 7–10 Uhr
+    - 7–12 Uhr
+    - 10–12 Uhr
+    - Ab 10 Uhr
+    en:
+    - 7:00–10:00
+    - 7:00–12:00
+    - 10:00–12:00
+    - From 10:00
+- id: request-1
+  facet: request
+  format: type
+  prompt:
+    de: Fragen Sie, ob Sie den Koffer hier lassen können.
+    en: Ask whether you can leave your suitcase here.
+  stem: ¿Puedo ___ la maleta aquí?
+  answer:
+  - dejar
+- id: request-2
+  facet: request
+  format: choice
+  prompt:
+    de: Fragen Sie, bis wann Sie auschecken müssen.
+    en: Ask by when you have to check out.
+  answer:
+  - ¿A qué hora hay que dejar la habitación?
+  options:
+  - ¿A qué hora hay que dejar la habitación?
+  - ¿A qué hora es el desayuno?
+  - ¿Dónde está mi habitación?
+  - ¿Cuánto cuesta la habitación?
+- id: request-3
+  facet: request
+  format: type
+  prompt:
+    de: 'Sagen Sie: Im Zimmer sind keine Handtücher.'
+    en: 'Say: There are no towels in the room.'
+  stem: En la habitación no hay ___.
+  cue:
+    de: Handtücher
+    en: towels
+  answer:
+  - toallas

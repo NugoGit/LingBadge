@@ -1,0 +1,40 @@
+skill: relations.home-visit.SI
+lang: es
+cefr: A1
+register:
+- formal
+- informal
+variety: peninsular
+exponents:
+- ¡Pasa! ¡Siéntate! / ¡Pase! ¡Siéntese!
+- ¿Quieres un té o un café?
+- Esto es para ti. / Esto es para usted.
+- ¡Qué rico! Tienes una casa muy bonita.
+- Gracias, ya me tengo que ir.
+enablers:
+  required:
+  - id: es.gram.verb.imperative-set
+    use: formulaic
+  - id: es.gram.verb.modal
+    use: productive
+  - id: es.prag.courtesy
+    use: productive
+  - id: es.lex.food-drink
+    use: productive
+  - id: es.gram.adj.agreement
+    use: productive
+  - id: es.gram.pron.object
+    use: formulaic
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Imperative by register (pasa / pase); para ti / para usted.
+version: 1
+status: draft

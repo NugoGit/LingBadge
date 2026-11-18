@@ -1,0 +1,32 @@
+skill: services.money.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- ¿Dónde puedo cambiar dinero?
+- ¿A cuánto está el euro?
+- Quiero cambiar cien euros.
+- ¿Puedo pagar con tarjeta o solo en efectivo?
+enablers:
+  required:
+  - id: es.gram.verb.modal
+    use: productive
+  - id: es.lex.shopping-money
+    use: productive
+  - id: es.num.cardinal-100-10000
+    use: productive
+  - id: es.gram.syntax.questions
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+version: 1
+status: draft

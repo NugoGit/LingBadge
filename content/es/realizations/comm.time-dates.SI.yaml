@@ -1,0 +1,37 @@
+skill: comm.time-dates.SI
+lang: es
+cefr: A1
+register:
+- formal
+- informal
+variety: peninsular
+exponents:
+- ¿Qué hora es? — Son las diez.
+- ¿A qué hora? — A las siete.
+- El sábado. / Hoy por la noche.
+- El uno de mayo.
+enablers:
+  required:
+  - id: es.num.time
+    use: productive
+  - id: es.num.dates
+    use: productive
+  - id: es.lex.time-calendar
+    use: productive
+  - id: es.gram.syntax.time-adverbs
+    use: productive
+  - id: es.gram.art.def-indef
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Es la una / son las dos; a las + hour; el + weekday (el sábado), en + month (en mayo).
+version: 1
+status: draft

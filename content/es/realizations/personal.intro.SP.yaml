@@ -1,0 +1,37 @@
+skill: personal.intro.SP
+lang: es
+cefr: A1
+register:
+- formal
+- informal
+variety: peninsular
+exponents:
+- ¡Hola a todos! Me llamo …
+- Soy de …, vivo en …
+- Tengo … años.
+- Me gusta leer y viajar.
+enablers:
+  required:
+  - id: es.gram.verb.reflexive
+    use: productive
+  - id: es.gram.verb.ser-estar
+    use: productive
+  - id: es.gram.verb.present-irregular
+    use: productive
+  - id: es.gram.verb.gustar
+    use: productive
+  - id: es.lex.personal
+    use: productive
+  - id: es.num.cardinal-0-100
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+version: 1
+status: draft

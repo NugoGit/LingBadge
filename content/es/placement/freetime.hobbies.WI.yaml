@@ -1,0 +1,122 @@
+skill: freetime.hobbies.WI
+lang: es
+reviewed_by: []
+facets:
+- id: hobby
+  label:
+    de: Hobbys
+    en: Hobbies
+- id: like
+  label:
+    de: Was gefällt, was nicht
+    en: What you like and don't like
+- id: ask
+  label:
+    de: Zurückfragen
+    en: Asking back
+items:
+- id: hobby-1
+  facet: hobby
+  format: type
+  prompt:
+    de: 'Schreiben Sie: In der Freizeit gehe ich im Park spazieren.'
+    en: 'Write: In my free time I go for walks in the park.'
+  stem: En mi tiempo libre ___ por el parque.
+  cue: pasear
+  answer:
+  - paseo
+- id: hobby-2
+  facet: hobby
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Ich mag klassische Musik.'
+    en: 'Write: I like classical music.'
+  stem: Me gusta la música ___.
+  cue: clásico
+  answer:
+  - clásica
+- id: hobby-3
+  facet: hobby
+  format: choice
+  prompt:
+    de: 'Schreiben Sie: In der Freizeit lese ich viel.'
+    en: 'Write: In my free time I read a lot.'
+  answer:
+  - En mi tiempo libre leo mucho.
+  options:
+  - En mi tiempo libre leo mucho.
+  - En mi tiempo libre leer mucho.
+  - En mi tiempo libre leo muy.
+  - Mi tiempo libre leo mucha.
+- id: like-1
+  facet: like
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Laufen gefällt mir nicht.'
+    en: 'Write: I don''t like running.'
+  stem: No me ___ correr.
+  cue: gustar
+  answer:
+  - gusta
+- id: like-2
+  facet: like
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Mir gefällt die spanische Küche.'
+    en: 'Write: I like Spanish cuisine.'
+  stem: Me gusta la cocina ___.
+  cue: español
+  answer:
+  - española
+- id: like-3
+  facet: like
+  format: choice
+  prompt:
+    de: Welcher Satz heißt „Ich mag Katzen“?
+    en: Which sentence means “I like cats”?
+  answer:
+  - Me gustan los gatos.
+  options:
+  - Me gustan los gatos.
+  - Me gusta los gatos.
+  - Yo gusto los gatos.
+  - Me gustan gatos.
+- id: ask-1
+  facet: ask
+  format: choice
+  prompt:
+    de: Fragen Sie am Ende Ihres Posts nach den Hobbys der Leser.
+    en: At the end of your post, ask readers about their hobbies.
+  answer:
+  - ¿Y a vosotros qué os gusta hacer?
+  options:
+  - ¿Y a vosotros qué os gusta hacer?
+  - ¿Y dónde vivís?
+  - ¿Y cuántos años tenéis?
+  - ¿Y qué hora es?
+- id: ask-2
+  facet: ask
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Und was magst du?'
+    en: 'Write: And what do you like?'
+  stem: ¿Y a ti ___ te gusta?
+  cue:
+    de: was
+    en: what
+  answer:
+  - qué
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt:
+    de: 'Antworten Sie: Ich auch! Besonders Pizza.'
+    en: 'Answer: Me too! Especially pizza.'
+  context: ¡Me encanta cocinar! ¿Y a ti?
+  answer:
+  - ¡A mí también! Sobre todo la pizza.
+  options:
+  - ¡A mí también! Sobre todo la pizza.
+  - ¡Yo también! Sobre todo la pizza.
+  - ¡A mí tampoco! Sobre todo la pizza.
+  - ¡Me también! Sobre todo la pizza.

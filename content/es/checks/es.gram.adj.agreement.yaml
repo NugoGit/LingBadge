@@ -1,0 +1,161 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.gram.adj.agreement
+lang: es
+facets:
+- id: o-a
+  band: core
+  format: type
+  rule: {de: 'Adjektive auf -o richten sich nach Genus und Zahl: alto, alta, altos, altas', en: 'Adjectives in -o agree in gender and number: alto, alta, altos, altas'}
+  instruction: {de: Setze das Adjektiv in der richtigen Form ein., en: Put the adjective in the right form.}
+- id: e-cons
+  band: variant
+  format: type
+  rule: {de: 'Auf -e oder Konsonant: gleich für beide Genera, nur Plural (verde → verdes, azul → azules, feliz → felices)', en: 'In -e or a consonant: same for both genders, plural only (verde → verdes, azul → azules, feliz → felices)'}
+  instruction: {de: Setze das Adjektiv in der richtigen Form ein., en: Put the adjective in the right form.}
+- id: special
+  band: exception
+  format: type
+  rule: {de: 'Herkunft auf Konsonant hat eine weibliche Form (alemán → alemana, español → española); bueno → buen vor maskulinem Substantiv', en: 'Nationality in a consonant has a feminine form (alemán → alemana, español → española); bueno → buen before
+      a masculine noun'}
+  instruction: {de: Setze das Adjektiv in der richtigen Form ein., en: Put the adjective in the right form.}
+- id: mixed
+  band: contrast
+  format: type
+  rule: {de: 'Gemischte Gruppen: maskuliner Plural (Ana y Pedro son altos)', en: 'Mixed groups: masculine plural (Ana y Pedro son altos)'}
+  instruction: {de: Setze das Adjektiv in der richtigen Form ein., en: Put the adjective in the right form.}
+items:
+- id: j01
+  facet: o-a
+  stem: La casa es muy ___.
+  cue: bonito
+  answer: [bonita]
+- id: j02
+  facet: o-a
+  stem: Los coches son ___.
+  cue: rojo
+  answer: [rojos]
+- id: j03
+  facet: o-a
+  stem: Mi hermana es ___.
+  cue: alto
+  answer: [alta]
+- id: j04
+  facet: o-a
+  stem: Las tiendas están ___.
+  cue: abierto
+  answer: [abiertas]
+- id: j05
+  facet: o-a
+  stem: Tengo un piso ___.
+  cue: pequeño
+  answer: [pequeño]
+- id: j06
+  facet: o-a
+  stem: Las camisas son ___.
+  cue: blanco
+  answer: [blancas]
+- id: j07
+  facet: o-a
+  stem: Es una ciudad muy ___.
+  cue: tranquilo
+  answer: [tranquila]
+- id: j08
+  facet: o-a
+  stem: Los niños están ___.
+  cue: cansado
+  answer: [cansados]
+- id: j09
+  facet: o-a
+  stem: La sopa está ___.
+  cue: frío
+  answer: [fría]
+- id: j10
+  facet: e-cons
+  stem: Las hojas son ___.
+  cue: verde
+  answer: [verdes]
+- id: j11
+  facet: e-cons
+  stem: Tengo una chaqueta ___.
+  cue: azul
+  answer: [azul]
+- id: j12
+  facet: e-cons
+  stem: Los ojos de Ana son ___.
+  cue: azul
+  answer: [azules]
+- id: j13
+  facet: e-cons
+  stem: Es una casa muy ___.
+  cue: grande
+  answer: [grande]
+- id: j14
+  facet: e-cons
+  stem: Los niños están ___.
+  cue: feliz
+  answer: [felices]
+- id: j15
+  facet: e-cons
+  stem: Mis padres son ___.
+  cue: joven
+  answer: [jóvenes]
+- id: j16
+  facet: e-cons
+  stem: Las clases son ___.
+  cue: interesante
+  answer: [interesantes]
+- id: j17
+  facet: special
+  stem: Mi amiga es ___.
+  cue: alemán
+  answer: [alemana]
+- id: j18
+  facet: special
+  stem: Ella es ___.
+  cue: español
+  answer: [española]
+- id: j19
+  facet: special
+  stem: Mis vecinas son ___.
+  cue: inglés
+  answer: [inglesas]
+- id: j20
+  facet: special
+  stem: Es un ___ restaurante.
+  cue: bueno
+  answer: [buen]
+- id: j21
+  facet: special
+  stem: Hoy hace ___ tiempo.
+  cue: malo
+  answer: [mal]
+- id: j22
+  facet: special
+  stem: La comida ___ me gusta mucho.
+  cue: francés
+  answer: [francesa]
+- id: j23
+  facet: mixed
+  stem: Ana y Pedro son ___.
+  cue: alto
+  answer: [altos]
+- id: j24
+  facet: mixed
+  stem: Mis hermanas y mi hermano son ___.
+  cue: simpático
+  answer: [simpáticos]
+- id: j25
+  facet: mixed
+  stem: Las chicas y los chicos están ___.
+  cue: contento
+  answer: [contentos]
+- id: j26
+  facet: mixed
+  stem: La mesa y la silla son ___.
+  cue: nuevo
+  answer: [nuevas]
+- id: j27
+  facet: mixed
+  stem: El coche y la moto son ___.
+  cue: negro
+  answer: [negros]

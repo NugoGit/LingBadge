@@ -1,0 +1,29 @@
+id: es.lex.shopping-money
+lang: es
+kind: lexis
+title: Shopping, quantities, money
+cefr: A1
+words:
+- la tienda
+- el precio
+- el euro
+- el céntimo
+- caro
+- barato
+- un kilo de
+- medio kilo
+- una botella de
+- un paquete de
+- una docena de
+- la bolsa
+- pagar
+- con tarjeta
+- en efectivo
+- la caja
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

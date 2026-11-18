@@ -1,0 +1,27 @@
+skill: relations.wishes.WI
+lang: es
+cefr: A1
+register:
+- informal
+- formal
+variety: peninsular
+exponents:
+- ¡Feliz cumpleaños!
+- ¡Feliz Año Nuevo!
+- Te deseo mucha salud y felicidad.
+- ¡Feliz Navidad!
+enablers:
+  required:
+  - id: es.prag.wishes
+    use: productive
+  - id: es.lex.celebrations
+    use: productive
+  - id: es.gram.pron.object
+    use: formulaic
+  supporting:
+  - id: es.orth.accents-punctuation
+    use: productive
+rubric_specifics:
+  key_structures: Wishes as fixed chunks; te / le by register.
+version: 1
+status: draft

@@ -1,0 +1,40 @@
+skill: personal.details.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Me llamo … Mi apellido es … Se escribe …
+- Mi dirección es calle …, número …
+- Mi teléfono es el …
+- Nací el veinte de marzo.
+enablers:
+  required:
+  - id: es.gram.verb.reflexive
+    use: productive
+  - id: es.script.alphabet
+    use: productive
+  - id: es.gram.pron.possessive
+    use: productive
+  - id: es.num.dates
+    use: productive
+  - id: es.num.cardinal-0-100
+    use: productive
+  - id: es.lex.personal
+    use: productive
+  - id: es.gram.verb.past
+    use: formulaic
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Spelling with Spanish letter names; «nací el…» as a chunk.
+version: 1
+status: draft

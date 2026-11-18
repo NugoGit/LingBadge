@@ -1,0 +1,12 @@
+id: es.gram.noun.gender
+lang: es
+kind: grammar
+title: Noun gender with el / la (el libro, la casa; el día, la mano)
+cefr: A1
+sources:
+- pcic.A1.gram.gender
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

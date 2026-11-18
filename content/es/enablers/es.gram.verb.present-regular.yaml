@@ -1,0 +1,14 @@
+id: es.gram.verb.present-regular
+lang: es
+kind: grammar
+title: Present tense of regular -ar, -er, -ir verbs
+cefr: A1
+requires:
+- es.gram.pron.subject
+sources:
+- pcic.A1.gram.present
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

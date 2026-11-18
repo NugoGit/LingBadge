@@ -1,0 +1,40 @@
+skill: shopping.buy.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- ¿Me pone un kilo de manzanas, por favor?
+- ¿Cuánto cuesta el queso?
+- Nada más, gracias. ¿Puedo pagar con tarjeta?
+- ¿Quiere bolsa? — No, gracias.
+enablers:
+  required:
+  - id: es.lex.shopping-money
+    use: productive
+  - id: es.lex.food-drink
+    use: productive
+  - id: es.gram.art.def-indef
+    use: productive
+  - id: es.gram.noun.plural
+    use: productive
+  - id: es.num.cardinal-100-10000
+    use: productive
+  - id: es.gram.verb.present-irregular
+    use: productive
+  - id: es.gram.pron.object
+    use: formulaic
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Quantity + de + noun (un kilo de tomates); cuesta / cuestan by number.
+version: 1
+status: draft

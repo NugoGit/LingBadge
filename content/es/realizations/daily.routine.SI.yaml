@@ -1,0 +1,40 @@
+skill: daily.routine.SI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- Me levanto a las siete.
+- Por la mañana tomo café y voy al trabajo.
+- Como a las dos.
+- Los sábados no trabajo, descanso.
+enablers:
+  required:
+  - id: es.gram.verb.present-regular
+    use: productive
+  - id: es.gram.verb.present-irregular
+    use: productive
+  - id: es.gram.verb.reflexive
+    use: productive
+  - id: es.num.time
+    use: productive
+  - id: es.lex.daily-routine
+    use: productive
+  - id: es.gram.syntax.time-adverbs
+    use: productive
+  - id: es.gram.prep.basic
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Reflexives (me levanto, me ducho); ir a + el = al trabajo; a las + hour.
+version: 1
+status: draft

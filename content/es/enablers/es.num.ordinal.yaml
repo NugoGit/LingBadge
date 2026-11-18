@@ -1,0 +1,14 @@
+id: es.num.ordinal
+lang: es
+kind: grammar
+title: Ordinals primero to décimo; primer, tercer
+cefr: A1
+requires:
+- es.num.cardinal-0-100
+sources:
+- pcic.A1.num.ordinal
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

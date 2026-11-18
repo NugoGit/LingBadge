@@ -1,0 +1,150 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.gram.pron.possessive
+lang: es
+facets:
+- id: singular
+  band: core
+  format: type
+  rule: {de: 'mi, tu, su vor einem Substantiv im Singular (mi casa, tu libro, su coche)', en: 'mi, tu, su before a singular noun (mi casa, tu libro, su coche)'}
+  instruction: {de: Setze den Possessivbegleiter ein. Die Person steht in Klammern., en: Put in the possessive. The person is in brackets.}
+- id: plural
+  band: variant
+  format: type
+  rule: {de: 'Plural des Besitzes: mis, tus, sus (mis padres, tus amigos)', en: 'Plural of what is owned: mis, tus, sus (mis padres, tus amigos)'}
+  instruction: {de: Setze den Possessivbegleiter ein. Die Person steht in Klammern., en: Put in the possessive. The person is in brackets.}
+- id: nuestro
+  band: exception
+  format: type
+  rule: {de: 'nuestro und vuestro richten sich auch nach dem Genus: nuestra casa, nuestros hijos, vuestras maletas', en: 'nuestro and vuestro also agree in gender: nuestra casa, nuestros hijos, vuestras maletas'}
+  instruction: {de: Setze den Possessivbegleiter ein. Die Person steht in Klammern., en: Put in the possessive. The person is in brackets.}
+- id: tu-su
+  band: contrast
+  format: choice
+  rule: {de: 'tu = dein (tú); su = Ihr (usted), sein, ihr', en: 'tu = your (tú); su = your (usted), his, her, their'}
+  instruction: {de: 'Welche Form passt zur Situation?', en: 'Which form fits the situation?'}
+items:
+- id: s01
+  facet: singular
+  stem: ___ hermana se llama Ana.
+  cue: yo
+  answer: [Mi]
+- id: s02
+  facet: singular
+  stem: ¿Cuál es ___ número de teléfono?
+  cue: tú
+  answer: [tu]
+- id: s03
+  facet: singular
+  stem: Pedro vive con ___ madre.
+  cue: él
+  answer: [su]
+- id: s04
+  facet: singular
+  stem: ___ casa está cerca del centro.
+  cue: yo
+  answer: [Mi]
+- id: s05
+  facet: singular
+  stem: ¿Es ___ coche?
+  cue: tú
+  answer: [tu]
+- id: s06
+  facet: singular
+  stem: Ana y Luis venden ___ piso.
+  cue: ellos
+  answer: [su]
+- id: s07
+  facet: singular
+  stem: Me gusta ___ perro.
+  cue: tú
+  answer: [tu]
+- id: s08
+  facet: singular
+  stem: María trabaja con ___ padre.
+  cue: ella
+  answer: [su]
+- id: s09
+  facet: plural
+  stem: ___ padres viven en Viena.
+  cue: yo
+  answer: [Mis]
+- id: s10
+  facet: plural
+  stem: ¿Dónde están ___ llaves?
+  cue: tú
+  answer: [tus]
+- id: s11
+  facet: plural
+  stem: Luis visita a ___ abuelos.
+  cue: él
+  answer: [sus]
+- id: s12
+  facet: plural
+  stem: ___ amigos son simpáticos.
+  cue: yo
+  answer: [Mis]
+- id: s13
+  facet: plural
+  stem: Ella busca ___ gafas.
+  cue: ella
+  answer: [sus]
+- id: s14
+  facet: plural
+  stem: ¿Son ___ hijos?
+  cue: tú
+  answer: [tus]
+- id: s15
+  facet: nuestro
+  stem: ___ casa tiene jardín.
+  cue: nosotros
+  answer: [Nuestra]
+- id: s16
+  facet: nuestro
+  stem: ___ hijos van al colegio.
+  cue: nosotros
+  answer: [Nuestros]
+- id: s17
+  facet: nuestro
+  stem: ___ profesor es de Sevilla.
+  cue: nosotros
+  answer: [Nuestro]
+- id: s18
+  facet: nuestro
+  stem: ¿Dónde están ___ maletas?
+  cue: vosotros
+  answer: [vuestras]
+- id: s19
+  facet: nuestro
+  stem: ___ amigas viven en Málaga.
+  cue: nosotros
+  answer: [Nuestras]
+- id: s20
+  facet: tu-su
+  stem: Perdone, señora, ¿es ___ bolso?
+  options: [tu, su]
+  context: {de: Sie sprechen eine ältere Dame an., en: You speak to an older lady.}
+  answer: [su]
+- id: s21
+  facet: tu-su
+  stem: Marta, ¿es ___ móvil?
+  options: [tu, su]
+  context: {de: Sie fragen eine Freundin., en: You ask a friend.}
+  answer: [tu]
+- id: s22
+  facet: tu-su
+  stem: Señor García, ¿cuál es ___ dirección?
+  options: [tu, su]
+  context: {de: Sie füllen ein Formular für einen Kunden aus., en: You fill in a form for a customer.}
+  answer: [su]
+- id: s23
+  facet: tu-su
+  stem: Papá, ¿dónde está ___ coche?
+  options: [tu, su]
+  context: {de: Sie fragen Ihren Vater., en: You ask your father.}
+  answer: [tu]
+- id: s24
+  facet: tu-su
+  stem: Aquí tiene ___ pasaporte, señor.
+  options: [tu, su]
+  context: {de: Die Rezeptionistin gibt einem Gast den Pass zurück., en: The receptionist returns a guest's passport.}
+  answer: [su]

@@ -1,0 +1,31 @@
+skill: relations.toast.SP
+lang: es
+cefr: A1
+register:
+- formal
+- informal
+variety: peninsular
+exponents:
+- ¡Salud!
+- ¡Por nosotros!
+- ¡Por ti! / ¡Por ustedes!
+- ¡Por los anfitriones!
+enablers:
+  required:
+  - id: es.prag.wishes
+    use: productive
+  - id: es.gram.prep.basic
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: por + person or occasion (¡Por nuestra amistad!).
+version: 1
+status: draft

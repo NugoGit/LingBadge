@@ -1,0 +1,128 @@
+skill: comm.repair.SI
+lang: es
+reviewed_by: []
+facets:
+- id: not
+  label:
+    de: Sagen, dass man nicht verstanden hat
+    en: Say that you didn't understand
+- id: repeat
+  label:
+    de: Um Wiederholung oder langsameres Sprechen bitten
+    en: Ask someone to repeat or speak more slowly
+- id: spell
+  label:
+    de: Nach der Schreibweise fragen
+    en: Ask how something is spelt
+items:
+- id: not-1
+  facet: not
+  format: type
+  prompt:
+    de: 'Sagen Sie: Entschuldigung, ich habe nicht verstanden.'
+    en: 'Say: Sorry, I didn''t understand.'
+  stem: Perdone, no ___.
+  cue: entender
+  answer:
+  - entiendo
+  - lo entiendo
+  - he entendido
+  - lo he entendido
+  - comprendo
+- id: not-2
+  facet: not
+  format: choice
+  prompt:
+    de: Sie haben nichts verstanden. Was sagen Sie?
+    en: You understood nothing. What do you say?
+  context: Necesita un certificado de empadronamiento.
+  answer:
+  - Perdone, no entiendo.
+  options:
+  - Perdone, no entiendo.
+  - Sí, claro.
+  - Gracias, todo bien.
+  - Adiós.
+- id: not-3
+  facet: not
+  format: choice
+  prompt:
+    de: Welcher Satz heißt „Ich verstehe nicht“?
+    en: Which sentence means “I don't understand”?
+  answer:
+  - No entiendo.
+  options:
+  - No entiendo.
+  - No entiendes.
+  - No entiende.
+  - Entiendo no.
+- id: repeat-1
+  facet: repeat
+  format: type
+  prompt:
+    de: Bitten Sie höflich (Sie-Form), es zu wiederholen.
+    en: Ask politely (formal) for it to be repeated.
+  stem: ¿Puede ___, por favor?
+  cue: repetir
+  answer:
+  - repetir
+  - repetirlo
+- id: repeat-2
+  facet: repeat
+  format: type
+  prompt:
+    de: Bitten Sie, langsamer zu sprechen.
+    en: Ask someone to speak more slowly.
+  stem: Más ___, por favor.
+  answer:
+  - despacio
+  - lento
+- id: repeat-3
+  facet: repeat
+  format: choice
+  prompt:
+    de: Ihre Freundin spricht zu schnell. Was sagen Sie?
+    en: Your friend (female) speaks too fast. What do you say?
+  answer:
+  - Habla más despacio, por favor.
+  options:
+  - Habla más despacio, por favor.
+  - Habla más rápido, por favor.
+  - Hablo despacio.
+  - ¿Hablas español?
+- id: spell-1
+  facet: spell
+  format: type
+  prompt:
+    de: Fragen Sie, wie man das schreibt.
+    en: Ask how to write it.
+  stem: ¿Cómo se ___?
+  answer:
+  - escribe
+  - deletrea
+- id: spell-2
+  facet: spell
+  format: choice
+  prompt:
+    de: Sie wollen den Namen aufschreiben. Was fragen Sie?
+    en: You want to write the name down. What do you ask?
+  context: Mi apellido es Echeverría.
+  answer:
+  - ¿Cómo se escribe?
+  options:
+  - ¿Cómo se escribe?
+  - ¿Cómo se llama esto?
+  - ¿Qué significa?
+  - ¿Dónde vive?
+- id: spell-3
+  facet: spell
+  format: choice
+  prompt:
+    de: Sie buchstabieren den Namen „Javi“. Welche Folge ist richtig?
+    en: You spell the name “Javi”. Which sequence is correct?
+  answer:
+  - jota, a, uve, i
+  options:
+  - jota, a, uve, i
+  - ge, a, uve, i
+  - jota, a, be, i

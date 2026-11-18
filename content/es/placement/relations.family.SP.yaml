@@ -1,0 +1,115 @@
+skill: relations.family.SP
+lang: es
+reviewed_by: []
+facets:
+- id: who
+  label:
+    de: Wer ist wer
+    en: Who is who
+- id: place
+  label:
+    de: Wo jemand steht
+    en: Where someone is standing
+- id: look
+  label:
+    de: Aussehen
+    en: Appearance
+items:
+- id: who-1
+  facet: who
+  format: type
+  prompt:
+    de: 'Sagen Sie: Das ist meine Mutter.'
+    en: 'Say: This is my mother.'
+  stem: Esta es ___ madre.
+  cue: yo
+  answer:
+  - mi
+- id: who-2
+  facet: who
+  format: type
+  prompt:
+    de: 'Sagen Sie: Und das sind meine Eltern.'
+    en: 'Say: And these are my parents.'
+  stem: Y estos son ___ padres.
+  cue: yo
+  answer:
+  - mis
+- id: who-3
+  facet: who
+  format: type
+  prompt:
+    de: 'Sagen Sie: Das ist unsere Oma.'
+    en: 'Say: This is our grandma.'
+  stem: Esta es ___ abuela.
+  cue: nosotros
+  answer:
+  - nuestra
+- id: place-1
+  facet: place
+  format: type
+  prompt:
+    de: 'Sagen Sie: Links ist mein Bruder.'
+    en: 'Say: On the left is my brother.'
+  stem: A la ___ está mi hermano.
+  answer:
+  - izquierda
+- id: place-2
+  facet: place
+  format: type
+  prompt:
+    de: 'Sagen Sie: Rechts ist meine Schwester.'
+    en: 'Say: On the right is my sister.'
+  stem: A la ___ está mi hermana.
+  answer:
+  - derecha
+- id: place-3
+  facet: place
+  format: choice
+  prompt:
+    de: 'Sagen Sie: In der Mitte bin ich.'
+    en: 'Say: I''m in the middle.'
+  answer:
+  - En el centro estoy yo.
+  options:
+  - En el centro estoy yo.
+  - A la izquierda estoy yo.
+  - A la derecha estoy yo.
+  - Detrás estoy yo.
+- id: look-1
+  facet: look
+  format: type
+  prompt:
+    de: 'Sagen Sie: Sie ist groß, sie hat helle Haare.'
+    en: 'Say: She is tall, she has fair hair.'
+  stem: Es ___ y tiene el pelo rubio.
+  cue: alto
+  answer:
+  - alta
+- id: look-2
+  facet: look
+  format: type
+  prompt:
+    de: 'Sagen Sie: Mein Bruder trägt eine Brille.'
+    en: 'Say: My brother wears glasses.'
+  stem: Mi hermano lleva ___.
+  cue:
+    de: Brille
+    en: glasses
+  answer:
+  - gafas
+  - lentes
+  - anteojos
+- id: look-3
+  facet: look
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Er hat dunkle Haare.'
+    en: 'Say: He has dark hair.'
+  answer:
+  - Tiene el pelo oscuro.
+  options:
+  - Tiene el pelo oscuro.
+  - Tiene el pelo oscura.
+  - Es el pelo oscuro.
+  - Tiene los pelos oscuro.

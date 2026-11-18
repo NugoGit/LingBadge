@@ -1,0 +1,197 @@
+skill: weather.forecast.R
+lang: es
+reviewed_by: []
+facets:
+- id: temp
+  label:
+    de: Temperaturen
+    en: Temperatures
+- id: sky
+  label:
+    de: Himmel und Niederschlag
+    en: Sky and precipitation
+- id: wind
+  label:
+    de: Wind und Tageszeit
+    en: Wind and time of day
+items:
+- id: temp-1
+  facet: temp
+  format: type
+  prompt:
+    de: Wie warm ist es in der Nacht? (Zahl, Grad)
+    en: How warm is it at night? (number, degrees)
+  text: 'Madrid: de día 18°, nublado, algo de lluvia. Por la noche 9°. Viento flojo.'
+  answer:
+  - '9'
+  - 9°
+  - '+9'
+- id: temp-2
+  facet: temp
+  format: choice
+  prompt:
+    de: Wie kalt ist es am Tag?
+    en: How cold is it during the day?
+  text: 'Burgos: nieve, de día −3°, por la noche −10°. Viento fuerte.'
+  answer:
+  - −3°
+  options:
+  - −3°
+  - +3°
+  - −10°
+  - −13°
+- id: temp-3
+  facet: temp
+  format: choice
+  prompt:
+    de: Wann ist es wärmer?
+    en: When is it warmer?
+  text: 'Sevilla, sábado: soleado, 30°. Domingo: tormentas, 24°.'
+  answer:
+    de:
+    - Samstag
+    en:
+    - Saturday
+  options:
+    de:
+    - Samstag
+    - Sonntag
+    - Gleich warm
+    en:
+    - Saturday
+    - Sunday
+    - Equally warm
+- id: sky-1
+  facet: sky
+  format: choice
+  prompt:
+    de: Wie ist das Wetter tagsüber in Madrid?
+    en: What is the weather like in Madrid during the day?
+  text: 'Madrid: de día 18°, nublado, algo de lluvia. Por la noche 9°. Viento flojo.'
+  answer:
+    de:
+    - Bewölkt, etwas Regen
+    en:
+    - Cloudy, a little rain
+  options:
+    de:
+    - Bewölkt, etwas Regen
+    - Sonnig
+    - Schnee
+    - Gewitter
+    en:
+    - Cloudy, a little rain
+    - Sunny
+    - snow
+    - thunderstorm
+- id: sky-2
+  facet: sky
+  format: choice
+  prompt:
+    de: Was erwartet man am Sonntag?
+    en: What is expected on Sunday?
+  text: 'Sevilla, sábado: soleado, 30°. Domingo: tormentas, 24°.'
+  answer:
+    de:
+    - Gewitter
+    en:
+    - thunderstorm
+  options:
+    de:
+    - Gewitter
+    - Sonne
+    - Schnee
+    - Nebel
+    en:
+    - thunderstorm
+    - sun
+    - snow
+    - fog
+- id: sky-3
+  facet: sky
+  format: choice
+  prompt:
+    de: Was fällt in Burgos?
+    en: What is falling in Burgos?
+  text: 'Burgos: nieve, de día −3°, por la noche −10°. Viento fuerte.'
+  answer:
+    de:
+    - Schnee
+    en:
+    - snow
+  options:
+    de:
+    - Schnee
+    - Regen
+    - Hagel
+    - Nichts
+    en:
+    - snow
+    - rain
+    - Hail
+    - Nothing
+- id: wind-1
+  facet: wind
+  format: choice
+  prompt:
+    de: Wie ist der Wind in Madrid?
+    en: What is the wind like in Madrid?
+  text: 'Madrid: de día 18°, nublado, algo de lluvia. Por la noche 9°. Viento flojo.'
+  answer:
+    de:
+    - schwach
+    en:
+    - weak
+  options:
+    de:
+    - schwach
+    - stark
+    - kein Wind
+    en:
+    - weak
+    - strong
+    - no wind
+- id: wind-2
+  facet: wind
+  format: choice
+  prompt:
+    de: Wie ist der Wind in Burgos?
+    en: What is the wind like in Burgos?
+  text: 'Burgos: nieve, de día −3°, por la noche −10°. Viento fuerte.'
+  answer:
+    de:
+    - stark
+    en:
+    - strong
+  options:
+    de:
+    - stark
+    - schwach
+    - kein Wind
+    en:
+    - strong
+    - weak
+    - no wind
+- id: wind-3
+  facet: wind
+  format: choice
+  prompt:
+    de: Wann ist es neblig?
+    en: When is it foggy?
+  text: 'Bilbao: viento moderado, niebla por la mañana, despejado por la tarde.'
+  answer:
+    de:
+    - Am Morgen
+    en:
+    - In the morning
+  options:
+    de:
+    - Am Morgen
+    - Am Nachmittag
+    - Am Abend
+    - Den ganzen Tag
+    en:
+    - In the morning
+    - In the afternoon
+    - In the evening
+    - All day

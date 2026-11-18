@@ -1,0 +1,111 @@
+skill: personal.intro.SP
+lang: es
+reviewed_by: []
+facets:
+- id: open
+  label:
+    de: Begrüßung, Name, Schluss
+    en: Greeting, name, closing
+- id: age
+  label:
+    de: Alter, Herkunft, Wohnort
+    en: Age, origin, place of residence
+- id: likes
+  label:
+    de: Arbeit und Hobbys
+    en: Work and hobbies
+items:
+- id: open-1
+  facet: open
+  format: choice
+  prompt:
+    de: Sie beginnen eine Vorstellung vor einer Gruppe. Wie?
+    en: You start introducing yourself to a group. How?
+  answer:
+  - ¡Hola a todos! Me llamo Nina.
+  options:
+  - ¡Hola a todos! Me llamo Nina.
+  - ¡Adiós a todos! Me llamo Nina.
+  - ¡Hasta luego! Soy Nina.
+  - ¡Gracias! Nina.
+- id: open-2
+  facet: open
+  format: type
+  prompt:
+    de: 'Begrüßen Sie die Gruppe: Guten Tag!'
+    en: 'Greet the group: Good afternoon!'
+  stem: ¡___ días! Me llamo Peter.
+  answer:
+  - Buenos
+- id: open-3
+  facet: open
+  format: choice
+  prompt:
+    de: 'Am Ende sagen Sie: Danke für die Aufmerksamkeit!'
+    en: 'At the end you say: Thank you for your attention!'
+  answer:
+  - Gracias por su atención.
+  options:
+  - Gracias por su atención.
+  - Gracias para su atención.
+  - Gracias de su atención.
+  - Gracias su atención.
+- id: age-1
+  facet: age
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich bin 32 Jahre alt.'
+    en: 'Say: I''m 32 years old.'
+  stem: ___ treinta y dos años.
+  cue: tener
+  answer:
+  - Tengo
+- id: age-2
+  facet: age
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich bin 25 Jahre alt.'
+    en: 'Say: I''m 25 years old.'
+  stem: Tengo veinticinco ___.
+  answer:
+  - años
+- id: age-3
+  facet: age
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich komme aus Deutschland und wohne in Berlin.'
+    en: 'Say: I''m from Germany and live in Berlin.'
+  stem: Soy de Alemania y ___ en Berlín.
+  cue: vivir
+  answer:
+  - vivo
+- id: likes-1
+  facet: likes
+  format: type
+  prompt:
+    de: 'Sagen Sie: In der Freizeit spiele ich Gitarre.'
+    en: 'Say: In my free time I play the guitar.'
+  stem: En mi tiempo libre ___ la guitarra.
+  cue: tocar
+  answer:
+  - toco
+- id: likes-2
+  facet: likes
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich mag die spanische Küche.'
+    en: 'Say: I like Spanish cuisine.'
+  stem: Me encanta la cocina ___.
+  cue: español
+  answer:
+  - española
+- id: likes-3
+  facet: likes
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich arbeite in einer Bank.'
+    en: 'Say: I work in a bank.'
+  stem: Trabajo en ___ banco.
+  cue: un / una
+  answer:
+  - un

@@ -1,0 +1,36 @@
+skill: travel.directions.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Perdone, ¿hay una farmacia por aquí?
+- ¿Cómo llego a la estación?
+- Siga todo recto y luego gire a la derecha.
+- ¿Está lejos? — No, está cerca, a cinco minutos a pie.
+enablers:
+  required:
+  - id: es.gram.verb.hay-estar
+    use: productive
+  - id: es.lex.directions-place
+    use: productive
+  - id: es.lex.city-places
+    use: productive
+  - id: es.gram.verb.imperative-set
+    use: formulaic
+  - id: es.gram.prep.basic
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: hay + indefinite article for 'is there a…'; está + definite for 'where is the…'.
+version: 1
+status: draft

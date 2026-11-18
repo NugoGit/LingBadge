@@ -1,0 +1,25 @@
+# Language metadata used by the web app and the prompts.
+code: es
+name:
+  de: Spanisch
+  en: Spanish
+native: español
+tts: es-ES
+dir: ltr
+keyboard:
+- á
+- é
+- í
+- ó
+- ú
+- ñ
+- ü
+- ¿
+- ¡
+variety: Peninsular Spanish (norma culta); common Latin American variants accepted in answers
+status: A1 complete (52 skills), drafts not yet reviewed by a native speaker
+registers:
+  informal: tú
+  formal: usted
+prompt:
+  pitfalls: Mischung von peninsularem und lateinamerikanischem Wortschatz in einem Text, vosotros außerhalb Spaniens, falsche Freunde aus dem Deutschen und Englischen, fehlende Akzente und ¿ ¡

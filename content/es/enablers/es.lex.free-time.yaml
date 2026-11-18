@@ -1,0 +1,27 @@
+id: es.lex.free-time
+lang: es
+kind: lexis
+title: Free time and hobbies
+cefr: A1
+words:
+- el fútbol
+- el tenis
+- nadar
+- correr
+- leer
+- la música
+- la guitarra
+- bailar
+- cocinar
+- viajar
+- el cine
+- la película
+- pasear
+- los videojuegos
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

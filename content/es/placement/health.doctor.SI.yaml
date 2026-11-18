@@ -1,0 +1,118 @@
+skill: health.doctor.SI
+lang: es
+reviewed_by: []
+facets:
+- id: hurt
+  label:
+    de: Was weh tut
+    en: What hurts
+- id: symptom
+  label:
+    de: Beschwerden
+    en: Symptoms
+- id: since
+  label:
+    de: Seit wann; Fragen beantworten
+    en: Since when; answering questions
+items:
+- id: hurt-1
+  facet: hurt
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich habe Halsschmerzen.'
+    en: 'Say: I have a sore throat.'
+  stem: Me duele la ___.
+  answer:
+  - garganta
+- id: hurt-2
+  facet: hurt
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich habe Kopfschmerzen.'
+    en: 'Say: I have a headache.'
+  stem: Me ___ la cabeza.
+  answer:
+  - duele
+- id: hurt-3
+  facet: hurt
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Mir tun die Beine weh.'
+    en: 'Say: My legs hurt.'
+  answer:
+  - Me duelen las piernas.
+  options:
+  - Me duelen las piernas.
+  - Me duele las piernas.
+  - Yo duelo las piernas.
+  - Mis piernas me duele.
+- id: symptom-1
+  facet: symptom
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich habe Fieber.'
+    en: 'Say: I have a temperature.'
+  stem: Tengo ___.
+  answer:
+  - fiebre
+- id: symptom-2
+  facet: symptom
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich schlafe schlecht.'
+    en: 'Say: I sleep badly.'
+  stem: ___ mal.
+  cue: dormir
+  answer:
+  - Duermo
+- id: symptom-3
+  facet: symptom
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Ich habe Husten.'
+    en: 'Say: I have a cough.'
+  answer:
+  - Tengo tos.
+  options:
+  - Tengo tos.
+  - Soy tos.
+  - Estoy tos.
+  - Hay tos.
+- id: since-1
+  facet: since
+  format: type
+  prompt:
+    de: 'Antworten Sie: schon zwei Tage.'
+    en: 'Answer: for two days already.'
+  context: ¿Desde cuándo?
+  stem: Desde hace dos ___.
+  cue: día
+  answer:
+  - días
+- id: since-2
+  facet: since
+  format: type
+  prompt:
+    de: 'Antworten Sie: gestern.'
+    en: 'Answer: yesterday.'
+  context: ¿Cuándo empezó?
+  stem: ___.
+  cue:
+    de: gestern
+    en: yesterday
+  answer:
+  - Ayer
+- id: since-3
+  facet: since
+  format: choice
+  prompt:
+    de: Sie haben keine Allergie. Was antworten Sie?
+    en: You have no allergies. What do you answer?
+  context: ¿Tiene alguna alergia?
+  answer:
+  - No, ninguna.
+  options:
+  - No, ninguna.
+  - No, no me duele.
+  - Sí, dos días.
+  - No, gracias, no hace falta.

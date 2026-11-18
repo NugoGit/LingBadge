@@ -1,0 +1,120 @@
+skill: health.emergency.SI
+lang: es
+reviewed_by: []
+facets:
+- id: help
+  label:
+    de: Um Hilfe rufen
+    en: Call for help
+- id: what
+  label:
+    de: Sagen, was passiert ist
+    en: Say what happened
+- id: where
+  label:
+    de: Sagen, wo man ist
+    en: Say where you are
+items:
+- id: help-1
+  facet: help
+  format: type
+  prompt:
+    de: 'Rufen Sie: Hilfe!'
+    en: 'Shout: Help!'
+  stem: ¡___!
+  answer:
+  - Ayuda
+  - Socorro
+- id: help-2
+  facet: help
+  format: type
+  prompt:
+    de: 'Rufen Sie: Rufen Sie einen Krankenwagen!'
+    en: 'Shout: Call an ambulance!'
+  stem: ¡Llamen a una ___!
+  answer:
+  - ambulancia
+- id: help-3
+  facet: help
+  format: choice
+  prompt:
+    de: Welche Nummer ist in Spanien die allgemeine Notrufnummer?
+    en: What is the general emergency number in Spain?
+  answer:
+  - '112'
+  options:
+  - '112'
+  - 091
+  - '061'
+  - 080
+- id: what-1
+  facet: what
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Ein Mann ist gestürzt.'
+    en: 'Say: A man has fallen.'
+  answer:
+  - Un hombre se ha caído.
+  options:
+  - Un hombre se ha caído.
+  - Un hombre se cae mañana.
+  - Un hombre ha caída.
+  - Un hombre se ha caída.
+- id: what-2
+  facet: what
+  format: type
+  prompt:
+    de: 'Sagen Sie: Hier ist ein Unfall.'
+    en: 'Say: There''s been an accident here.'
+  stem: Ha habido un ___ aquí.
+  answer:
+  - accidente
+- id: what-3
+  facet: what
+  format: type
+  prompt:
+    de: 'Sagen Sie: Er atmet nicht.'
+    en: 'Say: He isn''t breathing.'
+  stem: No ___.
+  cue: respirar
+  answer:
+  - respira
+- id: where-1
+  facet: where
+  format: type
+  prompt:
+    de: 'Sagen Sie: … neben der Apotheke.'
+    en: 'Say: … next to the pharmacy.'
+  context: ¿Dónde están?
+  stem: En la calle Mayor, al lado de la ___.
+  cue:
+    de: Apotheke
+    en: pharmacy
+  answer:
+  - farmacia
+- id: where-2
+  facet: where
+  format: type
+  prompt:
+    de: 'Ergänzen Sie die Adresse: Haus Nummer zehn.'
+    en: 'Complete the address: house number ten.'
+  context: ¿Cuál es la dirección?
+  stem: Calle Goya, ___ diez.
+  cue:
+    de: Haus
+    en: house
+  answer:
+  - número
+- id: where-3
+  facet: where
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Wir sind beim Bahnhof.'
+    en: 'Say: We''re near the station.'
+  answer:
+  - Estamos al lado de la estación.
+  options:
+  - Estamos al lado de la estación.
+  - Somos al lado de la estación.
+  - Estamos al lado del estación.
+  - Hay al lado de la estación.

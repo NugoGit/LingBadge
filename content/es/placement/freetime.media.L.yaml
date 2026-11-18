@@ -1,0 +1,236 @@
+skill: freetime.media.L
+lang: es
+reviewed_by: []
+facets:
+- id: news
+  label:
+    de: Thema einer Nachricht
+    en: Topic of a news item
+- id: weather
+  label:
+    de: Wetterbericht
+    en: Weather report
+- id: ad
+  label:
+    de: Werbung und Veranstaltungen
+    en: Adverts and events
+items:
+- id: news-1
+  facet: news
+  format: choice
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
+  audio: Hoy España ha ganado a Francia dos a uno en el partido de fútbol.
+  answer:
+    de:
+    - Sport
+    en:
+    - Sport
+  options:
+    de:
+    - Sport
+    - Politik
+    - Wetter
+    - Werbung
+    - Kultur
+    en:
+    - Sport
+    - Politics
+    - Weather
+    - Advert
+    - Culture
+- id: news-2
+  facet: news
+  format: choice
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
+  audio: El presidente del Gobierno se ha reunido hoy con el primer ministro de Portugal.
+  answer:
+    de:
+    - Politik
+    en:
+    - Politics
+  options:
+    de:
+    - Politik
+    - Sport
+    - Wetter
+    - Werbung
+    - Kultur
+    en:
+    - Politics
+    - Sport
+    - Weather
+    - Advert
+    - Culture
+- id: news-3
+  facet: news
+  format: choice
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
+  audio: Nuestra tenista ha ganado la final del torneo.
+  answer:
+    de:
+    - Sport
+    en:
+    - Sport
+  options:
+    de:
+    - Sport
+    - Politik
+    - Wetter
+    - Werbung
+    - Kultur
+    en:
+    - Sport
+    - Politics
+    - Weather
+    - Advert
+    - Culture
+- id: weather-1
+  facet: weather
+  format: choice
+  prompt:
+    de: Wie wird das Wetter?
+    en: What will the weather be like?
+  audio: Mañana en Madrid hará sol, con hasta veinticinco grados.
+  answer:
+    de:
+    - sonnig und warm
+    en:
+    - sunny and warm
+  options:
+    de:
+    - sonnig und warm
+    - Regen
+    - Schnee
+    - Gewitter
+    en:
+    - sunny and warm
+    - rain
+    - snow
+    - thunderstorm
+- id: weather-2
+  facet: weather
+  format: choice
+  prompt:
+    de: Wie wird das Wetter?
+    en: What will the weather be like?
+  audio: Esta noche nevará en los Pirineos. Cuidado en las carreteras.
+  answer:
+    de:
+    - Schnee
+    en:
+    - snow
+  options:
+    de:
+    - Schnee
+    - Sonne
+    - Regen
+    - Nebel
+    en:
+    - snow
+    - sun
+    - rain
+    - fog
+- id: weather-3
+  facet: weather
+  format: choice
+  prompt:
+    de: Wie wird das Wetter?
+    en: What will the weather be like?
+  audio: Mañana, lluvia y viento fuerte. ¡No olviden el paraguas!
+  answer:
+    de:
+    - Regen und Wind
+    en:
+    - rain and wind
+  options:
+    de:
+    - Regen und Wind
+    - Sonne
+    - Schnee
+    - windstill und trocken
+    en:
+    - rain and wind
+    - sun
+    - snow
+    - calm and dry
+- id: ad-1
+  facet: ad
+  format: choice
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
+  audio: ¡Nuevo café Mañanero, ya en tu supermercado! ¡Solo tres euros!
+  answer:
+    de:
+    - Werbung
+    en:
+    - Advert
+  options:
+    de:
+    - Werbung
+    - Sport
+    - Politik
+    - Wetter
+    - Kultur
+    en:
+    - Advert
+    - Sport
+    - Politics
+    - Weather
+    - Culture
+- id: ad-2
+  facet: ad
+  format: choice
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
+  audio: ¡Atención! Descuentos en todos los móviles hasta el domingo.
+  answer:
+    de:
+    - Werbung
+    en:
+    - Advert
+  options:
+    de:
+    - Werbung
+    - Sport
+    - Politik
+    - Wetter
+    - Kultur
+    en:
+    - Advert
+    - Sport
+    - Politics
+    - Weather
+    - Culture
+- id: ad-3
+  facet: ad
+  format: choice
+  prompt:
+    de: Worum geht es?
+    en: What is it about?
+  audio: En Sevilla ha abierto un nuevo museo. La entrada es gratis los domingos.
+  answer:
+    de:
+    - Kultur
+    en:
+    - Culture
+  options:
+    de:
+    - Kultur
+    - Sport
+    - Politik
+    - Wetter
+    - Werbung
+    en:
+    - Culture
+    - Sport
+    - Politics
+    - Weather
+    - Advert

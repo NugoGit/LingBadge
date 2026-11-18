@@ -1,0 +1,132 @@
+skill: comm.numbers.L
+lang: es
+reviewed_by: []
+facets:
+- id: price
+  label:
+    de: Preise
+    en: Prices
+- id: time
+  label:
+    de: Uhrzeiten
+    en: Clock times
+- id: number
+  label:
+    de: Mengen, Zimmer- und Telefonnummern
+    en: Quantities, room and phone numbers
+items:
+- id: price-1
+  facet: price
+  format: type
+  prompt:
+    de: Wie viel kostet es? (Zahl)
+    en: How much does it cost? (number)
+  audio: Son veinticinco euros.
+  answer:
+  - '25'
+- id: price-2
+  facet: price
+  format: type
+  prompt:
+    de: Wie viel ist es insgesamt? (Zahl)
+    en: How much is it in total? (number)
+  audio: En total, son cuarenta y siete euros con cincuenta.
+  answer:
+  - 47,50
+  - '47.50'
+  - 47,5
+  - '47.5'
+- id: price-3
+  facet: price
+  format: type
+  prompt:
+    de: Wie viel kostet die Fahrkarte? (Zahl)
+    en: How much is the ticket? (number)
+  audio: El billete cuesta sesenta y ocho euros.
+  answer:
+  - '68'
+- id: price-4
+  facet: price
+  format: type
+  prompt:
+    de: Wie viel kostet der Kaffee? (Zahl)
+    en: How much is the coffee? (number)
+  audio: 'Un café con leche: un euro con ochenta.'
+  answer:
+  - 1,80
+  - '1.80'
+  - 1,8
+  - '1.8'
+- id: time-1
+  facet: time
+  format: type
+  prompt:
+    de: Um wie viel Uhr fährt der Zug? (z. B. 9:20)
+    en: What time does the train leave? (e.g. 9:20)
+  audio: El tren sale a las nueve y cuarenta.
+  answer:
+  - '9:40'
+- id: time-2
+  facet: time
+  format: type
+  prompt:
+    de: Um wie viel Uhr öffnet das Geschäft? (z. B. 9:20)
+    en: What time does the shop open? (e.g. 9:20)
+  audio: La tienda abre a las ocho de la mañana.
+  answer:
+  - '8:00'
+  - '8'
+- id: time-3
+  facet: time
+  format: type
+  prompt:
+    de: Um wie viel Uhr kommt der Bus? (z. B. 9:20)
+    en: What time does the bus come? (e.g. 9:20)
+  audio: El autobús llega a las catorce quince.
+  answer:
+  - '14:15'
+- id: time-4
+  facet: time
+  format: type
+  prompt:
+    de: Um wie viel Uhr beginnt die Vorlesung? (z. B. 9:20)
+    en: What time does the lecture start? (e.g. 9:20)
+  audio: La clase empieza a las diez y media.
+  answer:
+  - '10:30'
+- id: number-1
+  facet: number
+  format: type
+  prompt:
+    de: Notieren Sie die Telefonnummer (nur Ziffern).
+    en: Write down the phone number (digits only).
+  audio: Mi número de teléfono es el seis, cuatro, cinco, doce, treinta y cuatro, cincuenta y seis.
+  answer:
+  - '645123456'
+- id: number-2
+  facet: number
+  format: type
+  prompt:
+    de: Wie viel Gramm Käse? (Zahl)
+    en: How many grams of cheese? (number)
+  audio: Doscientos cincuenta gramos de queso, por favor.
+  answer:
+  - '250'
+- id: number-3
+  facet: number
+  format: type
+  prompt:
+    de: Welche Zimmernummer? (Zahl)
+    en: Which room number? (number)
+  audio: Su habitación es la trescientos doce.
+  answer:
+  - '312'
+- id: number-4
+  facet: number
+  format: type
+  prompt:
+    de: Wie viele Kilo Kartoffeln? (Zahl)
+    en: How many kilos of potatoes? (number)
+  audio: Tres kilos de patatas, por favor.
+  answer:
+  - '3'

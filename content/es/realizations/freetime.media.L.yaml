@@ -1,0 +1,25 @@
+skill: freetime.media.L
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- '(topic recognition only: sport, weather, politics, advert)'
+enablers:
+  required:
+  - id: es.lex.free-time
+    use: productive
+  - id: es.lex.weather
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+version: 1
+status: draft

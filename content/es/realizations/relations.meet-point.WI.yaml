@@ -1,0 +1,30 @@
+skill: relations.meet-point.WI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- Ya estoy en la estación, al lado de la taquilla.
+- Llevo una chaqueta roja.
+- Llego diez minutos tarde, ¡perdona!
+- ¿Dónde estás?
+enablers:
+  required:
+  - id: es.gram.verb.ser-estar
+    use: productive
+  - id: es.gram.prep.basic
+    use: productive
+  - id: es.lex.appearance-clothes
+    use: productive
+  - id: es.gram.adj.agreement
+    use: productive
+  - id: es.lex.directions-place
+    use: productive
+  supporting:
+  - id: es.orth.accents-punctuation
+    use: productive
+rubric_specifics:
+  key_structures: estar en + place; llevar + clothes with adjective agreement.
+version: 1
+status: draft

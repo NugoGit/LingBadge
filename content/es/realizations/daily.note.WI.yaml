@@ -1,0 +1,29 @@
+skill: daily.note.WI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- Estoy en el supermercado. Vuelvo a las cinco.
+- He ido a la farmacia, vuelvo en una hora.
+- La comida está en la nevera.
+- ¡Llámame!
+enablers:
+  required:
+  - id: es.gram.verb.ser-estar
+    use: productive
+  - id: es.gram.prep.basic
+    use: productive
+  - id: es.num.time
+    use: productive
+  - id: es.lex.city-places
+    use: productive
+  - id: es.gram.verb.past
+    use: formulaic
+  - id: es.gram.verb.imperative-set
+    use: formulaic
+rubric_specifics:
+  key_structures: estar en + place; vuelvo a las / en una hora; past only as the chunk «he ido».
+version: 1
+status: draft

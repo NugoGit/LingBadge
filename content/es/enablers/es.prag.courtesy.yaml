@@ -1,0 +1,12 @@
+id: es.prag.courtesy
+lang: es
+kind: pragmatics
+title: por favor, gracias, de nada, perdón / perdone, lo siento, no pasa nada
+cefr: A1
+sources:
+- pcic.A1.prag.courtesy
+check:
+  template: enabler.pragmatics.v1
+  items: 10
+  threshold: 0.9
+  channel: text

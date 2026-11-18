@@ -1,0 +1,129 @@
+skill: relations.meet-point.WI
+lang: es
+reviewed_by: []
+facets:
+- id: where
+  label:
+    de: Wo man ist
+    en: Where you are
+- id: wear
+  label:
+    de: Was man trägt
+    en: What you're wearing
+- id: late
+  label:
+    de: Verspätung, wo bist du?
+    en: Running late, where are you?
+items:
+- id: where-1
+  facet: where
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Ich bin schon am Bahnhof, bei der Kasse.'
+    en: 'Write: I''m already at the station, by the ticket office.'
+  stem: Ya estoy en la ___, al lado de la taquilla.
+  cue:
+    de: Bahnhof
+    en: station
+  answer:
+  - estación
+- id: where-2
+  facet: where
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Ich bin beim Eingang.'
+    en: 'Write: I''m by the entrance.'
+  stem: Estoy al lado de la ___.
+  cue:
+    de: Eingang
+    en: entrance
+  answer:
+  - entrada
+- id: where-3
+  facet: where
+  format: choice
+  prompt:
+    de: 'Antworten Sie: Ich bin schon im Café.'
+    en: 'Answer: I''m already in the café.'
+  context: ¿Dónde estás?
+  answer:
+  - Ya estoy en el café.
+  options:
+  - Ya estoy en el café.
+  - Ya soy en el café.
+  - Ya estoy al café.
+  - Ya hay en el café.
+- id: wear-1
+  facet: wear
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Ich trage eine rote Jacke.'
+    en: 'Write: I''m wearing a red jacket.'
+  stem: Llevo una chaqueta ___.
+  cue: rojo
+  answer:
+  - roja
+- id: wear-2
+  facet: wear
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Ich trage eine schwarze Kappe.'
+    en: 'Write: I''m wearing a black cap.'
+  stem: Llevo una gorra ___.
+  cue: negro
+  answer:
+  - negra
+- id: wear-3
+  facet: wear
+  format: choice
+  prompt:
+    de: 'Schreiben Sie: Ich trage einen grauen Pullover.'
+    en: 'Write: I''m wearing a grey jumper.'
+  answer:
+  - Llevo un jersey gris.
+  options:
+  - Llevo un jersey gris.
+  - Llevo un jersey grisa.
+  - Llevo una jersey gris.
+  - Soy un jersey gris.
+- id: late-1
+  facet: late
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Ich komme zehn Minuten zu spät, sorry!'
+    en: 'Write: I''ll be ten minutes late, sorry!'
+  stem: Llego diez minutos ___, ¡perdona!
+  answer:
+  - tarde
+- id: late-2
+  facet: late
+  format: choice
+  prompt:
+    de: Ihr Freund schreibt. Was heißt das?
+    en: Your friend writes. What does it mean?
+  context: Llego 15 minutos tarde.
+  answer:
+    de:
+    - Er kommt 15 Minuten zu spät.
+    en:
+    - He'll be 15 minutes late.
+  options:
+    de:
+    - Er kommt 15 Minuten zu spät.
+    - Er ist seit 15 Minuten da.
+    - Er kommt in 15 Minuten nicht.
+    - Er wartet 15 Minuten.
+    en:
+    - He'll be 15 minutes late.
+    - He's been there for 15 minutes.
+    - He won't come in 15 minutes.
+    - He's waiting 15 minutes.
+- id: late-3
+  facet: late
+  format: type
+  prompt:
+    de: 'Fragen Sie: Wo bist du?'
+    en: 'Ask: Where are you?'
+  stem: ¿___ estás?
+  answer:
+  - Dónde

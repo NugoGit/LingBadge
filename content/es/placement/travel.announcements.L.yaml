@@ -1,0 +1,141 @@
+skill: travel.announcements.L
+lang: es
+reviewed_by: []
+facets:
+- id: train
+  label:
+    de: Welcher Zug, wohin
+    en: Which train, where to
+- id: platform
+  label:
+    de: Gleis, Bahnsteig
+    en: Track, platform
+- id: time
+  label:
+    de: Zeit und Verspätung
+    en: Time and delay
+items:
+- id: train-1
+  facet: train
+  format: choice
+  prompt:
+    de: Wohin fährt der Zug?
+    en: Where is the train going?
+  audio: El tren con destino Sevilla sale de la vía dos a las nueve y veinte.
+  answer:
+    de:
+    - Sevilla
+    en:
+    - Seville
+  options:
+    de:
+    - Sevilla
+    - Madrid
+    - Valencia
+    - Bilbao
+    en:
+    - Seville
+    - Madrid
+    - Valencia
+    - Bilbao
+- id: train-2
+  facet: train
+  format: choice
+  prompt:
+    de: Was passiert mit dem Zug 43?
+    en: What is happening with train 43?
+  audio: 'Atención: el tren número cuarenta y tres, procedente de Barcelona, está entrando por la vía cinco.'
+  answer:
+    de:
+    - Er kommt an
+    en:
+    - It is arriving
+  options:
+    de:
+    - Er kommt an
+    - Er fährt ab
+    - Er hat Verspätung
+    - Er fällt aus
+    en:
+    - It is arriving
+    - It is leaving
+    - It is delayed
+    - It is cancelled
+- id: train-3
+  facet: train
+  format: choice
+  prompt:
+    de: Welcher Zug hat Verspätung?
+    en: Which train is delayed?
+  audio: El tren con destino Bilbao lleva un retraso de treinta minutos.
+  answer:
+    de:
+    - Der Zug nach Bilbao
+    en:
+    - The train to Bilbao
+  options:
+    de:
+    - Der Zug nach Bilbao
+    - Der Zug nach Sevilla
+    - Der Zug aus Bilbao
+    - Der Zug nach Toledo
+    en:
+    - The train to Bilbao
+    - The train to Seville
+    - The train from Bilbao
+    - The train to Toledo
+- id: platform-1
+  facet: platform
+  format: type
+  prompt:
+    de: Von welchem Gleis? (Zahl)
+    en: From which track? (number)
+  audio: El tren con destino Sevilla sale de la vía dos a las nueve y veinte.
+  answer:
+  - '2'
+- id: platform-2
+  facet: platform
+  format: type
+  prompt:
+    de: Auf welchem Gleis? (Zahl)
+    en: On which track? (number)
+  audio: 'Atención: el tren número cuarenta y tres, procedente de Barcelona, está entrando por la vía cinco.'
+  answer:
+  - '5'
+- id: platform-3
+  facet: platform
+  format: type
+  prompt:
+    de: Von welchem Bahnsteig fährt der Bus? (Zahl)
+    en: From which platform does the bus leave? (number)
+  audio: 'Señores pasajeros: el autobús con destino Toledo sale a las catorce horas del andén tres.'
+  answer:
+  - '3'
+- id: time-1
+  facet: time
+  format: type
+  prompt:
+    de: Um wie viel Uhr fährt der Zug? (z. B. 9:20)
+    en: What time does the train leave? (e.g. 9:20)
+  audio: El tren con destino Sevilla sale de la vía dos a las nueve y veinte.
+  answer:
+  - '9:20'
+- id: time-2
+  facet: time
+  format: type
+  prompt:
+    de: Wie viele Minuten Verspätung? (Zahl)
+    en: How many minutes' delay? (number)
+  audio: El tren con destino Bilbao lleva un retraso de treinta minutos.
+  answer:
+  - '30'
+- id: time-3
+  facet: time
+  format: type
+  prompt:
+    de: Um wie viel Uhr fährt der Bus? (z. B. 9:20)
+    en: What time does the bus leave? (e.g. 9:20)
+  audio: 'Señores pasajeros: el autobús con destino Toledo sale a las catorce horas del andén tres.'
+  answer:
+  - '14:00'
+  - '14'

@@ -1,0 +1,26 @@
+skill: relations.plans.WI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- ¡Hola! ¿Tomamos un café mañana?
+- Puedo a las seis. ¿Te va bien?
+- Lo siento, hoy no puedo.
+- ¡Genial, hasta mañana!
+enablers:
+  required:
+  - id: es.gram.verb.modal
+    use: productive
+  - id: es.num.time
+    use: productive
+  - id: es.gram.syntax.questions
+    use: productive
+  - id: es.gram.pron.object
+    use: formulaic
+  supporting:
+  - id: es.orth.accents-punctuation
+    use: productive
+version: 1
+status: draft

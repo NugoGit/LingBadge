@@ -1,0 +1,14 @@
+id: es.gram.adj.agreement
+lang: es
+kind: grammar
+title: Adjective agreement in gender and number (alto, alta, altos, verde)
+cefr: A1
+requires:
+- es.gram.noun.gender
+sources:
+- pcic.A1.gram.adjectives
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,14 @@
+id: es.gram.verb.imperative-set
+lang: es
+kind: grammar
+title: Imperatives in fixed phrases (perdone, oiga, repita, siga recto, gire, pase, siéntese)
+cefr: A2
+requires:
+- es.gram.verb.present-irregular
+sources:
+- pcic.A1.gram.imperative
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

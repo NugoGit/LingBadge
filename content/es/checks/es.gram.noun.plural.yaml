@@ -1,0 +1,166 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.gram.noun.plural
+lang: es
+facets:
+- id: vowel-s
+  band: core
+  format: type
+  rule: {de: 'Auf Vokal: + -s (libro → libros, casa → casas, coche → coches)', en: 'Ending in a vowel: add -s (libro → libros, casa → casas, coche → coches)'}
+  instruction: {de: Setze den Plural ein., en: Put in the plural.}
+- id: cons-es
+  band: variant
+  format: type
+  rule: {de: 'Auf Konsonant: + -es (ciudad → ciudades, tren → trenes); -z → -ces (lápiz → lápices, vez → veces)', en: 'Ending in a consonant: add -es (ciudad → ciudades, tren → trenes); -z → -ces (lápiz → lápices, vez → veces)'}
+  instruction: {de: Setze den Plural ein., en: Put in the plural.}
+- id: accent
+  band: exception
+  format: type
+  rule: {de: 'Der Akzent wandert: canción → canciones, autobús → autobuses, inglés → ingleses, joven → jóvenes; lunes, crisis bleiben gleich', en: 'The accent moves: canción → canciones, autobús → autobuses, inglés → ingleses, joven → jóvenes; lunes, crisis
+      stay the same'}
+  instruction: {de: Setze den Plural ein. Achte auf den Akzent., en: Put in the plural. Watch the accent.}
+- id: stressed-vowel
+  band: contrast
+  format: type
+  rule: {de: 'Betonter Vokal am Ende: meist nur -s (café → cafés, sofá → sofás, menú → menús)', en: 'Stressed final vowel: usually just -s (café → cafés, sofá → sofás, menú → menús)'}
+  instruction: {de: Setze den Plural ein., en: Put in the plural.}
+items:
+- id: p01
+  facet: vowel-s
+  stem: Tengo dos ___.
+  cue: hermano
+  answer: [hermanos]
+- id: p02
+  facet: vowel-s
+  stem: Compro tres ___.
+  cue: manzana
+  answer: [manzanas]
+- id: p03
+  facet: vowel-s
+  stem: Hay muchos ___ en la calle.
+  cue: coche
+  answer: [coches]
+- id: p04
+  facet: vowel-s
+  stem: Leo dos ___ al mes.
+  cue: libro
+  answer: [libros]
+- id: p05
+  facet: vowel-s
+  stem: Las ___ están abiertas.
+  cue: tienda
+  answer: [tiendas]
+- id: p06
+  facet: vowel-s
+  stem: Tenemos cuatro ___.
+  cue: silla
+  answer: [sillas]
+- id: p07
+  facet: vowel-s
+  stem: ¿Dónde están los ___?
+  cue: billete
+  answer: [billetes]
+- id: p08
+  facet: vowel-s
+  stem: Mis ___ viven en Viena.
+  cue: amigo
+  answer: [amigos]
+- id: p09
+  facet: vowel-s
+  stem: Hay cinco ___ en el piso.
+  cue: ventana
+  answer: [ventanas]
+- id: p10
+  facet: cons-es
+  stem: Me gustan las ___ grandes.
+  cue: ciudad
+  answer: [ciudades]
+- id: p11
+  facet: cons-es
+  stem: Hay dos ___ a Sevilla.
+  cue: tren
+  answer: [trenes]
+- id: p12
+  facet: cons-es
+  stem: En la calle hay tres ___.
+  cue: hotel
+  answer: [hoteles]
+- id: p13
+  facet: cons-es
+  stem: Tengo dos ___ rojos.
+  cue: lápiz
+  answer: [lápices]
+- id: p14
+  facet: cons-es
+  stem: Voy al gimnasio tres ___ por semana.
+  cue: vez
+  answer: [veces]
+- id: p15
+  facet: cons-es
+  stem: Las ___ de la casa no funcionan.
+  cue: luz
+  answer: [luces]
+- id: p16
+  facet: cons-es
+  stem: Hay muchas ___ en el jardín.
+  cue: flor
+  answer: [flores]
+- id: p17
+  facet: cons-es
+  stem: Los ___ trabajan mucho.
+  cue: profesor
+  answer: [profesores]
+- id: p18
+  facet: accent
+  stem: Me gustan estas ___.
+  cue: canción
+  answer: [canciones]
+- id: p19
+  facet: accent
+  stem: Los ___ salen cada diez minutos.
+  cue: autobús
+  answer: [autobuses]
+- id: p20
+  facet: accent
+  stem: Mis vecinos son ___.
+  cue: inglés
+  answer: [ingleses]
+- id: p21
+  facet: accent
+  stem: Los ___ van a la playa.
+  cue: joven
+  answer: [jóvenes]
+- id: p22
+  facet: accent
+  stem: Los ___ trabajo en casa.
+  cue: lunes
+  answer: [lunes]
+- id: p23
+  facet: accent
+  stem: Hay dos ___ en la mesa.
+  cue: examen
+  answer: [exámenes]
+- id: p24
+  facet: stressed-vowel
+  stem: Dos ___, por favor.
+  cue: café
+  answer: [cafés]
+- id: p25
+  facet: stressed-vowel
+  stem: En el salón hay dos ___.
+  cue: sofá
+  answer: [sofás]
+- id: p26
+  facet: stressed-vowel
+  stem: El restaurante tiene tres ___.
+  cue: menú
+  answer: [menús]
+- id: p27
+  facet: stressed-vowel
+  stem: Las ___ hablan en el parque.
+  cue: mamá
+  answer: [mamás]
+- id: p28
+  facet: stressed-vowel
+  stem: Los ___ de mis amigos son simpáticos.
+  cue: papá
+  answer: [papás]

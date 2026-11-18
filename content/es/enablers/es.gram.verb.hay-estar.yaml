@@ -1,0 +1,14 @@
+id: es.gram.verb.hay-estar
+lang: es
+kind: grammar
+title: hay vs está / están (there is vs where it is)
+cefr: A1
+requires:
+- es.gram.verb.ser-estar
+sources:
+- pcic.A1.gram.hay-estar
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

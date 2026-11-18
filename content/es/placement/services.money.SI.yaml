@@ -1,0 +1,139 @@
+skill: services.money.SI
+lang: es
+reviewed_by: []
+facets:
+- id: where
+  label:
+    de: Wo man Geld wechselt
+    en: Where to change money
+- id: rate
+  label:
+    de: Kurs und Betrag
+    en: Rate and amount
+- id: pay
+  label:
+    de: Karte oder bar
+    en: Card or cash
+items:
+- id: where-1
+  facet: where
+  format: type
+  prompt:
+    de: Fragen Sie, wo man Geld wechseln kann.
+    en: Ask where you can change money.
+  stem: ¿Dónde puedo ___ dinero?
+  answer:
+  - cambiar
+- id: where-2
+  facet: where
+  format: choice
+  prompt:
+    de: Fragen Sie nach einem Geldautomaten.
+    en: Ask for a cash machine.
+  answer:
+  - ¿Dónde hay un cajero?
+  options:
+  - ¿Dónde hay un cajero?
+  - ¿Dónde hay un banco?
+  - ¿Cuánto cuesta un cajero?
+  - ¿Qué es un cajero?
+- id: where-3
+  facet: where
+  format: choice
+  prompt:
+    de: Was ist „Cambio de divisas“?
+    en: What is “Cambio de divisas”?
+  answer:
+    de:
+    - Wechselstube
+    en:
+    - Bureau de change
+  options:
+    de:
+    - Wechselstube
+    - Geldautomat
+    - Kasse
+    - Kreditschalter
+    en:
+    - Bureau de change
+    - Cash machine
+    - Cash desk
+    - Loans counter
+- id: rate-1
+  facet: rate
+  format: type
+  prompt:
+    de: Fragen Sie nach dem Dollarkurs.
+    en: Ask about the dollar rate.
+  stem: ¿A cuánto está el ___?
+  cue:
+    de: Dollar
+    en: dollar
+  answer:
+  - dólar
+- id: rate-2
+  facet: rate
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich möchte hundert Dollar wechseln.'
+    en: 'Say: I''d like to change a hundred dollars.'
+  stem: Quiero cambiar cien ___.
+  cue: dólar
+  answer:
+  - dólares
+- id: rate-3
+  facet: rate
+  format: type
+  prompt:
+    de: 'Antworten Sie: zweihundert Franken.'
+    en: 'Answer: two hundred francs.'
+  context: ¿Cuánto quiere cambiar?
+  stem: ___ francos.
+  cue: '200'
+  answer:
+  - Doscientos
+- id: pay-1
+  facet: pay
+  format: type
+  prompt:
+    de: 'Fragen Sie: Mit Karte oder nur bar?'
+    en: 'Ask: Card, or only cash?'
+  stem: ¿Se puede pagar con tarjeta o solo en ___?
+  answer:
+  - efectivo
+- id: pay-2
+  facet: pay
+  format: choice
+  prompt:
+    de: Was bedeutet das?
+    en: What does it mean?
+  context: Solo aceptamos efectivo.
+  answer:
+    de:
+    - Nur Barzahlung
+    en:
+    - Cash only
+  options:
+    de:
+    - Nur Barzahlung
+    - Nur Karte
+    - Karte oder bar
+    - Kostenlos
+    en:
+    - Cash only
+    - Card only
+    - Card or cash
+    - Free of charge
+- id: pay-3
+  facet: pay
+  format: choice
+  prompt:
+    de: Fragen Sie, ob man mit Karte zahlen kann.
+    en: Ask whether you can pay by card.
+  answer:
+  - ¿Puedo pagar con tarjeta?
+  options:
+  - ¿Puedo pagar con tarjeta?
+  - ¿Puedo pagar la tarjeta?
+  - ¿Puedo tarjeta?
+  - ¿Puedo pagar en tarjeta?

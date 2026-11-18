@@ -1,0 +1,34 @@
+skill: health.doctor.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Me duele la garganta.
+- Tengo fiebre.
+- Desde hace dos días.
+- Duermo mal.
+enablers:
+  required:
+  - id: es.lex.health-body
+    use: productive
+  - id: es.gram.verb.gustar
+    use: formulaic
+  - id: es.gram.verb.present-irregular
+    use: productive
+  - id: es.gram.syntax.time-adverbs
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: doler like gustar (me duele la cabeza / me duelen las piernas); tener fiebre / tos.
+version: 1
+status: draft

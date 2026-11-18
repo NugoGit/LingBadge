@@ -1,0 +1,12 @@
+id: es.orth.accents-punctuation
+lang: es
+kind: orthography
+title: Written accents (qué, está, café) and ¿ ? ¡ !
+cefr: A1
+sources:
+- pcic.A1.orth.accents
+check:
+  template: enabler.orthography.v1
+  items: 10
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,133 @@
+skill: shopping.clothes.SI
+lang: es
+reviewed_by: []
+facets:
+- id: try
+  label:
+    de: Anprobieren
+    en: Trying on
+- id: size
+  label:
+    de: Größe und Farbe
+    en: Size and colour
+- id: decide
+  label:
+    de: Zu groß, zu klein, kaufen
+    en: Too big, too small, buying
+items:
+- id: try-1
+  facet: try
+  format: type
+  prompt:
+    de: Fragen Sie, ob Sie anprobieren dürfen.
+    en: Ask whether you may try it on.
+  stem: ¿Puedo ___?
+  answer:
+  - probármelo
+  - probármela
+  - probarlo
+  - probarla
+  - probármelos
+  - probármelas
+  - probarme esto
+- id: try-2
+  facet: try
+  format: choice
+  prompt:
+    de: Fragen Sie nach der Umkleidekabine.
+    en: Ask for the fitting room.
+  answer:
+  - ¿Dónde están los probadores?
+  options:
+  - ¿Dónde están los probadores?
+  - ¿Dónde está la caja?
+  - ¿Dónde está la salida?
+  - ¿Dónde están los servicios?
+- id: try-3
+  facet: try
+  format: choice
+  prompt:
+    de: Es passt gut. Was sagen Sie?
+    en: It fits well. What do you say?
+  context: ¿Qué tal le queda?
+  answer:
+  - Me queda bien.
+  options:
+  - Me queda bien.
+  - Me queda pequeño.
+  - Me queda grande.
+  - No me gusta.
+- id: size-1
+  facet: size
+  format: type
+  prompt:
+    de: Fragen Sie nach dem Pullover in Blau.
+    en: Ask for the jumper in blue.
+  stem: ¿Tiene este jersey en ___?
+  cue:
+    de: blau
+    en: blue
+  answer:
+  - azul
+- id: size-2
+  facet: size
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich brauche Größe M.'
+    en: 'Say: I need size M.'
+  stem: Necesito la ___ M.
+  cue:
+    de: Größe
+    en: size
+  answer:
+  - talla
+- id: size-3
+  facet: size
+  format: type
+  prompt:
+    de: Fragen Sie nach dem Kleid in Rot.
+    en: Ask for the dress in red.
+  stem: ¿Tiene este vestido en ___?
+  cue:
+    de: rot
+    en: red
+  answer:
+  - rojo
+- id: decide-1
+  facet: decide
+  format: choice
+  prompt:
+    de: Die Hose ist zu klein. Was sagen Sie?
+    en: The trousers are too small. What do you say?
+  answer:
+  - Me quedan pequeños. ¿Tiene una talla más?
+  options:
+  - Me quedan pequeños. ¿Tiene una talla más?
+  - Me quedan grandes. ¿Tiene una talla más?
+  - Me quedan pequeños. ¿Tiene una talla menos?
+  - Son bonitos. Me los llevo.
+- id: decide-2
+  facet: decide
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich nehme das.'
+    en: 'Say: I''ll take it.'
+  stem: Me lo ___.
+  cue: llevar
+  answer:
+  - llevo
+  - quedo
+- id: decide-3
+  facet: decide
+  format: type
+  prompt:
+    de: 'Sagen Sie: Der Pullover ist zu groß. Gibt es einen kleineren?'
+    en: 'Say: The jumper is too big. Is there a smaller one?'
+  stem: El jersey me queda ___. ¿Tiene uno más pequeño?
+  cue:
+    de: zu groß
+    en: too big
+  answer:
+  - grande
+  - muy grande
+  - demasiado grande

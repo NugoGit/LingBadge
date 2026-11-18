@@ -1,0 +1,113 @@
+skill: home.where-live.SI
+lang: es
+reviewed_by: []
+facets:
+- id: city
+  label:
+    de: Stadt und Gegend
+    en: City and area
+- id: home
+  label:
+    de: Wohnung und Zimmer
+    en: Flat and rooms
+- id: ask
+  label:
+    de: Zurückfragen
+    en: Asking back
+items:
+- id: city-1
+  facet: city
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich wohne in Wien.'
+    en: 'Say: I live in Vienna.'
+  stem: Vivo ___ Viena.
+  answer:
+  - en
+- id: city-2
+  facet: city
+  format: type
+  prompt:
+    de: 'Sagen Sie: … nicht weit vom Zentrum.'
+    en: 'Say: … not far from the centre.'
+  stem: Vivo cerca ___ centro.
+  cue: de + el
+  answer:
+  - del
+- id: city-3
+  facet: city
+  format: type
+  prompt:
+    de: 'Sagen Sie: Meine Stadt ist groß und schön.'
+    en: 'Say: My city is big and beautiful.'
+  stem: Mi ciudad es grande y ___.
+  cue: bonito
+  answer:
+  - bonita
+- id: home-1
+  facet: home
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich habe eine kleine Wohnung, zwei Zimmer.'
+    en: 'Say: I have a small flat, two rooms.'
+  stem: 'Tengo un piso pequeño: dos ___.'
+  cue: habitación
+  answer:
+  - habitaciones
+- id: home-2
+  facet: home
+  format: type
+  prompt:
+    de: 'Sagen Sie: Wir haben eine moderne Küche.'
+    en: 'Say: We have a modern kitchen.'
+  stem: Tenemos una cocina ___.
+  cue: moderno
+  answer:
+  - moderna
+- id: home-3
+  facet: home
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Ich wohne in einem Haus mit Garten.'
+    en: 'Say: I live in a house with a garden.'
+  answer:
+  - Vivo en una casa con jardín.
+  options:
+  - Vivo en una casa con jardín.
+  - Vivo en una casa de jardín con.
+  - Vivo a una casa con jardín.
+  - Vivo una casa con jardín.
+- id: ask-1
+  facet: ask
+  format: type
+  prompt:
+    de: 'Fragen Sie zurück: Und wo wohnst du?'
+    en: 'Ask back: And where do you live?'
+  context: Vivo en Madrid.
+  stem: ¿Y tú dónde ___?
+  cue: vivir
+  answer:
+  - vives
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt:
+    de: Fragen Sie (Sie-Form), wo die Person wohnt.
+    en: Ask (formal) where the person lives.
+  answer:
+  - ¿Y usted dónde vive?
+  options:
+  - ¿Y usted dónde vive?
+  - ¿Y tú dónde vives?
+  - ¿Y dónde trabaja usted?
+  - ¿Y de dónde es usted?
+- id: ask-3
+  facet: ask
+  format: type
+  prompt:
+    de: 'Fragen Sie: Wie viele Zimmer hat deine Wohnung?'
+    en: 'Ask: How many rooms does your flat have?'
+  stem: ¿Cuántas ___ tiene tu piso?
+  cue: habitación
+  answer:
+  - habitaciones

@@ -1,0 +1,127 @@
+skill: personal.details.SI
+lang: es
+reviewed_by: []
+facets:
+- id: name
+  label:
+    de: Name und Buchstabieren
+    en: Name and spelling
+- id: address
+  label:
+    de: Adresse und Telefon
+    en: Address and phone
+- id: origin
+  label:
+    de: Herkunft und Geburtsdatum
+    en: Origin and date of birth
+items:
+- id: name-1
+  facet: name
+  format: choice
+  prompt:
+    de: 'Antworten Sie (Nachname: Müller).'
+    en: 'Answer (surname: Müller).'
+  context: ¿Su apellido?
+  answer:
+  - Mi apellido es Müller.
+  options:
+  - Mi apellido es Müller.
+  - Mis apellido es Müller.
+  - Me apellido es Müller.
+  - Yo apellido Müller.
+- id: name-2
+  facet: name
+  format: type
+  prompt:
+    de: 'Ergänzen Sie: Man schreibt es so …'
+    en: 'Complete: It is spelt like this …'
+  context: ¿Cómo se escribe su nombre?
+  stem: 'Se ___ así: N-U-G-O.'
+  cue: escribir
+  answer:
+  - escribe
+- id: name-3
+  facet: name
+  format: choice
+  prompt:
+    de: Wie heißt der Buchstabe „J“ beim Buchstabieren?
+    en: What is the letter “J” called when spelling?
+  answer:
+  - jota
+  options:
+  - jota
+  - ge
+  - i
+  - ye
+- id: address-1
+  facet: address
+  format: type
+  prompt:
+    de: 'Ergänzen Sie: Meine Adresse …'
+    en: 'Complete: My address …'
+  stem: Mi ___ es calle Goya, número 5, segundo B.
+  cue:
+    de: Adresse
+    en: address
+  answer:
+  - dirección
+- id: address-2
+  facet: address
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¿Su número de teléfono?
+  answer:
+  - Es el 612 345 678.
+  options:
+  - Es el 612 345 678.
+  - Es la calle Mayor.
+  - Me llamo Olga.
+  - Tengo 30 años.
+- id: address-3
+  facet: address
+  format: type
+  prompt:
+    de: 'Ergänzen Sie: Goyastraße Nummer sieben, zweiter Stock.'
+    en: 'Complete: Goya Street, number seven, second floor.'
+  stem: Calle Goya, número siete, ___ piso.
+  cue: '2.'
+  answer:
+  - segundo
+- id: origin-1
+  facet: origin
+  format: type
+  prompt:
+    de: 'Antworten Sie: Ich bin am 20. März geboren.'
+    en: 'Answer: I was born on 20 March.'
+  context: ¿Cuándo nació?
+  stem: Nací el veinte de ___.
+  cue:
+    de: März
+    en: March
+  answer:
+  - marzo
+- id: origin-2
+  facet: origin
+  format: type
+  prompt:
+    de: 'Antworten Sie: Ich bin aus Österreich.'
+    en: 'Answer: I''m from Austria.'
+  context: ¿De dónde es?
+  stem: Soy ___ Austria.
+  answer:
+  - de
+- id: origin-3
+  facet: origin
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Ich bin am 5. Juli geboren.'
+    en: 'Say: I was born on 5 July.'
+  answer:
+  - Nací el cinco de julio.
+  options:
+  - Nací el cinco de julio.
+  - Nací en cinco de julio.
+  - Nací el quinto julio.
+  - Nací cinco julio.
