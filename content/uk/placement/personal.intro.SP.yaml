@@ -1,0 +1,88 @@
+skill: personal.intro.SP
+lang: uk
+reviewed_by: []
+facets:
+- id: open
+  label: Begrüßung, Name, Schluss
+- id: age
+  label: Alter, Herkunft, Wohnort
+- id: likes
+  label: Arbeit und Hobbys
+items:
+- id: open-1
+  facet: open
+  format: choice
+  prompt: Sie beginnen eine Vorstellung vor einer Gruppe. Wie?
+  answer:
+  - Добрий день! Мене звати Ніна.
+  options:
+  - Добрий день! Мене звати Ніна.
+  - До побачення! Мене звати Ніна.
+  - Бувайте! Я Ніна.
+  - Дякую! Ніна.
+- id: open-2
+  facet: open
+  format: type
+  prompt: 'Begrüßen Sie die Gruppe: Guten Tag!'
+  stem: Добрий ___! Мене звати Петер.
+  answer:
+  - день
+- id: open-3
+  facet: open
+  format: choice
+  prompt: 'Am Ende sagen Sie: Danke für die Aufmerksamkeit!'
+  answer:
+  - Дякую за увагу!
+  options:
+  - Дякую за увагу!
+  - Дякую увагу!
+  - Дякую за уваги!
+  - Дякую на увагу!
+- id: age-1
+  facet: age
+  format: type
+  prompt: 'Sagen Sie: Ich bin 32 Jahre alt.'
+  stem: Мені тридцять два ___.
+  cue: рік
+  answer:
+  - роки
+- id: age-2
+  facet: age
+  format: type
+  prompt: 'Sagen Sie: Ich bin 25 Jahre alt.'
+  stem: Мені двадцять п'ять ___.
+  cue: рік
+  answer:
+  - років
+- id: age-3
+  facet: age
+  format: type
+  prompt: 'Sagen Sie: Ich komme aus Deutschland und wohne in Berlin.'
+  stem: Я з Німеччини, живу в ___.
+  cue: Берлін
+  answer:
+  - Берліні
+- id: likes-1
+  facet: likes
+  format: type
+  prompt: 'Sagen Sie: In der Freizeit spiele ich Gitarre.'
+  stem: У вільний час я ___ на гітарі.
+  cue: грати
+  answer:
+  - граю
+- id: likes-2
+  facet: likes
+  format: type
+  prompt: 'Sagen Sie: Ich mag die ukrainische Küche.'
+  stem: Я люблю ___ кухню.
+  cue: український
+  answer:
+  - українську
+- id: likes-3
+  facet: likes
+  format: type
+  prompt: 'Sagen Sie: Ich arbeite in einer Bank.'
+  stem: Я працюю в ___.
+  cue: банк
+  answer:
+  - банку

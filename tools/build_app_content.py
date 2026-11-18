@@ -35,9 +35,10 @@ def build() -> dict:
                                      key_structures=(r.rubric_specifics or {}).get("key_structures"), note=r.note)
                              for k, r in lang.realizations.items()},
             "checks": {k: cat.model_dump(exclude_none=True) for k, cat in lang.checks.items()},
+            "placement": {k: cat.model_dump(exclude_none=True) for k, cat in lang.placement.items()},
         }
     return {
-        "version": "5",
+        "version": "6",
         "repo_url": app_cfg.get("repo_url"),
         "default_lang": app_cfg.get("default_lang", "uk"),
         "themes": [dict(id=t.id, title=t.title, situations=[dict(id=s.id, title=s.title) for s in t.situations])

@@ -1,0 +1,93 @@
+skill: daily.note.WI
+lang: uk
+reviewed_by: []
+facets:
+- id: where
+  label: Wohin man gegangen ist
+- id: back
+  label: Wann man zurück ist
+- id: info
+  label: Kurze Hinweise
+items:
+- id: where-1
+  facet: where
+  format: type
+  prompt: 'Notiz: Ich bin im Geschäft.'
+  stem: Я в ___. Буду о п'ятій.
+  cue: магазин
+  answer:
+  - магазині
+- id: where-2
+  facet: where
+  format: type
+  prompt: 'Notiz (Frau): Bin in die Apotheke gegangen.'
+  stem: Пішла в ___, буду через годину.
+  cue: аптека
+  answer:
+  - аптеку
+- id: where-3
+  facet: where
+  format: choice
+  prompt: 'Ein Mann schreibt: „Bin zur Arbeit gegangen.“'
+  answer:
+  - Пішов на роботу.
+  options:
+  - Пішов на роботу.
+  - Пішла на роботу.
+  - Пішов у роботу.
+  - Іду на роботі.
+- id: back-1
+  facet: back
+  format: type
+  prompt: 'Notiz: Bin in einer Stunde zurück.'
+  stem: Буду через ___.
+  cue: eine Stunde
+  answer:
+  - годину
+- id: back-2
+  facet: back
+  format: type
+  prompt: 'Notiz: Bin um sechs zurück.'
+  stem: Буду о ___.
+  cue: 6 Uhr
+  answer:
+  - шостій
+- id: back-3
+  facet: back
+  format: choice
+  prompt: Welche Notiz heißt „Bin um acht zurück“?
+  answer:
+  - Буду о восьмій.
+  options:
+  - Буду о восьмій.
+  - Буду о восьмої.
+  - Була о восьмій.
+  - Буду вісім.
+- id: info-1
+  facet: info
+  format: type
+  prompt: 'Notiz: Das Mittagessen ist im Kühlschrank.'
+  stem: Обід у ___.
+  cue: холодильник
+  answer:
+  - холодильнику
+- id: info-2
+  facet: info
+  format: choice
+  prompt: Was bedeutet die Notiz?
+  context: Ключ під килимком.
+  answer:
+  - Der Schlüssel liegt unter der Fußmatte.
+  options:
+  - Der Schlüssel liegt unter der Fußmatte.
+  - Der Schlüssel ist beim Nachbarn.
+  - Die Tür ist offen.
+  - Ich habe den Schlüssel.
+- id: info-3
+  facet: info
+  format: type
+  prompt: 'Notiz: Ruf mich an!'
+  stem: Подзвони ___!
+  cue: я
+  answer:
+  - мені

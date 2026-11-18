@@ -1,0 +1,122 @@
+skill: travel.timetable.R
+lang: uk
+reviewed_by: []
+facets:
+- id: time
+  label: Abfahrt und Ankunft
+- id: platform
+  label: Gleis
+- id: status
+  label: Verspätung, Ausfall, Verkehrstage
+items:
+- id: time-1
+  facet: time
+  format: type
+  prompt: Wann fährt der Zug nach Kyjiw ab? (Uhrzeit)
+  text: |-
+    Відправлення
+    Київ 09:20 колія 2
+    Одеса 11:45 колія 4 — затримується на 30 хв
+    Харків 13:10 колія 1 — скасовано
+  answer:
+  - '9:20'
+- id: time-2
+  facet: time
+  format: type
+  prompt: Wann kommt der Zug aus Lwiw an? (Uhrzeit)
+  text: |-
+    Прибуття
+    Львів 14:05 колія 3
+    Ужгород 16:30 колія 6
+  answer:
+  - '14:05'
+- id: time-3
+  facet: time
+  format: type
+  prompt: Wann fährt der erste Bus? (Uhrzeit)
+  text: |-
+    Автобус № 12
+    Щодня, крім неділі
+    06:00, 06:30, 07:00 … 22:00
+  answer:
+  - '6:00'
+  - '6'
+- id: platform-1
+  facet: platform
+  format: type
+  prompt: Von welchem Gleis fährt der Zug nach Kyjiw? (Zahl)
+  text: |-
+    Відправлення
+    Київ 09:20 колія 2
+    Одеса 11:45 колія 4
+    Харків 13:10 колія 1
+  answer:
+  - '2'
+- id: platform-2
+  facet: platform
+  format: type
+  prompt: Von welchem Gleis fährt der Zug nach Odesa? (Zahl)
+  text: |-
+    Відправлення
+    Київ 09:20 колія 2
+    Одеса 11:45 колія 4
+    Харків 13:10 колія 1
+  answer:
+  - '4'
+- id: platform-3
+  facet: platform
+  format: type
+  prompt: Auf welchem Gleis kommt der Zug aus Uschhorod an? (Zahl)
+  text: |-
+    Прибуття
+    Львів 14:05 колія 3
+    Ужгород 16:30 колія 6
+  answer:
+  - '6'
+- id: status-1
+  facet: status
+  format: choice
+  prompt: Was ist mit dem Zug nach Charkiw?
+  text: |-
+    Відправлення
+    Київ 09:20 колія 2
+    Одеса 11:45 колія 4 — затримується на 30 хв
+    Харків 13:10 колія 1 — скасовано
+  answer:
+  - Er fällt aus
+  options:
+  - Er fällt aus
+  - Er hat Verspätung
+  - Er ist pünktlich
+  - Er fährt früher
+- id: status-2
+  facet: status
+  format: choice
+  prompt: Was ist mit dem Zug nach Odesa?
+  text: |-
+    Відправлення
+    Київ 09:20 колія 2
+    Одеса 11:45 колія 4 — затримується на 30 хв
+    Харків 13:10 колія 1 — скасовано
+  answer:
+  - 30 Minuten Verspätung
+  options:
+  - 30 Minuten Verspätung
+  - Er fällt aus
+  - Er fährt 30 Minuten früher
+  - Er ist pünktlich
+- id: status-3
+  facet: status
+  format: choice
+  prompt: Fährt der Bus am Sonntag?
+  text: |-
+    Автобус № 12
+    Щодня, крім неділі
+    06:00, 06:30, 07:00 … 22:00
+  answer:
+  - Nein
+  options:
+  - Nein
+  - Ja
+  - Nur bis 22 Uhr
+  - Nur am Sonntag

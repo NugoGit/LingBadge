@@ -162,3 +162,43 @@ class CheckCatalogue(Strict):
     reviewed_by: list[str] = []
     facets: list[CheckFacet]
     items: list[CheckItem]
+
+
+# ---------------------------------------------------------------- placement catalogues
+PLACEMENT_FACETS = 3   # one item per facet per run -> 3/3 likely, 2/3 shaky, else unknown
+
+
+class PlacementFacet(Strict):
+    """One part of a skill's can-do statement (e.g. ordering, asking about a dish, paying)."""
+    id: str
+    label: Text
+
+
+class PlacementItem(Strict):
+    """A fixed placement item, graded by key. Exactly one of text/audio for R/L skills.
+
+    choice: options in the target language (pick the fitting reply / form) or in the instruction
+            language (comprehension questions); answer[0] is the right option.
+    type:   short answer the learner types (a form in a gap, a number, a time); every
+            accepted variant is listed in answer.
+    """
+    id: str
+    facet: str
+    format: CheckFormat
+    prompt: Text                       # task in the instruction language
+    text: str | None = None            # R: the text to read
+    audio: str | None = None           # L: the script read aloud (TTS)
+    context: str | None = None         # SI/SP/WI: what the other person says or writes
+    stem: str | None = None            # target-language line with one ___
+    cue: str | None = None
+    answer: list[str]
+    options: list[str] | None = None
+    status: Literal["draft", "reviewed"] = "draft"
+
+
+class PlacementCatalogue(Strict):
+    skill: str
+    lang: str
+    reviewed_by: list[str] = []
+    facets: list[PlacementFacet]
+    items: list[PlacementItem]

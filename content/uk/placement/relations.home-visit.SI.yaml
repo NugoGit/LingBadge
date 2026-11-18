@@ -1,0 +1,93 @@
+skill: relations.home-visit.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: welcome
+  label: Hereinbitten, Platz anbieten
+- id: offer
+  label: Essen und Getränke anbieten und annehmen
+- id: gift
+  label: Geschenk, Kompliment, Abschied
+items:
+- id: welcome-1
+  facet: welcome
+  format: type
+  prompt: Bitten Sie Ihren Freund herein.
+  stem: ___!
+  cue: заходити
+  answer:
+  - Заходь
+- id: welcome-2
+  facet: welcome
+  format: type
+  prompt: Bitten Sie Ihre Gäste, sich zu setzen (Sie-Form).
+  stem: ___, будь ласка!
+  cue: сідати
+  answer:
+  - Сідайте
+- id: welcome-3
+  facet: welcome
+  format: choice
+  prompt: Ihre Kollegin (Sie-Form) kommt zu Besuch. Was sagen Sie an der Tür?
+  answer:
+  - Заходьте, будь ласка!
+  options:
+  - Заходьте, будь ласка!
+  - Заходь, будь ласка!
+  - Виходьте, будь ласка!
+  - Заходити, будь ласка!
+- id: offer-1
+  facet: offer
+  format: type
+  prompt: Bieten Sie Tee oder Kaffee an (du).
+  stem: Хочеш ___ чи кави?
+  cue: чай
+  answer:
+  - чаю
+- id: offer-2
+  facet: offer
+  format: choice
+  prompt: Sie sind satt. Lehnen Sie höflich ab.
+  context: Хочеш ще борщу?
+  answer:
+  - Ні, дякую, більше не можу.
+  options:
+  - Ні, дякую, більше не можу.
+  - Так, дякую!
+  - Будь ласка, ні.
+  - Смачного!
+- id: offer-3
+  facet: offer
+  format: type
+  prompt: 'Antworten Sie: Kaffee, bitte.'
+  context: Чай чи каву?
+  stem: ___, будь ласка.
+  cue: кава
+  answer:
+  - Каву
+- id: gift-1
+  facet: gift
+  format: type
+  prompt: 'Sie geben einer Freundin ein Geschenk: Das ist für dich.'
+  stem: Це ___.
+  cue: ти
+  answer:
+  - тобі
+- id: gift-2
+  facet: gift
+  format: type
+  prompt: 'Loben Sie das Essen: Sehr lecker!'
+  stem: Дуже ___!
+  answer:
+  - смачно
+- id: gift-3
+  facet: gift
+  format: choice
+  prompt: Sie wollen gehen. Was sagen Sie?
+  answer:
+  - Дякую, мені вже час іти.
+  options:
+  - Дякую, мені вже час іти.
+  - Дякую, я вже прийшов.
+  - Дякую, час мені їсти.
+  - Дякую, іди вже.

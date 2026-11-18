@@ -1,0 +1,100 @@
+skill: personal.details.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: name
+  label: Name und Buchstabieren
+- id: address
+  label: Adresse und Telefon
+- id: origin
+  label: Herkunft und Geburtsdatum
+items:
+- id: name-1
+  facet: name
+  format: choice
+  prompt: 'Antworten Sie (Nachname: Müller).'
+  context: Ваше прізвище?
+  answer:
+  - Моє прізвище — Мюллер.
+  options:
+  - Моє прізвище — Мюллер.
+  - Мій прізвище — Мюллер.
+  - Моя прізвище — Мюллер.
+  - Мене прізвище Мюллер.
+- id: name-2
+  facet: name
+  format: type
+  prompt: 'Ergänzen Sie: Man schreibt es so …'
+  context: Як пишеться ваше ім'я?
+  stem: '___ так: Н-У-Г-О.'
+  cue: писатися
+  answer:
+  - Пишеться
+- id: name-3
+  facet: name
+  format: choice
+  prompt: Wie heißt der Buchstabe „Ш“ beim Buchstabieren?
+  answer:
+  - ша
+  options:
+  - ша
+  - ща
+  - ес
+  - же
+- id: address-1
+  facet: address
+  format: type
+  prompt: 'Ergänzen Sie: Meine Adresse …'
+  stem: 'Моя ___: вулиця Лесі Українки, будинок 5, квартира 12.'
+  cue: Adresse
+  answer:
+  - адреса
+- id: address-2
+  facet: address
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Ваш номер телефону?
+  answer:
+  - Мій номер — 097 123 45 67.
+  options:
+  - Мій номер — 097 123 45 67.
+  - Мій номер — вулиця Франка.
+  - Мене звати Ольга.
+  - Мені 30 років.
+- id: address-3
+  facet: address
+  format: type
+  prompt: 'Ergänzen Sie: Frankostraße, Haus sieben, Wohnung zwei.'
+  stem: Вулиця Франка, ___ сім, квартира два.
+  cue: Haus
+  answer:
+  - будинок
+- id: origin-1
+  facet: origin
+  format: type
+  prompt: 'Ein Mann antwortet: Ich bin am 20. März geboren.'
+  context: Коли ви народилися?
+  stem: Я ___ двадцятого березня.
+  cue: народитися
+  answer:
+  - народився
+- id: origin-2
+  facet: origin
+  format: type
+  prompt: 'Antworten Sie: Ich bin aus Österreich.'
+  context: Звідки ви?
+  stem: Я з ___.
+  cue: Австрія
+  answer:
+  - Австрії
+- id: origin-3
+  facet: origin
+  format: choice
+  prompt: 'Eine Frau sagt: Ich bin am 5. Juli geboren.'
+  answer:
+  - Я народилася п'ятого липня.
+  options:
+  - Я народилася п'ятого липня.
+  - Я народився п'ятого липня.
+  - Я народилася п'ять липня.
+  - Я народилася в п'ятий липень.

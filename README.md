@@ -22,10 +22,12 @@ What works without an AI provider, and what needs one:
 
 | Feature | Without AI | With an API key |
 | --- | --- | --- |
-| Skill map, placement status, badges | ✓ | ✓ |
+| Skill map, badges | ✓ | ✓ |
+| Placement test from a fixed catalogue | ✓ (all 52 Ukrainian skills) | ✓ |
 | Grammar checks with a question catalogue | ✓ (13 Ukrainian enablers so far) | ✓ |
 | Grammar checks without a catalogue | – | generated per check |
-| Skill tests (reading, listening, writing, typed role-play), placement | – | ✓ |
+| Skill tests (reading, listening, writing, typed role-play) | – | ✓ |
+| Placement for skills without a catalogue (other languages) | – | generated per run |
 
 To use AI features, open **Einstellungen** (settings) and choose a provider:
 

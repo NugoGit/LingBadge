@@ -26,6 +26,7 @@
     s = s.replace(/[ʼ’`´]/g, "'");
     s = s.replace(/\s*(грн|uah|hrn)\.?$/, "");
     if (/^[\d\s\-():.]+$/.test(s)) s = s.replace(/[\s\-()]+/g, "");
+    s = s.replace(/^(\d{1,2})[.:h](\d\d)$/, "$1:$2");
     s = s.replace(/^0(\d:\d\d)$/, "$1");
     s = s.replace(/\s+/g, " ").replace(/^[\s.!?]+|[\s.!?]+$/g, "");
     return s;
@@ -416,9 +417,37 @@ Seed: ${seed}
 Antwortformat: {"skills":[{"skill":str,"stimulus":{"kind":"text"|"audio_script","body":str}|null,"items":[{"id":str (eindeutig, z. B. s1i1),"type":"mcq"|"short_answer"|"produce","prompt":str,"options":[nur mcq],"key":[str],"enablers":[str]}]}]}`;
   }
 
+  // ------------------------------------------------------------ placement catalogues
+  // normalize() plus internal punctuation, dashes and a trailing "Uhr" ignored (mirrors placement.loose).
+  function loose(x) {
+    let s = String(x == null ? "" : x).replace(/[,;«»"“”„—–!?]/g, " ").trim().replace(/\s*(uhr|год\.?|h)$/i, "");
+    return normalize(s).replace(/\s+/g, " ").trim();
+  }
+  // One item per facet, least-seen first, ties broken by the seeded RNG (mirrors placement.sample).
+  function samplePlacement(cat, seen, seed) {
+    const r = rng(seed == null ? Date.now() : seed); seen = seen || {};
+    return cat.facets.map((f) => cat.items.filter((it) => it.facet === f.id)
+      .map((it) => [seen[it.id] || 0, r(), it]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).map((x) => x[2])[0]).filter(Boolean);
+  }
+  // Catalogue items -> run items. Choice options are shuffled so the key's position says nothing.
+  function placementForm(cat, picked, il, seed) {
+    const r = rng((seed || 1) + 7), facets = {}; cat.facets.forEach((f) => (facets[f.id] = f));
+    return picked.map((it) => ({ id: cat.skill + "#" + it.id, itemId: it.id, skill: cat.skill, source: "catalogue",
+      type: it.format === "choice" ? "mcq" : "gap_fill", facet: it.facet, facetLabel: tx(facets[it.facet].label, il),
+      prompt: tx(it.prompt, il), text: it.text || null, audio: it.audio || null, context: it.context || null,
+      stem: it.stem || null, cue: it.cue || null, key: it.answer.slice(),
+      options: it.format === "choice" ? shuffle(it.options.slice(), r) : undefined }));
+  }
+  function placementCorrect(item, given) {
+    if (item.type === "mcq") return given != null && given === item.key[0];
+    const g = loose(given);
+    return g !== "" && item.key.some((k) => loose(k) === g);
+  }
+
   const api = { CREDIT, DEFAULT_CFG, cfgFrom, thresholdFor, normalize, gradeKeyed, score, attemptOutcome, needsRegrade, medianGrade,
     formSimilarity, badgeDecision, heatmapStatus, probeStatus, diagnose, skillStatus, enablerStatuses,
     genPrompt, validatePrompt, interlocutorPrompt, gradePrompt, judgePrompt, enablerCheckPrompt, probePrompt,
-    TL, setTarget, BANDS, quotas, sampleCheck, catalogueForm, checkBreakdown, tx };
+    TL, setTarget, BANDS, quotas, sampleCheck, catalogueForm, checkBreakdown, tx,
+    loose, samplePlacement, placementForm, placementCorrect };
   if (typeof module !== "undefined" && module.exports) module.exports = api; else root.LB = api;
 })(typeof window !== "undefined" ? window : globalThis);

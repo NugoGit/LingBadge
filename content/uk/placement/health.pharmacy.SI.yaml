@@ -1,0 +1,100 @@
+skill: health.pharmacy.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: problem
+  label: Beschwerden nennen
+- id: ask
+  label: Etwas dagegen verlangen
+- id: dose
+  label: Einnahme verstehen
+items:
+- id: problem-1
+  facet: problem
+  format: type
+  prompt: 'Sagen Sie: Ich habe Zahnschmerzen.'
+  stem: У мене болить ___.
+  cue: Zahn
+  answer:
+  - зуб
+- id: problem-2
+  facet: problem
+  format: type
+  prompt: 'Sagen Sie: Ich habe Schnupfen.'
+  stem: У мене ___.
+  answer:
+  - нежить
+- id: problem-3
+  facet: problem
+  format: choice
+  prompt: 'Sagen Sie: Mein Kind hat Fieber.'
+  answer:
+  - У моєї дитини температура.
+  options:
+  - У моєї дитини температура.
+  - У мій дитина температура.
+  - Моя дитина температуру.
+  - У дитину температура.
+- id: ask-1
+  facet: ask
+  format: type
+  prompt: Verlangen Sie etwas gegen Husten.
+  stem: Дайте, будь ласка, щось від ___.
+  cue: кашель
+  answer:
+  - кашлю
+- id: ask-2
+  facet: ask
+  format: type
+  prompt: Verlangen Sie etwas gegen Kopfschmerzen.
+  stem: Щось від головного ___, будь ласка.
+  cue: біль
+  answer:
+  - болю
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt: Fragen Sie, wie man das Medikament einnimmt.
+  answer:
+  - Як це приймати?
+  options:
+  - Як це приймати?
+  - Як це називається?
+  - Скільки це коштує?
+  - Де аптека?
+- id: dose-1
+  facet: dose
+  format: choice
+  prompt: Wie oft sollen Sie das nehmen?
+  context: Приймайте тричі на день після їжі.
+  answer:
+  - Dreimal täglich
+  options:
+  - Dreimal täglich
+  - Dreimal pro Woche
+  - Alle drei Stunden
+  - Drei Tage lang
+- id: dose-2
+  facet: dose
+  format: choice
+  prompt: Was sollen Sie tun?
+  context: По одній таблетці вранці й увечері.
+  answer:
+  - Morgens und abends je eine Tablette
+  options:
+  - Morgens und abends je eine Tablette
+  - Eine Tablette am Tag
+  - Morgens zwei Tabletten
+  - Abends zwei Tabletten
+- id: dose-3
+  facet: dose
+  format: choice
+  prompt: Wann sollen Sie die Tropfen nehmen?
+  context: Ці краплі — перед сном.
+  answer:
+  - Vor dem Schlafengehen
+  options:
+  - Vor dem Schlafengehen
+  - Vor dem Essen
+  - Nach dem Aufstehen
+  - Nach dem Essen

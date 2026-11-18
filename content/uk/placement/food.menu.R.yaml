@@ -1,0 +1,124 @@
+skill: food.menu.R
+lang: uk
+reviewed_by: []
+facets:
+- id: section
+  label: Speisekarten-Rubriken
+- id: dish
+  label: Gerichte erkennen
+- id: price
+  label: Preise
+items:
+- id: section-1
+  facet: section
+  format: choice
+  prompt: In welcher Rubrik stehen die Getränke?
+  text: |-
+    МЕНЮ
+    Перші страви
+    Другі страви
+    Салати
+    Десерти
+    Напої
+  answer:
+  - Напої
+  options:
+  - Напої
+  - Перші страви
+  - Другі страви
+  - Десерти
+- id: section-2
+  facet: section
+  format: choice
+  prompt: Was steht unter „Перші страви“?
+  text: 'Перші страви: борщ, юшка з грибів, курячий суп'
+  answer:
+  - Suppen (erster Gang)
+  options:
+  - Suppen (erster Gang)
+  - Hauptgerichte
+  - Getränke
+  - Nachspeisen
+- id: section-3
+  facet: section
+  format: choice
+  prompt: Was finden Sie unter „Десерти“?
+  text: 'Десерти: сирники, морозиво, торт «Київський»'
+  answer:
+  - Nachspeisen
+  options:
+  - Nachspeisen
+  - Getränke
+  - Salate
+  - Suppen
+- id: dish-1
+  facet: dish
+  format: choice
+  prompt: Sie möchten etwas mit Kartoffeln. Was bestellen Sie?
+  text: |-
+    Вареники з картоплею — 140 грн
+    Юшка з грибів — 110 грн
+    Узвар — 35 грн
+    Котлета по-київськи — 210 грн
+  answer:
+  - Вареники з картоплею
+  options:
+  - Вареники з картоплею
+  - Юшка з грибів
+  - Узвар
+  - Котлета по-київськи
+- id: dish-2
+  facet: dish
+  format: choice
+  prompt: Welcher Salat ist mit Huhn?
+  text: |-
+    Салати
+    Салат з куркою — 120 грн
+    Салат з помідорів і огірків — 80 грн
+    Салат з грибами — 95 грн
+  answer:
+  - Салат з куркою
+  options:
+  - Салат з куркою
+  - Салат з помідорів і огірків
+  - Салат з грибами
+- id: dish-3
+  facet: dish
+  format: choice
+  prompt: Welches Getränk ist ein Saft?
+  text: 'Напої: чай зелений, кава з молоком, сік апельсиновий, вода без газу'
+  answer:
+  - сік апельсиновий
+  options:
+  - сік апельсиновий
+  - вода без газу
+  - кава з молоком
+  - чай зелений
+- id: price-1
+  facet: price
+  format: type
+  prompt: Wie viel kostet der Borschtsch? (Zahl)
+  text: |-
+    Борщ український — 120 грн
+    Вареники з вишнею — 130 грн
+    Чай — 40 грн
+  answer:
+  - '120'
+- id: price-2
+  facet: price
+  format: type
+  prompt: Wie viel kostet ein Kaffee? (Zahl)
+  text: |-
+    Напої
+    Чай — 40 грн
+    Кава — 55 грн
+    Узвар — 35 грн
+  answer:
+  - '55'
+- id: price-3
+  facet: price
+  format: type
+  prompt: Wie viel kostet das Mittagsmenü? (Zahl)
+  text: Комплексний обід (суп + друга страва + напій) — 180 грн
+  answer:
+  - '180'

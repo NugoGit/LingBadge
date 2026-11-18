@@ -1,0 +1,96 @@
+skill: freetime.hobbies.WI
+lang: uk
+reviewed_by: []
+facets:
+- id: hobby
+  label: Hobbys
+- id: like
+  label: Was gefällt, was nicht
+- id: ask
+  label: Zurückfragen
+items:
+- id: hobby-1
+  facet: hobby
+  format: type
+  prompt: 'Schreiben Sie: In der Freizeit gehe ich im Park spazieren.'
+  stem: У вільний час я гуляю в ___.
+  cue: парк
+  answer:
+  - парку
+- id: hobby-2
+  facet: hobby
+  format: type
+  prompt: 'Schreiben Sie: Ich mag klassische Musik.'
+  stem: Я люблю ___ музику.
+  cue: класичний
+  answer:
+  - класичну
+- id: hobby-3
+  facet: hobby
+  format: choice
+  prompt: 'Schreiben Sie: In der Freizeit lese ich viel.'
+  answer:
+  - У вільний час я багато читаю.
+  options:
+  - У вільний час я багато читаю.
+  - У вільний час я багато читати.
+  - Вільний час я читаю багато книжка.
+  - У вільний час я багато читав завтра.
+- id: like-1
+  facet: like
+  format: type
+  prompt: 'Schreiben Sie: Laufen gefällt mir nicht.'
+  stem: Мені не ___ бігати.
+  cue: подобатися
+  answer:
+  - подобається
+- id: like-2
+  facet: like
+  format: type
+  prompt: 'Schreiben Sie: Mir gefällt die ukrainische Küche.'
+  stem: Мені подобається ___ кухня.
+  cue: український
+  answer:
+  - українська
+- id: like-3
+  facet: like
+  format: choice
+  prompt: Welcher Satz heißt „Ich mag Katzen“?
+  answer:
+  - Я люблю котів.
+  options:
+  - Я люблю котів.
+  - Я люблю коти.
+  - Мені любить котів.
+  - Я люблю кіт.
+- id: ask-1
+  facet: ask
+  format: choice
+  prompt: Fragen Sie am Ende Ihres Posts nach den Hobbys der Leser.
+  answer:
+  - А які у вас хобі?
+  options:
+  - А які у вас хобі?
+  - А де ви живете?
+  - А скільки вам років?
+  - А котра година?
+- id: ask-2
+  facet: ask
+  format: type
+  prompt: 'Schreiben Sie: Und was magst du?'
+  stem: А ___ любиш ти?
+  cue: was
+  answer:
+  - що
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt: 'Antworten Sie: Ich auch! Besonders Pizza.'
+  context: Я люблю готувати! А ти?
+  answer:
+  - Я теж! Особливо піцу.
+  options:
+  - Я теж! Особливо піцу.
+  - Я теж! Особливо піца.
+  - Мене теж! Особливо піцу.
+  - Я теж ні! Особливо піцу.

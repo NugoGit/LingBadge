@@ -6,7 +6,7 @@ from pathlib import Path
 
 import yaml
 
-from .models import CheckCatalogue, Enabler, Realization, Rubric, Skill, Source, Theme
+from .models import CheckCatalogue, PlacementCatalogue, Enabler, Realization, Rubric, Skill, Source, Theme
 
 
 @dataclass
@@ -16,6 +16,7 @@ class Language:
     enablers: dict[str, Enabler] = field(default_factory=dict)
     realizations: dict[str, Realization] = field(default_factory=dict)
     checks: dict[str, CheckCatalogue] = field(default_factory=dict)
+    placement: dict[str, PlacementCatalogue] = field(default_factory=dict)
     meta: dict = field(default_factory=dict)
 
 
@@ -80,6 +81,8 @@ def load(root: Path) -> Content:
             lang.realizations = _load_dir(d / "realizations", Realization, "skill", errors)
         if (d / "checks").exists():
             lang.checks = _load_dir(d / "checks", CheckCatalogue, "enabler", errors)
+        if (d / "placement").exists():
+            lang.placement = _load_dir(d / "placement", PlacementCatalogue, "skill", errors)
         if (d / "language.yaml").exists():
             lang.meta = _read(d / "language.yaml") or {}
         languages[d.name] = lang

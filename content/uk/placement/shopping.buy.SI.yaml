@@ -1,0 +1,87 @@
+skill: shopping.buy.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: what
+  label: Sagen, was man möchte
+- id: amount
+  label: Mengen
+- id: price
+  label: Preis und Bezahlen
+items:
+- id: what-1
+  facet: what
+  format: type
+  prompt: Verlangen Sie Wurst.
+  stem: Дайте, будь ласка, ___.
+  cue: ковбаса
+  answer:
+  - ковбасу
+- id: what-2
+  facet: what
+  format: type
+  prompt: Verlangen Sie eine Flasche Milch.
+  stem: Дайте, будь ласка, пляшку ___.
+  cue: молоко
+  answer:
+  - молока
+- id: what-3
+  facet: what
+  format: type
+  prompt: Verlangen Sie Öl und Käse.
+  stem: Дайте, будь ласка, ___ і сир.
+  cue: олія
+  answer:
+  - олію
+- id: amount-1
+  facet: amount
+  format: type
+  prompt: Ein Kilo Äpfel, bitte.
+  stem: Кілограм ___, будь ласка.
+  cue: яблуко
+  answer:
+  - яблук
+- id: amount-2
+  facet: amount
+  format: type
+  prompt: Zwei Kilo Kartoffeln.
+  stem: Два кілограми ___.
+  cue: картопля
+  answer:
+  - картоплі
+- id: amount-3
+  facet: amount
+  format: type
+  prompt: Zehn Eier, bitte.
+  stem: Десять ___, будь ласка.
+  cue: яйце
+  answer:
+  - яєць
+- id: price-1
+  facet: price
+  format: type
+  prompt: 'Fragen Sie: Was kostet der Käse?'
+  stem: Скільки ___ сир?
+  cue: коштувати
+  answer:
+  - коштує
+- id: price-2
+  facet: price
+  format: type
+  prompt: 'Fragen Sie: Was kosten die Tomaten?'
+  stem: Скільки ___ помідори?
+  cue: коштувати
+  answer:
+  - коштують
+- id: price-3
+  facet: price
+  format: choice
+  prompt: 'Sagen Sie: Nein, das ist alles.'
+  context: Ще щось?
+  answer:
+  - Ні, це все.
+  options:
+  - Ні, це все.
+  - Ні, це всі.
+  - Так, це все.
+  - Ні, все це є.

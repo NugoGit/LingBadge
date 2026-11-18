@@ -51,7 +51,7 @@ Generation is seeded and restricted to the realization's phrases and enablers. A
 | unknown | clear fail |
 | untested | no evidence |
 
-**Placement** gives 3 short items per skill in a theme. Probes never award badges.
+**Placement** gives 3 short items per skill in a theme, one per facet of the can-do statement, from a fixed key-graded catalogue (`content/<lang>/placement`, see [placement-catalogue.md](placement-catalogue.md)); skills without a catalogue get generated items. Probes never award badges.
 
 ## Gap diagnosis
 

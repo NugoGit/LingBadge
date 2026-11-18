@@ -1,0 +1,89 @@
+skill: relations.wishes.WI
+lang: uk
+reviewed_by: []
+facets:
+- id: birthday
+  label: Geburtstag
+- id: holiday
+  label: Feiertage
+- id: wish
+  label: Wünsche
+items:
+- id: birthday-1
+  facet: birthday
+  format: type
+  prompt: Alles Gute zum Geburtstag!
+  stem: З днем ___!
+  answer:
+  - народження
+- id: birthday-2
+  facet: birthday
+  format: choice
+  prompt: Gratulieren Sie zum Geburtstag.
+  answer:
+  - З днем народження!
+  options:
+  - З днем народження!
+  - З днем народженням!
+  - За день народження!
+  - Добрий день народження!
+- id: birthday-3
+  facet: birthday
+  format: type
+  prompt: Ich gratuliere dir zum Geburtstag!
+  stem: Вітаю ___ з днем народження!
+  cue: ти
+  answer:
+  - тебе
+- id: holiday-1
+  facet: holiday
+  format: type
+  prompt: Frohes neues Jahr!
+  stem: З Новим ___!
+  answer:
+  - роком
+- id: holiday-2
+  facet: holiday
+  format: choice
+  prompt: Frohe Weihnachten!
+  answer:
+  - Веселого Різдва!
+  options:
+  - Веселого Різдва!
+  - Веселий Різдва!
+  - Веселому Різдву!
+  - Весело Різдво!
+- id: holiday-3
+  facet: holiday
+  format: choice
+  prompt: Frohe Ostern!
+  answer:
+  - З Великоднем!
+  options:
+  - З Великоднем!
+  - З Великдень!
+  - За Великдень!
+  - Великодня!
+- id: wish-1
+  facet: wish
+  format: type
+  prompt: Ich wünsche dir Glück, Gesundheit und Liebe!
+  stem: Бажаю тобі щастя, ___ і любові!
+  cue: Gesundheit
+  answer:
+  - здоров'я
+- id: wish-2
+  facet: wish
+  format: type
+  prompt: Ich wünsche dir viel Erfolg!
+  stem: ___ тобі успіхів!
+  cue: бажати
+  answer:
+  - Бажаю
+- id: wish-3
+  facet: wish
+  format: type
+  prompt: 'An Ihre Chefin: Ich wünsche Ihnen Glück!'
+  stem: Бажаю ___ щастя!
+  answer:
+  - вам

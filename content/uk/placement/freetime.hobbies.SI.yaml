@@ -1,0 +1,112 @@
+skill: freetime.hobbies.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: like
+  label: Sagen, was man gern macht
+- id: ask
+  label: Zurückfragen und reagieren
+- id: often
+  label: Wie oft
+items:
+- id: like-1
+  facet: like
+  format: type
+  prompt: 'Sagen Sie: Mir gefällt Fußball.'
+  stem: Мені ___ футбол.
+  cue: подобатися
+  answer:
+  - подобається
+- id: like-2
+  facet: like
+  format: type
+  prompt: 'Sagen Sie: Mir gefallen ukrainische Lieder.'
+  stem: Мені ___ українські пісні.
+  cue: подобатися
+  answer:
+  - подобаються
+- id: like-3
+  facet: like
+  format: type
+  prompt: 'Sagen Sie: Ich spiele Gitarre.'
+  stem: Я граю на ___.
+  cue: гітара
+  answer:
+  - гітарі
+- id: like-4
+  facet: like
+  format: choice
+  prompt: 'Sagen Sie: Ich laufe nicht gern.'
+  answer:
+  - Я не люблю бігати.
+  options:
+  - Я не люблю бігати.
+  - Я не біжу.
+  - Мене не любить бігати.
+  - Мені не люблю бігати.
+- id: ask-1
+  facet: ask
+  format: choice
+  prompt: Fragen Sie einen Freund, was er in der Freizeit gern macht.
+  answer:
+  - Що ти любиш робити у вільний час?
+  options:
+  - Що ти любиш робити у вільний час?
+  - Що ти робиш на роботі?
+  - Коли в тебе вільний час?
+  - Де ти живеш?
+- id: ask-2
+  facet: ask
+  format: type
+  prompt: 'Fragen Sie zurück: und dir?'
+  stem: Мені подобається футбол, а ___?
+  cue: ти
+  answer:
+  - тобі
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt: Sie schwimmen auch gern. Was sagen Sie?
+  context: Я дуже люблю плавати.
+  answer:
+  - Я теж!
+  options:
+  - Я теж!
+  - Я теж ні.
+  - Будь ласка.
+  - На здоров'я!
+- id: often-1
+  facet: often
+  format: choice
+  prompt: Wie sagt man „zweimal pro Woche“?
+  answer:
+  - двічі на тиждень
+  options:
+  - двічі на тиждень
+  - два тижні
+  - другий тиждень
+  - двічі на день
+- id: often-2
+  facet: often
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Як часто ти граєш у теніс?
+  answer:
+  - Щосуботи.
+  options:
+  - Щосуботи.
+  - У тенісі.
+  - З другом.
+  - Так, граю.
+- id: often-3
+  facet: often
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Ти часто ходиш у кіно?
+  answer:
+  - Ні, рідко.
+  options:
+  - Ні, рідко.
+  - Ні, у кіно.
+  - Так, кіно.
+  - Ні, завтра.

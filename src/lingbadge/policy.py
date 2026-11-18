@@ -50,6 +50,7 @@ def normalize(s: str) -> str:
     for a in _APOSTROPHES:
         s = s.replace(a, "'")
     s = re.sub(r"\s*(грн|uah|hrn)\.?$", "", s)
+    s = re.sub(r"^(\d{1,2})[.:h](\d\d)$", r"\1:\2", s)    # 9.20 / 9h20 -> 9:20
     s = re.sub(r"^0(\d:\d\d)$", r"\1", s)              # 07:30 -> 7:30
     s = re.sub(r"[\s\-\(\)]+(?=\d)|(?<=\d)[\s\-]+", "", s) if re.fullmatch(r"[\d\s\-\(\):.]+", s) else s
     return re.sub(r"\s+", " ", s).strip(" .!?")

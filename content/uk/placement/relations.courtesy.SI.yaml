@@ -1,0 +1,102 @@
+skill: relations.courtesy.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: greet
+  label: Begrüßen, nach dem Befinden fragen
+- id: sorry
+  label: Danken und entschuldigen
+- id: bye
+  label: Verabschieden, Anrede
+items:
+- id: greet-1
+  facet: greet
+  format: choice
+  prompt: Sie treffen morgens Ihren älteren Nachbarn (Sie-Form).
+  answer:
+  - Доброго ранку!
+  options:
+  - Доброго ранку!
+  - Привіт!
+  - На добраніч!
+  - Бувай!
+- id: greet-2
+  facet: greet
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Як справи?
+  answer:
+  - Добре, дякую. А у вас?
+  options:
+  - Добре, дякую. А у вас?
+  - Дякую, до побачення.
+  - Будь ласка.
+  - Мене звати Іван.
+- id: greet-3
+  facet: greet
+  format: type
+  prompt: 'Fragen Sie eine Freundin zurück: Und bei dir?'
+  context: Як справи?
+  stem: Добре, дякую. А в ___?
+  cue: ти
+  answer:
+  - тебе
+- id: sorry-1
+  facet: sorry
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Вибачте, я запізнився.
+  answer:
+  - Нічого страшного.
+  options:
+  - Нічого страшного.
+  - Будь ласка, дякую.
+  - До зустрічі!
+  - Смачного!
+- id: sorry-2
+  facet: sorry
+  format: type
+  prompt: Sie haben jemanden angerempelt (Sie-Form). Entschuldigen Sie sich.
+  stem: ___!
+  answer:
+  - Вибачте
+  - Перепрошую
+  - Пробачте
+- id: sorry-3
+  facet: sorry
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Дякую за допомогу!
+  answer:
+  - Будь ласка!
+  options:
+  - Будь ласка!
+  - Дякую!
+  - Вибачте!
+  - Нічого не зрозумів.
+- id: bye-1
+  facet: bye
+  format: choice
+  prompt: Sie verabschieden sich von einer Freundin.
+  answer:
+  - Бувай!
+  options:
+  - Бувай!
+  - Добрий день!
+  - Вітаю!
+  - Дякую!
+- id: bye-2
+  facet: bye
+  format: type
+  prompt: 'Verabschieden Sie sich formell: Auf Wiedersehen!'
+  stem: До ___!
+  answer:
+  - побачення
+- id: bye-3
+  facet: bye
+  format: type
+  prompt: Sprechen Sie Herrn Andrij an.
+  stem: До побачення, пане ___!
+  cue: Андрій
+  answer:
+  - Андрію

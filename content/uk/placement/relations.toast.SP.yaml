@@ -1,0 +1,95 @@
+skill: relations.toast.SP
+lang: uk
+reviewed_by: []
+facets:
+- id: classic
+  label: Üblicher Trinkspruch
+- id: za
+  label: За + Akkusativ
+- id: whom
+  label: Auf wen
+items:
+- id: classic-1
+  facet: classic
+  format: choice
+  prompt: 'Ein kurzer, üblicher Trinkspruch:'
+  answer:
+  - Будьмо!
+  options:
+  - Будьмо!
+  - Бувайте!
+  - Смачного!
+  - Будь ласка!
+- id: classic-2
+  facet: classic
+  format: choice
+  prompt: Was antworten die anderen traditionell auf „Будьмо!“?
+  answer:
+  - Гей!
+  options:
+  - Гей!
+  - Дякую!
+  - До побачення!
+  - Будь ласка!
+- id: classic-3
+  facet: classic
+  format: choice
+  prompt: Sie stehen auf und wollen einen Toast ausbringen. Wie beginnen Sie?
+  answer:
+  - Я хочу сказати тост!
+  options:
+  - Я хочу сказати тост!
+  - Я хочу сказати тостом!
+  - Я хочу тост казати!
+  - Я хочу на тост!
+- id: za-1
+  facet: za
+  format: type
+  prompt: Auf unser Treffen!
+  stem: За ___ зустріч!
+  cue: наш
+  answer:
+  - нашу
+- id: za-2
+  facet: za
+  format: type
+  prompt: Auf den Sieg!
+  stem: За ___!
+  cue: перемога
+  answer:
+  - перемогу
+- id: za-3
+  facet: za
+  format: type
+  prompt: Auf Ihre Familie!
+  stem: За ___ родину!
+  cue: ваш
+  answer:
+  - вашу
+- id: whom-1
+  facet: whom
+  format: type
+  prompt: Auf dich!
+  stem: За ___!
+  cue: ти
+  answer:
+  - тебе
+- id: whom-2
+  facet: whom
+  format: type
+  prompt: Auf Sie! / Auf euch!
+  stem: За ___!
+  cue: ви
+  answer:
+  - вас
+- id: whom-3
+  facet: whom
+  format: choice
+  prompt: Auf die Gesundheit der Gastgeber!
+  answer:
+  - За здоров'я господарів!
+  options:
+  - За здоров'я господарів!
+  - За здоров'я господарі!
+  - На здоров'я господарів!
+  - За здоров'я господарям!

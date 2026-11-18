@@ -1,0 +1,142 @@
+skill: comm.signs.R
+lang: uk
+reviewed_by: []
+facets:
+- id: door
+  label: Eingang, Ausgang, offen, geschlossen
+- id: rule
+  label: Drücken, ziehen, Verbote
+- id: time
+  label: Pausen und Öffnungszeiten
+items:
+- id: door-1
+  facet: door
+  format: choice
+  prompt: Was bedeutet das Schild?
+  text: ВИХІД
+  answer:
+  - Ausgang
+  options:
+  - Ausgang
+  - Eingang
+  - Kasse
+  - Toilette
+- id: door-2
+  facet: door
+  format: choice
+  prompt: Was bedeutet das Schild?
+  text: ВХІД
+  answer:
+  - Eingang
+  options:
+  - Eingang
+  - Ausgang
+  - Information
+  - Warteraum
+- id: door-3
+  facet: door
+  format: choice
+  prompt: Was bedeutet das Schild?
+  text: ЗАЧИНЕНО
+  answer:
+  - Geschlossen
+  options:
+  - Geschlossen
+  - Geöffnet
+  - Besetzt
+  - Frei
+- id: door-4
+  facet: door
+  format: choice
+  prompt: Was bedeutet das Schild?
+  text: ВІДЧИНЕНО
+  answer:
+  - Geöffnet
+  options:
+  - Geöffnet
+  - Geschlossen
+  - Pause
+  - Ausverkauft
+- id: rule-1
+  facet: rule
+  format: choice
+  prompt: Das steht an einer Tür. Was tun Sie?
+  text: ВІД СЕБЕ
+  answer:
+  - Drücken
+  options:
+  - Drücken
+  - Ziehen
+  - Klingeln
+  - Warten
+- id: rule-2
+  facet: rule
+  format: choice
+  prompt: Das steht an einer Tür. Was tun Sie?
+  text: ДО СЕБЕ
+  answer:
+  - Ziehen
+  options:
+  - Ziehen
+  - Drücken
+  - Klingeln
+  - Warten
+- id: rule-3
+  facet: rule
+  format: choice
+  prompt: Was bedeutet das Schild?
+  text: НЕ ПАЛИТИ!
+  answer:
+  - Nicht rauchen
+  options:
+  - Nicht rauchen
+  - Nicht parken
+  - Nicht berühren
+  - Nicht fotografieren
+- id: rule-4
+  facet: rule
+  format: choice
+  prompt: Was bedeutet das Schild?
+  text: ПО ГАЗОНАХ НЕ ХОДИТИ
+  answer:
+  - Rasen nicht betreten
+  options:
+  - Rasen nicht betreten
+  - Nicht laufen
+  - Keine Hunde
+  - Fahrräder verboten
+- id: time-1
+  facet: time
+  format: type
+  prompt: Ab wann ist wieder geöffnet? (Uhrzeit)
+  text: Перерва з 13:00 до 14:00
+  answer:
+  - '14:00'
+  - '14'
+- id: time-2
+  facet: time
+  format: choice
+  prompt: Ist die Kasse am Sonntag geöffnet?
+  text: |-
+    Каса працює:
+    пн–пт 9:00–18:00
+    сб 10:00–15:00
+    нд — вихідний
+  answer:
+  - Nein
+  options:
+  - Nein
+  - Ja, 9–18 Uhr
+  - Ja, 10–15 Uhr
+- id: time-3
+  facet: time
+  format: choice
+  prompt: Was bedeutet das Schild an der Kasse?
+  text: Технічна перерва 15 хв
+  answer:
+  - Kurze Pause, 15 Minuten
+  options:
+  - Kurze Pause, 15 Minuten
+  - Geschlossen bis 15 Uhr
+  - Nur 15 Kunden
+  - Seit 15 Minuten geöffnet

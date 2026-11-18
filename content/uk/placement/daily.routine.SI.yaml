@@ -1,0 +1,93 @@
+skill: daily.routine.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: morning
+  label: Morgens
+- id: day
+  label: Arbeitstag und Uhrzeiten
+- id: weekend
+  label: Wochenende
+items:
+- id: morning-1
+  facet: morning
+  format: type
+  prompt: 'Sagen Sie: Ich stehe um sieben auf.'
+  stem: Я ___ о сьомій.
+  cue: вставати
+  answer:
+  - встаю
+  - устаю
+- id: morning-2
+  facet: morning
+  format: type
+  prompt: 'Sagen Sie: Morgens trinke ich Kaffee.'
+  stem: Вранці я ___ каву.
+  cue: пити
+  answer:
+  - п'ю
+- id: morning-3
+  facet: morning
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Що ти робиш вранці?
+  answer:
+  - Снідаю і йду на роботу.
+  options:
+  - Снідаю і йду на роботу.
+  - Завтра буде дощ.
+  - Мені тридцять років.
+  - Дякую, добре.
+- id: day-1
+  facet: day
+  format: type
+  prompt: 'Sagen Sie: Dann fahre ich zur Arbeit.'
+  stem: Потім я їду на ___.
+  cue: робота
+  answer:
+  - роботу
+- id: day-2
+  facet: day
+  format: type
+  prompt: 'Sagen Sie: Ich esse um eins zu Mittag.'
+  stem: Я ___ о першій.
+  cue: обідати
+  answer:
+  - обідаю
+- id: day-3
+  facet: day
+  format: type
+  prompt: 'Antworten Sie: um fünf.'
+  context: Коли ти закінчуєш роботу?
+  stem: О ___.
+  cue: 5 Uhr
+  answer:
+  - п'ятій
+- id: weekend-1
+  facet: weekend
+  format: type
+  prompt: 'Sagen Sie: Am Samstag arbeite ich nicht.'
+  stem: У суботу я не ___.
+  cue: працювати
+  answer:
+  - працюю
+- id: weekend-2
+  facet: weekend
+  format: choice
+  prompt: Welche Antwort passt?
+  context: Що ти робиш у неділю?
+  answer:
+  - Відпочиваю вдома.
+  options:
+  - Відпочиваю вдома.
+  - О сьомій.
+  - Дякую, добре.
+  - Мене звати Олег.
+- id: weekend-3
+  facet: weekend
+  format: type
+  prompt: 'Sagen Sie: Am Sonntag gehen wir im Park spazieren.'
+  stem: У неділю ми ___ в парку.
+  cue: гуляти
+  answer:
+  - гуляємо

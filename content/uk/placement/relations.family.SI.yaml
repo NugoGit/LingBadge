@@ -1,0 +1,90 @@
+skill: relations.family.SI
+lang: uk
+reviewed_by: []
+facets:
+- id: who
+  label: Wer zur Familie gehört
+- id: name
+  label: Namen und Alter
+- id: ask
+  label: Nach der Familie fragen
+items:
+- id: who-1
+  facet: who
+  format: type
+  prompt: 'Sagen Sie: Ich habe einen Bruder und eine Schwester.'
+  stem: У мене є брат і ___.
+  cue: Schwester
+  answer:
+  - сестра
+- id: who-2
+  facet: who
+  format: type
+  prompt: 'Sagen Sie: Wir haben eine Katze.'
+  stem: У ___ є кіт.
+  cue: ми
+  answer:
+  - нас
+- id: who-3
+  facet: who
+  format: choice
+  prompt: 'Sagen Sie: Ich habe zwei Söhne.'
+  answer:
+  - У мене два сини.
+  options:
+  - У мене два сини.
+  - У мене є два сина.
+  - Я маю два син.
+  - У мене двоє син.
+- id: name-1
+  facet: name
+  format: type
+  prompt: 'Sagen Sie: Meine Schwester heißt Olja.'
+  stem: Мою ___ звати Оля.
+  cue: сестра
+  answer:
+  - сестру
+- id: name-2
+  facet: name
+  format: type
+  prompt: 'Sagen Sie: Mein Bruder heißt Taras.'
+  stem: Мого ___ звати Тарас.
+  cue: брат
+  answer:
+  - брата
+- id: name-3
+  facet: name
+  format: type
+  prompt: 'Antworten Sie: Er ist zwei Jahre alt.'
+  context: Скільки років синові?
+  stem: ___ два роки.
+  cue: він
+  answer:
+  - Йому
+- id: ask-1
+  facet: ask
+  format: type
+  prompt: 'Fragen Sie: Hast du Kinder?'
+  stem: У ___ є діти?
+  cue: ти
+  answer:
+  - тебе
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt: Fragen Sie (Sie-Form) nach Geschwistern.
+  answer:
+  - У вас є брати чи сестри?
+  options:
+  - У вас є брати чи сестри?
+  - У тебе є брати чи сестри?
+  - Ви брат чи сестра?
+  - Де ваші брати?
+- id: ask-3
+  facet: ask
+  format: type
+  prompt: 'Fragen Sie: Wie heißt deine Mutter?'
+  stem: Як звати ___ маму?
+  cue: твій
+  answer:
+  - твою

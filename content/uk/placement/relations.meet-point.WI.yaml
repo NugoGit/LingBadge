@@ -1,0 +1,94 @@
+skill: relations.meet-point.WI
+lang: uk
+reviewed_by: []
+facets:
+- id: where
+  label: Wo man ist
+- id: wear
+  label: Was man trägt
+- id: late
+  label: Verspätung, wo bist du?
+items:
+- id: where-1
+  facet: where
+  format: type
+  prompt: 'Schreiben Sie: Ich bin schon am Bahnhof, bei der Kasse.'
+  stem: Я вже на ___, біля каси.
+  cue: вокзал
+  answer:
+  - вокзалі
+- id: where-2
+  facet: where
+  format: type
+  prompt: 'Schreiben Sie: Ich bin beim Eingang.'
+  stem: Я біля ___.
+  cue: вхід
+  answer:
+  - входу
+- id: where-3
+  facet: where
+  format: choice
+  prompt: 'Antworten Sie: Ich bin schon im Café.'
+  context: Де ти?
+  answer:
+  - Я вже в кафе.
+  options:
+  - Я вже в кафе.
+  - Я вже в кафі.
+  - Я вже до кафе.
+  - Я вже кафе.
+- id: wear-1
+  facet: wear
+  format: type
+  prompt: 'Schreiben Sie: Ich trage eine rote Jacke.'
+  stem: Я в ___ куртці.
+  cue: червоний
+  answer:
+  - червоній
+- id: wear-2
+  facet: wear
+  format: type
+  prompt: 'Schreiben Sie: Ich trage eine blaue Mütze.'
+  stem: Я в синій ___.
+  cue: шапка
+  answer:
+  - шапці
+- id: wear-3
+  facet: wear
+  format: choice
+  prompt: 'Schreiben Sie: Ich trage einen grauen Pullover.'
+  answer:
+  - Я в сірому светрі.
+  options:
+  - Я в сірому светрі.
+  - Я в сірий светр.
+  - Я в сірим светрі.
+  - Я на сірому светрі.
+- id: late-1
+  facet: late
+  format: type
+  prompt: 'Schreiben Sie: Ich komme zehn Minuten zu spät, sorry!'
+  stem: ___ на десять хвилин, вибач!
+  cue: запізнюватися
+  answer:
+  - Запізнююся
+  - Запізнююсь
+- id: late-2
+  facet: late
+  format: choice
+  prompt: Ihr Freund schreibt. Was heißt das?
+  context: Запізнююся на 15 хвилин.
+  answer:
+  - Er kommt 15 Minuten zu spät.
+  options:
+  - Er kommt 15 Minuten zu spät.
+  - Er ist seit 15 Minuten da.
+  - Er kommt in 15 Minuten nicht.
+  - Er wartet 15 Minuten.
+- id: late-3
+  facet: late
+  format: type
+  prompt: 'Fragen Sie: Wo bist du?'
+  stem: ___ ти?
+  answer:
+  - Де
