@@ -1,0 +1,154 @@
+skill: health.pharmacy.SI
+lang: es
+reviewed_by: []
+facets:
+- id: problem
+  label:
+    de: Beschwerden nennen
+    en: Name the problem
+- id: ask
+  label:
+    de: Etwas dagegen verlangen
+    en: Ask for something for it
+- id: dose
+  label:
+    de: Einnahme verstehen
+    en: Understand how to take it
+items:
+- id: problem-1
+  facet: problem
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich habe Zahnschmerzen.'
+    en: 'Say: I have toothache.'
+  stem: Me duelen los ___.
+  cue:
+    de: Zahn
+    en: tooth
+  answer:
+  - dientes
+- id: problem-2
+  facet: problem
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich habe Schnupfen.'
+    en: 'Say: I have a cold.'
+  stem: Tengo un ___.
+  answer:
+  - resfriado
+  - constipado
+  - catarro
+  - resfrío
+- id: problem-3
+  facet: problem
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Mein Kind hat Fieber.'
+    en: 'Say: My child has a temperature.'
+  answer:
+  - Mi hijo tiene fiebre.
+  options:
+  - Mi hijo tiene fiebre.
+  - Mi hijo es fiebre.
+  - Mi hijo está fiebre.
+  - Mi hijo tienes fiebre.
+- id: ask-1
+  facet: ask
+  format: type
+  prompt:
+    de: Verlangen Sie etwas gegen Husten.
+    en: Ask for something for a cough.
+  stem: ¿Tiene algo para la ___?
+  answer:
+  - tos
+- id: ask-2
+  facet: ask
+  format: type
+  prompt:
+    de: Verlangen Sie etwas gegen Kopfschmerzen.
+    en: Ask for something for a headache.
+  stem: ¿Tiene algo para el dolor de ___?
+  answer:
+  - cabeza
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt:
+    de: Fragen Sie, wie man das Medikament einnimmt.
+    en: Ask how to take the medicine.
+  answer:
+  - ¿Cómo se toma?
+  options:
+  - ¿Cómo se toma?
+  - ¿Cómo se llama?
+  - ¿Cuánto cuesta?
+  - ¿Dónde está la farmacia?
+- id: dose-1
+  facet: dose
+  format: choice
+  prompt:
+    de: Wie oft sollen Sie das nehmen?
+    en: How often should you take it?
+  context: Tómelo tres veces al día, después de las comidas.
+  answer:
+    de:
+    - Dreimal täglich
+    en:
+    - Three times a day
+  options:
+    de:
+    - Dreimal täglich
+    - Dreimal pro Woche
+    - Alle drei Stunden
+    - Drei Tage lang
+    en:
+    - Three times a day
+    - Three times a week
+    - Every three hours
+    - For three days
+- id: dose-2
+  facet: dose
+  format: choice
+  prompt:
+    de: Was sollen Sie tun?
+    en: What should you do?
+  context: Una pastilla por la mañana y otra por la noche.
+  answer:
+    de:
+    - Morgens und abends je eine Tablette
+    en:
+    - One tablet morning and evening
+  options:
+    de:
+    - Morgens und abends je eine Tablette
+    - Eine Tablette am Tag
+    - Morgens zwei Tabletten
+    - Abends zwei Tabletten
+    en:
+    - One tablet morning and evening
+    - One tablet a day
+    - Two tablets in the morning
+    - Two tablets in the evening
+- id: dose-3
+  facet: dose
+  format: choice
+  prompt:
+    de: Wann sollen Sie die Tropfen nehmen?
+    en: When should you take the drops?
+  context: Estas gotas, antes de dormir.
+  answer:
+    de:
+    - Vor dem Schlafengehen
+    en:
+    - Before going to bed
+  options:
+    de:
+    - Vor dem Schlafengehen
+    - Vor dem Essen
+    - Nach dem Aufstehen
+    - Nach dem Essen
+    en:
+    - Before going to bed
+    - Before meals
+    - After getting up
+    - After meals

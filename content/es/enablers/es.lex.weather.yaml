@@ -1,0 +1,25 @@
+id: es.lex.weather
+lang: es
+kind: lexis
+title: Weather
+cefr: A1
+words:
+- el tiempo
+- hace sol
+- hace calor
+- hace frío
+- hace viento
+- llueve
+- nieva
+- está nublado
+- la temperatura
+- los grados
+- la tormenta
+- la niebla
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

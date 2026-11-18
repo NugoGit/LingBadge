@@ -5,47 +5,47 @@ skill: personal.intro.SI
 lang: {{code}}
 reviewed_by: []
 facets:
-- {id: name, label: "Name sagen und erfragen"}
-- {id: from, label: "Herkunft und Wohnort"}
-- {id: job, label: "Beruf und Sprachen"}
+- {id: name, label: {de: "Name sagen und erfragen", en: "Saying and asking your name"}}
+- {id: from, label: {de: "Herkunft und Wohnort", en: "Origin and place of residence"}}
+- {id: job, label: {de: "Beruf und Sprachen", en: "Job and languages"}}
 items:
 - id: name-1
   facet: name
   format: type
-  prompt: "Antworten Sie: Ich heiße Andrij."
+  prompt: {de: "Antworten Sie: Ich heiße Andrij.", en: "Answer: My name is Andrii."}
   context: TODO what the other person says ("What's your name?")
   stem: TODO the learner's reply with one ___ gap
   answer: [TODO]
 - id: name-2
   facet: name
   format: choice
-  prompt: "Fragen Sie ein Kind nach seinem Namen."
+  prompt: {de: "Fragen Sie ein Kind nach seinem Namen.", en: "Ask a child their name."}
   options: [TODO right informal question, TODO formal question, TODO ungrammatical variant]
   answer: [TODO right informal question]
 - id: from-1
   facet: from
   format: type
-  prompt: "Sagen Sie: Ich bin aus Österreich."
+  prompt: {de: "Sagen Sie: Ich bin aus Österreich.", en: "Say: I'm from Austria."}
   stem: TODO sentence with ___
   cue: TODO base form
   answer: [TODO]
 - id: from-2
   facet: from
   format: choice
-  prompt: "Fragen Sie (Sie-Form): Woher kommen Sie?"
+  prompt: {de: "Fragen Sie (Sie-Form): Woher kommen Sie?", en: "Ask (formal): Where are you from?"}
   options: ["TODO right question", "TODO where to?", "TODO where?", "TODO informal question"]
   answer: [TODO right question]
 - id: job-1
   facet: job
   format: type
-  prompt: "Sagen Sie: Ich arbeite als Programmierer."
+  prompt: {de: "Sagen Sie: Ich arbeite als Programmierer.", en: "Say: I work as a programmer."}
   stem: TODO sentence with ___
   cue: TODO base form
   answer: [TODO]
 - id: job-2
   facet: job
   format: type
-  prompt: "Sagen Sie: Ich spreche Deutsch und Englisch."
+  prompt: {de: "Sagen Sie: Ich spreche Deutsch und Englisch.", en: "Say: I speak German and English."}
   stem: TODO sentence with ___
   cue: TODO base form
   answer: [TODO]

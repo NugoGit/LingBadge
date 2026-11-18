@@ -1,0 +1,125 @@
+skill: weather.smalltalk.SI
+lang: es
+reviewed_by: []
+facets:
+- id: ask
+  label:
+    de: Nach dem Wetter fragen
+    en: Asking about the weather
+- id: today
+  label:
+    de: Das Wetter heute beschreiben
+    en: Describing today's weather
+- id: other
+  label:
+    de: Morgen und gestern
+    en: Tomorrow and yesterday
+items:
+- id: ask-1
+  facet: ask
+  format: type
+  prompt:
+    de: 'Fragen Sie: Wie ist das Wetter heute?'
+    en: 'Ask: What''s the weather like today?'
+  stem: ¿Qué ___ hace hoy?
+  answer:
+  - tiempo
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt:
+    de: Fragen Sie, wie das Wetter morgen wird.
+    en: Ask what the weather will be like tomorrow.
+  answer:
+  - ¿Qué tiempo va a hacer mañana?
+  options:
+  - ¿Qué tiempo va a hacer mañana?
+  - ¿Qué tiempo hizo ayer?
+  - ¿Qué tiempo hace hoy?
+  - ¿Dónde hace tiempo mañana?
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¿Qué tiempo hace hoy?
+  answer:
+  - Hace frío, pero hace sol.
+  options:
+  - Hace frío, pero hace sol.
+  - Mañana.
+  - Bien, gracias.
+  - A las siete.
+- id: today-1
+  facet: today
+  format: type
+  prompt:
+    de: 'Sagen Sie: Es regnet.'
+    en: 'Say: It''s raining.'
+  stem: Hoy ___.
+  cue: llover
+  answer:
+  - llueve
+  - está lloviendo
+- id: today-2
+  facet: today
+  format: type
+  prompt:
+    de: 'Sagen Sie: Heute ist es kalt.'
+    en: 'Say: It''s cold today.'
+  stem: Hoy hace ___.
+  cue:
+    de: kalt
+    en: cold
+  answer:
+  - frío
+- id: today-3
+  facet: today
+  format: type
+  prompt:
+    de: 'Sagen Sie: Heute ist es windig.'
+    en: 'Say: It''s windy today.'
+  stem: Hoy hace ___.
+  cue:
+    de: windig
+    en: windy
+  answer:
+  - viento
+  - aire
+- id: other-1
+  facet: other
+  format: type
+  prompt:
+    de: 'Sagen Sie: Morgen wird es heiß.'
+    en: 'Say: It will be hot tomorrow.'
+  stem: Mañana va a hacer ___.
+  cue:
+    de: heiß
+    en: hot
+  answer:
+  - calor
+- id: other-2
+  facet: other
+  format: type
+  prompt:
+    de: 'Sagen Sie: Gestern war es warm.'
+    en: 'Say: It was warm yesterday.'
+  stem: Ayer ___ calor.
+  cue: hacer
+  answer:
+  - hizo
+  - hacía
+- id: other-3
+  facet: other
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Morgen schneit es.'
+    en: 'Say: It will snow tomorrow.'
+  answer:
+  - Mañana va a nevar.
+  options:
+  - Mañana va a nevar.
+  - Mañana nevó.
+  - Mañana es nieve.
+  - Ayer va a nevar.

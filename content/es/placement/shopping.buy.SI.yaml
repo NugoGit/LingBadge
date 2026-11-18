@@ -1,0 +1,116 @@
+skill: shopping.buy.SI
+lang: es
+reviewed_by: []
+facets:
+- id: what
+  label:
+    de: Sagen, was man möchte
+    en: Saying what you want
+- id: amount
+  label:
+    de: Mengen
+    en: Quantities
+- id: price
+  label:
+    de: Preis und Bezahlen
+    en: Price and paying
+items:
+- id: what-1
+  facet: what
+  format: type
+  prompt:
+    de: Verlangen Sie ein Brot.
+    en: Ask for a loaf of bread.
+  stem: ¿Me da una barra de ___, por favor?
+  cue:
+    de: Brot
+    en: bread
+  answer:
+  - pan
+- id: what-2
+  facet: what
+  format: type
+  prompt:
+    de: Verlangen Sie eine Flasche Milch.
+    en: Ask for a bottle of milk.
+  stem: Una botella ___ leche, por favor.
+  answer:
+  - de
+- id: what-3
+  facet: what
+  format: type
+  prompt:
+    de: Verlangen Sie Öl und Käse.
+    en: Ask for oil and cheese.
+  stem: ¿Me da aceite y ___?
+  cue:
+    de: Käse
+    en: cheese
+  answer:
+  - queso
+- id: amount-1
+  facet: amount
+  format: type
+  prompt:
+    de: Ein Kilo Äpfel, bitte.
+    en: A kilo of apples, please.
+  stem: Un kilo de ___, por favor.
+  cue: manzana
+  answer:
+  - manzanas
+- id: amount-2
+  facet: amount
+  format: type
+  prompt:
+    de: Zwei Kilo Kartoffeln.
+    en: Two kilos of potatoes.
+  stem: Dos ___ de patatas.
+  cue: kilo
+  answer:
+  - kilos
+- id: amount-3
+  facet: amount
+  format: type
+  prompt:
+    de: Zehn Eier, bitte.
+    en: Ten eggs, please.
+  stem: Diez ___, por favor.
+  cue: huevo
+  answer:
+  - huevos
+- id: price-1
+  facet: price
+  format: type
+  prompt:
+    de: 'Fragen Sie: Was kostet der Käse?'
+    en: 'Ask: How much is the cheese?'
+  stem: ¿Cuánto ___ el queso?
+  cue: costar
+  answer:
+  - cuesta
+  - vale
+- id: price-2
+  facet: price
+  format: type
+  prompt:
+    de: 'Fragen Sie: Was kosten die Tomaten?'
+    en: 'Ask: How much are the tomatoes?'
+  stem: ¿Cuánto ___ los tomates?
+  cue: costar
+  answer:
+  - cuestan
+  - valen
+- id: price-3
+  facet: price
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Nein, das ist alles.'
+    en: 'Say: No, that''s all.'
+  context: ¿Algo más?
+  answer:
+  - No, nada más, gracias.
+  options:
+  - No, nada más, gracias.
+  - No, algo más.
+  - Sí, nada más.
+  - No, todos.

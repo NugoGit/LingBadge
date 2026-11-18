@@ -1,0 +1,35 @@
+skill: travel.hotel.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Tengo una reserva a nombre de …
+- Aquí tiene mi pasaporte.
+- ¿A qué hora es el desayuno?
+- ¿Cuál es la contraseña del wifi?
+- ¿Puedo dejar la maleta?
+enablers:
+  required:
+  - id: es.lex.transport-travel
+    use: productive
+  - id: es.gram.verb.modal
+    use: productive
+  - id: es.num.time
+    use: productive
+  - id: es.gram.syntax.questions
+    use: productive
+  - id: es.gram.verb.present-irregular
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+version: 1
+status: draft

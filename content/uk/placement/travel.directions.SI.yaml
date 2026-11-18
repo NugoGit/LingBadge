@@ -3,24 +3,36 @@ lang: uk
 reviewed_by: []
 facets:
 - id: ask
-  label: Fragen, wo etwas ist
+  label:
+    de: Fragen, wo etwas ist
+    en: Ask where something is
 - id: how
-  label: Nach dem Weg fragen
+  label:
+    de: Nach dem Weg fragen
+    en: Ask the way
 - id: follow
-  label: Wegbeschreibung verstehen
+  label:
+    de: Wegbeschreibung verstehen
+    en: Understand directions
 items:
 - id: ask-1
   facet: ask
   format: type
-  prompt: 'Fragen Sie: Entschuldigung, wo ist hier eine Apotheke?'
+  prompt:
+    de: 'Fragen Sie: Entschuldigung, wo ist hier eine Apotheke?'
+    en: 'Ask: Excuse me, where is a pharmacy around here?'
   stem: Вибачте, де тут ___?
-  cue: Apotheke
+  cue:
+    de: Apotheke
+    en: pharmacy
   answer:
   - аптека
 - id: ask-2
   facet: ask
   format: choice
-  prompt: Fragen Sie nach der Metro.
+  prompt:
+    de: Fragen Sie nach der Metro.
+    en: Ask for the metro.
   answer:
   - Де тут метро?
   options:
@@ -31,15 +43,21 @@ items:
 - id: ask-3
   facet: ask
   format: type
-  prompt: 'Fragen Sie: Gibt es hier in der Nähe einen Geldautomaten?'
+  prompt:
+    de: 'Fragen Sie: Gibt es hier in der Nähe einen Geldautomaten?'
+    en: 'Ask: Is there a cash machine near here?'
   stem: Тут поруч є ___?
-  cue: Geldautomat
+  cue:
+    de: Geldautomat
+    en: Cash machine
   answer:
   - банкомат
 - id: how-1
   facet: how
   format: type
-  prompt: 'Fragen Sie: Wie komme ich zum Bahnhof?'
+  prompt:
+    de: 'Fragen Sie: Wie komme ich zum Bahnhof?'
+    en: 'Ask: How do I get to the station?'
   stem: Як пройти до ___?
   cue: вокзал
   answer:
@@ -47,7 +65,9 @@ items:
 - id: how-2
   facet: how
   format: type
-  prompt: 'Fragen Sie: Wie komme ich zum Platz?'
+  prompt:
+    de: 'Fragen Sie: Wie komme ich zum Platz?'
+    en: 'Ask: How do I get to the square?'
   stem: Як пройти до ___?
   cue: площа
   answer:
@@ -55,7 +75,9 @@ items:
 - id: how-3
   facet: how
   format: type
-  prompt: 'Fragen Sie: Wie komme ich (mit dem Verkehrsmittel) ins Zentrum?'
+  prompt:
+    de: 'Fragen Sie: Wie komme ich (mit dem Verkehrsmittel) ins Zentrum?'
+    en: 'Ask: How do I get (by transport) to the centre?'
   stem: Як доїхати до ___?
   cue: центр
   answer:
@@ -63,36 +85,69 @@ items:
 - id: follow-1
   facet: follow
   format: choice
-  prompt: Was sollen Sie tun?
+  prompt:
+    de: Was sollen Sie tun?
+    en: What should you do?
   context: Ідіть прямо, потім праворуч.
   answer:
-  - Geradeaus, dann rechts
+    de:
+    - Geradeaus, dann rechts
+    en:
+    - Straight on, then right
   options:
-  - Geradeaus, dann rechts
-  - Geradeaus, dann links
-  - Rechts, dann geradeaus
-  - Zurück, dann rechts
+    de:
+    - Geradeaus, dann rechts
+    - Geradeaus, dann links
+    - Rechts, dann geradeaus
+    - Zurück, dann rechts
+    en:
+    - Straight on, then right
+    - Straight on, then left
+    - Right, then straight on
+    - Back, then right
 - id: follow-2
   facet: follow
   format: choice
-  prompt: Wie weit ist es?
+  prompt:
+    de: Wie weit ist es?
+    en: How far is it?
   context: Це близько, п'ять хвилин пішки.
   answer:
-  - Fünf Minuten zu Fuß
+    de:
+    - Fünf Minuten zu Fuß
+    en:
+    - Five minutes on foot
   options:
-  - Fünf Minuten zu Fuß
-  - Fünf Minuten mit dem Bus
-  - Fünf Kilometer
-  - Es ist weit
+    de:
+    - Fünf Minuten zu Fuß
+    - Fünf Minuten mit dem Bus
+    - Fünf Kilometer
+    - Es ist weit
+    en:
+    - Five minutes on foot
+    - Five minutes by bus
+    - Five kilometres
+    - It's far
 - id: follow-3
   facet: follow
   format: choice
-  prompt: Was wird gesagt?
+  prompt:
+    de: Was wird gesagt?
+    en: What is said?
   context: Це далеко. Краще їдьте на метро.
   answer:
-  - Es ist weit, nehmen Sie die Metro
+    de:
+    - Es ist weit, nehmen Sie die Metro
+    en:
+    - It's far, take the metro
   options:
-  - Es ist weit, nehmen Sie die Metro
-  - Es ist nah, gehen Sie zu Fuß
-  - Die Metro ist weit weg
-  - Es gibt keine Metro
+    de:
+    - Es ist weit, nehmen Sie die Metro
+    - Es ist nah, gehen Sie zu Fuß
+    - Die Metro ist weit weg
+    - Es gibt keine Metro
+    en:
+    - It's far, take the metro
+    - It's close, walk
+    - The metro is far away
+    - There is no metro

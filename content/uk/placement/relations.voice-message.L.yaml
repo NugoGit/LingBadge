@@ -3,52 +3,93 @@ lang: uk
 reviewed_by: []
 facets:
 - id: who
-  label: Wer spricht
+  label:
+    de: Wer spricht
+    en: Who is speaking
 - id: when
-  label: Wann
+  label:
+    de: Wann
+    en: When
 - id: where
-  label: Wo
+  label:
+    de: Wo
+    en: Where
 items:
 - id: who-1
   facet: who
   format: choice
-  prompt: Wer spricht?
+  prompt:
+    de: Wer spricht?
+    en: Who is speaking?
   audio: Привіт, це Оксана. Зустрінемося в суботу о третій біля театру. Передзвони мені, будь ласка!
   answer:
-  - Oksana
+    de:
+    - Oksana
+    en:
+    - Oksana
   options:
-  - Oksana
-  - Olena
-  - Oleksandr
-  - Ostap
+    de:
+    - Oksana
+    - Olena
+    - Oleksandr
+    - Ostap
+    en:
+    - Oksana
+    - Olena
+    - Oleksandr
+    - Ostap
 - id: who-2
   facet: who
   format: choice
-  prompt: Wer ruft an?
+  prompt:
+    de: Wer ruft an?
+    en: Who is calling?
   audio: Добрий день, це Максим з роботи. Нарада завтра не о десятій, а об одинадцятій, у кімнаті п'ять.
   answer:
-  - Ein Kollege
+    de:
+    - Ein Kollege
+    en:
+    - A colleague
   options:
-  - Ein Kollege
-  - Ein Freund
-  - Der Arzt
-  - Ein Nachbar
+    de:
+    - Ein Kollege
+    - Ein Freund
+    - Der Arzt
+    - Ein Nachbar
+    en:
+    - A colleague
+    - A friend
+    - The doctor
+    - A neighbour
 - id: who-3
   facet: who
   format: choice
-  prompt: Wer spricht?
+  prompt:
+    de: Wer spricht?
+    en: Who is speaking?
   audio: Привіт! Це я, Ігор. Я вже в кафе «Львівська кава» на площі Ринок. Чекаю на тебе до шостої.
   answer:
-  - Ihor
+    de:
+    - Ihor
+    en:
+    - Ihor
   options:
-  - Ihor
-  - Iryna
-  - Iwan
-  - Illja
+    de:
+    - Ihor
+    - Iryna
+    - Iwan
+    - Illja
+    en:
+    - Ihor
+    - Iryna
+    - Ivan
+    - Illia
 - id: when-1
   facet: when
   format: type
-  prompt: Um wie viel Uhr treffen Sie sich? (Zahl)
+  prompt:
+    de: Um wie viel Uhr treffen Sie sich? (Zahl)
+    en: What time are you meeting? (number)
   audio: Привіт, це Оксана. Зустрінемося в суботу о третій біля театру. Передзвони мені, будь ласка!
   answer:
   - '3'
@@ -58,19 +99,32 @@ items:
 - id: when-2
   facet: when
   format: choice
-  prompt: Wann ist die Besprechung jetzt?
+  prompt:
+    de: Wann ist die Besprechung jetzt?
+    en: When is the meeting now?
   audio: Добрий день, це Максим з роботи. Нарада завтра не о десятій, а об одинадцятій, у кімнаті п'ять.
   answer:
-  - Morgen um 11
+    de:
+    - Morgen um 11
+    en:
+    - Tomorrow at 11
   options:
-  - Morgen um 11
-  - Morgen um 10
-  - Heute um 11
-  - Übermorgen um 10
+    de:
+    - Morgen um 11
+    - Morgen um 10
+    - Heute um 11
+    - Übermorgen um 10
+    en:
+    - Tomorrow at 11
+    - Tomorrow at 10
+    - Today at 11
+    - The day after tomorrow at 10
 - id: when-3
   facet: when
   format: type
-  prompt: Bis wann wartet Ihor? (Zahl)
+  prompt:
+    de: Bis wann wartet Ihor? (Zahl)
+    en: Until when is Ihor waiting? (number)
   audio: Привіт! Це я, Ігор. Я вже в кафе «Львівська кава» на площі Ринок. Чекаю на тебе до шостої.
   answer:
   - '6'
@@ -80,31 +134,55 @@ items:
 - id: where-1
   facet: where
   format: choice
-  prompt: Wo treffen Sie sich?
+  prompt:
+    de: Wo treffen Sie sich?
+    en: Where are you meeting?
   audio: Привіт, це Оксана. Зустрінемося в суботу о третій біля театру. Передзвони мені, будь ласка!
   answer:
-  - Beim Theater
+    de:
+    - Beim Theater
+    en:
+    - By the theatre
   options:
-  - Beim Theater
-  - Im Theater
-  - Beim Kino
-  - Am Bahnhof
+    de:
+    - Beim Theater
+    - Im Theater
+    - Beim Kino
+    - Am Bahnhof
+    en:
+    - By the theatre
+    - At the theatre
+    - By the cinema
+    - At the station
 - id: where-2
   facet: where
   format: type
-  prompt: In welchem Raum? (Zahl)
+  prompt:
+    de: In welchem Raum? (Zahl)
+    en: In which room? (number)
   audio: Добрий день, це Максим з роботи. Нарада завтра не о десятій, а об одинадцятій, у кімнаті п'ять.
   answer:
   - '5'
 - id: where-3
   facet: where
   format: choice
-  prompt: Wo ist Ihor?
+  prompt:
+    de: Wo ist Ihor?
+    en: Where is Ihor?
   audio: Привіт! Це я, Ігор. Я вже в кафе «Львівська кава» на площі Ринок. Чекаю на тебе до шостої.
   answer:
-  - Im Café am Marktplatz
+    de:
+    - Im Café am Marktplatz
+    en:
+    - In the café on the market square
   options:
-  - Im Café am Marktplatz
-  - Auf dem Markt
-  - Zu Hause
-  - Im Theater
+    de:
+    - Im Café am Marktplatz
+    - Auf dem Markt
+    - Zu Hause
+    - Im Theater
+    en:
+    - In the café on the market square
+    - At the market
+    - At home
+    - At the theatre

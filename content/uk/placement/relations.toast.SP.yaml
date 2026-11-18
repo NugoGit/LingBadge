@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: classic
-  label: Üblicher Trinkspruch
+  label:
+    de: Üblicher Trinkspruch
+    en: A common toast
 - id: za
-  label: За + Akkusativ
+  label:
+    de: За + Akkusativ
+    en: За + accusative
 - id: whom
-  label: Auf wen
+  label:
+    de: Auf wen
+    en: To whom
 items:
 - id: classic-1
   facet: classic
   format: choice
-  prompt: 'Ein kurzer, üblicher Trinkspruch:'
+  prompt:
+    de: 'Ein kurzer, üblicher Trinkspruch:'
+    en: 'A short, common toast:'
   answer:
   - Будьмо!
   options:
@@ -23,7 +31,9 @@ items:
 - id: classic-2
   facet: classic
   format: choice
-  prompt: Was antworten die anderen traditionell auf „Будьмо!“?
+  prompt:
+    de: Was antworten die anderen traditionell auf „Будьмо!“?
+    en: What do the others traditionally reply to “Будьмо!”?
   answer:
   - Гей!
   options:
@@ -34,7 +44,9 @@ items:
 - id: classic-3
   facet: classic
   format: choice
-  prompt: Sie stehen auf und wollen einen Toast ausbringen. Wie beginnen Sie?
+  prompt:
+    de: Sie stehen auf und wollen einen Toast ausbringen. Wie beginnen Sie?
+    en: You stand up to propose a toast. How do you begin?
   answer:
   - Я хочу сказати тост!
   options:
@@ -45,7 +57,9 @@ items:
 - id: za-1
   facet: za
   format: type
-  prompt: Auf unser Treffen!
+  prompt:
+    de: Auf unser Treffen!
+    en: To our meeting!
   stem: За ___ зустріч!
   cue: наш
   answer:
@@ -53,7 +67,9 @@ items:
 - id: za-2
   facet: za
   format: type
-  prompt: Auf den Sieg!
+  prompt:
+    de: Auf den Sieg!
+    en: To victory!
   stem: За ___!
   cue: перемога
   answer:
@@ -61,7 +77,9 @@ items:
 - id: za-3
   facet: za
   format: type
-  prompt: Auf Ihre Familie!
+  prompt:
+    de: Auf Ihre Familie!
+    en: To your family!
   stem: За ___ родину!
   cue: ваш
   answer:
@@ -69,7 +87,9 @@ items:
 - id: whom-1
   facet: whom
   format: type
-  prompt: Auf dich!
+  prompt:
+    de: Auf dich!
+    en: To you! (informal)
   stem: За ___!
   cue: ти
   answer:
@@ -77,7 +97,9 @@ items:
 - id: whom-2
   facet: whom
   format: type
-  prompt: Auf Sie! / Auf euch!
+  prompt:
+    de: Auf Sie! / Auf euch!
+    en: To you! (formal / plural)
   stem: За ___!
   cue: ви
   answer:
@@ -85,7 +107,9 @@ items:
 - id: whom-3
   facet: whom
   format: choice
-  prompt: Auf die Gesundheit der Gastgeber!
+  prompt:
+    de: Auf die Gesundheit der Gastgeber!
+    en: To the hosts' health!
   answer:
   - За здоров'я господарів!
   options:

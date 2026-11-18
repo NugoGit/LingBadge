@@ -1,0 +1,18 @@
+skill: weather.forecast.R
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- 'Madrid: máx. 28°, mín. 15°, soleado.'
+- 'Barcelona: nublado, posibles lluvias.'
+- Viento flojo.
+enablers:
+  required:
+  - id: es.lex.weather
+    use: productive
+  - id: es.num.cardinal-0-100
+    use: productive
+version: 1
+status: draft

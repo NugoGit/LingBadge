@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: name
-  label: Name sagen und erfragen
+  label:
+    de: Name sagen und erfragen
+    en: Saying and asking your name
 - id: from
-  label: Herkunft und Wohnort
+  label:
+    de: Herkunft und Wohnort
+    en: Origin and place of residence
 - id: job
-  label: Beruf und Sprachen
+  label:
+    de: Beruf und Sprachen
+    en: Job and languages
 items:
 - id: name-1
   facet: name
   format: type
-  prompt: 'Antworten Sie: Ich heiße Andrij.'
+  prompt:
+    de: 'Antworten Sie: Ich heiße Andrij.'
+    en: 'Answer: My name is Andrii.'
   context: Як вас звати?
   stem: ___ звати Андрій.
   answer:
@@ -20,7 +28,9 @@ items:
 - id: name-2
   facet: name
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Мене звати Олена. А вас?
   answer:
   - Мене звати Томас. Дуже приємно!
@@ -32,7 +42,9 @@ items:
 - id: name-3
   facet: name
   format: choice
-  prompt: Fragen Sie ein Kind nach seinem Namen.
+  prompt:
+    de: Fragen Sie ein Kind nach seinem Namen.
+    en: Ask a child their name.
   answer:
   - Як тебе звати?
   options:
@@ -43,7 +55,9 @@ items:
 - id: from-1
   facet: from
   format: type
-  prompt: 'Sagen Sie: Ich bin aus Österreich.'
+  prompt:
+    de: 'Sagen Sie: Ich bin aus Österreich.'
+    en: 'Say: I''m from Austria.'
   stem: Я з ___.
   cue: Австрія
   answer:
@@ -51,7 +65,9 @@ items:
 - id: from-2
   facet: from
   format: type
-  prompt: 'Sagen Sie: Ich wohne in Salzburg.'
+  prompt:
+    de: 'Sagen Sie: Ich wohne in Salzburg.'
+    en: 'Say: I live in Salzburg.'
   stem: Я живу в ___.
   cue: Зальцбург
   answer:
@@ -59,7 +75,9 @@ items:
 - id: from-3
   facet: from
   format: choice
-  prompt: 'Fragen Sie (Sie-Form): Woher kommen Sie?'
+  prompt:
+    de: 'Fragen Sie (Sie-Form): Woher kommen Sie?'
+    en: 'Ask (formal): Where are you from?'
   answer:
   - Звідки ви?
   options:
@@ -70,7 +88,9 @@ items:
 - id: job-1
   facet: job
   format: type
-  prompt: 'Sagen Sie: Ich arbeite als Programmierer.'
+  prompt:
+    de: 'Sagen Sie: Ich arbeite als Programmierer.'
+    en: 'Say: I work as a programmer.'
   stem: Я працюю ___.
   cue: програміст
   answer:
@@ -78,7 +98,9 @@ items:
 - id: job-2
   facet: job
   format: type
-  prompt: 'Sagen Sie: Ich spreche Deutsch und Englisch.'
+  prompt:
+    de: 'Sagen Sie: Ich spreche Deutsch und Englisch.'
+    en: 'Say: I speak German and English.'
   stem: Я розмовляю ___ й англійською.
   cue: німецька
   answer:
@@ -86,7 +108,9 @@ items:
 - id: job-3
   facet: job
   format: choice
-  prompt: Sie sind nicht Student, sondern Lehrer. Was antworten Sie?
+  prompt:
+    de: Sie sind nicht Student, sondern Lehrer. Was antworten Sie?
+    en: You're not a student but a teacher. What do you answer?
   context: Ви студент?
   answer:
   - Ні, я вчитель.

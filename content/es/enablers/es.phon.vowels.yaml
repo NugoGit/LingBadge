@@ -1,0 +1,12 @@
+id: es.phon.vowels
+lang: es
+kind: phonology
+title: Five pure vowels; common diphthongs (bueno, tiene)
+cefr: A1
+sources:
+- pcic.A1.phon.vowels
+check:
+  template: enabler.phonology.v1
+  items: 10
+  threshold: 0.9
+  channel: audio

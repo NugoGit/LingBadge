@@ -1,0 +1,12 @@
+id: es.prag.greetings
+lang: es
+kind: pragmatics
+title: Greetings and goodbyes by register and time of day (Hola, Buenos días, Hasta luego)
+cefr: A1
+sources:
+- pcic.A1.prag.greetings
+check:
+  template: enabler.pragmatics.v1
+  items: 10
+  threshold: 0.9
+  channel: text

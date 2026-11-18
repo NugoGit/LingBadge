@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: open
-  label: Begrüßung, Name, Schluss
+  label:
+    de: Begrüßung, Name, Schluss
+    en: Greeting, name, closing
 - id: age
-  label: Alter, Herkunft, Wohnort
+  label:
+    de: Alter, Herkunft, Wohnort
+    en: Age, origin, place of residence
 - id: likes
-  label: Arbeit und Hobbys
+  label:
+    de: Arbeit und Hobbys
+    en: Work and hobbies
 items:
 - id: open-1
   facet: open
   format: choice
-  prompt: Sie beginnen eine Vorstellung vor einer Gruppe. Wie?
+  prompt:
+    de: Sie beginnen eine Vorstellung vor einer Gruppe. Wie?
+    en: You start introducing yourself to a group. How?
   answer:
   - Добрий день! Мене звати Ніна.
   options:
@@ -23,14 +31,18 @@ items:
 - id: open-2
   facet: open
   format: type
-  prompt: 'Begrüßen Sie die Gruppe: Guten Tag!'
+  prompt:
+    de: 'Begrüßen Sie die Gruppe: Guten Tag!'
+    en: 'Greet the group: Good afternoon!'
   stem: Добрий ___! Мене звати Петер.
   answer:
   - день
 - id: open-3
   facet: open
   format: choice
-  prompt: 'Am Ende sagen Sie: Danke für die Aufmerksamkeit!'
+  prompt:
+    de: 'Am Ende sagen Sie: Danke für die Aufmerksamkeit!'
+    en: 'At the end you say: Thank you for your attention!'
   answer:
   - Дякую за увагу!
   options:
@@ -41,7 +53,9 @@ items:
 - id: age-1
   facet: age
   format: type
-  prompt: 'Sagen Sie: Ich bin 32 Jahre alt.'
+  prompt:
+    de: 'Sagen Sie: Ich bin 32 Jahre alt.'
+    en: 'Say: I''m 32 years old.'
   stem: Мені тридцять два ___.
   cue: рік
   answer:
@@ -49,7 +63,9 @@ items:
 - id: age-2
   facet: age
   format: type
-  prompt: 'Sagen Sie: Ich bin 25 Jahre alt.'
+  prompt:
+    de: 'Sagen Sie: Ich bin 25 Jahre alt.'
+    en: 'Say: I''m 25 years old.'
   stem: Мені двадцять п'ять ___.
   cue: рік
   answer:
@@ -57,7 +73,9 @@ items:
 - id: age-3
   facet: age
   format: type
-  prompt: 'Sagen Sie: Ich komme aus Deutschland und wohne in Berlin.'
+  prompt:
+    de: 'Sagen Sie: Ich komme aus Deutschland und wohne in Berlin.'
+    en: 'Say: I''m from Germany and live in Berlin.'
   stem: Я з Німеччини, живу в ___.
   cue: Берлін
   answer:
@@ -65,7 +83,9 @@ items:
 - id: likes-1
   facet: likes
   format: type
-  prompt: 'Sagen Sie: In der Freizeit spiele ich Gitarre.'
+  prompt:
+    de: 'Sagen Sie: In der Freizeit spiele ich Gitarre.'
+    en: 'Say: In my free time I play the guitar.'
   stem: У вільний час я ___ на гітарі.
   cue: грати
   answer:
@@ -73,7 +93,9 @@ items:
 - id: likes-2
   facet: likes
   format: type
-  prompt: 'Sagen Sie: Ich mag die ukrainische Küche.'
+  prompt:
+    de: 'Sagen Sie: Ich mag die ukrainische Küche.'
+    en: 'Say: I like Ukrainian cuisine.'
   stem: Я люблю ___ кухню.
   cue: український
   answer:
@@ -81,7 +103,9 @@ items:
 - id: likes-3
   facet: likes
   format: type
-  prompt: 'Sagen Sie: Ich arbeite in einer Bank.'
+  prompt:
+    de: 'Sagen Sie: Ich arbeite in einer Bank.'
+    en: 'Say: I work in a bank.'
   stem: Я працюю в ___.
   cue: банк
   answer:

@@ -1,0 +1,14 @@
+id: es.gram.verb.gustar
+lang: es
+kind: grammar
+title: 'gustar and encantar: me gusta / me gustan, ¿te gusta?, a mí también'
+cefr: A1
+requires:
+- es.gram.verb.present-regular
+sources:
+- pcic.A1.gram.gustar
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

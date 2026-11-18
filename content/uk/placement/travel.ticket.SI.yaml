@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: where
-  label: Fahrkarte, wohin, wie viele
+  label:
+    de: Fahrkarte, wohin, wie viele
+    en: Ticket, where to, how many
 - id: when
-  label: Für wann
+  label:
+    de: Für wann
+    en: For when
 - id: info
-  label: Abfahrt, Bahnsteig
+  label:
+    de: Abfahrt, Bahnsteig
+    en: Departure, platform
 items:
 - id: where-1
   facet: where
   format: type
-  prompt: Eine Fahrkarte nach Lwiw, bitte.
+  prompt:
+    de: Eine Fahrkarte nach Lwiw, bitte.
+    en: One ticket to Lviv, please.
   stem: Один квиток до ___, будь ласка.
   cue: Львів
   answer:
@@ -20,7 +28,9 @@ items:
 - id: where-2
   facet: where
   format: type
-  prompt: Zwei Fahrkarten nach Odesa.
+  prompt:
+    de: Zwei Fahrkarten nach Odesa.
+    en: Two tickets to Odesa.
   stem: Два квитки до ___.
   cue: Одеса
   answer:
@@ -28,7 +38,9 @@ items:
 - id: where-3
   facet: where
   format: type
-  prompt: Zwei Fahrkarten nach Kyjiw.
+  prompt:
+    de: Zwei Fahrkarten nach Kyjiw.
+    en: Two tickets to Kyiv.
   stem: Два ___ до Києва.
   cue: квиток
   answer:
@@ -36,23 +48,33 @@ items:
 - id: when-1
   facet: when
   format: type
-  prompt: Für heute, für den Abend.
+  prompt:
+    de: Für heute, für den Abend.
+    en: For today, for the evening.
   stem: На ___, на вечір.
-  cue: heute
+  cue:
+    de: heute
+    en: today
   answer:
   - сьогодні
 - id: when-2
   facet: when
   format: type
-  prompt: Für morgen früh.
+  prompt:
+    de: Für morgen früh.
+    en: For tomorrow morning.
   stem: На ___ вранці.
-  cue: morgen
+  cue:
+    de: morgen
+    en: tomorrow
   answer:
   - завтра
 - id: when-3
   facet: when
   format: type
-  prompt: Für nächsten Freitag.
+  prompt:
+    de: Für nächsten Freitag.
+    en: For next Friday.
   stem: На ___ п'ятницю.
   cue: наступний
   answer:
@@ -60,27 +82,44 @@ items:
 - id: info-1
   facet: info
   format: type
-  prompt: 'Fragen Sie: Um wie viel Uhr ist die Abfahrt?'
+  prompt:
+    de: 'Fragen Sie: Um wie viel Uhr ist die Abfahrt?'
+    en: 'Ask: What time is the departure?'
   stem: О ___ відправлення?
   answer:
   - котрій
 - id: info-2
   facet: info
   format: type
-  prompt: 'Fragen Sie: Von welchem Bahnsteig?'
+  prompt:
+    de: 'Fragen Sie: Von welchem Bahnsteig?'
+    en: 'Ask: From which platform?'
   stem: З якої ___?
-  cue: Bahnsteig
+  cue:
+    de: Bahnsteig
+    en: platform
   answer:
   - платформи
 - id: info-3
   facet: info
   format: choice
-  prompt: Von wo fährt der Zug?
+  prompt:
+    de: Von wo fährt der Zug?
+    en: Where does the train leave from?
   context: Відправлення о 18:40, третя платформа.
   answer:
-  - Bahnsteig 3
+    de:
+    - Bahnsteig 3
+    en:
+    - Platform 3
   options:
-  - Bahnsteig 3
-  - Bahnsteig 18
-  - Bahnsteig 4
-  - Gleis 40
+    de:
+    - Bahnsteig 3
+    - Bahnsteig 18
+    - Bahnsteig 4
+    - Gleis 40
+    en:
+    - Platform 3
+    - Platform 18
+    - Platform 4
+    - Track 40

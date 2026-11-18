@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: time
-  label: Abfahrt und Ankunft
+  label:
+    de: Abfahrt und Ankunft
+    en: Departure and arrival
 - id: platform
-  label: Gleis
+  label:
+    de: Gleis
+    en: Track
 - id: status
-  label: Verspätung, Ausfall, Verkehrstage
+  label:
+    de: Verspätung, Ausfall, Verkehrstage
+    en: Delays, cancellations, days of operation
 items:
 - id: time-1
   facet: time
   format: type
-  prompt: Wann fährt der Zug nach Kyjiw ab? (Uhrzeit)
+  prompt:
+    de: Wann fährt der Zug nach Kyjiw ab? (Uhrzeit)
+    en: When does the train to Kyiv leave? (time)
   text: |-
     Відправлення
     Київ 09:20 колія 2
@@ -23,7 +31,9 @@ items:
 - id: time-2
   facet: time
   format: type
-  prompt: Wann kommt der Zug aus Lwiw an? (Uhrzeit)
+  prompt:
+    de: Wann kommt der Zug aus Lwiw an? (Uhrzeit)
+    en: When does the train from Lviv arrive? (time)
   text: |-
     Прибуття
     Львів 14:05 колія 3
@@ -33,7 +43,9 @@ items:
 - id: time-3
   facet: time
   format: type
-  prompt: Wann fährt der erste Bus? (Uhrzeit)
+  prompt:
+    de: Wann fährt der erste Bus? (Uhrzeit)
+    en: When does the first bus leave? (time)
   text: |-
     Автобус № 12
     Щодня, крім неділі
@@ -44,7 +56,9 @@ items:
 - id: platform-1
   facet: platform
   format: type
-  prompt: Von welchem Gleis fährt der Zug nach Kyjiw? (Zahl)
+  prompt:
+    de: Von welchem Gleis fährt der Zug nach Kyjiw? (Zahl)
+    en: From which track does the train to Kyiv leave? (number)
   text: |-
     Відправлення
     Київ 09:20 колія 2
@@ -55,7 +69,9 @@ items:
 - id: platform-2
   facet: platform
   format: type
-  prompt: Von welchem Gleis fährt der Zug nach Odesa? (Zahl)
+  prompt:
+    de: Von welchem Gleis fährt der Zug nach Odesa? (Zahl)
+    en: From which track does the train to Odesa leave? (number)
   text: |-
     Відправлення
     Київ 09:20 колія 2
@@ -66,7 +82,9 @@ items:
 - id: platform-3
   facet: platform
   format: type
-  prompt: Auf welchem Gleis kommt der Zug aus Uschhorod an? (Zahl)
+  prompt:
+    de: Auf welchem Gleis kommt der Zug aus Uschhorod an? (Zahl)
+    en: On which track does the train from Uzhhorod arrive? (number)
   text: |-
     Прибуття
     Львів 14:05 колія 3
@@ -76,47 +94,80 @@ items:
 - id: status-1
   facet: status
   format: choice
-  prompt: Was ist mit dem Zug nach Charkiw?
+  prompt:
+    de: Was ist mit dem Zug nach Charkiw?
+    en: What about the train to Kharkiv?
   text: |-
     Відправлення
     Київ 09:20 колія 2
     Одеса 11:45 колія 4 — затримується на 30 хв
     Харків 13:10 колія 1 — скасовано
   answer:
-  - Er fällt aus
+    de:
+    - Er fällt aus
+    en:
+    - It is cancelled
   options:
-  - Er fällt aus
-  - Er hat Verspätung
-  - Er ist pünktlich
-  - Er fährt früher
+    de:
+    - Er fällt aus
+    - Er hat Verspätung
+    - Er ist pünktlich
+    - Er fährt früher
+    en:
+    - It is cancelled
+    - It is delayed
+    - It is on time
+    - It leaves earlier
 - id: status-2
   facet: status
   format: choice
-  prompt: Was ist mit dem Zug nach Odesa?
+  prompt:
+    de: Was ist mit dem Zug nach Odesa?
+    en: What about the train to Odesa?
   text: |-
     Відправлення
     Київ 09:20 колія 2
     Одеса 11:45 колія 4 — затримується на 30 хв
     Харків 13:10 колія 1 — скасовано
   answer:
-  - 30 Minuten Verspätung
+    de:
+    - 30 Minuten Verspätung
+    en:
+    - 30 minutes late
   options:
-  - 30 Minuten Verspätung
-  - Er fällt aus
-  - Er fährt 30 Minuten früher
-  - Er ist pünktlich
+    de:
+    - 30 Minuten Verspätung
+    - Er fällt aus
+    - Er fährt 30 Minuten früher
+    - Er ist pünktlich
+    en:
+    - 30 minutes late
+    - It is cancelled
+    - It leaves 30 minutes earlier
+    - It is on time
 - id: status-3
   facet: status
   format: choice
-  prompt: Fährt der Bus am Sonntag?
+  prompt:
+    de: Fährt der Bus am Sonntag?
+    en: Does the bus run on Sunday?
   text: |-
     Автобус № 12
     Щодня, крім неділі
     06:00, 06:30, 07:00 … 22:00
   answer:
-  - Nein
+    de:
+    - Nein
+    en:
+    - 'No'
   options:
-  - Nein
-  - Ja
-  - Nur bis 22 Uhr
-  - Nur am Sonntag
+    de:
+    - Nein
+    - Ja
+    - Nur bis 22 Uhr
+    - Nur am Sonntag
+    en:
+    - 'No'
+    - 'Yes'
+    - Only until 22:00
+    - Only on Sunday

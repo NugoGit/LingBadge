@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: pos
-  label: Gratulieren, loben
+  label:
+    de: Gratulieren, loben
+    en: Congratulating, praising
 - id: sym
-  label: Mitgefühl, schade
+  label:
+    de: Mitgefühl, schade
+    en: Sympathy, “what a pity”
 - id: reply
-  label: Danken, sich entschuldigen
+  label:
+    de: Danken, sich entschuldigen
+    en: Thanking, apologising
 items:
 - id: pos-1
   facet: pos
   format: choice
-  prompt: Welcher Kommentar passt?
+  prompt:
+    de: Welcher Kommentar passt?
+    en: Which comment fits?
   context: Мій новий велосипед! 🚲
   answer:
   - Класне фото! Вітаю!
@@ -24,14 +32,18 @@ items:
 - id: pos-2
   facet: pos
   format: type
-  prompt: 'Kommentieren Sie: Glückwunsch!'
+  prompt:
+    de: 'Kommentieren Sie: Glückwunsch!'
+    en: 'Comment: Congratulations!'
   stem: ___!
   answer:
   - Вітаю
 - id: pos-3
   facet: pos
   format: choice
-  prompt: Welcher Kommentar passt?
+  prompt:
+    de: Welcher Kommentar passt?
+    en: Which comment fits?
   context: Я склала іспит! 🎉
   answer:
   - Вітаю! Молодець!
@@ -43,7 +55,9 @@ items:
 - id: sym-1
   facet: sym
   format: choice
-  prompt: Welcher Kommentar passt?
+  prompt:
+    de: Welcher Kommentar passt?
+    en: Which comment fits?
   context: Мій кіт захворів 😢
   answer:
   - Шкода… Одужуй, котику!
@@ -55,14 +69,18 @@ items:
 - id: sym-2
   facet: sym
   format: type
-  prompt: 'Kommentieren Sie: Schade!'
+  prompt:
+    de: 'Kommentieren Sie: Schade!'
+    en: 'Comment: What a pity!'
   stem: ___!
   answer:
   - Шкода
 - id: sym-3
   facet: sym
   format: choice
-  prompt: Welcher Kommentar passt?
+  prompt:
+    de: Welcher Kommentar passt?
+    en: Which comment fits?
   context: Не можу прийти на вечірку.
   answer:
   - Шкода! Іншим разом.
@@ -74,7 +92,9 @@ items:
 - id: reply-1
   facet: reply
   format: type
-  prompt: Jemand schreibt unter Ihr Foto. Bedanken Sie sich.
+  prompt:
+    de: Jemand schreibt unter Ihr Foto. Bedanken Sie sich.
+    en: Someone comments on your photo. Thank them.
   context: Гарне фото!
   stem: ___! 😊
   answer:
@@ -82,7 +102,9 @@ items:
 - id: reply-2
   facet: reply
   format: type
-  prompt: Entschuldigen Sie sich, dass Sie spät antworten.
+  prompt:
+    de: Entschuldigen Sie sich, dass Sie spät antworten.
+    en: Apologise for replying late.
   stem: ___, що пізно відповідаю.
   answer:
   - Вибач
@@ -91,7 +113,9 @@ items:
 - id: reply-3
   facet: reply
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Дякую за фото!
   answer:
   - Будь ласка! 😊

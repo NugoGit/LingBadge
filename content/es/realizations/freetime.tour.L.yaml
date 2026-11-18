@@ -1,0 +1,34 @@
+skill: freetime.tour.L
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Este es el ayuntamiento.
+- Aquí vivió el pintor Goya.
+- A la derecha está el teatro.
+- Esta iglesia es muy antigua.
+enablers:
+  required:
+  - id: es.lex.city-places
+    use: productive
+  - id: es.lex.directions-place
+    use: productive
+  - id: es.gram.verb.ser-estar
+    use: productive
+  - id: es.num.cardinal-100-10000
+    use: productive
+  - id: es.gram.verb.past
+    use: formulaic
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+version: 1
+status: draft

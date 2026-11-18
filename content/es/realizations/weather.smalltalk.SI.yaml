@@ -1,0 +1,34 @@
+skill: weather.smalltalk.SI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- ¿Qué tiempo hace hoy?
+- Hoy hace frío, pero hace sol.
+- Está lloviendo. / Llueve.
+- Mañana va a hacer calor.
+enablers:
+  required:
+  - id: es.lex.weather
+    use: productive
+  - id: es.gram.verb.present-irregular
+    use: productive
+  - id: es.gram.verb.ir-a
+    use: productive
+  - id: es.gram.syntax.time-adverbs
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: hace + noun (hace frío, hace sol); llueve / nieva; ir a + infinitive for tomorrow.
+version: 1
+status: draft

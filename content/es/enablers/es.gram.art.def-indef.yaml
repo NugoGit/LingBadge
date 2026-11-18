@@ -1,0 +1,14 @@
+id: es.gram.art.def-indef
+lang: es
+kind: grammar
+title: Articles el/la/los/las, un/una/unos/unas; al, del
+cefr: A1
+requires:
+- es.gram.noun.gender
+sources:
+- pcic.A1.gram.articles
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,204 @@
+skill: travel.hotel-info.R
+lang: es
+reviewed_by: []
+facets:
+- id: meals
+  label:
+    de: Mahlzeiten
+    en: Meals
+- id: service
+  label:
+    de: WLAN und Service
+    en: Wi-Fi and services
+- id: rules
+  label:
+    de: Hausregeln und Check-out
+    en: House rules and check-out
+items:
+- id: meals-1
+  facet: meals
+  format: type
+  prompt:
+    de: Bis wann gibt es Frühstück? (Uhrzeit)
+    en: Until when is breakfast served? (time)
+  text: |-
+    Desayuno: 7:30–10:00, restaurante
+    Wifi: red Hotel_Sol, contraseña sol2024
+    Salida: antes de las 12:00
+    Prohibido fumar en las habitaciones.
+  answer:
+  - '10:00'
+  - '10'
+- id: meals-2
+  facet: meals
+  format: choice
+  prompt:
+    de: Was ist im Preis inbegriffen?
+    en: What is included in the price?
+  text: |-
+    Cena de 20:00 a 22:30.
+    Desayuno incluido en el precio.
+  answer:
+    de:
+    - Frühstück
+    en:
+    - Breakfast
+  options:
+    de:
+    - Frühstück
+    - Abendessen
+    - Frühstück und Abendessen
+    - Nichts
+    en:
+    - Breakfast
+    - Dinner
+    - Breakfast and dinner
+    - Nothing
+- id: meals-3
+  facet: meals
+  format: choice
+  prompt:
+    de: Wo gibt es Frühstück?
+    en: Where is breakfast served?
+  text: El desayuno se sirve en el restaurante de la planta baja, de 8:00 a 10:30.
+  answer:
+    de:
+    - Im Restaurant im Erdgeschoss
+    en:
+    - In the restaurant on the ground floor
+  options:
+    de:
+    - Im Restaurant im Erdgeschoss
+    - Im Zimmer
+    - Im Café gegenüber
+    - Im zweiten Stock
+    en:
+    - In the restaurant on the ground floor
+    - In the room
+    - In the café opposite
+    - On the second floor
+- id: service-1
+  facet: service
+  format: type
+  prompt:
+    de: Wie lautet das WLAN-Passwort?
+    en: What is the Wi-Fi password?
+  text: |-
+    Desayuno: 7:30–10:00, restaurante
+    Wifi: red Hotel_Sol, contraseña sol2024
+    Salida: antes de las 12:00
+  answer:
+  - sol2024
+- id: service-2
+  facet: service
+  format: choice
+  prompt:
+    de: Wo bekommen Sie ein Bügeleisen?
+    en: Where can you get an iron?
+  text: |-
+    Lavandería — 2.ª planta.
+    Plancha — en recepción.
+  answer:
+    de:
+    - An der Rezeption
+    en:
+    - At reception
+  options:
+    de:
+    - An der Rezeption
+    - In der Wäscherei
+    - Im Zimmer
+    - Im 2. Stock
+    en:
+    - At reception
+    - In the laundry
+    - In the room
+    - On the 2nd floor
+- id: service-3
+  facet: service
+  format: choice
+  prompt:
+    de: Was kostet das Parken für Gäste?
+    en: How much is parking for guests?
+  text: |-
+    Taxi — pídalo en recepción.
+    Aparcamiento gratuito para clientes.
+  answer:
+    de:
+    - Nichts
+    en:
+    - Nothing
+  options:
+    de:
+    - Nichts
+    - 10 Euro
+    - Nur für Taxis
+    - Es gibt keinen Parkplatz
+    en:
+    - Nothing
+    - 10 euros
+    - Taxis only
+    - There is no car park
+- id: rules-1
+  facet: rules
+  format: type
+  prompt:
+    de: Bis wann müssen Sie das Zimmer verlassen? (Uhrzeit)
+    en: By when must you leave the room? (time)
+  text: |-
+    Desayuno: 7:30–10:00, restaurante
+    Salida: antes de las 12:00
+    Prohibido fumar en las habitaciones.
+  answer:
+  - '12:00'
+  - '12'
+- id: rules-2
+  facet: rules
+  format: choice
+  prompt:
+    de: Was ist im Zimmer verboten?
+    en: What is not allowed in the room?
+  text: |-
+    Salida: antes de las 12:00
+    Prohibido fumar en las habitaciones.
+  answer:
+    de:
+    - Rauchen
+    en:
+    - Smoking
+  options:
+    de:
+    - Rauchen
+    - Essen
+    - Musik
+    - Besuch
+    en:
+    - Smoking
+    - Eating
+    - Music
+    - Visitors
+- id: rules-3
+  facet: rules
+  format: choice
+  prompt:
+    de: Dürfen Sie Ihren Hund mitbringen?
+    en: May you bring your dog?
+  text: |-
+    Silencio de 23:00 a 7:00.
+    No se admiten mascotas.
+  answer:
+    de:
+    - Nein
+    en:
+    - 'No'
+  options:
+    de:
+    - Nein
+    - Ja
+    - Nur bis 23 Uhr
+    - Nur ab 7 Uhr
+    en:
+    - 'No'
+    - 'Yes'
+    - Only until 23:00
+    - Only from 7:00

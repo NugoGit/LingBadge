@@ -1,0 +1,12 @@
+id: es.gram.syntax.negation
+lang: es
+kind: grammar
+title: Negation with no; nada, nunca, tampoco
+cefr: A1
+sources:
+- pcic.A1.gram.negation
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

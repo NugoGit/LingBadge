@@ -1,0 +1,27 @@
+id: es.lex.classroom
+lang: es
+kind: lexis
+title: Classroom language
+cefr: A1
+words:
+- el libro
+- el cuaderno
+- la página
+- el ejercicio
+- la palabra
+- la frase
+- leer
+- escribir
+- escuchar
+- repetir
+- abrir
+- cerrar
+- la pregunta
+- la respuesta
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

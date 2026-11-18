@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: city
-  label: Stadt und Gegend
+  label:
+    de: Stadt und Gegend
+    en: City and area
 - id: home
-  label: Wohnung und Zimmer
+  label:
+    de: Wohnung und Zimmer
+    en: Flat and rooms
 - id: ask
-  label: Zurückfragen
+  label:
+    de: Zurückfragen
+    en: Asking back
 items:
 - id: city-1
   facet: city
   format: type
-  prompt: 'Sagen Sie: Ich wohne in Wien.'
+  prompt:
+    de: 'Sagen Sie: Ich wohne in Wien.'
+    en: 'Say: I live in Vienna.'
   stem: Я живу у ___.
   cue: Відень
   answer:
@@ -20,7 +28,9 @@ items:
 - id: city-2
   facet: city
   format: type
-  prompt: 'Sagen Sie: … nicht weit vom Zentrum.'
+  prompt:
+    de: 'Sagen Sie: … nicht weit vom Zentrum.'
+    en: 'Say: … not far from the centre.'
   stem: Я живу недалеко від ___.
   cue: центр
   answer:
@@ -28,7 +38,9 @@ items:
 - id: city-3
   facet: city
   format: type
-  prompt: 'Sagen Sie: Meine Stadt ist groß und schön.'
+  prompt:
+    de: 'Sagen Sie: Meine Stadt ist groß und schön.'
+    en: 'Say: My city is big and beautiful.'
   stem: Моє місто ___ й гарне.
   cue: великий
   answer:
@@ -36,7 +48,9 @@ items:
 - id: home-1
   facet: home
   format: type
-  prompt: 'Sagen Sie: Ich habe eine kleine Wohnung, zwei Zimmer.'
+  prompt:
+    de: 'Sagen Sie: Ich habe eine kleine Wohnung, zwei Zimmer.'
+    en: 'Say: I have a small flat, two rooms.'
   stem: 'У мене невелика квартира: дві ___.'
   cue: кімната
   answer:
@@ -44,7 +58,9 @@ items:
 - id: home-2
   facet: home
   format: type
-  prompt: 'Sagen Sie: Wir haben eine große Küche.'
+  prompt:
+    de: 'Sagen Sie: Wir haben eine große Küche.'
+    en: 'Say: We have a big kitchen.'
   stem: У нас ___ кухня.
   cue: великий
   answer:
@@ -52,7 +68,9 @@ items:
 - id: home-3
   facet: home
   format: choice
-  prompt: 'Sagen Sie: Ich wohne in einem Haus mit Garten.'
+  prompt:
+    de: 'Sagen Sie: Ich wohne in einem Haus mit Garten.'
+    en: 'Say: I live in a house with a garden.'
   answer:
   - Я живу в будинку із садом.
   options:
@@ -63,7 +81,9 @@ items:
 - id: ask-1
   facet: ask
   format: type
-  prompt: 'Fragen Sie zurück: Und wo wohnst du?'
+  prompt:
+    de: 'Fragen Sie zurück: Und wo wohnst du?'
+    en: 'Ask back: And where do you live?'
   context: Я живу в Києві.
   stem: А ти де ___?
   cue: жити
@@ -72,7 +92,9 @@ items:
 - id: ask-2
   facet: ask
   format: choice
-  prompt: Fragen Sie (Sie-Form), wo die Person wohnt.
+  prompt:
+    de: Fragen Sie (Sie-Form), wo die Person wohnt.
+    en: Ask (formal) where the person lives.
   answer:
   - А ви де живете?
   options:
@@ -83,7 +105,9 @@ items:
 - id: ask-3
   facet: ask
   format: type
-  prompt: 'Fragen Sie: Wie viele Zimmer hat deine Wohnung?'
+  prompt:
+    de: 'Fragen Sie: Wie viele Zimmer hat deine Wohnung?'
+    en: 'Ask: How many rooms does your flat have?'
   stem: Скільки ___ у твоїй квартирі?
   cue: кімната
   answer:

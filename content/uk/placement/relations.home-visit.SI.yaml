@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: welcome
-  label: Hereinbitten, Platz anbieten
+  label:
+    de: Hereinbitten, Platz anbieten
+    en: Inviting in, offering a seat
 - id: offer
-  label: Essen und Getränke anbieten und annehmen
+  label:
+    de: Essen und Getränke anbieten und annehmen
+    en: Offering and accepting food and drink
 - id: gift
-  label: Geschenk, Kompliment, Abschied
+  label:
+    de: Geschenk, Kompliment, Abschied
+    en: Gift, compliment, leaving
 items:
 - id: welcome-1
   facet: welcome
   format: type
-  prompt: Bitten Sie Ihren Freund herein.
+  prompt:
+    de: Bitten Sie Ihren Freund herein.
+    en: Invite your friend in.
   stem: ___!
   cue: заходити
   answer:
@@ -20,7 +28,9 @@ items:
 - id: welcome-2
   facet: welcome
   format: type
-  prompt: Bitten Sie Ihre Gäste, sich zu setzen (Sie-Form).
+  prompt:
+    de: Bitten Sie Ihre Gäste, sich zu setzen (Sie-Form).
+    en: Ask your guests to sit down (formal).
   stem: ___, будь ласка!
   cue: сідати
   answer:
@@ -28,7 +38,9 @@ items:
 - id: welcome-3
   facet: welcome
   format: choice
-  prompt: Ihre Kollegin (Sie-Form) kommt zu Besuch. Was sagen Sie an der Tür?
+  prompt:
+    de: Ihre Kollegin (Sie-Form) kommt zu Besuch. Was sagen Sie an der Tür?
+    en: Your colleague (formal) is visiting. What do you say at the door?
   answer:
   - Заходьте, будь ласка!
   options:
@@ -39,7 +51,9 @@ items:
 - id: offer-1
   facet: offer
   format: type
-  prompt: Bieten Sie Tee oder Kaffee an (du).
+  prompt:
+    de: Bieten Sie Tee oder Kaffee an (du).
+    en: Offer tea or coffee (informal).
   stem: Хочеш ___ чи кави?
   cue: чай
   answer:
@@ -47,7 +61,9 @@ items:
 - id: offer-2
   facet: offer
   format: choice
-  prompt: Sie sind satt. Lehnen Sie höflich ab.
+  prompt:
+    de: Sie sind satt. Lehnen Sie höflich ab.
+    en: You're full. Decline politely.
   context: Хочеш ще борщу?
   answer:
   - Ні, дякую, більше не можу.
@@ -59,7 +75,9 @@ items:
 - id: offer-3
   facet: offer
   format: type
-  prompt: 'Antworten Sie: Kaffee, bitte.'
+  prompt:
+    de: 'Antworten Sie: Kaffee, bitte.'
+    en: 'Answer: Coffee, please.'
   context: Чай чи каву?
   stem: ___, будь ласка.
   cue: кава
@@ -68,7 +86,9 @@ items:
 - id: gift-1
   facet: gift
   format: type
-  prompt: 'Sie geben einer Freundin ein Geschenk: Das ist für dich.'
+  prompt:
+    de: 'Sie geben einer Freundin ein Geschenk: Das ist für dich.'
+    en: 'You give a friend a present: This is for you.'
   stem: Це ___.
   cue: ти
   answer:
@@ -76,14 +96,18 @@ items:
 - id: gift-2
   facet: gift
   format: type
-  prompt: 'Loben Sie das Essen: Sehr lecker!'
+  prompt:
+    de: 'Loben Sie das Essen: Sehr lecker!'
+    en: 'Praise the food: Very tasty!'
   stem: Дуже ___!
   answer:
   - смачно
 - id: gift-3
   facet: gift
   format: choice
-  prompt: Sie wollen gehen. Was sagen Sie?
+  prompt:
+    de: Sie wollen gehen. Was sagen Sie?
+    en: You want to leave. What do you say?
   answer:
   - Дякую, мені вже час іти.
   options:

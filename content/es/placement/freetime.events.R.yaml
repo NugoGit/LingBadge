@@ -1,0 +1,241 @@
+skill: freetime.events.R
+lang: es
+reviewed_by: []
+facets:
+- id: what
+  label:
+    de: Was für eine Veranstaltung
+    en: What kind of event
+- id: when
+  label:
+    de: Wann
+    en: When
+- id: where
+  label:
+    de: Wo und wie teuer
+    en: Where and how much
+items:
+- id: what-1
+  facet: what
+  format: choice
+  prompt:
+    de: Was für eine Veranstaltung ist das?
+    en: What kind of event is it?
+  text: |-
+    CONCIERTO
+    Orquesta de Cámara de Madrid
+    Sábado, 14 de junio, 20:00 h
+    Auditorio Nacional, c/ Príncipe de Vergara, 146
+    Entradas: 15–30 €
+  answer:
+    de:
+    - Konzert
+    en:
+    - Concert
+  options:
+    de:
+    - Konzert
+    - Ausstellung
+    - Film
+    - Theaterstück
+    en:
+    - Concert
+    - Exhibition
+    - Film
+    - Play
+- id: what-2
+  facet: what
+  format: choice
+  prompt:
+    de: Was für eine Veranstaltung ist das?
+    en: What kind of event is it?
+  text: |-
+    EXPOSICIÓN «Picasso y el Mediterráneo»
+    1–30 de septiembre
+    Museo de Bellas Artes, c/ Mayor, 6
+    Entrada libre
+  answer:
+    de:
+    - Ausstellung
+    en:
+    - Exhibition
+  options:
+    de:
+    - Ausstellung
+    - Konzert
+    - Film
+    - Vortrag
+    en:
+    - Exhibition
+    - Concert
+    - Film
+    - Talk
+- id: what-3
+  facet: what
+  format: choice
+  prompt:
+    de: Was für eine Veranstaltung ist das?
+    en: What kind of event is it?
+  text: |-
+    CINE DE VERANO
+    Todos los viernes a las 21:00
+    Parque del Retiro
+    Entrada: 4 €
+  answer:
+    de:
+    - Film im Freien
+    en:
+    - Open-air film
+  options:
+    de:
+    - Film im Freien
+    - Konzert im Park
+    - Theater im Park
+    - Kinderfest
+    en:
+    - Open-air film
+    - Concert in the park
+    - Theatre in the park
+    - Children's party
+- id: when-1
+  facet: when
+  format: choice
+  prompt:
+    de: An welchem Wochentag ist das Konzert?
+    en: On which weekday is the concert?
+  text: |-
+    CONCIERTO
+    Sábado, 14 de junio, 20:00 h
+    Auditorio Nacional
+  answer:
+    de:
+    - Samstag
+    en:
+    - Saturday
+  options:
+    de:
+    - Samstag
+    - Sonntag
+    - Freitag
+    - Donnerstag
+    en:
+    - Saturday
+    - Sunday
+    - Friday
+    - Thursday
+- id: when-2
+  facet: when
+  format: choice
+  prompt:
+    de: Wann ist die Ausstellung am Samstag geöffnet?
+    en: When is the exhibition open on Saturday?
+  text: |-
+    EXPOSICIÓN
+    L–V 10:00–18:00
+    S–D 11:00–17:00
+  answer:
+    de:
+    - 11–17 Uhr
+    en:
+    - 11:00–17:00
+  options:
+    de:
+    - 11–17 Uhr
+    - 10–18 Uhr
+    - Geschlossen
+    - 10–17 Uhr
+    en:
+    - 11:00–17:00
+    - 10:00–18:00
+    - Closed
+    - 10:00–17:00
+- id: when-3
+  facet: when
+  format: choice
+  prompt:
+    de: Wann gibt es Kino im Park?
+    en: When is there cinema in the park?
+  text: |-
+    CINE DE VERANO
+    Todos los viernes a las 21:00
+  answer:
+    de:
+    - Jeden Freitag um 21 Uhr
+    en:
+    - Every Friday at 21:00
+  options:
+    de:
+    - Jeden Freitag um 21 Uhr
+    - Nur einen Freitag
+    - Jeden Tag um 21 Uhr
+    - Samstags um 21 Uhr
+    en:
+    - Every Friday at 21:00
+    - Only one Friday
+    - Every day at 21:00
+    - On Saturdays at 21:00
+- id: where-1
+  facet: where
+  format: type
+  prompt:
+    de: Was kostet die billigste Karte? (Zahl)
+    en: How much is the cheapest ticket? (number)
+  text: |-
+    CONCIERTO
+    Auditorio Nacional
+    Entradas: 15–30 €
+  answer:
+  - '15'
+- id: where-2
+  facet: where
+  format: choice
+  prompt:
+    de: Was kostet der Eintritt?
+    en: How much is admission?
+  text: |-
+    EXPOSICIÓN «Picasso y el Mediterráneo»
+    Museo de Bellas Artes, c/ Mayor, 6
+    Entrada libre
+  answer:
+    de:
+    - Nichts
+    en:
+    - Nothing
+  options:
+    de:
+    - Nichts
+    - 6 Euro
+    - Nur mit Einladung
+    - Wird nicht gesagt
+    en:
+    - Nothing
+    - 6 euros
+    - By invitation only
+    - Not stated
+- id: where-3
+  facet: where
+  format: choice
+  prompt:
+    de: Wo findet es statt?
+    en: Where does it take place?
+  text: |-
+    CINE DE VERANO
+    Todos los viernes a las 21:00
+    Parque del Retiro
+    Entrada: 4 €
+  answer:
+    de:
+    - Im Park
+    en:
+    - In the park
+  options:
+    de:
+    - Im Park
+    - Im Kino
+    - Im Museum
+    - Im Theater
+    en:
+    - In the park
+    - At the cinema
+    - At the museum
+    - At the theatre

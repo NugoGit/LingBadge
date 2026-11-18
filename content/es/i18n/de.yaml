@@ -1,0 +1,57 @@
+# German titles for the Spanish enablers (the source files hold the English title).
+enablers:
+  es.gram.noun.gender: Genus der Substantive mit el / la (el libro, la casa; el día, la mano)
+  es.gram.noun.plural: 'Plural der Substantive: -s, -es, -z → -ces'
+  es.gram.art.def-indef: Artikel el/la/los/las, un/una/unos/unas; al, del
+  es.gram.adj.agreement: Adjektiv-Kongruenz in Genus und Numerus (alto, alta, altos, verde)
+  es.gram.pron.subject: Subjektpronomen (yo, tú, usted, él, ella, nosotros …)
+  es.gram.pron.possessive: Possessivbegleiter mi, tu, su, nuestro, vuestro
+  es.gram.pron.demonstrative: Demonstrativa este, esta, estos; ese; esto
+  es.gram.pron.object: Objektpronomen me, te, lo, la, le (über feste Wendungen hinaus)
+  es.gram.verb.present-regular: Präsens regelmäßiger Verben auf -ar, -er, -ir
+  es.gram.verb.present-irregular: 'Unregelmäßiges Präsens: ser, estar, tener, ir, hacer, querer, poder; e→ie, o→ue; tengo, hago'
+  es.gram.verb.reflexive: Reflexive Verben (me llamo, me levanto, se ducha)
+  es.gram.verb.ser-estar: 'ser oder estar: Herkunft, Beruf, Beschreibung vs. Ort und Zustand'
+  es.gram.verb.hay-estar: hay oder está / están (es gibt vs. wo es ist)
+  es.gram.verb.gustar: 'gustar und encantar: me gusta / me gustan, ¿te gusta?, a mí también'
+  es.gram.verb.ir-a: Nahes Futur mit ir a + Infinitiv (voy a comprar)
+  es.gram.verb.modal: querer / poder / tener que + Infinitiv
+  es.gram.verb.imperative-set: Imperative in festen Wendungen (perdone, oiga, repita, siga recto, gire, pase, siéntese)
+  es.gram.verb.past: 'Vergangenheit (pretérito perfecto / indefinido): he estado, fue, fuimos'
+  es.gram.syntax.questions: 'Fragen: ¿…?, qué, quién, dónde, cuándo, cómo, cuánto/a, cuál'
+  es.gram.syntax.negation: Verneinung mit no; nada, nunca, tampoco
+  es.gram.syntax.conjunctions: y (e), o (u), pero, porque
+  es.gram.prep.basic: Präpositionen a, en, de, con, para; al / del (voy al cine, soy de Viena)
+  es.gram.syntax.time-adverbs: hoy, mañana, ayer, ahora, por la mañana, siempre, a veces
+  es.num.cardinal-0-100: Grundzahlen 0–100 (veintiuno, treinta y dos)
+  es.num.cardinal-100-10000: Grundzahlen 100–10 000 (doscientos, quinientas, mil)
+  es.num.ordinal: Ordnungszahlen primero bis décimo; primer, tercer
+  es.num.time: 'Uhrzeit: ¿Qué hora es? Es la una. Son las dos y media. A las tres.'
+  es.num.dates: 'Datum: el cinco de mayo, el uno (primero) de enero'
+  es.prag.address: tú oder usted; señor / señora + Nachname
+  es.prag.greetings: Begrüßung und Abschied nach Register und Tageszeit (Hola, Buenos días, Hasta luego)
+  es.prag.courtesy: por favor, gracias, de nada, perdón / perdone, lo siento, no pasa nada
+  es.prag.wishes: Feste Wünsche und Trinksprüche (¡Feliz cumpleaños! ¡Salud! ¡Que aproveche!)
+  es.script.alphabet: Alphabet inkl. ñ; Buchstabennamen zum Buchstabieren (be, uve, hache, jota, eñe)
+  es.orth.accents-punctuation: Akzente (qué, está, café) und ¿ ? ¡ !
+  es.phon.vowels: Fünf reine Vokale; häufige Diphthonge (bueno, tiene)
+  es.phon.consonants: r oder rr, j/g, ll/y, c/z, b/v, stummes h, ñ
+  es.phon.stress: Wortbetonung und Akzentzeichen (médico, está, café)
+  es.phon.intonation: Intonation von Aussage, Frage und Ausruf
+  es.lex.appearance-clothes: Aussehen, Kleidung, Farben
+  es.lex.celebrations: Feste und Geschenke
+  es.lex.city-places: Orte in der Stadt
+  es.lex.classroom: Sprache im Unterricht
+  es.lex.daily-routine: Tagesablauf
+  es.lex.directions-place: Richtungen und Ortsangaben
+  es.lex.family: Familie und Haustiere
+  es.lex.food-drink: Essen und Trinken
+  es.lex.free-time: Freizeit und Hobbys
+  es.lex.health-body: Körper und Gesundheit
+  es.lex.home: Wohnung, Zimmer, Möbel
+  es.lex.personal: Angaben zur Person, Länder, Sprachen, Berufe
+  es.lex.shopping-money: Einkaufen, Mengen, Geld
+  es.lex.signs: Schilder und Aushänge
+  es.lex.time-calendar: Uhrzeit, Tage, Monate, Jahreszeiten
+  es.lex.transport-travel: Verkehr und Reisen
+  es.lex.weather: Wetter

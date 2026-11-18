@@ -1,0 +1,33 @@
+skill: relations.courtesy.SI
+lang: es
+cefr: A1
+register:
+- formal
+- informal
+variety: peninsular
+exponents:
+- ¡Buenos días! / ¡Hola!
+- ¿Qué tal? — Bien, gracias. ¿Y usted? / ¿Y tú?
+- ¡Perdón! — No pasa nada.
+- ¡Adiós! / ¡Hasta luego! / ¡Hasta mañana!
+enablers:
+  required:
+  - id: es.prag.greetings
+    use: productive
+  - id: es.prag.courtesy
+    use: productive
+  - id: es.prag.address
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Register kept consistent within a conversation; señor/señora + surname.
+version: 1
+status: draft

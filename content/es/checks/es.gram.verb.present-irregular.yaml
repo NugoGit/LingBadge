@@ -1,0 +1,175 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.gram.verb.present-irregular
+lang: es
+facets:
+- id: core-verbs
+  band: core
+  format: type
+  rule: {de: 'ser: soy, eres, es …; estar: estoy, estás, está …; tener: tengo, tienes, tiene …; ir: voy, vas, va, vamos, vais, van', en: 'ser: soy, eres, es …; estar: estoy, estás, está …; tener: tengo, tienes, tiene …; ir: voy, vas, va, vamos, vais, van'}
+  instruction: {de: Setze das Verb im Präsens ein., en: Put the verb in the present tense.}
+- id: stem-change
+  band: variant
+  format: type
+  rule: {de: 'Stammwechsel in betonter Silbe: e → ie (quiero), o → ue (puedo), e → i (pido)', en: 'Stem change in the stressed syllable: e → ie (quiero), o → ue (puedo), e → i (pido)'}
+  instruction: {de: Setze das Verb im Präsens ein., en: Put the verb in the present tense.}
+- id: yo-form
+  band: exception
+  format: type
+  rule: {de: 'Unregelmäßige yo-Form: hago, salgo, pongo, vengo, digo, conozco, sé, veo, doy', en: 'Irregular yo form: hago, salgo, pongo, vengo, digo, conozco, sé, veo, doy'}
+  instruction: {de: Setze das Verb im Präsens ein (yo)., en: Put the verb in the present tense (yo).}
+- id: no-change
+  band: contrast
+  format: type
+  rule: {de: 'Kein Stammwechsel bei nosotros und vosotros: podemos, queremos, dormimos (aber: puedo, quiero, duermo)', en: 'No stem change with nosotros and vosotros: podemos, queremos, dormimos (but: puedo, quiero, duermo)'}
+  instruction: {de: Setze das Verb im Präsens ein., en: Put the verb in the present tense.}
+items:
+- id: i01
+  facet: core-verbs
+  stem: Yo ___ de Austria.
+  cue: ser
+  answer: [soy]
+- id: i02
+  facet: core-verbs
+  stem: ¿Cómo ___ (tú)?
+  cue: estar
+  answer: [estás]
+- id: i03
+  facet: core-verbs
+  stem: Yo ___ dos hermanos.
+  cue: tener
+  answer: [tengo]
+- id: i04
+  facet: core-verbs
+  stem: Mañana ___ (yo) a Madrid.
+  cue: ir
+  answer: [voy]
+- id: i05
+  facet: core-verbs
+  stem: ¿Tú ___ hijos?
+  cue: tener
+  answer: [tienes]
+- id: i06
+  facet: core-verbs
+  stem: Nosotros ___ al cine.
+  cue: ir
+  answer: [vamos]
+- id: i07
+  facet: core-verbs
+  stem: ¿De dónde ___ tú?
+  cue: ser
+  answer: [eres]
+- id: i08
+  facet: core-verbs
+  stem: Yo ___ en casa.
+  cue: estar
+  answer: [estoy]
+- id: i09
+  facet: core-verbs
+  stem: Ellos ___ cansados.
+  cue: estar
+  answer: [están]
+- id: i10
+  facet: core-verbs
+  stem: ¿Adónde ___ (tú)?
+  cue: ir
+  answer: [vas]
+- id: i11
+  facet: stem-change
+  stem: Yo ___ un café.
+  cue: querer
+  answer: [quiero]
+- id: i12
+  facet: stem-change
+  stem: ¿___ (tú) venir mañana?
+  cue: poder
+  answer: [Puedes]
+- id: i13
+  facet: stem-change
+  stem: ¿Cuánto ___ el billete?
+  cue: costar
+  answer: [cuesta]
+- id: i14
+  facet: stem-change
+  stem: Yo ___ ocho horas.
+  cue: dormir
+  answer: [duermo]
+- id: i15
+  facet: stem-change
+  stem: La clase ___ a las nueve.
+  cue: empezar
+  answer: [empieza]
+- id: i16
+  facet: stem-change
+  stem: Ella ___ a casa a las seis.
+  cue: volver
+  answer: [vuelve]
+- id: i17
+  facet: stem-change
+  stem: Yo ___ una pizza.
+  cue: pedir
+  answer: [pido]
+- id: i18
+  facet: stem-change
+  stem: ¿A qué hora ___ la tienda?
+  cue: cerrar
+  answer: [cierra]
+- id: i19
+  facet: yo-form
+  stem: Por la tarde ___ deporte.
+  cue: hacer
+  answer: [hago]
+- id: i20
+  facet: yo-form
+  stem: ___ de casa a las ocho.
+  cue: salir
+  answer: [Salgo]
+- id: i21
+  facet: yo-form
+  stem: No ___ dónde está.
+  cue: saber
+  answer: [sé]
+- id: i22
+  facet: yo-form
+  stem: ___ a Pedro desde hace años.
+  cue: conocer
+  answer: [Conozco]
+- id: i23
+  facet: yo-form
+  stem: ___ la tele por la noche.
+  cue: ver
+  answer: [Veo]
+- id: i24
+  facet: yo-form
+  stem: Hoy ___ en metro.
+  cue: venir
+  answer: [vengo]
+- id: i25
+  facet: yo-form
+  stem: ___ la mesa.
+  cue: poner
+  answer: [Pongo]
+- id: i26
+  facet: no-change
+  stem: Nosotros ___ ir en tren.
+  cue: poder
+  answer: [podemos]
+- id: i27
+  facet: no-change
+  stem: ¿Qué ___ vosotros?
+  cue: querer
+  answer: [queréis]
+- id: i28
+  facet: no-change
+  stem: Nosotros ___ poco.
+  cue: dormir
+  answer: [dormimos]
+- id: i29
+  facet: no-change
+  stem: Nosotros ___ a las cinco.
+  cue: volver
+  answer: [volvemos]
+- id: i30
+  facet: no-change
+  stem: Nosotros ___ a trabajar a las ocho.
+  cue: empezar
+  answer: [empezamos]

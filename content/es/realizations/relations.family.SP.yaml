@@ -1,0 +1,36 @@
+skill: relations.family.SP
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- Esta es mi madre y este es mi padre.
+- A la izquierda está mi hermano, a la derecha mi hermana.
+- Es alta y tiene el pelo rubio.
+- Mi hermano lleva gafas.
+enablers:
+  required:
+  - id: es.gram.pron.demonstrative
+    use: productive
+  - id: es.gram.pron.possessive
+    use: productive
+  - id: es.gram.adj.agreement
+    use: productive
+  - id: es.gram.verb.ser-estar
+    use: productive
+  - id: es.lex.appearance-clothes
+    use: productive
+  - id: es.lex.directions-place
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+version: 1
+status: draft

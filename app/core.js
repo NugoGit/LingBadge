@@ -424,6 +424,8 @@ Antwortformat: {"skills":[{"skill":str,"stimulus":{"kind":"text"|"audio_script",
     return normalize(s).replace(/\s+/g, " ").trim();
   }
   // One item per facet, least-seen first, ties broken by the seeded RNG (mirrors placement.sample).
+  // A plain list, or the instruction-language list from {de: [...], en: [...]}.
+  function txl(v, il) { return v == null || Array.isArray(v) ? v : v[il] || v.en || v[Object.keys(v)[0]]; }
   function samplePlacement(cat, seen, seed) {
     const r = rng(seed == null ? Date.now() : seed); seen = seen || {};
     return cat.facets.map((f) => cat.items.filter((it) => it.facet === f.id)
@@ -435,8 +437,8 @@ Antwortformat: {"skills":[{"skill":str,"stimulus":{"kind":"text"|"audio_script",
     return picked.map((it) => ({ id: cat.skill + "#" + it.id, itemId: it.id, skill: cat.skill, source: "catalogue",
       type: it.format === "choice" ? "mcq" : "gap_fill", facet: it.facet, facetLabel: tx(facets[it.facet].label, il),
       prompt: tx(it.prompt, il), text: it.text || null, audio: it.audio || null, context: it.context || null,
-      stem: it.stem || null, cue: it.cue || null, key: it.answer.slice(),
-      options: it.format === "choice" ? shuffle(it.options.slice(), r) : undefined }));
+      stem: it.stem || null, cue: tx(it.cue, il) || null, key: txl(it.answer, il).slice(),
+      options: it.format === "choice" ? shuffle(txl(it.options, il).slice(), r) : undefined }));
   }
   function placementCorrect(item, given) {
     if (item.type === "mcq") return given != null && given === item.key[0];
@@ -448,6 +450,6 @@ Antwortformat: {"skills":[{"skill":str,"stimulus":{"kind":"text"|"audio_script",
     formSimilarity, badgeDecision, heatmapStatus, probeStatus, diagnose, skillStatus, enablerStatuses,
     genPrompt, validatePrompt, interlocutorPrompt, gradePrompt, judgePrompt, enablerCheckPrompt, probePrompt,
     TL, setTarget, BANDS, quotas, sampleCheck, catalogueForm, checkBreakdown, tx,
-    loose, samplePlacement, placementForm, placementCorrect };
+    loose, txl, samplePlacement, placementForm, placementCorrect };
   if (typeof module !== "undefined" && module.exports) module.exports = api; else root.LB = api;
 })(typeof window !== "undefined" ? window : globalThis);

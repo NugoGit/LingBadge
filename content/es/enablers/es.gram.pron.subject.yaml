@@ -1,0 +1,12 @@
+id: es.gram.pron.subject
+lang: es
+kind: grammar
+title: Subject pronouns (yo, tú, usted, él, ella, nosotros …)
+cefr: A1
+sources:
+- pcic.A1.gram.pron-subject
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

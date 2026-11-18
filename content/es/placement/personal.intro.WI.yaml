@@ -1,0 +1,118 @@
+skill: personal.intro.WI
+lang: es
+reviewed_by: []
+facets:
+- id: open
+  label:
+    de: Anrede und Begrüßung
+    en: Address and greeting
+- id: me
+  label:
+    de: Über sich schreiben
+    en: Writing about yourself
+- id: ask
+  label:
+    de: Zurückfragen
+    en: Asking back
+items:
+- id: open-1
+  facet: open
+  format: type
+  prompt:
+    de: 'Beginnen Sie die Nachricht locker: Hallo!'
+    en: 'Start the message casually: Hi!'
+  stem: ¡___! Me llamo Lukas.
+  answer:
+  - Hola
+- id: open-2
+  facet: open
+  format: choice
+  prompt:
+    de: Sie schreiben einer Lehrerin, die Sie nicht kennen. Wie beginnen Sie?
+    en: You're writing to a teacher you don't know. How do you start?
+  answer:
+  - 'Estimada señora López:'
+  options:
+  - 'Estimada señora López:'
+  - ¡Hola, guapa!
+  - ¡Adiós, señora López!
+  - 'Querida López:'
+- id: open-3
+  facet: open
+  format: choice
+  prompt:
+    de: 'Ein Mann schließt: Freue mich, dich kennenzulernen!'
+    en: 'A man closes with: Looking forward to meeting you!'
+  answer:
+  - ¡Encantado de conocerte!
+  options:
+  - ¡Encantado de conocerte!
+  - ¡Encantada de conocerte!
+  - ¡Encantado de conocer!
+- id: me-1
+  facet: me
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Ich lerne Spanisch.'
+    en: 'Write: I''m learning Spanish.'
+  stem: Estudio ___.
+  cue:
+    de: Spanisch
+    en: Spanish
+  answer:
+  - español
+  - castellano
+- id: me-2
+  facet: me
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Ich arbeite in einem Krankenhaus.'
+    en: 'Write: I work in a hospital.'
+  stem: Trabajo en un ___.
+  cue:
+    de: Krankenhaus
+    en: hospital
+  answer:
+  - hospital
+- id: me-3
+  facet: me
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Ich bin 30 Jahre alt.'
+    en: 'Write: I''m 30 years old.'
+  stem: Tengo treinta ___.
+  answer:
+  - años
+- id: ask-1
+  facet: ask
+  format: type
+  prompt:
+    de: 'Fragen Sie: Und woher bist du?'
+    en: 'Ask: And where are you from?'
+  stem: ¿Y tú de dónde ___?
+  cue: ser
+  answer:
+  - eres
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt:
+    de: Fragen Sie, was die Person beruflich macht.
+    en: Ask what the person does for a living.
+  answer:
+  - ¿Y tú a qué te dedicas?
+  options:
+  - ¿Y tú a qué te dedicas?
+  - ¿Y tú dónde trabajas mañana?
+  - ¿Y tú trabajas?
+  - ¿Y tú qué trabaja?
+- id: ask-3
+  facet: ask
+  format: type
+  prompt:
+    de: 'Fragen Sie: Sprichst du Deutsch?'
+    en: 'Ask: Do you speak German?'
+  stem: ¿___ alemán?
+  cue: hablar
+  answer:
+  - Hablas

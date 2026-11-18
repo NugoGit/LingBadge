@@ -1,0 +1,22 @@
+skill: travel.timetable.R
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Salida 09:20, vía 2
+- Llegada 14:05
+- Retraso 30 min
+- Cancelado
+- Diario, excepto domingos
+enablers:
+  required:
+  - id: es.lex.transport-travel
+    use: productive
+  - id: es.num.time
+    use: productive
+  - id: es.lex.time-calendar
+    use: productive
+version: 1
+status: draft

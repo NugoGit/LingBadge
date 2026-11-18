@@ -1,0 +1,22 @@
+skill: comm.signs.R
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Entrada / Salida
+- Abierto / Cerrado
+- Empujar / Tirar
+- Prohibido fumar
+- Cerrado de 14:00 a 16:00
+enablers:
+  required:
+  - id: es.lex.signs
+    use: productive
+  - id: es.num.time
+    use: productive
+  - id: es.lex.time-calendar
+    use: productive
+version: 1
+status: draft

@@ -1,0 +1,125 @@
+skill: personal.intro.SI
+lang: es
+reviewed_by: []
+facets:
+- id: name
+  label:
+    de: Name sagen und erfragen
+    en: Saying and asking your name
+- id: from
+  label:
+    de: Herkunft und Wohnort
+    en: Origin and place of residence
+- id: job
+  label:
+    de: Beruf und Sprachen
+    en: Job and languages
+items:
+- id: name-1
+  facet: name
+  format: type
+  prompt:
+    de: 'Antworten Sie: Ich heiße Andrés.'
+    en: 'Answer: My name is Andrés.'
+  context: ¿Cómo se llama?
+  stem: ___ llamo Andrés.
+  answer:
+  - Me
+- id: name-2
+  facet: name
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: Me llamo Elena. ¿Y usted?
+  answer:
+  - Me llamo Thomas. ¡Encantado!
+  options:
+  - Me llamo Thomas. ¡Encantado!
+  - Me llamo Thomas. ¡Adiós!
+  - Yo llamo Thomas.
+  - Mi llamo Thomas.
+- id: name-3
+  facet: name
+  format: choice
+  prompt:
+    de: Fragen Sie ein Kind nach seinem Namen.
+    en: Ask a child their name.
+  answer:
+  - ¿Cómo te llamas?
+  options:
+  - ¿Cómo te llamas?
+  - ¿Cómo se llama usted?
+  - ¿Cómo te llama?
+  - ¿Cómo llamas?
+- id: from-1
+  facet: from
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich bin aus Österreich.'
+    en: 'Say: I''m from Austria.'
+  stem: Soy ___ Austria.
+  answer:
+  - de
+- id: from-2
+  facet: from
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich wohne in Salzburg.'
+    en: 'Say: I live in Salzburg.'
+  stem: ___ en Salzburgo.
+  cue: vivir
+  answer:
+  - Vivo
+- id: from-3
+  facet: from
+  format: choice
+  prompt:
+    de: 'Fragen Sie (Sie-Form): Woher kommen Sie?'
+    en: 'Ask (formal): Where are you from?'
+  answer:
+  - ¿De dónde es usted?
+  options:
+  - ¿De dónde es usted?
+  - ¿Adónde va usted?
+  - ¿Dónde está usted?
+  - ¿De dónde eres?
+- id: job-1
+  facet: job
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich arbeite als Programmierer.'
+    en: 'Say: I work as a programmer.'
+  stem: Soy ___.
+  cue:
+    de: Programmierer
+    en: programmer
+  answer:
+  - programador
+  - programadora
+- id: job-2
+  facet: job
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich spreche Deutsch und Englisch.'
+    en: 'Say: I speak German and English.'
+  stem: Hablo alemán ___ inglés.
+  cue:
+    de: und
+    en: and
+  answer:
+  - e
+- id: job-3
+  facet: job
+  format: choice
+  prompt:
+    de: Sie sind nicht Student, sondern Lehrer. Was antworten Sie?
+    en: You're not a student but a teacher. What do you answer?
+  context: ¿Es usted estudiante?
+  answer:
+  - No, soy profesor.
+  options:
+  - No, soy profesor.
+  - No, soy un profesor de.
+  - Sí, soy profesor.
+  - No, estoy profesor.

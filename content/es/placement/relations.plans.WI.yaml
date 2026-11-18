@@ -1,0 +1,132 @@
+skill: relations.plans.WI
+lang: es
+reviewed_by: []
+facets:
+- id: propose
+  label:
+    de: Vorschlagen
+    en: Suggesting
+- id: answer
+  label:
+    de: Zusagen oder absagen
+    en: Accepting or declining
+- id: confirm
+  label:
+    de: Zeit und Ort bestätigen
+    en: Confirming time and place
+items:
+- id: propose-1
+  facet: propose
+  format: type
+  prompt:
+    de: 'Schreiben Sie: Gehen wir morgen auf einen Kaffee?'
+    en: 'Write: Shall we go for a coffee tomorrow?'
+  stem: ¡Hola! ¿Tomamos un ___ mañana?
+  cue:
+    de: Kaffee
+    en: coffee
+  answer:
+  - café
+- id: propose-2
+  facet: propose
+  format: choice
+  prompt:
+    de: Fragen Sie, ob es um sechs passt.
+    en: Ask whether six o'clock suits her.
+  answer:
+  - Puedo a las seis. ¿Te va bien?
+  options:
+  - Puedo a las seis. ¿Te va bien?
+  - Puedo a las seis. ¿Tú va bien?
+  - Puedo las seis. ¿Bien tú?
+  - ¿A las seis puedes me?
+- id: propose-3
+  facet: propose
+  format: type
+  prompt:
+    de: 'Fragen Sie: Hast du heute Abend Zeit?'
+    en: 'Ask: Do you have time tonight?'
+  stem: ¿___ tiempo esta noche?
+  cue: tener
+  answer:
+  - Tienes
+- id: answer-1
+  facet: answer
+  format: choice
+  prompt:
+    de: Sagen Sie ab.
+    en: Decline.
+  context: ¿Vamos al cine el sábado?
+  answer:
+  - Lo siento, el sábado no puedo.
+  options:
+  - Lo siento, el sábado no puedo.
+  - ¡Genial, hasta el sábado!
+  - Sí, a las siete.
+  - Vale, de acuerdo.
+- id: answer-2
+  facet: answer
+  format: type
+  prompt:
+    de: 'Sagen Sie zu: Super, bis morgen!'
+    en: 'Accept: Great, see you tomorrow!'
+  stem: ¡Genial, hasta ___!
+  answer:
+  - mañana
+- id: answer-3
+  facet: answer
+  format: type
+  prompt:
+    de: 'Sagen Sie ab: Leider kann ich heute nicht.'
+    en: 'Decline: Unfortunately I can''t today.'
+  stem: Lo ___, hoy no puedo.
+  answer:
+  - siento
+- id: confirm-1
+  facet: confirm
+  format: choice
+  prompt:
+    de: Bestätigen Sie.
+    en: Confirm.
+  context: ¿Entonces a las siete delante de la fuente?
+  answer:
+  - ¡Sí, perfecto!
+  options:
+  - ¡Sí, perfecto!
+  - No, gracias, estoy lleno.
+  - ¡Enhorabuena!
+  - ¡Qué pena!
+- id: confirm-2
+  facet: confirm
+  format: choice
+  prompt:
+    de: Um wie viel Uhr treffen Sie sich jetzt?
+    en: What time are you meeting now?
+  context: Mejor no a las seis, sino a las seis y media. ¿Vale?
+  answer:
+    de:
+    - Um halb sieben
+    en:
+    - At half past six
+  options:
+    de:
+    - Um halb sieben
+    - Um sechs
+    - Um sieben
+    - Um halb sechs
+    en:
+    - At half past six
+    - At six
+    - At seven
+    - At half past five
+- id: confirm-3
+  facet: confirm
+  format: type
+  prompt:
+    de: 'Fragen Sie: Wo treffen wir uns?'
+    en: 'Ask: Where shall we meet?'
+  stem: ¿Dónde ___?
+  answer:
+  - quedamos
+  - nos vemos
+  - nos encontramos

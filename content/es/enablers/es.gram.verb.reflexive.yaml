@@ -1,0 +1,14 @@
+id: es.gram.verb.reflexive
+lang: es
+kind: grammar
+title: Reflexive verbs (me llamo, me levanto, se ducha)
+cefr: A1
+requires:
+- es.gram.verb.present-regular
+sources:
+- pcic.A1.gram.reflexive
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

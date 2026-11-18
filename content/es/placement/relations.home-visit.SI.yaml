@@ -1,0 +1,119 @@
+skill: relations.home-visit.SI
+lang: es
+reviewed_by: []
+facets:
+- id: welcome
+  label:
+    de: Hereinbitten, Platz anbieten
+    en: Inviting in, offering a seat
+- id: offer
+  label:
+    de: Essen und Getränke anbieten und annehmen
+    en: Offering and accepting food and drink
+- id: gift
+  label:
+    de: Geschenk, Kompliment, Abschied
+    en: Gift, compliment, leaving
+items:
+- id: welcome-1
+  facet: welcome
+  format: type
+  prompt:
+    de: Bitten Sie Ihren Freund herein.
+    en: Invite your friend in.
+  stem: ¡___!
+  cue: pasar (tú)
+  answer:
+  - Pasa
+  - Entra
+  - Adelante
+- id: welcome-2
+  facet: welcome
+  format: type
+  prompt:
+    de: Bitten Sie Ihre Gäste, sich zu setzen (Sie-Form).
+    en: Ask your guests to sit down (formal).
+  stem: ___, por favor.
+  cue: sentarse (ustedes)
+  answer:
+  - Siéntense
+- id: welcome-3
+  facet: welcome
+  format: choice
+  prompt:
+    de: Ihre Kollegin (Sie-Form) kommt zu Besuch. Was sagen Sie an der Tür?
+    en: Your colleague (formal) is visiting. What do you say at the door?
+  answer:
+  - Pase, por favor.
+  options:
+  - Pase, por favor.
+  - Pasa, por favor.
+  - Salga, por favor.
+  - Pasar, por favor.
+- id: offer-1
+  facet: offer
+  format: type
+  prompt:
+    de: Bieten Sie Tee oder Kaffee an (du).
+    en: Offer tea or coffee (informal).
+  stem: ¿Quieres un té ___ un café?
+  answer:
+  - o
+- id: offer-2
+  facet: offer
+  format: choice
+  prompt:
+    de: Sie sind satt. Lehnen Sie höflich ab.
+    en: You're full. Decline politely.
+  context: ¿Quieres más paella?
+  answer:
+  - No, gracias, ya no puedo más.
+  options:
+  - No, gracias, ya no puedo más.
+  - Sí, gracias.
+  - Por favor, no.
+  - ¡Que aproveche!
+- id: offer-3
+  facet: offer
+  format: type
+  prompt:
+    de: 'Antworten Sie: Kaffee, bitte.'
+    en: 'Answer: Coffee, please.'
+  context: ¿Té o café?
+  stem: ___, por favor.
+  answer:
+  - Café
+  - Un café
+- id: gift-1
+  facet: gift
+  format: type
+  prompt:
+    de: 'Sie geben einer Freundin ein Geschenk: Das ist für dich.'
+    en: 'You give a friend a present: This is for you.'
+  stem: Esto es para ___.
+  cue: tú
+  answer:
+  - ti
+- id: gift-2
+  facet: gift
+  format: type
+  prompt:
+    de: 'Loben Sie das Essen: Sehr lecker!'
+    en: 'Praise the food: Very tasty!'
+  stem: ¡Está muy ___!
+  answer:
+  - rico
+  - bueno
+- id: gift-3
+  facet: gift
+  format: choice
+  prompt:
+    de: Sie wollen gehen. Was sagen Sie?
+    en: You want to leave. What do you say?
+  answer:
+  - Gracias, ya me tengo que ir.
+  options:
+  - Gracias, ya me tengo que ir.
+  - Gracias, ya he llegado.
+  - Gracias, tengo que comer.
+  - Gracias, vete ya.

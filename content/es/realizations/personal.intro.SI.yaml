@@ -1,0 +1,42 @@
+skill: personal.intro.SI
+lang: es
+cefr: A1
+register:
+- formal
+- informal
+variety: peninsular
+exponents:
+- Me llamo … ¿Y usted? / ¿Y tú?
+- Soy de Austria, vivo en Viena.
+- Soy programador. / Soy estudiante.
+- Hablo alemán e inglés.
+- ¡Encantado! / ¡Encantada!
+enablers:
+  required:
+  - id: es.gram.verb.reflexive
+    use: productive
+  - id: es.gram.verb.ser-estar
+    use: productive
+  - id: es.gram.verb.present-regular
+    use: productive
+  - id: es.gram.prep.basic
+    use: productive
+  - id: es.lex.personal
+    use: productive
+  - id: es.prag.address
+    use: productive
+  - id: es.gram.syntax.conjunctions
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Soy de + country; soy + job without article; y → e before i-; tú/usted kept consistent.
+version: 1
+status: draft

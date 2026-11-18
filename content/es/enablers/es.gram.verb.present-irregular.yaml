@@ -1,0 +1,14 @@
+id: es.gram.verb.present-irregular
+lang: es
+kind: grammar
+title: 'Irregular present: ser, estar, tener, ir, hacer, querer, poder; e→ie, o→ue; tengo, hago'
+cefr: A1
+requires:
+- es.gram.verb.present-regular
+sources:
+- pcic.A1.gram.present-irregular
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

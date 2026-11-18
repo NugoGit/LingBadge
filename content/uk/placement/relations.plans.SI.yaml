@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: invite
-  label: Einladen
+  label:
+    de: Einladen
+    en: Inviting
 - id: answer
-  label: Zusagen oder absagen
+  label:
+    de: Zusagen oder absagen
+    en: Accepting or declining
 - id: when
-  label: Zeit und Ort vereinbaren
+  label:
+    de: Zeit und Ort vereinbaren
+    en: Agreeing on time and place
 items:
 - id: invite-1
   facet: invite
   format: type
-  prompt: 'Fragen Sie eine Freundin: Hast du am Samstag frei?'
+  prompt:
+    de: 'Fragen Sie eine Freundin: Hast du am Samstag frei?'
+    en: 'Ask a friend (female): Are you free on Saturday?'
   stem: Ти ___ в суботу?
   cue: вільний
   answer:
@@ -20,9 +28,13 @@ items:
 - id: invite-2
   facet: invite
   format: type
-  prompt: 'Laden Sie ein: Lass uns ins Kino gehen!'
+  prompt:
+    de: 'Laden Sie ein: Lass uns ins Kino gehen!'
+    en: 'Invite: Let''s go to the cinema!'
   stem: ___ в кіно!
-  cue: lass uns gehen
+  cue:
+    de: lass uns gehen
+    en: let's go
   answer:
   - Ходімо
   - Ходім
@@ -31,7 +43,9 @@ items:
 - id: invite-3
   facet: invite
   format: choice
-  prompt: Laden Sie eine Freundin für Freitag ins Café ein.
+  prompt:
+    de: Laden Sie eine Freundin für Freitag ins Café ein.
+    en: Invite a friend to a café on Friday.
   answer:
   - Підемо в п'ятницю в кафе?
   options:
@@ -42,7 +56,9 @@ items:
 - id: answer-1
   facet: answer
   format: choice
-  prompt: Sie können nicht. Was sagen Sie?
+  prompt:
+    de: Sie können nicht. Was sagen Sie?
+    en: You can't. What do you say?
   context: Ходімо завтра в театр!
   answer:
   - На жаль, я не можу.
@@ -54,7 +70,9 @@ items:
 - id: answer-2
   facet: answer
   format: type
-  prompt: 'Reagieren Sie: Macht nichts, ein andermal.'
+  prompt:
+    de: 'Reagieren Sie: Macht nichts, ein andermal.'
+    en: 'React: Never mind, another time.'
   context: На жаль, я не можу.
   stem: Нічого, іншим ___.
   answer:
@@ -62,7 +80,9 @@ items:
 - id: answer-3
   facet: answer
   format: choice
-  prompt: Sagen Sie zu.
+  prompt:
+    de: Sagen Sie zu.
+    en: Accept.
   context: Може, в неділю?
   answer:
   - Так, із задоволенням!
@@ -74,7 +94,9 @@ items:
 - id: when-1
   facet: when
   format: type
-  prompt: 'Schlagen Sie vor: um sieben beim Theater.'
+  prompt:
+    de: 'Schlagen Sie vor: um sieben beim Theater.'
+    en: 'Suggest: at seven at the theatre.'
   stem: Давай о ___ біля театру.
   cue: сьома
   answer:
@@ -82,7 +104,9 @@ items:
 - id: when-2
   facet: when
   format: type
-  prompt: 'Schlagen Sie vor: Treffen wir uns beim Bahnhof.'
+  prompt:
+    de: 'Schlagen Sie vor: Treffen wir uns beim Bahnhof.'
+    en: 'Suggest: Let''s meet at the station.'
   stem: Зустрінемося біля ___.
   cue: вокзал
   answer:
@@ -90,7 +114,9 @@ items:
 - id: when-3
   facet: when
   format: choice
-  prompt: Bestätigen Sie.
+  prompt:
+    de: Bestätigen Sie.
+    en: Confirm.
   context: Давай о шостій біля кінотеатру.
   answer:
   - Домовилися!

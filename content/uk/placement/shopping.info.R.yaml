@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: guide
-  label: Wegweiser im Geschäft
+  label:
+    de: Wegweiser im Geschäft
+    en: Store guide
 - id: hours
-  label: Öffnungszeiten
+  label:
+    de: Öffnungszeiten
+    en: Opening hours
 - id: price
-  label: Preise und Angebote
+  label:
+    de: Preise und Angebote
+    en: Prices and offers
 items:
 - id: guide-1
   facet: guide
   format: type
-  prompt: In welchem Stock gibt es Schuhe? (Zahl)
+  prompt:
+    de: In welchem Stock gibt es Schuhe? (Zahl)
+    en: On which floor are the shoes? (number)
   text: |-
     1 поверх — Продукти
     2 поверх — Одяг
@@ -23,38 +31,62 @@ items:
 - id: guide-2
   facet: guide
   format: choice
-  prompt: Was gibt es im 2. Stock?
+  prompt:
+    de: Was gibt es im 2. Stock?
+    en: What is on the 2nd floor?
   text: |-
     1 поверх — Продукти
     2 поверх — Одяг
     3 поверх — Взуття
     4 поверх — Кафе
   answer:
-  - Kleidung
+    de:
+    - Kleidung
+    en:
+    - Clothes
   options:
-  - Kleidung
-  - Lebensmittel
-  - Schuhe
-  - Café
+    de:
+    - Kleidung
+    - Lebensmittel
+    - Schuhe
+    - Café
+    en:
+    - Clothes
+    - Food
+    - Shoes
+    - Café
 - id: guide-3
   facet: guide
   format: choice
-  prompt: Wo ist die Toilette?
+  prompt:
+    de: Wo ist die Toilette?
+    en: Where is the toilet?
   text: |-
     Каса — праворуч
     Вбиральня — 2 поверх
     Ліфт — ліворуч
   answer:
-  - Im 2. Stock
+    de:
+    - Im 2. Stock
+    en:
+    - On the 2nd floor
   options:
-  - Im 2. Stock
-  - Links
-  - Rechts
-  - Neben der Kasse
+    de:
+    - Im 2. Stock
+    - Links
+    - Rechts
+    - Neben der Kasse
+    en:
+    - On the 2nd floor
+    - On the left
+    - On the right
+    - Next to the cash desk
 - id: hours-1
   facet: hours
   format: type
-  prompt: Bis wann ist am Samstag geöffnet? (Uhrzeit)
+  prompt:
+    de: Bis wann ist am Samstag geöffnet? (Uhrzeit)
+    en: Until when is it open on Saturday? (time)
   text: |-
     Години роботи:
     пн–пт 9:00–20:00
@@ -66,46 +98,80 @@ items:
 - id: hours-2
   facet: hours
   format: choice
-  prompt: Ist am Sonntag geöffnet?
+  prompt:
+    de: Ist am Sonntag geöffnet?
+    en: Is it open on Sunday?
   text: |-
     Години роботи:
     пн–пт 9:00–20:00
     сб 10:00–18:00
     нд — вихідний
   answer:
-  - Nein
+    de:
+    - Nein
+    en:
+    - 'No'
   options:
-  - Nein
-  - Ja, 9–20 Uhr
-  - Ja, 10–18 Uhr
+    de:
+    - Nein
+    - Ja, 9–20 Uhr
+    - Ja, 10–18 Uhr
+    en:
+    - 'No'
+    - Yes, 9–20
+    - Yes, 10–18
 - id: hours-3
   facet: hours
   format: choice
-  prompt: Was bedeutet das?
+  prompt:
+    de: Was bedeutet das?
+    en: What does it mean?
   text: Працюємо цілодобово
   answer:
-  - Rund um die Uhr geöffnet
+    de:
+    - Rund um die Uhr geöffnet
+    en:
+    - Open 24 hours
   options:
-  - Rund um die Uhr geöffnet
-  - Nur tagsüber geöffnet
-  - Heute geschlossen
-  - Nur am Wochenende
+    de:
+    - Rund um die Uhr geöffnet
+    - Nur tagsüber geöffnet
+    - Heute geschlossen
+    - Nur am Wochenende
+    en:
+    - Open 24 hours
+    - Open in the daytime only
+    - Closed today
+    - Weekends only
 - id: price-1
   facet: price
   format: choice
-  prompt: Was ist im Angebot?
+  prompt:
+    de: Was ist im Angebot?
+    en: What is on offer?
   text: Знижка 30 % на всі куртки
   answer:
-  - Alle Jacken 30 % billiger
+    de:
+    - Alle Jacken 30 % billiger
+    en:
+    - All jackets 30 % cheaper
   options:
-  - Alle Jacken 30 % billiger
-  - Jacken ab 30 Hrywnja
-  - 30 Jacken gratis
-  - Jacken 30 % teurer
+    de:
+    - Alle Jacken 30 % billiger
+    - Jacken ab 30 Hrywnja
+    - 30 Jacken gratis
+    - Jacken 30 % teurer
+    en:
+    - All jackets 30 % cheaper
+    - Jackets from 30 hryvnias
+    - 30 free jackets
+    - Jackets 30 % dearer
 - id: price-2
   facet: price
   format: type
-  prompt: Wie viel kosten 100 g Käse? (Zahl)
+  prompt:
+    de: Wie viel kosten 100 g Käse? (Zahl)
+    en: How much are 100 g of cheese? (number)
   text: |-
     Сир «Звенигора»
     Ціна: 89,90 грн / 100 г
@@ -116,14 +182,25 @@ items:
 - id: price-3
   facet: price
   format: choice
-  prompt: Was bedeutet das Angebot?
+  prompt:
+    de: Was bedeutet das Angebot?
+    en: What does the offer mean?
   text: |-
     1+1=3
     Купуйте дві пачки кави — третя в подарунок!
   answer:
-  - Kaufe 2, bekomme 3
+    de:
+    - Kaufe 2, bekomme 3
+    en:
+    - Buy 2, get 3
   options:
-  - Kaufe 2, bekomme 3
-  - 3 zum Preis von 1
-  - Die dritte kostet die Hälfte
-  - Höchstens 3 pro Person
+    de:
+    - Kaufe 2, bekomme 3
+    - 3 zum Preis von 1
+    - Die dritte kostet die Hälfte
+    - Höchstens 3 pro Person
+    en:
+    - Buy 2, get 3
+    - 3 for the price of 1
+    - The third is half price
+    - At most 3 per person

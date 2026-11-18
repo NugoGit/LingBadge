@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: who
-  label: Wer ist wer
+  label:
+    de: Wer ist wer
+    en: Who is who
 - id: place
-  label: Wo jemand steht
+  label:
+    de: Wo jemand steht
+    en: Where someone is standing
 - id: look
-  label: Aussehen
+  label:
+    de: Aussehen
+    en: Appearance
 items:
 - id: who-1
   facet: who
   format: type
-  prompt: 'Sagen Sie: Das ist meine Mutter.'
+  prompt:
+    de: 'Sagen Sie: Das ist meine Mutter.'
+    en: 'Say: This is my mother.'
   stem: Це ___ мама.
   cue: мій
   answer:
@@ -20,7 +28,9 @@ items:
 - id: who-2
   facet: who
   format: type
-  prompt: 'Sagen Sie: Und das sind meine Eltern.'
+  prompt:
+    de: 'Sagen Sie: Und das sind meine Eltern.'
+    en: 'Say: And these are my parents.'
   stem: А це ___ батьки.
   cue: мій
   answer:
@@ -28,7 +38,9 @@ items:
 - id: who-3
   facet: who
   format: type
-  prompt: 'Sagen Sie: Das ist unsere Oma.'
+  prompt:
+    de: 'Sagen Sie: Das ist unsere Oma.'
+    en: 'Say: This is our grandma.'
   stem: Це ___ бабуся.
   cue: наш
   answer:
@@ -36,7 +48,9 @@ items:
 - id: place-1
   facet: place
   format: type
-  prompt: 'Sagen Sie: Links ist mein Bruder.'
+  prompt:
+    de: 'Sagen Sie: Links ist mein Bruder.'
+    en: 'Say: On the left is my brother.'
   stem: ___ — мій брат.
   answer:
   - Ліворуч
@@ -44,7 +58,9 @@ items:
 - id: place-2
   facet: place
   format: type
-  prompt: 'Sagen Sie: Rechts ist meine Schwester.'
+  prompt:
+    de: 'Sagen Sie: Rechts ist meine Schwester.'
+    en: 'Say: On the right is my sister.'
   stem: ___ — моя сестра.
   answer:
   - Праворуч
@@ -52,7 +68,9 @@ items:
 - id: place-3
   facet: place
   format: choice
-  prompt: 'Sagen Sie: In der Mitte bin ich.'
+  prompt:
+    de: 'Sagen Sie: In der Mitte bin ich.'
+    en: 'Say: I''m in the middle.'
   answer:
   - Посередині — я.
   options:
@@ -63,7 +81,9 @@ items:
 - id: look-1
   facet: look
   format: type
-  prompt: 'Sagen Sie: Sie ist groß, sie hat helle Haare.'
+  prompt:
+    de: 'Sagen Sie: Sie ist groß, sie hat helle Haare.'
+    en: 'Say: She is tall, she has fair hair.'
   stem: Вона ___, у неї світле волосся.
   cue: високий
   answer:
@@ -71,15 +91,21 @@ items:
 - id: look-2
   facet: look
   format: type
-  prompt: 'Sagen Sie: Mein Bruder trägt eine Brille.'
+  prompt:
+    de: 'Sagen Sie: Mein Bruder trägt eine Brille.'
+    en: 'Say: My brother wears glasses.'
   stem: Мій брат носить ___.
-  cue: Brille
+  cue:
+    de: Brille
+    en: glasses
   answer:
   - окуляри
 - id: look-3
   facet: look
   format: choice
-  prompt: 'Sagen Sie: Er hat dunkle Haare.'
+  prompt:
+    de: 'Sagen Sie: Er hat dunkle Haare.'
+    en: 'Say: He has dark hair.'
   answer:
   - У нього темне волосся.
   options:

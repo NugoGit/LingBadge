@@ -1,0 +1,14 @@
+id: es.gram.pron.possessive
+lang: es
+kind: grammar
+title: Possessives mi, tu, su, nuestro, vuestro
+cefr: A1
+requires:
+- es.gram.noun.gender
+sources:
+- pcic.A1.gram.possessives
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

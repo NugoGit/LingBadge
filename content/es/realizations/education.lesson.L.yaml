@@ -1,0 +1,32 @@
+skill: education.lesson.L
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Leed el texto. / Lean el texto.
+- Repite, por favor.
+- Abrid el libro en la página diez.
+- Escuchad y repetid.
+enablers:
+  required:
+  - id: es.lex.classroom
+    use: productive
+  - id: es.gram.verb.imperative-set
+    use: formulaic
+  - id: es.num.cardinal-0-100
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Recognition of imperatives in tú, vosotros and ustedes form.
+version: 1
+status: draft

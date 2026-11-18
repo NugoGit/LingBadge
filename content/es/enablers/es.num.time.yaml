@@ -1,0 +1,14 @@
+id: es.num.time
+lang: es
+kind: grammar
+title: 'Clock time: ¿Qué hora es? Es la una. Son las dos y media. A las tres.'
+cefr: A1
+requires:
+- es.num.cardinal-0-100
+sources:
+- pcic.A1.num.time
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

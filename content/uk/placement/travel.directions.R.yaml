@@ -3,105 +3,183 @@ lang: uk
 reviewed_by: []
 facets:
 - id: transport
-  label: Verkehrsmittel, Haltestelle
+  label:
+    de: Verkehrsmittel, Haltestelle
+    en: Transport, stop
 - id: way
-  label: Richtung
+  label:
+    de: Richtung
+    en: Direction
 - id: target
-  label: Haus, Stock, Wohnung
+  label:
+    de: Haus, Stock, Wohnung
+    en: House, floor, flat
 items:
 - id: transport-1
   facet: transport
   format: choice
-  prompt: Wo steigen Sie aus?
+  prompt:
+    de: Wo steigen Sie aus?
+    en: Where do you get off?
   text: Виходь на станції «Золоті ворота». Іди прямо до кафе, потім ліворуч. Мій будинок — третій праворуч, квартира 12.
   answer:
-  - An der Station „Goldene Tore“
+    de:
+    - An der Station „Goldene Tore“
+    en:
+    - At the station “Golden Gate”
   options:
-  - An der Station „Goldene Tore“
-  - An der Endstation
-  - Beim Café
-  - An der dritten Station
+    de:
+    - An der Station „Goldene Tore“
+    - An der Endstation
+    - Beim Café
+    - An der dritten Station
+    en:
+    - At the station “Golden Gate”
+    - At the last stop
+    - At the café
+    - At the third station
 - id: transport-2
   facet: transport
   format: type
-  prompt: Welchen Bus nehmen Sie? (Zahl)
+  prompt:
+    de: Welchen Bus nehmen Sie? (Zahl)
+    en: Which bus do you take? (number)
   text: Сідай на автобус номер 24. Виходь на зупинці «Ринок». Перейди дорогу, наш офіс — на другому поверсі.
   answer:
   - '24'
 - id: transport-3
   facet: transport
   format: choice
-  prompt: Wo steigen Sie aus?
+  prompt:
+    de: Wo steigen Sie aus?
+    en: Where do you get off?
   text: Сідай на тролейбус номер 9 і їдь три зупинки. Виходь біля університету.
   answer:
-  - Nach drei Haltestellen, bei der Universität
+    de:
+    - Nach drei Haltestellen, bei der Universität
+    en:
+    - After three stops, at the university
   options:
-  - Nach drei Haltestellen, bei der Universität
-  - Nach neun Haltestellen
-  - An der Endstation
-  - Bei der Universität, nach einer Haltestelle
+    de:
+    - Nach drei Haltestellen, bei der Universität
+    - Nach neun Haltestellen
+    - An der Endstation
+    - Bei der Universität, nach einer Haltestelle
+    en:
+    - After three stops, at the university
+    - After nine stops
+    - At the last stop
+    - At the university, after one stop
 - id: way-1
   facet: way
   format: choice
-  prompt: Was tun Sie nach dem Café?
+  prompt:
+    de: Was tun Sie nach dem Café?
+    en: What do you do after the café?
   text: Виходь на станції «Золоті ворота». Іди прямо до кафе, потім ліворуч. Мій будинок — третій праворуч, квартира 12.
   answer:
-  - Links abbiegen
+    de:
+    - Links abbiegen
+    en:
+    - Turn left
   options:
-  - Links abbiegen
-  - Rechts abbiegen
-  - Geradeaus gehen
-  - Zurückgehen
+    de:
+    - Links abbiegen
+    - Rechts abbiegen
+    - Geradeaus gehen
+    - Zurückgehen
+    en:
+    - Turn left
+    - Turn right
+    - Go straight on
+    - Go back
 - id: way-2
   facet: way
   format: choice
-  prompt: Was tun Sie nach dem Aussteigen?
+  prompt:
+    de: Was tun Sie nach dem Aussteigen?
+    en: What do you do after getting off?
   text: Сідай на автобус номер 24. Виходь на зупинці «Ринок». Перейди дорогу, наш офіс — на другому поверсі.
   answer:
-  - Die Straße überqueren
+    de:
+    - Die Straße überqueren
+    en:
+    - Cross the road
   options:
-  - Die Straße überqueren
-  - Rechts abbiegen
-  - Den Bus wechseln
-  - Zurückgehen
+    de:
+    - Die Straße überqueren
+    - Rechts abbiegen
+    - Den Bus wechseln
+    - Zurückgehen
+    en:
+    - Cross the road
+    - Turn right
+    - Change buses
+    - Go back
 - id: way-3
   facet: way
   format: choice
-  prompt: Wo ist die Kasse?
+  prompt:
+    de: Wo ist die Kasse?
+    en: Where is the cash desk?
   text: |-
     Реєстратура — 1 поверх, ліворуч
     Кабінети 201–220 — 2 поверх
     Каса — праворуч від входу
   answer:
-  - Rechts vom Eingang
+    de:
+    - Rechts vom Eingang
+    en:
+    - To the right of the entrance
   options:
-  - Rechts vom Eingang
-  - Links vom Eingang
-  - Im 2. Stock
-  - Im 1. Stock links
+    de:
+    - Rechts vom Eingang
+    - Links vom Eingang
+    - Im 2. Stock
+    - Im 1. Stock links
+    en:
+    - To the right of the entrance
+    - To the left of the entrance
+    - On the 2nd floor
+    - 1st floor, on the left
 - id: target-1
   facet: target
   format: type
-  prompt: Welche Wohnung? (Zahl)
+  prompt:
+    de: Welche Wohnung? (Zahl)
+    en: Which flat? (number)
   text: Виходь на станції «Золоті ворота». Іди прямо до кафе, потім ліворуч. Мій будинок — третій праворуч, квартира 12.
   answer:
   - '12'
 - id: target-2
   facet: target
   format: type
-  prompt: In welchem Stock ist das Büro? (Zahl)
+  prompt:
+    de: In welchem Stock ist das Büro? (Zahl)
+    en: On which floor is the office? (number)
   text: Сідай на автобус номер 24. Виходь на зупинці «Ринок». Перейди дорогу, наш офіс — на другому поверсі.
   answer:
   - '2'
 - id: target-3
   facet: target
   format: choice
-  prompt: Welches Haus ist es?
+  prompt:
+    de: Welches Haus ist es?
+    en: Which house is it?
   text: Іди прямо до кафе, потім ліворуч. Мій будинок — третій праворуч, квартира 12.
   answer:
-  - Das dritte rechts
+    de:
+    - Das dritte rechts
+    en:
+    - The third on the right
   options:
-  - Das dritte rechts
-  - Das dritte links
-  - Nummer 12
-  - Das zweite rechts
+    de:
+    - Das dritte rechts
+    - Das dritte links
+    - Nummer 12
+    - Das zweite rechts
+    en:
+    - The third on the right
+    - The third on the left
+    - Number 12
+    - The second on the right

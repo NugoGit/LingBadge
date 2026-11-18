@@ -1,0 +1,33 @@
+skill: health.pharmacy.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Me duele la cabeza.
+- ¿Tiene algo para la tos?
+- ¿Cómo se toma? — Tres veces al día.
+enablers:
+  required:
+  - id: es.lex.health-body
+    use: productive
+  - id: es.gram.verb.present-irregular
+    use: productive
+  - id: es.gram.syntax.questions
+    use: productive
+  - id: es.gram.verb.gustar
+    use: formulaic
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: algo para + noun; tres veces al día.
+version: 1
+status: draft

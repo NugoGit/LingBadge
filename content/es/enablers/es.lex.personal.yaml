@@ -1,0 +1,31 @@
+id: es.lex.personal
+lang: es
+kind: lexis
+title: Personal details, countries, languages, jobs
+cefr: A1
+words:
+- el nombre
+- el apellido
+- la dirección
+- el teléfono
+- el correo electrónico
+- la nacionalidad
+- la fecha de nacimiento
+- Austria
+- Alemania
+- España
+- austriaco
+- alemán
+- español
+- inglés
+- el profesor
+- el médico
+- el estudiante
+- el ingeniero
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

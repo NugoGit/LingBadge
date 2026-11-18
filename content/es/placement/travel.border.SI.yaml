@@ -1,0 +1,134 @@
+skill: travel.border.SI
+lang: es
+reviewed_by: []
+facets:
+- id: purpose
+  label:
+    de: Reisezweck
+    en: Purpose of the trip
+- id: length
+  label:
+    de: Aufenthaltsdauer
+    en: Length of stay
+- id: stay
+  label:
+    de: Unterkunft
+    en: Accommodation
+items:
+- id: purpose-1
+  facet: purpose
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¿Motivo del viaje?
+  answer:
+  - Turismo.
+  options:
+  - Turismo.
+  - Una semana.
+  - En un hotel.
+  - De Austria.
+- id: purpose-2
+  facet: purpose
+  format: type
+  prompt:
+    de: 'Antworten Sie: Ich besuche Freunde.'
+    en: 'Answer: I''m visiting friends.'
+  context: ¿Motivo del viaje?
+  stem: Visitar a unos ___.
+  cue:
+    de: Freunde
+    en: friends
+  answer:
+  - amigos
+- id: purpose-3
+  facet: purpose
+  format: choice
+  prompt:
+    de: 'Antworten Sie: geschäftlich.'
+    en: 'Answer: on business.'
+  context: ¿Motivo del viaje?
+  answer:
+  - Por trabajo.
+  options:
+  - Por trabajo.
+  - Para trabajado.
+  - De trabajos.
+  - Trabajado.
+- id: length-1
+  facet: length
+  format: type
+  prompt:
+    de: 'Antworten Sie: eine Woche.'
+    en: 'Answer: a week.'
+  context: ¿Cuántos días va a estar en España?
+  stem: Una ___.
+  answer:
+  - semana
+- id: length-2
+  facet: length
+  format: type
+  prompt:
+    de: 'Antworten Sie: fünf Tage.'
+    en: 'Answer: five days.'
+  context: ¿Cuánto tiempo va a estar aquí?
+  stem: Cinco ___.
+  cue: día
+  answer:
+  - días
+- id: length-3
+  facet: length
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¿Cuándo vuelve?
+  answer:
+  - El domingo.
+  options:
+  - El domingo.
+  - En un hotel.
+  - Turismo.
+  - De Austria.
+- id: stay-1
+  facet: stay
+  format: type
+  prompt:
+    de: 'Antworten Sie: bei einem Freund.'
+    en: 'Answer: at a friend''s.'
+  context: ¿Dónde se aloja?
+  stem: En casa de un ___.
+  cue:
+    de: Freund
+    en: friend
+  answer:
+  - amigo
+- id: stay-2
+  facet: stay
+  format: choice
+  prompt:
+    de: 'Antworten Sie: in einem Hotel im Zentrum.'
+    en: 'Answer: in a hotel in the centre.'
+  context: ¿Dónde se va a alojar?
+  answer:
+  - En un hotel del centro.
+  options:
+  - En un hotel del centro.
+  - En un hotel de el centro.
+  - A un hotel del centro.
+  - Un hotel en centro.
+- id: stay-3
+  facet: stay
+  format: choice
+  prompt:
+    de: 'Antworten Sie: Bei Freunden in Madrid.'
+    en: 'Answer: With friends in Madrid.'
+  context: ¿Dónde va a vivir?
+  answer:
+  - En casa de unos amigos, en Madrid.
+  options:
+  - En casa de unos amigos, en Madrid.
+  - A casa de amigos a Madrid.
+  - Amigos en Madrid casa.
+  - Con amigos Madrid en.

@@ -1,0 +1,155 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.gram.verb.ser-estar
+lang: es
+facets:
+- id: identity-place
+  band: core
+  format: choice
+  rule: {de: 'ser: wer/was/woher (soy Ana, soy médica, soy de Viena); estar: wo (estoy en casa)', en: 'ser: who/what/where from (soy Ana, soy médica, soy de Viena); estar: where (estoy en casa)'}
+  instruction: {de: 'ser oder estar?', en: 'ser or estar?'}
+- id: trait-state
+  band: variant
+  format: choice
+  rule: {de: 'ser für Eigenschaften (es alto, es simpática); estar für Zustände und Befinden (está cansado, estoy bien)', en: 'ser for characteristics (es alto, es simpática); estar for states and how someone is (está cansado, estoy bien)'}
+  instruction: {de: 'ser oder estar?', en: 'ser or estar?'}
+- id: fixed
+  band: exception
+  format: choice
+  rule: {de: 'Uhrzeit, Tag, Datum, Preis mit ser (son las tres, hoy es lunes); wo ein Ereignis stattfindet auch mit ser (la fiesta es en mi casa)', en: 'Time, day, date, price with ser (son las tres, hoy es lunes); where an event takes place also with
+      ser (la fiesta es en mi casa)'}
+  instruction: {de: 'ser oder estar?', en: 'ser or estar?'}
+- id: same-adj
+  band: contrast
+  format: choice
+  rule: {de: 'Gleiches Adjektiv, anderer Sinn: la sopa está fría (gerade) / el hielo es frío (immer); está guapa hoy / es guapa', en: 'Same adjective, different meaning: la sopa está fría (now) / el hielo es frío (always); está guapa hoy / es guapa'}
+  instruction: {de: 'ser oder estar?', en: 'ser or estar?'}
+items:
+- id: e01
+  facet: identity-place
+  stem: Yo ___ de Austria.
+  options: [soy, estoy]
+  answer: [soy]
+- id: e02
+  facet: identity-place
+  stem: Ahora ___ en Madrid.
+  options: [soy, estoy]
+  answer: [estoy]
+- id: e03
+  facet: identity-place
+  stem: Mi madre ___ profesora.
+  options: [es, está]
+  answer: [es]
+- id: e04
+  facet: identity-place
+  stem: ¿Dónde ___ la estación?
+  options: [es, está]
+  answer: [está]
+- id: e05
+  facet: identity-place
+  stem: Ella ___ Lucía, mi hermana.
+  options: [es, está]
+  answer: [es]
+- id: e06
+  facet: identity-place
+  stem: Los niños ___ en el colegio.
+  options: [son, están]
+  answer: [están]
+- id: e07
+  facet: identity-place
+  stem: Nosotros ___ alemanes.
+  options: [somos, estamos]
+  answer: [somos]
+- id: e08
+  facet: identity-place
+  stem: El museo ___ cerca de la plaza.
+  options: [es, está]
+  answer: [está]
+- id: e09
+  facet: identity-place
+  stem: ¿Tú ___ estudiante?
+  options: [eres, estás]
+  answer: [eres]
+- id: e10
+  facet: trait-state
+  stem: Mi hermano ___ muy alto.
+  options: [es, está]
+  answer: [es]
+- id: e11
+  facet: trait-state
+  stem: Hoy ___ muy cansada.
+  options: [soy, estoy]
+  answer: [estoy]
+- id: e12
+  facet: trait-state
+  stem: ¿Qué tal? — ___ bien, gracias.
+  options: [Soy, Estoy]
+  answer: [Estoy]
+- id: e13
+  facet: trait-state
+  stem: Marta ___ muy simpática.
+  options: [es, está]
+  answer: [es]
+- id: e14
+  facet: trait-state
+  stem: La tienda ___ cerrada.
+  options: [es, está]
+  answer: [está]
+- id: e15
+  facet: trait-state
+  stem: Mi piso ___ pequeño, pero bonito.
+  options: [es, está]
+  answer: [es]
+- id: e16
+  facet: trait-state
+  stem: Pedro ___ enfermo hoy.
+  options: [es, está]
+  answer: [está]
+- id: e17
+  facet: fixed
+  stem: ___ las tres y media.
+  options: [Son, Están]
+  answer: [Son]
+- id: e18
+  facet: fixed
+  stem: Hoy ___ lunes.
+  options: [es, está]
+  answer: [es]
+- id: e19
+  facet: fixed
+  stem: La fiesta ___ en mi casa.
+  options: [es, está]
+  answer: [es]
+- id: e20
+  facet: fixed
+  stem: ¿Cuánto ___? — Son diez euros.
+  options: [es, está]
+  answer: [es]
+- id: e21
+  facet: fixed
+  stem: Mañana ___ mi cumpleaños.
+  options: [es, está]
+  answer: [es]
+- id: e22
+  facet: same-adj
+  stem: ¡Uf, la sopa ___ fría!
+  options: [es, está]
+  context: {de: Die Suppe ist kalt geworden., en: The soup has gone cold.}
+  answer: [está]
+- id: e23
+  facet: same-adj
+  stem: El hielo ___ frío.
+  options: [es, está]
+  context: {de: Eine allgemeine Eigenschaft., en: A general property.}
+  answer: [es]
+- id: e24
+  facet: same-adj
+  stem: ¡Qué guapa ___ hoy, Ana!
+  options: [eres, estás]
+  context: {de: Ana trägt heute ein neues Kleid., en: Ana is wearing a new dress today.}
+  answer: [estás]
+- id: e25
+  facet: same-adj
+  stem: Este café ___ muy rico.
+  options: [es, está]
+  context: {de: Sie trinken gerade den Kaffee und loben ihn., en: You're drinking the coffee and praise it.}
+  answer: [está]

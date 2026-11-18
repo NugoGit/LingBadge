@@ -1,0 +1,196 @@
+skill: education.lesson.L
+lang: es
+reviewed_by: []
+facets:
+- id: rw
+  label:
+    de: Lesen und Schreiben
+    en: Reading and writing
+- id: listen
+  label:
+    de: Hören und Nachsprechen
+    en: Listening and repeating
+- id: book
+  label:
+    de: Buch, Heft, Seite
+    en: Book, notebook, page
+items:
+- id: rw-1
+  facet: rw
+  format: choice
+  prompt:
+    de: Was sollen Sie tun?
+    en: What should you do?
+  audio: Lean el texto.
+  answer:
+    de:
+    - Den Text lesen
+    en:
+    - Read the text
+  options:
+    de:
+    - Den Text lesen
+    - Den Text schreiben
+    - Zuhören
+    - Das Buch schließen
+    en:
+    - Read the text
+    - Write the text
+    - Listen
+    - Close the book
+- id: rw-2
+  facet: rw
+  format: choice
+  prompt:
+    de: Was sollen Sie tun?
+    en: What should you do?
+  audio: Escribe tu nombre.
+  answer:
+    de:
+    - Den eigenen Namen schreiben
+    en:
+    - Write your own name
+  options:
+    de:
+    - Den eigenen Namen schreiben
+    - Den Namen sagen
+    - Den Namen lesen
+    - Den Namen buchstabieren
+    en:
+    - Write your own name
+    - Say the name
+    - Read the name
+    - Spell the name
+- id: rw-3
+  facet: rw
+  format: choice
+  prompt:
+    de: Was sollen Sie tun?
+    en: What should you do?
+  audio: Escribid estas palabras en el cuaderno.
+  answer:
+    de:
+    - Die Wörter ins Heft schreiben
+    en:
+    - Write the words in your notebook
+  options:
+    de:
+    - Die Wörter ins Heft schreiben
+    - Die Wörter vorlesen
+    - Das Heft öffnen
+    - Die Wörter übersetzen
+    en:
+    - Write the words in your notebook
+    - Read the words aloud
+    - Open the notebook
+    - Translate the words
+- id: listen-1
+  facet: listen
+  format: choice
+  prompt:
+    de: Was sollen Sie tun?
+    en: What should you do?
+  audio: Escuchad y repetid.
+  answer:
+    de:
+    - Zuhören und nachsprechen
+    en:
+    - Listen and repeat
+  options:
+    de:
+    - Zuhören und nachsprechen
+    - Lesen und schreiben
+    - Nur zuhören
+    - Fragen stellen
+    en:
+    - Listen and repeat
+    - Read and write
+    - Just listen
+    - Ask questions
+- id: listen-2
+  facet: listen
+  format: choice
+  prompt:
+    de: Was sollen Sie tun?
+    en: What should you do?
+  audio: Repite otra vez, por favor.
+  answer:
+    de:
+    - Noch einmal wiederholen
+    en:
+    - Repeat once more
+  options:
+    de:
+    - Noch einmal wiederholen
+    - Lauter sprechen
+    - Langsamer lesen
+    - Weitermachen
+    en:
+    - Repeat once more
+    - Speak louder
+    - Read more slowly
+    - Carry on
+- id: listen-3
+  facet: listen
+  format: choice
+  prompt:
+    de: Was sollen Sie tun?
+    en: What should you do?
+  audio: Escuchad el diálogo.
+  answer:
+    de:
+    - Den Dialog anhören
+    en:
+    - Listen to the dialogue
+  options:
+    de:
+    - Den Dialog anhören
+    - Den Dialog lesen
+    - Den Dialog schreiben
+    - Den Dialog spielen
+    en:
+    - Listen to the dialogue
+    - Read the dialogue
+    - Write the dialogue
+    - Act out the dialogue
+- id: book-1
+  facet: book
+  format: type
+  prompt:
+    de: Welche Seite? (Zahl)
+    en: Which page? (number)
+  audio: Abrid el libro por la página diez.
+  answer:
+  - '10'
+- id: book-2
+  facet: book
+  format: type
+  prompt:
+    de: Welche Seite? (Zahl)
+    en: Which page? (number)
+  audio: Página veinticinco, ejercicio tres.
+  answer:
+  - '25'
+- id: book-3
+  facet: book
+  format: choice
+  prompt:
+    de: Was sollen Sie tun?
+    en: What should you do?
+  audio: Cerrad los libros.
+  answer:
+    de:
+    - Die Bücher schließen
+    en:
+    - Close the books
+  options:
+    de:
+    - Die Bücher schließen
+    - Die Bücher öffnen
+    - Die Bücher holen
+    - Die Bücher lesen
+    en:
+    - Close the books
+    - Open the books
+    - Fetch the books
+    - Read the books

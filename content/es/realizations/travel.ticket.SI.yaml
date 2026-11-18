@@ -1,0 +1,36 @@
+skill: travel.ticket.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Un billete para Sevilla, por favor.
+- Para hoy, por la tarde.
+- ¿A qué hora sale? ¿De qué andén?
+- ¿Cuánto cuesta? — De ida y vuelta.
+enablers:
+  required:
+  - id: es.lex.transport-travel
+    use: productive
+  - id: es.num.time
+    use: productive
+  - id: es.num.cardinal-0-100
+    use: productive
+  - id: es.gram.syntax.questions
+    use: productive
+  - id: es.gram.prep.basic
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: para + destination or day; ida / ida y vuelta.
+version: 1
+status: draft

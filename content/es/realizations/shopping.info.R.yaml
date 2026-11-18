@@ -1,0 +1,23 @@
+skill: shopping.info.R
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Ropa — 2.ª planta
+- 'Horario: L–V 9:00–21:00'
+- Rebajas 30 %
+- 'Precio: 3,95 €'
+enablers:
+  required:
+  - id: es.lex.signs
+    use: productive
+  - id: es.lex.shopping-money
+    use: productive
+  - id: es.num.ordinal
+    use: productive
+  - id: es.num.time
+    use: productive
+version: 1
+status: draft

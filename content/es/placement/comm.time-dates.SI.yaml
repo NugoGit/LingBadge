@@ -1,0 +1,160 @@
+skill: comm.time-dates.SI
+lang: es
+reviewed_by: []
+facets:
+- id: clock
+  label:
+    de: Uhrzeit fragen und sagen
+    en: Ask and tell the time
+- id: day
+  label:
+    de: 'Tage: heute, morgen, gestern, Wochentage'
+    en: 'Days: today, tomorrow, yesterday, weekdays'
+- id: date
+  label:
+    de: Datum und Monat
+    en: Date and month
+items:
+- id: clock-1
+  facet: clock
+  format: type
+  prompt:
+    de: Fragen Sie nach der Uhrzeit.
+    en: Ask what time it is.
+  stem: ¿Qué ___ es?
+  answer:
+  - hora
+- id: clock-2
+  facet: clock
+  format: type
+  prompt:
+    de: 'Antworten Sie: um sieben.'
+    en: 'Answer: at seven.'
+  context: ¿A qué hora empieza la película?
+  stem: A las ___.
+  cue: '7'
+  answer:
+  - siete
+- id: clock-3
+  facet: clock
+  format: type
+  prompt:
+    de: 'Antworten Sie: Es ist zehn.'
+    en: 'Answer: It''s ten.'
+  context: ¿Qué hora es?
+  stem: ___ las diez.
+  answer:
+  - Son
+- id: clock-4
+  facet: clock
+  format: choice
+  prompt:
+    de: Sie wollen wissen, um wie viel Uhr der Zug fährt. Was fragen Sie?
+    en: You want to know what time the train leaves. What do you ask?
+  answer:
+  - ¿A qué hora sale el tren?
+  options:
+  - ¿A qué hora sale el tren?
+  - ¿Qué hora es?
+  - ¿Cuánto cuesta el tren?
+  - ¿Dónde está el tren?
+- id: day-1
+  facet: day
+  format: type
+  prompt:
+    de: 'Antworten Sie: am Samstag.'
+    en: 'Answer: on Saturday.'
+  context: ¿Cuándo es el concierto?
+  stem: El ___.
+  cue:
+    de: Samstag
+    en: Saturday
+  answer:
+  - sábado
+- id: day-2
+  facet: day
+  format: choice
+  prompt:
+    de: Heute ist Mittwoch. Welcher Tag ist morgen?
+    en: Today is Wednesday. What day is tomorrow?
+  answer:
+  - jueves
+  options:
+  - jueves
+  - martes
+  - viernes
+  - miércoles
+- id: day-3
+  facet: day
+  format: choice
+  prompt:
+    de: Was bedeutet „ayer“?
+    en: What does “ayer” mean?
+  answer:
+    de:
+    - gestern
+    en:
+    - yesterday
+  options:
+    de:
+    - gestern
+    - heute
+    - morgen
+    - übermorgen
+    en:
+    - yesterday
+    - today
+    - tomorrow
+    - the day after tomorrow
+- id: day-4
+  facet: day
+  format: type
+  prompt:
+    de: 'Antworten Sie: heute Abend.'
+    en: 'Answer: tonight.'
+  context: ¿Cuándo estás libre?
+  stem: ___ por la noche.
+  cue:
+    de: heute
+    en: today
+  answer:
+  - Hoy
+- id: date-1
+  facet: date
+  format: type
+  prompt:
+    de: 'Antworten Sie: am 1. Mai.'
+    en: 'Answer: on 1 May.'
+  context: ¿Cuándo es tu cumpleaños?
+  stem: El uno de ___.
+  cue:
+    de: Mai
+    en: May
+  answer:
+  - mayo
+- id: date-2
+  facet: date
+  format: type
+  prompt:
+    de: 'Antworten Sie: im Juli.'
+    en: 'Answer: in July.'
+  context: ¿Cuándo vas a Madrid?
+  stem: En ___.
+  cue:
+    de: Juli
+    en: July
+  answer:
+  - julio
+- id: date-3
+  facet: date
+  format: choice
+  prompt:
+    de: Wie sagt man „am 8. März“?
+    en: How do you say “on 8 March”?
+  answer:
+  - el ocho de marzo
+  options:
+  - el ocho de marzo
+  - en ocho de marzo
+  - el octavo marzo
+  - a ocho marzo

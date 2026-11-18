@@ -1,0 +1,14 @@
+id: es.num.dates
+lang: es
+kind: grammar
+title: 'Dates: el cinco de mayo, el uno (primero) de enero'
+cefr: A1
+requires:
+- es.num.cardinal-0-100
+sources:
+- pcic.A1.num.dates
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

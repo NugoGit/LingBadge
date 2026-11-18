@@ -1,0 +1,27 @@
+skill: freetime.events.R
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- Concierto. Sábado, 14 de junio, 20:00 h.
+- Auditorio, c/ Mayor, 3.
+- 'Entradas: 15–30 €.'
+- Entrada libre.
+enablers:
+  required:
+  - id: es.lex.free-time
+    use: productive
+  - id: es.lex.time-calendar
+    use: productive
+  - id: es.num.dates
+    use: productive
+  - id: es.num.time
+    use: productive
+  - id: es.num.cardinal-0-100
+    use: productive
+rubric_specifics:
+  key_structures: Recognition of abbreviations (c/, h, L–V, entrada libre).
+version: 1
+status: draft

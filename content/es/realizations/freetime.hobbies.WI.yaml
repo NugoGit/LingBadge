@@ -1,0 +1,26 @@
+skill: freetime.hobbies.WI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- Me gusta la música y el cine.
+- En mi tiempo libre paseo por el parque.
+- No me gusta nada correr.
+- ¿Y a ti qué te gusta?
+enablers:
+  required:
+  - id: es.gram.verb.gustar
+    use: productive
+  - id: es.gram.verb.present-regular
+    use: productive
+  - id: es.lex.free-time
+    use: productive
+  - id: es.gram.syntax.conjunctions
+    use: productive
+  supporting:
+  - id: es.orth.accents-punctuation
+    use: productive
+version: 1
+status: draft

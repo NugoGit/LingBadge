@@ -1,0 +1,37 @@
+skill: freetime.hobbies.SI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- ¿Qué te gusta hacer en tu tiempo libre?
+- Me gusta leer y tocar la guitarra.
+- Me encanta el fútbol, ¿y a ti?
+- No me gusta correr.
+- Dos veces por semana.
+enablers:
+  required:
+  - id: es.gram.verb.gustar
+    use: productive
+  - id: es.gram.verb.present-regular
+    use: productive
+  - id: es.lex.free-time
+    use: productive
+  - id: es.gram.syntax.time-adverbs
+    use: productive
+  - id: es.gram.syntax.negation
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: gustar agrees with the thing liked (me gusta el cine / me gustan los libros); jugar al fútbol, tocar la guitarra.
+version: 1
+status: draft

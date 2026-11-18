@@ -1,0 +1,14 @@
+id: es.gram.pron.object
+lang: es
+kind: grammar
+title: Object pronouns me, te, lo, la, le (beyond fixed phrases)
+cefr: A2
+requires:
+- es.gram.pron.subject
+sources:
+- pcic.A1.gram.pron-object
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

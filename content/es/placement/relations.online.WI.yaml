@@ -1,0 +1,131 @@
+skill: relations.online.WI
+lang: es
+reviewed_by: []
+facets:
+- id: pos
+  label:
+    de: Gratulieren, loben
+    en: Congratulating, praising
+- id: sym
+  label:
+    de: Mitgefühl, schade
+    en: Sympathy, “what a pity”
+- id: reply
+  label:
+    de: Danken, sich entschuldigen
+    en: Thanking, apologising
+items:
+- id: pos-1
+  facet: pos
+  format: choice
+  prompt:
+    de: Welcher Kommentar passt?
+    en: Which comment fits?
+  context: ¡Mi bici nueva! 🚲
+  answer:
+  - ¡Qué chula! ¡Enhorabuena!
+  options:
+  - ¡Qué chula! ¡Enhorabuena!
+  - ¡Qué pena!
+  - Perdona por contestar tarde.
+  - ¡Que te mejores!
+- id: pos-2
+  facet: pos
+  format: type
+  prompt:
+    de: 'Kommentieren Sie: Glückwunsch!'
+    en: 'Comment: Congratulations!'
+  stem: ¡___!
+  answer:
+  - Enhorabuena
+  - Felicidades
+  - Felicitaciones
+- id: pos-3
+  facet: pos
+  format: choice
+  prompt:
+    de: Welcher Kommentar passt?
+    en: Which comment fits?
+  context: ¡He aprobado el examen! 🎉
+  answer:
+  - ¡Enhorabuena! ¡Muy bien!
+  options:
+  - ¡Enhorabuena! ¡Muy bien!
+  - ¡Qué pena!
+  - ¡Gracias!
+  - No pasa nada.
+- id: sym-1
+  facet: sym
+  format: choice
+  prompt:
+    de: Welcher Kommentar passt?
+    en: Which comment fits?
+  context: Mi gato está enfermo 😢
+  answer:
+  - ¡Qué pena! Que se mejore pronto.
+  options:
+  - ¡Qué pena! Que se mejore pronto.
+  - ¡Qué chulo!
+  - ¡Enhorabuena!
+  - ¡Que aproveche!
+- id: sym-2
+  facet: sym
+  format: type
+  prompt:
+    de: 'Kommentieren Sie: Schade!'
+    en: 'Comment: What a pity!'
+  stem: ¡Qué ___!
+  answer:
+  - pena
+  - lástima
+- id: sym-3
+  facet: sym
+  format: choice
+  prompt:
+    de: Welcher Kommentar passt?
+    en: Which comment fits?
+  context: No puedo ir a la fiesta.
+  answer:
+  - ¡Qué pena! Otra vez será.
+  options:
+  - ¡Qué pena! Otra vez será.
+  - ¡Feliz fiesta!
+  - ¡Gracias por la foto!
+  - ¡Qué foto tan bonita!
+- id: reply-1
+  facet: reply
+  format: type
+  prompt:
+    de: Jemand schreibt unter Ihr Foto. Bedanken Sie sich.
+    en: Someone comments on your photo. Thank them.
+  context: ¡Qué foto tan bonita!
+  stem: ¡___! 😊
+  answer:
+  - Gracias
+  - Muchas gracias
+- id: reply-2
+  facet: reply
+  format: type
+  prompt:
+    de: Entschuldigen Sie sich, dass Sie spät antworten.
+    en: Apologise for replying late.
+  stem: ___ por contestar tarde.
+  answer:
+  - Perdona
+  - Perdón
+  - Disculpa
+  - Perdonad
+- id: reply-3
+  facet: reply
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¡Gracias por la foto!
+  answer:
+  - ¡De nada! 😊
+  options:
+  - ¡De nada! 😊
+  - ¡Qué pena!
+  - ¡Enhorabuena!
+  - ¡Perdona!

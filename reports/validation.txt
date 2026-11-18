@@ -1,8 +1,10 @@
 skills: 52
+es: 55 enablers, 52 realizations, 12 catalogues (320 items), 52 placement catalogues (478 items)
 fa: 22 enablers, 5 realizations, 0 catalogues (0 items), 0 placement catalogues (0 items)
 uk: 64 enablers, 52 realizations, 13 catalogues (409 items), 52 placement catalogues (478 items)
 
 ERRORS (0)
 
-WARNINGS (1)
+WARNINGS (2)
+es: 19 A1 enablers without a question catalogue (checks fall back to generated items): es.gram.prep.basic, es.gram.pron.demonstrative, es.gram.pron.subject, es.gram.syntax.conjunctions, es.gram.syntax.negation, es.gram.syntax.questions, es.gram.syntax.time-adverbs, es.gram.verb.ir-a, es.gram.verb.modal, es.gram.verb.reflexive, es.num.cardinal-0-100, es.num.cardinal-100-10000, es.num.dates, es.num.ordinal, es.orth.accents-punctuation, es.prag.courtesy, es.prag.greetings, es.prag.wishes, es.script.alphabet
 uk: 22 A1 enablers without a question catalogue (checks fall back to generated items): uk.gram.adj.acc-loc-sg, uk.gram.pron.demonstrative, uk.gram.syntax.conjunctions, uk.gram.syntax.like, uk.gram.syntax.modal, uk.gram.syntax.negation, uk.gram.syntax.possession, uk.gram.syntax.questions, uk.gram.syntax.time-adverbs, uk.gram.verb.future-compound, uk.gram.verb.imperative-set, uk.gram.verb.motion-go, uk.gram.verb.reflexive, uk.num.cardinal-0-100, uk.num.cardinal-100-10000, uk.num.ordinal, uk.num.time, uk.prag.courtesy, uk.prag.greetings, uk.prag.wishes, uk.script.alphabet, uk.script.apostrophe-softsign

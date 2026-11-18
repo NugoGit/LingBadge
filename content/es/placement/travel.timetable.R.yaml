@@ -1,0 +1,173 @@
+skill: travel.timetable.R
+lang: es
+reviewed_by: []
+facets:
+- id: time
+  label:
+    de: Abfahrt und Ankunft
+    en: Departure and arrival
+- id: platform
+  label:
+    de: Gleis
+    en: Track
+- id: status
+  label:
+    de: Verspätung, Ausfall, Verkehrstage
+    en: Delays, cancellations, days of operation
+items:
+- id: time-1
+  facet: time
+  format: type
+  prompt:
+    de: Wann fährt der Zug nach Madrid ab? (Uhrzeit)
+    en: When does the train to Madrid leave? (time)
+  text: |-
+    Salidas
+    Madrid 09:20 vía 2
+    Valencia 11:45 vía 4 — retraso 30 min
+    Bilbao 13:10 vía 1 — cancelado
+  answer:
+  - '9:20'
+- id: time-2
+  facet: time
+  format: type
+  prompt:
+    de: Wann kommt der Zug aus Sevilla an? (Uhrzeit)
+    en: When does the train from Seville arrive? (time)
+  text: |-
+    Llegadas
+    Sevilla 14:05 vía 3
+    Málaga 16:30 vía 6
+  answer:
+  - '14:05'
+- id: time-3
+  facet: time
+  format: type
+  prompt:
+    de: Wann fährt der erste Bus? (Uhrzeit)
+    en: When does the first bus leave? (time)
+  text: |-
+    Autobús n.º 12
+    Diario, excepto domingos
+    06:00, 06:30, 07:00 … 22:00
+  answer:
+  - '6:00'
+  - '6'
+- id: platform-1
+  facet: platform
+  format: type
+  prompt:
+    de: Von welchem Gleis fährt der Zug nach Madrid? (Zahl)
+    en: From which track does the train to Madrid leave? (number)
+  text: |-
+    Salidas
+    Madrid 09:20 vía 2
+    Valencia 11:45 vía 4
+    Bilbao 13:10 vía 1
+  answer:
+  - '2'
+- id: platform-2
+  facet: platform
+  format: type
+  prompt:
+    de: Von welchem Gleis fährt der Zug nach Valencia? (Zahl)
+    en: From which track does the train to Valencia leave? (number)
+  text: |-
+    Salidas
+    Madrid 09:20 vía 2
+    Valencia 11:45 vía 4
+    Bilbao 13:10 vía 1
+  answer:
+  - '4'
+- id: platform-3
+  facet: platform
+  format: type
+  prompt:
+    de: Auf welchem Gleis kommt der Zug aus Málaga an? (Zahl)
+    en: On which track does the train from Málaga arrive? (number)
+  text: |-
+    Llegadas
+    Sevilla 14:05 vía 3
+    Málaga 16:30 vía 6
+  answer:
+  - '6'
+- id: status-1
+  facet: status
+  format: choice
+  prompt:
+    de: Was ist mit dem Zug nach Bilbao?
+    en: What about the train to Bilbao?
+  text: |-
+    Salidas
+    Madrid 09:20 vía 2
+    Valencia 11:45 vía 4 — retraso 30 min
+    Bilbao 13:10 vía 1 — cancelado
+  answer:
+    de:
+    - Er fällt aus
+    en:
+    - It is cancelled
+  options:
+    de:
+    - Er fällt aus
+    - Er hat Verspätung
+    - Er ist pünktlich
+    - Er fährt früher
+    en:
+    - It is cancelled
+    - It is delayed
+    - It is on time
+    - It leaves earlier
+- id: status-2
+  facet: status
+  format: choice
+  prompt:
+    de: Was ist mit dem Zug nach Valencia?
+    en: What about the train to Valencia?
+  text: |-
+    Salidas
+    Madrid 09:20 vía 2
+    Valencia 11:45 vía 4 — retraso 30 min
+    Bilbao 13:10 vía 1 — cancelado
+  answer:
+    de:
+    - 30 Minuten Verspätung
+    en:
+    - 30 minutes late
+  options:
+    de:
+    - 30 Minuten Verspätung
+    - Er fällt aus
+    - Er fährt 30 Minuten früher
+    - Er ist pünktlich
+    en:
+    - 30 minutes late
+    - It is cancelled
+    - It leaves 30 minutes earlier
+    - It is on time
+- id: status-3
+  facet: status
+  format: choice
+  prompt:
+    de: Fährt der Bus am Sonntag?
+    en: Does the bus run on Sunday?
+  text: |-
+    Autobús n.º 12
+    Diario, excepto domingos
+    06:00, 06:30, 07:00 … 22:00
+  answer:
+    de:
+    - Nein
+    en:
+    - 'No'
+  options:
+    de:
+    - Nein
+    - Ja
+    - Nur bis 22 Uhr
+    - Nur am Sonntag
+    en:
+    - 'No'
+    - 'Yes'
+    - Only until 22:00
+    - Only on Sunday

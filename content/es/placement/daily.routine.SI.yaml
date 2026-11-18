@@ -1,0 +1,116 @@
+skill: daily.routine.SI
+lang: es
+reviewed_by: []
+facets:
+- id: morning
+  label:
+    de: Morgens
+    en: Mornings
+- id: day
+  label:
+    de: Arbeitstag und Uhrzeiten
+    en: Workday and times
+- id: weekend
+  label:
+    de: Wochenende
+    en: Weekend
+items:
+- id: morning-1
+  facet: morning
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich stehe um sieben auf.'
+    en: 'Say: I get up at seven.'
+  stem: Me ___ a las siete.
+  cue: levantarse
+  answer:
+  - levanto
+- id: morning-2
+  facet: morning
+  format: type
+  prompt:
+    de: 'Sagen Sie: Morgens trinke ich Kaffee.'
+    en: 'Say: In the morning I drink coffee.'
+  stem: Por la mañana ___ café.
+  cue: tomar
+  answer:
+  - tomo
+- id: morning-3
+  facet: morning
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¿Qué haces por la mañana?
+  answer:
+  - Desayuno y voy al trabajo.
+  options:
+  - Desayuno y voy al trabajo.
+  - Mañana va a llover.
+  - Tengo treinta años.
+  - Bien, gracias.
+- id: day-1
+  facet: day
+  format: type
+  prompt:
+    de: 'Sagen Sie: Dann fahre ich zur Arbeit.'
+    en: 'Say: Then I go to work.'
+  stem: Luego voy ___ trabajo.
+  cue: a + el
+  answer:
+  - al
+- id: day-2
+  facet: day
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich esse um eins zu Mittag.'
+    en: 'Say: I have lunch at one.'
+  stem: ___ a la una.
+  cue: comer
+  answer:
+  - Como
+- id: day-3
+  facet: day
+  format: type
+  prompt:
+    de: 'Antworten Sie: um fünf.'
+    en: 'Answer: at five.'
+  context: ¿A qué hora terminas de trabajar?
+  stem: A las ___.
+  cue: '5'
+  answer:
+  - cinco
+- id: weekend-1
+  facet: weekend
+  format: type
+  prompt:
+    de: 'Sagen Sie: Am Samstag arbeite ich nicht.'
+    en: 'Say: I don''t work on Saturday.'
+  stem: Los sábados no ___.
+  cue: trabajar
+  answer:
+  - trabajo
+- id: weekend-2
+  facet: weekend
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¿Qué haces los domingos?
+  answer:
+  - Descanso en casa.
+  options:
+  - Descanso en casa.
+  - A las siete.
+  - Bien, gracias.
+  - Me llamo Olga.
+- id: weekend-3
+  facet: weekend
+  format: type
+  prompt:
+    de: 'Sagen Sie: Am Sonntag gehen wir im Park spazieren.'
+    en: 'Say: On Sunday we go for a walk in the park.'
+  stem: Los domingos ___ por el parque.
+  cue: pasear
+  answer:
+  - paseamos

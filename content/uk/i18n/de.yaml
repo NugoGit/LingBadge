@@ -1,0 +1,66 @@
+# German titles for the Ukrainian enablers (the source files hold the English title).
+enablers:
+  uk.gram.adj.acc-loc-sg: Adjektive im Akkusativ und Lokativ Singular (у червоній куртці)
+  uk.gram.adj.nom-agreement: Adjektiv-Kongruenz im Nominativ (новий, нова, нове, нові; синій)
+  uk.gram.noun.acc-sg: Akkusativ Singular, belebt und unbelebt (каву, брата)
+  uk.gram.noun.dat-sg: Dativ Singular (мамі, братові)
+  uk.gram.noun.gen-pl: Genitiv Plural (гривень, хвилин, яблук)
+  uk.gram.noun.gen-sg: Genitiv Singular inkl. Maskulina auf -а/-у; nach до, з, без, біля, від, немає
+  uk.gram.noun.gender: Genus der Substantive im Nominativ Singular
+  uk.gram.noun.instr-sg: Instrumental Singular (з молоком, карткою)
+  uk.gram.noun.loc-sg: Lokativ Singular mit у/в, на (у Києві, на вокзалі)
+  uk.gram.noun.nom-pl: Nominativ Plural (-и, -і, -ї; рік – роки)
+  uk.gram.noun.voc: Vokativ (Олено! Пане Іване!)
+  uk.gram.pron.3rd-person: Obliquusformen der 3. Person (його, її, йому, їй, у нього)
+  uk.gram.pron.demonstrative: Demonstrativpronomen (цей, ця, це, ці; той)
+  uk.gram.pron.personal-oblique: мене/мені, тебе/тобі, нас/нам, вас/вам
+  uk.gram.pron.possessive: Possessivpronomen (мій, твій, наш, ваш, їхній)
+  uk.gram.syntax.conjunctions: і/й, а, але; тому що, бо
+  uk.gram.syntax.like: Мені подобається + Nominativ; люблю + Akkusativ oder Infinitiv
+  uk.gram.syntax.modal: можна, треба, потрібно; хочу / можу + Infinitiv
+  uk.gram.syntax.negation: Verneinung mit не; немає (als feste Wendung)
+  uk.gram.syntax.possession: У мене / у тебе / у вас є ...
+  uk.gram.syntax.questions: "Fragen: Intonation, чи, хто, що, де, куди, звідки, коли, скільки, який"
+  uk.gram.syntax.time-adverbs: сьогодні, завтра, вчора, зараз, вранці, ввечері, щодня
+  uk.gram.verb.aspect: Aspektpaare (читати/прочитати), perfektives Futur
+  uk.gram.verb.future-compound: Futur von бути und zusammengesetztes Futur (буду читати)
+  uk.gram.verb.imperative-set: "Imperative eines Grundwortschatzes: скажи(іть), дай(те), сідай(те), читай(те), повторіть"
+  uk.gram.verb.motion-go: "іти / їхати + куди: в/на + Akkusativ"
+  uk.gram.verb.motion-indeterminate: ходити / їздити
+  uk.gram.verb.past: Vergangenheit nach Genus und Numerus (був, була, були)
+  uk.gram.verb.present-irregular: Präsens von могти, хотіти, іти, їхати, їсти, пити, бути (є)
+  uk.gram.verb.present: Präsens regelmäßiger Verben, 1. und 2. Konjugation
+  uk.gram.verb.reflexive: Reflexive Verben auf -ся (називатися, подобатися, вмиватися)
+  uk.lex.appearance-clothes: Aussehen, Kleidung, Farben
+  uk.lex.celebrations: Feste und Geschenke
+  uk.lex.city-places: Orte in der Stadt
+  uk.lex.classroom: Sprache im Unterricht
+  uk.lex.daily-routine: Tagesablauf
+  uk.lex.directions-place: Richtungen und Ortsangaben
+  uk.lex.family: Familie und Haustiere
+  uk.lex.food-drink: Essen und Trinken
+  uk.lex.free-time: Freizeit und Hobbys
+  uk.lex.health-body: Körper und Gesundheit
+  uk.lex.home: Wohnung, Zimmer, Möbel
+  uk.lex.personal: Angaben zur Person, Länder, Sprachen, Berufe
+  uk.lex.shopping-money: Einkaufen, Mengen, Geld
+  uk.lex.signs: Schilder und Aushänge
+  uk.lex.time-calendar: Uhrzeit, Tage, Monate, Jahreszeiten
+  uk.lex.transport-travel: Verkehr und Reisen
+  uk.lex.weather: Wetter
+  uk.num.cardinal-0-100: Grundzahlen 0–100
+  uk.num.cardinal-100-10000: Grundzahlen 100–10 000 (Preise)
+  uk.num.num-noun: "Zahl + Substantiv: 1 гривня, 2–4 гривні, 5+ гривень"
+  uk.num.ordinal: Ordnungszahlen in den Genusformen und erste deklinierte Formen (перший, першого)
+  uk.num.time: "Uhrzeit: Котра година? Третя. О третій. 18:30 als „вісімнадцята тридцять“"
+  uk.phon.consonants: Harte/weiche und stimmhafte/stimmlose Konsonanten; г vs ґ; в als [w]; дж, дз
+  uk.phon.euphony: Wechsel у/в, і/й, з/із/зі (auch in der Schrift)
+  uk.phon.intonation: Intonation von Aussage, Frage und Ausruf
+  uk.phon.stress: Wortbetonung im A1-Wortschatz (bewegliche Betonung)
+  uk.phon.vowels: Vokale, unbetontes е/и; и vs і
+  uk.prag.address: ти vs ви; пане / пані + Name im Vokativ
+  uk.prag.courtesy: будь ласка, дякую, вибачте / перепрошую, нічого страшного
+  uk.prag.greetings: Begrüßung und Abschied nach Register (Добрий день / Привіт; До побачення / Бувай)
+  uk.prag.wishes: Feste Wünsche und Trinksprüche (З днем народження! Будьмо!)
+  uk.script.alphabet: Kyrillisches Alphabet inkl. і, ї, є, ґ; Buchstabennamen zum Buchstabieren
+  uk.script.apostrophe-softsign: Apostroph und Weichheitszeichen (п'ять, сім'я, Львів, день)

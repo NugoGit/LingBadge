@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: what
-  label: Was für eine Veranstaltung
+  label:
+    de: Was für eine Veranstaltung
+    en: What kind of event
 - id: when
-  label: Wann
+  label:
+    de: Wann
+    en: When
 - id: where
-  label: Wo und wie teuer
+  label:
+    de: Wo und wie teuer
+    en: Where and how much
 items:
 - id: what-1
   facet: what
   format: choice
-  prompt: Was für eine Veranstaltung ist das?
+  prompt:
+    de: Was für eine Veranstaltung ist das?
+    en: What kind of event is it?
   text: |-
     КОНЦЕРТ
     Камерний оркестр «Київські солісти»
@@ -20,92 +28,158 @@ items:
     Філармонія, вул. Шевченка, 3
     Квитки: 300–500 грн
   answer:
-  - Konzert
+    de:
+    - Konzert
+    en:
+    - Concert
   options:
-  - Konzert
-  - Ausstellung
-  - Film
-  - Theaterstück
+    de:
+    - Konzert
+    - Ausstellung
+    - Film
+    - Theaterstück
+    en:
+    - Concert
+    - Exhibition
+    - Film
+    - Play
 - id: what-2
   facet: what
   format: choice
-  prompt: Was für eine Veranstaltung ist das?
+  prompt:
+    de: Was für eine Veranstaltung ist das?
+    en: What kind of event is it?
   text: |-
     ВИСТАВКА «Українська вишивка»
     1–30 вересня
     Національний музей, вул. Грушевського, 6
     Вхід вільний
   answer:
-  - Ausstellung
+    de:
+    - Ausstellung
+    en:
+    - Exhibition
   options:
-  - Ausstellung
-  - Konzert
-  - Film
-  - Vortrag
+    de:
+    - Ausstellung
+    - Konzert
+    - Film
+    - Vortrag
+    en:
+    - Exhibition
+    - Concert
+    - Film
+    - Talk
 - id: what-3
   facet: what
   format: choice
-  prompt: Was für eine Veranstaltung ist das?
+  prompt:
+    de: Was für eine Veranstaltung ist das?
+    en: What kind of event is it?
   text: |-
     КІНО ПІД ВІДКРИТИМ НЕБОМ
     Щоп'ятниці о 21:00
     Парк Шевченка
     Вхід — 100 грн
   answer:
-  - Film im Freien
+    de:
+    - Film im Freien
+    en:
+    - Open-air film
   options:
-  - Film im Freien
-  - Konzert im Park
-  - Theater im Park
-  - Kinderfest
+    de:
+    - Film im Freien
+    - Konzert im Park
+    - Theater im Park
+    - Kinderfest
+    en:
+    - Open-air film
+    - Concert in the park
+    - Theatre in the park
+    - Children's party
 - id: when-1
   facet: when
   format: choice
-  prompt: An welchem Wochentag ist das Konzert?
+  prompt:
+    de: An welchem Wochentag ist das Konzert?
+    en: On which weekday is the concert?
   text: |-
     КОНЦЕРТ
     Субота, 14 червня, 19:00
     Філармонія
   answer:
-  - Samstag
+    de:
+    - Samstag
+    en:
+    - Saturday
   options:
-  - Samstag
-  - Sonntag
-  - Freitag
-  - Donnerstag
+    de:
+    - Samstag
+    - Sonntag
+    - Freitag
+    - Donnerstag
+    en:
+    - Saturday
+    - Sunday
+    - Friday
+    - Thursday
 - id: when-2
   facet: when
   format: choice
-  prompt: Wann ist die Ausstellung am Samstag geöffnet?
+  prompt:
+    de: Wann ist die Ausstellung am Samstag geöffnet?
+    en: When is the exhibition open on Saturday?
   text: |-
     ВИСТАВКА
     пн–пт 10:00–18:00
     сб–нд 11:00–17:00
   answer:
-  - 11–17 Uhr
+    de:
+    - 11–17 Uhr
+    en:
+    - 11:00–17:00
   options:
-  - 11–17 Uhr
-  - 10–18 Uhr
-  - Geschlossen
-  - 10–17 Uhr
+    de:
+    - 11–17 Uhr
+    - 10–18 Uhr
+    - Geschlossen
+    - 10–17 Uhr
+    en:
+    - 11:00–17:00
+    - 10:00–18:00
+    - Closed
+    - 10:00–17:00
 - id: when-3
   facet: when
   format: choice
-  prompt: Wann gibt es Kino im Park?
+  prompt:
+    de: Wann gibt es Kino im Park?
+    en: When is there cinema in the park?
   text: |-
     КІНО ПІД ВІДКРИТИМ НЕБОМ
     Щоп'ятниці о 21:00
   answer:
-  - Jeden Freitag um 21 Uhr
+    de:
+    - Jeden Freitag um 21 Uhr
+    en:
+    - Every Friday at 21:00
   options:
-  - Jeden Freitag um 21 Uhr
-  - Nur einen Freitag
-  - Jeden Tag um 21 Uhr
-  - Samstags um 21 Uhr
+    de:
+    - Jeden Freitag um 21 Uhr
+    - Nur einen Freitag
+    - Jeden Tag um 21 Uhr
+    - Samstags um 21 Uhr
+    en:
+    - Every Friday at 21:00
+    - Only one Friday
+    - Every day at 21:00
+    - On Saturdays at 21:00
 - id: where-1
   facet: where
   format: type
-  prompt: Was kostet die billigste Karte? (Zahl)
+  prompt:
+    de: Was kostet die billigste Karte? (Zahl)
+    en: How much is the cheapest ticket? (number)
   text: |-
     КОНЦЕРТ
     Філармонія, вул. Шевченка, 3
@@ -115,31 +189,53 @@ items:
 - id: where-2
   facet: where
   format: choice
-  prompt: Was kostet der Eintritt?
+  prompt:
+    de: Was kostet der Eintritt?
+    en: How much is admission?
   text: |-
     ВИСТАВКА «Українська вишивка»
     Національний музей, вул. Грушевського, 6
     Вхід вільний
   answer:
-  - Nichts
+    de:
+    - Nichts
+    en:
+    - Nothing
   options:
-  - Nichts
-  - 6 Hrywnja
-  - Nur mit Einladung
-  - Wird nicht gesagt
+    de:
+    - Nichts
+    - 6 Hrywnja
+    - Nur mit Einladung
+    - Wird nicht gesagt
+    en:
+    - Nothing
+    - 6 hryvnias
+    - By invitation only
+    - Not stated
 - id: where-3
   facet: where
   format: choice
-  prompt: Wo findet es statt?
+  prompt:
+    de: Wo findet es statt?
+    en: Where does it take place?
   text: |-
     КІНО ПІД ВІДКРИТИМ НЕБОМ
     Щоп'ятниці о 21:00
     Парк Шевченка
     Вхід — 100 грн
   answer:
-  - Im Park
+    de:
+    - Im Park
+    en:
+    - In the park
   options:
-  - Im Park
-  - Im Kino
-  - Im Museum
-  - Im Theater
+    de:
+    - Im Park
+    - Im Kino
+    - Im Museum
+    - Im Theater
+    en:
+    - In the park
+    - At the cinema
+    - At the museum
+    - At the theatre

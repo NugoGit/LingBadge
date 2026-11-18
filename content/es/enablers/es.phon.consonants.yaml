@@ -1,0 +1,12 @@
+id: es.phon.consonants
+lang: es
+kind: phonology
+title: r vs rr, j/g, ll/y, c/z, b/v, silent h, ñ
+cefr: A1
+sources:
+- pcic.A1.phon.consonants
+check:
+  template: enabler.phonology.v1
+  items: 10
+  threshold: 0.9
+  channel: audio

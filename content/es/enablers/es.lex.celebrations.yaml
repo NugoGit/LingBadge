@@ -1,0 +1,24 @@
+id: es.lex.celebrations
+lang: es
+kind: lexis
+title: Celebrations and gifts
+cefr: A1
+words:
+- el cumpleaños
+- la fiesta
+- el regalo
+- la tarta
+- la Navidad
+- el Año Nuevo
+- la Semana Santa
+- la boda
+- felicidades
+- celebrar
+- invitar
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

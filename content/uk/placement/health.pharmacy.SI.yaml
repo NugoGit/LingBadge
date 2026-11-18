@@ -3,31 +3,45 @@ lang: uk
 reviewed_by: []
 facets:
 - id: problem
-  label: Beschwerden nennen
+  label:
+    de: Beschwerden nennen
+    en: Name the problem
 - id: ask
-  label: Etwas dagegen verlangen
+  label:
+    de: Etwas dagegen verlangen
+    en: Ask for something for it
 - id: dose
-  label: Einnahme verstehen
+  label:
+    de: Einnahme verstehen
+    en: Understand how to take it
 items:
 - id: problem-1
   facet: problem
   format: type
-  prompt: 'Sagen Sie: Ich habe Zahnschmerzen.'
+  prompt:
+    de: 'Sagen Sie: Ich habe Zahnschmerzen.'
+    en: 'Say: I have toothache.'
   stem: У мене болить ___.
-  cue: Zahn
+  cue:
+    de: Zahn
+    en: tooth
   answer:
   - зуб
 - id: problem-2
   facet: problem
   format: type
-  prompt: 'Sagen Sie: Ich habe Schnupfen.'
+  prompt:
+    de: 'Sagen Sie: Ich habe Schnupfen.'
+    en: 'Say: I have a cold.'
   stem: У мене ___.
   answer:
   - нежить
 - id: problem-3
   facet: problem
   format: choice
-  prompt: 'Sagen Sie: Mein Kind hat Fieber.'
+  prompt:
+    de: 'Sagen Sie: Mein Kind hat Fieber.'
+    en: 'Say: My child has a temperature.'
   answer:
   - У моєї дитини температура.
   options:
@@ -38,7 +52,9 @@ items:
 - id: ask-1
   facet: ask
   format: type
-  prompt: Verlangen Sie etwas gegen Husten.
+  prompt:
+    de: Verlangen Sie etwas gegen Husten.
+    en: Ask for something for a cough.
   stem: Дайте, будь ласка, щось від ___.
   cue: кашель
   answer:
@@ -46,7 +62,9 @@ items:
 - id: ask-2
   facet: ask
   format: type
-  prompt: Verlangen Sie etwas gegen Kopfschmerzen.
+  prompt:
+    de: Verlangen Sie etwas gegen Kopfschmerzen.
+    en: Ask for something for a headache.
   stem: Щось від головного ___, будь ласка.
   cue: біль
   answer:
@@ -54,7 +72,9 @@ items:
 - id: ask-3
   facet: ask
   format: choice
-  prompt: Fragen Sie, wie man das Medikament einnimmt.
+  prompt:
+    de: Fragen Sie, wie man das Medikament einnimmt.
+    en: Ask how to take the medicine.
   answer:
   - Як це приймати?
   options:
@@ -65,36 +85,69 @@ items:
 - id: dose-1
   facet: dose
   format: choice
-  prompt: Wie oft sollen Sie das nehmen?
+  prompt:
+    de: Wie oft sollen Sie das nehmen?
+    en: How often should you take it?
   context: Приймайте тричі на день після їжі.
   answer:
-  - Dreimal täglich
+    de:
+    - Dreimal täglich
+    en:
+    - Three times a day
   options:
-  - Dreimal täglich
-  - Dreimal pro Woche
-  - Alle drei Stunden
-  - Drei Tage lang
+    de:
+    - Dreimal täglich
+    - Dreimal pro Woche
+    - Alle drei Stunden
+    - Drei Tage lang
+    en:
+    - Three times a day
+    - Three times a week
+    - Every three hours
+    - For three days
 - id: dose-2
   facet: dose
   format: choice
-  prompt: Was sollen Sie tun?
+  prompt:
+    de: Was sollen Sie tun?
+    en: What should you do?
   context: По одній таблетці вранці й увечері.
   answer:
-  - Morgens und abends je eine Tablette
+    de:
+    - Morgens und abends je eine Tablette
+    en:
+    - One tablet morning and evening
   options:
-  - Morgens und abends je eine Tablette
-  - Eine Tablette am Tag
-  - Morgens zwei Tabletten
-  - Abends zwei Tabletten
+    de:
+    - Morgens und abends je eine Tablette
+    - Eine Tablette am Tag
+    - Morgens zwei Tabletten
+    - Abends zwei Tabletten
+    en:
+    - One tablet morning and evening
+    - One tablet a day
+    - Two tablets in the morning
+    - Two tablets in the evening
 - id: dose-3
   facet: dose
   format: choice
-  prompt: Wann sollen Sie die Tropfen nehmen?
+  prompt:
+    de: Wann sollen Sie die Tropfen nehmen?
+    en: When should you take the drops?
   context: Ці краплі — перед сном.
   answer:
-  - Vor dem Schlafengehen
+    de:
+    - Vor dem Schlafengehen
+    en:
+    - Before going to bed
   options:
-  - Vor dem Schlafengehen
-  - Vor dem Essen
-  - Nach dem Aufstehen
-  - Nach dem Essen
+    de:
+    - Vor dem Schlafengehen
+    - Vor dem Essen
+    - Nach dem Aufstehen
+    - Nach dem Essen
+    en:
+    - Before going to bed
+    - Before meals
+    - After getting up
+    - After meals

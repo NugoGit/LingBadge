@@ -1,0 +1,37 @@
+skill: comm.ask-word.SI
+lang: es
+cefr: A1
+register:
+- formal
+- informal
+variety: peninsular
+exponents:
+- ¿Cómo se dice esto en español?
+- ¿Qué significa «…»?
+- ¿Cómo se llama esto?
+- Esto, por favor.
+enablers:
+  required:
+  - id: es.gram.syntax.questions
+    use: productive
+  - id: es.gram.pron.demonstrative
+    use: productive
+  - id: es.gram.verb.reflexive
+    use: formulaic
+  - id: es.lex.classroom
+    use: productive
+  - id: es.prag.courtesy
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Question word with written accent and ¿?; «¿Cómo se dice…?» and «¿Qué significa…?» as chunks.
+version: 1
+status: draft

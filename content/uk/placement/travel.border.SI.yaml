@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: purpose
-  label: Reisezweck
+  label:
+    de: Reisezweck
+    en: Purpose of the trip
 - id: length
-  label: Aufenthaltsdauer
+  label:
+    de: Aufenthaltsdauer
+    en: Length of stay
 - id: stay
-  label: Unterkunft
+  label:
+    de: Unterkunft
+    en: Accommodation
 items:
 - id: purpose-1
   facet: purpose
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Мета вашого візиту?
   answer:
   - Туризм.
@@ -24,7 +32,9 @@ items:
 - id: purpose-2
   facet: purpose
   format: type
-  prompt: 'Antworten Sie: Ich besuche Freunde.'
+  prompt:
+    de: 'Antworten Sie: Ich besuche Freunde.'
+    en: 'Answer: I''m visiting friends.'
   context: Мета вашого візиту?
   stem: В гості до ___.
   cue: друзі
@@ -33,7 +43,9 @@ items:
 - id: purpose-3
   facet: purpose
   format: choice
-  prompt: 'Antworten Sie: geschäftlich.'
+  prompt:
+    de: 'Antworten Sie: geschäftlich.'
+    en: 'Answer: on business.'
   context: Мета поїздки?
   answer:
   - Робоча поїздка.
@@ -45,17 +57,23 @@ items:
 - id: length-1
   facet: length
   format: type
-  prompt: 'Antworten Sie: eine Woche.'
+  prompt:
+    de: 'Antworten Sie: eine Woche.'
+    en: 'Answer: a week.'
   context: Скільки днів ви будете в Україні?
   stem: ___.
-  cue: eine Woche
+  cue:
+    de: eine Woche
+    en: a week
   answer:
   - Тиждень
   - Один тиждень
 - id: length-2
   facet: length
   format: type
-  prompt: 'Antworten Sie: fünf Tage.'
+  prompt:
+    de: 'Antworten Sie: fünf Tage.'
+    en: 'Answer: five days.'
   context: Скільки днів?
   stem: П'ять ___.
   cue: день
@@ -64,7 +82,9 @@ items:
 - id: length-3
   facet: length
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Коли ви їдете назад?
   answer:
   - У неділю.
@@ -76,7 +96,9 @@ items:
 - id: stay-1
   facet: stay
   format: type
-  prompt: 'Antworten Sie: im Hotel.'
+  prompt:
+    de: 'Antworten Sie: im Hotel.'
+    en: 'Answer: at a hotel.'
   context: Де ви будете жити?
   stem: У ___.
   cue: готель
@@ -85,7 +107,9 @@ items:
 - id: stay-2
   facet: stay
   format: type
-  prompt: 'Antworten Sie: bei einem Freund.'
+  prompt:
+    de: 'Antworten Sie: bei einem Freund.'
+    en: 'Answer: at a friend''s.'
   context: Де ви зупинитеся?
   stem: У ___.
   cue: друг
@@ -94,7 +118,9 @@ items:
 - id: stay-3
   facet: stay
   format: choice
-  prompt: 'Antworten Sie: Bei Freunden in Kyjiw.'
+  prompt:
+    de: 'Antworten Sie: Bei Freunden in Kyjiw.'
+    en: 'Answer: With friends in Kyiv.'
   context: Де ви будете жити?
   answer:
   - У друзів у Києві.

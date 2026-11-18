@@ -1,0 +1,37 @@
+skill: comm.repair.SI
+lang: es
+cefr: A1
+register:
+- formal
+- informal
+variety: peninsular
+exponents:
+- Perdone, no entiendo.
+- ¿Puede repetir, por favor?
+- Más despacio, por favor.
+- ¿Cómo se escribe?
+enablers:
+  required:
+  - id: es.prag.courtesy
+    use: productive
+  - id: es.gram.verb.imperative-set
+    use: formulaic
+  - id: es.gram.verb.modal
+    use: productive
+  - id: es.script.alphabet
+    use: productive
+  - id: es.gram.verb.present-irregular
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: ¿Puede + infinitive? as the polite request; no entiendo / no he entendido as chunks.
+version: 1
+status: draft

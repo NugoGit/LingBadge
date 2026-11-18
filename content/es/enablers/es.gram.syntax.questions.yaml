@@ -1,0 +1,12 @@
+id: es.gram.syntax.questions
+lang: es
+kind: grammar
+title: 'Questions: ¿…?, qué, quién, dónde, cuándo, cómo, cuánto/a, cuál'
+cefr: A1
+sources:
+- pcic.A1.gram.questions
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

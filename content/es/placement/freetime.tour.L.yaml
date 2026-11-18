@@ -1,0 +1,224 @@
+skill: freetime.tour.L
+lang: es
+reviewed_by: []
+facets:
+- id: what
+  label:
+    de: Was für ein Gebäude, wo
+    en: What building, where
+- id: age
+  label:
+    de: Wie alt
+    en: How old
+- id: who
+  label:
+    de: Wer hier lebte oder arbeitete
+    en: Who lived or worked here
+items:
+- id: what-1
+  facet: what
+  format: choice
+  prompt:
+    de: Was ist das für ein Gebäude?
+    en: What building is this?
+  audio: Este es el ayuntamiento. Aquí trabaja el alcalde.
+  answer:
+    de:
+    - Rathaus
+    en:
+    - Town hall
+  options:
+    de:
+    - Rathaus
+    - Kirche
+    - Theater
+    - Bahnhof
+    en:
+    - Town hall
+    - Church
+    - Theatre
+    - Station
+- id: what-2
+  facet: what
+  format: choice
+  prompt:
+    de: Was ist rechts?
+    en: What is on the right?
+  audio: A la derecha está el teatro de la ópera.
+  answer:
+    de:
+    - Opernhaus
+    en:
+    - Opera house
+  options:
+    de:
+    - Opernhaus
+    - Rathaus
+    - Museum
+    - Kirche
+    en:
+    - Opera house
+    - Town hall
+    - Museum
+    - Church
+- id: what-3
+  facet: what
+  format: choice
+  prompt:
+    de: Was ist links?
+    en: What is on the left?
+  audio: A la izquierda pueden ver una catedral muy antigua.
+  answer:
+    de:
+    - Eine alte Kathedrale
+    en:
+    - An old cathedral
+  options:
+    de:
+    - Eine alte Kathedrale
+    - Ein altes Theater
+    - Ein neues Museum
+    - Das Rathaus
+    en:
+    - An old cathedral
+    - An old theatre
+    - A new museum
+    - The town hall
+- id: age-1
+  facet: age
+  format: choice
+  prompt:
+    de: Wie alt ist die Kirche?
+    en: How old is the church?
+  audio: Esta iglesia tiene más de cuatrocientos años.
+  answer:
+    de:
+    - über 400 Jahre
+    en:
+    - over 400 years
+  options:
+    de:
+    - über 400 Jahre
+    - 40 Jahre
+    - 14 Jahre
+    - über 4000 Jahre
+    en:
+    - over 400 years
+    - 40 years
+    - 14 years
+    - over 4,000 years
+- id: age-2
+  facet: age
+  format: choice
+  prompt:
+    de: Wie alt ist die Brücke?
+    en: How old is the bridge?
+  audio: Este puente tiene cien años.
+  answer:
+    de:
+    - 100 Jahre
+    en:
+    - 100 years
+  options:
+    de:
+    - 100 Jahre
+    - 10 Jahre
+    - 1000 Jahre
+    - 200 Jahre
+    en:
+    - 100 years
+    - 10 years
+    - 1,000 years
+    - 200 years
+- id: age-3
+  facet: age
+  format: choice
+  prompt:
+    de: Aus welcher Zeit ist der Palast?
+    en: When is the palace from?
+  audio: Este palacio es del siglo dieciséis.
+  answer:
+    de:
+    - Im 16. Jahrhundert
+    en:
+    - In the 16th century
+  options:
+    de:
+    - Im 16. Jahrhundert
+    - Im 6. Jahrhundert
+    - Vor 16 Jahren
+    - Im 19. Jahrhundert
+    en:
+    - In the 16th century
+    - In the 6th century
+    - 16 years ago
+    - In the 19th century
+- id: who-1
+  facet: who
+  format: choice
+  prompt:
+    de: Wer hat hier gelebt?
+    en: Who lived here?
+  audio: Aquí vivió el pintor Francisco de Goya.
+  answer:
+    de:
+    - Ein Maler
+    en:
+    - A painter
+  options:
+    de:
+    - Ein Maler
+    - Ein König
+    - Ein Dichter
+    - Ein Komponist
+    en:
+    - A painter
+    - A king
+    - A poet
+    - A composer
+- id: who-2
+  facet: who
+  format: choice
+  prompt:
+    de: Was wird über das Haus gesagt?
+    en: What is said about the house?
+  audio: En esta casa vivió el poeta Antonio Machado.
+  answer:
+    de:
+    - Antonio Machado hat hier gelebt.
+    en:
+    - Antonio Machado lived here.
+  options:
+    de:
+    - Antonio Machado hat hier gelebt.
+    - Antonio Machado hat das Haus gebaut.
+    - Hier ist ein Geschäft.
+    - Antonio Machado arbeitet hier.
+    en:
+    - Antonio Machado lived here.
+    - Antonio Machado built the house.
+    - There is a shop here.
+    - Antonio Machado works here.
+- id: who-3
+  facet: who
+  format: choice
+  prompt:
+    de: Was wird über das Haus gesagt?
+    en: What is said about the house?
+  audio: Aquí trabajó un pintor muy famoso.
+  answer:
+    de:
+    - Ein bekannter Maler hat hier gearbeitet.
+    en:
+    - A famous painter worked here.
+  options:
+    de:
+    - Ein bekannter Maler hat hier gearbeitet.
+    - Ein bekannter Maler hat hier gelebt.
+    - Hier ist ein Kunstmuseum.
+    - Ein Dichter hat hier gearbeitet.
+    en:
+    - A famous painter worked here.
+    - A famous painter lived here.
+    - There is an art museum here.
+    - A poet worked here.

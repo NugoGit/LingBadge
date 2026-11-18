@@ -1,0 +1,151 @@
+skill: food.cafe.SI
+lang: es
+reviewed_by: []
+facets:
+- id: order
+  label:
+    de: Essen und Getränke bestellen
+    en: Order food and drinks
+- id: ask
+  label:
+    de: Nachfragen; „gibt es nicht“
+    en: Ask about a dish; “we don't have it”
+- id: pay
+  label:
+    de: Rechnung und Bezahlen
+    en: The bill and paying
+items:
+- id: order-1
+  facet: order
+  format: type
+  prompt:
+    de: Bestellen Sie einen Kaffee.
+    en: Order a coffee.
+  context: ¿Qué va a tomar?
+  stem: Para mí, un ___, por favor.
+  cue:
+    de: Kaffee
+    en: coffee
+  answer:
+  - café
+- id: order-2
+  facet: order
+  format: type
+  prompt:
+    de: Bestellen Sie stilles Wasser.
+    en: Order still water.
+  context: ¿Y para beber?
+  stem: Un agua sin ___.
+  answer:
+  - gas
+- id: order-3
+  facet: order
+  format: type
+  prompt:
+    de: Bestellen Sie Tee ohne Zucker.
+    en: Order tea without sugar.
+  stem: Un té ___ azúcar.
+  answer:
+  - sin
+- id: order-4
+  facet: order
+  format: choice
+  prompt:
+    de: Sie möchten die Speisekarte. Was sagen Sie?
+    en: You want the menu. What do you say?
+  answer:
+  - ¿Me trae la carta, por favor?
+  options:
+  - ¿Me trae la carta, por favor?
+  - ¿Me trae la cuenta, por favor?
+  - ¿Puedo pagar con tarjeta?
+  - ¿Puedo salir?
+- id: ask-1
+  facet: ask
+  format: choice
+  prompt:
+    de: Auf der Karte steht „pisto“. Sie kennen das nicht. Was fragen Sie?
+    en: The menu says “pisto”. You don't know it. What do you ask?
+  answer:
+  - ¿Qué es el pisto?
+  options:
+  - ¿Qué es el pisto?
+  - ¿Cuándo es el pisto?
+  - ¿Dónde está el pisto?
+  - Pisto, adiós.
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt:
+    de: Sie möchten eine Empfehlung. Was fragen Sie?
+    en: You'd like a recommendation. What do you ask?
+  answer:
+  - ¿Qué me recomienda?
+  options:
+  - ¿Qué me recomienda?
+  - ¿Qué hace usted?
+  - ¿Cuánto cuesta esto?
+  - ¿Está libre?
+- id: ask-3
+  facet: ask
+  format: choice
+  prompt:
+    de: Welche Reaktion passt?
+    en: Which reaction fits?
+  context: Lo siento, hoy no tenemos paella.
+  answer:
+  - ¡Qué pena! Entonces una tortilla, por favor.
+  options:
+  - ¡Qué pena! Entonces una tortilla, por favor.
+  - ¡Gracias, muy rico!
+  - Sí, paella, por favor.
+  - ¡Buenas noches!
+- id: ask-4
+  facet: ask
+  format: type
+  prompt:
+    de: Es gibt keinen Kaffee. Bestellen Sie einen Tee.
+    en: There's no coffee. Order a tea.
+  context: Lo siento, no hay café.
+  stem: Entonces ___ té, por favor.
+  cue: un / una
+  answer:
+  - un
+- id: pay-1
+  facet: pay
+  format: type
+  prompt:
+    de: Bitten Sie um die Rechnung.
+    en: Ask for the bill.
+  stem: La ___, por favor.
+  cue:
+    de: die Rechnung
+    en: the bill
+  answer:
+  - cuenta
+- id: pay-2
+  facet: pay
+  format: type
+  prompt:
+    de: Fragen Sie, ob Sie mit Karte zahlen können.
+    en: Ask whether you can pay by card.
+  stem: ¿Puedo pagar con ___?
+  cue:
+    de: Karte
+    en: card
+  answer:
+  - tarjeta
+- id: pay-3
+  facet: pay
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¿En efectivo o con tarjeta?
+  answer:
+  - Con tarjeta, por favor.
+  options:
+  - Con tarjeta, por favor.
+  - La cuenta, por favor.
+  - La carta, por favor.
+  - Sin azúcar, por favor.

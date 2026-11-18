@@ -1,0 +1,40 @@
+skill: home.where-live.SI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- Vivo en …, cerca del centro.
+- 'Tengo un piso pequeño: dos habitaciones, cocina y baño.'
+- ¿Y tú dónde vives?
+- Mi ciudad es grande y bonita.
+enablers:
+  required:
+  - id: es.gram.verb.present-regular
+    use: productive
+  - id: es.gram.prep.basic
+    use: productive
+  - id: es.gram.adj.agreement
+    use: productive
+  - id: es.gram.noun.plural
+    use: productive
+  - id: es.lex.home
+    use: productive
+  - id: es.gram.verb.hay-estar
+    use: productive
+  - id: es.gram.verb.ser-estar
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: vivir en; cerca de + el = del; adjective agreement; hay + noun.
+version: 1
+status: draft

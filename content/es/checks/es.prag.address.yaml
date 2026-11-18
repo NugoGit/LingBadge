@@ -1,0 +1,159 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.prag.address
+lang: es
+facets:
+- id: tu-usted
+  band: core
+  format: choice
+  options: [tú, usted]
+  rule: {de: 'tú mit Familie, Freunden, Kindern und meist mit Gleichaltrigen; usted mit Fremden im Service, Älteren, im Amt', en: 'tú with family, friends, children and usually people your age; usted with strangers in service, older people, officials'}
+  instruction: {de: 'tú oder usted?', en: 'tú or usted?'}
+- id: verb-form
+  band: variant
+  format: choice
+  rule: {de: 'Das Verb folgt der Anrede: tú puedes, usted puede; tú tienes, usted tiene', en: 'The verb follows the form of address: tú puedes, usted puede; tú tienes, usted tiene'}
+  instruction: {de: 'Welche Form passt zur Situation?', en: 'Which form fits the situation?'}
+- id: imperative
+  band: exception
+  format: choice
+  rule: {de: 'Feste Aufforderungen haben zwei Formen: perdona / perdone, oye / oiga, pasa / pase', en: 'Fixed requests have two forms: perdona / perdone, oye / oiga, pasa / pase'}
+  instruction: {de: 'Welche Form passt zur Situation?', en: 'Which form fits the situation?'}
+- id: senor
+  band: contrast
+  format: choice
+  options: [señor, señora, don, doña]
+  rule: {de: señor / señora + Nachname (señora García); don / doña + Vorname (doña Carmen), en: señor / señora + surname (señora García); don / doña + first name (doña Carmen)}
+  instruction: {de: 'Welche Anrede passt?', en: 'Which title fits?'}
+items:
+- id: d01
+  facet: tu-usted
+  stem: Perdone, ¿___ sabe dónde está la estación?
+  context: {de: Sie fragen eine ältere Person auf der Straße., en: You ask an older person in the street.}
+  answer: [usted]
+- id: d02
+  facet: tu-usted
+  stem: Mamá, ¿___ vienes a la fiesta?
+  context: {de: Sie fragen Ihre Mutter., en: You ask your mother.}
+  answer: [tú]
+- id: d03
+  facet: tu-usted
+  stem: Doctor, ¿___ trabaja los sábados?
+  context: {de: Sie sprechen mit Ihrem Arzt., en: You talk to your doctor.}
+  answer: [usted]
+- id: d04
+  facet: tu-usted
+  stem: Oye, ¿___ quieres un café?
+  context: {de: 'Sie fragen eine Kollegin, mit der Sie per du sind.', en: You ask a colleague you're on first-name terms with.}
+  answer: [tú]
+- id: d05
+  facet: tu-usted
+  stem: Señor, ¿___ es el director?
+  context: {de: Sie sprechen einen Herrn im Büro an., en: You address a gentleman in an office.}
+  answer: [usted]
+- id: d06
+  facet: tu-usted
+  stem: ¿Cómo te llamas ___?
+  context: {de: Sie fragen ein Kind., en: You ask a child.}
+  options: [tú, usted]
+  answer: [tú]
+- id: d07
+  facet: tu-usted
+  stem: Disculpe, ¿___ es la recepcionista?
+  context: {de: Sie kommen ins Hotel., en: You arrive at the hotel.}
+  answer: [usted]
+- id: d08
+  facet: tu-usted
+  stem: Pablo, ¿___ tienes hermanos?
+  context: {de: Sie lernen einen jungen Mann im Sprachkurs kennen., en: You meet a young man in your language class.}
+  answer: [tú]
+- id: d09
+  facet: verb-form
+  stem: Señora, ¿me ___ ayudar?
+  options: [puedes, puede]
+  context: {de: Sie sprechen eine Verkäuferin an., en: You speak to a shop assistant.}
+  answer: [puede]
+- id: d10
+  facet: verb-form
+  stem: Luis, ¿___ hambre?
+  options: [tienes, tiene]
+  context: {de: Sie fragen Ihren Freund., en: You ask your friend.}
+  answer: [tienes]
+- id: d11
+  facet: verb-form
+  stem: ¿Qué ___ tomar, señor?
+  options: [quieres, quiere]
+  context: {de: Der Kellner fragt einen Gast., en: The waiter asks a guest.}
+  answer: [quiere]
+- id: d12
+  facet: verb-form
+  stem: Abuela, ¿cómo ___?
+  options: [estás, está]
+  context: {de: Sie rufen Ihre Oma an; in Ihrer Familie duzt man sich., en: You call your grandma; your family uses tú.}
+  answer: [estás]
+- id: d13
+  facet: verb-form
+  stem: ¿De dónde ___ usted?
+  options: [eres, es]
+  context: {de: Ein Grenzbeamter fragt., en: A border officer asks.}
+  answer: [es]
+- id: d14
+  facet: verb-form
+  stem: Ana, ¿dónde ___?
+  options: [vives, vive]
+  context: {de: Sie fragen eine neue Freundin., en: You ask a new friend.}
+  answer: [vives]
+- id: d15
+  facet: imperative
+  stem: ___, ¿dónde está el metro?
+  options: [Perdona, Perdone]
+  context: {de: Sie fragen einen fremden Herrn., en: 'You ask a stranger, a gentleman.'}
+  answer: [Perdone]
+- id: d16
+  facet: imperative
+  stem: ___, Marta, ¿vienes?
+  options: [Oye, Oiga]
+  context: {de: Sie rufen Ihre Freundin., en: You call your friend.}
+  answer: [Oye]
+- id: d17
+  facet: imperative
+  stem: ___, por favor, señora García.
+  options: [Pasa, Pase]
+  context: {de: Sie bitten eine Kundin herein., en: You ask a client to come in.}
+  answer: [Pase]
+- id: d18
+  facet: imperative
+  stem: ¡___, la cuenta, por favor!
+  options: [Oye, Oiga]
+  context: {de: Sie rufen den Kellner., en: You call the waiter.}
+  answer: [Oiga]
+- id: d19
+  facet: imperative
+  stem: ___, no te he visto.
+  options: [Perdona, Perdone]
+  context: {de: Sie stoßen einen Freund an., en: You bump into a friend.}
+  answer: [Perdona]
+- id: d20
+  facet: senor
+  stem: Buenos días, ___ García.
+  context: {de: 'Ihr Vermieter, Herr García.', en: 'Your landlord, Mr García.'}
+  answer: [señor]
+- id: d21
+  facet: senor
+  stem: Buenas tardes, ___ López.
+  context: {de: 'Ihre Lehrerin, Frau López.', en: 'Your teacher, Mrs López.'}
+  answer: [señora]
+- id: d22
+  facet: senor
+  stem: ¿Cómo está, ___ Carmen?
+  context: {de: Ihre ältere Nachbarin Carmen; Sie verwenden den Vornamen respektvoll., en: Your older neighbour Carmen; you use her first name respectfully.}
+  answer: [doña]
+- id: d23
+  facet: senor
+  stem: Muchas gracias, ___ Antonio.
+  context: {de: Der ältere Hausmeister Antonio; Sie verwenden den Vornamen respektvoll., en: The older caretaker Antonio; you use his first name respectfully.}
+  answer: [don]
+- id: d24
+  facet: senor
+  stem: Perdone, ___ Martínez, ¿tiene un momento?
+  context: {de: 'Ihr Chef, Herr Martínez.', en: 'Your boss, Mr Martínez.'}
+  answer: [señor]

@@ -1,6 +1,6 @@
 # Placement catalogues
 
-The placement test (*Einstufung*) shows where to start testing. It is built from fixed, hand-written items in `content/<lang>/placement/<skill-id>.yaml` and graded by key, so it works without an AI provider and gives the same result for the same answers. Ukrainian has a catalogue for all 52 A1 skills (478 items).
+The placement test (*Einstufung*) shows where to start testing. It is built from fixed, hand-written items in `content/<lang>/placement/<skill-id>.yaml` and graded by key, so it works without an AI provider and gives the same result for the same answers. Ukrainian and Spanish each have a catalogue for all 52 A1 skills (478 items each).
 
 ## Shape
 
@@ -30,6 +30,18 @@ items:
   options: ["Карткою, будь ласка.", "Рахунок, будь ласка.", "Меню, будь ласка.", "Без цукру, будь ласка."]
   answer: ["Карткою, будь ласка."]
 ```
+
+## Instruction language
+
+The app runs in German or English, so everything the learner reads in the instruction language is given in both: `prompt` and facet `label` as `{de: …, en: …}`, a `cue` that is a meaning rather than a target-language form likewise. Options in the instruction language (comprehension questions) are given per language with the answer in the same shape:
+
+```yaml
+  text: SALIDA
+  options: {de: [Ausgang, Eingang, Kasse], en: [Exit, Entrance, Cash desk]}
+  answer:  {de: [Ausgang], en: [Exit]}
+```
+
+Target-language options stay a plain list. The validator warns about prompts or labels that lack one of the two languages.
 
 ## Items by mode
 

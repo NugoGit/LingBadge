@@ -1,0 +1,12 @@
+id: es.gram.syntax.conjunctions
+lang: es
+kind: grammar
+title: y (e), o (u), pero, porque
+cefr: A1
+sources:
+- pcic.A1.gram.conjunctions
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

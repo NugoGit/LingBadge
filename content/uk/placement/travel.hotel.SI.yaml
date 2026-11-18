@@ -3,33 +3,49 @@ lang: uk
 reviewed_by: []
 facets:
 - id: checkin
-  label: Einchecken
+  label:
+    de: Einchecken
+    en: Checking in
 - id: ask
-  label: Frühstück, WLAN
+  label:
+    de: Frühstück, WLAN
+    en: Breakfast, Wi-Fi
 - id: request
-  label: Weitere Bitten
+  label:
+    de: Weitere Bitten
+    en: Other requests
 items:
 - id: checkin-1
   facet: checkin
   format: type
-  prompt: 'Sagen Sie: Ich habe eine Reservierung auf den Namen Huber.'
+  prompt:
+    de: 'Sagen Sie: Ich habe eine Reservierung auf den Namen Huber.'
+    en: 'Say: I have a booking in the name of Huber.'
   stem: У мене ___ на прізвище Губер.
-  cue: Reservierung
+  cue:
+    de: Reservierung
+    en: booking
   answer:
   - бронювання
   - бронь
 - id: checkin-2
   facet: checkin
   format: type
-  prompt: 'Sagen Sie: Hier ist mein Pass.'
+  prompt:
+    de: 'Sagen Sie: Hier ist mein Pass.'
+    en: 'Say: Here is my passport.'
   stem: Ось мій ___.
-  cue: Pass
+  cue:
+    de: Pass
+    en: passport
   answer:
   - паспорт
 - id: checkin-3
   facet: checkin
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Добрий вечір! Чим можу допомогти?
   answer:
   - У мене бронювання на прізвище Шмідт.
@@ -41,14 +57,18 @@ items:
 - id: ask-1
   facet: ask
   format: type
-  prompt: 'Fragen Sie: Um wie viel Uhr ist Frühstück?'
+  prompt:
+    de: 'Fragen Sie: Um wie viel Uhr ist Frühstück?'
+    en: 'Ask: What time is breakfast?'
   stem: О ___ сніданок?
   answer:
   - котрій
 - id: ask-2
   facet: ask
   format: type
-  prompt: Fragen Sie nach dem WLAN-Passwort.
+  prompt:
+    de: Fragen Sie nach dem WLAN-Passwort.
+    en: Ask for the Wi-Fi password.
   stem: Який пароль від ___?
   cue: вайфай
   answer:
@@ -59,19 +79,32 @@ items:
 - id: ask-3
   facet: ask
   format: choice
-  prompt: Wann gibt es Frühstück?
+  prompt:
+    de: Wann gibt es Frühstück?
+    en: When is breakfast?
   context: Сніданок з сьомої до десятої.
   answer:
-  - 7–10 Uhr
+    de:
+    - 7–10 Uhr
+    en:
+    - 7:00–10:00
   options:
-  - 7–10 Uhr
-  - 7–12 Uhr
-  - 10–12 Uhr
-  - Ab 10 Uhr
+    de:
+    - 7–10 Uhr
+    - 7–12 Uhr
+    - 10–12 Uhr
+    - Ab 10 Uhr
+    en:
+    - 7:00–10:00
+    - 7:00–12:00
+    - 10:00–12:00
+    - From 10:00
 - id: request-1
   facet: request
   format: type
-  prompt: Fragen Sie, ob Sie den Koffer hier lassen können.
+  prompt:
+    de: Fragen Sie, ob Sie den Koffer hier lassen können.
+    en: Ask whether you can leave your suitcase here.
   stem: Можна ___ валізу?
   answer:
   - залишити
@@ -79,7 +112,9 @@ items:
 - id: request-2
   facet: request
   format: choice
-  prompt: Fragen Sie, bis wann Sie auschecken müssen.
+  prompt:
+    de: Fragen Sie, bis wann Sie auschecken müssen.
+    en: Ask by when you have to check out.
   answer:
   - До котрої треба звільнити номер?
   options:
@@ -90,7 +125,9 @@ items:
 - id: request-3
   facet: request
   format: type
-  prompt: 'Sagen Sie: Im Zimmer ist kein Handtuch.'
+  prompt:
+    de: 'Sagen Sie: Im Zimmer ist kein Handtuch.'
+    en: 'Say: There is no towel in the room.'
   stem: У номері немає ___.
   cue: рушник
   answer:

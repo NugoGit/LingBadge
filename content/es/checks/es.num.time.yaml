@@ -1,0 +1,153 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.num.time
+lang: es
+facets:
+- id: hours
+  band: core
+  format: type
+  rule: {de: Son las + Zahl ab zwei (son las tres); Es la una, en: Son las + number from two (son las tres); Es la una}
+  instruction: {de: Schreibe die Zahl als Wort., en: Write the number as a word.}
+- id: minutes
+  band: variant
+  format: choice
+  options: [y cuarto, y media, menos cuarto]
+  rule: {de: 'y cuarto (:15), y media (:30), menos cuarto (:45 vor der nächsten Stunde)', en: 'y cuarto (:15), y media (:30), menos cuarto (:45 before the next hour)'}
+  instruction: {de: 'Welche Angabe passt zur Uhrzeit?', en: 'Which phrase matches the time?'}
+- id: la-una
+  band: exception
+  format: choice
+  options: [Es la, Son las]
+  rule: {de: '1 Uhr ist Singular: es la una (y media); sonst Plural: son las dos', en: '1 o''clock is singular: es la una (y media); otherwise plural: son las dos'}
+  instruction: {de: 'Es la oder Son las?', en: 'Es la or Son las?'}
+- id: a-las
+  band: contrast
+  format: choice
+  options: [Son las, A las]
+  rule: {de: '¿Qué hora es? → Son las … (jetzt); ¿A qué hora …? → A las … (wann)', en: '¿Qué hora es? → Son las … (now); ¿A qué hora …? → A las … (when)'}
+  instruction: {de: 'Son las oder A las?', en: 'Son las or A las?'}
+items:
+- id: t01
+  facet: hours
+  stem: Son las ___.
+  cue: '3:00'
+  answer: [tres]
+- id: t02
+  facet: hours
+  stem: Son las ___.
+  cue: '7:00'
+  answer: [siete]
+- id: t03
+  facet: hours
+  stem: Son las ___ en punto.
+  cue: '10:00'
+  answer: [diez]
+- id: t04
+  facet: hours
+  stem: Son las ___.
+  cue: '12:00'
+  answer: [doce]
+- id: t05
+  facet: hours
+  stem: El tren sale a las ___.
+  cue: '9:00'
+  answer: [nueve]
+- id: t06
+  facet: hours
+  stem: Son las ___ y diez.
+  cue: '5:10'
+  answer: [cinco]
+- id: t07
+  facet: hours
+  stem: Es la ___.
+  cue: '1:00'
+  answer: [una]
+- id: t08
+  facet: hours
+  stem: La clase empieza a las ___.
+  cue: '4:00'
+  answer: [cuatro]
+- id: t09
+  facet: hours
+  stem: Son las ___ y veinte.
+  cue: '8:20'
+  answer: [ocho]
+- id: t10
+  facet: minutes
+  stem: Son las dos ___.
+  context: {de: '2:30', en: '2:30'}
+  answer: [y media]
+- id: t11
+  facet: minutes
+  stem: Son las cuatro ___.
+  context: {de: '4:15', en: '4:15'}
+  answer: [y cuarto]
+- id: t12
+  facet: minutes
+  stem: Son las seis ___.
+  context: {de: '5:45', en: '5:45'}
+  answer: [menos cuarto]
+- id: t13
+  facet: minutes
+  stem: Quedamos a las ocho ___.
+  context: {de: '8:30', en: '8:30'}
+  answer: [y media]
+- id: t14
+  facet: minutes
+  stem: Son las once ___.
+  context: {de: '10:45', en: '10:45'}
+  answer: [menos cuarto]
+- id: t15
+  facet: minutes
+  stem: El museo abre a las diez ___.
+  context: {de: '10:15', en: '10:15'}
+  answer: [y cuarto]
+- id: t16
+  facet: minutes
+  stem: Son las tres ___.
+  context: {de: '2:45', en: '2:45'}
+  answer: [menos cuarto]
+- id: t17
+  facet: la-una
+  stem: ___ una y media.
+  context: {de: '1:30', en: '1:30'}
+  answer: [Es la]
+- id: t18
+  facet: la-una
+  stem: ___ dos.
+  context: {de: '2:00', en: '2:00'}
+  answer: [Son las]
+- id: t19
+  facet: la-una
+  stem: ___ una en punto.
+  context: {de: '1:00', en: '1:00'}
+  answer: [Es la]
+- id: t20
+  facet: la-una
+  stem: ___ doce y cuarto.
+  context: {de: '12:15', en: '12:15'}
+  answer: [Son las]
+- id: t21
+  facet: la-una
+  stem: ___ una menos cuarto.
+  context: {de: '12:45', en: '12:45'}
+  answer: [Es la]
+- id: t22
+  facet: a-las
+  stem: — ¿Qué hora es? — ___ cinco.
+  answer: [Son las]
+- id: t23
+  facet: a-las
+  stem: — ¿A qué hora sale el autobús? — ___ cinco.
+  answer: [A las]
+- id: t24
+  facet: a-las
+  stem: — ¿A qué hora empieza la película? — ___ nueve.
+  answer: [A las]
+- id: t25
+  facet: a-las
+  stem: — Perdone, ¿qué hora es? — ___ diez y media.
+  answer: [Son las]
+- id: t26
+  facet: a-las
+  stem: — ¿A qué hora comes? — ___ dos.
+  answer: [A las]

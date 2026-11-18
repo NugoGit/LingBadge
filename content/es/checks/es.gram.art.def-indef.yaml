@@ -1,0 +1,151 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.gram.art.def-indef
+lang: es
+facets:
+- id: definite
+  band: core
+  format: choice
+  options: [el, la, los, las]
+  rule: {de: 'Bestimmter Artikel nach Genus und Zahl: el libro, la mesa, los libros, las mesas', en: 'Definite article by gender and number: el libro, la mesa, los libros, las mesas'}
+  instruction: {de: 'Welcher Artikel passt?', en: 'Which article fits?'}
+- id: indefinite
+  band: variant
+  format: choice
+  options: [un, una, unos, unas]
+  rule: {de: 'Unbestimmter Artikel: un coche, una casa, unos amigos, unas amigas', en: 'Indefinite article: un coche, una casa, unos amigos, unas amigas'}
+  instruction: {de: 'Welcher Artikel passt?', en: 'Which article fits?'}
+- id: contraction
+  band: exception
+  format: type
+  rule: {de: 'a + el = al, de + el = del (aber: a la, de la); el agua, el aula: feminin, aber el', en: 'a + el = al, de + el = del (but: a la, de la); el agua, el aula: feminine, but el'}
+  instruction: {de: Setze die richtige Form ein., en: Put in the right form.}
+- id: def-vs-indef
+  band: contrast
+  format: choice
+  rule: {de: 'Neues, Unbekanntes oder „ein beliebiges“: un/una (¿Hay una farmacia?); Bekanntes oder Eindeutiges: el/la (¿Dónde está la estación?)', en: 'New, unknown or ''any'': un/una (¿Hay una farmacia?); known or unique: el/la (¿Dónde está la estación?)'}
+  instruction: {de: 'Bestimmt oder unbestimmt?', en: 'Definite or indefinite?'}
+items:
+- id: a01
+  facet: definite
+  stem: ___ niños juegan en el parque.
+  answer: [los]
+- id: a02
+  facet: definite
+  stem: ___ farmacia está cerrada.
+  answer: [la]
+- id: a03
+  facet: definite
+  stem: ¿Dónde están ___ llaves?
+  answer: [las]
+- id: a04
+  facet: definite
+  stem: ___ autobús llega tarde.
+  answer: [el]
+- id: a05
+  facet: definite
+  stem: Me gustan ___ películas españolas.
+  answer: [las]
+- id: a06
+  facet: definite
+  stem: ___ tomates son muy caros.
+  answer: [los]
+- id: a07
+  facet: definite
+  stem: ¿Cuánto cuesta ___ camisa?
+  answer: [la]
+- id: a08
+  facet: definite
+  stem: ___ restaurante está en la plaza.
+  answer: [el]
+- id: a09
+  facet: definite
+  stem: ___ ciudades del norte son verdes.
+  answer: [las]
+- id: a10
+  facet: indefinite
+  stem: Tengo ___ perro.
+  answer: [un]
+- id: a11
+  facet: indefinite
+  stem: Quiero ___ cerveza, por favor.
+  answer: [una]
+- id: a12
+  facet: indefinite
+  stem: Tengo ___ amigos en Madrid.
+  answer: [unos]
+- id: a13
+  facet: indefinite
+  stem: Compro ___ manzanas.
+  answer: [unas]
+- id: a14
+  facet: indefinite
+  stem: Vivo en ___ piso pequeño.
+  answer: [un]
+- id: a15
+  facet: indefinite
+  stem: Es ___ ciudad muy bonita.
+  answer: [una]
+- id: a16
+  facet: indefinite
+  stem: Hay ___ problema con la reserva.
+  answer: [un]
+- id: a17
+  facet: contraction
+  stem: Voy ___ cine.
+  cue: a + el
+  answer: [al]
+- id: a18
+  facet: contraction
+  stem: Vengo ___ trabajo.
+  cue: de + el
+  answer: [del]
+- id: a19
+  facet: contraction
+  stem: Vamos ___ playa.
+  cue: a + la
+  answer: [a la]
+- id: a20
+  facet: contraction
+  stem: La casa ___ profesor es grande.
+  cue: de + el
+  answer: [del]
+- id: a21
+  facet: contraction
+  stem: Llego ___ aeropuerto a las ocho.
+  cue: a + el
+  answer: [al]
+- id: a22
+  facet: contraction
+  stem: ___ agua está fría.
+  cue: el / la
+  answer: [el]
+- id: a23
+  facet: def-vs-indef
+  stem: Perdone, ¿hay ___ farmacia por aquí?
+  options: [una, la]
+  answer: [una]
+- id: a24
+  facet: def-vs-indef
+  stem: ¿Dónde está ___ estación de tren?
+  options: [una, la]
+  answer: [la]
+- id: a25
+  facet: def-vs-indef
+  stem: Tengo ___ coche nuevo.
+  options: [un, el]
+  answer: [un]
+- id: a26
+  facet: def-vs-indef
+  stem: ___ sol sale a las siete.
+  options: [un, el]
+  answer: [el]
+- id: a27
+  facet: def-vs-indef
+  stem: Busco ___ hotel barato.
+  options: [un, el]
+  answer: [un]
+- id: a28
+  facet: def-vs-indef
+  stem: ¿Me das ___ sal, por favor?
+  options: [una, la]
+  answer: [la]

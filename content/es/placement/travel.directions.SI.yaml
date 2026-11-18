@@ -1,0 +1,149 @@
+skill: travel.directions.SI
+lang: es
+reviewed_by: []
+facets:
+- id: ask
+  label:
+    de: Fragen, wo etwas ist
+    en: Ask where something is
+- id: how
+  label:
+    de: Nach dem Weg fragen
+    en: Ask the way
+- id: follow
+  label:
+    de: Wegbeschreibung verstehen
+    en: Understand directions
+items:
+- id: ask-1
+  facet: ask
+  format: type
+  prompt:
+    de: 'Fragen Sie: Entschuldigung, wo ist hier eine Apotheke?'
+    en: 'Ask: Excuse me, where is a pharmacy around here?'
+  stem: Perdone, ¿hay una ___ por aquí?
+  cue:
+    de: Apotheke
+    en: pharmacy
+  answer:
+  - farmacia
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt:
+    de: Fragen Sie nach der Metro.
+    en: Ask for the metro.
+  answer:
+  - ¿Dónde está el metro?
+  options:
+  - ¿Dónde está el metro?
+  - ¿Adónde está el metro?
+  - ¿De dónde metro?
+  - ¿Cuánto metro?
+- id: ask-3
+  facet: ask
+  format: type
+  prompt:
+    de: 'Fragen Sie: Gibt es hier in der Nähe einen Geldautomaten?'
+    en: 'Ask: Is there a cash machine near here?'
+  stem: ¿___ un cajero por aquí cerca?
+  answer:
+  - Hay
+- id: how-1
+  facet: how
+  format: type
+  prompt:
+    de: 'Fragen Sie: Wie komme ich zum Bahnhof?'
+    en: 'Ask: How do I get to the station?'
+  stem: ¿Cómo llego ___ la estación?
+  answer:
+  - a
+- id: how-2
+  facet: how
+  format: type
+  prompt:
+    de: 'Fragen Sie: Wie komme ich zum Museum?'
+    en: 'Ask: How do I get to the museum?'
+  stem: ¿Cómo llego ___ museo?
+  cue: a + el
+  answer:
+  - al
+- id: how-3
+  facet: how
+  format: type
+  prompt:
+    de: 'Fragen Sie: Wie komme ich (mit dem Verkehrsmittel) ins Zentrum?'
+    en: 'Ask: How do I get (by transport) to the centre?'
+  stem: ¿Cómo puedo ir ___ centro?
+  cue: a + el
+  answer:
+  - al
+- id: follow-1
+  facet: follow
+  format: choice
+  prompt:
+    de: Was sollen Sie tun?
+    en: What should you do?
+  context: Siga todo recto y luego gire a la derecha.
+  answer:
+    de:
+    - Geradeaus, dann rechts
+    en:
+    - Straight on, then right
+  options:
+    de:
+    - Geradeaus, dann rechts
+    - Geradeaus, dann links
+    - Rechts, dann geradeaus
+    - Zurück, dann rechts
+    en:
+    - Straight on, then right
+    - Straight on, then left
+    - Right, then straight on
+    - Back, then right
+- id: follow-2
+  facet: follow
+  format: choice
+  prompt:
+    de: Wie weit ist es?
+    en: How far is it?
+  context: Está cerca, a cinco minutos a pie.
+  answer:
+    de:
+    - Fünf Minuten zu Fuß
+    en:
+    - Five minutes on foot
+  options:
+    de:
+    - Fünf Minuten zu Fuß
+    - Fünf Minuten mit dem Bus
+    - Fünf Kilometer
+    - Es ist weit
+    en:
+    - Five minutes on foot
+    - Five minutes by bus
+    - Five kilometres
+    - It's far
+- id: follow-3
+  facet: follow
+  format: choice
+  prompt:
+    de: Was wird gesagt?
+    en: What is said?
+  context: Está lejos. Mejor coja el metro.
+  answer:
+    de:
+    - Es ist weit, nehmen Sie die Metro
+    en:
+    - It's far, take the metro
+  options:
+    de:
+    - Es ist weit, nehmen Sie die Metro
+    - Es ist nah, gehen Sie zu Fuß
+    - Die Metro ist weit weg
+    - Es gibt keine Metro
+    en:
+    - It's far, take the metro
+    - It's close, walk
+    - The metro is far away
+    - There is no metro

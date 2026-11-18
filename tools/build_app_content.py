@@ -14,20 +14,26 @@ sys.path.insert(0, str(ROOT / "src"))
 from lingbadge.content import load  # noqa: E402
 
 
+def _i18n(path):
+    return yaml.safe_load(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
 def build() -> dict:
     c = load(ROOT / "content")
     if c.errors:
         raise SystemExit("content errors:\n" + "\n".join(c.errors))
     theme_order = [t.id for t in c.themes.values()]
     app_cfg = yaml.safe_load((ROOT / "config/app.yaml").read_text(encoding="utf-8"))
+    de_core = _i18n(ROOT / "content/core/i18n/de.yaml")
     langs = {}
     for code, lang in c.languages.items():
+        de_lang = _i18n(ROOT / f"content/{code}/i18n/de.yaml").get("enablers", {})
         if not lang.realizations:
             continue
         meta = dict(lang.meta) or {"code": code, "name": {"de": code, "en": code}, "tts": code, "dir": "ltr", "keyboard": []}
         langs[code] = {
             "meta": meta,
-            "enablers": {e.id: dict(id=e.id, kind=e.kind, title=e.title, cefr=e.cefr, requires=e.requires, channel=e.check.channel,
+            "enablers": {e.id: dict(id=e.id, kind=e.kind, title=e.title, title_de=de_lang.get(e.id), cefr=e.cefr, requires=e.requires, channel=e.check.channel,
                                     items=e.check.items, threshold=e.check.threshold, words=e.words) for e in lang.enablers.values()},
             "realizations": {k: dict(registers=r.registers, variety=r.variety, exponents=r.exponents, cefr=r.cefr, size=r.size,
                                      enablers=[dict(id=u.id, use=u.use, role="required") for u in r.enablers.required]
@@ -41,9 +47,11 @@ def build() -> dict:
         "version": "6",
         "repo_url": app_cfg.get("repo_url"),
         "default_lang": app_cfg.get("default_lang", "uk"),
-        "themes": [dict(id=t.id, title=t.title, situations=[dict(id=s.id, title=s.title) for s in t.situations])
+        "themes": [dict(id=t.id, title=t.title, title_de=de_core.get("themes", {}).get(t.id),
+                        situations=[dict(id=s.id, title=s.title, title_de=de_core.get("situations", {}).get(s.id)) for s in t.situations])
                    for t in c.themes.values() if t.situations],
-        "skills": [dict(id=s.id, task=s.task, theme=s.theme, situation=s.situation, title=s.title, can_do=s.can_do, mode=s.mode,
+        "skills": [dict(id=s.id, task=s.task, theme=s.theme, situation=s.situation, title=s.title, can_do=s.can_do,
+                        title_de=de_core.get("skills", {}).get(s.id, {}).get("title"), can_do_de=de_core.get("skills", {}).get(s.id, {}).get("can_do"), mode=s.mode,
                         cefr=s.cefr, size=s.size, prerequisites=s.prerequisites, rubric=s.rubric, threshold=s.threshold, flags=s.flags)
                    for s in sorted(c.skills.values(), key=lambda s: (theme_order.index(s.theme), s.id))],
         "langs": langs,

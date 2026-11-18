@@ -3,23 +3,33 @@ lang: uk
 reviewed_by: []
 facets:
 - id: open
-  label: Anrede und Begrüßung
+  label:
+    de: Anrede und Begrüßung
+    en: Address and greeting
 - id: me
-  label: Über sich schreiben
+  label:
+    de: Über sich schreiben
+    en: Writing about yourself
 - id: ask
-  label: Zurückfragen
+  label:
+    de: Zurückfragen
+    en: Asking back
 items:
 - id: open-1
   facet: open
   format: type
-  prompt: 'Beginnen Sie die Nachricht locker: Hallo!'
+  prompt:
+    de: 'Beginnen Sie die Nachricht locker: Hallo!'
+    en: 'Start the message casually: Hi!'
   stem: ___! Мене звати Лукас.
   answer:
   - Привіт
 - id: open-2
   facet: open
   format: choice
-  prompt: Sie schreiben einer Lehrerin, die Sie nicht kennen. Wie beginnen Sie?
+  prompt:
+    de: Sie schreiben einer Lehrerin, die Sie nicht kennen. Wie beginnen Sie?
+    en: You're writing to a teacher you don't know. How do you start?
   answer:
   - Добрий день, пані Олено!
   options:
@@ -30,7 +40,9 @@ items:
 - id: open-3
   facet: open
   format: choice
-  prompt: 'Ein Mann schließt: Freue mich, dich kennenzulernen!'
+  prompt:
+    de: 'Ein Mann schließt: Freue mich, dich kennenzulernen!'
+    en: 'A man closes with: Looking forward to meeting you!'
   answer:
   - Буду радий познайомитися!
   options:
@@ -40,7 +52,9 @@ items:
 - id: me-1
   facet: me
   format: type
-  prompt: 'Schreiben Sie: Ich lerne Ukrainisch.'
+  prompt:
+    de: 'Schreiben Sie: Ich lerne Ukrainisch.'
+    en: 'Write: I''m learning Ukrainian.'
   stem: Я вивчаю ___ мову.
   cue: український
   answer:
@@ -48,7 +62,9 @@ items:
 - id: me-2
   facet: me
   format: type
-  prompt: 'Schreiben Sie: Ich arbeite in einem Krankenhaus.'
+  prompt:
+    de: 'Schreiben Sie: Ich arbeite in einem Krankenhaus.'
+    en: 'Write: I work in a hospital.'
   stem: Я працюю в ___.
   cue: лікарня
   answer:
@@ -56,7 +72,9 @@ items:
 - id: me-3
   facet: me
   format: type
-  prompt: 'Schreiben Sie: Ich bin 30 Jahre alt.'
+  prompt:
+    de: 'Schreiben Sie: Ich bin 30 Jahre alt.'
+    en: 'Write: I''m 30 years old.'
   stem: Мені тридцять ___.
   cue: рік
   answer:
@@ -64,15 +82,21 @@ items:
 - id: ask-1
   facet: ask
   format: type
-  prompt: 'Fragen Sie: Und woher bist du?'
+  prompt:
+    de: 'Fragen Sie: Und woher bist du?'
+    en: 'Ask: And where are you from?'
   stem: А ти ___?
-  cue: woher
+  cue:
+    de: woher
+    en: where from
   answer:
   - звідки
 - id: ask-2
   facet: ask
   format: choice
-  prompt: Fragen Sie, was die Person beruflich macht.
+  prompt:
+    de: Fragen Sie, was die Person beruflich macht.
+    en: Ask what the person does for a living.
   answer:
   - А ким ти працюєш?
   options:
@@ -83,7 +107,9 @@ items:
 - id: ask-3
   facet: ask
   format: type
-  prompt: 'Fragen Sie: Sprichst du Deutsch?'
+  prompt:
+    de: 'Fragen Sie: Sprichst du Deutsch?'
+    en: 'Ask: Do you speak German?'
   stem: А ти ___ німецькою?
   cue: розмовляти
   answer:

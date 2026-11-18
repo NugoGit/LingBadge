@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: name
-  label: Name und Buchstabieren
+  label:
+    de: Name und Buchstabieren
+    en: Name and spelling
 - id: address
-  label: Adresse und Telefon
+  label:
+    de: Adresse und Telefon
+    en: Address and phone
 - id: origin
-  label: Herkunft und Geburtsdatum
+  label:
+    de: Herkunft und Geburtsdatum
+    en: Origin and date of birth
 items:
 - id: name-1
   facet: name
   format: choice
-  prompt: 'Antworten Sie (Nachname: Müller).'
+  prompt:
+    de: 'Antworten Sie (Nachname: Müller).'
+    en: 'Answer (surname: Müller).'
   context: Ваше прізвище?
   answer:
   - Моє прізвище — Мюллер.
@@ -24,7 +32,9 @@ items:
 - id: name-2
   facet: name
   format: type
-  prompt: 'Ergänzen Sie: Man schreibt es so …'
+  prompt:
+    de: 'Ergänzen Sie: Man schreibt es so …'
+    en: 'Complete: It is spelt like this …'
   context: Як пишеться ваше ім'я?
   stem: '___ так: Н-У-Г-О.'
   cue: писатися
@@ -33,7 +43,9 @@ items:
 - id: name-3
   facet: name
   format: choice
-  prompt: Wie heißt der Buchstabe „Ш“ beim Buchstabieren?
+  prompt:
+    de: Wie heißt der Buchstabe „Ш“ beim Buchstabieren?
+    en: What is the letter “Ш” called when spelling?
   answer:
   - ша
   options:
@@ -44,15 +56,21 @@ items:
 - id: address-1
   facet: address
   format: type
-  prompt: 'Ergänzen Sie: Meine Adresse …'
+  prompt:
+    de: 'Ergänzen Sie: Meine Adresse …'
+    en: 'Complete: My address …'
   stem: 'Моя ___: вулиця Лесі Українки, будинок 5, квартира 12.'
-  cue: Adresse
+  cue:
+    de: Adresse
+    en: address
   answer:
   - адреса
 - id: address-2
   facet: address
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Ваш номер телефону?
   answer:
   - Мій номер — 097 123 45 67.
@@ -64,15 +82,21 @@ items:
 - id: address-3
   facet: address
   format: type
-  prompt: 'Ergänzen Sie: Frankostraße, Haus sieben, Wohnung zwei.'
+  prompt:
+    de: 'Ergänzen Sie: Frankostraße, Haus sieben, Wohnung zwei.'
+    en: 'Complete: Franko Street, house seven, flat two.'
   stem: Вулиця Франка, ___ сім, квартира два.
-  cue: Haus
+  cue:
+    de: Haus
+    en: house
   answer:
   - будинок
 - id: origin-1
   facet: origin
   format: type
-  prompt: 'Ein Mann antwortet: Ich bin am 20. März geboren.'
+  prompt:
+    de: 'Ein Mann antwortet: Ich bin am 20. März geboren.'
+    en: 'A man answers: I was born on 20 March.'
   context: Коли ви народилися?
   stem: Я ___ двадцятого березня.
   cue: народитися
@@ -81,7 +105,9 @@ items:
 - id: origin-2
   facet: origin
   format: type
-  prompt: 'Antworten Sie: Ich bin aus Österreich.'
+  prompt:
+    de: 'Antworten Sie: Ich bin aus Österreich.'
+    en: 'Answer: I''m from Austria.'
   context: Звідки ви?
   stem: Я з ___.
   cue: Австрія
@@ -90,7 +116,9 @@ items:
 - id: origin-3
   facet: origin
   format: choice
-  prompt: 'Eine Frau sagt: Ich bin am 5. Juli geboren.'
+  prompt:
+    de: 'Eine Frau sagt: Ich bin am 5. Juli geboren.'
+    en: 'A woman says: I was born on 5 July.'
   answer:
   - Я народилася п'ятого липня.
   options:

@@ -1,0 +1,14 @@
+id: es.prag.address
+lang: es
+kind: pragmatics
+title: tú vs usted; señor / señora + surname
+cefr: A1
+requires:
+- es.gram.pron.subject
+sources:
+- pcic.A1.prag.address
+check:
+  template: enabler.pragmatics.v1
+  items: 10
+  threshold: 0.9
+  channel: text

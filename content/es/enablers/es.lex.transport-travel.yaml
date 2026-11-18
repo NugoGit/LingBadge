@@ -1,0 +1,29 @@
+id: es.lex.transport-travel
+lang: es
+kind: lexis
+title: Transport and travel
+cefr: A1
+words:
+- el tren
+- el autobús
+- el metro
+- el taxi
+- el avión
+- el billete
+- ida y vuelta
+- el andén
+- la vía
+- la salida
+- la llegada
+- el retraso
+- el hotel
+- la reserva
+- el pasaporte
+- la maleta
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,28 @@
+skill: travel.postcard.WI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- ¡Hola desde Granada!
+- Esto es muy bonito. Hace buen tiempo.
+- Estamos en un hotel pequeño.
+- Un beso, Marta.
+enablers:
+  required:
+  - id: es.gram.verb.ser-estar
+    use: productive
+  - id: es.lex.weather
+    use: productive
+  - id: es.gram.adj.agreement
+    use: productive
+  - id: es.gram.verb.present-regular
+    use: productive
+  - id: es.gram.verb.past
+    use: formulaic
+  supporting:
+  - id: es.orth.accents-punctuation
+    use: productive
+version: 1
+status: draft

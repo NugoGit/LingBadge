@@ -1,0 +1,31 @@
+skill: relations.voice-message.L
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- Hola, soy Lucía.
+- Quedamos el sábado a las tres delante del teatro.
+- ¡Llámame, por favor!
+enablers:
+  required:
+  - id: es.num.time
+    use: productive
+  - id: es.lex.time-calendar
+    use: productive
+  - id: es.lex.city-places
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Recognition of who, when, where.
+version: 1
+status: draft

@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: not
-  label: Sagen, dass man nicht verstanden hat
+  label:
+    de: Sagen, dass man nicht verstanden hat
+    en: Say that you didn't understand
 - id: repeat
-  label: Um Wiederholung oder langsameres Sprechen bitten
+  label:
+    de: Um Wiederholung oder langsameres Sprechen bitten
+    en: Ask someone to repeat or speak more slowly
 - id: spell
-  label: Nach der Schreibweise fragen
+  label:
+    de: Nach der Schreibweise fragen
+    en: Ask how something is spelt
 items:
 - id: not-1
   facet: not
   format: type
-  prompt: 'Sagen Sie: Entschuldigung, ich habe nicht verstanden.'
+  prompt:
+    de: 'Sagen Sie: Entschuldigung, ich habe nicht verstanden.'
+    en: 'Say: Sorry, I didn''t understand.'
   stem: Вибачте, я не ___.
   cue: зрозуміти (Vergangenheit)
   answer:
@@ -21,7 +29,9 @@ items:
 - id: not-2
   facet: not
   format: choice
-  prompt: Sie haben nichts verstanden. Was sagen Sie?
+  prompt:
+    de: Sie haben nichts verstanden. Was sagen Sie?
+    en: You understood nothing. What do you say?
   context: Вам потрібна довідка з місця проживання.
   answer:
   - Вибачте, я не розумію.
@@ -33,7 +43,9 @@ items:
 - id: not-3
   facet: not
   format: choice
-  prompt: 'Ein Mann sagt: „Ich habe nicht verstanden.“ Welche Form ist richtig?'
+  prompt:
+    de: 'Ein Mann sagt: „Ich habe nicht verstanden.“ Welche Form ist richtig?'
+    en: 'A man says: “I didn''t understand.” Which form is correct?'
   answer:
   - Я не зрозумів.
   options:
@@ -43,7 +55,9 @@ items:
 - id: repeat-1
   facet: repeat
   format: type
-  prompt: Bitten Sie höflich (Sie-Form), es zu wiederholen.
+  prompt:
+    de: Bitten Sie höflich (Sie-Form), es zu wiederholen.
+    en: Ask politely (formal) for it to be repeated.
   stem: ___, будь ласка.
   cue: повторити
   answer:
@@ -51,7 +65,9 @@ items:
 - id: repeat-2
   facet: repeat
   format: type
-  prompt: Bitten Sie, langsamer zu sprechen.
+  prompt:
+    de: Bitten Sie, langsamer zu sprechen.
+    en: Ask someone to speak more slowly.
   stem: Говоріть ___, будь ласка.
   cue: повільно
   answer:
@@ -59,7 +75,9 @@ items:
 - id: repeat-3
   facet: repeat
   format: choice
-  prompt: Ihre Freundin spricht zu schnell. Was sagen Sie?
+  prompt:
+    de: Ihre Freundin spricht zu schnell. Was sagen Sie?
+    en: Your friend (female) speaks too fast. What do you say?
   answer:
   - Говори повільніше, будь ласка.
   options:
@@ -70,14 +88,18 @@ items:
 - id: spell-1
   facet: spell
   format: type
-  prompt: Fragen Sie, wie man das schreibt.
+  prompt:
+    de: Fragen Sie, wie man das schreibt.
+    en: Ask how to write it.
   stem: Як це ___?
   answer:
   - пишеться
 - id: spell-2
   facet: spell
   format: choice
-  prompt: Sie wollen den Namen aufschreiben. Was fragen Sie?
+  prompt:
+    de: Sie wollen den Namen aufschreiben. Was fragen Sie?
+    en: You want to write the name down. What do you ask?
   context: Моє прізвище — Шевчук.
   answer:
   - Як це пишеться?
@@ -89,7 +111,9 @@ items:
 - id: spell-3
   facet: spell
   format: choice
-  prompt: Sie buchstabieren den Namen „Ліна“. Welche Folge ist richtig?
+  prompt:
+    de: Sie buchstabieren den Namen „Ліна“. Welche Folge ist richtig?
+    en: You spell the name “Ліна”. Which sequence is correct?
   answer:
   - ел, і, ен, а
   options:

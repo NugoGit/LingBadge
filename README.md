@@ -4,9 +4,9 @@ Language certification by small, real-life skills instead of whole CEFR levels.
 
 Each skill is something you can actually do, such as ordering at a café, reading a timetable or writing a message to arrange a meeting. You earn a badge for a skill when you pass two independent tests on different days, and the badge is all or nothing. Behind every skill sit *enablers*: the grammar, vocabulary and pragmatics it needs. When a test goes wrong, LingBadge points to the enabler that is most likely missing and offers a short check for it.
 
-The first language pack is **Ukrainian A1** (52 skills, 64 enablers). A 5-skill **Persian** sketch tests whether the universal core really is language-independent.
+Two complete language packs: **Ukrainian A1** and **Spanish A1** (peninsular standard; common Latin American variants are accepted in answers), each with all 52 skills, a placement catalogue and grammar question catalogues. A 5-skill **Persian** sketch tests whether the universal core really is language-independent.
 
-> **Status: early prototype.** The Ukrainian content is a draft that no native speaker has reviewed yet. The user interface is in German. Only A1 exists. Typed role-plays show your level but award no speaking badge.
+> **Status: early prototype.** The Ukrainian and Spanish content is a draft that no native speaker has reviewed yet. The interface and task instructions switch between German and English (DE/EN in the header; the default follows the browser). Only A1 exists. Typed role-plays show your level but award no speaking badge.
 
 ## Try it
 
@@ -23,8 +23,8 @@ What works without an AI provider, and what needs one:
 | Feature | Without AI | With an API key |
 | --- | --- | --- |
 | Skill map, badges | ✓ | ✓ |
-| Placement test from a fixed catalogue | ✓ (all 52 Ukrainian skills) | ✓ |
-| Grammar checks with a question catalogue | ✓ (13 Ukrainian enablers so far) | ✓ |
+| Placement test from a fixed catalogue | ✓ (all 52 skills, Ukrainian and Spanish) | ✓ |
+| Grammar checks with a question catalogue | ✓ (13 Ukrainian and 12 Spanish enablers so far) | ✓ |
 | Grammar checks without a catalogue | – | generated per check |
 | Skill tests (reading, listening, writing, typed role-play) | – | ✓ |
 | Placement for skills without a catalogue (other languages) | – | generated per run |
@@ -36,7 +36,7 @@ To use AI features, open **Einstellungen** (settings) and choose a provider:
 
 Your API key and your results stay in this browser (`localStorage`). Use **Herunterladen** (download) in the settings to back them up or move them to another browser.
 
-Listening tests use your browser's speech voices. Firefox only offers voices installed in the operating system, which often lack Ukrainian; Edge and Chrome have online voices.
+Listening tests use your browser's speech voices. Firefox only offers voices installed in the operating system, which often lack Ukrainian or Spanish; Edge and Chrome have online voices.
 
 The same app also runs as a claude.ai artifact. There, Claude calls count against the user's own claude.ai plan and no API key is needed.
 
@@ -59,7 +59,9 @@ app/                     the web app (static files; open index.html)
   core.js                scoring, pass and badge rules, check sampling, prompts (also tested in node)
   platform.js            standalone mode: local storage, API providers
 content/core/            universal layer: themes, 52 skills, rubrics, test templates, sources
-content/uk/              Ukrainian pack: language.yaml, enablers, realizations, checks (question catalogues)
+content/uk/, content/es/ language packs: language.yaml, enablers, realizations, checks, placement, i18n (German titles)
+content/core/i18n/       German titles for themes and skills (English is in the source files)
+app/i18n.js              English UI strings; German is the source (tools/i18n_keys.py lists the keys)
 content/fa/              Persian sketch
 config/                  mastery policy (thresholds, badge rule), app settings
 src/lingbadge/           Python: models, loader, validator, catalogue sampler, scaffold

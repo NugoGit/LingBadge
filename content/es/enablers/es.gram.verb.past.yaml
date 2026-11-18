@@ -1,0 +1,14 @@
+id: es.gram.verb.past
+lang: es
+kind: grammar
+title: 'Past tense (pretérito perfecto / indefinido): he estado, fue, fuimos'
+cefr: A2
+requires:
+- es.gram.verb.present-irregular
+sources:
+- pcic.A1.gram.present-irregular
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

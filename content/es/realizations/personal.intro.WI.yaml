@@ -1,0 +1,30 @@
+skill: personal.intro.WI
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- ¡Hola! Me llamo …
+- Vivo en Viena y estudio español.
+- ¿Y tú de dónde eres?
+- ¡Encantado/a de conocerte!
+enablers:
+  required:
+  - id: es.gram.verb.reflexive
+    use: productive
+  - id: es.gram.verb.present-regular
+    use: productive
+  - id: es.gram.syntax.questions
+    use: productive
+  - id: es.lex.personal
+    use: productive
+  - id: es.gram.pron.object
+    use: formulaic
+  supporting:
+  - id: es.orth.accents-punctuation
+    use: productive
+rubric_specifics:
+  key_structures: Question with ¿?; estudiar + language without article; encantado/encantada by gender.
+version: 1
+status: draft

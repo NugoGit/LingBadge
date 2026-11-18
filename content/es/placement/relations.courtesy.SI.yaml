@@ -1,0 +1,128 @@
+skill: relations.courtesy.SI
+lang: es
+reviewed_by: []
+facets:
+- id: greet
+  label:
+    de: Begrüßen, nach dem Befinden fragen
+    en: Greeting, asking how someone is
+- id: sorry
+  label:
+    de: Danken und entschuldigen
+    en: Thanking and apologising
+- id: bye
+  label:
+    de: Verabschieden, Anrede
+    en: Saying goodbye, forms of address
+items:
+- id: greet-1
+  facet: greet
+  format: choice
+  prompt:
+    de: Sie treffen morgens Ihren älteren Nachbarn (Sie-Form).
+    en: In the morning you meet your older neighbour (formal).
+  answer:
+  - ¡Buenos días!
+  options:
+  - ¡Buenos días!
+  - ¡Hola, tío!
+  - ¡Buenas noches!
+  - ¡Chao!
+- id: greet-2
+  facet: greet
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¿Cómo está usted?
+  answer:
+  - Bien, gracias. ¿Y usted?
+  options:
+  - Bien, gracias. ¿Y usted?
+  - Gracias, adiós.
+  - De nada.
+  - Me llamo Juan.
+- id: greet-3
+  facet: greet
+  format: type
+  prompt:
+    de: 'Fragen Sie eine Freundin zurück: Und bei dir?'
+    en: 'Ask a friend back: And how about you?'
+  context: ¿Qué tal?
+  stem: Bien, gracias. ¿Y ___?
+  cue:
+    de: du
+    en: you
+  answer:
+  - tú
+- id: sorry-1
+  facet: sorry
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: Perdone, llego tarde.
+  answer:
+  - No pasa nada.
+  options:
+  - No pasa nada.
+  - Por favor, gracias.
+  - ¡Hasta pronto!
+  - ¡Que aproveche!
+- id: sorry-2
+  facet: sorry
+  format: type
+  prompt:
+    de: Sie haben jemanden angerempelt (Sie-Form). Entschuldigen Sie sich.
+    en: You bumped into someone (formal). Apologise.
+  stem: ¡___!
+  answer:
+  - Perdone
+  - Perdón
+  - Disculpe
+  - Lo siento
+- id: sorry-3
+  facet: sorry
+  format: choice
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
+  context: ¡Gracias por la ayuda!
+  answer:
+  - ¡De nada!
+  options:
+  - ¡De nada!
+  - ¡Gracias!
+  - ¡Perdone!
+  - No entiendo.
+- id: bye-1
+  facet: bye
+  format: choice
+  prompt:
+    de: Sie verabschieden sich von einer Freundin.
+    en: You say goodbye to a friend.
+  answer:
+  - ¡Hasta luego!
+  options:
+  - ¡Hasta luego!
+  - ¡Buenos días!
+  - ¡Enhorabuena!
+  - ¡Gracias!
+- id: bye-2
+  facet: bye
+  format: type
+  prompt:
+    de: 'Verabschieden Sie sich: Bis morgen!'
+    en: 'Say goodbye: See you tomorrow!'
+  stem: ¡Hasta ___!
+  answer:
+  - mañana
+- id: bye-3
+  facet: bye
+  format: type
+  prompt:
+    de: Sprechen Sie Herrn García an.
+    en: Address Mr García.
+  stem: Adiós, ___ García.
+  answer:
+  - señor

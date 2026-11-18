@@ -1,0 +1,12 @@
+id: es.gram.syntax.time-adverbs
+lang: es
+kind: grammar
+title: hoy, mañana, ayer, ahora, por la mañana, siempre, a veces
+cefr: A1
+sources:
+- pcic.A1.gram.time-adverbs
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

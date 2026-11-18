@@ -1,0 +1,125 @@
+# Draft catalogue (peninsular Spanish); see docs/question-catalogue.md.
+enabler: es.gram.verb.hay-estar
+lang: es
+facets:
+- id: hay-vs-esta
+  band: core
+  format: choice
+  options: [hay, está]
+  rule: {de: 'hay + un/una/Zahl/ohne Artikel: es gibt (hay un banco); está + el/la/Name: wo es ist (el banco está allí)', en: 'hay + un/una/number/no article: there is (hay un banco); está + el/la/name: where it is (el banco está allí)'}
+  instruction: {de: 'hay oder está?', en: 'hay or está?'}
+- id: plural
+  band: variant
+  format: choice
+  options: [hay, están]
+  rule: {de: hay bleibt im Plural gleich (hay dos bancos); estar wird zu están (los bancos están allí), en: hay stays the same in the plural (hay dos bancos); estar becomes están (los bancos están allí)}
+  instruction: {de: 'hay oder están?', en: 'hay or están?'}
+- id: no-article
+  band: exception
+  format: choice
+  options: [hay, está, están]
+  rule: {de: 'hay auch ohne Artikel und mit Mengen: hay pan, hay mucha gente, ¿hay wifi?', en: 'hay also without article and with quantities: hay pan, hay mucha gente, ¿hay wifi?'}
+  instruction: {de: 'hay, está oder están?', en: 'hay, está or están?'}
+- id: question
+  band: contrast
+  format: choice
+  options: [hay, está]
+  rule: {de: '¿Hay un/una …? fragt, ob es etwas gibt; ¿Dónde está el/la …? fragt nach dem Ort von etwas Bekanntem', en: '¿Hay un/una …? asks whether something exists; ¿Dónde está el/la …? asks where something known is'}
+  instruction: {de: 'hay oder está?', en: 'hay or está?'}
+items:
+- id: h01
+  facet: hay-vs-esta
+  stem: En mi calle ___ un supermercado.
+  answer: [hay]
+- id: h02
+  facet: hay-vs-esta
+  stem: El supermercado ___ al lado del banco.
+  answer: [está]
+- id: h03
+  facet: hay-vs-esta
+  stem: En la habitación ___ una cama.
+  answer: [hay]
+- id: h04
+  facet: hay-vs-esta
+  stem: La cama ___ al lado de la ventana.
+  answer: [está]
+- id: h05
+  facet: hay-vs-esta
+  stem: Madrid ___ en el centro de España.
+  answer: [está]
+- id: h06
+  facet: hay-vs-esta
+  stem: Cerca de aquí ___ un parque muy bonito.
+  answer: [hay]
+- id: h07
+  facet: hay-vs-esta
+  stem: Mi móvil ___ en la mesa.
+  answer: [está]
+- id: h08
+  facet: hay-vs-esta
+  stem: En el centro ___ una catedral.
+  answer: [hay]
+- id: h09
+  facet: plural
+  stem: En la plaza ___ tres restaurantes.
+  answer: [hay]
+- id: h10
+  facet: plural
+  stem: Los restaurantes ___ en la plaza.
+  answer: [están]
+- id: h11
+  facet: plural
+  stem: ¿Dónde ___ los servicios?
+  answer: [están]
+- id: h12
+  facet: plural
+  stem: En el piso ___ dos habitaciones.
+  answer: [hay]
+- id: h13
+  facet: plural
+  stem: Mis padres ___ en casa.
+  answer: [están]
+- id: h14
+  facet: plural
+  stem: En mi clase ___ doce estudiantes.
+  answer: [hay]
+- id: h15
+  facet: no-article
+  stem: ¿___ wifi en el hotel?
+  answer: [Hay]
+- id: h16
+  facet: no-article
+  stem: En la nevera no ___ leche.
+  answer: [hay]
+- id: h17
+  facet: no-article
+  stem: Hoy ___ mucha gente en la playa.
+  answer: [hay]
+- id: h18
+  facet: no-article
+  stem: Las llaves ___ en mi bolso.
+  answer: [están]
+- id: h19
+  facet: no-article
+  stem: ¿___ pan para mañana?
+  answer: [Hay]
+- id: h20
+  facet: question
+  stem: Perdone, ¿___ una farmacia por aquí?
+  answer: [hay]
+- id: h21
+  facet: question
+  stem: Perdone, ¿dónde ___ la farmacia Central?
+  answer: [está]
+- id: h22
+  facet: question
+  stem: ¿___ un cajero cerca?
+  answer: [Hay]
+- id: h23
+  facet: question
+  stem: ¿Dónde ___ el baño, por favor?
+  answer: [está]
+- id: h24
+  facet: question
+  stem: ¿___ una parada de autobús en esta calle?
+  answer: [Hay]

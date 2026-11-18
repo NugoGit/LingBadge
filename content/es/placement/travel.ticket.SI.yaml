@@ -1,0 +1,126 @@
+skill: travel.ticket.SI
+lang: es
+reviewed_by: []
+facets:
+- id: where
+  label:
+    de: Fahrkarte, wohin, wie viele
+    en: Ticket, where to, how many
+- id: when
+  label:
+    de: Für wann
+    en: For when
+- id: info
+  label:
+    de: Abfahrt, Bahnsteig
+    en: Departure, platform
+items:
+- id: where-1
+  facet: where
+  format: type
+  prompt:
+    de: Eine Fahrkarte nach Sevilla, bitte.
+    en: One ticket to Seville, please.
+  stem: Un billete ___ Sevilla, por favor.
+  answer:
+  - para
+  - a
+- id: where-2
+  facet: where
+  format: type
+  prompt:
+    de: Zwei Fahrkarten nach Valencia.
+    en: Two tickets to Valencia.
+  stem: Dos ___ para Valencia.
+  cue: billete
+  answer:
+  - billetes
+  - boletos
+- id: where-3
+  facet: where
+  format: type
+  prompt:
+    de: Hin und zurück, bitte.
+    en: Return, please.
+  stem: De ida y ___, por favor.
+  answer:
+  - vuelta
+- id: when-1
+  facet: when
+  format: type
+  prompt:
+    de: Für heute, für den Abend.
+    en: For today, for the evening.
+  stem: Para ___, por la tarde.
+  cue:
+    de: heute
+    en: today
+  answer:
+  - hoy
+- id: when-2
+  facet: when
+  format: type
+  prompt:
+    de: Für morgen früh.
+    en: For tomorrow morning.
+  stem: Para ___ por la mañana.
+  cue:
+    de: morgen
+    en: tomorrow
+  answer:
+  - mañana
+- id: when-3
+  facet: when
+  format: type
+  prompt:
+    de: Für nächsten Freitag.
+    en: For next Friday.
+  stem: Para el viernes que ___.
+  answer:
+  - viene
+- id: info-1
+  facet: info
+  format: type
+  prompt:
+    de: 'Fragen Sie: Um wie viel Uhr ist die Abfahrt?'
+    en: 'Ask: What time is the departure?'
+  stem: ¿A qué hora ___ el tren?
+  cue: salir
+  answer:
+  - sale
+- id: info-2
+  facet: info
+  format: type
+  prompt:
+    de: 'Fragen Sie: Von welchem Bahnsteig?'
+    en: 'Ask: From which platform?'
+  stem: ¿De qué ___ sale?
+  cue:
+    de: Bahnsteig
+    en: platform
+  answer:
+  - andén
+  - vía
+- id: info-3
+  facet: info
+  format: choice
+  prompt:
+    de: Von wo fährt der Zug?
+    en: Where does the train leave from?
+  context: Sale a las 18:40 del andén tres.
+  answer:
+    de:
+    - Bahnsteig 3
+    en:
+    - Platform 3
+  options:
+    de:
+    - Bahnsteig 3
+    - Bahnsteig 18
+    - Bahnsteig 4
+    - Gleis 40
+    en:
+    - Platform 3
+    - Platform 18
+    - Platform 4
+    - Track 40

@@ -1,0 +1,23 @@
+skill: travel.hotel-info.R
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- 'Desayuno: 7:30–10:00'
+- 'Wifi: contraseña …'
+- 'Salida de la habitación: antes de las 12:00'
+- Prohibido fumar en las habitaciones.
+enablers:
+  required:
+  - id: es.lex.transport-travel
+    use: productive
+  - id: es.num.time
+    use: productive
+  - id: es.lex.signs
+    use: productive
+  - id: es.lex.home
+    use: productive
+version: 1
+status: draft

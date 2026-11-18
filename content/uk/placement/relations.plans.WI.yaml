@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: propose
-  label: Vorschlagen
+  label:
+    de: Vorschlagen
+    en: Suggesting
 - id: answer
-  label: Zusagen oder absagen
+  label:
+    de: Zusagen oder absagen
+    en: Accepting or declining
 - id: confirm
-  label: Zeit und Ort bestätigen
+  label:
+    de: Zeit und Ort bestätigen
+    en: Confirming time and place
 items:
 - id: propose-1
   facet: propose
   format: type
-  prompt: 'Schreiben Sie: Gehen wir morgen auf einen Kaffee?'
+  prompt:
+    de: 'Schreiben Sie: Gehen wir morgen auf einen Kaffee?'
+    en: 'Write: Shall we go for a coffee tomorrow?'
   stem: Привіт! Підемо завтра на ___?
   cue: кава
   answer:
@@ -20,7 +28,9 @@ items:
 - id: propose-2
   facet: propose
   format: choice
-  prompt: Fragen Sie, ob es um sechs passt.
+  prompt:
+    de: Fragen Sie, ob es um sechs passt.
+    en: Ask whether six o'clock suits her.
   answer:
   - Можу о шостій. Тобі зручно?
   options:
@@ -31,7 +41,9 @@ items:
 - id: propose-3
   facet: propose
   format: type
-  prompt: 'Fragen Sie: Hast du heute Abend Zeit?'
+  prompt:
+    de: 'Fragen Sie: Hast du heute Abend Zeit?'
+    en: 'Ask: Do you have time tonight?'
   stem: Ти ___ час сьогодні ввечері?
   cue: мати
   answer:
@@ -39,7 +51,9 @@ items:
 - id: answer-1
   facet: answer
   format: choice
-  prompt: Sagen Sie ab.
+  prompt:
+    de: Sagen Sie ab.
+    en: Decline.
   context: Підемо в суботу в кіно?
   answer:
   - На жаль, у суботу не можу.
@@ -51,21 +65,27 @@ items:
 - id: answer-2
   facet: answer
   format: type
-  prompt: 'Sagen Sie zu: Super, bis morgen!'
+  prompt:
+    de: 'Sagen Sie zu: Super, bis morgen!'
+    en: 'Accept: Great, see you tomorrow!'
   stem: Супер, до ___!
   answer:
   - завтра
 - id: answer-3
   facet: answer
   format: type
-  prompt: 'Sagen Sie ab: Leider kann ich heute nicht.'
+  prompt:
+    de: 'Sagen Sie ab: Leider kann ich heute nicht.'
+    en: 'Decline: Unfortunately I can''t today.'
   stem: На ___, сьогодні не можу.
   answer:
   - жаль
 - id: confirm-1
   facet: confirm
   format: choice
-  prompt: Bestätigen Sie.
+  prompt:
+    de: Bestätigen Sie.
+    en: Confirm.
   context: Тоді о сьомій біля фонтана?
   answer:
   - Так, домовилися!
@@ -77,19 +97,32 @@ items:
 - id: confirm-2
   facet: confirm
   format: choice
-  prompt: Um wie viel Uhr treffen Sie sich jetzt?
+  prompt:
+    de: Um wie viel Uhr treffen Sie sich jetzt?
+    en: What time are you meeting now?
   context: Давай не о шостій, а о пів на сьому. Ок?
   answer:
-  - Um halb sieben
+    de:
+    - Um halb sieben
+    en:
+    - At half past six
   options:
-  - Um halb sieben
-  - Um sechs
-  - Um sieben
-  - Um halb sechs
+    de:
+    - Um halb sieben
+    - Um sechs
+    - Um sieben
+    - Um halb sechs
+    en:
+    - At half past six
+    - At six
+    - At seven
+    - At half past five
 - id: confirm-3
   facet: confirm
   format: type
-  prompt: 'Fragen Sie: Wo treffen wir uns?'
+  prompt:
+    de: 'Fragen Sie: Wo treffen wir uns?'
+    en: 'Ask: Where shall we meet?'
   stem: Де ___?
   answer:
   - зустрінемося

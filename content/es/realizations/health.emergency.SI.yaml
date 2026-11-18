@@ -1,0 +1,32 @@
+skill: health.emergency.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- ¡Ayuda!
+- ¡Llamen a una ambulancia!
+- Estamos en la calle …, al lado de …
+- 'Número de emergencias: 112.'
+enablers:
+  required:
+  - id: es.gram.verb.imperative-set
+    use: formulaic
+  - id: es.lex.city-places
+    use: productive
+  - id: es.lex.directions-place
+    use: productive
+  - id: es.gram.verb.ser-estar
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+version: 1
+status: draft

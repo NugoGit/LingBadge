@@ -1,0 +1,22 @@
+skill: travel.directions.R
+lang: es
+cefr: A1
+register:
+- informal
+variety: peninsular
+exponents:
+- Bájate en la estación de Sol.
+- Sigue recto hasta el café y luego gira a la izquierda.
+- Mi casa es la tercera a la derecha, piso 2.º B.
+enablers:
+  required:
+  - id: es.lex.directions-place
+    use: productive
+  - id: es.num.ordinal
+    use: productive
+  - id: es.gram.verb.imperative-set
+    use: formulaic
+  - id: es.lex.city-places
+    use: productive
+version: 1
+status: draft

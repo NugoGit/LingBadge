@@ -3,23 +3,33 @@ lang: uk
 reviewed_by: []
 facets:
 - id: ask
-  label: Nach dem Wetter fragen
+  label:
+    de: Nach dem Wetter fragen
+    en: Asking about the weather
 - id: today
-  label: Das Wetter heute beschreiben
+  label:
+    de: Das Wetter heute beschreiben
+    en: Describing today's weather
 - id: other
-  label: Morgen und gestern
+  label:
+    de: Morgen und gestern
+    en: Tomorrow and yesterday
 items:
 - id: ask-1
   facet: ask
   format: type
-  prompt: 'Fragen Sie: Wie ist das Wetter heute?'
+  prompt:
+    de: 'Fragen Sie: Wie ist das Wetter heute?'
+    en: 'Ask: What''s the weather like today?'
   stem: Яка сьогодні ___?
   answer:
   - погода
 - id: ask-2
   facet: ask
   format: choice
-  prompt: Fragen Sie, wie das Wetter morgen wird.
+  prompt:
+    de: Fragen Sie, wie das Wetter morgen wird.
+    en: Ask what the weather will be like tomorrow.
   answer:
   - Яка завтра буде погода?
   options:
@@ -30,7 +40,9 @@ items:
 - id: ask-3
   facet: ask
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Яка сьогодні погода?
   answer:
   - Холодно, але сонячно.
@@ -42,30 +54,42 @@ items:
 - id: today-1
   facet: today
   format: type
-  prompt: 'Sagen Sie: Es regnet.'
+  prompt:
+    de: 'Sagen Sie: Es regnet.'
+    en: 'Say: It''s raining.'
   stem: Іде ___.
   answer:
   - дощ
 - id: today-2
   facet: today
   format: type
-  prompt: 'Sagen Sie: Heute ist es kalt.'
+  prompt:
+    de: 'Sagen Sie: Heute ist es kalt.'
+    en: 'Say: It''s cold today.'
   stem: Сьогодні ___.
-  cue: kalt
+  cue:
+    de: kalt
+    en: cold
   answer:
   - холодно
 - id: today-3
   facet: today
   format: type
-  prompt: 'Sagen Sie: Heute ist es windig.'
+  prompt:
+    de: 'Sagen Sie: Heute ist es windig.'
+    en: 'Say: It''s windy today.'
   stem: Сьогодні ___.
-  cue: windig
+  cue:
+    de: windig
+    en: windy
   answer:
   - вітряно
 - id: other-1
   facet: other
   format: type
-  prompt: 'Sagen Sie: Morgen wird es heiß.'
+  prompt:
+    de: 'Sagen Sie: Morgen wird es heiß.'
+    en: 'Say: It will be hot tomorrow.'
   stem: Завтра ___ спекотно.
   cue: бути
   answer:
@@ -73,7 +97,9 @@ items:
 - id: other-2
   facet: other
   format: type
-  prompt: 'Sagen Sie: Gestern war es warm.'
+  prompt:
+    de: 'Sagen Sie: Gestern war es warm.'
+    en: 'Say: It was warm yesterday.'
   stem: Вчора ___ тепло.
   cue: бути
   answer:
@@ -81,7 +107,9 @@ items:
 - id: other-3
   facet: other
   format: choice
-  prompt: 'Sagen Sie: Morgen schneit es.'
+  prompt:
+    de: 'Sagen Sie: Morgen schneit es.'
+    en: 'Say: It will snow tomorrow.'
   answer:
   - Завтра буде сніг.
   options:

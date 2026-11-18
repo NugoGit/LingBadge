@@ -1,0 +1,14 @@
+id: es.gram.verb.modal
+lang: es
+kind: grammar
+title: querer / poder / tener que + infinitive
+cefr: A1
+requires:
+- es.gram.verb.present-irregular
+sources:
+- pcic.A1.gram.modal
+check:
+  template: enabler.grammar.v1
+  items: 10
+  threshold: 0.9
+  channel: text

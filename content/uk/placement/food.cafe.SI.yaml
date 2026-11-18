@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: order
-  label: Essen und Getränke bestellen
+  label:
+    de: Essen und Getränke bestellen
+    en: Order food and drinks
 - id: ask
-  label: Nachfragen; „gibt es nicht“
+  label:
+    de: Nachfragen; „gibt es nicht“
+    en: Ask about a dish; “we don't have it”
 - id: pay
-  label: Rechnung und Bezahlen
+  label:
+    de: Rechnung und Bezahlen
+    en: The bill and paying
 items:
 - id: order-1
   facet: order
   format: type
-  prompt: Bestellen Sie einen Kaffee.
+  prompt:
+    de: Bestellen Sie einen Kaffee.
+    en: Order a coffee.
   context: Що будете замовляти?
   stem: Мені ___, будь ласка.
   cue: кава
@@ -21,7 +29,9 @@ items:
 - id: order-2
   facet: order
   format: type
-  prompt: Bestellen Sie stilles Wasser.
+  prompt:
+    de: Bestellen Sie stilles Wasser.
+    en: Order still water.
   context: Що будете пити?
   stem: Мені ___ без газу.
   cue: вода
@@ -30,7 +40,9 @@ items:
 - id: order-3
   facet: order
   format: type
-  prompt: Bestellen Sie Tee ohne Zucker.
+  prompt:
+    de: Bestellen Sie Tee ohne Zucker.
+    en: Order tea without sugar.
   stem: Мені чай без ___.
   cue: цукор
   answer:
@@ -38,7 +50,9 @@ items:
 - id: order-4
   facet: order
   format: choice
-  prompt: Sie möchten die Speisekarte. Was sagen Sie?
+  prompt:
+    de: Sie möchten die Speisekarte. Was sagen Sie?
+    en: You want the menu. What do you say?
   answer:
   - Можна меню, будь ласка?
   options:
@@ -49,7 +63,9 @@ items:
 - id: ask-1
   facet: ask
   format: choice
-  prompt: Auf der Karte steht „деруни“. Sie kennen das nicht. Was fragen Sie?
+  prompt:
+    de: Auf der Karte steht „деруни“. Sie kennen das nicht. Was fragen Sie?
+    en: The menu says “деруни”. You don't know it. What do you ask?
   answer:
   - Що таке деруни?
   options:
@@ -60,7 +76,9 @@ items:
 - id: ask-2
   facet: ask
   format: choice
-  prompt: Sie möchten eine Empfehlung. Was fragen Sie?
+  prompt:
+    de: Sie möchten eine Empfehlung. Was fragen Sie?
+    en: You'd like a recommendation. What do you ask?
   answer:
   - Що ви порадите?
   options:
@@ -71,7 +89,9 @@ items:
 - id: ask-3
   facet: ask
   format: choice
-  prompt: Welche Reaktion passt?
+  prompt:
+    de: Welche Reaktion passt?
+    en: Which reaction fits?
   context: На жаль, борщу сьогодні немає.
   answer:
   - Шкода. Тоді вареники, будь ласка.
@@ -83,7 +103,9 @@ items:
 - id: ask-4
   facet: ask
   format: type
-  prompt: Es gibt keinen Kaffee. Bestellen Sie eine Cola.
+  prompt:
+    de: Es gibt keinen Kaffee. Bestellen Sie eine Cola.
+    en: There's no coffee. Order a cola.
   context: На жаль, кави немає.
   stem: Тоді ___, будь ласка.
   cue: кола
@@ -92,15 +114,21 @@ items:
 - id: pay-1
   facet: pay
   format: type
-  prompt: Bitten Sie um die Rechnung.
+  prompt:
+    de: Bitten Sie um die Rechnung.
+    en: Ask for the bill.
   stem: ___, будь ласка.
-  cue: die Rechnung
+  cue:
+    de: die Rechnung
+    en: the bill
   answer:
   - Рахунок
 - id: pay-2
   facet: pay
   format: type
-  prompt: Fragen Sie, ob Sie mit Karte zahlen können.
+  prompt:
+    de: Fragen Sie, ob Sie mit Karte zahlen können.
+    en: Ask whether you can pay by card.
   stem: Можна ___?
   cue: картка
   answer:
@@ -108,7 +136,9 @@ items:
 - id: pay-3
   facet: pay
   format: choice
-  prompt: Welche Antwort passt?
+  prompt:
+    de: Welche Antwort passt?
+    en: Which answer fits?
   context: Готівкою чи карткою?
   answer:
   - Карткою, будь ласка.

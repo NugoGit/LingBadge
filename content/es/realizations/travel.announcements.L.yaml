@@ -1,0 +1,30 @@
+skill: travel.announcements.L
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- El tren con destino Sevilla efectúa su salida por la vía dos a las nueve y veinte.
+- El tren lleva un retraso de treinta minutos.
+enablers:
+  required:
+  - id: es.num.time
+    use: productive
+  - id: es.num.ordinal
+    use: productive
+  - id: es.lex.transport-travel
+    use: productive
+  - id: es.num.cardinal-0-100
+    use: productive
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+version: 1
+status: draft

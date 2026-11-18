@@ -1,0 +1,131 @@
+skill: travel.taxi.SI
+lang: es
+reviewed_by: []
+facets:
+- id: address
+  label:
+    de: Adresse und Ziel
+    en: Address and destination
+- id: price
+  label:
+    de: Preis
+    en: Price
+- id: stop
+  label:
+    de: Halten und Bezahlen
+    en: Stopping and paying
+items:
+- id: address-1
+  facet: address
+  format: type
+  prompt:
+    de: Zur Calle Mayor Nummer 10, bitte.
+    en: To number 10 Calle Mayor, please.
+  stem: ___ la calle Mayor, número diez, por favor.
+  answer:
+  - A
+- id: address-2
+  facet: address
+  format: type
+  prompt:
+    de: Zum Prado-Museum, bitte.
+    en: To the Prado Museum, please.
+  stem: ___ Museo del Prado, por favor.
+  cue: a + el
+  answer:
+  - Al
+- id: address-3
+  facet: address
+  format: type
+  prompt:
+    de: Zum Flughafen, bitte.
+    en: To the airport, please.
+  stem: Al ___, por favor.
+  cue:
+    de: Flughafen
+    en: airport
+  answer:
+  - aeropuerto
+- id: price-1
+  facet: price
+  format: type
+  prompt:
+    de: 'Fragen Sie: Wie viel kostet das?'
+    en: 'Ask: How much is it?'
+  stem: ¿Cuánto ___?
+  cue: costar
+  answer:
+  - cuesta
+  - es
+  - vale
+- id: price-2
+  facet: price
+  format: choice
+  prompt:
+    de: Wie viel kostet die Fahrt?
+    en: How much is the ride?
+  context: Son veinticinco euros.
+  answer:
+    de:
+    - 25 Euro
+    en:
+    - 25 euros
+  options:
+    de:
+    - 25 Euro
+    - 35 Euro
+    - 15 Euro
+    - 250 Euro
+    en:
+    - 25 euros
+    - 35 euros
+    - 15 euros
+    - 250 euros
+- id: price-3
+  facet: price
+  format: choice
+  prompt:
+    de: Fragen Sie vorher, was die Fahrt zum Flughafen kostet.
+    en: Ask beforehand how much the ride to the airport costs.
+  answer:
+  - ¿Cuánto cuesta ir al aeropuerto?
+  options:
+  - ¿Cuánto cuesta ir al aeropuerto?
+  - ¿Cuánto cuesta el aeropuerto?
+  - ¿Cuántas horas el aeropuerto?
+  - ¿Dónde está el aeropuerto?
+- id: stop-1
+  facet: stop
+  format: type
+  prompt:
+    de: Halten Sie bitte hier.
+    en: Please stop here.
+  stem: ___ aquí, por favor.
+  cue: parar (usted)
+  answer:
+  - Pare
+- id: stop-2
+  facet: stop
+  format: type
+  prompt:
+    de: Fragen Sie, ob Sie mit Karte zahlen können.
+    en: Ask whether you can pay by card.
+  stem: ¿Puedo pagar con ___?
+  cue:
+    de: Karte
+    en: card
+  answer:
+  - tarjeta
+- id: stop-3
+  facet: stop
+  format: choice
+  prompt:
+    de: Der Fahrer soll beim Eingang halten.
+    en: The driver should stop by the entrance.
+  answer:
+  - Pare en la entrada, por favor.
+  options:
+  - Pare en la entrada, por favor.
+  - Pare a la entrada de, por favor.
+  - Pare la entrada, por favor.
+  - Pare de entrada, por favor.

@@ -3,30 +3,42 @@ lang: uk
 reviewed_by: []
 facets:
 - id: hurt
-  label: Was weh tut
+  label:
+    de: Was weh tut
+    en: What hurts
 - id: symptom
-  label: Beschwerden
+  label:
+    de: Beschwerden
+    en: Symptoms
 - id: since
-  label: Seit wann; Fragen beantworten
+  label:
+    de: Seit wann; Fragen beantworten
+    en: Since when; answering questions
 items:
 - id: hurt-1
   facet: hurt
   format: type
-  prompt: 'Sagen Sie: Ich habe Halsschmerzen.'
+  prompt:
+    de: 'Sagen Sie: Ich habe Halsschmerzen.'
+    en: 'Say: I have a sore throat.'
   stem: У мене болить ___.
   answer:
   - горло
 - id: hurt-2
   facet: hurt
   format: type
-  prompt: 'Sagen Sie: Ich habe Kopfschmerzen.'
+  prompt:
+    de: 'Sagen Sie: Ich habe Kopfschmerzen.'
+    en: 'Say: I have a headache.'
   stem: У мене ___ голова.
   answer:
   - болить
 - id: hurt-3
   facet: hurt
   format: choice
-  prompt: 'Sagen Sie: Mir tun die Beine weh.'
+  prompt:
+    de: 'Sagen Sie: Mir tun die Beine weh.'
+    en: 'Say: My legs hurt.'
   answer:
   - У мене болять ноги.
   options:
@@ -37,7 +49,9 @@ items:
 - id: symptom-1
   facet: symptom
   format: type
-  prompt: 'Sagen Sie: Ich habe Fieber.'
+  prompt:
+    de: 'Sagen Sie: Ich habe Fieber.'
+    en: 'Say: I have a temperature.'
   stem: У мене ___.
   answer:
   - температура
@@ -45,7 +59,9 @@ items:
 - id: symptom-2
   facet: symptom
   format: type
-  prompt: 'Sagen Sie: Ich schlafe schlecht.'
+  prompt:
+    de: 'Sagen Sie: Ich schlafe schlecht.'
+    en: 'Say: I sleep badly.'
   stem: Я погано ___.
   cue: спати
   answer:
@@ -53,7 +69,9 @@ items:
 - id: symptom-3
   facet: symptom
   format: choice
-  prompt: 'Sagen Sie: Ich habe Husten.'
+  prompt:
+    de: 'Sagen Sie: Ich habe Husten.'
+    en: 'Say: I have a cough.'
   answer:
   - У мене кашель.
   options:
@@ -64,7 +82,9 @@ items:
 - id: since-1
   facet: since
   format: type
-  prompt: 'Antworten Sie: schon zwei Tage.'
+  prompt:
+    de: 'Antworten Sie: schon zwei Tage.'
+    en: 'Answer: for two days already.'
   context: Як довго це у вас?
   stem: Уже два ___.
   cue: день
@@ -73,17 +93,23 @@ items:
 - id: since-2
   facet: since
   format: type
-  prompt: 'Antworten Sie: gestern.'
+  prompt:
+    de: 'Antworten Sie: gestern.'
+    en: 'Answer: yesterday.'
   context: Коли це почалося?
   stem: ___.
-  cue: gestern
+  cue:
+    de: gestern
+    en: yesterday
   answer:
   - Вчора
   - Учора
 - id: since-3
   facet: since
   format: choice
-  prompt: Sie haben keine Allergie. Was antworten Sie?
+  prompt:
+    de: Sie haben keine Allergie. Was antworten Sie?
+    en: You have no allergies. What do you answer?
   context: У вас є алергія?
   answer:
   - Ні, немає.

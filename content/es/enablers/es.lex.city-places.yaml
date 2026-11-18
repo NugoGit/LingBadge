@@ -1,0 +1,31 @@
+id: es.lex.city-places
+lang: es
+kind: lexis
+title: Places in a city
+cefr: A1
+words:
+- la calle
+- la plaza
+- el centro
+- la estación
+- el aeropuerto
+- el museo
+- el cine
+- el teatro
+- la iglesia
+- el ayuntamiento
+- el banco
+- la farmacia
+- el supermercado
+- el mercado
+- el parque
+- el hospital
+- la parada
+- el metro
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

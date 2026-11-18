@@ -1,0 +1,117 @@
+skill: relations.family.SI
+lang: es
+reviewed_by: []
+facets:
+- id: who
+  label:
+    de: Wer zur Familie gehört
+    en: Who is in the family
+- id: name
+  label:
+    de: Namen und Alter
+    en: Names and ages
+- id: ask
+  label:
+    de: Nach der Familie fragen
+    en: Asking about family
+items:
+- id: who-1
+  facet: who
+  format: type
+  prompt:
+    de: 'Sagen Sie: Ich habe einen Bruder und eine Schwester.'
+    en: 'Say: I have a brother and a sister.'
+  stem: Tengo un hermano y una ___.
+  cue:
+    de: Schwester
+    en: sister
+  answer:
+  - hermana
+- id: who-2
+  facet: who
+  format: type
+  prompt:
+    de: 'Sagen Sie: Wir haben eine Katze.'
+    en: 'Say: We have a cat.'
+  stem: ___ un gato.
+  cue: tener
+  answer:
+  - Tenemos
+- id: who-3
+  facet: who
+  format: choice
+  prompt:
+    de: 'Sagen Sie: Ich habe zwei Söhne.'
+    en: 'Say: I have two sons.'
+  answer:
+  - Tengo dos hijos.
+  options:
+  - Tengo dos hijos.
+  - Tengo dos hijo.
+  - Tengo dos los hijos.
+  - Soy dos hijos.
+- id: name-1
+  facet: name
+  format: type
+  prompt:
+    de: 'Sagen Sie: Meine Schwester heißt Marta.'
+    en: 'Say: My sister''s name is Marta.'
+  stem: Mi hermana se ___ Marta.
+  cue: llamarse
+  answer:
+  - llama
+- id: name-2
+  facet: name
+  format: type
+  prompt:
+    de: 'Sagen Sie: Mein Bruder heißt Pablo.'
+    en: 'Say: My brother''s name is Pablo.'
+  stem: Mi hermano ___ llama Pablo.
+  answer:
+  - se
+- id: name-3
+  facet: name
+  format: type
+  prompt:
+    de: 'Antworten Sie: Er ist zwei Jahre alt.'
+    en: 'Answer: He is two years old.'
+  context: ¿Cuántos años tiene tu hijo?
+  stem: ___ dos años.
+  cue: tener
+  answer:
+  - Tiene
+- id: ask-1
+  facet: ask
+  format: type
+  prompt:
+    de: 'Fragen Sie: Hast du Kinder?'
+    en: 'Ask: Do you have children?'
+  stem: ¿___ hijos?
+  cue: tener
+  answer:
+  - Tienes
+- id: ask-2
+  facet: ask
+  format: choice
+  prompt:
+    de: Fragen Sie (Sie-Form) nach Geschwistern.
+    en: Ask (formal) about brothers and sisters.
+  answer:
+  - ¿Tiene usted hermanos?
+  options:
+  - ¿Tiene usted hermanos?
+  - ¿Tienes hermanos?
+  - ¿Es usted hermano?
+  - ¿Dónde están sus hermanos?
+- id: ask-3
+  facet: ask
+  format: type
+  prompt:
+    de: 'Fragen Sie: Wie heißt deine Mutter?'
+    en: 'Ask: What''s your mother''s name?'
+  stem: ¿Cómo se llama ___ madre?
+  cue:
+    de: dein
+    en: your
+  answer:
+  - tu

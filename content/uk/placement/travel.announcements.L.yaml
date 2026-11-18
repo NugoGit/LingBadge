@@ -3,87 +3,138 @@ lang: uk
 reviewed_by: []
 facets:
 - id: train
-  label: Welcher Zug, wohin
+  label:
+    de: Welcher Zug, wohin
+    en: Which train, where to
 - id: platform
-  label: Gleis, Bahnsteig
+  label:
+    de: Gleis, Bahnsteig
+    en: Track, platform
 - id: time
-  label: Zeit und Verspätung
+  label:
+    de: Zeit und Verspätung
+    en: Time and delay
 items:
 - id: train-1
   facet: train
   format: choice
-  prompt: Wohin fährt der Zug?
+  prompt:
+    de: Wohin fährt der Zug?
+    en: Where is the train going?
   audio: Потяг Київ — Львів відправляється з другої колії о дев'ятій двадцять.
   answer:
-  - Lwiw
+    de:
+    - Lwiw
+    en:
+    - Lviv
   options:
-  - Lwiw
-  - Kyjiw
-  - Odesa
-  - Charkiw
+    de:
+    - Lwiw
+    - Kyjiw
+    - Odesa
+    - Charkiw
+    en:
+    - Lviv
+    - Kyiv
+    - Odesa
+    - Kharkiv
 - id: train-2
   facet: train
   format: choice
-  prompt: Was passiert mit dem Zug 43?
+  prompt:
+    de: Was passiert mit dem Zug 43?
+    en: What is happening with train 43?
   audio: Увага! Потяг номер сорок три Одеса — Харків прибуває на п'яту колію.
   answer:
-  - Er kommt an
+    de:
+    - Er kommt an
+    en:
+    - It is arriving
   options:
-  - Er kommt an
-  - Er fährt ab
-  - Er hat Verspätung
-  - Er fällt aus
+    de:
+    - Er kommt an
+    - Er fährt ab
+    - Er hat Verspätung
+    - Er fällt aus
+    en:
+    - It is arriving
+    - It is leaving
+    - It is delayed
+    - It is cancelled
 - id: train-3
   facet: train
   format: choice
-  prompt: Welcher Zug hat Verspätung?
+  prompt:
+    de: Welcher Zug hat Verspätung?
+    en: Which train is delayed?
   audio: Потяг до Ужгорода затримується на тридцять хвилин.
   answer:
-  - Der Zug nach Uschhorod
+    de:
+    - Der Zug nach Uschhorod
+    en:
+    - The train to Uzhhorod
   options:
-  - Der Zug nach Uschhorod
-  - Der Zug nach Lwiw
-  - Der Zug aus Uschhorod
-  - Der Zug nach Odesa
+    de:
+    - Der Zug nach Uschhorod
+    - Der Zug nach Lwiw
+    - Der Zug aus Uschhorod
+    - Der Zug nach Odesa
+    en:
+    - The train to Uzhhorod
+    - The train to Lviv
+    - The train from Uzhhorod
+    - The train to Odesa
 - id: platform-1
   facet: platform
   format: type
-  prompt: Von welchem Gleis? (Zahl)
+  prompt:
+    de: Von welchem Gleis? (Zahl)
+    en: From which track? (number)
   audio: Потяг Київ — Львів відправляється з другої колії о дев'ятій двадцять.
   answer:
   - '2'
 - id: platform-2
   facet: platform
   format: type
-  prompt: Auf welchem Gleis? (Zahl)
+  prompt:
+    de: Auf welchem Gleis? (Zahl)
+    en: On which track? (number)
   audio: Увага! Потяг номер сорок три Одеса — Харків прибуває на п'яту колію.
   answer:
   - '5'
 - id: platform-3
   facet: platform
   format: type
-  prompt: Von welchem Bahnsteig fährt der Bus? (Zahl)
+  prompt:
+    de: Von welchem Bahnsteig fährt der Bus? (Zahl)
+    en: From which platform does the bus leave? (number)
   audio: Шановні пасажири! Автобус до Чернівців відправляється о чотирнадцятій годині з третьої платформи.
   answer:
   - '3'
 - id: time-1
   facet: time
   format: type
-  prompt: Um wie viel Uhr fährt der Zug? (z. B. 9:20)
+  prompt:
+    de: Um wie viel Uhr fährt der Zug? (z. B. 9:20)
+    en: What time does the train leave? (e.g. 9:20)
   audio: Потяг Київ — Львів відправляється з другої колії о дев'ятій двадцять.
   answer:
   - '9:20'
 - id: time-2
   facet: time
   format: type
-  prompt: Wie viele Minuten Verspätung? (Zahl)
+  prompt:
+    de: Wie viele Minuten Verspätung? (Zahl)
+    en: How many minutes' delay? (number)
   audio: Потяг до Ужгорода затримується на тридцять хвилин.
   answer:
   - '30'
 - id: time-3
   facet: time
   format: type
-  prompt: Um wie viel Uhr fährt der Bus? (z. B. 9:20)
+  prompt:
+    de: Um wie viel Uhr fährt der Bus? (z. B. 9:20)
+    en: What time does the bus leave? (e.g. 9:20)
   audio: Шановні пасажири! Автобус до Чернівців відправляється о чотирнадцятій годині з третьої платформи.
   answer:
   - '14:00'

@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: what
-  label: Sagen, was man möchte
+  label:
+    de: Sagen, was man möchte
+    en: Saying what you want
 - id: amount
-  label: Mengen
+  label:
+    de: Mengen
+    en: Quantities
 - id: price
-  label: Preis und Bezahlen
+  label:
+    de: Preis und Bezahlen
+    en: Price and paying
 items:
 - id: what-1
   facet: what
   format: type
-  prompt: Verlangen Sie Wurst.
+  prompt:
+    de: Verlangen Sie Wurst.
+    en: Ask for sausage.
   stem: Дайте, будь ласка, ___.
   cue: ковбаса
   answer:
@@ -20,7 +28,9 @@ items:
 - id: what-2
   facet: what
   format: type
-  prompt: Verlangen Sie eine Flasche Milch.
+  prompt:
+    de: Verlangen Sie eine Flasche Milch.
+    en: Ask for a bottle of milk.
   stem: Дайте, будь ласка, пляшку ___.
   cue: молоко
   answer:
@@ -28,7 +38,9 @@ items:
 - id: what-3
   facet: what
   format: type
-  prompt: Verlangen Sie Öl und Käse.
+  prompt:
+    de: Verlangen Sie Öl und Käse.
+    en: Ask for oil and cheese.
   stem: Дайте, будь ласка, ___ і сир.
   cue: олія
   answer:
@@ -36,7 +48,9 @@ items:
 - id: amount-1
   facet: amount
   format: type
-  prompt: Ein Kilo Äpfel, bitte.
+  prompt:
+    de: Ein Kilo Äpfel, bitte.
+    en: A kilo of apples, please.
   stem: Кілограм ___, будь ласка.
   cue: яблуко
   answer:
@@ -44,7 +58,9 @@ items:
 - id: amount-2
   facet: amount
   format: type
-  prompt: Zwei Kilo Kartoffeln.
+  prompt:
+    de: Zwei Kilo Kartoffeln.
+    en: Two kilos of potatoes.
   stem: Два кілограми ___.
   cue: картопля
   answer:
@@ -52,7 +68,9 @@ items:
 - id: amount-3
   facet: amount
   format: type
-  prompt: Zehn Eier, bitte.
+  prompt:
+    de: Zehn Eier, bitte.
+    en: Ten eggs, please.
   stem: Десять ___, будь ласка.
   cue: яйце
   answer:
@@ -60,7 +78,9 @@ items:
 - id: price-1
   facet: price
   format: type
-  prompt: 'Fragen Sie: Was kostet der Käse?'
+  prompt:
+    de: 'Fragen Sie: Was kostet der Käse?'
+    en: 'Ask: How much is the cheese?'
   stem: Скільки ___ сир?
   cue: коштувати
   answer:
@@ -68,7 +88,9 @@ items:
 - id: price-2
   facet: price
   format: type
-  prompt: 'Fragen Sie: Was kosten die Tomaten?'
+  prompt:
+    de: 'Fragen Sie: Was kosten die Tomaten?'
+    en: 'Ask: How much are the tomatoes?'
   stem: Скільки ___ помідори?
   cue: коштувати
   answer:
@@ -76,7 +98,9 @@ items:
 - id: price-3
   facet: price
   format: choice
-  prompt: 'Sagen Sie: Nein, das ist alles.'
+  prompt:
+    de: 'Sagen Sie: Nein, das ist alles.'
+    en: 'Say: No, that''s all.'
   context: Ще щось?
   answer:
   - Ні, це все.

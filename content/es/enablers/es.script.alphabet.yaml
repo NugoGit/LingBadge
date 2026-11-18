@@ -1,0 +1,12 @@
+id: es.script.alphabet
+lang: es
+kind: script
+title: Alphabet incl. ñ; letter names for spelling (be, uve, hache, jota, eñe)
+cefr: A1
+sources:
+- pcic.A1.orth.alphabet
+check:
+  template: enabler.script.v1
+  items: 10
+  threshold: 0.9
+  channel: text

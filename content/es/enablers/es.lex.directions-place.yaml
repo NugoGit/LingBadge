@@ -1,0 +1,26 @@
+id: es.lex.directions-place
+lang: es
+kind: lexis
+title: Directions and place words
+cefr: A1
+words:
+- a la derecha
+- a la izquierda
+- todo recto
+- cerca
+- lejos
+- al lado de
+- enfrente de
+- delante de
+- detrás de
+- la esquina
+- girar
+- seguir
+- cruzar
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

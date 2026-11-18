@@ -50,6 +50,14 @@ def lvl(c: str) -> int:
     return CEFR_ORDER.index(c)
 
 
+I18N_ROOT = Path(__file__).resolve().parents[2] / "content"
+
+
+def _yaml_or_empty(path: Path) -> dict:
+    import yaml
+    return (yaml.safe_load(path.read_text(encoding="utf-8")) or {}) if path.exists() else {}
+
+
 def check(c: Content) -> tuple[list[str], list[str]]:
     err, warn = list(c.errors), []
     srcs = c.all_sources()
@@ -75,7 +83,26 @@ def check(c: Content) -> tuple[list[str], list[str]]:
     if cyc:
         err.append("skill prerequisite cycle: " + " -> ".join(cyc))
 
+    de = _yaml_or_empty(I18N_ROOT / "core" / "i18n" / "de.yaml")
+    for kind, ids in (("themes", {t.id for t in c.themes.values()}), ("skills", set(c.skills))):
+        known = de.get(kind, {})
+        for x in sorted(set(known) - ids):
+            err.append(f"i18n/de: unknown {kind[:-1]} {x}")
+        if kind == "skills":
+            for x, v in known.items():
+                if not isinstance(v, dict) or set(v) != {"title", "can_do"}:
+                    err.append(f"i18n/de: skill {x} needs exactly title and can_do (quote values that contain commas)")
+        missing = sorted(ids - set(known))
+        if missing and de:
+            warn.append(f"i18n/de: {len(missing)} {kind} without a German title: {', '.join(missing[:8])}")
+
     for code, lang in c.languages.items():
+        de_lang = _yaml_or_empty(I18N_ROOT / code / "i18n" / "de.yaml").get("enablers", {})
+        for x in sorted(set(de_lang) - set(lang.enablers)):
+            err.append(f"{code}/i18n/de: unknown enabler {x}")
+        no_de = sorted(set(lang.enablers) - set(de_lang))
+        if no_de and de_lang:
+            warn.append(f"{code}: {len(no_de)} enablers without a German title: {', '.join(no_de[:8])}")
         for e in lang.enablers.values():
             if not e.id.startswith(code + "."):
                 err.append(f"{e.id}: enabler id must start with '{code}.'")

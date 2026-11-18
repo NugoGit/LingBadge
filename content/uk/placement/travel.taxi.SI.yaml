@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: address
-  label: Adresse und Ziel
+  label:
+    de: Adresse und Ziel
+    en: Address and destination
 - id: price
-  label: Preis
+  label:
+    de: Preis
+    en: Price
 - id: stop
-  label: Halten und Bezahlen
+  label:
+    de: Halten und Bezahlen
+    en: Stopping and paying
 items:
 - id: address-1
   facet: address
   format: type
-  prompt: Zur Chreschtschatyk-Straße 10, bitte.
+  prompt:
+    de: Zur Chreschtschatyk-Straße 10, bitte.
+    en: To 10 Khreshchatyk Street, please.
   stem: На ___ Хрещатик, десять, будь ласка.
   cue: вулиця
   answer:
@@ -20,7 +28,9 @@ items:
 - id: address-2
   facet: address
   format: type
-  prompt: Zum Marktplatz, bitte.
+  prompt:
+    de: Zum Marktplatz, bitte.
+    en: To the market square, please.
   stem: На ___ Ринок, будь ласка.
   cue: площа
   answer:
@@ -28,7 +38,9 @@ items:
 - id: address-3
   facet: address
   format: type
-  prompt: Zum Flughafen, bitte.
+  prompt:
+    de: Zum Flughafen, bitte.
+    en: To the airport, please.
   stem: До ___, будь ласка.
   cue: аеропорт
   answer:
@@ -36,7 +48,9 @@ items:
 - id: price-1
   facet: price
   format: type
-  prompt: 'Fragen Sie: Wie viel kostet das?'
+  prompt:
+    de: 'Fragen Sie: Wie viel kostet das?'
+    en: 'Ask: How much is it?'
   stem: Скільки це ___?
   cue: коштувати
   answer:
@@ -44,19 +58,32 @@ items:
 - id: price-2
   facet: price
   format: choice
-  prompt: Wie viel kostet die Fahrt?
+  prompt:
+    de: Wie viel kostet die Fahrt?
+    en: How much is the ride?
   context: Двісті п'ятдесят гривень.
   answer:
-  - 250 Hrywnja
+    de:
+    - 250 Hrywnja
+    en:
+    - 250 hryvnias
   options:
-  - 250 Hrywnja
-  - 215 Hrywnja
-  - 25 Hrywnja
-  - 2050 Hrywnja
+    de:
+    - 250 Hrywnja
+    - 215 Hrywnja
+    - 25 Hrywnja
+    - 2050 Hrywnja
+    en:
+    - 250 hryvnias
+    - 215 hryvnias
+    - 25 hryvnias
+    - 2,050 hryvnias
 - id: price-3
   facet: price
   format: choice
-  prompt: Fragen Sie vorher, was die Fahrt zum Flughafen kostet.
+  prompt:
+    de: Fragen Sie vorher, was die Fahrt zum Flughafen kostet.
+    en: Ask beforehand how much the ride to the airport costs.
   answer:
   - Скільки коштує до аеропорту?
   options:
@@ -67,7 +94,9 @@ items:
 - id: stop-1
   facet: stop
   format: type
-  prompt: Halten Sie bitte hier.
+  prompt:
+    de: Halten Sie bitte hier.
+    en: Please stop here.
   stem: ___ тут, будь ласка.
   cue: зупинити
   answer:
@@ -76,7 +105,9 @@ items:
 - id: stop-2
   facet: stop
   format: type
-  prompt: Fragen Sie, ob Sie mit Karte zahlen können.
+  prompt:
+    de: Fragen Sie, ob Sie mit Karte zahlen können.
+    en: Ask whether you can pay by card.
   stem: Можна ___?
   cue: картка
   answer:
@@ -84,7 +115,9 @@ items:
 - id: stop-3
   facet: stop
   format: choice
-  prompt: Der Fahrer soll beim Eingang halten.
+  prompt:
+    de: Der Fahrer soll beim Eingang halten.
+    en: The driver should stop by the entrance.
   answer:
   - Зупиніть біля входу, будь ласка.
   options:

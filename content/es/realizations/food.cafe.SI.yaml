@@ -1,0 +1,39 @@
+skill: food.cafe.SI
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- ¿Me trae la carta, por favor?
+- Para mí, una sopa y un té sin azúcar.
+- ¿Qué es esto? / ¿Qué me recomienda?
+- La cuenta, por favor.
+- ¿Puedo pagar con tarjeta?
+enablers:
+  required:
+  - id: es.lex.food-drink
+    use: productive
+  - id: es.gram.art.def-indef
+    use: productive
+  - id: es.gram.verb.modal
+    use: productive
+  - id: es.num.cardinal-100-10000
+    use: productive
+  - id: es.prag.courtesy
+    use: productive
+  - id: es.gram.pron.object
+    use: formulaic
+  supporting:
+  - id: es.phon.vowels
+    use: productive
+  - id: es.phon.consonants
+    use: productive
+  - id: es.phon.intonation
+    use: productive
+  - id: es.phon.stress
+    use: productive
+rubric_specifics:
+  key_structures: Ordering with un/una + noun; «para mí», «¿me trae…?» and «con/sin» as chunks.
+version: 1
+status: draft

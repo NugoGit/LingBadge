@@ -1,0 +1,30 @@
+id: es.lex.health-body
+lang: es
+kind: lexis
+title: Body and health
+cefr: A1
+words:
+- la cabeza
+- la garganta
+- el estómago
+- la espalda
+- el brazo
+- la pierna
+- el pie
+- la mano
+- el diente
+- la fiebre
+- la tos
+- el resfriado
+- el médico
+- la farmacia
+- la pastilla
+- la receta
+- doler
+sources:
+- pcic.A1.lex.nociones
+check:
+  template: enabler.lexis.v1
+  items: 12
+  threshold: 0.9
+  channel: text

@@ -1,0 +1,18 @@
+skill: food.menu.R
+lang: es
+cefr: A1
+register:
+- formal
+variety: peninsular
+exponents:
+- 'Primeros platos: gazpacho — 6,50 €'
+- Ensaladas
+- 'Bebidas: agua, café, zumo de naranja'
+enablers:
+  required:
+  - id: es.lex.food-drink
+    use: productive
+  - id: es.num.cardinal-0-100
+    use: productive
+version: 1
+status: draft

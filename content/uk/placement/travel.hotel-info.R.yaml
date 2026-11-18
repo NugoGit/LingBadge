@@ -3,16 +3,24 @@ lang: uk
 reviewed_by: []
 facets:
 - id: meals
-  label: Mahlzeiten
+  label:
+    de: Mahlzeiten
+    en: Meals
 - id: service
-  label: WLAN und Service
+  label:
+    de: WLAN und Service
+    en: Wi-Fi and services
 - id: rules
-  label: Hausregeln und Check-out
+  label:
+    de: Hausregeln und Check-out
+    en: House rules and check-out
 items:
 - id: meals-1
   facet: meals
   format: type
-  prompt: Bis wann gibt es Frühstück? (Uhrzeit)
+  prompt:
+    de: Bis wann gibt es Frühstück? (Uhrzeit)
+    en: Until when is breakfast served? (time)
   text: |-
     Сніданок: 7:30–10:00, ресторан
     Wi-Fi: мережа Hotel_Lviv, пароль lviv2024
@@ -24,33 +32,57 @@ items:
 - id: meals-2
   facet: meals
   format: choice
-  prompt: Was ist im Preis inbegriffen?
+  prompt:
+    de: Was ist im Preis inbegriffen?
+    en: What is included in the price?
   text: |-
     Вечеря — з 18:00 до 21:00.
     Сніданок включено у вартість.
   answer:
-  - Frühstück
+    de:
+    - Frühstück
+    en:
+    - Breakfast
   options:
-  - Frühstück
-  - Abendessen
-  - Frühstück und Abendessen
-  - Nichts
+    de:
+    - Frühstück
+    - Abendessen
+    - Frühstück und Abendessen
+    - Nichts
+    en:
+    - Breakfast
+    - Dinner
+    - Breakfast and dinner
+    - Nothing
 - id: meals-3
   facet: meals
   format: choice
-  prompt: Wo gibt es Frühstück?
+  prompt:
+    de: Wo gibt es Frühstück?
+    en: Where is breakfast served?
   text: Сніданок — у ресторані на першому поверсі, з 8:00 до 10:30.
   answer:
-  - Im Restaurant im ersten Stock (Erdgeschoss)
+    de:
+    - Im Restaurant im ersten Stock (Erdgeschoss)
+    en:
+    - In the restaurant on the first floor (ground floor)
   options:
-  - Im Restaurant im ersten Stock (Erdgeschoss)
-  - Im Zimmer
-  - Im Café gegenüber
-  - Im zweiten Stock
+    de:
+    - Im Restaurant im ersten Stock (Erdgeschoss)
+    - Im Zimmer
+    - Im Café gegenüber
+    - Im zweiten Stock
+    en:
+    - In the restaurant on the first floor (ground floor)
+    - In the room
+    - In the café opposite
+    - On the second floor
 - id: service-1
   facet: service
   format: type
-  prompt: Wie lautet das WLAN-Passwort?
+  prompt:
+    de: Wie lautet das WLAN-Passwort?
+    en: What is the Wi-Fi password?
   text: |-
     Сніданок: 7:30–10:00, ресторан
     Wi-Fi: мережа Hotel_Lviv, пароль lviv2024
@@ -60,35 +92,59 @@ items:
 - id: service-2
   facet: service
   format: choice
-  prompt: Wo bekommen Sie ein Bügeleisen?
+  prompt:
+    de: Wo bekommen Sie ein Bügeleisen?
+    en: Where can you get an iron?
   text: |-
     Пральня — 2 поверх.
     Праска — на рецепції.
   answer:
-  - An der Rezeption
+    de:
+    - An der Rezeption
+    en:
+    - At reception
   options:
-  - An der Rezeption
-  - In der Wäscherei
-  - Im Zimmer
-  - Im 2. Stock
+    de:
+    - An der Rezeption
+    - In der Wäscherei
+    - Im Zimmer
+    - Im 2. Stock
+    en:
+    - At reception
+    - In the laundry
+    - In the room
+    - On the 2nd floor
 - id: service-3
   facet: service
   format: choice
-  prompt: Was kostet das Parken für Gäste?
+  prompt:
+    de: Was kostet das Parken für Gäste?
+    en: How much is parking for guests?
   text: |-
     Таксі — замовляйте на рецепції.
     Паркування для гостей безкоштовне.
   answer:
-  - Nichts
+    de:
+    - Nichts
+    en:
+    - Nothing
   options:
-  - Nichts
-  - 100 Hrywnja
-  - Nur für Taxis
-  - Es gibt keinen Parkplatz
+    de:
+    - Nichts
+    - 100 Hrywnja
+    - Nur für Taxis
+    - Es gibt keinen Parkplatz
+    en:
+    - Nothing
+    - 100 hryvnias
+    - Taxis only
+    - There is no car park
 - id: rules-1
   facet: rules
   format: type
-  prompt: Bis wann müssen Sie das Zimmer verlassen? (Uhrzeit)
+  prompt:
+    de: Bis wann müssen Sie das Zimmer verlassen? (Uhrzeit)
+    en: By when must you leave the room? (time)
   text: |-
     Сніданок: 7:30–10:00, ресторан
     Розрахунковий час: 12:00
@@ -99,28 +155,50 @@ items:
 - id: rules-2
   facet: rules
   format: choice
-  prompt: Was ist im Zimmer verboten?
+  prompt:
+    de: Was ist im Zimmer verboten?
+    en: What is not allowed in the room?
   text: |-
     Розрахунковий час: 12:00
     Палити в номері заборонено.
   answer:
-  - Rauchen
+    de:
+    - Rauchen
+    en:
+    - Smoking
   options:
-  - Rauchen
-  - Essen
-  - Musik
-  - Besuch
+    de:
+    - Rauchen
+    - Essen
+    - Musik
+    - Besuch
+    en:
+    - Smoking
+    - Eating
+    - Music
+    - Visitors
 - id: rules-3
   facet: rules
   format: choice
-  prompt: Dürfen Sie Ihren Hund mitbringen?
+  prompt:
+    de: Dürfen Sie Ihren Hund mitbringen?
+    en: May you bring your dog?
   text: |-
     Тиша з 23:00 до 7:00.
     Домашні тварини — заборонено.
   answer:
-  - Nein
+    de:
+    - Nein
+    en:
+    - 'No'
   options:
-  - Nein
-  - Ja
-  - Nur bis 23 Uhr
-  - Nur ab 7 Uhr
+    de:
+    - Nein
+    - Ja
+    - Nur bis 23 Uhr
+    - Nur ab 7 Uhr
+    en:
+    - 'No'
+    - 'Yes'
+    - Only until 23:00
+    - Only from 7:00
