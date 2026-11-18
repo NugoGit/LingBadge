@@ -16,6 +16,7 @@
   --muted: #5d666e;
   --line: #d9ddd8;
   --accent: #24508f;
+  --on-accent: #ffffff;
   --accent-soft: #e3eaf5;
   --s-badge: #1f6b45;  --s-badge-bg: #d4ecdf;
   --s-likely: #3d7a3a; --s-likely-bg: #e6f2df;
@@ -30,7 +31,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #15191c; --surface: #1d2226; --ink: #e6e9ea; --muted: #9aa3a9; --line: #333b40;
-    --accent: #8db1ec; --accent-soft: #23314a;
+    --accent: #8db1ec; --accent-soft: #23314a; --on-accent: #0f1620;
     --s-badge: #7fd1a4; --s-badge-bg: #183a29; --s-likely: #a6d79c; --s-likely-bg: #22331f;
     --s-shaky: #f0c46a; --s-shaky-bg: #3d3018; --s-gap: #f2a197; --s-gap-bg: #44221f; --s-none: #a3aab0; --s-none-bg: #262c30;
     color-scheme: dark;
@@ -38,7 +39,7 @@
 }
 :root[data-theme="dark"] {
   --bg: #15191c; --surface: #1d2226; --ink: #e6e9ea; --muted: #9aa3a9; --line: #333b40;
-  --accent: #8db1ec; --accent-soft: #23314a;
+  --accent: #8db1ec; --accent-soft: #23314a; --on-accent: #0f1620;
   --s-badge: #7fd1a4; --s-badge-bg: #183a29; --s-likely: #a6d79c; --s-likely-bg: #22331f;
   --s-shaky: #f0c46a; --s-shaky-bg: #3d3018; --s-gap: #f2a197; --s-gap-bg: #44221f; --s-none: #a3aab0; --s-none-bg: #262c30;
   color-scheme: dark;
@@ -85,9 +86,7 @@ table.grid td.task small { color: var(--muted); display: block; font-size: .78re
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; margin-bottom: 14px; }
 .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .stack { display: grid; gap: 10px; }
-.btn { background: var(--accent); color: #fff; border: 0; border-radius: 7px; padding: 8px 14px; font-weight: 600; cursor: pointer; }
-:root[data-theme="dark"] .btn { color: #0f1620; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn { color: #0f1620; } }
+.btn { background: var(--accent); color: var(--on-accent); border: 0; border-radius: 7px; padding: 8px 14px; font-weight: 600; cursor: pointer; }
 .btn.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
 .btn.quiet { background: transparent; color: var(--muted); border: 1px solid var(--line); }
 .btn:disabled { opacity: .5; cursor: default; }
